@@ -219,7 +219,7 @@ Sonnet reasons least and writes the most prose. No request was refused.
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
-pip install -e ".[dev]"
+pip install -e ".[study,dev]"
 ant auth login                        # or export ANTHROPIC_API_KEY=...
 pytest -q
 

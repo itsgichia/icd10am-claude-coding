@@ -18,14 +18,15 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Topic :: Scientific/Engineering :: Medical Science Apps.",
 ]
+# The package itself (prompts, extractor, runner) needs only the SDK, so it
+# can be installed into a web service. Building the dataset and the figures
+# needs the "study" extra.
 dependencies = [
     "anthropic>=1.0",
-    "datasets>=2.20",
-    "pandas>=2.2",
-    "matplotlib>=3.8",
 ]
 
 [project.optional-dependencies]
+study = ["datasets>=2.20", "pandas>=2.2", "matplotlib>=3.8"]
 dev = ["pytest>=8.0"]
 
 [project.urls]
