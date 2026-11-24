@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "f50682d1fc8b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary\n\nPatient Name: [redacted]\nMedical Record Number: [redacted]\nAdmission Date: [redacted]\nDischarge Date: [redacted]\nAdmitting Diagnosis: [diagnosis section withheld]\nPrincipal Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient presented with severe right hypochondrium pain along with weight loss and alteration of general condition lasting for six months. The physical examination and laboratory examination were unremarkable. However, abdominal ultrasonography showed a 2.6 cm diameter intraluminal polypoid hyperechoic mass in the gallbladder. Computed tomography scan confirmed the presence of a gallbladder tumor that appeared as an enhancing pedunculated tumor without thickening of the gallbladder wall. A TDM scan showed a cortical fleshy nodule of the right kidney. \n\nThe patient underwent an open cholecystectomy with a partial liver resection. The cholecystectomy specimen showed a metastatic renal cell carcinoma without any involvement of the gallbladder wall. A right radical nephrectomy was carried out through a right subcostal incision, and the histological study revealed a typical conventional clear cell renal cell carcinoma.\n\nThe patient was transferred to the department of Urology for further treatment. Following the nephrectomy, the patient recovered well with appropriate management of the surgical wounds.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Medications:\n\nNone\n\nFollow-up Plan:\n\nThe patient was advised to follow up with the department of Urology as per recommended schedule for a further course of treatment.\t\n\nDisposition:\n\nThe patient was discharged in stable condition.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C78",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 699,
+    "output_tokens": 210
+  },
+  "seconds": 0.0
+}

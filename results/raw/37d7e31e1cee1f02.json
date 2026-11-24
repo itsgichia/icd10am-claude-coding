@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "01d3ff5888ad",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\nThe patient, an 85-year-old male, was admitted to the hospital with bilateral foot swelling, decreased urine output, and a poor urinary stream. He also complained of breathlessness, anorexia, weight loss, and had a past medical history significant for anemia. Physical examination revealed multiple, nontender, firm lymph nodes in the right upper jugular, middle jugular, right and left submandibular, and multiple right-sided axillary lymph nodes. His laboratory investigations revealed findings consistent with tumor lysis syndrome, including elevated uric acid, hyperphosphatemia, and hypocalcemia. Bone marrow examination showed hypercellular smears with reduced megakaryocytes and erythropoiesis. The bone marrow differential counts revealed immature cells with monocytic differentiation and large collections of mature lymphocytes.\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nDespite being explained about the treatment options and prognosis, the patient refused to undergo any further investigations and therapy.\n\nDischarge Condition:\nThe patient was discharged home in fair condition. A follow-up plan was initiated with further medical management as an outpatient."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis is **C93.0, Acute monoblastic/monocytic leukaemia**, with **E88.3, Tumour lysis syndrome** as a secondary code.\n\nThe diagnosis section is withheld, so this is an inference from the findings. Immature cells with monocytic differentiation on bone marrow examination point to an acute monocytic leukaemia. Tumour lysis syndrome, with hyperuricaemia, hyperphosphataemia and hypocalcaemia, is a complication of that disease and is coded as secondary.\n\nCoding caveats:\n- If the discharge summary states a different final diagnosis, such as chronic lymphocytic leukaemia or a lymphoma (the large mature lymphocyte collections and lymphadenopathy raise this possibility), the principal code would change accordingly.\n- Per ICD-10-AM sequencing conventions, the underlying malignancy is sequenced first and the tumour lysis syndrome is not principal.\n- Confirm the final diagnosis against the full discharge summary, pathology report and coder's query responses before finalising the code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 443,
+    "output_tokens": 1350
+  },
+  "seconds": 6.2938109999813605
+}

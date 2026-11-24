@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "cd90f4235013",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: N/A\nAge: 51\nGender: Male\n\nAdmission Date: N/A\nDischarge Date: N/A\n\nHospital Course:\n\nThe patient was admitted to our radiation oncology unit complaining of headache, vomiting, and right hemiplegia as part of an intracranial hypertension syndrome. Physical examination revealed a mammary mass in the right breast along with cerebral and lung tumors, bilateral adrenal nodes, and right cerebellar location. The patient underwent total brain irradiation with a dosage of 30 Gray in 10 fractions of 3 Gray per fraction over two weeks, with remarkable improvement in clinical outcomes. The patient was later treated with palliative chemotherapy, which resulted in an incomplete radiological remission of more than 70%. The patient received gemcitabine monotherapy, 1,000 mg/m\u00b2 on Days 1 and 8 every 21 days after experiencing local breast and cerebral progression. During the follow-up period, the patient's general condition deteriorated rapidly, and they were referred for palliative care and passed away six weeks later.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nThe patient received total brain irradiation at a dose of 30 Gray in 10 fractions of 3 Gray per fraction over two weeks with remarkable improvement in clinical outcomes. The patient was later treated with palliative chemotherapy that resulted in an incomplete radiological remission estimated to be more than 70%. Second-line chemotherapy with gemcitabine monotherapy, 1,000 mg/m\u00b2 on Days 1 and 8 every 21 days was administered after the patient's condition deteriorated.\n\nOutcome:\n\nDespite initial improvement following the patient's first treatment, the patient's condition rapidly deteriorated, leading to palliative care and eventual passing. \n\nFollow-Up:\n\nN/A\n\nRecommendations:\n\nN/A\n\nSigned:\nN/A\nDate:\nN/A"
+      }
+    ]
+  },
+  "text": "**Most likely principal diagnosis: C50.9, Malignant neoplasm of breast, unspecified.** A more specific fourth character applies if the site within the breast is known, for example C50.9 for the right breast with no site given. This is an inference, because the diagnosis section was withheld.\n\n**Reasoning**\n- The patient is a 51-year-old male with a mammary mass in the right breast. He also has brain (cerebellar), lung and bilateral adrenal lesions, which fit metastatic disease.\n- The breast mass is the only candidate primary site described, so the metastases are treated as secondary.\n- Under ICD-10-AM/ACS rules, the principal diagnosis is the condition chiefly responsible for the episode of care. For an admission to treat the metastases, such as the whole-brain radiotherapy here, the secondary site can be coded as principal only if the primary is not being treated or has been previously removed. Here the breast primary is still present and was later treated with chemotherapy, so C50.- is the sensible choice for the overall case.\n\n**Likely additional codes**\n- C79.3, Secondary malignant neoplasm of brain and cerebral meninges\n- C78.0, Secondary malignant neoplasm of lung\n- C79.7, Secondary malignant neoplasm of adrenal gland\n- G93.2 or G93.6, only if the intracranial hypertension or cerebral oedema is documented as a separate condition\n- G81.9, Hemiplegia, unspecified, which is usually not coded separately if it is integral to the brain metastases\n- Z51.0, Radiotherapy session, and Z51.1, Chemotherapy session, apply to the relevant treatment episodes\n- Z51.5, Palliative care, applies to the palliative care episode\n\n**Caveats**\n- If this particular admission was only for the brain symptoms and radiotherapy, some coders would assign C79.3 as principal. The text describes a single course covering the whole case, so C50.- is more defensible.\n- The histology, which may be ductal carcinoma, is not stated. It does not change the C50 category in ICD-10-AM, but the morphology code (M-code) would be added.\n- Gemcitabine and widespread metastases are unusual for breast cancer. The diagnosis may be something else, such as lung primary with a breast metastasis, so confirm against the withheld diagnosis section.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 707,
+    "output_tokens": 781
+  },
+  "seconds": 0.0
+}

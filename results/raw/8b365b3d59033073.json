@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "538e9dec7691",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient Name: [Redacted], Jane\nAge: 95\nGender: Female\nAdmission Date: [Redacted]\nDischarge Date: [Redacted]\n\nHOSPITAL COURSE:\n\nThe patient presented to the emergency department with hypoxia, tachycardia, tachypnea, use of accessory muscles for respiration and somnolence. Physical exam revealed no clinical signs of DVT such as unilateral leg swelling or calf tenderness. Point of care ultrasound (POCUS) was performed and revealed a large mobile thrombus in the right ventricle on apical four-chamber view, which in combination with the patient\u2019s clinical presentation, was diagnostic of acute pulmonary embolism with right heart strain.\n\nThe patient was assessed by her family, and her code status was established as \u201cdo not resuscitate\u201d with comfort measures only. Further imaging, fibrinolysis and thrombectomy were not attempted in accordance with the patient\u2019s wishes.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE CONDITION:\n\nStable with Comfort Measures only\n\nDISCHARGE INSTRUCTIONS:\n\nN/A\n\nFOLLOW-UP:\n\nOutpatient options should be discussed with the patient's primary care physician\n\nATTENDING PHYSICIAN:\n\n[Redacted]"
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: I26.0, Pulmonary embolism with mention of acute cor pulmonale**\n\n**Why this code:**\n- **Reason for admission:** The patient presented with hypoxia, tachycardia, tachypnoea, accessory muscle use and somnolence. The diagnosis was acute pulmonary embolism, confirmed clinically together with POCUS findings. This is the condition chiefly responsible for the admission.\n- **Choice between I26.0 and I26.9:** The summary documents \"acute pulmonary embolism with right heart strain.\" Acute right heart strain caused by PE is acute cor pulmonale. That makes I26.0 the right choice over I26.9 (PE without mention of acute cor pulmonale).\n- ICD-10-AM does not use the ICD-10-CM subcodes such as I26.09 or I26.99. The 4-character code I26.0 is the valid code.\n\n**Possible additional codes, depending on local coding standards and documentation:**\n- **I51.3 Intracardiac thrombosis, NEC:** for the large mobile right ventricular thrombus (clot in transit). Check with the clinician whether it should be coded separately or treated as part of the PE.\n- **Z51.5 Palliative care:** if palliative/comfort care is documented as the care type or intent. Note that in Australia this is often captured through the care type change rather than the code alone.\n- **Do not resuscitate status:** may be captured as a code or flag, depending on the local edition and coding conventions.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 508,
+    "output_tokens": 739
+  },
+  "seconds": 0.0
+}

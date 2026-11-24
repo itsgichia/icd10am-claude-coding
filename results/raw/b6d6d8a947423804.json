@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "65520ca99627",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Name]\n\nAge: 80 years\n\nSex: Male\n\nMedical Record Number: [Number]\n\nDate of Admission: [Date]\n\nDate of Discharge: [Date]\n\nHospital Course:\n\nThe patient was admitted to our hospital due to the incidentally discovered rectal tumor. The biopsy sample revealed that the 3 cm diameter tumor was a moderately differentiated adenocarcinoma. Imaging studies showed that the tumor invaded into the muscularis propria, and lateral pelvic lymph nodes were not enlarged. The patient also had a huge benign prostatic hypertrophy, with a size of 85 \u00d7 80 \u00d7 70 mm.\n\nTo achieve complete tumor removal with negative margins, a hybrid transabdominal-transanal approach for ISR was performed. The procedure involved laparoscopic mobilization of the left colon and transabdominal approach up to the anterior dissection of the rectum. Subsequently, a transanal approach was used to complete the dissection procedure. The bilateral pelvic splanchnic nerves were identified at the 5 and 7 o\u2019clock positions. Due to the perineal body and the enlarged prostate, the proper dissection layer at the anterior side was difficult to identify. However, the dissection plane between the rectum and the prostate was identified, and the procedure was completed along the same plane with the assistance of the laparoscopic approach.\n\nThe patient tolerated the procedure well and had an uneventful postoperative course. The patient was discharged home on [Date] with scheduled follow-up appointments.\nDiagnosis: [diagnosis section withheld]\nPlan:\n\nThe patient is advised to follow-up with his oncologist and urologist for monitoring and further treatment as per their recommendations. The patient is also advised to make diet changes and exercise regularly to maintain good health.\n\nClinician:\n\n[Name], [Title]\n\nAttending Physician:\n\n[Name], [Title]\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C20",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 773,
+    "output_tokens": 57
+  },
+  "seconds": 0.0
+}

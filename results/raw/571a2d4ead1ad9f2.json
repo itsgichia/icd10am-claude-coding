@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "3a1233001d46",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nPatient Information:\n- Name: [REDACTED]\n- Age: 64 years old\n- Sex: Female\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n- The patient underwent resection of the seeding nodule of ovarian carcinoma and created a loop ileostomy due to direct invasion of the carcinoma to the terminal ileum.\n- Prolapse of the ileostomy appeared approximately 17 months after the operation, and it continued to progressively worsen.\n- The patient subsequently underwent a revision operation to reposition the prolapse.\n- After revision of the prolapse, there were no further troubles with the ileostomy.\n- The postoperative progress was good, and the chemotherapy was continued.\n- However, the patient's general state got worse gradually, and her treatment became a plan of best supportive care.\n- Nineteen months after the first time operation, the general state got even worse and she died.\n\nSummary:\nThe patient, a 64-year old female with unresectable ovarian carcinoma, underwent resection of the seeding nodule of ovarian carcinoma and created a loop ileostomy due to direct invasion of the carcinoma to the terminal ileum. Prolapse of the ileostomy appeared approximately 17 months after the operation, and it continued to progressively worsen. A revision operation was performed to reposition the prolapse, and after revision, there were no further troubles with the ileostomy. The postoperative progress was good, and the chemotherapy was continued. However, the patient's general state got worse gradually, and her treatment became a plan of best supportive care. Nineteen months after the first time operation, the general state got even worse and she died."
+      }
+    ]
+  },
+  "text": "The question asks for the principal diagnosis for the episode of care described. The key admission is the revision operation for the prolapsed ileostomy, so the principal diagnosis is the stoma complication, not the ovarian cancer.\n\n**Principal diagnosis: K91.4 \u2013 Colostomy and enterostomy malfunction**\n\nReasoning:\n- ICD-10-AM classifies a prolapsed enterostomy under K91.4 (malfunction of colostomy and enterostomy). The index entry is \"Complication, enterostomy, malfunction/prolapse\". Some coders use K91.8 (other postprocedural disorders of digestive system) instead. K91.4 is the more specific and usual choice.\n- The ovarian carcinoma is the underlying condition and should be coded as an additional diagnosis: C56 (malignant neoplasm of ovary). Secondary sites should be added as well, such as C78.4 for invasion of the small intestine (ileum) and C78.6 for peritoneal seeding.\n- Z93.2 (ileostomy status) is not needed because the complication code already captures the stoma.\n- An external cause code is optional, for example Y83.3 (surgical operation with formation of external stoma as the cause of abnormal reaction or later complication).\n\n**Caveat:** If the question refers to the first admission, with resection of the seeding nodule and loop ileostomy for unresectable ovarian carcinoma, the principal diagnosis would be C56 (malignant neoplasm of ovary). The details given center on the ileostomy prolapse revision, so K91.4 is my answer.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 584,
+    "output_tokens": 524
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7c591e864a3b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 46-year-old male with a history of MSA with predominant parkinsonism\n\nHospital Course:\nThe patient was emergently admitted to our neurological department with tracheal intubation due to sudden respiratory failure at night. He had a history of high-pitched snore at age 38 and neck and trunk rigidity, bradykinesia, postural tremor, and dysuria at age 44. He was diagnosed with MSA at age 45. The possibility of MSA-related central respiratory disorder or obstructive respiratory disorder due to MSA and/or obesity was considered after pulmonary inflammatory diseases were excluded. The patient underwent tracheostomy to maintain the airway after extubation which was successful, but continuous positive airway pressure may have also been helpful. Polysomnography showed obstructive SA, but not central SA. Awake fiberoptic laryngoscopy displayed no upper-airway obstruction but slight vocal-cord abduction impairment during inspiration while sleep laryngoscopy was refused by the patient. To assess the spatial and temporal conditions of the upper respiratory tract, including the nasal passages, pharynx, larynx, and portion of the trachea, 4D-CT during sleep was performed. The effective dose was 1.84 mSv.\n\nFindings:\nReconstructed 4D-CT images of respiration during sleep revealed abnormal upper-airway findings compared with the images acquired during awake respiration: glottis closure at the terminal stage of inspiration, subsequent velopharyngeal closure, and succeeding glottis opening and expansion of pharyngeal pressure, but no other upper airway-obstruction findings.\nDiagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was discharged with tracheostoma retained which was determined to be indispensable, although central apnea after tracheostomy may cause sudden central origin-related death. The patient was followed up at 14 months postoperatively, and no further airway-related complications were reported.\n\nProcedures:\nTracheostomy."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: G47.32 Obstructive sleep apnoea syndrome\n\nThe available information doesn't settle this cleanly, so treat this as the most defensible choice rather than a certain answer. A coder with the actual diagnosis statement, and clinician clarification if needed, should confirm it.\n\n## Why G47.32\n- **Reason for admission:** He was admitted with sudden nocturnal respiratory failure. Work-up was needed to find the cause.\n- **Cause found:** Polysomnography showed **obstructive** sleep apnoea, not central. The 4D-CT during sleep showed the mechanism: the glottis closed at the end of inspiration, then the velopharynx closed. This is obstructive sleep apnoea arising from MSA-related laryngeal dysfunction.\n- **Coding rule:** ACS 0001 says the principal diagnosis is the condition, established after study, chiefly responsible for the admission. Respiratory failure caused by an identified underlying condition is generally sequenced after that condition. So the obstructive sleep apnoea is the principal diagnosis.\n\n## Suggested additional codes\n| Code | Description |\n|---|---|\n| J96.0 | Acute respiratory failure (it required intubation) |\n| G23.2 | Multiple system atrophy, parkinsonian type [MSA-P], the underlying neurodegenerative disease |\n| E66.x | Obesity, if documented as clinically significant |\n| R33 / N31.x | Dysuria or bladder dysfunction, if it was treated during this admission |\n\n**Procedure:** Tracheostomy, coded from ACHI block 536 (for example, 41880-00 [536]). Also code the ventilation hours and the 4D-CT imaging if your local policy requires them.\n\n## Alternatives to consider\n- **J38.7 Other diseases of larynx:** use this if the withheld diagnosis names a laryngeal obstruction or glottic closure rather than sleep apnoea.\n- **G23.2:** some coders would sequence MSA first, arguing it is the underlying cause. However, the admission was for its respiratory complication, not for the MSA itself.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 723,
+    "output_tokens": 1337
+  },
+  "seconds": 0.0
+}

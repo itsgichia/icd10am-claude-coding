@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "json_output",
+  "record_id": "2be96ddf1bf9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient History:\n\nA 64-year-old woman was admitted to the hospital after experiencing right back pain for 6 days. She was evaluated in the emergency outpatient unit of our hospital 5 days PTA for concern of aortic dissection, infected arterial aneurysm, and purulent arthritis. Blood cultures taken at the time revealed methicillin-resistant Staphylococcus epidermidis (MRSE). She refused hospitalization and returned home until MRSE was once again detected in two sets of repeated blood cultures and she was admitted to our hospital.\n\nHospital Course:\n\nOn admission, the patient had a systolic murmur at the left sternal border and a punctate spot hemorrhage in the palpebral conjunctiva. Prosthetic valve endocarditis (PVE) was the suspected diagnosis based on PMH of aortic valve replacement, a physical examination of systolic cardiac murmur, and conjunctival hemorrhage. Trans-esophageal echocardiography (TEE) confirmed vegetations on her aortic valve, with a diagnosis of PVE. Vancomycin was started immediately on day 1. A repeated blood culture on day 5 was positive, but turned negative on day 8. Rifampicin was added on day 13 to decrease bacterial burden. Vancomycin was switched to teicoplanin on day 19 due to leukopenia, thrombocytopenia, and fever, and rifampicin was discontinued due to a subsequent rash. Blood cultures taken on day 20 were negative, indicating successful treatment.\n\nDischarge Instructions:\n\nThe patient underwent aortic valve re-replacement on day 33, and was discharged on day 50 with good postoperative recovery. The patient is advised to follow up with her physician in 4-6 weeks for further evaluation.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nVancomycin followed by rifampicin and teicoplanin, with successful aortic valve re-replacement.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"T82\", \"condition\": \"Prosthetic aortic valve endocarditis (MRSE)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 803,
+    "output_tokens": 160
+  },
+  "seconds": 0.0
+}

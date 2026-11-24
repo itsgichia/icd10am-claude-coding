@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "09a29ed158af",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Information: \nThe patient is a 26-year-old female who was referred to the Medical Oncology department for surgical resection of multiple hepatic metastases. The patient had previously undergone a subtotal gastrectomy for an epithelioid GIST variant localised to the muscularis propia and was diagnosed with pT1pN0 (0/1) with a high mitotic rate - stage II. The patient was found to be positive for CD117 (KIT) and DOG1. The mutational analysis revealed that the tumor was KIT and PDGFR\u03b1 WT.\n\nHospital Course:\nThe patient underwent complete resection of the hepatic metastases and subsequent image studies confirmed no evidence of disease. Adjuvant treatment with imatinib was not delivered due to complete resection of WT GIST. \n\nFamily History:\nThe patient has a 19-year-old healthy brother. There is no significant family history of diseases; however, the patient's paternal grandparent was diagnosed with a pituitary adenoma at age 30 and died at age 52.\n\nGenetic Testing:\nBased on the patient's molecular features of diagnosed GIST, age at presentation and apparently irrelevant family history, SDHx germline analysis was performed in peripheral blood. No further details of the genetic test were provided.\n\nFollow-Up:\nThe patient is currently 26 years of age and has no evidence of active disease. Additional follow-up appointments may be required as per the physician's recommendation. \nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Instructions:\nThe patient has been advised to follow up with her physician as required and to notify medical professionals of any adverse symptoms. No further specific discharge instructions were provided."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: C78.7 \u2013 Secondary malignant neoplasm of liver and intrahepatic bile duct**\n\n**Rationale:**\n- The patient was admitted for surgical resection of multiple hepatic metastases. The condition chiefly responsible for the episode of care is therefore the liver secondary, which is coded to C78.7.\n- The primary tumour is a gastric GIST that was previously resected. There is no evidence of active primary disease, so it is not the principal diagnosis. Under ICD-10-AM, a primary malignancy that has been excised and has no further treatment or evidence of disease is reported with Z85.0 (personal history of malignant neoplasm of digestive organs) as an additional code. Because the GIST was only recently resected and the liver metastases are being treated, some coders may instead assign C16.- (stomach) as an additional diagnosis, depending on local policy.\n- GIST is a malignant mesenchymal tumour. In ICD-10-AM it is coded with the morphology code M8936/3 and the site-specific C code, here C16.x for stomach. For a metastatic site, the liver is coded C78.7 with the same morphology.\n\n**Possible additional codes:**\n- Z85.0 or C16.9 (with M8936/3) for the gastric GIST, depending on whether it is considered current or historical\n- Z15.x or Z80.x only if the germline SDHx result were positive or relevant. The result was not reported, so no code is assigned.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 610,
+    "output_tokens": 489
+  },
+  "seconds": 0.0
+}

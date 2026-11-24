@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "a03e0422f170",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\n[Medical Center Name]\n[Patient Name], Discharge Summary\n\nAdmission Date: [Date]\nDischarge Date: [Date]\n\nHospital Course:\nThe patient was admitted to the Department of Urology with complaints of repeated dizziness. Preoperative echocardiography revealed a variation in the arteries, including an ARSA derived from the initial descending aorta right rear to the LSA, an aberrant left vertebral artery that directly originated from the AA instead of the LSA, and an aberrant right vertebral artery that originated from the RCCA rather than the RSA. Computed tomography angiography confirmed these variances. The patient had no other cardiac or vascular anomalies. Mild stenosis was found in the proximal portion of the left common carotid artery (LCCA), adjacent to its aortic origin. The patient underwent treatment for urolithiasis and was administered aspirin and atorvastatin to prevent potential vascular stenosis. The patient was followed up continuously.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient underwent treatment for urolithiasis and was administered aspirin and atorvastatin to prevent potential vascular stenosis.\n\nFollow-up:\nThe patient will continue to be monitored for any potential vascular stenosis.\n\nDischarge Condition:\nThe patient was discharged in a stable condition.\n\nDischarge medications:\nNone specified.\n\nInstructions:\nNone specified.\n\nFollow-up appointments:\nNone specified.\n\nInstructions Given:\nNone specified.\n\nPrimary Care Physician:\nNone specified.\n\nAttending Physician:\nNone specified.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The patient was admitted to Urology, and the definitive treatment in this episode was for urolithiasis, so that is the principal diagnosis.\n\n- **Why not the vascular anomalies:** The aberrant right subclavian artery, the anomalous vertebral artery origins and the mild LCCA stenosis were found incidentally on preoperative work-up. They were managed only with aspirin and atorvastatin. They would be coded as additional diagnoses (for example, in Q25\u2013Q27).\n- **Why not dizziness:** Dizziness was the presenting complaint. Symptom codes (R chapter) are not used as principal diagnosis when a definitive condition is established.\n- **Chapter:** Urinary stones are genitourinary disease, so the letter is **N**.\n- **Category:** N20 covers calculus of kidney and ureter. Its subcode N20.9, urinary calculus unspecified, is the default for \"urolithiasis\" when the site is not stated. The summary does not give the stone location; if documentation showed a lower urinary tract stone, the category would be N21 instead.\n\nCODE: N20",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1065,
+    "output_tokens": 537
+  },
+  "seconds": 0.0
+}

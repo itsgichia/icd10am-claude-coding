@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "json_output",
+  "record_id": "19a788b5e2bb",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge summary:\nPatient: 78-year-old woman\nDiagnosis: [diagnosis section withheld]\nTreatment: Successfully treated conservatively\nFollow-up: Recommended\n\nHospital Course:  \nThe patient, a 78-year-old woman, presented with epigastric pain and non-bloody diarrhea six days after a second cure of adjuvant chemotherapy for gastric adenocarcinoma. Further examination revealed Massive Pneumatosis Intestinalis (PI) involving colonic submucosal, extensive subserosal, mesenteric, and free posterior retroperitoneal gas, as seen on subsequent Computed Tomography (CT) scans. The precise etiology of PI was not identified, but chemotherapy (notably 5-Fluorouracil (5-FU)) was a likely contributor. The absence of alarm CT findings allowed for successful conservative treatment of the patient.\n\nDischarge Instructions:  \nThe patient is recommended to continue follow-up care with their primary care physician and attend future appointments as scheduled. Any significant changes in medical condition should be reported immediately to a healthcare provider.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"K63\", \"condition\": \"Pneumatosis intestinalis\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 513,
+    "output_tokens": 29
+  },
+  "seconds": 0.0
+}

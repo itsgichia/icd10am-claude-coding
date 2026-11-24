@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "be032d0262d2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\n\nPatient: 23-year-old male\n\nAdmission Date: [date]\n\nDischarge Date: [date]\n\nReason for admission: One-day history of right-sided pleuritic chest pain, haemoptysis, and fever\n\nHospital Course:\n\nThe patient was admitted with right-sided pleuritic chest pain, haemoptysis, and fever. Physical examination revealed rales and bronchial breathing in the right infrascapular region. Chest X-ray demonstrated right lower lobe consolidation. The patient was diagnosed with community-acquired pneumonia. Computed tomography pulmonary angiogram (CTPA) ruled out pulmonary embolism (PE). The patient was treated with IV ceftriaxone for four days and oral amoxicillin for three days. The patient showed complete resolution of symptoms on day 4 and was discharged.\nDischarge Diagnosis: [diagnosis section withheld]\nInstructions for Follow-up Care:\n\nThe patient is advised to follow-up with their primary care physician and continue taking their prescribed medications as directed.\n\nFollow-up Lab and Diagnostic Exams:\n\nNone\n\nFollow-up Appointments:\n\nThe patient is advised to schedule a follow-up appointment with their primary care physician.\n\nTechnical Terms and Abbreviations:\n\nPE: Pulmonary Embolism\n\nCTPA: Computed Tomography Pulmonary Angiogram\n\nIV: Intravenous\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "Choosing the chapter letter first and then the category digits:\n\n1. **Principal diagnosis:** The condition chiefly responsible for the admission was community-acquired pneumonia. Chest X-ray showed right lower lobe consolidation. The pleuritic chest pain, haemoptysis and fever are presenting symptoms explained by the pneumonia, so they are not coded as principal. Pulmonary embolism was ruled out by CTPA.\n\n2. **Chapter:** Pneumonia is a respiratory disease, so the letter is **J**.\n\n3. **Category:** No causative organism was identified. Ceftriaxone and amoxicillin were given as empirical treatment, without culture or serology results. Pneumonia with an unspecified organism falls under J18, \"Pneumonia, organism unspecified.\" At four-character level this lobar consolidation would likely be J18.1, but the question asks only for the three-character category.\n\nCODE: J18",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1014,
+    "output_tokens": 377
+  },
+  "seconds": 0.0
+}

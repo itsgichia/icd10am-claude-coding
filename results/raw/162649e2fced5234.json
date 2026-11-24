@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "de62e271a8a2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course: \n\nThe patient, a 55-year-old female with a history of gastroesophageal reflux disease, high cholesterol, acne, depression, and history of cholecystectomy, was admitted to the hospital after presenting to the emergency room with abdominal pain and low-grade fever. The patient denied alcoholism and reported no recent history of insect bite. The patient stated that she started taking isotretinoin a month ago, which was prescribed by a dermatologist for severe acne. The patient was found to have mild acute pancreatitis. The patient was treated with bowel rest, intravenous fluid, and prescribed intravenous narcotic pain medications for pain control. Isotretinoin was discontinued, and the patient was advised not to retake it. The patient improved over the next few days and was discharged home in stable condition. \nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course: \n\nThe patient was admitted to the hospital with a diagnosis of acute pancreatitis, secondary to hypertriglyceridemia, and was treated with supportive measures, including bowel rest and intravenous hydration. The patient's acute pancreatitis improved over the course of the hospitalization, and she was subsequently discharged home in stable condition. \n\nTreatment: \n\nThe patient was treated with bowel rest, intravenous hydration, and intravenous narcotic pain medications for pain control. Isotretinoin was discontinued. \n\nFollow-Up: \n\nThe patient was advised to follow-up with her primary care physician for ongoing management of her hypertriglyceridemia."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is most likely **K85.3, Drug-induced acute pancreatitis**.\n\n- **Condition:** Acute pancreatitis, which the record attributes to hypertriglyceridemia caused by isotretinoin (started about a month before admission and then discontinued).\n- **Why K85.3:** The pancreatitis is a drug-induced adverse effect, so the drug-induced category applies rather than K85.9 (unspecified acute pancreatitis). Biliary causes (K85.1) are unlikely given the prior cholecystectomy, and the patient denied alcohol use (which would point to K85.2).\n- **Additional codes:** An adverse-effect code for isotretinoin (T-code from the T36\u2013T50 range, 5th/6th character 5, adverse effect) should be added after K85.3. Confirm the exact code in the ICD-10-AM Table of Drugs and Chemicals. Hypertriglyceridemia (E78.1, pure hypertriglyceridaemia) may be coded as a secondary diagnosis.\n\nCoding should be verified against the full discharge summary and the current ICD-10-AM/ACHI edition, since the discharge diagnosis section was withheld and the record is internally inconsistent about the cause.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 563,
+    "output_tokens": 1181
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "c59cbdc54125",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nHospital Course:\n\nThe patient was admitted for screening mammography x-ray which showed a nodule of about 2 cm against the external quadrant of the right breast. The patient underwent a quadrantectomy of the right breast with removal of 2 cm neoplastic nodule and three ipsilateral sentinel lymph nodes. Follow-up tests showed a moderately differentiated invasive ductal carcinoma containing osteoclast-like giant cells. The patient was treated with adjuvant chemotherapy and hormone therapy with luteinizing hormone-releasing hormone (LHRH) analogue and exemestane. The patient will also undergo radiotherapy treatment on the residual breast after chemotherapy.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nAdjuvant chemotherapy with Docetaxel-Cyclophosphamide q21 scheme for 4 cycles followed by hormone therapy with luteinizing hormone-releasing hormone (LHRH) analogue and exemestane.\n\nDischarge Instructions:\n\nThe patient should continue with hormone therapy and attend follow-up appointments to monitor their condition. Patients should be aware of the benefits and risks related to the therapeutic proposals and follow the instructions as prescribed.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The principal diagnosis is the invasive ductal carcinoma of the right breast, which falls under category C50, malignant neoplasm of breast.\n\n- **Chapter letter (C):** The condition chiefly responsible for this episode is a malignant neoplasm. The nodule was excised by quadrantectomy, and histology confirmed a moderately differentiated invasive ductal carcinoma with osteoclast-like giant cells. The screening mammogram was only how it was found, and the surgery and adjuvant therapy are treatments, so none of these is the principal diagnosis.\n- **Category digits (50):** The site of the primary tumour is the breast, specifically the outer quadrant of the right breast. C50 is the category for malignant neoplasm of breast.\n\nCODE: C50",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 958,
+    "output_tokens": 274
+  },
+  "seconds": 0.0
+}

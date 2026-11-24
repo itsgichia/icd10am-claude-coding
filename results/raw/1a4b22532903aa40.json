@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "4beb4decadab",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary\n\nPatient: 35-year-old G2P2 female\n\nAdmission date: [insert date]\nDischarge date: [insert date]\nAdmission diagnosis: [diagnosis section withheld]\nHospital course:\nThe patient was admitted to the CCU on [insert date] with complaints of retrosternal chest discomfort radiating to jaw, associated with nausea and diaphoresis. Based on physical examination, EKG and cardiac enzyme levels, as well as coronary angiography and TTE results, the patient was diagnosed with an acute inferior STEMI secondary to spontaneous dissection of the OM2.\n\nTreatment:\nThe patient was appropriately discharged on dual antiplatelet therapy including ASA and Clopidogrel including beta blockade with Metoprolol.\n\nFollow-up plan:\nThe patient was advised to continue with the prescribed medication and instructed to come for follow-up after one month.\n\nReadmission:\nOne month later, the patient returned with diplopia and numbness of her left arm and face. Computed tomographic angiography showed a focal 8mm long dissection of the right vertebral artery in its V1 segment with mild associated aneurysmal dilatation. The patient was subsequently started on anticoagulation therapy to prevent future spontaneous dissections.\n\nDischarge condition:\nThe patient's condition was stable at the time of discharge.\n\nDischarge disposition:\nThe patient was discharged home with family members.\n\nFollow-up plan:\nThe patient was advised to continue with the prescribed medication and instructed to come for follow-up after three months.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The summary covers two admissions, and the question is which episode to code. The prompt says \"the episode of care,\" and the discharge summary is headed by the first admission (CCU, STEMI). The readmission is described as a separate later event, but the whole document reads as one summary. The most detailed, investigated admission is the STEMI from spontaneous coronary artery dissection.\n\n**Choosing the code for the first admission:**\n- The STEMI is an acute inferior STEMI, which is I21.1 (acute transmural myocardial infarction of inferior wall).\n- The cause is spontaneous coronary artery dissection, which is I25.4 (coronary artery aneurysm and dissection).\n- ICD-10-AM codes the myocardial infarction as the principal diagnosis when it is the condition chiefly responsible for the admission. The dissection is the underlying cause, but I21 is the manifestation being treated, and the I25.4 note instructs to use an additional code for the associated condition. I21 carries no \"code first\" convention for I25.4.\n- The principal diagnosis is therefore the inferior STEMI, I21.\n\n**Alternative:** if the readmission were the episode, the code would be I77.0 (dissection of the vertebral artery is I67.0, or I63 if infarction occurred). The presenting symptoms were diplopia and numbness, with no infarction established. Dissection of a precerebral artery is I67.0 only for cerebral arteries, so it would be I77.7 (dissection of other arteries). The first admission is the primary episode described, so I21 applies.\n\nCODE: I21",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 738,
+    "output_tokens": 516
+  },
+  "seconds": 0.0
+}

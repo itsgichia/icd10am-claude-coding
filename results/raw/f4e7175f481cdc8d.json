@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "3127de73c5b5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 46-year-old male\n\nAdmission date: [DATE]\n\nDischarge date: [DATE]\n\nMedical history: None reported except exertional dyspnea.\n\nChief complaint: Exertional dyspnea\n\nHospital course:\n\nThe patient was admitted to the hospital with a chief complaint of exertional dyspnea. Physical examination revealed a systolic mitral murmur and a diastolic aortic murmur. TTE revealed a noncoronary SVA protruding into the mitral anterior leaflet, leading to moderate mitral regurgitation, severe aortic insufficiency, and a dilated aortic root. The ascending aorta measured 54-mm, and the left ventricular diastolic diameter was 75-mm, with a left ventricular ejection fraction of 66%. No ventricular septal defect was detected. Coronary CTA showed no abnormalities or stenoses found in the coronary tree and the sac of the noncoronary SVA (measuring 36 \u00d7 47 \u00d7 51 mm) was protruding into the anterior leaflet of the mitral valve. Surgery was performed via median sternotomy. The thickening of the wall of the tricuspid aortic valve and ascending aortic wall was consistent with inflammation. The patient underwent mitral valve and aortic valve replacement and replacement of the ascending aorta with an artificial vessel. Antibiotics were administered for 5 weeks. Follow-up TTE showed satisfactory functioning of both replaced valves. Aortic CTA demonstrated restoration of the normal anatomical relationship at the aortic root. The patient was discharged in stable condition.\nDischarge diagnosis: [diagnosis section withheld]\nDischarge instructions: The patient was advised to follow-up with a primary care physician and cardiologist and adhere to medication and lifestyle modification recommendations."
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis: Q25.4 \u2013 Other congenital malformations of aorta (aneurysm of sinus of Valsalva)**\n\nThis is a best-fit code. The actual discharge diagnosis section was withheld, so it should be confirmed against the full record.\n\n**Why this code fits**\n- The condition that caused the admission and drove the surgery was an unruptured noncoronary sinus of Valsalva aneurysm (SVA), measuring 36 \u00d7 47 \u00d7 51 mm.\n- The aneurysm bulged into the anterior mitral leaflet. This explains the moderate mitral regurgitation and was a major reason for the double valve replacement.\n- In the ICD-10-AM Alphabetic Index, \"Aneurysm, sinus of Valsalva\" leads to **Q25.4**. The index assumes the aneurysm is congenital unless documentation says it was acquired.\n\n**Secondary codes to consider**\n- I35.1 \u2013 Aortic (valve) insufficiency, which was severe\n- I34.0 \u2013 Mitral (valve) insufficiency\n- I77.81 \u2013 Dilated aortic root (ectasia); check the code against your edition\n- I71.2 \u2013 Thoracic aortic aneurysm, without mention of rupture, for the 54 mm ascending aorta\n- Procedure codes for the aortic valve replacement, mitral valve replacement and ascending aorta graft replacement\n\n**Important query point**\n- At surgery, the aortic valve and aortic wall were thickened and looked inflamed, and the patient received 5 weeks of antibiotics. That pattern suggests infective endocarditis or infective aortitis.\n- If the clinician documents that the SVA was acquired from infection, the coding changes:\n  - Infective endocarditis would be I33.0 (plus an organism code), which could become principal or must be sequenced appropriately.\n  - An acquired/infective aneurysm of the aorta would be I71.2, with I79.1* or similar for aortitis.\n- Because of this, a **clinician query** is recommended to clarify:\n  - whether the SVA was congenital or acquired\n  - what the antibiotics were treating",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 661,
+    "output_tokens": 1188
+  },
+  "seconds": 0.0
+}

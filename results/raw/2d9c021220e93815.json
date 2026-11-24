@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "few_shot_three",
+  "record_id": "9f2fc330de4a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nHospital course:\nDischarge Summary:\n\nPatient: [Name], [Age]-year-old female\n\nAdmission Date: [Date]\nDischarge Date: [Date]\n\nChief Complaint:\nLeft supraclavicular and axillary painful lump\n\nHospital Course and Treatment:\nThe patient was admitted to the Hematologic Clinic with a painful left supraclavicular and axillary lump. She had received the first dose of the Pfizer-BioNTech COVID-19 vaccine five days prior to presentation. The patient experienced injection site pain, headaches, chills, and a sense of \u201cheaviness\u201d of the neck and upper chest for two days after injection that gradually resolved. On physical examination and Doppler ultrasound, multiple enlarged lymph nodes were seen in the axillary, supraclavicular, and low lateral neck areas. Painful axillary lymphadenopathy also appeared after the second dose of the vaccine. No other abnormal findings were noted. Blood tests including full chemistry, blood count, and CRP levels were within normal limits. The patient was treated with pain relief medication and her symptoms improved gradually until complete resolution.\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient responded well to pain relief medication and her symptoms gradually resolved over time. No complications were reported during hospitalization.\n\nFollow-Up Plan:\nThe patient will be discharged with instructions to follow up with her primary care physician for any concerns or symptoms in the future. No further follow-up is required at this time.\n\nSummary:\nThis is a case of a healthy middle-aged woman who presented with an adverse reaction to the Pfizer-BioNTech COVID-19 vaccine resulting in painful axillary lymphadenopathy. The patient was treated with pain relief medication, and her symptoms resolved over time with no complications identified during hospitalization. The patient will be discharged with instructions to follow up with her primary care physician for any concerns or symptoms in the future.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is reactive lymphadenopathy after COVID-19 vaccination, presenting as painful enlarged axillary and supraclavicular nodes. In ICD-10-AM, the options are:\n\n- R59 (enlarged lymph nodes): R59.0 is localised and R59.1 is generalised.\n- L04 (acute lymphadenitis): L04.2 covers the upper limb and axilla.\n- T88.1 (other complications following immunisation, NEC) together with Y59.x for the vaccine as the external cause.\n- U12.6 (adverse effect of COVID-19 vaccine): ICD-10-AM uses U12 for \"COVID-19 vaccines causing adverse effects\", and some versions place it as an external-cause-type code.\n\nThe condition is a reaction to the vaccine, but the clinical manifestation is the lymphadenopathy. Coding rules say to code the manifestation (the nature of the condition) first, with the external cause as an additional code. Because the lymph nodes are enlarged and not described as infected, R59 fits best. The node enlargement is localised across several regional sites, which would be R59.0.\n\nR59",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1105,
+    "output_tokens": 381
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "eef334a41ef9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [redacted]\n\nAge: 56 years\n\nGender: Male\n\nAdmission Date: [redacted]\n\nDischarge Date: [redacted]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted with subjective fever, body aches, nonproductive cough, left-sided pleuritic chest pain, and recurrent infected skin cyst with MRSA. Physical examination revealed coarse breath sounds with no wheezing, and a thick purulence was exposed from the cyst. Radiographic and CT studies showed developments of multifocal regions of nodular appearing infiltration within both lungs. Blood culture resulted in positive with MRSA that grew with different antibiotic sensitivities. Despite being on the antibiotic/vancomycin, the patient continued to be bacteremic with MRSA, and repeated chest CT scan revealed the progression of lung pneumonia and multiple new nodules. Further TEE revealed a large vegetation was involving the pulmonic valve that was adherent to the artery itself. The patient underwent pulmonary valve replacement using a LivaNova extra-large sutureless valve. Tissue valve culture came back positive for MRSA, and the patient was discharged home on IV vancomycin for six weeks.\n\nHospital Course Summary:\nThe patient was admitted with a history of recurrent infected skin cyst with MRSA, subjective fever, body aches, nonproductive cough, and left-sided pleuritic chest pain. Workup revealed MRSA Pulmonary Valve Endocarditis, and the patient underwent a pulmonary valve replacement. After a total of six weeks of IV vancomycin therapy, the patient was discharged home."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: I33.0, Acute and subacute infective endocarditis**\n\nAdd **B95.62** (MRSA as the cause of disease classified elsewhere) as an additional code to identify the organism.\n\nSupporting documentation: the summary states \"MRSA Pulmonary Valve Endocarditis,\" confirmed by TEE showing a large pulmonic valve vegetation, persistent MRSA bacteremia, and positive tissue culture. Endocarditis was the condition chiefly responsible for the admission and the valve replacement.\n\nSecondary diagnoses to consider include MRSA pneumonia or pulmonary nodules, the infected skin cyst (abscess), and Z95.2 (presence of prosthetic heart valve) if coded after the procedure, depending on local coding rules.\n\nCoding query: the record documents persistent MRSA bacteremia but never uses the term \"sepsis.\" If the treating physicians document sepsis, the ICD-10-AM sepsis sequencing rules could make a sepsis code (e.g., A41.02, Sepsis due to MRSA) the principal diagnosis, with the endocarditis coded as the localized infection. Clarify this with the physicians before final coding. Also confirm that the diagnosis section, which is withheld here, does not change the principal diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 629,
+    "output_tokens": 1047
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "cot_then_extract",
+  "record_id": "38f2e94efc75",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\nDate of Birth: [Redacted]\nGender: Female\nAdmission Date: [Redacted]\nDischarge Date: [Redacted]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted following diagnosis of mucosal malignant melanoma of the hard palate. The tumor was found to have extensively spread within the hard palate with no involvement of the nasal cavity or nasopharynx, and with no neck lymph node metastasis.\n\nTreatment:\nThe patient refused surgery and underwent CIR at another facility as the initial treatment, followed by concurrent chemotherapy. After one cycle of chemotherapy was stopped due to severe hematological toxicity. The patient achieved a complete response following CIR and was monitored by physical examinations, endoscopy, enhanced CT, and MRI. At 16 months after CIR, a cervical metastasis of a left jugular lymph node was detected, leading to diagnosis of stage crT0N1M0 MMMHN. The patient was treated by en bloc salvage ND with preservation of the accessory nerve, internal jugular vein, and sternocleidomastoid muscle. The duration of surgery was 132 min, and blood loss was less than 10 mL. The patient was discharged on postoperative Day 7.\n\nPostoperative Management:\nThe patient experienced no Clavien-Dindo grade 3 or 4 postoperative complications. No recurrence was found by the whole-body enhanced CT performed 3 months after surgery.\nFinal Diagnosis: [diagnosis section withheld]\nFollow-up Care:\nPatient will continue to be monitored for any signs of recurrence or metastasis.\n\nDiscussions:\nThe patient was presented with several treatment options, including radiotherapy and systemic immunotherapy, before choosing surgery. The en bloc salvage ND with preservation of the accessory nerve, internal jugular vein, and sternocleidomastoid muscle was performed successfully, and the patient experienced no postoperative complications.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The episode was a salvage neck dissection for a left jugular lymph node metastasis, found 16 months after the primary hard palate melanoma achieved a complete response with carbon-ion radiotherapy. The primary site shows no recurrence (crT0), so the condition chiefly responsible for the admission is the secondary malignant neoplasm of the cervical lymph node. This belongs to chapter C, category C77 (secondary and unspecified malignant neoplasm of lymph nodes), rather than C43 or C69, which cover primary melanoma, and rather than the primary palate site (C05).\n\nCODE: C77",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1292,
+    "output_tokens": 202
+  },
+  "seconds": 1.903604124992853
+}

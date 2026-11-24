@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "14612a31f7d9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\n\nPatient Name: [PATIENT NAME]\nMedical Record Number: [MRN]\n\nHospital Course:\nThe patient is a 40-year-old female who was admitted with a complaint of lower extremity numbness and tingling. She subsequently developed left facial weakness, which had been previously diagnosed as Bell's Palsy. Neurological examination revealed bilateral decreased sensation to light touch, 4/5 strength in upper extremities, and 3/5 strength in lower extremities with no elicited reflex at any location. On day two of admission, she developed bilateral ptosis, urinary incontinence, and respiratory failure. On day three, the patient's ptosis worsened, and she also developed ophthalmoplegia. She was diagnosed with anti-GD1a antibody-positive Guillain-Barr\u00e9 Syndrome. The patient received five days of plasma exchange, IVIG, and high-dose solumedrol. Her condition began to improve on day seven and she was extubated on day eight. The vertical nystagmus was the first deficit to resolve, and the strength of her extremities recovered to 4+/5 in the upper extremities and 4-/5 in the lower extremities. She was transferred to an acute rehab unit after 20 days of hospitalization for continued management and rehabilitation.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Medications:\nNone\n\nDischarge Instructions:\nFollow up with primary care provider in 1-2 weeks\nReturn to work part-time as tolerated\nContinue with physical therapy and rehabilitation program\nRefrain from strenuous activity and prolonged sitting\nTake care to prevent falls\nIf symptoms worsen, notify your healthcare provider immediately"
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: Guillain-Barr\u00e9 syndrome, ICD-10-AM code G61.0**\n\n**Rationale**\n- The condition chiefly responsible for the admission and for the investigation and treatment (plasma exchange, IVIG, steroids) was anti-GD1a antibody-positive Guillain-Barr\u00e9 syndrome.\n- ICD-10-AM classifies Guillain-Barr\u00e9 syndrome to G61.0 (Guillain-Barr\u00e9 syndrome, including acute (post-)infective polyneuritis). Miller Fisher syndrome is also classified here.\n- The presenting numbness and tingling, facial weakness, ptosis, ophthalmoplegia and urinary incontinence are manifestations of GBS. They are integral to it and are not coded separately as the principal diagnosis.\n- The earlier \"Bell's palsy\" label (G51.0) was a prior working diagnosis that proved to be part of the GBS (facial nerve involvement), so it is not coded.\n\n**Possible additional diagnoses**\n- Respiratory failure requiring intubation: J96.0- (acute respiratory failure), with the ventilation procedure coded (continuous ventilatory support, by duration, e.g. 13882-00 for more than 96 hours, depending on the hours documented).\n- Urinary incontinence: usually not coded separately, because it is a symptom integral to GBS.\n- Plasma exchange (plasmapheresis) and IVIG administration: coded as procedures using ACHI codes.\n\nFinal code assignment should follow the full record and the ACS/ACHI guidelines. If the respiratory failure were documented as the reason for admission, sequencing would need review, but here GBS is the underlying cause and the focus of treatment.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 645,
+    "output_tokens": 576
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "82081d7eb4e8",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]  \n\nMedical Record Number: [REDACTED]  \n\nDate of Admission: [REDACTED]  \n\nDate of Discharge: [REDACTED]  \nAdmission Diagnosis: [diagnosis section withheld]Principal Diagnosis: [diagnosis section withheld]\nOther Diagnoses: Hypertension, Retropharyngeal Gas, Bilateral Pulmonary Infiltrates, Pneumomediastinum, Subcutaneous Emphysema, Right Upper Lobe Pneumothorax, Right Pulmonary Artery Thrombosis, Left Renal Vein Thrombosis, Gastrointestinal Bleeding.  \n\nHospital Course:\n\nThe patient was admitted due to altered mental status and subsequently tested positive for COVID-19. During admission, the patient required high levels of oxygen therapy and imaging revealed several respiratory abnormalities. As a result, the patient's pneumothorax was managed and her oxygen requirement was gradually lowered. Management of the patient's thromboses required anti-coagulation treatment and placement of an inferior vena cava (IVC) filter. Further imaging also revealed retropharyngeal gas, bilateral pulmonary infiltrates, pneumomediastinum, and subcutaneous emphysema. The patient remained hospitalized for 21 days, during which time her condition improved significantly. Upon discharge, the patient was advised to follow up with her primary care provider for continued management of hypertension and other medical concerns.\n\nDischarge Instructions:\n\nThe patient is advised to continue taking any current medications as prescribed by her primary care provider. She is also reminded to continue practicing good hygiene, including washing hands frequently and wearing a mask in public areas. The patient is advised to monitor her health status closely and report any concerning symptoms to her primary care provider immediately. A follow-up appointment is scheduled with her primary care provider to ensure proper management of any ongoing medical concerns and to monitor her progress."
+      }
+    ]
+  },
+  "text": "**Likely principal diagnosis code: U07.1 COVID-19, virus identified**\n\nThe principal diagnosis section was withheld, so this is inferred from the hospital course. It is a coding judgement rather than a confirmed answer.\n\n**Reasoning**\n- The patient was admitted with altered mental status and then tested positive for COVID-19.\n- The hospital course centres on COVID-19 and its complications: high oxygen requirement, bilateral pulmonary infiltrates, pneumothorax, pneumomediastinum and subcutaneous emphysema, and thromboses.\n- Under ICD-10-AM/ACS rules, the principal diagnosis is the condition established after study to be chiefly responsible for the admission. Here that is COVID-19, which was found on work-up and accounts for the altered mental status and the subsequent course.\n- U07.1 is the ICD-10-AM code for COVID-19 with virus identified. In ICD-10-AM, U07.1 is used for confirmed COVID-19 regardless of severity, and manifestations are coded as additional diagnoses.\n\n**Caveats**\n- If the record documents COVID-19 pneumonia, the principal diagnosis would still be U07.1, with J12.82 (or the local ICD-10-AM equivalent for pneumonia due to COVID-19) as an additional code. Check your current edition's Australian Coding Standard (ACS 1202 for COVID-19) and the local code tables.\n- If the clinician documented the altered mental status as unrelated to COVID-19, for example from another cause, the principal diagnosis could change. R41.82 (altered mental status, unspecified) is generally a symptom code, and symptom codes are not used as principal diagnosis when a cause is established.\n\n**Suggested additional codes (verify against your edition)**\n- Pneumothorax: J93.8 or J93.9, or J95.8 if it is a complication of care\n- Pneumomediastinum: J98.2\n- Subcutaneous emphysema: T79.7 (traumatic) or M... per index; check the index\n- Pulmonary artery thrombosis: I26.9 or I26.0 depending on specificity\n- Renal vein thrombosis: I82.8\n- Hypertension: I10\n- GI bleeding: K92.2\n- IVC filter placement: use the relevant ACHI procedure code\n\nPlease confirm the final code assignment with a clinical coder using the full medical record.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 726,
+    "output_tokens": 802
+  },
+  "seconds": 0.0
+}

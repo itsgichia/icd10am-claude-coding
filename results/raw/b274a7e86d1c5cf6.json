@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "7456c0a158b6",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\n\nPatient: 51 year old female\n\nAdmission: Shimane University Hospital\nDiagnosis: [diagnosis section withheld]\nMedical History: Insomnia, auditory hallucinations, delusions of persecution\n\nHospital Course: The patient was admitted to Shimane University Hospital with auditory hallucinations and delusions of persecution at the age of 49. Examination showed an autistic state, catatonic stupor, and deterioration of social functioning. The Positive and Negative Syndrome Scale (PANSS) was used to evaluate her psychiatric symptoms. Other routine laboratory examinations were within normal limits. Risperidone was started and her symptoms gradually decreased. However, at the age of 51, the patient developed psychomotor excitement and auditory hallucinations which led to a catatonic stupor. Haloperidol and perospirone were prescribed but worsened her symptoms. Modified electroconvulsive therapy (ECT) was started as a supplementary strategy and her symptoms gradually improved. The patient became almost symptom-free after the seventh ECT so the treatment was discontinued. During ECT, her prescription was not changed. \n\nOutcome: The patient's symptoms improved and she was transferred to another hospital for further training in social skills.\n\nFollow-up Recommendations: The patient should continue her follow-up care with her psychiatrist and attend regular therapy sessions to monitor her symptoms and adjust medications as needed.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The picture is auditory hallucinations, delusions of persecution, an autistic state, catatonic stupor and deteriorating social functioning. The course is chronic and relapsing, with a catatonic episode, and it responded to ECT. This is most consistent with schizophrenia. The two candidate categories are F20 (schizophrenia, including the catatonic subtype F20.2) and F25 (schizoaffective disorder). Nothing in the summary points to a mood component, so F25 is unlikely. The catatonic features would fall under F20.2, which is still within category F20.\n\nCODE: F20",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1022,
+    "output_tokens": 194
+  },
+  "seconds": 0.0
+}

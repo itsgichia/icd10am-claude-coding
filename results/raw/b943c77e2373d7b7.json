@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "json_output",
+  "record_id": "01d3ff5888ad",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nHospital Course:\nThe patient, an 85-year-old male, was admitted to the hospital with bilateral foot swelling, decreased urine output, and a poor urinary stream. He also complained of breathlessness, anorexia, weight loss, and had a past medical history significant for anemia. Physical examination revealed multiple, nontender, firm lymph nodes in the right upper jugular, middle jugular, right and left submandibular, and multiple right-sided axillary lymph nodes. His laboratory investigations revealed findings consistent with tumor lysis syndrome, including elevated uric acid, hyperphosphatemia, and hypocalcemia. Bone marrow examination showed hypercellular smears with reduced megakaryocytes and erythropoiesis. The bone marrow differential counts revealed immature cells with monocytic differentiation and large collections of mature lymphocytes.\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nDespite being explained about the treatment options and prognosis, the patient refused to undergo any further investigations and therapy.\n\nDischarge Condition:\nThe patient was discharged home in fair condition. A follow-up plan was initiated with further medical management as an outpatient.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"C93\", \"condition\": \"Acute monocytic leukaemia\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 535,
+    "output_tokens": 334
+  },
+  "seconds": 3.5006018329877406
+}

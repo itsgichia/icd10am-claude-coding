@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "538e9dec7691",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient Name: [Redacted], Jane\nAge: 95\nGender: Female\nAdmission Date: [Redacted]\nDischarge Date: [Redacted]\n\nHOSPITAL COURSE:\n\nThe patient presented to the emergency department with hypoxia, tachycardia, tachypnea, use of accessory muscles for respiration and somnolence. Physical exam revealed no clinical signs of DVT such as unilateral leg swelling or calf tenderness. Point of care ultrasound (POCUS) was performed and revealed a large mobile thrombus in the right ventricle on apical four-chamber view, which in combination with the patient\u2019s clinical presentation, was diagnostic of acute pulmonary embolism with right heart strain.\n\nThe patient was assessed by her family, and her code status was established as \u201cdo not resuscitate\u201d with comfort measures only. Further imaging, fibrinolysis and thrombectomy were not attempted in accordance with the patient\u2019s wishes.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE CONDITION:\n\nStable with Comfort Measures only\n\nDISCHARGE INSTRUCTIONS:\n\nN/A\n\nFOLLOW-UP:\n\nOutpatient options should be discussed with the patient's primary care physician\n\nATTENDING PHYSICIAN:\n\n[Redacted]\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "I26",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 592,
+    "output_tokens": 83
+  },
+  "seconds": 0.0
+}

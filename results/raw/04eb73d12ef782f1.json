@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "11922b4f666b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY:\n\nAdmission Date: N/A\nDischarge Date: N/A\n\nPatient: 63-year-old woman\nDiagnosis: [diagnosis section withheld]\nHospital Course Summary: \n\nThe patient underwent an excision of a vulvar lesion and it was diagnosed as a BG-ACC. Although the patient did not undergo adjuvant therapy, the diagnosis was followed up. However, 4 years later, the patient was found to have metastasis to the lung. A video-assisted thoracoscopic surgery was performed which was followed by recurrence in the vulva 5 years later. The patient subsequently underwent an excision of the recurrent vulvar lesion which was used for molecular analysis.\n\nThe patient's case exempts her from being discharged or having any medication prescriptions. Further re-examinations may be conducted in the following weeks. \n\nFollow-up Care: The patient is advised to return for follow-up re-examinations as required by the treating physician.\n\nSigned,\n[Name and Title of Physician]"
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **C51.0 \u2013 Malignant neoplasm of labium majus (Bartholin's gland)**\n\n## Rationale\n\n**Interpreting the diagnosis**\n- \"BG-ACC\" stands for **Bartholin gland adenoid cystic carcinoma**.\n- In ICD-10-AM, Bartholin's gland is classified under **C51.0**, which covers the labium majus and includes the Bartholin (greater vestibular) gland.\n\n**Identifying the principal diagnosis for this episode**\n- The admission appears to be for excision of the **recurrent vulvar lesion**.\n- Under the Australian Coding Standards (ACS 0236 Neoplasm coding and sequencing), a local recurrence of a previously excised primary malignancy is coded as a **current primary malignancy of that site**. It is not coded as a history code.\n- The recurrence is the condition treated in this episode, so it is the principal diagnosis.\n\n## Suggested Additional Codes\n\n| Code | Description | Comment |\n|---|---|---|\n| **M8200/3** | Adenoid cystic carcinoma | Morphology code |\n| **C78.0** | Secondary malignant neoplasm of lung | Only if lung disease is still present or under treatment. If it was fully resected and is no longer treated, it is generally not assigned. |\n| **Z92.3** / **Z85.x** history codes | | Consider per local policy if relevant to the episode |\n\n## Caveat\nThe summary is incomplete. Admission dates, the withheld diagnosis section and the procedure details are missing. Confirm the following against the full clinical record before finalising:\n- The reason for this admission\n- The histopathology report\n- Whether lung metastases are currently present",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 384,
+    "output_tokens": 806
+  },
+  "seconds": 0.0
+}

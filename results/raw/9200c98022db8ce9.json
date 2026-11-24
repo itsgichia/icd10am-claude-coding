@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "e978f0ec2dd7",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: ____\nDate of Admission: ____\nDate of Discharge: ____\nPrimary Diagnosis: [diagnosis section withheld]\nSecondary Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to our facility on ____, exhibiting symptoms of tachycardia and acute kidney injury. It was later determined that the patient had ingested multiple foreign bodies. Treatment interventions included intravenous lorazepam and emergency laparotomy to remove all the packets. Postoperatively, the patient was transferred to the ICU where he remained for a total of one night before being transferred to ward level care. Pain management was achieved with a patient controlled analgesia (PCA) infusion pump, and the patient was extubated on day 1 postoperatively. The patient had a slow postoperative recovery mainly due to pain and limited oral fluid intake. He was discharged on day 10 back to police custody and returned once a week later for a dressing change.\n\nCourse of Treatment:\nThe course of treatment for this patient focused on the removal of the ingested foreign bodies through an emergency laparotomy. The patient was transferred to the ICU postoperatively and was managed with a patient controlled analgesia (PCA) infusion pump to manage pain.\n\nMedications:\nA detailed list of medications administered during the patient's hospitalization is not included in this summary.\n\nFollow-up:\nThe patient was discharged on day 10 back to police custody and returned once a week later for a dressing change. No further follow-up was scheduled upon the patient's discharge."
+      }
+    ]
+  },
+  "text": "# Suggested Principal Diagnosis: **T40.5 Poisoning by cocaine**\n\nThis assumes the documentation confirms the packets contained cocaine and leaked.\n\n## Rationale\n\nThe clinical picture fits **body packing (drug mule) with packet leakage**:\n- **Tachycardia and acute kidney injury** suggest sympathomimetic toxicity, with possible rhabdomyolysis-related AKI.\n- **IV lorazepam** is the standard treatment for cocaine or sympathomimetic toxicity.\n- **Emergency laparotomy** is typically done when packets leak or rupture, or cause obstruction.\n- **Discharge to police custody** supports drug trafficking.\n\nUnder ICD-10-AM/ACS conventions, when a body packer has signs of drug toxicity from leaking packets, the **poisoning code is sequenced as principal diagnosis**. The manifestations and the foreign body are coded as additional diagnoses.\n\n## Suggested Full Code Set\n\n| Code | Description |\n|---|---|\n| **T40.5** | Poisoning by cocaine (principal) |\n| N17.9 | Acute kidney failure, unspecified |\n| R00.0 | Tachycardia, unspecified |\n| T18.9 (or T18.2/T18.3 if the site is documented) | Foreign body in alimentary tract |\n| X42 | Accidental poisoning by narcotics/psychodysleptics (confirm intent) |\n| Y92.x / U73.x | Place of occurrence / activity codes as appropriate |\n\n## Alternative Scenario\n\nIf the documentation shows **no packet leakage or toxicity**, the principal diagnosis would instead be:\n- **T18.9 Foreign body in alimentary tract, part unspecified**, or a more specific site code such as T18.2 (stomach) or T18.3 (small intestine), depending on where the packets were found.\n\n## Query Recommended\n\nBefore finalising, clarify with the treating clinician:\n1. What substance the packets contained (cocaine, methamphetamine, heroin, etc.). This changes the T40/T43 code.\n2. Whether packets **leaked or ruptured**, causing toxicity.\n3. Where in the GI tract the packets were found.\n4. Whether the AKI is linked to the drug toxicity or rhabdomyolysis (consider M62.82 if rhabdomyolysis is documented).",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 568,
+    "output_tokens": 1182
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "191f87a2d072",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient: 44-year-old male\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient presented at our primary care clinic with a lump in the right nipple associated with sharp pain. The mammogram revealed a 1.2 cm mass in the right retro areolar breast. Core needle biopsy was positive for invasive ductal carcinoma ER+ and PR+ and negative for HER2-. The patient underwent simple mastectomy and right sentinel lymph node biopsy. He received dose-dense adjuvant chemotherapy which was stopped after 3 doses of Taxanes. The lymph node biopsy came back positive for metastatic carcinoma, and the patient received radiation therapy. The patient was started on Tamoxifen therapy for>5 years.\n\nSummary:\n\nThe 44-year-old male was diagnosed with invasive ductal carcinoma stage IIA. He underwent simple mastectomy, right sentinel lymph node biopsy, radiation therapy, and chemotherapy. He was started on Tamoxifen therapy for>5 years. He denied any active complaints 3 years post diagnosis. The physical examination was positive for old healed lateral scar on the right chest. Genetic testing revealed no evidence of BRCA mutations or other evidence of familial breast cancer. The patient's annual mammographic screening and clinical exam of the contralateral breast were normal. He reported concerns of trouble maintaining erections and weight gain which were likely secondary to the effect of Tamoxifen.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"C50\", \"condition\": \"Malignant neoplasm of breast (male, invasive ductal carcinoma)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 651,
+    "output_tokens": 44
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "82081d7eb4e8",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]  \n\nMedical Record Number: [REDACTED]  \n\nDate of Admission: [REDACTED]  \n\nDate of Discharge: [REDACTED]  \nAdmission Diagnosis: [diagnosis section withheld]Principal Diagnosis: [diagnosis section withheld]\nOther Diagnoses: Hypertension, Retropharyngeal Gas, Bilateral Pulmonary Infiltrates, Pneumomediastinum, Subcutaneous Emphysema, Right Upper Lobe Pneumothorax, Right Pulmonary Artery Thrombosis, Left Renal Vein Thrombosis, Gastrointestinal Bleeding.  \n\nHospital Course:\n\nThe patient was admitted due to altered mental status and subsequently tested positive for COVID-19. During admission, the patient required high levels of oxygen therapy and imaging revealed several respiratory abnormalities. As a result, the patient's pneumothorax was managed and her oxygen requirement was gradually lowered. Management of the patient's thromboses required anti-coagulation treatment and placement of an inferior vena cava (IVC) filter. Further imaging also revealed retropharyngeal gas, bilateral pulmonary infiltrates, pneumomediastinum, and subcutaneous emphysema. The patient remained hospitalized for 21 days, during which time her condition improved significantly. Upon discharge, the patient was advised to follow up with her primary care provider for continued management of hypertension and other medical concerns.\n\nDischarge Instructions:\n\nThe patient is advised to continue taking any current medications as prescribed by her primary care provider. She is also reminded to continue practicing good hygiene, including washing hands frequently and wearing a mask in public areas. The patient is advised to monitor her health status closely and report any concerning symptoms to her primary care provider immediately. A follow-up appointment is scheduled with her primary care provider to ensure proper management of any ongoing medical concerns and to monitor her progress."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: COVID-19 Pneumonia\n\n**Principal diagnosis:** **J12.8 Other viral pneumonia**\n**Mandatory additional code:** **U07.1 COVID-19, virus identified**\n\n## Rationale\n\n- **The condition chiefly responsible for admission:** The patient was admitted with altered mental status and tested positive for COVID-19. She then needed high-flow oxygen and had bilateral pulmonary infiltrates. Together these point to COVID-19 viral pneumonia as the main condition treated.\n- **Australian coding guidance:** Australian guidance (ACCD/IHACPA coding rules on COVID-19) says U07.1 is a supplementary code. It is not sequenced as the principal diagnosis. The manifestation is coded first, here the viral pneumonia (J12.8), with U07.1 added to identify COVID-19.\n- **If no pneumonia were documented:** If COVID-19 were confirmed but no specific manifestation were recorded, the guidance directs coding to the infection itself (e.g., B34.2 Coronavirus infection, unspecified site) plus U07.1.\n\n## Additional diagnoses to code\n\n| Condition | Code |\n|---|---|\n| Hypertension | I10 |\n| Pneumothorax (iatrogenic or spontaneous, per documentation) | J93.x / J95.81 |\n| Pneumomediastinum | J98.2 |\n| Subcutaneous (interstitial) emphysema | T79.7 or J98.2 (per documentation) |\n| Retropharyngeal gas | Code per clinical documentation |\n| Right pulmonary artery thrombosis | I26.9 (or I26.0 if acute cor pulmonale) |\n| Left renal vein thrombosis | I82.3 |\n| GI bleeding | K92.2 |\n| Procedures | Anticoagulation; IVC filter insertion |\n\n**Note:** The final code depends on the edition of ICD-10-AM in use and the full clinical documentation. Check the current ACS/IHACPA COVID-19 coding guidance, as the rules have changed between editions.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 726,
+    "output_tokens": 1256
+  },
+  "seconds": 0.0
+}

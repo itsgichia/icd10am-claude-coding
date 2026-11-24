@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "5ca74342e7bb",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient Name: [redacted]\nMedical Record Number: [redacted]\nDOB: [redacted]\nAdmission Date: [redacted]\nDischarge Date: [redacted]\n\nHospital Course:\nThe patient was admitted with complaints of headache and altered sensory perception. MRI images revealed gyriform enhancement with FLAIR hyperintensity and restricted diffusion in the right parietal cortex. The patient was found to have elevated protein and lymphocytic pleocytosis through CSF analysis. Additionally, the patient's glucose levels were elevated, and he was diagnosed with diabetes mellitus. The patient had spent significant time outdoors, including recent trips to Maine and New York, but had not reported any tick or mosquito bites. Serum was positive by JCV IgM ELISA with a PRNT of 1:160.\n\nThe patient remained in the hospital for observation and monitoring. The patient's headache and fatigue persisted over the next year, but repeat MRI 14 months later was normal. The patient was discharged with recommendations for outpatient follow-up appointments and further evaluation and monitoring as needed.\nDiagnosis: [diagnosis section withheld]\nFollow-Up:\nIt is recommended that the patient follow up with a neurologist for ongoing evaluation and monitoring. The patient should also continue following recommendations for diabetes management.\n\nDischarge Medications:\nN/A\n\nDischarge Plan:\nThe patient was discharged in stable condition with recommendations for outpatient follow-up appointments. The patient should continue following recommendations for management of diabetes. Further evaluation and monitoring is recommended for ongoing neurological symptoms."
+      }
+    ]
+  },
+  "text": "## Principal diagnosis: **A83.5 \u2013 California encephalitis**\n\n### Rationale\n- **\"JCV\" here is Jamestown Canyon virus, not JC polyomavirus.** IgM ELISA with a plaque reduction neutralisation test (PRNT, titre 1:160) is the standard serological confirmation for arboviruses. JC polyomavirus causes progressive multifocal leukoencephalopathy (A81.2), which is diagnosed by CSF PCR or biopsy, not IgM/PRNT. Its picture also differs: subacute white-matter disease without enhancement, rather than acute cortical involvement with CSF pleocytosis.\n- **Jamestown Canyon virus is a mosquito-borne orthobunyavirus in the California serogroup.** This is the same group as La Crosse virus. ICD-10-AM classifies encephalitis from these viruses under **A83.5 (California encephalitis)**.\n- **The presentation supports acute encephalitis.** Features include headache, altered sensorium, gyriform cortical enhancement with FLAIR hyperintensity and restricted diffusion, lymphocytic pleocytosis and raised CSF protein. Exposure in the north-eastern USA (Maine, New York), where JCV is endemic, fits.\n- **Absence of a reported mosquito bite does not exclude the diagnosis.** Bites often go unnoticed.\n\n### Additional diagnosis\n- The newly diagnosed **diabetes mellitus** should be coded as a secondary diagnosis. This is likely in the E11 range (type 2) if documentation supports it, with the appropriate complication or \"without complication\" subcategory per ICD-10-AM/ACS conventions.\n\nPlease confirm the final code against the withheld diagnosis section and the documented clinician terminology. If the clinician recorded \"meningoencephalitis,\" A83.5 still applies.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 601,
+    "output_tokens": 815
+  },
+  "seconds": 0.0
+}

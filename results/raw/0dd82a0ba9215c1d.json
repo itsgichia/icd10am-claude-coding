@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "eef334a41ef9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [redacted]\n\nAge: 56 years\n\nGender: Male\n\nAdmission Date: [redacted]\n\nDischarge Date: [redacted]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted with subjective fever, body aches, nonproductive cough, left-sided pleuritic chest pain, and recurrent infected skin cyst with MRSA. Physical examination revealed coarse breath sounds with no wheezing, and a thick purulence was exposed from the cyst. Radiographic and CT studies showed developments of multifocal regions of nodular appearing infiltration within both lungs. Blood culture resulted in positive with MRSA that grew with different antibiotic sensitivities. Despite being on the antibiotic/vancomycin, the patient continued to be bacteremic with MRSA, and repeated chest CT scan revealed the progression of lung pneumonia and multiple new nodules. Further TEE revealed a large vegetation was involving the pulmonic valve that was adherent to the artery itself. The patient underwent pulmonary valve replacement using a LivaNova extra-large sutureless valve. Tissue valve culture came back positive for MRSA, and the patient was discharged home on IV vancomycin for six weeks.\n\nHospital Course Summary:\nThe patient was admitted with a history of recurrent infected skin cyst with MRSA, subjective fever, body aches, nonproductive cough, and left-sided pleuritic chest pain. Workup revealed MRSA Pulmonary Valve Endocarditis, and the patient underwent a pulmonary valve replacement. After a total of six weeks of IV vancomycin therapy, the patient was discharged home.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The chief reason for this admission was **acute infective endocarditis of the pulmonary valve caused by MRSA**.\n\n**Chapter letter: I (circulatory system).** The workup found a large pulmonary valve vegetation on TEE. The excised valve tissue grew MRSA, and the patient needed a valve replacement and six weeks of IV vancomycin. The endocarditis is what drove this episode of care.\n\n**Digits: 33.** Category I33 is \"Acute and subacute endocarditis\", and I33.0 covers acute and subacute infective endocarditis. When endocarditis is infective and acute or subacute, it is classified to I33 even if a specific valve is named. It does not go to I37, which covers nonrheumatic pulmonary valve disorders.\n\nThe other findings do not displace it as principal diagnosis:\n- **MRSA bacteraemia and the infected skin cyst** are the source and part of the course. The organism is shown with a secondary code (B95.6).\n- **Lung infiltrates and nodules** are consistent with septic pulmonary emboli from the right-sided vegetation. They are a consequence of the endocarditis, not the main condition.\n- **Fever, cough and pleuritic chest pain** are presenting symptoms.\n- **Pulmonary valve replacement** is the procedure, not a diagnosis.\n\nCODE: I33",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1122,
+    "output_tokens": 629
+  },
+  "seconds": 0.0
+}

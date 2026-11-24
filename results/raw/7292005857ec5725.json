@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "0f1bccd11b80",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nPatient Information: \nName: Not specified\nAge: 62\nGender: Male\n\nHospital Course: \nThe patient was admitted to the hospital with complaints of abdominal pain and distension for the past month, which worsened in the last five days. The patient was diagnosed with small intestinal obstruction and underwent emergency laparotomy. During the operation, a small amount of food fiber was expelled, and multiple \u201cstenosis rings\u201d were found in the intestinal lumen at approximately 40 cm from the distal obstruction. The diseased bowel was removed, and the patient recovered without any discomfort. Pathological findings reported intestinal stenosis, mucosal erosion, and inflammatory granulation tissue formation. It showed neutrophil infiltration and vasodilation and congestion in the serosa. The muscle layer and serosa layer did not show any structural abnormality.\n\nSummary of Hospital Stay: \nThe patient was admitted to the hospital with abdominal pain and distension for the past month and was diagnosed with small intestinal obstruction. The patient underwent emergency laparotomy, and a diseased bowel was removed. The pathological findings reported intestinal stenosis and mucosal erosion. The patient recovered well without any discomfort. \nDiagnosis: [diagnosis section withheld]\nCondition at Discharge: \nRecovered.\n\nFollow-up Plan: \nPatient was followed up for two months, and no discomfort was found. No further treatment is required at this time."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis is **K56.69 Other intestinal obstruction**, or alternatively **K31.5 Obstruction of duodenum**, depending on how the final diagnosis is read. The reasoning below is why I favour a code from the K56 group.\n\n**Clinical picture**\n- Subacute-on-acute small bowel obstruction.\n- Multiple \"stenosis rings\" (diaphragm-like strictures) in the small bowel.\n- Pathology showing mucosal erosion, inflammatory granulation tissue and neutrophil infiltration. The muscularis and serosa were structurally normal, so the lesion is confined to the mucosa and submucosa.\n- This pattern is classic for **diaphragm disease of the small intestine**, which is typically associated with long-term NSAID use. The history given does not mention NSAIDs, so that link is unconfirmed.\n\n**Coding options**\n- **K56.69 Other intestinal obstruction** (ICD-10-AM 11th edition, which has no K56.69 split in older editions). In earlier editions the equivalent is **K56.6 Other and unspecified intestinal obstruction**. This is appropriate when the obstruction is due to the stricture and no more specific cause is coded.\n- **K63.1x** is not suitable, as it applies to perforation.\n- **K31.5** applies only to the duodenum, so it does not fit.\n- **K55.x** (vascular disorders) does not fit.\n- **K56.5 Intestinal adhesions [bands] with obstruction** does not fit, as no adhesions were described.\n- **K59.8 / K63.8** would be used if a stricture were coded separately. In ICD-10-AM, an acquired intestinal stricture is indexed to **K56.69** (obstruction) when it causes obstruction.\n- If NSAID-induced enteropathy were documented, the cause could be coded as an additional diagnosis (**K52.1 Toxic gastroenteritis and colitis**, with **Y45.3 Other nonsteroidal anti-inflammatory drugs** as the external cause).\n\n**Answer:** **K56.69** (K56.6 in older editions), Other intestinal obstruction, as the principal diagnosis. The procedure would be coded separately as a small bowel resection via laparotomy.\n\nThe final diagnosis was withheld, so please check this against the actual documented diagnosis and your local edition's index.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 532,
+    "output_tokens": 798
+  },
+  "seconds": 0.0
+}

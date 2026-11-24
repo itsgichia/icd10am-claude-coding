@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "bdc0a6707a96",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [Name]\nAge: 31\nGender: Female\nAdmission date: [Date]\nDischarge date: [Date]\n\nHOSPITAL COURSE:\nThe patient was admitted for radical resection of right renal carcinoma after CT scans revealed a solid cystic and low-density foci in the right kidney. The surgery was performed under general anesthesia. The kidney was opened, and a white mass of 4 cm size and fine papilla on the surface of the lump in the right kidney was observed. Postoperative pathology revealed Xp11.2 translocations/TFE3 gene fusions associated with renal cell carcinoma. The patient did not receive any other treatments and tolerated the surgery well.\n\nIMPRESSION:\nThe patient underwent the successful resection of renal cell carcinoma associated with Xp11.2 translocations/TFE3 gene fusions. A follow-up examination one month after the operation showed no recurrence.\n\nPLAN:\nThe patient will be monitored for any signs of recurrence of renal cell carcinoma. Further follow-up and imaging studies will be recommended as necessary.\n\nDISCHARGE INSTRUCTIONS:\nThe patient should continue her hemodialysis without any changes. The patient should make sure to attend all scheduled follow-up appointments and imaging studies. Any unusual symptoms should be reported to their primary care physician immediately.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE MEDICATIONS:\nNone.\n\nDISCHARGE DISPOSITION:\nThe patient was discharged in stable condition."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: C64 \u2013 Malignant neoplasm of kidney, except renal pelvis**\n\nRationale:\n- The admission was for radical resection of a right renal carcinoma. Postoperative pathology showed Xp11.2 translocation/TFE3 gene fusion-associated renal cell carcinoma, so the condition responsible for the admission is a primary malignant renal neoplasm.\n- ICD-10-AM classifies renal cell carcinoma to C64. It has no separate code for the Xp11.2 translocation subtype, which is a molecular variant of RCC.\n- ICD-10-AM does not use laterality at the 4-character level for C64, so the right side is not captured in the code. The ACHI procedure code carries the laterality.\n- The mention of ongoing hemodialysis suggests end-stage renal disease (N18.5) or dependence on dialysis (Z99.2). These would be secondary diagnoses, not the principal diagnosis. The summary does not state the cause of the renal failure, so check the full record before coding them.\n\nNotes for the coder:\n- Check the current edition for the exact code format. Some editions use C64 alone, and others may require a 4th-character extension.\n- Add a morphology code if your facility codes it. Renal cell carcinoma is M8312/3. Some facilities may use a more specific morphology code for the TFE3-translocation subtype.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 591,
+    "output_tokens": 461
+  },
+  "seconds": 0.0
+}

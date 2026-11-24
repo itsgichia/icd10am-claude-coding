@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "38c23795f24d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nAdmission Date: [Date]\n\nDischarge Date: [Date]\n\nPatient Name: [Name]\n\nMedical Record Number: [Number]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n\nA Pediatric Emergency Medicine (PEM) fellow conducted a point-of-care ultrasound (POCUS) examination on the patient. The examination revealed a large circumferential pericardial effusion, which was causing cardiac tamponade. The patient was immediately referred to a pediatric cardiologist, who performed an ultrasound-guided pericardiocentesis to drain one liter of fluid from the pericardial sac. \n\nThe patient responded well to the pericardiocentesis and was observed without recurrence of effusion or tamponade. The patient's pneumonia was also concurrently treated with appropriate antibiotic therapy. Subsequently, the patient's condition stabilized. \n\nAt the end of the hospital course, the patient was free from chest pain, shortness of breath, and diaphoresis. The patient's respiratory rate, heart rate, blood pressure, and pulse oximetry were within normal limits.\n\nInstructions for Discharge:\n\nThe patient was advised to continue with the prescribed antibiotics and keep follow-up appointments as per the pediatrician's advice. The parent/guardian was advised to keep a watch for any re-occurrence of chest pain, shortness of breath, and sweating. \n\nConclusion:\n\nThe patient was admitted with pneumonia and subsequently developed cardiac tamponade. The patient was managed with pericardiocentesis and a course of antibiotics. The patient responded well to the treatment, and no complications were noted during the hospital course. The parent/guardian was advised to keep follow-up appointments for the patient's ongoing care."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: J18.9, Pneumonia, unspecified organism**\n\nThe patient was admitted with pneumonia, and the cardiac tamponade developed after admission. Under ICD-10-AM principal diagnosis rules, the principal diagnosis is the condition established after study to be chiefly responsible for the admission, so pneumonia is sequenced first.\n\n**Additional diagnosis:** I31.4, Cardiac tamponade (secondary to pericardial effusion). It was treated with pericardiocentesis, so it is a significant additional code. Because it arose during the admission, check the hospital's hospital-acquired condition (HAC) and complication reporting requirements.\n\n**Caveats:**\n- The diagnosis section is blank, so I'm working only from the hospital course. Confirm the pneumonia type and organism. If a specific organism or type is documented (for example, bacterial or viral), a more specific J-code applies.\n- The summary doesn't say whether the effusion was caused by the pneumonia. If the coder determines it was a pneumonia-related pericarditis or effusion, the sequencing and codes (for example, I32 with the underlying condition coded first) would need to be reviewed.\n- Verify final codes against the current ICD-10-AM/ACHI edition and Australian Coding Standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 641,
+    "output_tokens": 1498
+  },
+  "seconds": 0.0
+}

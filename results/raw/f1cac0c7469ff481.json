@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "5941ca504c92",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHOSPITAL COURSE:\n\nThe patient, a 28-day-old female newborn with right congenital aural atresia, was admitted to our emergency department with postauricular erythema and edema, accompanied by irritability, anorexia, and insomnia, without fever, since two days. On initial examination, the newborn had a small, deformed auricular tag on the right side with no external auditory meatus. Her weight was 3780 grams.\nDIAGNOSIS: [diagnosis section withheld]\nTREATMENT:\n\nThe newborn was started immediately on meropenem and vancomycin i.v. Two days later, a mastoidectomy was performed, and abnormal bone was drilled or curetted away. Mastoid cells filled with granulation tissue were exenterated, and about 2 mL of pus were collected for culture. The antibiotic scheme continued for a total of four weeks.\n\nCONDITION AT DISCHARGE:\n\nThe patient's postoperative course was unremarkable, with progressive resolution of signs of inflammation on mastoid area. The baby girl remained afebrile and her inflammation markers improved gradually. She left the hospital in a very good condition upon completion of her treatment. The baby has no problem two months after her operation, and her weight is 5.100 grams.\n\nDISCHARGE INSTRUCTIONS:\n\nThe patient should be observed for any signs of recurrence of symptoms and should follow up with her primary care provider regularly."
+      }
+    ]
+  },
+  "text": "The most likely ICD-10-AM principal diagnosis is **H70.0, Acute mastoiditis**.\n\nThe diagnosis section is blank, so this is inferred from the record. The newborn was admitted with postauricular erythema and edema, treated with IV meropenem and vancomycin, and underwent mastoidectomy with drainage of pus. That treated condition, acute mastoiditis, is what occasioned the admission, so it is the principal diagnosis.\n\nLikely additional codes:\n- **Q16.0**, Congenital absence or atresia of external auditory canal (the right aural atresia)\n- **Q17.2**, Microtia (the small, deformed auricular tag), if the coder agrees it applies\n\nCoders should confirm the final code against the discharge summary's diagnosis section and the ICD-10-AM edition in use.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 511,
+    "output_tokens": 1304
+  },
+  "seconds": 0.0
+}

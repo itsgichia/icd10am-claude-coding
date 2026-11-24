@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "68574cbd4ea9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: N/A\nGender: Male\nAge: 65\nDate of Admission: N/A\nDate of Discharge: N/A\nLength of Stay: N/A\n\nHospital Course:\n\nThe patient was admitted to the hospital with complaints of abdominal pain, fatigue, weight loss and poor appetite which had led to the discontinuation of chemotherapy. The examination revealed moderate tenderness to palpation over the right upper quadrant and left side, no rebound, and no guarding. The laboratory tests revealed anemia, elevated alkaline phosphatase, elevated alanine aminotransferase and elevated aspartate aminotransferase. Abdominal computed tomography showed high-grade afferent loop obstruction due to a gastric mass. Upper endoscopy revealed a circumferential, fungating, and ulcerated friable 4\u20135 cm mass of malignant appearance involving the anastomosis that caused near-total obstruction of both the pancreatobiliary and efferent limbs. Following a successful double guidewire technique procedure, 2 uncovered metal stents were deployed across the gastric mass, into the afferent and efferent limbs under endoscopic and fluoroscopic guidance. Two clips were deployed to prevent stent migration. The patient was able to resume a clear liquid diet the first day followed by a duodenal stent diet. Liver function tests normalized except for alkaline phosphatase, but the patient continued to downtrend slowly.\nDiagnosis: [diagnosis section withheld]\nMedical Treatment:\n\nThe patient underwent a double guidewire technique followed by the placement of two uncovered metal stents across the gastric mass into the afferent and efferent limbs. The stents remained patent and the patient was tolerating oral intake prior to discharge.\n\nRecommendations:\n\nThe patient was discharged with recommendations to follow-up with the treating physician as recommended."
+      }
+    ]
+  },
+  "text": "**Most likely principal diagnosis code: C16.9, Malignant neoplasm of stomach, unspecified.**\n\nThe diagnosis section was withheld, so this is inferred from the clinical picture and the final code depends on details the summary doesn't give.\n\n**Reasoning**\n- The patient was on chemotherapy and has an anastomosis, so he has had previous gastric surgery (probably a gastrectomy or gastrojejunostomy) for gastric cancer.\n- This admission is for a malignant-appearing fungating mass at the gastrojejunal anastomosis. It caused afferent loop obstruction and near-total obstruction of the pancreatobiliary and efferent limbs.\n- Stents were placed to relieve the obstruction, so the condition mainly treated was the malignancy and its obstructive complication.\n\n**Coding considerations**\n- In ICD-10-AM, a malignancy is coded to the primary site. If the gastric cancer was resected and the mass is a recurrence at the anastomosis, it is still coded to C16.- (the stomach site, such as C16.0\u2013C16.9 if the subsite is documented). The exception is when the original primary was excised and there is no evidence of the disease, in which case Z85.0 would apply to a personal history. Here there is active disease, so C16.- applies.\n- If the mass were documented as a metastasis or a different primary (for example pancreatic or duodenal), the code would change. Pancreatic cancer would be C25.-, and a secondary site would be C78.8 for the digestive organs.\n- The obstruction would be a secondary diagnosis, for example K91.3 for postprocedural intestinal obstruction. This applies only if the clinician documents it as a complication, and a code from K31.- could apply for gastric outlet obstruction.\n- Anemia due to the malignancy (D63.0) and abnormal liver function tests (R74.-, R94.5) could be additional codes.\n- The procedure would be coded in ACHI as endoscopic insertion of stents, with a separate code for each stent site.\n\nIf the actual diagnosis was recurrent gastric adenocarcinoma at the anastomosis, **C16.9** would be the best choice. If the documentation specifies a subsite, use that instead.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 678,
+    "output_tokens": 738
+  },
+  "seconds": 0.0
+}

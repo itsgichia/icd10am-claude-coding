@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "dc843e96c2a0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Unspecified\nMedical Record Number: Unspecified\nDate of Admission: Unspecified\nDate of Discharge: Unspecified \n\nHospital Course:\nThe patient, a 68-year-old female presented to the emergency department with complaints of sudden onset of shortness of breath, chest pain, orthopnea, and paroxysmal nocturnal dyspnea. The notably past medical history includes hypertension, high cholesterol, chronic kidney disease stage 3, and hereditary hemorrhagic telangiectasia (HHT). Initial vital signs and laboratory investigations confirms acute systolic heart failure with markedly elevated BNP levels. Following prompt medical management, the patient demonstrated symptomatic improvement and was started on guideline-directed medical therapy including beta-blocker, ACE inhibitor, aldosterone antagonist and an oral diuretic. Subsequent left and right heart catheterization reveals widely patent coronary vessels, elevated pulmonary capillary wedge pressure, and elevated left ventricular end-diastolic pressure. The patient continued to attend regular bevacizumab infusions with her haematologist as this was not thought to be the cause of her cardiomyopathy at the time. Unfortunately, the patient developed recurrent episodes of flash pulmonary edema deemed to be due to medication non-compliance and subsequently experienced sudden onset of chest pain and shortness of breath at home followed by ventricular fibrillation related cardiac arrest which required prolonged resuscitation attempts leading to therapeutic hypothermia, but eventually passed away 3 days later. \nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Instructions:\n1. The patient was discharged to their family to pursue necessary funeral arrangements.\n2. No outpatient follow-up is needed.\n\nDischarge Medications:\nNone. \n\nFollow-up:\nThe patient did not survive."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: I50.21 Acute systolic (congestive) heart failure**\n\nI'm confident about the condition but less sure of the exact code, because ICD-10-AM's code set differs slightly from ICD-10-CM.\n\n**Reasoning**\n- The patient presented with acute systolic heart failure. This was confirmed by markedly elevated BNP, and the catheterization showed elevated PCWP and LVEDP with patent coronaries. It was the condition established after study to be chiefly responsible for the admission, which is the definition of principal diagnosis.\n- The later ventricular fibrillation cardiac arrest (I46.0/I49.0) was a complication or terminal event. It occurred after the initial presentation and was linked to the heart failure and non-compliance, so it is a secondary diagnosis.\n- The cardiomyopathy was not attributed to bevacizumab, and no cause was established, so it should not be coded as drug-induced.\n\n**Code in ICD-10-AM (Australian Modification)**\n- ICD-10-AM does not use I50.21. It uses I50.1 Left ventricular failure, and I50.0 Congestive heart failure, with the type and acuity handled by the Australian Coding Standards. Systolic and diastolic specificity is not captured in the same way as in ICD-10-CM.\n- For an acute left ventricular systolic failure presentation, the usual ICD-10-AM code is **I50.1 Left ventricular failure**. Some coders use I50.0 if the documentation says \"congestive cardiac failure\". I would pick I50.1 here because the documentation describes acute pulmonary edema and left-sided failure with raised PCWP and LVEDP.\n\n**Final answer: I50.1 (Left ventricular failure) in ICD-10-AM.** The ICD-10-CM equivalent is I50.21.\n\n**Suggested secondary codes**\n- I46.0 Cardiac arrest with successful resuscitation, and I49.0 Ventricular fibrillation\n- I10 Hypertension. Because there is also CKD, this may be I12.x (hypertensive renal disease) or I13.x (hypertensive heart and renal disease) under the classification's presumed link.\n- N18.3 CKD stage 3\n- E78.0 or E78.5 Hyperlipidaemia\n- I78.0 Hereditary haemorrhagic telangiectasia\n- Z91.1 Non-compliance with medical treatment\n\n**Caveat:** Under ICD-10-AM, hypertension with heart failure and CKD is presumed linked, so the principal diagnosis may instead be I13.0 (hypertensive heart and renal disease with heart failure), with I50.1 as an additional code. If the cardiomyopathy is documented as non-hypertensive, or the clinician states the heart failure is unrelated to hypertension, I50.1 stands. Please check the documentation and the current ACS edition.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 703,
+    "output_tokens": 971
+  },
+  "seconds": 0.0
+}

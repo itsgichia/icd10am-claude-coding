@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "b4c0fcccee5f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nHospital Course Summary\n\nPatient: [Name]\n\nAdmission Date: [Date]\n\nDischarge Date: [Date]\nAdmission Diagnosis: [diagnosis section withheld]Discharge Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted to our clinic with chronic diarrhea and intermittent abdominal pain. Upon physical examination and review of medical history, a history of gastrointestinal hemorrhage due to peptic ulcer was noted. Abnormal laboratory findings were also identified, including elevated white blood cell count, C-reactive protein, and erythrocyte sedimentation rate. Additionally, during the colonoscopy, colitis was detected in the biopsy. Imaging, including ultrasonography and CT, revealed inflammation of intestinal loops, the presence of omental inflammatory thickening, and a fluid collection in the pericaecal area. \n\nGiven these findings, the patient was hydrated and prescribed empiric cefixime and metronidazole for treatment. Pain was reduced following drainage of purulent fluid, antibiotics and hydration, and laboratory values returned to within normal limits. The patient was discharged from the hospital and scheduled for elective appendectomy six weeks later.\n\nDischarge Instructions:\n\nThe patient is advised to continue the prescribed antibiotics and to carefully follow the instructions provided upon discharge. The patient should also seek medical attention if symptoms recur or worsen. It is important for the patient to avoid potentially harmful foods and drinks, and to follow a healthy and balanced diet while receiving ongoing treatment. Follow-up appointments are scheduled to monitor the patient's condition and progress, and to determine the ongoing course of treatment as necessary.\n\nSigned by: [Name of responsible medical professional]\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "K35",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 733,
+    "output_tokens": 88
+  },
+  "seconds": 0.0
+}

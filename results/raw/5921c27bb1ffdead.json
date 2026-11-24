@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "583f72398ed9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nAdmission Date: [Date]\nDischarge Date: [Date]\n\nPatient Name: [Name]\nSex: [Gender]\nAge: 70 years old\nPrimary Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient presented to the hospital with complaints of chest pain. Further evaluation revealed anterolateral STEMI for which the patient underwent percutaneous coronary intervention of the left circumflex. A chronic total occlusion of the left anterior descending was also noted. A transthoracic echocardiogram showed an ejection fraction of 10%-15% with dyskinetic apex, akinetic septum, mid to apical anterior, and lateral walls. An echodensity measuring 38 \u00d7 18 mm at its greatest dimension suggestive of a thrombus was also observed. The patient was discharged with Aspirin, Clopidogrel, and Rivaroxaban (15 mg daily for 3 weeks then 20 mg daily). A TTE performed three months later revealed improvement in the previously seen LVT with EF increasing to 35%.\n\nDisposition:\n\nThe patient was discharged from the hospital in a stable condition with instructions on appropriate cardiac rehabilitation and follow-up. The patient was advised to continue with the prescribed medication regimen and to return to the clinic for further evaluation and monitoring as directed by his physicians.\n\nImpression:\n\nThe patient presented with anterolateral STEMI requiring PCI of the left circumflex. Follow-up TTE revealed resolution of previously observed LVT with improvement in EF to 35%.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"I21\", \"condition\": \"Acute myocardial infarction (anterolateral STEMI)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 668,
+    "output_tokens": 38
+  },
+  "seconds": 0.0
+}

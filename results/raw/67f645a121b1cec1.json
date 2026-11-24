@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "dff9141abc15",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\nPatient: 16-year-old female\nAdmission Date: [DATE]\nDischarge Date: [DATE]\nMedical Record Number: [NUMBER]\n\nHospital Course:\n\nThe patient presented to the hospital for an exploratory laparotomy and resection of a small bowel anastomotic stricture due to her longstanding history of Crohn's disease. The patient underwent an epidural analgesia procedure for postoperative pain control and a test dose was administered without any evidence of intravascular or subarachnoid injection.\n\nThe patient showed signs of mild left unilateral Horner's syndrome and weakness of both lower extremities in the Post Anesthesia Care Unit (PACU) and was transferred to the ward stable and comfortable.\n\nOn postoperative day one, the patient complained of left-sided numbness and visual blur. Physical examination revealed left hemibody analgesia, weakness, and Horner's syndrome. The epidural infusion rate was adjusted and reduced, which produced progressive improvement in the patient's numbness, weakness, and Horner's syndrome.\n\nIn light of the patient's history of unilateral epidural block with a previous surgery two years earlier, an epidurogram was performed, which showed left unilateral spread of the contrast medium, indicating a midline barrier dividing the epidural space.\n\nAfter monitoring the patient for another three days, the epidural catheter was removed and the patient's neurological signs and symptoms completely resolved.\nDischarge Diagnosis: [diagnosis section withheld]\nTreatment:\n\nExploratory laparotomy and resection of small bowel anastomotic stricture\nEpidural analgesia for postoperative pain control\n\nFollow-Up Care:\n\nThe patient is advised to follow-up with a healthcare provider for ongoing management of Crohn's disease and any concerns related to the surgical procedure.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: K50**\n\n**Principal diagnosis:** Crohn's disease of the small intestine, presenting as a small bowel anastomotic stricture (K50.0 at full code level).\n\n- **Why she was admitted:** She came in for planned laparotomy and resection of a small bowel anastomotic stricture. The summary attributes the stricture to her longstanding Crohn's disease. A fibrostenotic stricture at a previous anastomosis in a Crohn's patient is usually recurrent disease, not a surgical complication. The condition chiefly responsible for the admission is therefore the Crohn's disease, which falls under K50.\n- **Why not a post-procedural code:** I considered K91.- (post-procedural disorders of the digestive system). The documentation links the stricture to Crohn's disease rather than to the previous surgery, so K91 is not supported. If the clinician later documents the stricture as a complication of the earlier anastomosis rather than recurrent Crohn's, this should be queried and revisited.\n- **What the principal diagnosis is not:**\n  - The unilateral epidural block with Horner's syndrome and left hemibody numbness and weakness arose after admission. It is a complication of the epidural, coded as an additional diagnosis (anaesthesia complication codes with an external cause code and place of occurrence).\n  - The laparotomy and epidural are procedures, coded separately in ACHI.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 836,
+    "output_tokens": 748
+  },
+  "seconds": 0.0
+}

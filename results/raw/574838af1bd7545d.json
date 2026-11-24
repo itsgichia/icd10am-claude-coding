@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "6858df327d1a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nAdmission Date: {date}\nDischarge Date: {date}\n\nPatient Name: {name}\nMedical Record Number: {number}\n\nHospital Course:\nThe patient was admitted for surgical treatment of cecal cancer with sclerosing mesenteritis. The surgery involved a right colectomy with excision of a diffusely thick mesenterium with multiple yellowish nodules. Pathology report revealed Astler-Coller C2 cecal adenocarcinoma and diffuse sclerosing mesenteritis of the excised mesenterium. The patient followed oncologic treatment consisting in capecidabine under close surveillance of his coagulation parameters with no reported abdominal pain or discomfort. A CT scan was performed 6 months later in the context of cancer follow-up, which did not demonstrate any significant radiological changes of the sclerosing mesenteritis.\n\nHistory and Physical:\nAn 83-year-old male was admitted with a past medical history of atrial fibrillation, coronary heart disease, and previous surgeries including an appendicectomy in his childhood and a laparoscopic cholecystectomy three years ago. He presented with symptoms of weight loss, abdominal discomfort, and persistent fatigue leading to a complete laboratory examination demonstrating iron deficiency anemia.\nDiagnosis: [diagnosis section withheld]\nPlan:\nThe patient underwent a right hemicolectomy. Oncologic treatment with capecidabine was initiated post-surgery, and the patient was discharged with close follow-up appointments. \n\nDisposition:\nThe patient was discharged in a stable condition.\n\nFollow-up:\nThe patient is advised to follow up with his oncologist for continued cancer surveillance."
+      }
+    ]
+  },
+  "text": "## Principal Diagnosis: **C18.0 \u2013 Malignant neoplasm of caecum**\n\n### Rationale\n- Under ACS 0001 (Principal Diagnosis), the principal diagnosis is the condition chiefly responsible for the admission. This patient was admitted for surgical treatment (right hemicolectomy) of caecal cancer.\n- Pathology confirmed **adenocarcinoma of the caecum**, so the primary malignant site is sequenced first.\n- Morphology code: **M8140/3** (Adenocarcinoma NOS).\n\n### Likely additional diagnoses (for completeness)\n| Code | Description | Note |\n|---|---|---|\n| **C77.2** | Secondary malignant neoplasm of intra-abdominal lymph nodes | Astler-Coller C2 indicates regional nodal involvement. Confirm against the pathology report. |\n| **K65.8** | Other peritonitis (sclerosing mesenteritis) | Confirmed on histology of the excised mesentery. |\n| **D50.0** or **D63.0** | Iron deficiency anaemia secondary to chronic blood loss, or anaemia in neoplastic disease | Choose according to clinician documentation of the cause. |\n| **I48.9** | Atrial fibrillation, unspecified | Code if it meets ACS 0002 criteria, for example if it required anticoagulation management. |\n| **I25.9** | Chronic ischaemic heart disease, unspecified | Code if it meets ACS 0002 criteria. |\n\n### Procedure\nRight hemicolectomy, from ACHI block 913 (e.g., **32003-01**, without formation of stoma). Confirm the exact code against the operative report.\n\nFinal code assignment should be verified against the full clinical documentation and the current ICD-10-AM/ACHI/ACS edition.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 618,
+    "output_tokens": 886
+  },
+  "seconds": 0.0
+}

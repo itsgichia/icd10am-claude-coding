@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "d5cf95c4bce7",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: Not Specified\nMedical Record Number: Not Specified\nDate of Admission: Not Specified\nDate of Discharge: Not Specified\n\nINTRODUCTION:\nThe patient is an 81-year-old woman who visited the department of internal medicine in our hospital with complaints of loss of appetite, abdominal distension, and an upper abdominal mass. She had a history of left breast cancer 11 years ago. The patient was diagnosed with peritoneal metastasis of recurrent breast cancer and was put on endocrine therapy using letrozole.\n\nHOSPITAL COURSE:\nThe patient's symptoms improved with endocrine therapy, and she showed recovery from pleural metastasis and pleural effusion. Tumor marker values fluctuated during the course of treatment, with no abnormal CEA values obtained, and CA15-3 and BCA225 values gradually declining from the time of recurrence and returning to normal levels 2 years later. NCC-ST-439 value gradually increased up to 49 U/ml 6 months later, with a gradual decline thereafter along with the other tumor markers. The patient was currently receiving treatment in the outpatient department and is still alive on the same medication.\n\nDISCHARGE OUTCOME:\nThe patient is being discharged in stable condition with continued endocrine therapy.\n\nFOLLOW-UP:\nNo relapse of malignancy has been detected after a period of 6 years.\n\nATTENDING PHYSICIAN:\nNot Specified\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE MEDICATIONS:\nLetrozole.\n\nDISCHARGE INSTRUCTIONS:\nContinue endocrine therapy as prescribed. Follow up with your healthcare provider as recommended."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: C78.6, Secondary malignant neoplasm of retroperitoneum and peritoneum**\n\n**Rationale:**\n- The patient was admitted with loss of appetite, abdominal distension and an upper abdominal mass. These were attributed to peritoneal metastasis from recurrent breast cancer, so the metastatic site is the condition chiefly responsible for the episode of care.\n- ICD-10-AM coding standards direct that when a patient is treated for a secondary site, the secondary neoplasm is sequenced as the principal diagnosis. This applies when the primary has been excised or eradicated and there is no evidence of active primary disease.\n- Her left breast cancer was treated 11 years earlier with no documented residual primary disease. The primary is therefore coded as a history (Z85.3, Personal history of malignant neoplasm of breast) and is not coded as C50.-.\n\n**Suggested additional codes:**\n- C78.2, Secondary malignant neoplasm of pleura. The summary mentions pleural metastasis and effusion, though this is inconsistent with the \"peritoneal\" diagnosis. Code it only if it is confirmed in the record.\n- J91* or J90, pleural effusion. Code it only if it is confirmed and meets the criteria for a separate diagnosis.\n- Z85.3, personal history of malignant neoplasm of breast.\n- Z79.8, long-term use of other medications, for the endocrine therapy. Check local coding conventions, since an alternative code may apply for hormone therapy.\n\n**Caveats:**\n- The summary is ambiguous. It mentions both peritoneal and pleural metastasis, and the discharge diagnosis section was withheld.\n- If the record shows the metastasis was primarily pleural, the principal diagnosis would be C78.2. Based on the stated diagnosis of peritoneal metastasis, C78.6 is the best answer.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 654,
+    "output_tokens": 636
+  },
+  "seconds": 0.0
+}

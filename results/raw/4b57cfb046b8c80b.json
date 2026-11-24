@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "97d7cb7d2576",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHOSPITAL COURSE SUMMARY\n\nPatient Name: [REDACTED]\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\nLength of Stay: [REDACTED]\n\nCHIEF COMPLAINT: RUQ pain\n\nHISTORY OF PRESENT ILLNESS:\nThe patient, a 26-year-old male, presented to the emergency department with a three-day history of RUQ pain, which worsened with food. Physical exam demonstrated focal RUQ peritonitis with a positive Murphy\u2019s sign, but no rebound or guarding. Ultrasound revealed a stone in the gallbladder neck and no pericholecystic fluid. Surgery was consulted and the patient was offered outpatient follow-up for biliary colic.\n\nPAST MEDICAL HISTORY:\nThe patient has a prior history of good health. No past medical conditions or significant illnesses were noted in the chart.\n\nHOSPITAL COURSE:\nThe patient was monitored in the hospital for a brief period and discharged with a plan for outpatient follow-up for biliary colic. The following day, the patient returned to the emergency department with persistent pain and underwent cholecystectomy for cholecystitis.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\nThe patient is advised to take adequate rest and avoid heavy lifting for a few days. The surgical incisions should be kept clean and dry. The patient should follow the medication regimen as prescribed. The patient is instructed to return to the hospital if there are any signs of fever, redness, swelling, or discharge at the surgical site, or if the pain persists.\n\nFOLLOW-UP:\nThe patient will have a follow-up appointment with the surgeon in approximately one week to assess postoperative recovery and discuss any further management or treatment options.\n\nDISCHARGE CONDITION:\nThe patient was discharged in stable condition with the appropriate medical care and follow-up plan in place."
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **K80.10** \u2013 Calculus of gallbladder with other cholecystitis, without mention of obstruction\n\n## Rationale\n\n- **Condition treated:** The patient had a cholecystectomy for cholecystitis. Ultrasound showed a gallstone in the gallbladder neck.\n- **Combination code required:** ICD-10-AM has combination codes for cholelithiasis with cholecystitis (K80.0\u2013K80.1). Code these together rather than separately as K80.2- plus K81.-.\n- **Acuity not documented:** The record says only \"cholecystitis,\" without specifying acute or chronic. In ICD-10-AM, cholecystitis NOS with cholelithiasis is classified to **K80.1-**. Coders should not infer acuity from clinical features such as the positive Murphy's sign or the short history.\n- **Obstruction not documented:** The stone was in the gallbladder neck, but obstruction or impaction was not stated. This gives the 5th character **0** (without obstruction).\n\n## Alternatives depending on documentation\n\n| Scenario | Code |\n|---|---|\n| Surgeon documents **acute** cholecystitis (clinically likely) | **K80.00** \u2013 Calculus of gallbladder with acute cholecystitis, without obstruction |\n| Acute cholecystitis with documented **impacted or obstructing** stone at the neck | **K80.01** |\n| Coding only the **first presentation** (biliary colic, discharged without surgery) | **K80.20** \u2013 Calculus of gallbladder without cholecystitis, without obstruction |\n\n**Recommendation:** Query the surgeon to confirm whether the cholecystitis was acute and whether the stone was obstructing. Given the clinical picture, K80.00 is the most likely final code once documented.\n\nThe procedure would be coded separately with ACHI, for example laparoscopic cholecystectomy 30445-00, if laparoscopic.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 721,
+    "output_tokens": 1146
+  },
+  "seconds": 10.929665792005835
+}

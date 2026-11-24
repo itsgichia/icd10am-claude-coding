@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "be032d0262d2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 23-year-old male\n\nAdmission Date: [date]\n\nDischarge Date: [date]\n\nReason for admission: One-day history of right-sided pleuritic chest pain, haemoptysis, and fever\n\nHospital Course:\n\nThe patient was admitted with right-sided pleuritic chest pain, haemoptysis, and fever. Physical examination revealed rales and bronchial breathing in the right infrascapular region. Chest X-ray demonstrated right lower lobe consolidation. The patient was diagnosed with community-acquired pneumonia. Computed tomography pulmonary angiogram (CTPA) ruled out pulmonary embolism (PE). The patient was treated with IV ceftriaxone for four days and oral amoxicillin for three days. The patient showed complete resolution of symptoms on day 4 and was discharged.\nDischarge Diagnosis: [diagnosis section withheld]\nInstructions for Follow-up Care:\n\nThe patient is advised to follow-up with their primary care physician and continue taking their prescribed medications as directed.\n\nFollow-up Lab and Diagnostic Exams:\n\nNone\n\nFollow-up Appointments:\n\nThe patient is advised to schedule a follow-up appointment with their primary care physician.\n\nTechnical Terms and Abbreviations:\n\nPE: Pulmonary Embolism\n\nCTPA: Computed Tomography Pulmonary Angiogram\n\nIV: Intravenous"
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: J18.1 Lobar pneumonia, unspecified organism**\n\n**Rationale:**\n- The documented diagnosis is community-acquired pneumonia. Imaging showed right lower lobe consolidation, and the exam found bronchial breathing and rales.\n- No organism was identified, and no cultures or sputum results are reported. The pneumonia was treated empirically with ceftriaxone, then amoxicillin.\n- In ICD-10-AM, \"community-acquired pneumonia\" without further specification would default to J18.9 Pneumonia, unspecified. J18.1 applies when the documentation supports lobar pneumonia. Here the single-lobe consolidation (right lower lobe) is the basis for that choice. If the clinician's final diagnosis states only \"community-acquired pneumonia\" and does not say \"lobar,\" J18.9 is the safer code, and a coder would query the clinician.\n- Pulmonary embolism was ruled out, so I9x codes are not assigned. Haemoptysis (R04.2), pleuritic chest pain (R07.1) and fever (R50.9) are symptoms integral to the pneumonia and are not coded separately.\n\n**Summary:**\n- If the documentation says \"lobar pneumonia\" or the coder accepts the lobar consolidation as lobar pneumonia: **J18.1**\n- If the final diagnosis reads strictly \"community-acquired pneumonia\" with no further specification: **J18.9**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 521,
+    "output_tokens": 490
+  },
+  "seconds": 0.0
+}

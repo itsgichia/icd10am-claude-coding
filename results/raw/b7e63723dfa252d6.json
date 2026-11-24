@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "ad2dd7ca7aaa",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course Summary:\n\nThis 47-year-old male patient was admitted to our institution with a diagnosis of acute myeloid leukemia (AML) with multiple mutations, including DNMT3A, RUNX1, and U2AF1, along with FLT3\u2013ITD mutation. The patient had received various treatments for his condition but did not respond well to them. After a bone marrow analysis, emergent BCR\u2013ABL1 rearrangement was detected along with increased allelic ratio of FLT3-ITD mutation. The patient was then treated with different therapies, including CPX-351 plus venetoclax, ponatinib, and gilteritinib combination, which resulted in a marrow remission. The patient underwent allogeneic stem-cell transplantation (ASCT) and achieved full remission on day 30 post-ASCT. Unfortunately, the patient expired 8 months after ASCT due to infectious complications.\n\nSummary of Hospital Stay:\nDiagnosis: [diagnosis section withheld]\nTreatment: CPX-351, decitabine, FLAG-IDA, single-agent gilteritinib, cladribine, idarubicin, cytarabine, sorafenib, decitabine, venetoclax, ponatinib, CPX-351 plus venetoclax, ponatinib, and gilteritinib combination, Allogeneic stem-cell transplantation\nComplications: infectious complications\nOutcome: Achieved Marrow remission; Achieved full remission post-ASCT\n\nAssessment and Plan:\n\nThe patient presented with AML with FLT3\u2013ITD, DNMT3A, RUNX1, and U2AF1 mutations that were resistant to several chemotherapy treatments. After various therapies, the patient achieved a marrow remission with the CPX-351 plus venetoclax, ponatinib, and gilteritinib combination. Allogeneic stem-cell transplantation was performed, which resulted in full remission post-ASCT. Despite successful remission, the patient died eight months post-ASCT due to infectious complications."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: C92.00 \u2013 Acute myeloblastic leukaemia, not having achieved remission**\n\nRationale:\n- The condition treated is acute myeloid leukaemia (AML). In ICD-10-AM, AML is classified to C92.0- (acute myeloblastic leukaemia).\n- ICD-10-AM uses a fifth character for remission status. The patient had refractory disease that did not respond to multiple chemotherapy regimens, which is \"not having achieved remission\" (C92.00). The marrow remission and the post-transplant remission were achieved later in the course.\n- The FLT3-ITD, DNMT3A, RUNX1 and U2AF1 mutations and the emergent BCR-ABL1 rearrangement are molecular features. They do not change the C92.0- category.\n- If the coder judged that the BCR-ABL1 emergence represented a distinct leukaemia type (mixed phenotype or a Philadelphia-positive process), that would need documentation from the clinician. The summary does not support it, so AML remains the principal diagnosis.\n\nAdditional codes you might assign, depending on the episode of care documented:\n- Infectious complication: the specific infection is not documented, so it cannot be coded precisely (for example, sepsis would be A41.9).\n- Z94.84 \u2013 Stem cells transplant status, if a later episode is coded.\n- Procedure codes (ACHI) for allogeneic stem cell transplant and chemotherapy administration.\n\nCaveat: the summary combines several treatment phases across what were probably multiple admissions. Each admission needs its own principal diagnosis based on the condition chiefly responsible for that episode. For example, if the death admission was for infection, the principal diagnosis for that episode could differ. C92.00 is the best single answer for the AML as described.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 716,
+    "output_tokens": 599
+  },
+  "seconds": 0.0
+}

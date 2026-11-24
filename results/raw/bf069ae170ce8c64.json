@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "ecbc47ac7bb5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Information: \nName: [REDACTED]\nDOB: [REDACTED]\nGender: Male\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient, a 48-year-old male with a history of poorly controlled type 1 diabetes mellitus, presented with a neuroischemic ulcer of the fifth toe, which was classified as a grade 3 infection. He was diagnosed with signs of osteomyelitis and methicillin-resistant Staphylococcus aureus.\n\nTreatment: \nThe patient was treated with oral vancomycin and underwent wound care management according to the TIME algorithm for 1.5 months. The wound bed was cleaned and decontaminated, devitalized tissue was debrided, non-irritant skin protector was applied to protect the peri-lesional tissue, hydrogel was applied to the wound bed, nanocrystalline silver dressing was used, and polyurethane foam dressing was applied. After full healing, the patient's pre-prandial glucose and HbA1c levels improved.\n\nDischarge Information: \nThe patient was discharged with no acute complaints. Follow-up appointments will be scheduled with his primary care physician and podiatrist. A detailed instruction sheet for wound care management and glycemic control was provided to the patient.\n\nCondition at Discharge: \nStable with no acute complaints. Condition improved.\n\nInstructions: \n1. Follow up with Primary Care Physician and Podiatrist.\n2. Follow wound care instructions.\n3. Maintain healthy diet and exercise regime.\n4. Monitor blood sugar levels.\n5. Attend scheduled appointments."
+      }
+    ]
+  },
+  "text": "**Most likely principal diagnosis code: E10.69 \u2013 Type 1 diabetes mellitus with other specified complication**, with E10.52 (peripheral angiopathy) and E10.75 (foot ulcer due to multiple causes) as the main alternatives. Which of these applies depends on local coding conventions and on whether ICD-10-AM 10th/11th edition rules apply.\n\n**Reasoning**\n\nICD-10-AM has diabetes-specific combination codes, and the principal diagnosis should be the condition chiefly responsible for the admission. Here that is the diabetic neuroischemic foot ulcer with infection and osteomyelitis.\n\nIn ICD-10-AM, diabetes mellitus (E10\u2013E14) uses a fourth character for the complication. The 10th edition added the category \"Diabetic foot ulcer due to multiple causes\" at E10.73, which is used for ulcers with both neuropathic and ischemic causes.\n\n- **E10.73 \u2013 Type 1 diabetes mellitus with foot ulcer due to multiple causes.** This fits a neuroischemic ulcer, since the ulcer has both neuropathic and peripheral vascular causes. In ICD-10-AM this is the most specific code for the ulcer.\n- **E10.69** is only for other specified complications. It is less specific, so it is not preferred if E10.73 is available.\n\nI should correct my headline answer. If the E10.73 code is available in your edition, **E10.73** is the better principal diagnosis for a neuroischemic foot ulcer in type 1 diabetes. I'm not fully certain of the exact code number, so verify it in your edition's tabular list.\n\n**Additional codes**\n- **M86.17 / M86.67** (other acute or other chronic osteomyelitis, ankle and foot): for the osteomyelitis.\n- **B95.62** (MRSA as the cause of diseases classified elsewhere): for the MRSA infection.\n- **L97** (ulcer of lower limb, not elsewhere classified), if the ulcer site and depth need to be specified. Check the Australian Coding Standards on whether this is needed alongside E10.73.\n- **E10.65** (type 1 diabetes with poor control, hyperglycaemia), because the diabetes was poorly controlled.\n- **E10.52 / I73.9** (peripheral angiopathy), if documented separately.\n- **Z79.4** (long-term insulin use), if documented.\n\n**Note:** The admission diagnosis is withheld, and the record does not clearly document whether the osteomyelitis was confirmed or only suspected (\"signs of\"). Check these against the full record and the Australian Coding Standards before final assignment.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 635,
+    "output_tokens": 888
+  },
+  "seconds": 0.0
+}

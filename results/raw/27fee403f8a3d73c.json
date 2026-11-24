@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "91774e9fbdcf",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary\n\nPatient: XXXXXXX\n\nDate of Admission: XXXXXXX\n\nDate of Discharge: XXXXXXX\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nUpon admission, the patient presented with acute onset epigastric pain associated with vomiting. Subsequently, she was diagnosed with acute pancreatitis and a dilated common bile duct with no gallstones or other pathology. Further, a MRCP revealed a curious cystic lesion lying posterior to the head of the pancreas causing extrinsic compression. An abdominal CT scan revealed a cystic or necrotic mass behind the head of the pancreas representing an inflammatory lesion or abscess.\n\nDuring admission, the patient was treated with oral antibiotics and observed clinically and haematologically. However, her bilirubin continued to rise. An ERCP revealed a 10 cm duodenal diverticular abscess at the level of the major papilla draining pus and bile, likely causing extrinsic compression of the bile duct.\n\nThe patient experienced clinical and hematological improvement and was discharged with a plan for follow-up with the gastroenterology team.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Instructions:\n\nThe patient is advised to follow-up with the gastroenterology team and adhere to any prescribed medications. Additionally, the patient is instructed to consume a healthy diet and maintain a low-risk lifestyle.\n\nFollow-Up Care:\n\nFollow-up with the gastroenterology team.\n\nSigned:\n\nXXXXXXXXX\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "K85",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 662,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

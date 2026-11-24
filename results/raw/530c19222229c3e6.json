@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "51a55251a132",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: N/A\nMedical Record Number: N/A\n\nAdmission Date: N/A\nDischarge Date: N/A\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nUpon admission, the patient was given IV fluids, morphine, and medications to address his hyperkalemia. CT scans revealed extensive subcutaneous emphysema, pneumorrhachis/intraspinal air, pneumomediastinum, liver biliary duct dilation, mucosal enhancement of entire bladder, and previously known hydronephrosis. The patient was then transferred to the ICU where he was treated and monitored. After four days, the patient was transferred to the floors where gross hematuria continued, electrolytes normalized, leukocytosis resolved, and mental status improved. The patient was discharged from the hospital with follow-up appointments with neurosurgery for pneumorrhachis, pulmonary for pneumothorax, urology for hematuria, and hepatology for elevated liver enzymes.\n\nHospital Course Summary:\nThe patient was admitted to the hospital after being observed stumbling on the street. Upon physical exam, the patient was noted to have severe cachexia, with associated signs of multiorgan failure such as crepitus over his left anterior neck, a flat but diffusely tender abdomen, and a collapsible inferior vena cava. CT scans revealed extensive subcutaneous emphysema, pneumorrhachis/intraspinal air, pneumomediastinum, liver biliary duct dilation, mucosal enhancement of entire bladder, and previously known hydronephrosis. The patient was then transferred to the ICU and treated with IV fluids, morphine, and medications to address his hyperkalemia. After four days, the patient was transferred to the floors where gross hematuria continued, electrolytes normalized, leukocytosis resolved, and mental status improved. The patient was discharged from the hospital with follow-up appointments with neurosurgery for pneumorrhachis, pulmonary for pneumothorax, urology for hematuria, and hepatology for elevated liver enzymes.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: J98**\n\nThe principal diagnosis is **spontaneous pneumomediastinum (mediastinal emphysema)**, which sits under J98.2 *Interstitial emphysema*.\n\n**Why this is the principal diagnosis**\n- The key finding on CT is air tracking through the tissue planes: subcutaneous emphysema with crepitus in the neck, pneumomediastinum, and pneumorrhachis (air in the spinal canal).\n- Pneumomediastinum is the central diagnosis that explains all of these. The subcutaneous and spinal air are expected spread from it, so they are not coded separately as the principal diagnosis.\n- No traumatic cause (injury or procedure) is documented, so it is coded as spontaneous in Chapter X (J codes), not Chapter XIX (injury codes).\n\n**Why the other conditions are not principal**\n- **Hyperkalaemia, dehydration (collapsible IVC), cachexia and leukocytosis:** these were treated, but they are comorbidities or contributing problems.\n- **Gross haematuria / bladder mucosal enhancement (possible cystitis), known hydronephrosis, elevated liver enzymes:** these are additional diagnoses.\n- **Pneumothorax:** it appears only in the follow-up plan and is not described in the CT findings or the hospital course. It would be an additional code (J93) if confirmed, but the documentation does not support it as the main condition.\n\n**Caveat**\nThe admitting diagnosis was withheld. If it documented something else, such as a specific cause or confirmed pneumothorax as the main problem, I would query the clinician before finalising.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 937,
+    "output_tokens": 775
+  },
+  "seconds": 0.0
+}

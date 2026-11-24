@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "4c417105ea15",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\nThe patient, a 35-year-old Japanese woman, presented to our facility in gestational week 29 with low back pain, weakness of her lower extremities, and impaired liver function with low platelet count. An epidural hematoma was detected in her thoracic spinal canal, which was confirmed by MRI findings, resulting in emergency decompression. The patient was diagnosed with HELLP syndrome and underwent an emergency Cesarean section to end the pregnancy. Post-operatively, the patient experienced bilateral lower limb paralysis and complete urinary retention, leading to diagnosis of grade B injury according to the ASIA/ISCoS classification. A surgical intervention was performed successfully, and the patient\u2019s condition improved gradually.\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course and Procedures:\nThe patient underwent an emergency Cesarean section to terminate the pregnancy due to HELLP syndrome, which resulted in bilateral lower limb paralysis and complete urinary retention. The MRI detected an epidural hematoma in the thoracic spinal canal which was removed by neurosurgical decompression. The patient's condition improved gradually after the surgery.\n\nCondition at Discharge:\nThe patient's lower limb sensation improved to a score of 8 out of 10, and muscular strength limited to a slight improvement. The patient was classified as ASIA/ISCoS grade C.\n\nFollow-up Plans:\nThe patient was discharged and scheduled for follow-up visits with the neurosurgical and obstetric departments to monitor her progress."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is most likely **O14.2 (HELLP syndrome)**, with the **O14.2 code** sequenced first because the pregnancy is the reason for the admission.\n\nUnder ICD-10-AM, conditions complicating pregnancy fall in Chapter 15 (O00-O99), and the pregnancy-related condition is generally sequenced as principal. HELLP syndrome was the underlying disorder that led to the emergency Caesarean section. The spinal epidural hematoma, bilateral lower limb paralysis, and urinary retention would be recorded as additional diagnoses, typically with a non-obstetric code for the spinal haematoma and its neurological sequelae.\n\nCoding this case should be checked against the Australian Coding Standards and the local coder's judgement. Some coders might argue for the epidural haematoma as principal because it required emergency decompression, but the Chapter 15 sequencing rule usually takes precedence.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 574,
+    "output_tokens": 1062
+  },
+  "seconds": 0.0
+}

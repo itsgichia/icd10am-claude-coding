@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "ad2dd7ca7aaa",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course Summary:\n\nThis 47-year-old male patient was admitted to our institution with a diagnosis of acute myeloid leukemia (AML) with multiple mutations, including DNMT3A, RUNX1, and U2AF1, along with FLT3\u2013ITD mutation. The patient had received various treatments for his condition but did not respond well to them. After a bone marrow analysis, emergent BCR\u2013ABL1 rearrangement was detected along with increased allelic ratio of FLT3-ITD mutation. The patient was then treated with different therapies, including CPX-351 plus venetoclax, ponatinib, and gilteritinib combination, which resulted in a marrow remission. The patient underwent allogeneic stem-cell transplantation (ASCT) and achieved full remission on day 30 post-ASCT. Unfortunately, the patient expired 8 months after ASCT due to infectious complications.\n\nSummary of Hospital Stay:\nDiagnosis: [diagnosis section withheld]\nTreatment: CPX-351, decitabine, FLAG-IDA, single-agent gilteritinib, cladribine, idarubicin, cytarabine, sorafenib, decitabine, venetoclax, ponatinib, CPX-351 plus venetoclax, ponatinib, and gilteritinib combination, Allogeneic stem-cell transplantation\nComplications: infectious complications\nOutcome: Achieved Marrow remission; Achieved full remission post-ASCT\n\nAssessment and Plan:\n\nThe patient presented with AML with FLT3\u2013ITD, DNMT3A, RUNX1, and U2AF1 mutations that were resistant to several chemotherapy treatments. After various therapies, the patient achieved a marrow remission with the CPX-351 plus venetoclax, ponatinib, and gilteritinib combination. Allogeneic stem-cell transplantation was performed, which resulted in full remission post-ASCT. Despite successful remission, the patient died eight months post-ASCT due to infectious complications."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: **C92.00 \u2013 Acute myeloid leukaemia, without mention of remission**\n\n**Why this code:**\n- **Condition treated:** The admission was for relapsed/refractory acute myeloid leukaemia (AML). This drove the salvage therapies (CPX-351 + venetoclax, ponatinib and gilteritinib) and the allogeneic stem-cell transplant.\n- **Category C92.0:** This is the category for acute myeloblastic/myeloid leukaemia.\n  - The molecular findings (FLT3-ITD, DNMT3A, RUNX1, U2AF1) do not change the category.\n  - The emergent BCR-ABL1 rearrangement also does not change it. The disease is clearly documented as AML, not chronic myeloid leukaemia (C92.1-).\n  - The more specific subtypes (C92.5\u2013C92.8) are not documented.\n- **Fifth character \"0\" (not in remission):** At admission the disease was active and refractory to multiple prior therapies. Remission was only reached through this episode's treatment.\n\n**Additional codes to consider:**\n- **Z94.84** \u2013 stem-cell transplant status. Apply this according to the transplant-sequencing rules.\n- **Codes for the infectious complications**, such as an infection after transplant (T86.0- / T86.8- or a specific infection code). Use these only if the complications occurred within this episode and the type of infection is documented.\n\nThe full diagnosis section is withheld, so check the final code against the complete clinical record and your local coding standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 716,
+    "output_tokens": 917
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "38c23795f24d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\n\nAdmission Date: [Date]\n\nDischarge Date: [Date]\n\nPatient Name: [Name]\n\nMedical Record Number: [Number]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n\nA Pediatric Emergency Medicine (PEM) fellow conducted a point-of-care ultrasound (POCUS) examination on the patient. The examination revealed a large circumferential pericardial effusion, which was causing cardiac tamponade. The patient was immediately referred to a pediatric cardiologist, who performed an ultrasound-guided pericardiocentesis to drain one liter of fluid from the pericardial sac. \n\nThe patient responded well to the pericardiocentesis and was observed without recurrence of effusion or tamponade. The patient's pneumonia was also concurrently treated with appropriate antibiotic therapy. Subsequently, the patient's condition stabilized. \n\nAt the end of the hospital course, the patient was free from chest pain, shortness of breath, and diaphoresis. The patient's respiratory rate, heart rate, blood pressure, and pulse oximetry were within normal limits.\n\nInstructions for Discharge:\n\nThe patient was advised to continue with the prescribed antibiotics and keep follow-up appointments as per the pediatrician's advice. The parent/guardian was advised to keep a watch for any re-occurrence of chest pain, shortness of breath, and sweating. \n\nConclusion:\n\nThe patient was admitted with pneumonia and subsequently developed cardiac tamponade. The patient was managed with pericardiocentesis and a course of antibiotics. The patient responded well to the treatment, and no complications were noted during the hospital course. The parent/guardian was advised to keep follow-up appointments for the patient's ongoing care.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The patient was admitted with pneumonia and then developed cardiac tamponade from a large pericardial effusion, which was drained. The question is which condition should be the principal diagnosis.\n\nThe summary says the patient was admitted with pneumonia, and the tamponade developed afterward. Under the definition, the principal diagnosis is the condition established after study to be chiefly responsible for the admission. The pneumonia was present on admission, but the main treatment was pericardiocentesis for the tamponade, and the effusion was likely parapneumonic (purulent pericarditis). The effusion was found on POCUS in the emergency department, which suggests it was present at presentation. The wording \"subsequently developed\" is ambiguous on this point.\n\nIf the tamponade was a complication of the pneumonia, the pericarditis would be coded as pericarditis in diseases classified elsewhere, or as I30 (acute pericarditis). A pericardial effusion with tamponade in a pneumonia patient would be coded I31.3 (pericardial effusion, noninflammatory) or I30.x. Both fall in the I30\u2013I31 range, and the category for pericardial effusion is I31.\n\nAlternatively, the principal diagnosis could be J18 (pneumonia, unspecified). The case describes the patient as admitted with pneumonia, and the effusion was probably found in the emergency department as part of the same presentation. The condition chiefly responsible for the admission, however, is more plausibly the tamponade, since it required the urgent intervention and the one-liter drainage.\n\nI chose I31, tamponade/effusion. Cardiac tamponade is coded I31.3 in ICD-10 and I31.9 in some cases, and in ICD-10-AM it sits in the I31 category.\n\nCODE: I31",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1134,
+    "output_tokens": 579
+  },
+  "seconds": 0.0
+}

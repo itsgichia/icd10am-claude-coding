@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "cot_then_extract",
+  "record_id": "a03e0422f170",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\n[Medical Center Name]\n[Patient Name], Discharge Summary\n\nAdmission Date: [Date]\nDischarge Date: [Date]\n\nHospital Course:\nThe patient was admitted to the Department of Urology with complaints of repeated dizziness. Preoperative echocardiography revealed a variation in the arteries, including an ARSA derived from the initial descending aorta right rear to the LSA, an aberrant left vertebral artery that directly originated from the AA instead of the LSA, and an aberrant right vertebral artery that originated from the RCCA rather than the RSA. Computed tomography angiography confirmed these variances. The patient had no other cardiac or vascular anomalies. Mild stenosis was found in the proximal portion of the left common carotid artery (LCCA), adjacent to its aortic origin. The patient underwent treatment for urolithiasis and was administered aspirin and atorvastatin to prevent potential vascular stenosis. The patient was followed up continuously.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient underwent treatment for urolithiasis and was administered aspirin and atorvastatin to prevent potential vascular stenosis.\n\nFollow-up:\nThe patient will continue to be monitored for any potential vascular stenosis.\n\nDischarge Condition:\nThe patient was discharged in a stable condition.\n\nDischarge medications:\nNone specified.\n\nInstructions:\nNone specified.\n\nFollow-up appointments:\nNone specified.\n\nInstructions Given:\nNone specified.\n\nPrimary Care Physician:\nNone specified.\n\nAttending Physician:\nNone specified.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "1. The condition chiefly responsible for this admission is urolithiasis, since the patient was admitted to Urology and treated for it. The dizziness and the aberrant aortic arch and vertebral arteries were incidental findings on pre-operative work-up.\n2. Urolithiasis belongs to chapter N.\n3. The stone's location isn't stated, so I assumed the usual upper-tract site, which is category N20 (calculus of kidney and ureter).\n\nCODE: N20",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1124,
+    "output_tokens": 254
+  },
+  "seconds": 0.0
+}

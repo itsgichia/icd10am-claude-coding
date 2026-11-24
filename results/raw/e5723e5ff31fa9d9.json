@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "46879b57e8d7",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDISCHARGE SUMMARY:\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\n\nPatient Name: [NAME]\nPatient ID: [ID]\n\nHospital Course Summary:\n\nThe patient, a 38-year-old Asian male, was admitted with dyspnea and a productive cough that was diagnosed as pneumonia with subsequent atelectasis of the right middle and lower lobes. Upon transfer to our facility, a CT scan revealed an endobronchial mass obstructing the right bronchus intermedius. After initial treatment with broad-spectrum antibiotics, a rigid bronchoscopy procedure was performed to remove the endobronchial tumor and prevent recurrence through ablation with a diode laser. Pathologically, the removed tumor was identified as bronchial myelolipoma with no evidence of hematologic disorder or endocrine abnormalities. Follow-up bronchoscopies after 3 and 12 months showed no recurrence of the tumor, and the patient's accompanying symptoms such as cough, sputum, and dyspnea improved immediately following the procedure.\nFinal Diagnoses: [diagnosis section withheld]\nTreatment:\n\n1. Broad-spectrum antibiotics for obstructive pneumonia.\n2. Rigid bronchoscopy under general anesthesia to remove the endobronchial tumor.\n3. Ablation with a diode laser to prevent recurrence.\n\nCondition at Discharge:\n\nThe patient has shown a significant improvement in his condition since the bronchoscopy procedure and has no active symptoms related to the previously diagnosed conditions. No further treatment is required, and the patient can be discharged at this time.\n\nDischarge Medications:\n\nNo medications are required at the time of discharge.\n\nFollow-up Plan:\n\nFollow-up appointments with a primary care physician are recommended to ensure adequate follow-up of the patient's condition and to monitor for any potential recurrence of bronchial myelolipoma in the future.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "D14",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 789,
+    "output_tokens": 260
+  },
+  "seconds": 1.7583800419815816
+}

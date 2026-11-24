@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "c33c3d068c89",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary\n\nPatient Name: [redacted]\nMedical Record Number: [redacted]\nDate of Admission: April 30, 2020\nDate of Discharge: May 21, 2020\n\nHospital Course:\nThe patient was admitted to the GHESKIO MDR-TB hospital on April 30, 2020, with persistent fever, cough, and weight loss. He was diagnosed with COVID-19 and transferred to a separate building to prevent the spread of the virus. The patient did not require oxygen therapy and recovered from COVID-19 three weeks following diagnosis. He was continued on antituberculous therapy without complication.\n\nMedical History:\nThe patient presented with a history of chronic cough, fever, and weight loss. He was evaluated by the medical staff with a physical examination, chest radiograph, and sputum analysis. The chest radiograph demonstrated a large right upper lobe cavity, with right middle lobe opacity and right hilar fullness. The GeneXpert sputum test was positive for the presence of Mycobacterium tuberculosis with probable resistance to rifampin. The patient was lost to follow-up before hospitalization and initiation of therapy.\nDischarge Diagnosis: [diagnosis section withheld]\nFollow-Up:\nThe patient is advised to continue regular follow-up with his healthcare provider. He is instructed to complete the prescribed antituberculous therapy and to maximize precautions against COVID-19 to prevent further spread.\n\nDischarge Condition:\nThe patient was discharged in stable condition. He was advised to follow-up with his healthcare provider and to continue antituberculous therapy as prescribed.\n\nDischarge Medications:\nAntituberculous regimen composed of bedaquiline, levofloxacin, linezolid, clofazimine, and pyrazinimide was initiated and continued throughout hospitalization.\n\nDischarge Instructions:\nThe patient is advised to follow-up with his healthcare provider. He should continue the prescribed antituberculous therapy and maximize precautions against COVID-19 to prevent further spread.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: A15**\n\n**Principal diagnosis: pulmonary tuberculosis confirmed bacteriologically (A15).** Rifampicin resistance is captured with an additional drug-resistance code, so it does not change the category.\n\n- **Reason for admission:** The patient went to a dedicated MDR-TB hospital to start treatment. He had previously been diagnosed but was lost to follow-up before therapy began. An MDR-TB regimen (bedaquiline, levofloxacin, linezolid, clofazimine, pyrazinamide) was started on admission and continued throughout the stay.\n- **Why A15 rather than A16:** The disease is pulmonary, with a right upper lobe cavity on chest radiograph. It was confirmed bacteriologically, because the GeneXpert sputum test detected *M. tuberculosis*.\n- **COVID-19 (U07.1) is secondary:** It was diagnosed after admission and was mild, needing no oxygen. It required isolation but was not the condition that caused the admission.\n- **Presenting symptoms are not coded separately:** The fever, cough and weight loss are explained by the TB.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 907,
+    "output_tokens": 474
+  },
+  "seconds": 0.0
+}

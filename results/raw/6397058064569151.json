@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "775828a21477",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: 16-Year-Old Male\nDiagnosis: [diagnosis section withheld]\nHospital Course: \nThe patient was admitted to the hospital with symptoms of intellectual deficiency, proximal myopathy, and alterations in liver tests. Panel A was used for diagnostic purposes, which detected the presence of the hemizygous variant c.741+1G > A, described as pathogenic in HGMD CS003703.\nDuring the hospital stay, the patient received appropriate medical attention. The patient was provided with standard care and treatment for the associated symptoms. The patient's overall health was closely monitored throughout the hospital stay, and there were no major health incidents.\nA multidisciplinary team of doctors and medical professionals closely followed the patient's progress and offered medical care accordingly.\n\nDischarge Instructions:\nThe patient is being discharged from the hospital with instructions to closely monitor his health and to follow up with his primary physician and/or cardiologist. The patient should avoid strenuous exercise, and any new or concerning symptoms should be reported to the physician immediately. The patient has been instructed to continue to follow up with his healthcare providers to receive appropriate care and treatment for his condition.\n\nSummary:\nThe patient was admitted to the hospital with symptoms of intellectual deficiency, proximal myopathy, and alterations in liver tests. The patient was diagnosed with suspicion of Danon disease due to hypertrophic cardiomyopathy with anomalous pathway. The patient received standard care during the hospital stay with a multidisciplinary team of healthcare providers closely monitoring progress. The patient is being discharged from the hospital with instructions to follow up with his primary physician and/or cardiologist.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "E74",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 709,
+    "output_tokens": 590
+  },
+  "seconds": 0.0
+}

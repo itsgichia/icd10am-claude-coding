@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "521280629b72",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\nLength of Stay: [REDACTED]\n\nHospital Course:\nThe patient presented to the pediatric emergency with confusion and disorientation. She was diagnosed with bacterial meningitis based on clinical examination and CSF analysis and was treated with intravenous ceftriaxone and vancomycin. A CT scan was performed, and pneumocephalus was observed in the right frontal region. The patient was treated for signs of chronic sinusitis and pansinusitis. She showed initial symptomatic improvements to antibiotics but suffered a deterioration of her GCS to 7/15, with a high-grade fever.\n\nSubdural empyema was diagnosed through a repeat CT scan, requiring immediate neurosurgical intervention. The surgical drainage was performed, and on the second day, the patient's GCS improved to 15/15, and her fever had subsided. The patient was discharged with a prescription for oral antibiotics, nasal saline spray, and nasal decongestants.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient received intravenous ceftriaxone and vancomycin to treat bacterial meningitis. Subdural empyema was treated through immediate neurosurgical intervention, which involved surgical drainage. The patient was prescribed oral antibiotics, nasal saline spray, and nasal decongestants upon discharge.\n\nFollow-up:\nThe patient was seen at two-week and four-week follow-ups and experienced significant improvements in symptoms."
+      }
+    ]
+  },
+  "text": "**Most likely principal diagnosis: G06.2 Extradural and subdural abscess, unspecified** (intracranial subdural empyema)\n\n**Reasoning**\n\n- The patient was admitted with bacterial meningitis, but the condition that ultimately required the most resource use and definitive treatment was the subdural empyema, which needed neurosurgical drainage.\n- The empyema was diagnosed on a repeat CT after deterioration, so it was not present on admission as a recognised diagnosis. ICD-10-AM/ACS principal diagnosis is defined as the condition established after study to be chiefly responsible for the admission. Here the meningitis and the empyema probably arose from the same underlying process, sinogenic intracranial infection, so coders would reasonably debate which to sequence first.\n- In ICD-10, intracranial abscess and empyema are coded to G06.- and have their own tabular guidance. G06.2 covers extradural and subdural abscess, and G06.0 covers intracranial abscess and granuloma.\n\n**Alternative:** If the facility sequences by the presenting condition, the principal diagnosis would be **G00.9 Bacterial meningitis, unspecified**, or a more specific G00.- code if an organism was identified. For example, G00.1 would apply to pneumococcal meningitis.\n\n**Additional codes to consider**\n\n- **G06.2** (or **G06.0**) if the meningitis is sequenced first\n- **J01.4 Acute pansinusitis**, or **J32.4 Chronic pansinusitis**. The documentation mentions both chronic sinusitis and pansinusitis, so this needs clarification.\n- **G93.8 / pneumocephalus.** In ICD-10-AM, pneumocephalus is typically coded to **G93.88 Other specified disorders of brain**. Check this against your edition.\n- **R40.2- Coma/GCS scores**, if the facility captures them.\n- **Procedure:** burr hole or craniotomy drainage of the subdural collection, coded using ACHI block 12 (for example 40009-00, or the relevant drainage code).\n\n**Caveat:** The diagnosis section was withheld, so this is inferred. Confirm against the full record and local coding standards, including the ACS 0001 principal diagnosis rule and the guidance on a single underlying cause.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 588,
+    "output_tokens": 773
+  },
+  "seconds": 0.0
+}

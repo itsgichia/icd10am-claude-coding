@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "989391f9254d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient:\n\u2022 Name: Not provided\n\u2022 Age: 24-year-old\n\u2022 Gender: Male\n\nHospitalization Dates:\n\u2022 Admission: [not provided]\n\u2022 Discharge: POD #20\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\u2022 Patient underwent uncomplicated orthotopic liver transplantation after multiple thoracenteses for symtomatic relief of persistent right-sided hepatic hydrothorax.\n\u2022 Patient presented with respiratory distress and left-sided infiltrates consistent with pneumonia on POD #5 after OLT. Patient was started on antibiotics and underwent a right-sided therapeutic thoracentesis with removal of 1.3 liters of fluid.\n\u2022 Post-thoracentesis chest imaging revealed a large hydropneumothorax that was treated with a small-bore chest tube.\n\u2022 Diagnostic bronchoscopy was not performed due to the absence of endobronchial obstruction on CT.\n\u2022 Patient was stable without dyspnea and hypoxemia, so video-assisted thoracoscopic surgery was deferred after consultation with thoracic surgery.\n\u2022 Patient was discharged home on POD #20 without supplemental oxygen.\n\u2022 Follow-up chest x-ray 1 month later showed improvement in the hydropneumothorax and a chest x-ray obtained 6 months later showed near-complete re-expansion of the right lung without surgical intervention.\n\nDischarge Instructions:\n\u2022 Follow-up with liver transplant team as needed.\n\u2022 Follow-up with primary care physician for ongoing care.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "J93",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 671,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

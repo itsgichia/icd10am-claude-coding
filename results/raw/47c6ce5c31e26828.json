@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "fb371c880fcd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient: [Name]\nDOB: [Date of birth]\nGender: Male\nAdmission Date: [Date]\nDischarge Date: [Date]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n[Name] was admitted to the clinic with ongoing RLQ abdominal pain of one-month duration, associated with mild fever. It was noted from histopathology reports that there was chronic lymphoplasmacytic inflammation with associated histiocytes and granulation tissue, further supporting the diagnosis of chronic appendicitis. \n\nTreatment:\nLaparoscopic appendectomy was performed on [Name]. The appendix was identified and found to be chronically scarred and chronically inflamed in appearance. The mesoappendix was taken down with Sonicision, the base transected with Endo-GIA, and delivered from the peritoneal cavity in an Endobag and sent to pathology.\n\nDischarge Condition:\n[Name] was discharged home on the same day as his procedure with no complaints.\n\nInstructions:\nPlease follow up with your primary care physician (PCP) in the coming days to ensure that there has been complete resolution of symptoms.\n\nSigned,\n[Doctor's name]\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "K36",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 538,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

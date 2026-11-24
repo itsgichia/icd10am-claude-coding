@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "6b385b74c7a0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient Name: [REDACTED]\nGender: Female\nAge: 70 years old\n\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\n\nHospital Course:\nThe patient was admitted with worsening right upper quadrant pain, anorexia, and 10 lb weight loss. A CT scan revealed hepatomegaly and several hypodense lesions consistent with liver metastases, indicating recurrent/metastatic disease. The patient was started on pembrolizumab and axitinib as first-line therapy for her condition.\n\nDuring treatment, the patient experienced side effects and required a dose reduction of axitinib due to fatigue. Elevated thyroid stimulating hormone levels were also monitored and subsequently managed with medication.\n\nAfter 12 weeks of combination axitinib/pembrolizumab, repeat CT scans showed progression of liver metastases, prompting a liver biopsy.\n\nGenomic testing revealed loss of function mutations in von Hippel-Lindau (VHL) and BRCA1-associated protein (BAP1) genes, as well as copy-number loss of cyclin-dependent kinase inhibitor 2A (CDKN2A).\n\nThe patient was discharged home with appropriate follow-up measures.\nDiagnoses: [diagnosis section withheld]\nProcedures:\n1. CT-guided liver biopsy\n\nUpdated Medications:\nNone.\n\nFollow-up Care:\nThe patient will receive appropriate follow-up care as recommended by her healthcare provider.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C64",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 642,
+    "output_tokens": 301
+  },
+  "seconds": 0.0
+}

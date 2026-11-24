@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "cot_then_extract",
+  "record_id": "ae67d374024a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient Identification:\nThe patient is a 67-year-old male who underwent video-assisted right lung upper lobectomy and lymph node dissection for primary lung adenocarcinoma.\n\nHospital Course:\nThe patient was admitted to the hospital in March 2012 for surgical treatment of the lung cancer. He had a history of hypertension and had been a three-packs-a-day smoker for 40 years. Blood examination on admission suggested polycythemia, which was diagnosed as smokers' polycythemia after consulting with hematologists. The appropriate phlebotomy and infusion volumes were calculated, and the patient was discharged uneventfully on postoperative day 7. The pathological diagnosis of the lung adenocarcinoma was made after the surgery.\n\nPatient Status at Discharge:\nAt the time of discharge, the patient's respiratory function examination showed obstructive impairment. The serum erythropoietin level was normal, but the Hb and HCT were high. The patient was advised to continue with prescribed blood pressure medication, adhere to a healthy lifestyle, and was advised to attend regular check-ups by their physician.\n\nFollow-up:\nThe patient was advised to follow up with their physician to monitor their polycythemia and lung cancer.\nPrimary Diagnosis: [diagnosis section withheld]Secondary Diagnosis: [diagnosis section withheld]\nProcedures:\nVideo-assisted right lung upper lobectomy and lymph node dissection.\n\nAllergies:\nNot Applicable.\n\nMedications:\nNot Applicable.\n\nCondition at Discharge:\nStable.\n\nRecommendations:\nThe patient was advised to adhere to a healthy lifestyle and attend regular check-ups with their physician to monitor their polycythemia and lung cancer.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "Admission was for surgical resection of a primary adenocarcinoma of the right upper lobe, which makes lung cancer the principal diagnosis. This is a malignant neoplasm of the bronchus and lung, chapter C. The three-character category is C34.\n\nCODE: C34",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1189,
+    "output_tokens": 92
+  },
+  "seconds": 0.0
+}

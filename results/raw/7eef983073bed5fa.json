@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "4beb4decadab",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary\n\nPatient: 35-year-old G2P2 female\n\nAdmission date: [insert date]\nDischarge date: [insert date]\nAdmission diagnosis: [diagnosis section withheld]\nHospital course:\nThe patient was admitted to the CCU on [insert date] with complaints of retrosternal chest discomfort radiating to jaw, associated with nausea and diaphoresis. Based on physical examination, EKG and cardiac enzyme levels, as well as coronary angiography and TTE results, the patient was diagnosed with an acute inferior STEMI secondary to spontaneous dissection of the OM2.\n\nTreatment:\nThe patient was appropriately discharged on dual antiplatelet therapy including ASA and Clopidogrel including beta blockade with Metoprolol.\n\nFollow-up plan:\nThe patient was advised to continue with the prescribed medication and instructed to come for follow-up after one month.\n\nReadmission:\nOne month later, the patient returned with diplopia and numbness of her left arm and face. Computed tomographic angiography showed a focal 8mm long dissection of the right vertebral artery in its V1 segment with mild associated aneurysmal dilatation. The patient was subsequently started on anticoagulation therapy to prevent future spontaneous dissections.\n\nDischarge condition:\nThe patient's condition was stable at the time of discharge.\n\nDischarge disposition:\nThe patient was discharged home with family members.\n\nFollow-up plan:\nThe patient was advised to continue with the prescribed medication and instructed to come for follow-up after three months.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "I21",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 641,
+    "output_tokens": 115
+  },
+  "seconds": 0.0
+}

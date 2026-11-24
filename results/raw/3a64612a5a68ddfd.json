@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "c9159cda6e35",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: Case 3\nAge: 40 years old\nSex: Male\nAdmission Date: N/A\nDischarge Date: N/A\n\nChief Complaint:\nCase 3 presented with chronic sinusitis, hyperglycemia, difficulty in breathing, fever, dry cough, general body weakness, and 72% oximetry saturation. He was subsequently diagnosed with COVID-19.\n\nHospital Course:\nThe patient was isolated and taken to a designated isolation center for treatment and monitoring. He received supportive therapy for his symptoms.\nDiagnosis: [diagnosis section withheld]\nFollow-up:\nThe patient is advised to follow-up with his healthcare provider for further evaluation and management of his symptoms. He is also advised to take appropriate precautions to prevent the spread of COVID-19.\n\nDischarge Instructions:\nThe patient will be discharged home with instructions to continue self-isolation and monitor his symptoms. He is advised to seek further medical attention if his symptoms worsen or if he develops new symptoms. The patient is also advised to follow all public health guidelines to prevent the spread of COVID-19. \n\nSummary:\nCase 3, a 40-year-old male, presented with chronic sinusitis, hyperglycemia, difficulty in breathing, and fever. He was subsequently diagnosed with COVID-19 and received supportive therapy during his hospitalization. The patient will be discharged home with instructions to continue self-isolation and monitor his symptoms. He is advised to follow-up with his healthcare provider and to take appropriate precautions to prevent the spread of COVID-19.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "U07",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 678,
+    "output_tokens": 154
+  },
+  "seconds": 0.0
+}

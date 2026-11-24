@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "eef334a41ef9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [redacted]\n\nAge: 56 years\n\nGender: Male\n\nAdmission Date: [redacted]\n\nDischarge Date: [redacted]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted with subjective fever, body aches, nonproductive cough, left-sided pleuritic chest pain, and recurrent infected skin cyst with MRSA. Physical examination revealed coarse breath sounds with no wheezing, and a thick purulence was exposed from the cyst. Radiographic and CT studies showed developments of multifocal regions of nodular appearing infiltration within both lungs. Blood culture resulted in positive with MRSA that grew with different antibiotic sensitivities. Despite being on the antibiotic/vancomycin, the patient continued to be bacteremic with MRSA, and repeated chest CT scan revealed the progression of lung pneumonia and multiple new nodules. Further TEE revealed a large vegetation was involving the pulmonic valve that was adherent to the artery itself. The patient underwent pulmonary valve replacement using a LivaNova extra-large sutureless valve. Tissue valve culture came back positive for MRSA, and the patient was discharged home on IV vancomycin for six weeks.\n\nHospital Course Summary:\nThe patient was admitted with a history of recurrent infected skin cyst with MRSA, subjective fever, body aches, nonproductive cough, and left-sided pleuritic chest pain. Workup revealed MRSA Pulmonary Valve Endocarditis, and the patient underwent a pulmonary valve replacement. After a total of six weeks of IV vancomycin therapy, the patient was discharged home.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "I33",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 713,
+    "output_tokens": 277
+  },
+  "seconds": 0.0
+}

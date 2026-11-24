@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "context_rich_structure",
+  "record_id": "5941ca504c92",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nHOSPITAL COURSE:\n\nThe patient, a 28-day-old female newborn with right congenital aural atresia, was admitted to our emergency department with postauricular erythema and edema, accompanied by irritability, anorexia, and insomnia, without fever, since two days. On initial examination, the newborn had a small, deformed auricular tag on the right side with no external auditory meatus. Her weight was 3780 grams.\nDIAGNOSIS: [diagnosis section withheld]\nTREATMENT:\n\nThe newborn was started immediately on meropenem and vancomycin i.v. Two days later, a mastoidectomy was performed, and abnormal bone was drilled or curetted away. Mastoid cells filled with granulation tissue were exenterated, and about 2 mL of pus were collected for culture. The antibiotic scheme continued for a total of four weeks.\n\nCONDITION AT DISCHARGE:\n\nThe patient's postoperative course was unremarkable, with progressive resolution of signs of inflammation on mastoid area. The baby girl remained afebrile and her inflammation markers improved gradually. She left the hospital in a very good condition upon completion of her treatment. The baby has no problem two months after her operation, and her weight is 5.100 grams.\n\nDISCHARGE INSTRUCTIONS:\n\nThe patient should be observed for any signs of recurrence of symptoms and should follow up with her primary care provider regularly.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "CODE: H70\n\nThe admission was for an acute postauricular infection with pus in the mastoid cells, so the principal diagnosis is acute mastoiditis (H70, mastoiditis and related conditions). The congenital aural atresia (Q16) is a background condition that predisposed to the infection, not the reason for admission. The record does not document neonatal sepsis, so the perinatal chapter (P) does not apply.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1004,
+    "output_tokens": 444
+  },
+  "seconds": 0.0
+}

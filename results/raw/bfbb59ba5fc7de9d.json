@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "30e8ed8b7f7d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\n\nMedical Record Number: [REDACTED]\n\nGender/Age: Female, 31 years old\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient underwent surgical resection of a subcutaneous nodule, which was later diagnosed as an adenocarcinoma with positive margins. After excision of surgical margins, the pathology report revealed a Neuroendocrine Tumor (NET) with positive staining for chromogranin A and neuron-specific enolase.\n\nA chest CT scan revealed a pulmonary mass in the left lobar bronchia, which led to left pneumectomy. Pathology confirmed the diagnosis of a 4.5-cm well-differentiated neuroendocrine carcinoma with a low mitotic count of 1 mitosis per 10 high power field (HPF). There was no vascular or pleural invasion and surgical margins were free. However, it was found that one lymph node was involved.\n\nStaging abdominal ultrasound detected the presence of two hepatic nodules in segment VIII, measuring 1.8 and 1.0 cm. An abdominal MRI showed multiple hepatic nodules, with additional lesions in segments II and V. Octreoscan demonstrated increased activity on pulmonary and hepatic tumoral lesions, which confirmed the diagnosis.\n\nThe patient was treated with somatostatin analogs and everolimus was added later to the treatment regimen. Follow-up images revealed stable disease after three months.\n\nDischarge Condition:\n\nThe patient was discharged in a stable condition with the recommendation to follow up with her oncologist for regular check-ups and treatments.\n\nDischarge Medications:\n\nThe patient was prescribed the necessary medications for her condition to continue at home.\n\nFollow-up:\n\nThe patient is advised to return for scheduled follow-up visits with her oncologist."
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis code: C34.1 \u2013 Malignant neoplasm of the upper lobe, bronchus or lung**\n\nThis is a best-fit suggestion, not a definitive code. The record is ambiguous on a few points, and the final code should be confirmed by a clinical coder.\n\n**Rationale**\n- The primary tumour appears to be a well-differentiated neuroendocrine tumour of the lung. It was a 4.5 cm mass in the left lobar bronchus, treated with pneumonectomy, with one involved lymph node.\n- The subcutaneous nodule and the hepatic nodules are most consistent with metastases from the lung primary. That is why the lung site is selected rather than the secondary sites.\n- A well-differentiated neuroendocrine tumour with a low mitotic count (1 per 10 HPF) is consistent with a typical carcinoid. The pathology calls it a \"neuroendocrine carcinoma\", which is an inconsistent term.\n\n**Coding notes**\n- **Site:** The record says \"left lobar bronchia\" without naming the lobe. If the lobe is unspecified, C34.9 (bronchus or lung, unspecified) applies. If the lobe is documented, use C34.1 (upper), C34.2 (middle) or C34.3 (lower). Main bronchus would be C34.0.\n- **Morphology:** In ICD-10-AM, the histology is captured with an M-code. A typical carcinoid would be M8240/3, and a neuroendocrine carcinoma NOS would be M8246/3. The ICD-10-AM Alphabetic Index also lists some carcinoid tumours with their own codes, so confirm the index entry. An example is C7A.- in ICD-10-CM, which is not used in AM.\n- **Secondary codes:**\n  - C78.7 Secondary malignant neoplasm of liver\n  - C79.2 Secondary malignant neoplasm of skin, if the subcutaneous nodule is a metastasis\n  - C77.1 Secondary malignant neoplasm of intrathoracic lymph nodes\n- **Functional syndrome:** No carcinoid syndrome (E34.0) is documented, so it should not be coded.\n\n**Caveat:** The diagnosis section was withheld. If the original diagnosis states a different primary, for example an unknown primary or a primary in another organ, the principal code would change.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 674,
+    "output_tokens": 791
+  },
+  "seconds": 0.0
+}

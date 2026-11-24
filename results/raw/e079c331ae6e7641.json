@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7c591e864a3b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 46-year-old male with a history of MSA with predominant parkinsonism\n\nHospital Course:\nThe patient was emergently admitted to our neurological department with tracheal intubation due to sudden respiratory failure at night. He had a history of high-pitched snore at age 38 and neck and trunk rigidity, bradykinesia, postural tremor, and dysuria at age 44. He was diagnosed with MSA at age 45. The possibility of MSA-related central respiratory disorder or obstructive respiratory disorder due to MSA and/or obesity was considered after pulmonary inflammatory diseases were excluded. The patient underwent tracheostomy to maintain the airway after extubation which was successful, but continuous positive airway pressure may have also been helpful. Polysomnography showed obstructive SA, but not central SA. Awake fiberoptic laryngoscopy displayed no upper-airway obstruction but slight vocal-cord abduction impairment during inspiration while sleep laryngoscopy was refused by the patient. To assess the spatial and temporal conditions of the upper respiratory tract, including the nasal passages, pharynx, larynx, and portion of the trachea, 4D-CT during sleep was performed. The effective dose was 1.84 mSv.\n\nFindings:\nReconstructed 4D-CT images of respiration during sleep revealed abnormal upper-airway findings compared with the images acquired during awake respiration: glottis closure at the terminal stage of inspiration, subsequent velopharyngeal closure, and succeeding glottis opening and expansion of pharyngeal pressure, but no other upper airway-obstruction findings.\nDiagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was discharged with tracheostoma retained which was determined to be indispensable, although central apnea after tracheostomy may cause sudden central origin-related death. The patient was followed up at 14 months postoperatively, and no further airway-related complications were reported.\n\nProcedures:\nTracheostomy."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis is **G47.39 Other sleep apnoea**, although G47.33 Obstructive sleep apnoea is arguably the better fit and is the one I would choose if the case is coded strictly from the documentation. I could not confirm either against the ICD-10-AM tabular list.\n\n**Why the respiratory failure is not the principal diagnosis**\n- The admission was for acute respiratory failure requiring intubation, but the workup identified a sleep-related upper-airway disorder as the underlying cause.\n- Under the Australian Coding Standards, the principal diagnosis is the condition established after study to be chiefly responsible for the admission. That points to the sleep-disordered breathing rather than to J96.0 (acute respiratory failure).\n\n**Why obstructive sleep apnoea fits**\n- Polysomnography showed obstructive sleep apnoea and no central sleep apnoea.\n- The 4D-CT during sleep showed glottis closure at the end of inspiration followed by velopharyngeal closure. This is a dynamic, laryngeal-level obstruction, which is consistent with the obstructive pattern.\n- The airway disorder is attributed to MSA (multiple system atrophy) and/or obesity.\n\n**Code options**\n- **G47.33 Obstructive sleep apnoea** is the more direct match to the polysomnography result.\n- **G47.39 Other sleep apnoea** is the alternative if the abnormal glottic closure is treated as a distinct MSA-related sleep breathing disorder rather than classic obstructive sleep apnoea.\n\n**Secondary codes**\n- G90.3 Multi-system degeneration (MSA, parkinsonian type)\n- J96.0 Acute respiratory failure\n- E66.- Obesity, if documented\n- Z93.0 Tracheostomy status\n\n**Procedure code**\n- Tracheostomy would be coded to the ACHI procedure block for tracheostomy (block 536).\n\nIf the withheld diagnosis in the summary is \"laryngeal/glottic closure during sleep due to MSA\", the coder might instead assign G90.3 as principal, with the respiratory manifestation coded additionally. Check the actual diagnosis statement before finalising.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 723,
+    "output_tokens": 740
+  },
+  "seconds": 0.0
+}

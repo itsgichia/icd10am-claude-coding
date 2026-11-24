@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "93a7d6106130",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 66-year-old woman\n\nHospital Course: The patient presented with bilateral cramping thigh pain for three days. She had a past medical history of coronary artery disease, heart failure, high cholesterol, high blood pressure, and diabetes. She was previously hospitalized for a non-ST elevation myocardial infarction.\nDiagnosis: [diagnosis section withheld]\nTreatment: The patient received aggressive intravenous hydration and her simvastatin and ticagrelor medications were discontinued. Her symptoms resolved and laboratory tests showed improvement. She was started on a new medication, clopidogrel, and was prescribed rosuvastatin during a follow-up clinic visit.\n\nFollow-up: The patient has remained without complications on follow-up visits and laboratory tests.\n\nConclusion: The patient was discharged in stable condition with appropriate medications and follow-up care."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis is **M62.82, Rhabdomyolysis**.\n\nThe diagnosis section is withheld, so this is inferred from the clinical picture. Bilateral thigh cramping, treatment with aggressive IV hydration, and improvement in laboratory values after stopping simvastatin all point to statin-associated rhabdomyolysis. Simvastatin levels are raised by ticagrelor, a CYP3A4 inhibitor, which is a plausible contributing interaction.\n\nUnder ICD-10-AM adverse-effect conventions, the manifestation is coded first and the drug is added as an additional code:\n\n- **Principal diagnosis:** M62.82 Rhabdomyolysis\n- **Additional code:** T46.6X5A, Adverse effect of antihyperlipidaemic and antiarteriosclerotic drugs, initial encounter\n\nIf the discharge diagnosis were documented as statin-induced myopathy rather than rhabdomyolysis, the code would instead be G72.0 Drug-induced myopathy, with T46.6X5A. The confirmed diagnosis wording and CK results should be checked before final coding.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 347,
+    "output_tokens": 845
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "json_output",
+  "record_id": "0482ac7e989a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Patient name]\n\nDOB: [Patient date of birth]\n\nMedical Record Number: [Patient's medical record number]\n\nAdmission Date: [Date of admission]\n\nDischarge Date: [Date of discharge]\nAdmitting Diagnosis: [diagnosis section withheld]Discharge Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient presented to the emergency department with abdominal pain and was diagnosed with an ectopic pregnancy in the right adnexa. A laparoscopic right salpingectomy was performed, and regular obstetric follow-up was done for the intrauterine pregnancy. The baby was delivered via spontaneous vaginal delivery at term with no significant complications.\n\nDischarge Instructions:\n\nThe patient is advised to continue with regular obstetric follow-up and to report any signs of complications immediately. Post-operative pain management should be done as prescribed. The patient should have a healthy diet and stay hydrated, and avoid strenuous physical activity until cleared by the obstetrician. \n\nFollow-up:\n\nThe patient is advised to schedule a follow-up appointment with their obstetrician as soon as possible.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"O00\", \"condition\": \"Ectopic pregnancy\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 532,
+    "output_tokens": 355
+  },
+  "seconds": 0.0
+}

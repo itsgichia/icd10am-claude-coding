@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "cot_then_extract",
+  "record_id": "1471065dc7fd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nAge: 34\nGender: Female\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nPatient with platin-resistant metastatic ovarian cancer was admitted to the hospital after experiencing fever and chills during infusion of nivolumab. Physical examination showed nausea and a known pelvic mass. Infusion was stopped and antihistamines and corticosteroids were administered. However, the patient remained febrile and was found to have a positive blood culture for bacillus Gram-positive bacteria. Combination therapy with antibiotics was started, but three blood cultures returned positive for rapidly growing mycobacteria. The port-a-cath was removed and antibiotics were switched to clarithromycin and ethambutol. Diagnosis of M. mucogenicum port-a-cath related bloodstream infection was retained.\n\nTreatment and Management:\nPatient received combination antibiotherapy for two months and antibiotics were pursued for six months. Despite concomitant chemotherapy, no relapse of infection was observed after antibiotic discontinuation.\n\nFollow-up:\nPatient was discharged in stable condition with instructions to continue chemotherapy and to monitor for any signs of infection.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible for the admission is a port-a-cath related bloodstream infection caused by Mycobacterium mucogenicum, a rapidly growing nontuberculous mycobacterium. In ICD-10-AM, catheter-related bloodstream infection is classified to T80.2 (infections following infusion) or T82.7 (infection due to a vascular device), both in chapter T. A central venous port infection is a complication of a device, so T82.7 is the usual choice, with B99 or A31.8 as additional codes for the organism.\n\nThe alternative would be A31 (other mycobacterial infection), but coding rules place device-related infection in the complication chapter. The fever during infusion was an initial presentation of the infection, not a separate reaction that determined the admission.\n\nChapter T, category T82.\n\nCODE: T82",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1015,
+    "output_tokens": 271
+  },
+  "seconds": 0.0
+}

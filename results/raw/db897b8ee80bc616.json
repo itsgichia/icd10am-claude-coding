@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "521280629b72",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\nLength of Stay: [REDACTED]\n\nHospital Course:\nThe patient presented to the pediatric emergency with confusion and disorientation. She was diagnosed with bacterial meningitis based on clinical examination and CSF analysis and was treated with intravenous ceftriaxone and vancomycin. A CT scan was performed, and pneumocephalus was observed in the right frontal region. The patient was treated for signs of chronic sinusitis and pansinusitis. She showed initial symptomatic improvements to antibiotics but suffered a deterioration of her GCS to 7/15, with a high-grade fever.\n\nSubdural empyema was diagnosed through a repeat CT scan, requiring immediate neurosurgical intervention. The surgical drainage was performed, and on the second day, the patient's GCS improved to 15/15, and her fever had subsided. The patient was discharged with a prescription for oral antibiotics, nasal saline spray, and nasal decongestants.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient received intravenous ceftriaxone and vancomycin to treat bacterial meningitis. Subdural empyema was treated through immediate neurosurgical intervention, which involved surgical drainage. The patient was prescribed oral antibiotics, nasal saline spray, and nasal decongestants upon discharge.\n\nFollow-up:\nThe patient was seen at two-week and four-week follow-ups and experienced significant improvements in symptoms."
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **G00.9 Bacterial meningitis, unspecified**\n\n## Rationale\n\nUnder ACS 0001 (Principal Diagnosis), the principal diagnosis is *\"the diagnosis established after study to be chiefly responsible for occasioning the patient's episode of admitted patient care.\"*\n\n- The patient **presented with** confusion and disorientation. She was diagnosed with **bacterial meningitis** on clinical examination and CSF analysis, and treated with IV ceftriaxone and vancomycin. This is the condition that occasioned the admission.\n- No causative organism is documented, so **G00.9** (unspecified) is the correct code. If CSF culture or Gram stain identified an organism, you would assign a more specific G00.x code, or A39.0 if meningococcal.\n- The **subdural empyema** developed later in the admission, after initial improvement on antibiotics. It is a complication or progression, not the reason for admission, so it is a secondary diagnosis. It still meets ACS 0002 criteria for additional diagnoses because it required neurosurgical intervention.\n\n## Suggested Additional Diagnosis Codes\n\n| Code | Description |\n|------|-------------|\n| **G06.2** | Extradural and subdural abscess, unspecified (subdural empyema) |\n| **J32.4** | Chronic pansinusitis |\n| **G93.8** | Other specified disorders of brain (pneumocephalus) |\n\n## Points to Query or Verify\n\n- **Organism:** Check CSF and pus cultures. A specific organism would change the meningitis code and add a B95\u2013B96 code for the empyema.\n- **Link between sinusitis and the intracranial infection:** If the clinician documents the sinusitis as the source, keep the sequencing above. A principal diagnosis of sinusitis would only be considered if the documentation supports it as the reason for admission, which it does not here.\n- **Procedures:** Code the neurosurgical drainage of the subdural empyema (e.g., burr hole or craniotomy drainage from ACHI block 1\u201339) based on the operation report. Code any sinus surgery if it was performed.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 588,
+    "output_tokens": 954
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "63ad1e03f360",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nPatient Age: 32\nAdmission Date: [redacted]\nDischarge Date: [redacted]\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to the hospital with shortness of breath and was found to be COVID-19 positive. Upon examination, he was tachycardic and tachypneic with normotensive blood pressure and oxygen saturation at 92% on room air. Laboratory results showed increased levels of creatinine, ferritin, C-reactive protein, and D-dimer. A chest x-ray did not show any acute disease process, but a thoracic CT scan angiography showed a large saddle embolism extending into segmental branches in both lower lobes and the right middle lobe. Bedside echocardiogram revealed a dilated right ventricle consistent with right heart strain. He was transferred to the intensive care unit due to multiple episodes of hemoptysis and worsening tachypnea. The vascular surgeons performed mechanical embolectomy, and a large thrombus was removed. The patient remained clinically stable post-procedure. The patient was started on heparin and later transitioned to rivaroxaban for treatment. \n\nHospital Course Summary:\nA 32-year-old male with no prior medical history presented to the hospital with shortness of breath and was found to be COVID-19 positive. Extensive testing revealed a submassive pulmonary embolism leading to dilated right ventricle consistent with right heart strain. He underwent successful mechanical embolectomy and was discharged after a comprehensive treatment plan was established."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: I26.0 Pulmonary embolism with acute cor pulmonale**\n\n**Rationale**\n- The condition chiefly responsible for the admission and treated with embolectomy and anticoagulation was a saddle pulmonary embolism with right heart strain. This is a PE, not COVID-19 pneumonia.\n- ICD-10-AM classifies PE with acute cor pulmonale under I26.0. The dilated right ventricle and right heart strain on echocardiography support this. A saddle embolus is also indexed to I26.0 in ICD-10-AM/ACHI. If the clinician did not document acute cor pulmonale or right heart strain as such, the fallback would be I26.9 (PE without acute cor pulmonale). Here the strain is documented, so I26.0 is appropriate.\n\n**Additional codes**\n- **U07.1 COVID-19, virus identified.** This is a secondary diagnosis. Under Australian Coding Standards, it is sequenced according to the circumstances of the admission. Here the PE is the condition that occasioned the admission and was treated.\n- **R04.2 Haemoptysis.** This is probably not coded separately if it is integral to the PE. It can be omitted.\n- **Procedure (ACHI):** mechanical (percutaneous) thrombectomy or embolectomy of the pulmonary artery. The exact block depends on the approach documented, for example 38287-00 or a similar code in the pulmonary artery embolectomy range. Please verify against the current ACHI edition.\n\n**Caveat:** The discharge diagnosis section was withheld, so the code depends on the clinician's documentation. If the clinician documented the PE as a COVID-19 manifestation, check the current ACS 0001/COVID-19 coding guidance and the local coding advice. Even then, the PE would most likely still be sequenced as principal, with U07.1 as an additional diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 584,
+    "output_tokens": 640
+  },
+  "seconds": 0.0
+}

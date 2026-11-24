@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "7e16259e5a6b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\nSex: Female\nAge: 29 Years\nHospital: Ora\u0161je County Hospital (Bosnia and Herzegovina)\nAdmission Date: [Redacted]\nDischarge Date: [Redacted]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nA 29-year-old female was admitted to the Department of Surgery with a history of recurrent colicky right upper quadrant abdominal pain. The patient was diagnosed as having multiple gallstones within the gallbladder on abdominal ultrasonography. Routine hematological and biochemical test results were normal. The patient underwent elective laparoscopic cholecystectomy, and there were no complications during the procedure, or postoperatively. The patient was discharged on the third postoperative day. \n\nPathology Report:\nHistologically, microscopic slides from the gallbladder body showed that almost the entire cylindrical epithelium of the mucosa was missing. There was a moderate mixed inflammatory cell infiltrate in the submucosa, and the muscular layer was slightly hypertrophic, which is consistent with chronic cholecystitis. The most unusual feature of the slide from the body of the gallbladder was the presence of large dilated vessels within the muscular layer extending into the submucosa and mucosa. The appearance of angiodysplasia of the gallbladder and its endothelial lining was confirmed immunohistochemically using CD34, CD31, and podoplanin (D2-40) monoclonal antibodies. \n\nFollow-up:\nThe patient remained healthy at 6-year follow-up. \n\nSummary:\nThe patient, a 29-year-old woman, underwent laparoscopic cholecystectomy for multiple gallstones within the gallbladder. The histopathological findings revealed chronic cholecystitis with the unusual feature of angiodysplasia of the gallbladder. There were no complications during the procedure, and the patient was discharged on the third postoperative day. The patient remained healthy at the 6-year follow-up.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "K80",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 813,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "json_output",
+  "record_id": "76783dc97795",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient Name: N/A\nMedical Record Number: N/A\nDate of Admission: N/A\nDate of Discharge: N/A\nDate of Dictation: [DATE]\n\nHOSPITAL COURSE:\nThe patient was admitted to our university hospital with a sudden severe headache in the forehead. Brain computed tomography (CT) revealed a large epidural hematoma in the right frontal lobe with midline shift. The patient had no past history of trauma or cardiovascular risk factors, including hypertension, hyperlipidemia, smoking, diabetes mellitus, collagen diseases, alcoholism, and drug abuse.\nDIAGNOSIS: [diagnosis section withheld]\nTREATMENT:\nThe patient discontinued fingolimod and a month later the lymphopenia had resolved, but the hematoma showed no improvement. Therefore, a direct evacuation was performed, and a 12 g organized hematoma was successfully removed. After the operation, the patient received a single course of methylprednisolone pulse therapy (1 g/day for 3 successive days) followed by treatment with dimethyl fumarate instead of fingolimod. The patient showed no recurrence of hematoma or bleeding for more than a year.\n\nFOLLOW-UP:\nThe patient is advised to follow up with their physician for further evaluation and management of their RRMS. No additional concerns were noted.\n\nDISCHARGE CONDITION:\nStable and improved.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"I62\", \"condition\": \"Nontraumatic extradural haemorrhage\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 628,
+    "output_tokens": 82
+  },
+  "seconds": 0.0
+}

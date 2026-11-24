@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "9896dda7183d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: [redacted]\nAge: 2 years\nSex: Female\nDate of Admission: February 5, 2020\nDate of Discharge: February 10, 2020\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to the hospital on February 5, 2020 for intermittent fever and dry cough. She had previously received oral medications for three days consisting of Tamiflu and Cefaclor. The patient's aunt was a suspected case of COVID-19 and had developed symptoms on January 26, 2020. She passed away on February 1, 2020. The physical examination on admission showed a temperature of 38.8\u00b0C, pulse of 110 beats per minute, respiration of 25 breaths per minute, and SpO2 of 100%. The results of the nasopharyngeal swab sample taken on admission were negative for SARS-CoV-2.\n\nDiagnostic Results:\nThe chest computed tomography (CT) showed patchy and flocculent slightly high-density shadows in both lungs. The blood routine results revealed a leukocyte count of 9.29 \u00d7 109/L and lymphocytes of 1.63 \u00d7 109/L. C-reactive protein was 5 mg/L. The serum IgM antibody of influenza A was weakly positive. The third nasopharyngeal swab sample was also negative. However, the serum collected on February 5, 2020 was found to be positive for both IgG and IgM antibodies against SARS-CoV-2.\nFinal Diagnosis: [diagnosis section withheld]\nTreatment:\nThe patient was treated with Tamiflu continuously.\n\nDisposition and Condition on Discharge:\nThe patient was discharged on February 10, 2020 with a return to normal body temperature. \n\nFollow-up Recommendations:\nThe patient was advised to undergo follow-up testing to ensure a complete recovery.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: J12**\n\nThis assumes the episode is pneumonia caused by COVID-19.\n\n1. **Condition responsible for the admission.** The child came in with fever and dry cough. Her aunt was a suspected COVID-19 case. Chest CT showed bilateral patchy, flocculent opacities, which is viral pneumonia. Her nasopharyngeal swabs were negative, but serum from the day of admission was positive for both IgM and IgG against SARS-CoV-2. That points to COVID-19 pneumonia as the reason for the stay. The influenza A IgM was only weakly positive, so I treated it as a weaker finding, even though she was given Tamiflu.\n\n2. **Chapter.** Pneumonia is a respiratory condition, so the chapter letter is **J**.\n\n3. **Category.** J12 is viral pneumonia not elsewhere classified, and COVID-19 pneumonia falls within it. The full code would be J12.8, other viral pneumonia.\n\n4. **Why not the COVID-19 code itself.** The specific COVID-19 code, U07.1 (COVID-19, virus identified), is in Chapter U, which is not among the chapters listed. My understanding of the Australian coding guidance is that U07.1 is recorded as an additional diagnosis, with the illness it caused as the principal diagnosis. I am recalling that rule rather than quoting it.\n\nIf the influenza finding were taken as the main cause instead, the code would be J10 (influenza due to an identified seasonal virus). I did not choose that because the SARS-CoV-2 serology is stronger evidence.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1169,
+    "output_tokens": 962
+  },
+  "seconds": 0.0
+}

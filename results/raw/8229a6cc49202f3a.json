@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "5a5d374789e4",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [redacted]\n\nAge: 35\n\nSex: Female\n\nChief Complaint: Dyspnea and sickle cell crisis\nDiagnosis: [diagnosis section withheld]\nHospital Course: The patient presented with severe, progressive dyspnea and a sickle cell crisis. She had a history of severe tricuspid regurgitation, protein C deficiency, and recurrent deep vein thrombosis and pulmonary emboli. After examination, echocardiogram, and Doppler, a bioprosthetic tricuspid valve replacement surgery was conducted. Postoperatively, the patient had hypoxic respiratory failure requiring oxygen support, intermittent bilevel positive airway pressure ventilation, and diuresis. Twenty days after surgery, purulent secretion was noted on the sternotomy site. A CT of the thorax showed a large pericardial effusion, possibly a hemopericardium, and bilateral pleural effusions. A subxiphoid pericardial window and placement of a drainage catheter were conducted, leading to gradual improvement of her symptoms. Two months after discharge, a follow-up echocardiogram showed no pericardial effusion.\n\nTreatment: Bioprosthetic tricuspid valve replacement surgery, oxygen support, intermittent bilevel positive airway pressure ventilation, diuresis, subxiphoid pericardial window, and placement of a drainage catheter.\n\nCondition stabilized: Yes\n\nDischarge Instructions: The patient is advised to follow up with her treating physicians as scheduled.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "CODE: I07\n\n**Why tricuspid regurgitation is the principal diagnosis**\n\n- The patient came in with progressive dyspnoea from severe tricuspid regurgitation.\n- Echocardiogram and Doppler confirmed it, and she had a bioprosthetic tricuspid valve replacement.\n- Her stay was mainly for the valve disease and its surgery, so this is the condition chiefly responsible for the admission.\n\n**Why I07 and not I36**\n\n- Tricuspid valve disorders of unspecified cause are classified to rheumatic tricuspid valve disease, I07. That applies here because tricuspid insufficiency classifies to rheumatic disease unless a non-rheumatic cause is documented. I36 (non-rheumatic tricuspid valve disorders) is used only when the documentation states the valve disease is non-rheumatic.\n- The summary gives no cause. Her history of recurrent pulmonary emboli and sickle cell disease suggests the regurgitation may be secondary (functional) to pulmonary hypertension. However, that is not documented, so I cannot code to it without querying the clinician.\n- If the clinician confirms a non-rheumatic or functional cause, the code becomes I36. In practice I would query before final coding.\n\n**Conditions I did not choose as principal**\n\n- **Sickle cell crisis (D57.0):** This was present on arrival and is a significant additional diagnosis. It was not what drove the admission or the surgery.\n- **Postoperative respiratory failure and the pericardial effusion or haemopericardium needing a pericardial window:** These are complications that arose after surgery, so they are additional diagnoses.\n- **Infected sternotomy wound:** Also a post-operative complication, coded as an additional diagnosis.\n- **Protein C deficiency and the history of DVT and pulmonary emboli:** These are comorbidities, coded as additional diagnoses where they meet the criteria.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 761,
+    "output_tokens": 865
+  },
+  "seconds": 9.295689082995523
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "989391f9254d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient:\n\u2022 Name: Not provided\n\u2022 Age: 24-year-old\n\u2022 Gender: Male\n\nHospitalization Dates:\n\u2022 Admission: [not provided]\n\u2022 Discharge: POD #20\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\u2022 Patient underwent uncomplicated orthotopic liver transplantation after multiple thoracenteses for symtomatic relief of persistent right-sided hepatic hydrothorax.\n\u2022 Patient presented with respiratory distress and left-sided infiltrates consistent with pneumonia on POD #5 after OLT. Patient was started on antibiotics and underwent a right-sided therapeutic thoracentesis with removal of 1.3 liters of fluid.\n\u2022 Post-thoracentesis chest imaging revealed a large hydropneumothorax that was treated with a small-bore chest tube.\n\u2022 Diagnostic bronchoscopy was not performed due to the absence of endobronchial obstruction on CT.\n\u2022 Patient was stable without dyspnea and hypoxemia, so video-assisted thoracoscopic surgery was deferred after consultation with thoracic surgery.\n\u2022 Patient was discharged home on POD #20 without supplemental oxygen.\n\u2022 Follow-up chest x-ray 1 month later showed improvement in the hydropneumothorax and a chest x-ray obtained 6 months later showed near-complete re-expansion of the right lung without surgical intervention.\n\nDischarge Instructions:\n\u2022 Follow-up with liver transplant team as needed.\n\u2022 Follow-up with primary care physician for ongoing care."
+      }
+    ]
+  },
+  "text": "The admission diagnosis was withheld, so this answer rests on an inference about the episode of care.\n\n**Most likely principal diagnosis: J94.8 (Other specified pleural conditions), which covers hydropneumothorax.**\n\nReasoning:\n- The summary describes the post-transplant course. The transplant itself was uncomplicated, and the indication (hepatic hydrothorax with underlying liver disease) is not stated in the summary.\n- If the admission was for the transplant, the principal diagnosis would be the underlying liver disease, such as the cirrhosis that caused the hydrothorax. That condition isn't named, so I can't assign a code with confidence.\n- Hepatic hydrothorax is coded K76.7 or K76.81 (hepatopulmonary syndrome is a separate condition), and in ICD-10-AM it is usually coded as J91* (pleural effusion in conditions classified elsewhere) alongside the liver disease code. It is a manifestation code and can't be the principal diagnosis.\n\n**Suggested code set if the transplant admission is the episode:**\n- Principal diagnosis: the underlying chronic liver disease (e.g., K74.6 Other and unspecified cirrhosis of liver), if documented.\n- Additional diagnoses:\n  - J91* Pleural effusion in conditions classified elsewhere (hepatic hydrothorax)\n  - J94.8 Hydropneumothorax (iatrogenic, following thoracentesis, so J95.8 or J95.88 Other intraoperative and postprocedural complications of respiratory system may apply, with J93.8 for pneumothorax)\n  - J18.9 Pneumonia, unspecified\n  - Z94.4 Liver transplant status (not for the transplant admission itself)\n\n**Answer:** Without the admission diagnosis, the best-supported single code is **K76.7/K74.6-type underlying liver disease** for a transplant admission. If the question is only about the clinical focus described in the hospital course, it is **J94.8 (hydropneumothorax)**, with J95.88 considered for a procedural complication.\n\nPlease provide the withheld admission diagnosis and I can give a definitive code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 587,
+    "output_tokens": 723
+  },
+  "seconds": 0.0
+}

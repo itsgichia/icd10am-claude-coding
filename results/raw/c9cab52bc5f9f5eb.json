@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "8737b8aee5a2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nAdmission date: N/A\nDischarge date: N/A\n\nPatient Information: \nThe patient is a 71-year-old Finnish male diagnosed with early onset Parkinson's disease at the age of 40.\n\nHospital Course:\n\nDuring the years 2016-2017, the patient was categorized at stage 2.5 of the modified Hoehn and Yahr Scale, with a United Parkinson's Disease Rating Scale (UPDRS) score of 41/199. The patient demonstrated rigidity of the lower limbs, shortness of steps, and postural instability, but no tremors. He has experienced a mild gait disturbance with occasional freezing recently. The progression of his illness has been slow, with a sustained response to medication.\n\nDiagnostic Tests:\nDopamine transporter (DaT) single-photon emission computerized tomography (SPECT) of the brain was performed and demonstrated reduced density of DA synaptic terminals in the caudate and putamen consistent with degenerative Parkinson's disease.\n\nMedical History:\nThe patient has no reported family history of Parkinson's disease.\n\nGenetic Analysis:\nTargeted next-generation sequencing revealed that the patient carried a novel homozygous c.194G > A variant in exon 3 of the PARK2 gene, causing an amino acid change p.Ser65Asn (S65N) in the PARKIN protein. The variant is very rare, but the site is highly conserved in vertebrates, and in silico analysis of the variant predicted that the mutation is deleterious.\nDischarge Diagnosis: [diagnosis section withheld]\nFollow-Up Care and Recommendations:\nThe patient should follow up with his healthcare provider regularly to monitor his condition and adjust medication as needed. The patient should be advised to continue engaging in regular physical activity and cognitive stimulation."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: G20 \u2013 Parkinson disease**\n\n**Why this code fits**\n- The patient has idiopathic/degenerative Parkinson's disease. This is confirmed clinically by rigidity, short steps, postural instability, freezing and a sustained response to dopaminergic medication. It is also confirmed on DaT-SPECT, which showed reduced presynaptic dopamine terminals in the caudate and putamen.\n- The cause is genetic: a homozygous PARK2 (parkin, *PRKN*) variant, consistent with autosomal recessive early-onset Parkinson's disease. ICD-10-AM has no separate code for genetic or familial forms or for early onset, so these are still classified to G20.\n- Codes that do not apply:\n  - **G21.x (secondary parkinsonism)** covers drug-induced, post-encephalitic or vascular causes, none of which apply here.\n  - **G23.x** covers other degenerative basal ganglia diseases, such as progressive supranuclear palsy and multiple system atrophy.\n  - The ICD-10-CM subcodes (G20.A1, G20.A2, etc.) are not part of ICD-10-AM.\n\n**Possible additional codes**, depending on local coding standards and whether these features meet the criteria for additional diagnoses:\n- R26.8 (other abnormalities of gait) for the gait disturbance and freezing, if it is managed separately. Usually it is considered inherent to Parkinson's disease and not coded.\n\nThe genetic variant itself does not get a separate diagnosis code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 656,
+    "output_tokens": 729
+  },
+  "seconds": 0.0
+}

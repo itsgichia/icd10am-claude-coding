@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "587b40f261f0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Identification:\nThis is a 43-year-old Jewish woman referred to our medical center for multinodular goiter evaluation. She had a history of a 2-stage total thyroidectomy and a right modified neck dissection for medullary thyroid carcinoma (MTC) with concomitant follicular adenoma and micropapillary carcinoma. The patient underwent surgical treatments followed by I-131 100 mCi.\n\nHospital Course and Treatment:\nThe patient underwent a 2-stage total thyroidectomy before being referred to our medical center for evaluation. The biopsy results revealed a proliferative lesion suspicious for neoplasia, with a second lesion measuring 1.2cm. The right lobe and isthmus biopsy specimen showed a well-demarcated two cm maximal diameter MTC and a partially circumscribed follicular adenoma measuring 1.2cm. The non-neoplastic thyroid tissue revealed lymphocytic infiltration and occasional colloid nodules. The left thyroid lobe histology disclosed a tiny focus, two mm in size, consistent with micropapillary carcinoma. No lymph node metastasis was found.\n\nThe patient\u2019s presurgical calcitonin level was 2170ng/L, and carcinoembryonic antigen (CEA) level was 51mg/L, while thyroid-stimulating hormone was within the normal range. One year postsurgery, the patient\u2019s calcitonin levels were less than five ng/L, and thyroglobulin levels were no longer measurable. Point mutation for RET proto-oncogene was tested and found to be negative.\n\nMedications and Follow-up:\nThe patient was discharged after her I-131 treatment. No further medication was prescribed. Follow-up at regular intervals is recommended to monitor the patient\u2019s progress.\nFinal Diagnosis: [diagnosis section withheld]\nPrognosis and Recommendations:\nThe patient\u2019s prognosis is positive. Follow-up at regular intervals is recommended to assess her progress. No further medications or treatments are needed. Close monitoring is advised to help ensure the best possible outcome."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM principal diagnosis: **C73 \u2013 Malignant neoplasm of thyroid gland**\n\n## Why C73 is the principal diagnosis\n\n- The condition chiefly responsible for this episode of care is **medullary thyroid carcinoma (MTC)**, a 2 cm tumour in the right lobe and isthmus.\n- It accounts for the main treatment: the 2-stage total thyroidectomy and the right modified neck dissection.\n- C73 is a single code, so there is no further site detail (lobe or isthmus) at 4th-character level.\n- The coexisting **papillary microcarcinoma** (2 mm, left lobe) also falls under C73. It does not need a separate code.\n\n## Morphology code (supplementary)\n\n- **M8510/3 \u2013 Medullary carcinoma, NOS** (the main tumour)\n- M8341/3 \u2013 Papillary microcarcinoma may also be assigned for the incidental left lobe focus.\n\n## Other codes to consider\n\n- **D34 \u2013 Benign neoplasm of thyroid gland** (follicular adenoma, M8330/0). This is generally not coded separately here because it sits in the same organ as the malignancy. Follow local coding practice.\n- **E06.3 \u2013 Autoimmune thyroiditis**, but only if the lymphocytic infiltration is clinically documented as Hashimoto's or lymphocytic thyroiditis. Otherwise it is an incidental histology finding.\n- **Z51.0 (Radiotherapy session)** would become principal only if this admission were solely for the I-131 ablation. The summary describes the whole surgical and treatment course for MTC, so C73 is the appropriate principal diagnosis.\n\n**Answer: C73 (with morphology M8510/3)**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 752,
+    "output_tokens": 789
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "4c417105ea15",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\nThe patient, a 35-year-old Japanese woman, presented to our facility in gestational week 29 with low back pain, weakness of her lower extremities, and impaired liver function with low platelet count. An epidural hematoma was detected in her thoracic spinal canal, which was confirmed by MRI findings, resulting in emergency decompression. The patient was diagnosed with HELLP syndrome and underwent an emergency Cesarean section to end the pregnancy. Post-operatively, the patient experienced bilateral lower limb paralysis and complete urinary retention, leading to diagnosis of grade B injury according to the ASIA/ISCoS classification. A surgical intervention was performed successfully, and the patient\u2019s condition improved gradually.\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course and Procedures:\nThe patient underwent an emergency Cesarean section to terminate the pregnancy due to HELLP syndrome, which resulted in bilateral lower limb paralysis and complete urinary retention. The MRI detected an epidural hematoma in the thoracic spinal canal which was removed by neurosurgical decompression. The patient's condition improved gradually after the surgery.\n\nCondition at Discharge:\nThe patient's lower limb sensation improved to a score of 8 out of 10, and muscular strength limited to a slight improvement. The patient was classified as ASIA/ISCoS grade C.\n\nFollow-up Plans:\nThe patient was discharged and scheduled for follow-up visits with the neurosurgical and obstetric departments to monitor her progress."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: O14.2 HELLP syndrome**\n\nThis is my best coding judgment from the summary. I could not verify it against the current ICD-10-AM code tables, and the discharge diagnosis section was withheld.\n\n**Rationale**\n- The principal diagnosis is the condition chiefly responsible for the admission and for the care given. Here that is HELLP syndrome (hemolysis, elevated liver enzymes, low platelets) at 29 weeks' gestation. It was the reason for the emergency Cesarean section to end the pregnancy.\n- In ICD-10-AM, HELLP syndrome is classified in Chapter 15 (Pregnancy, childbirth and the puerperium) as O14.2. Chapter 15 codes take sequencing precedence when the pregnancy is the reason for the episode of care.\n\n**Arguable alternative**\n- The presenting complaints were back pain and leg weakness, and the spinal epidural hematoma with cord injury was a major part of the care. A coder could therefore consider the hematoma as principal. In that case the options would be a spinal epidural hemorrhage code (for example G95.1, vascular myelopathy, or a nontraumatic spinal hemorrhage code), or an O99.4 or O26.8-type obstetric code for the complication.\n- The Chapter 15 sequencing rule and the fact that HELLP was the driver of the delivery make O14.2 the more defensible principal diagnosis. The hematoma was probably a complication of the coagulopathy and thrombocytopenia of HELLP.\n\n**Additional codes**\n- Spinal epidural hematoma with incomplete spinal cord injury or paraplegia (ASIA B improving to C).\n- Urinary retention (R33).\n- Preterm delivery by Cesarean section, with a Z37.- outcome-of-delivery code.\n- Procedure codes for the Cesarean section and the thoracic laminectomy and decompression, using ACHI.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 574,
+    "output_tokens": 654
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "dd6490d94132",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\nPatient Name: N/A\nDOB: N/A\nSex: Female\nAdmission Date: N/A\nDischarge Date: N/A\nAdmitting Diagnosis: [diagnosis section withheld]\nFinal Diagnosis: [diagnosis section withheld]\nHospital Course: The patient, a 92-year-old Caucasian female with a medical history significant for Alzheimer's dementia, seizure disorder, osteoporosis, and osteoarthritis, was admitted for evaluation of new onset confusion and constipation. Review of symptoms revealed anorexia, weight loss, constipation for the last three weeks, and history of a fall one month prior to the presentation. An MRI of the brain showed lytic lesions and serum protein electrophoresis and urine protein electrophoresis confirmed the diagnosis of Multiple Myeloma. Primary Hyperparathyroidism was also suspected due to high intact PTH levels. Hypercalcemia was managed during the admission, and the patient was started on medication. The patient was later discharged and is currently following up with oncology services as an outpatient on a low dose of lenalidomide with a stable M protein. \n\nDisposition: Discharged\n\nMajor Procedures: N/A\n\nBrief hospitalization course: A 92-year-old Caucasian female was admitted to the hospital due to confusion and constipation. During the admission, the patient was diagnosed with Multiple Myeloma and Primary Hyperparathyroidism. Hypercalcemia was managed, and the patient was later discharged and is currently following up with oncology services as an outpatient."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: Multiple myeloma, ICD-10-AM code C90.0 (Multiple myeloma)**\n\nThis is the most likely principal diagnosis, but the choice depends on a coding judgement.\n\n**Rationale**\n- The principal diagnosis is the condition established after study to be chiefly responsible for the admission. The patient was admitted with confusion and constipation. Work-up (MRI showing lytic lesions, SPEP/UPEP) established multiple myeloma, and hypercalcemia was the likely driver of those symptoms.\n- Confusion and constipation are symptoms. They should not be coded as principal when a underlying cause is established.\n- Hypercalcemia (E83.52) is a manifestation of the myeloma, and it was managed during the stay. It is coded as an additional diagnosis. Hypercalcemia due to malignancy is still classified to E83.52.\n- The myeloma was newly diagnosed and treated, so it is coded as active disease. Under ICD-10-AM, C90.0 is the code for myeloma not having achieved remission. The fifth-character remission status used in ICD-10-CM does not apply.\n- ICD-10-AM also requires a morphology code (M-code) with malignancy codes. For myeloma this is M9732/3.\n\n**Likely additional diagnoses**\n- E83.52 Hypercalcaemia\n- E21.0 Primary hyperparathyroidism (only if confirmed. It was \"suspected\", and in Australian coding, uncertain diagnoses at discharge can be coded if documented as such, but the documentation should be clarified.)\n- F00.- / G30.9 Alzheimer's disease with dementia (G30.9 with F00.9*)\n- G40.9 Epilepsy/seizure disorder\n- M81.- Osteoporosis\n- M19.9- Osteoarthritis\n- K59.0 Constipation\n- Z91.81 History of falling\n\n**Caveat:** The final diagnosis section was withheld. If the clinician documented hypercalcemia as the main reason for admission, or the hyperparathyroidism as confirmed and the main cause, the principal diagnosis could change. Based on the information given, C90.0 is the best answer.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 575,
+    "output_tokens": 737
+  },
+  "seconds": 0.0
+}

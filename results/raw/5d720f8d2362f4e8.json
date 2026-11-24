@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "c21280ae53ae",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Name]\nMedical Record Number: [Number]\nDate of Admission: [Date]\nDate of Discharge: [Date]\n\nHospital Course:\n\nThe patient, a 46-year-old Caucasian male, was admitted to the hospital due to a new onset headache, nausea, and vomiting. The patient had a history of pancreatic cancer with metastases to the liver and omentum, and had undergone treatment with chemotherapy. The patient was also previously hospitalized for a pulmonary embolism and small bowel obstruction.\n\nUpon admission, the patient presented with dull, intractable headache, icteric eyes, decreased air entry, and decreased muscle strength. The patient reported hitting his head in the bathroom one week prior to admission and had a family history of colon cancer.\n\nDuring hospitalization, the patient developed syncope and a generalized tonic-clonic seizure. Imaging studies revealed bihemispheric subdural hematomas and left hemispheric extra-axial metastatic lesions. The patient was started on levetiracetam and received cranial irradiation with right and lateral fields. The treatment significantly improved the patient's headache and nausea, and he did not experience any new seizures.\n\nThe patient tolerated radiotherapy well and did not require a treatment break. However, he died 2.5 months later at home. No autopsy was performed as per family request.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nOndansetron, metoclopramide, and dexamethasone\nLevetiracetam\nCranial irradiation with right and lateral fields\n\nFollow-up:\n\nThe patient passed away and there is no follow-up needed.\n\nDischarge Medications:\n\nNone.\n\nAllergies:\n\nNot reported.\n\nCondition at Discharge:\n\nThe patient passed away."
+      }
+    ]
+  },
+  "text": "# Suggested principal diagnosis: C79.3, Secondary malignant neoplasm of brain and cerebral meninges\n\nThe withheld diagnosis section and the inference that the subdural hematomas were non-traumatic are not documented, so the coder should confirm both with the treating clinician before finalising.\n\n**Why this code fits:**\n- The presenting symptoms (headache, nausea, vomiting, and later a seizure) were explained by intracranial pathology found on imaging. That pathology was the left hemispheric extra-axial (dural/meningeal) metastases, together with bihemispheric subdural hematomas.\n- The main treatment during the stay was cranial irradiation, plus dexamethasone and levetiracetam. This targets the metastatic disease, which marks it as the condition chiefly responsible for the admission.\n- Under the Australian Coding Standards for neoplasms, when treatment is directed at a secondary site, that secondary neoplasm is sequenced as the principal diagnosis.\n- Symptoms such as headache (R51), vomiting (R11), and seizure are integral to the established diagnosis. They should not be coded as principal.\n\n**Likely additional diagnoses:**\n- **I62.0 Subdural haemorrhage (acute)(nontraumatic).** The hematomas are probably related to the dural metastases. If the clinician attributes them to the fall a week before admission, use S06.5 Traumatic subdural haemorrhage with external cause codes instead. Clarification is needed.\n- **R56.8 Other and unspecified convulsions**, if the seizure is not considered integral or is documented as a separate problem. A G40 code applies only if epilepsy is diagnosed.\n- **C25.9 Malignant neoplasm of pancreas, unspecified.** Use a more specific site code if documented.\n- **C78.7** Secondary malignant neoplasm of liver.\n- **C78.6** Secondary malignant neoplasm of retroperitoneum and peritoneum (omentum).\n- **R17** Jaundice (icteric eyes), if clinically significant and not integral.\n- **R55** Syncope, if not attributed to the seizure.\n- **Z86.71** Personal history of venous thrombosis and embolism, and **Z80.0** Family history of malignant neoplasm of digestive organs, if relevant per coding standards.\n- The relevant ACHI procedure code for the cranial radiotherapy.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 636,
+    "output_tokens": 1247
+  },
+  "seconds": 0.0
+}

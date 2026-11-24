@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "a8f1e542a3f8",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: N/A\nMedical Record Number: N/A\n\nAdmission Date: N/A\nDischarge Date: N/A\n\nBrief Hospital Course:\nThe patient was admitted for specialized care due to circulatory failure. On admission, he presented with fever, myalgia, headache, and a rash. The patient did not report any ticks or eschar. The patient was initially treated for septic shock with intravenous normal saline. Spotted fever rickettsial infection was considered due to the presence of a rash, and the patient was started on intravenous ceftriaxone and oral doxycycline. As the patient's condition worsened, he developed shortness of breath and hypoxemia, which indicated type 1 respiratory failure. An echocardiogram showed myocarditis and pulmonary edema leading to heart failure. Intravenous chloramphenicol was added to the treatment regimen, as it can be effective in cases like this. Three inotropes were required, including norepinephrine, dobutamine and dopamine, to maintain the patient's blood pressure. After increasing the steroids dosage, the patient began showing signs of improvement. The patient was extubated and transferred back to the High Dependency Unit of the medical ward. The patient was discharged from the hospital ten days following admission.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Medications:\nN/A\n\nFollow-Up:\nThe patient was reviewed in the out-patient clinic, and he was asymptomatic. Further species identification was not possible due to unavailability of facilities. The patient did not turn up for the follow-up echocardiogram. \n\nDischarge Condition:\nThe patient was discharged in stable condition."
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis: A77.9 \u2013 Spotted fever, unspecified**\n\n**Why this code**\n- The underlying condition behind the admission was a **spotted fever group rickettsial infection**. It caused the fever, myalgia, headache, rash, circulatory failure, myocarditis and respiratory failure.\n- The follow-up note says \"further species identification was not possible.\" That suggests the spotted fever group was confirmed, likely by serology, but the organism was never identified. This means A77.0\u2013A77.8 (*R. rickettsii*, *R. conorii*, *R. sibirica*, *R. australis*, etc.) cannot be assigned, so **A77.9** is the appropriate code.\n- Under ACS principal diagnosis rules, the underlying infection is sequenced first. Its manifestations and complications are coded as additional diagnoses.\n\n**Likely additional diagnoses (for completeness)**\n- **I41.0*** Myocarditis in bacterial diseases classified elsewhere. This is the manifestation (asterisk) code, paired with A77.9 as the etiology (dagger) code.\n- **R57.8 / R65.21** (depending on the ICD-10-AM edition) for shock or severe sepsis with septic shock, if documentation supports sepsis.\n- **J96.00** Acute respiratory failure, type 1.\n- **I50.x** Heart failure / **J81** pulmonary oedema, if not inherent to the myocarditis and if documented as clinically significant.\n- Procedure codes for mechanical ventilation and inotrope support, as applicable.\n\n**Caveat:** The discharge diagnosis section was withheld. If the final documented diagnosis differs (for example, scrub typhus A75.3, or rickettsiosis unspecified A79.9), the code should follow the clinician's documented diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 600,
+    "output_tokens": 776
+  },
+  "seconds": 0.0
+}

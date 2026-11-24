@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "cot_then_extract",
+  "record_id": "17b682c3c741",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\nLength of Stay: [REDACTED]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted for chest pain and dyspnea on exertion of one-day duration. Initial evaluation with electrocardiogram and left heart catheterization revealed a diagnosis of anterior wall ST segment elevation MI, with 50% stenosis of the proximal LAD, 100% occluded mid LAD with thrombus in place, and 30% in-stent restenosis in the distal LAD. The patient underwent successful drug-eluting stent placement in the mid LAD.\n\nThe patient's hospital course was complicated by cardiogenic shock approximately 48 hours following the procedure, requiring intravenous diuresis and inotrope support. The patient was evaluated for advanced heart failure therapies, underwent a thorough evaluation, and planning for LVAD placement with periprocedural anticoagulation using bivalirudin was initiated. The patient was eventually discharged to a cardiac rehabilitation center.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Condition: The patient was discharged to a cardiac rehabilitation center with stable vital signs, improved hemodynamics, and without any significant complications.\n\nDischarge Medications: [REDACTED]\n\nDischarge Instructions: The patient was advised to closely follow up with the advanced heart failure clinic at our hospital and adhere to the prescribed medication regimen. The patient was also instructed to maintain a heart-healthy diet, avoid smoking and excessive alcohol intake, and engage in regular exercise as tolerated.\n\nFollow-up: The patient will follow up periodically in the advanced heart failure clinic at our hospital.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible is an anterior ST-elevation myocardial infarction, established on ECG and catheterisation with a 100% occluded mid LAD and thrombus, and treated by stenting. The later cardiogenic shock is a complication of that infarction, not the reason for admission, so it does not change the principal diagnosis. An acute MI belongs to chapter I (Diseases of the circulatory system) and is category I21.\n\nCODE: I21",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1253,
+    "output_tokens": 292
+  },
+  "seconds": 0.0
+}

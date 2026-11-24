@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "8da19f18f644",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient: Male, 32 years old\nAdmission date: [date]\nDischarge date: [date]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted to our hospital with a diagnosis of pneumonia and amebiasis. He reported a sudden onset of symptoms including fever, fatigue, malaise, cough, and diarrhea. The patient was treated with antibiotics for pneumonia and secnidazole for amebiasis with no improvement in symptoms. He then developed dyspnea, rash, marked weight loss, and an increase in eosinophilia. After the inconclusive diagnosis and suspicion of infection with helminths, the patient was referred to the Department of Animal Biology, Sector of Parasitology, of Biology Institute in State University of Campinas.\n\nDiagnosis and Treatment:\n\nThe coproparasitological analysis showed the presence of Schistosoma mansoni eggs with typical lateral spine. The patient was treated with Oxamniquine (Mansil) which resulted in a favorable outcome. The control of cure was performed for four successive months after the treatment using the Kato-Katz method to search for eggs and larvae.\n\nFollow-up Care:\n\nThe patient was advised to follow up with his primary care physician for ongoing care and monitoring. He was informed about the importance of personal hygiene and the use of protective measures when traveling to endemic areas.\n\nDischarge Medications:\n\nNone\n\nDischarge Condition:\n\nThe patient was discharged in a stable condition.\n\nDischarge Instructions:\n\nThe patient was instructed to follow up with his primary care physician and continue to monitor symptoms. He was advised to maintain good personal hygiene and use protective measures when traveling to endemic areas."
+      }
+    ]
+  },
+  "text": "The ICD-10-AM principal diagnosis code is **B65.1, Intestinal schistosomiasis (*Schistosoma mansoni*)**.\n\nAlthough the patient was admitted with suspected pneumonia and amebiasis, the condition established after study and chiefly responsible for the admission was *S. mansoni* infection. This was confirmed by finding eggs with the typical lateral spine on coproparasitological analysis, and it was treated with oxamniquine.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 626,
+    "output_tokens": 858
+  },
+  "seconds": 0.0
+}

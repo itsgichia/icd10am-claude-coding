@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "e538e4d3e379",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary\n\nPatient Name: [Name]\n\nMedical Record Number: [Number]\n\nDate of Admission: [Date]\n\nDate of Discharge: [Date]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted to the hospital with complaints of fatigue, malaise, spontaneous ecchymosis, bleeding gums, and subjective fevers. Initial laboratory tests revealed severe pancytopenia and circulating blasts suggestive of underlying leukemia. Subsequent bone marrow biopsy confirmed AML, with abnormal karyotype of 47,x,t(x:8)(q13:q24.1),+8(6)/46,XX[14], and positive for several molecular markers. The patient received induction chemotherapy with daunorubicin and cytarabine 7 + 3 regimen in two cycles. During the first cycle, the patient's PT increased to 18.7 with an INR of 1.61. The bone marrow aplasia was suspected secondary to chemotherapy. Factor VII level deficiency, related to trisomy chromosol abnormality involving chromosome 8, was considered as a differential diagnosis due to isolated and persistent PT prolongation. The factor VII activity level was later confirmed to be low at 49% (normal level 60% to 150%). The patient received multiple packed red blood cell transfusions and platelet transfusion due to intermittent mucocutaneous bleeding.\n\nFollow Up:#\n\nThe patient's second cycle of chemotherapy resulted in her complete remission, with no residual blasts and normalization of hematologic abnormalities, with normal white blood count, hemoglobin, platelet counts, and normal PT time. Flow cytometry confirmed no residual blasts, and repeat molecular and cytogenetic studies showed the resolution of previously detected abnormalities.\nFinal Diagnosis: [diagnosis section withheld]\nDischarge Medications:\n\nNot applicable. Patient is not yet discharged. \n\nDischarge Condition:\n\nPending Discharge.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C92",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 821,
+    "output_tokens": 108
+  },
+  "seconds": 0.0
+}

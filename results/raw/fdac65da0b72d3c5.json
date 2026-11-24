@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "e1a4069fabbd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary\n\nPatient Name: [Redacted]  \n\nDate of Discharge: [Redacted]  \n\nAdmission Date: [Redacted]  \nAdmitting Diagnosis: [diagnosis section withheld]\nChief Complaint: Manubrium pain  \n\nHistory of Present Illness:  \nThe patient is a 59-year-old postmenopausal woman who was admitted with complaints of a breast mass located in the left upper outer quadrant and manubrium pain. The patient was diagnosed with IDC, which was confirmed by biopsy. The patient underwent modified radical mastectomy and received postoperative adjuvant chemotherapy, radiotherapy, and hormonal therapy. The patient remained asymptomatic for two years until she developed manubrium pain, and further testing revealed sternal metastasis. The patient underwent fulvestrant therapy with concomitant irradiation, and no severe treatment-related adverse events were documented. The patient's symptoms resolved, and she achieved complete response according to RECIST 1.1.\n\nHospital Course: \nThe patient was treated for IDC with modified radical mastectomy, adjuvant chemotherapy, radiotherapy, and hormonal therapy. The patient remained asymptomatic for two years until she developed manubrium pain, which was identified as a sternal metastasis. The patient underwent successful therapy consisting of fulvestrant with concomitant irradiation, and achieved complete response.\n\nDischarge Condition: \nThe patient is stable and was discharged home in good condition.\n\nDischarge Medications: \nThe patient's current medications were continued, and no new medications were prescribed.\n\nFollow-up: \nThe patient was advised to follow up with her oncologist regularly to monitor her condition.\n\nPrimary Care Provider: \n[Redacted]  \n\nAttending Physician: \n[Redacted]  \n\nDischarge Date: [Redacted]  \n\nDictated By: [Redacted]  \n\nCompleted By: [Redacted]  \n\nSigned Electronically By: [Redacted]\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"C79\", \"condition\": \"Secondary malignant neoplasm of other sites (sternal metastasis from breast cancer)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 804,
+    "output_tokens": 48
+  },
+  "seconds": 0.0
+}

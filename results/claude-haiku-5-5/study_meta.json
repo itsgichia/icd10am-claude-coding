@@ -1,0 +1,39 @@
+{
+  "model": "claude-haiku-5-5",
+  "started": "2026-11-24T01:05:13",
+  "model_ran": true,
+  "failure": null,
+  "stages_completed": [
+    "dev",
+    "test"
+  ],
+  "scan_config": {
+    "seed": 20260321,
+    "dev_n": 100,
+    "test_n": 100,
+    "scan_rows": 40000,
+    "min_chars": 600,
+    "max_chars": 2000,
+    "split": "train"
+  },
+  "n_dev": 100,
+  "n_test": 100,
+  "generation_config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "dev_winner": "zero_shot_strict_format",
+  "dev_winner_accuracy": 0.54,
+  "test_templates": [
+    "zero_shot_strict_format",
+    "zero_shot_minimal",
+    "few_shot_six",
+    "context_rich_structure",
+    "hybrid_coder_structured"
+  ],
+  "figure_template": "zero_shot_strict_format",
+  "finished": "2026-11-24T01:36:24"
+}

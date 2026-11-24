@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "7f0a1375a954",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nHospital Course:\nThe patient, a 19-year-old male with no significant past medical history, presented to the emergency room with symptoms of four hours of abdominal pain and emesis. He reported undergoing a strict regimen of dieting and exercise which resulted in significant weight loss over the past months. The family member added that the symptoms started after a heavy meal ingestion.\n\nOn physical examination, the patient presented with a scaphoid abdomen, tender abdomen and diminished high-pitched bowel sounds. The laboratory workup was within normal limits. The patient stayed overnight in the ER and was managed conservatively with NPO, intravenous crystalloid rehydration, nasogastric tube, ondansetron and omeprazole. Next day reevaluation showed persistence of abdominal pain, nausea and bilious emesis. Computed tomography study revealed gastric dilatation extended to the third portion of the duodenum, suggestive of proximal small bowel obstruction. The patient was admitted for inpatient treatment.\nDiagnosis: [diagnosis section withheld]\nManagement:\nInitial management included gastric decompression by placing a nasojejunal feeding tube to alleviate symptoms of obstruction and later use for enteral nutritional support. The patient was provided with a normocaloric hyperproteic formula starting with 600 and progressed to 1500 kcal per day to reverse protein caloric malnutrition state. Additionally, psychiatry and psychology teams were consulted concerning major weight loss. The patient was diagnosed with depression and an eating disorder and was started on sertraline. The patient was discharged asymptomatic, with hyperproteic diet plus nutritional supplements and selective serotonin reuptake inhibitor.\n\nFollow-up:\nThe patient's follow-ups showed weight gain and no symptoms. Psychiatry and psychology teams will follow up the patient after discharge.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "K31",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 752,
+    "output_tokens": 92
+  },
+  "seconds": 1.6784363749902695
+}

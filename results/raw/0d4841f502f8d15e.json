@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "few_shot_six",
+  "record_id": "1a07866d60ba",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nExample 4\nHospital course: An 81-year-old woman was brought in after a fall at home. She could not weight-bear and the right leg was shortened and externally rotated. A pelvic radiograph showed a displaced subcapital fracture of the right femoral neck. She underwent hemiarthroplasty on day one.\nAnswer: S72\n\nExample 5\nHospital course: A 19-year-old man presented with 18 hours of periumbilical pain that migrated to the right iliac fossa, with anorexia and a low-grade fever. There was guarding at McBurney's point and the white cell count was 15.2. Laparoscopy confirmed an inflamed, non-perforated appendix.\nAnswer: K35\n\nExample 6\nHospital course: A 64-year-old woman with a history of oestrogen-receptor-positive breast carcinoma treated five years earlier presented with progressive thoracic back pain. Magnetic resonance imaging showed deposits in T7 and T9 with no cord compression. Biopsy confirmed deposits of breast origin and she received palliative radiotherapy to the spine.\nAnswer: C79\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient Name: Not Specified\nGender: Male\nAge: 50\nDate of Admission: Not Specified\nDate of Discharge: Not Specified\nDate of Dictation: Not Specified\n\nHOSPITAL COURSE:\n\nThe patient is a 50-year-old male who presented with hoarseness and shortness of breath. The patient was diagnosed with Diffuse Large B-Cell Lymphoma (DLBCL), stage IV, after Fiberoptic Bronchoscopy revealed intratracheal mass in right main bronchi with complete right mainstem bronchus occlusion. The patient underwent several treatment regimens, including Dose Adjusted R-EPOCH therapy, R2-CHOP-I therapy, PD-1 inhibitor, DNMTi and the combination of decitabine, sintilimab plus HDACi (Chidamide). The patient experienced myelosuppression and achieved partial remission.\n\nThe patient was treated using venetoclax in combination with Chidamide, Sintilimab and radiotherapy after the PD was seen in repeat PET-CT. The patient experienced a decrease in lesion size and FDG uptake. The patient later underwent syngeneic stem cell transplantation and achieved CR.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\n\n1. It is important to continue the follow-up care with your oncologist.\n2. Please continue to take medications as prescribed and follow the recommended dosing schedule.\n3. Follow the recommended diet and nutrition plan given by your oncologist.\n4. It is important to stay hydrated to the recommended level of fluid intake.\n5. Follow the recommended activity guidelines set by your oncologist.\n6. Please report any side effects or unusual symptoms to your oncologist immediately.\n7. Follow the recommendations for required tests and imaging studies.\n8. Follow recommendations for self-care and regular follow-up appointments.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "**C83**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1501,
+    "output_tokens": 134
+  },
+  "seconds": 0.0
+}

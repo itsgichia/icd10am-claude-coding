@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "93a7d6106130",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient: 66-year-old woman\n\nHospital Course: The patient presented with bilateral cramping thigh pain for three days. She had a past medical history of coronary artery disease, heart failure, high cholesterol, high blood pressure, and diabetes. She was previously hospitalized for a non-ST elevation myocardial infarction.\nDiagnosis: [diagnosis section withheld]\nTreatment: The patient received aggressive intravenous hydration and her simvastatin and ticagrelor medications were discontinued. Her symptoms resolved and laboratory tests showed improvement. She was started on a new medication, clopidogrel, and was prescribed rosuvastatin during a follow-up clinic visit.\n\nFollow-up: The patient has remained without complications on follow-up visits and laboratory tests.\n\nConclusion: The patient was discharged in stable condition with appropriate medications and follow-up care.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"M62\", \"condition\": \"Rhabdomyolysis (statin-associated myopathy)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 439,
+    "output_tokens": 38
+  },
+  "seconds": 0.0
+}

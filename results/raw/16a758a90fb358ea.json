@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "68574cbd4ea9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: N/A\nGender: Male\nAge: 65\nDate of Admission: N/A\nDate of Discharge: N/A\nLength of Stay: N/A\n\nHospital Course:\n\nThe patient was admitted to the hospital with complaints of abdominal pain, fatigue, weight loss and poor appetite which had led to the discontinuation of chemotherapy. The examination revealed moderate tenderness to palpation over the right upper quadrant and left side, no rebound, and no guarding. The laboratory tests revealed anemia, elevated alkaline phosphatase, elevated alanine aminotransferase and elevated aspartate aminotransferase. Abdominal computed tomography showed high-grade afferent loop obstruction due to a gastric mass. Upper endoscopy revealed a circumferential, fungating, and ulcerated friable 4\u20135 cm mass of malignant appearance involving the anastomosis that caused near-total obstruction of both the pancreatobiliary and efferent limbs. Following a successful double guidewire technique procedure, 2 uncovered metal stents were deployed across the gastric mass, into the afferent and efferent limbs under endoscopic and fluoroscopic guidance. Two clips were deployed to prevent stent migration. The patient was able to resume a clear liquid diet the first day followed by a duodenal stent diet. Liver function tests normalized except for alkaline phosphatase, but the patient continued to downtrend slowly.\nDiagnosis: [diagnosis section withheld]\nMedical Treatment:\n\nThe patient underwent a double guidewire technique followed by the placement of two uncovered metal stents across the gastric mass into the afferent and efferent limbs. The stents remained patent and the patient was tolerating oral intake prior to discharge.\n\nRecommendations:\n\nThe patient was discharged with recommendations to follow-up with the treating physician as recommended."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **C16.9 \u2013 Malignant neoplasm of stomach, unspecified**\n\nThe discharge summary does not state the diagnosis or include histology, so this code is inferred from the clinical findings.\n\n## Rationale\n\n1. **The underlying condition is a recurrent gastric cancer.**\n   - The patient has had a prior gastrectomy with a gastrojejunal anastomosis (afferent and efferent limbs).\n   - He was on chemotherapy for malignancy.\n   - Endoscopy showed a 4\u20135 cm fungating, ulcerated, friable mass of malignant appearance at the anastomosis.\n   - Recurrence at an anastomotic site is coded to the primary site, the stomach.\n\n2. **Why C16.9 rather than a more specific C16.x subsite:** after gastrectomy, the exact remnant subsite cannot be determined from this documentation.\n\n3. **The stenting was done to relieve obstruction caused directly by the tumour.** Under ACS 0236 (Neoplasm coding and sequencing), the malignancy is sequenced as the principal diagnosis when the admission is for its management, including palliative intervention.\n\n## Suggested additional codes\n\n| Code | Description |\n|---|---|\n| K91.8 | Other postprocedural disorders of digestive system (afferent loop obstruction/syndrome). K31.5 (obstruction of duodenum) is an alternative depending on local coding advice. |\n| D63.0 | Anaemia in neoplastic disease |\n| R63.4 / R63.0 | Abnormal weight loss / Anorexia (only if not considered integral to the malignancy) |\n| R74.0 / R74.8 | Abnormal transaminases / alkaline phosphatase |\n| Z90.3 | Acquired absence of part of stomach |\n| Z53.x / Z92.6 | Chemotherapy status or discontinuation, as appropriate |\n\n## Caveats\n\n- **Sequencing could differ.** Some coders might sequence the afferent loop obstruction (K91.8) first, since treatment targeted the obstruction. However, it was caused by the neoplasm, so the malignancy takes precedence.\n- **Histology is unconfirmed.** If biopsy showed metastatic disease from another primary, the code would change to C78.8 (secondary malignant neoplasm of other digestive organs).",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 678,
+    "output_tokens": 1369
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "few_shot_six",
+  "record_id": "b6f4a6633c4d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nExample 4\nHospital course: An 81-year-old woman was brought in after a fall at home. She could not weight-bear and the right leg was shortened and externally rotated. A pelvic radiograph showed a displaced subcapital fracture of the right femoral neck. She underwent hemiarthroplasty on day one.\nAnswer: S72\n\nExample 5\nHospital course: A 19-year-old man presented with 18 hours of periumbilical pain that migrated to the right iliac fossa, with anorexia and a low-grade fever. There was guarding at McBurney's point and the white cell count was 15.2. Laparoscopy confirmed an inflamed, non-perforated appendix.\nAnswer: K35\n\nExample 6\nHospital course: A 64-year-old woman with a history of oestrogen-receptor-positive breast carcinoma treated five years earlier presented with progressive thoracic back pain. Magnetic resonance imaging showed deposits in T7 and T9 with no cord compression. Biopsy confirmed deposits of breast origin and she received palliative radiotherapy to the spine.\nAnswer: C79\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\n\nDate of Admission: [REDACTED] - Date of Discharge: [REDACTED]\n\nHospitalization Reason: Generalized seizure episode, persistent cough, and shortness of breath\n\nHospital Course:\nThe patient, a 50-year-old female with a medical history significant for immune thrombocytopenia and seizure disorder was admitted to the ER after experiencing a generalized seizure episode. She reported having a persistent cough, shortness of breath, and recent general malaise.\n\nUpon hospitalization, a chest radiogram revealed bilateral patchy infiltrates, and her oxygen saturation levels were found to be decreasing. She was provided with supplemental oxygen during her stay, and a six-minute walk test was conducted to assess her oxygen levels further. A repeat chest radiogram was done on the third hospital day and revealed significant clearance of the infiltrates with much improvement in her oxygen saturation values both at rest and with ambulation.\n\nCardiac markers and 2D echocardiogram revealed no notable abnormalities. The patient did not experience any more seizures during hospitalization and remained stable. After four days of observation, the patient was discharged to be followed up in the office.\nDiagnoses: [diagnosis section withheld]\nFollow Up:\nThe patient was discharged to be followed up in the office, where her symptoms and overall health will be evaluated by a medical professional regularly. \n\nConclusion:\nThe patient was admitted to the hospital on [REDACTED] after experiencing a generalized seizure episode and other symptoms. After four days of observation and treatment, the patient's condition improved, and she was discharged with instructions to follow up in the office. She was diagnosed with non-cardiogenic pulmonary edema based on her presenting symptoms.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "**J81**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1428,
+    "output_tokens": 434
+  },
+  "seconds": 0.0
+}

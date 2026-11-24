@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "51a55251a132",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: N/A\nMedical Record Number: N/A\n\nAdmission Date: N/A\nDischarge Date: N/A\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nUpon admission, the patient was given IV fluids, morphine, and medications to address his hyperkalemia. CT scans revealed extensive subcutaneous emphysema, pneumorrhachis/intraspinal air, pneumomediastinum, liver biliary duct dilation, mucosal enhancement of entire bladder, and previously known hydronephrosis. The patient was then transferred to the ICU where he was treated and monitored. After four days, the patient was transferred to the floors where gross hematuria continued, electrolytes normalized, leukocytosis resolved, and mental status improved. The patient was discharged from the hospital with follow-up appointments with neurosurgery for pneumorrhachis, pulmonary for pneumothorax, urology for hematuria, and hepatology for elevated liver enzymes.\n\nHospital Course Summary:\nThe patient was admitted to the hospital after being observed stumbling on the street. Upon physical exam, the patient was noted to have severe cachexia, with associated signs of multiorgan failure such as crepitus over his left anterior neck, a flat but diffusely tender abdomen, and a collapsible inferior vena cava. CT scans revealed extensive subcutaneous emphysema, pneumorrhachis/intraspinal air, pneumomediastinum, liver biliary duct dilation, mucosal enhancement of entire bladder, and previously known hydronephrosis. The patient was then transferred to the ICU and treated with IV fluids, morphine, and medications to address his hyperkalemia. After four days, the patient was transferred to the floors where gross hematuria continued, electrolytes normalized, leukocytosis resolved, and mental status improved. The patient was discharged from the hospital with follow-up appointments with neurosurgery for pneumorrhachis, pulmonary for pneumothorax, urology for hematuria, and hepatology for elevated liver enzymes."
+      }
+    ]
+  },
+  "text": "# Suggested ICD-10-AM Principal Diagnosis: **J98.2 \u2013 Interstitial emphysema** (includes mediastinal emphysema / pneumomediastinum)\n\n## Why this code\n\nThe summary withholds the admitting diagnosis, so this is a coding judgement based on the documented course.\n\n- **The central finding is air leak.** CT showed spontaneous air dissection: pneumomediastinum, extensive subcutaneous emphysema, pneumorrhachis (air in the spinal canal), and a pneumothorax.\n- **It drove the admission.** It explains the ICU admission and the neck crepitus, and it accounts for two of the discharge follow-ups (neurosurgery and pulmonary).\n- **No trauma is documented.** That points to the respiratory chapter code J98.2 rather than T79.7 (traumatic subcutaneous emphysema).\n- **The other problems look secondary.** Hyperkalemia, dehydration (collapsible IVC), hematuria, cystitis-type bladder changes and raised liver enzymes appear to be complications or comorbidities, not the main reason for care.\n\n## Likely additional diagnosis codes\n\n| Condition | Code |\n|---|---|\n| Pneumothorax (spontaneous) | J93.1 (other spontaneous pneumothorax) or J93.9 |\n| Pneumorrhachis (intraspinal air) | G95.8 (other specified diseases of spinal cord) |\n| Hyperkalaemia | E87.5 |\n| Volume depletion / dehydration | E86 |\n| Cachexia | R64 |\n| Gross haematuria | R31 |\n| Bladder mucosal enhancement (cystitis, if documented) | N30.9 |\n| Hydronephrosis | N13.3 |\n| Biliary duct dilation | K83.8 |\n| Elevated liver enzymes | R74.0 |\n| Leukocytosis | D72.8 |\n| Altered mental status | R41.8 |\n\n## Important caveats\n\n**1. Check the full record for an underlying cause.** ACS 0001 Principal Diagnosis requires coding the condition chiefly responsible for the admission. Spontaneous pneumomediastinum is often secondary to something else. If the clinician documents a cause, sequencing may change. Examples:\n- Diabetic ketoacidosis with vomiting (Hamman's syndrome), which would fit the hyperkalaemia, dehydration and altered mental status\n- Oesophageal rupture (Boerhaave syndrome), coded K22.3\n- Malnutrition or anorexia\n- A gas-forming infection or sepsis\n\n**2. Query the clinician.** The withheld admitting diagnosis and the term \"multiorgan failure\" warrant a query before you finalise the code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 756,
+    "output_tokens": 1250
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "cd90f4235013",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: N/A\nAge: 51\nGender: Male\n\nAdmission Date: N/A\nDischarge Date: N/A\n\nHospital Course:\n\nThe patient was admitted to our radiation oncology unit complaining of headache, vomiting, and right hemiplegia as part of an intracranial hypertension syndrome. Physical examination revealed a mammary mass in the right breast along with cerebral and lung tumors, bilateral adrenal nodes, and right cerebellar location. The patient underwent total brain irradiation with a dosage of 30 Gray in 10 fractions of 3 Gray per fraction over two weeks, with remarkable improvement in clinical outcomes. The patient was later treated with palliative chemotherapy, which resulted in an incomplete radiological remission of more than 70%. The patient received gemcitabine monotherapy, 1,000 mg/m\u00b2 on Days 1 and 8 every 21 days after experiencing local breast and cerebral progression. During the follow-up period, the patient's general condition deteriorated rapidly, and they were referred for palliative care and passed away six weeks later.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nThe patient received total brain irradiation at a dose of 30 Gray in 10 fractions of 3 Gray per fraction over two weeks with remarkable improvement in clinical outcomes. The patient was later treated with palliative chemotherapy that resulted in an incomplete radiological remission estimated to be more than 70%. Second-line chemotherapy with gemcitabine monotherapy, 1,000 mg/m\u00b2 on Days 1 and 8 every 21 days was administered after the patient's condition deteriorated.\n\nOutcome:\n\nDespite initial improvement following the patient's first treatment, the patient's condition rapidly deteriorated, leading to palliative care and eventual passing. \n\nFollow-Up:\n\nN/A\n\nRecommendations:\n\nN/A\n\nSigned:\nN/A\nDate:\nN/A"
+      }
+    ]
+  },
+  "text": "The most likely ICD-10-AM principal diagnosis is **C79.31, Secondary malignant neoplasm of brain**.\n\nThe admission was for radiation oncology: whole-brain irradiation for brain metastases causing intracranial hypertension. Under ICD-10-AM convention, when an admission is for treatment of a secondary malignancy, the secondary site is sequenced first.\n\nAdditional codes would likely include:\n- **C50.9**, Malignant neoplasm of breast (unspecified), for the primary right breast mass. Male breast cancer is still coded within C50.\n- **C78.0**, Secondary malignant neoplasm of lung\n- **C79.7**, Secondary malignant neoplasm of adrenal gland\n- **G93.6** or **G93.2**, depending on the documented cause of the intracranial hypertension, though this is less certain.\n\nThe diagnosis section is withheld, so this is inferred from the hospital course. Final code assignment should be confirmed against the full record and the current ICD-10-AM edition and Australian Coding Standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 707,
+    "output_tokens": 985
+  },
+  "seconds": 0.0
+}

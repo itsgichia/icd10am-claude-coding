@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "68574cbd4ea9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: N/A\nGender: Male\nAge: 65\nDate of Admission: N/A\nDate of Discharge: N/A\nLength of Stay: N/A\n\nHospital Course:\n\nThe patient was admitted to the hospital with complaints of abdominal pain, fatigue, weight loss and poor appetite which had led to the discontinuation of chemotherapy. The examination revealed moderate tenderness to palpation over the right upper quadrant and left side, no rebound, and no guarding. The laboratory tests revealed anemia, elevated alkaline phosphatase, elevated alanine aminotransferase and elevated aspartate aminotransferase. Abdominal computed tomography showed high-grade afferent loop obstruction due to a gastric mass. Upper endoscopy revealed a circumferential, fungating, and ulcerated friable 4\u20135 cm mass of malignant appearance involving the anastomosis that caused near-total obstruction of both the pancreatobiliary and efferent limbs. Following a successful double guidewire technique procedure, 2 uncovered metal stents were deployed across the gastric mass, into the afferent and efferent limbs under endoscopic and fluoroscopic guidance. Two clips were deployed to prevent stent migration. The patient was able to resume a clear liquid diet the first day followed by a duodenal stent diet. Liver function tests normalized except for alkaline phosphatase, but the patient continued to downtrend slowly.\nDiagnosis: [diagnosis section withheld]\nMedical Treatment:\n\nThe patient underwent a double guidewire technique followed by the placement of two uncovered metal stents across the gastric mass into the afferent and efferent limbs. The stents remained patent and the patient was tolerating oral intake prior to discharge.\n\nRecommendations:\n\nThe patient was discharged with recommendations to follow-up with the treating physician as recommended.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C16",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 762,
+    "output_tokens": 214
+  },
+  "seconds": 0.0
+}

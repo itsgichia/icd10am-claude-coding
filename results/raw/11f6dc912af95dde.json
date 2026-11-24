@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "8d19e88f1c90",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient: 86-year-old female with past medical history of hypertension and NSTEMI.\n\nHospital Course: The patient presented with chest pressure and left-hand numbness of one-day duration. Investigations revealed thrombocytopenia, NSTEMI, and hyponatremia. She was started on IV solumedrol, a high-intensity statin, and hypertonic saline. Anti-coagulation therapy was contraindicated at this time. She was presumed to have idiopathic thrombocytopenic purpura. However, her thrombocytopenia persisted, and she experienced a rapid decline in neurologic function. She became obtunded within six hours and was intubated to protect the airway. TTP was suspected due to the patient\u2019s declining neurologic function, and plasma exchange therapy was planned. But, the patient succumbed to cardiac arrest before any treatment could be initiated. An autopsy was performed which revealed an acute myocardial infarction.\nDiagnosis: [diagnosis section withheld]\nRecommendations: No recommendations available as the patient has expired.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The episode centres on an acute NSTEMI, which was the presenting problem (chest pressure) and was confirmed at autopsy as an acute myocardial infarction. ICD-10-AM classifies NSTEMI under I21 (Acute myocardial infarction), specifically I21.4.\n\nThe other conditions do not qualify:\n- Thrombocytopenia was presumed to be ITP and then TTP, but neither was confirmed. TTP was only suspected and no treatment was started.\n- Hyponatremia is a comorbidity.\n- Cardiac arrest is a terminal event and is not coded as the principal diagnosis when its cause is known.\n\nThe patient had a history of NSTEMI, but this presentation was an acute event that was confirmed at autopsy. The acute infarction therefore takes precedence over the history.\n\nCODE: I21",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 581,
+    "output_tokens": 276
+  },
+  "seconds": 3.101966957998229
+}

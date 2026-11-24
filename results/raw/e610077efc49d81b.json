@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "361b13c4e2fe",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\n\nThe patient was admitted to the hospital after suffering syncope. On arrival, the patient was alert and showed impairments in speech fluency, comprehension, and repetition. Further examination revealed poor perfusion over the left middle cerebral artery. He was diagnosed with acute cerebral infarction with global aphasia and received a recombinant tissue plasminogen activator (rtPA) injection. After 12 days of inpatient treatment, the patient was later discharged under stable conditions with global aphasia status and no focal neurologic signs.\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted to the hospital after suffering syncope while playing tennis. The patient presented with global aphasia and impairments in audio comprehension and repetition. Brain CT with contrast revealed no apparent intracranial haemorrhage or mass, but CT perfusion indicated poor perfusion over the left middle cerebral territory. The patient diagnosed with acute cerebral infarction with global aphasia and received a recombinant tissue plasminogen activator (rtPA) injection. Brain non-contrast MRI was conducted on day 5, revealing an acute infarction in the territory of the left middle cerebral artery, just in the perisylvian gyri. The patient was switched to the intensive care unit for further management. After 12 days of inpatient treatment, the patient was later discharged under stable conditions with global aphasia status and no focal neurologic signs. The patient then received speech rehabilitation, including verbal production, auditory comprehension training, augmentative communication training, phonetic placement, and high-level cognitive function training at two hospitals. The patient's language expression gradually recovered. The CCAT was then performed 14 months after the initial stroke."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: I63.9 \u2013 Cerebral infarction, unspecified**\n\n**Rationale:**\n- The condition chiefly responsible for the admission was an acute cerebral infarction in the left middle cerebral artery territory, confirmed on MRI. It was treated with rtPA.\n- ICD-10-AM (Australian Modification) classifies acute ischaemic stroke under I63.- (Cerebral infarction).\n- The record does not state the cause, such as thrombosis or embolism of a named precerebral or cerebral artery, or whether it was due to large-artery atherosclerosis, cardioembolism, or small-vessel occlusion. Without that, the most specific supportable code is I63.9. If the clinician had documented \"embolic\" or \"thrombotic\" MCA infarction, I63.4 (embolism of cerebral arteries) or I63.3 (thrombosis of cerebral arteries) would apply instead.\n\n**Additional codes (secondary, not principal):**\n- R47.0 \u2013 Dysphasia and aphasia. Global aphasia is a stroke deficit, and it is usually coded additionally to show the neurological deficit.\n- R55 \u2013 Syncope and collapse. This is a presenting symptom explained by the stroke, so it is not coded as principal.\n- U-codes/procedure codes: thrombolysis with rtPA is coded with ACHI procedure code 92183-00 (Therapeutic drug infusion, thrombolytic agent), and the NIHSS score is coded where documented (R29.7-).\n- Z50.5 \u2013 Speech therapy rehabilitation applies to later encounters, not this admission.\n\n**Note:** Confirm the exact ACHI and NIHSS codes against the current edition. Final code assignment should follow the Australian Coding Standards and the full medical record.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 635,
+    "output_tokens": 602
+  },
+  "seconds": 0.0
+}

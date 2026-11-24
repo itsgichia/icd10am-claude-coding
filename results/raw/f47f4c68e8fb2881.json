@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "f318c995256d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nPatient Name: [redacted]\nDate of Discharge: [redacted]\n\nHospital Course:\nThe patient was admitted for the evaluation and treatment of left eye melanoma. After undergoing brachytherapy, the patient showed scleral thinning and uveal tissue prolapse at the site of the preexisting lesion. The patient underwent a block excision of sclera, ciliary melanoma, and adjacent iris tissue, which was performed through the opening of the sclera and was combined with a corneal tectonic graft.\n\nClinical Findings:\nUpon admission, the patient was found to have a pigmented fusiform thickening of the iris root in the left eye. Gonioscopy revealed a well-circumscribed dome-shaped mass at the level of the ciliary body, between the 2:30 and 3 o'clock positions. UBM showed a medium internal reflectivity with an almost homogeneous acoustic structure. The lesion was classified as melanoma of the ciliary body, which involved the adjacent iris root. UBM also showed a local scleral extension of the tumor, which was under the conjunctival layer and 0.88 mm thick.\n\nTreatment:\nThe patient underwent brachytherapy (106Ru) and received a total dose of 100 Gy at the apex, with a dose rate of 79.09 cGy/hr. The total dose at the sclera was 531.1 Gy, with a dose rate of 420.1 cGy/hr. The patient then underwent a radical block excision of sclera, ciliary melanoma, and adjacent iris tissue, combined with a corneal tectonic graft and 16 single stitches.\n\nHistopathology:\nPost-operative histopathological analysis confirmed the diagnosis of spindle cell melanoma.\n\nFollow-Up:\nThe patient had a BCVA of 20/20 at the time of discharge. The patient is recommended to have regular follow-up appointments with their healthcare provider to monitor their condition.\nDiagnosis: [diagnosis section withheld]\nDischarge Medications:\n[N/A]\nDischarge Diagnosis: [diagnosis section withheld]\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C69",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 824,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

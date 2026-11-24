@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "38f2e94efc75",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\nDate of Birth: [Redacted]\nGender: Female\nAdmission Date: [Redacted]\nDischarge Date: [Redacted]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted following diagnosis of mucosal malignant melanoma of the hard palate. The tumor was found to have extensively spread within the hard palate with no involvement of the nasal cavity or nasopharynx, and with no neck lymph node metastasis.\n\nTreatment:\nThe patient refused surgery and underwent CIR at another facility as the initial treatment, followed by concurrent chemotherapy. After one cycle of chemotherapy was stopped due to severe hematological toxicity. The patient achieved a complete response following CIR and was monitored by physical examinations, endoscopy, enhanced CT, and MRI. At 16 months after CIR, a cervical metastasis of a left jugular lymph node was detected, leading to diagnosis of stage crT0N1M0 MMMHN. The patient was treated by en bloc salvage ND with preservation of the accessory nerve, internal jugular vein, and sternocleidomastoid muscle. The duration of surgery was 132 min, and blood loss was less than 10 mL. The patient was discharged on postoperative Day 7.\n\nPostoperative Management:\nThe patient experienced no Clavien-Dindo grade 3 or 4 postoperative complications. No recurrence was found by the whole-body enhanced CT performed 3 months after surgery.\nFinal Diagnosis: [diagnosis section withheld]\nFollow-up Care:\nPatient will continue to be monitored for any signs of recurrence or metastasis.\n\nDiscussions:\nThe patient was presented with several treatment options, including radiotherapy and systemic immunotherapy, before choosing surgery. The en bloc salvage ND with preservation of the accessory nerve, internal jugular vein, and sternocleidomastoid muscle was performed successfully, and the patient experienced no postoperative complications.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C77",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 824,
+    "output_tokens": 102
+  },
+  "seconds": 1.7550692920049187
+}

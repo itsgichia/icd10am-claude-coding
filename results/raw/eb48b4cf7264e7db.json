@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "5a5d374789e4",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [redacted]\n\nAge: 35\n\nSex: Female\n\nChief Complaint: Dyspnea and sickle cell crisis\nDiagnosis: [diagnosis section withheld]\nHospital Course: The patient presented with severe, progressive dyspnea and a sickle cell crisis. She had a history of severe tricuspid regurgitation, protein C deficiency, and recurrent deep vein thrombosis and pulmonary emboli. After examination, echocardiogram, and Doppler, a bioprosthetic tricuspid valve replacement surgery was conducted. Postoperatively, the patient had hypoxic respiratory failure requiring oxygen support, intermittent bilevel positive airway pressure ventilation, and diuresis. Twenty days after surgery, purulent secretion was noted on the sternotomy site. A CT of the thorax showed a large pericardial effusion, possibly a hemopericardium, and bilateral pleural effusions. A subxiphoid pericardial window and placement of a drainage catheter were conducted, leading to gradual improvement of her symptoms. Two months after discharge, a follow-up echocardiogram showed no pericardial effusion.\n\nTreatment: Bioprosthetic tricuspid valve replacement surgery, oxygen support, intermittent bilevel positive airway pressure ventilation, diuresis, subxiphoid pericardial window, and placement of a drainage catheter.\n\nCondition stabilized: Yes\n\nDischarge Instructions: The patient is advised to follow up with her treating physicians as scheduled."
+      }
+    ]
+  },
+  "text": "This case is ambiguous, so the code depends on which condition is taken as the principal diagnosis. My best choice is below.\n\n**Suggested principal diagnosis: I07.1 Rheumatic tricuspid insufficiency**, or more likely **I36.1 Nonrheumatic tricuspid (valve) insufficiency**.\n\n**Reasoning**\n- ICD-10-AM defines the principal diagnosis as the condition established after study to be chiefly responsible for the episode of admitted patient care.\n- The tricuspid valve replacement was the main procedure of the admission. The condition that required it was severe tricuspid regurgitation, so that is the best candidate.\n- The record gives no evidence of rheumatic disease, so I36.1 is the more appropriate code.\n- Dyspnea (R06.0) is a symptom of the valve disease, so it should not be coded as principal.\n\n**Likely additional diagnoses**\n- D57.0 Hb-SS disease with crisis. Use D57.00 or D57.01 or similar in later editions if there is a complication such as acute chest syndrome. This depends on the sickle cell type documented.\n- D68.5 Primary thrombophilia, for protein C deficiency. Later editions use D68.5 or D68.59.\n- Z86.71 Personal history of venous thrombosis and embolism. Use I82.- or I26.- instead only if the condition is current.\n- J96.0 Acute respiratory failure. Hypoxic respiratory failure after surgery may also warrant J95.1 or J95.88 for a postoperative complication.\n- T81.4 Infection following a procedure, for the purulent sternotomy site secretion. This is only coded if infection is documented.\n- I31.3 Pericardial effusion (noninflammatory), or I31.2 Hemopericardium if confirmed. If this is a postprocedural complication, I97.8 may apply.\n- J90 Pleural effusion, if clinically significant.\n\n**Caveats**\n- The diagnosis section was withheld, so this is inferred from the narrative.\n- If the sickle cell crisis was the reason for admission, D57.0 could instead be principal. The surgical focus makes I36.1 more plausible.\n- Final code assignment should be checked against the full record, the ICD-10-AM edition in use, and the Australian Coding Standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 580,
+    "output_tokens": 773
+  },
+  "seconds": 7.284180416027084
+}

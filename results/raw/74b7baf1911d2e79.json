@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "41daccafa734",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient: 25-year-old female\nAdmission date: [DATE]\nDischarge date: [DATE]\nLength of stay: [NUMBER] days\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient presented to the emergency department with complaints of acute onset of epigastric pain and nausea with bilious emesis. Initial workup did not demonstrate evidence of biliary or gallbladder pathology. However, her symptoms progressed and she was re-evaluated with a computed tomography that demonstrated a soft tissue mass located posterior to the gallbladder. Further evaluation with magnetic resonance cholangiopancreatography observed a complex cystic structure of indeterminate etiology at the porta hepatis.\n\nThe patient underwent surgery, during which a hemorrhagic pedunculated mass attached to the infundibulum of the gallbladder was identified and resected. A cholecystectomy was also performed due to inflammation from the hemorrhagic mass. Gross pathology and histology revealed a hemorrhagic benign ectopic liver tissue, and localized cholecystitis in the area adjacent to the mass was also observed.\n\nThe patient's postoperative course was uneventful and her symptoms resolved immediately. She was discharged home on the first postoperative day and was asymptomatic when seen in follow-up.\nDischarge Diagnosis: [diagnosis section withheld]\nTreatment:\nThe patient underwent surgery to remove the hemorrhagic benign ectopic liver tissue and cholecystitis. She was discharged with instructions to follow up with her healthcare provider.\n\nCondition at Discharge:\nThe patient was asymptomatic and in stable condition at the time of discharge.\n\nDischarge Medications: N/A\n\nFollow-up:\nThe patient was instructed to follow up with her healthcare provider.\n\nInstructions:\nThe patient was instructed to follow up with her healthcare provider.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible for the admission was a hemorrhagic ectopic liver tissue mass attached to the gallbladder infundibulum. It caused the epigastric pain and vomiting and led to the surgery. Localized cholecystitis was an associated finding, but the mass was the primary pathology.\n\nEctopic liver tissue is a congenital malformation. In ICD-10-AM, \"Accessory liver\" or ectopic liver tissue falls under Q44.7, \"Other congenital malformations of liver\", within the Q44 category (congenital malformations of gallbladder, bile ducts and liver). The ICD-10 index lists \"Ectopic... liver\" under Q44.7, though I'm less certain of the index entry than of the category.\n\nThe alternative is K82 (other diseases of gallbladder) or K81 (cholecystitis). However, the histology identified benign ectopic liver tissue as the cause of the inflammation, and the cholecystitis was localized and secondary to the mass. The congenital malformation is therefore the principal diagnosis.\n\nCODE: Q44",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 871,
+    "output_tokens": 356
+  },
+  "seconds": 0.0
+}

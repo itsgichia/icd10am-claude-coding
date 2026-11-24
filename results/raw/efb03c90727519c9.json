@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "e978f0ec2dd7",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: ____\nDate of Admission: ____\nDate of Discharge: ____\nPrimary Diagnosis: [diagnosis section withheld]\nSecondary Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to our facility on ____, exhibiting symptoms of tachycardia and acute kidney injury. It was later determined that the patient had ingested multiple foreign bodies. Treatment interventions included intravenous lorazepam and emergency laparotomy to remove all the packets. Postoperatively, the patient was transferred to the ICU where he remained for a total of one night before being transferred to ward level care. Pain management was achieved with a patient controlled analgesia (PCA) infusion pump, and the patient was extubated on day 1 postoperatively. The patient had a slow postoperative recovery mainly due to pain and limited oral fluid intake. He was discharged on day 10 back to police custody and returned once a week later for a dressing change.\n\nCourse of Treatment:\nThe course of treatment for this patient focused on the removal of the ingested foreign bodies through an emergency laparotomy. The patient was transferred to the ICU postoperatively and was managed with a patient controlled analgesia (PCA) infusion pump to manage pain.\n\nMedications:\nA detailed list of medications administered during the patient's hospitalization is not included in this summary.\n\nFollow-up:\nThe patient was discharged on day 10 back to police custody and returned once a week later for a dressing change. No further follow-up was scheduled upon the patient's discharge.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: T18**\n\nThe principal diagnosis is ingestion of foreign bodies, which codes to category T18 (Foreign body in alimentary tract). The emergency laparotomy was performed to remove them, so the procedure is not the principal diagnosis. The tachycardia and acute kidney injury were presenting features, not the condition chiefly responsible for the admission.\n\nThe summary describes \"packets\" but does not confirm their contents. If the record establishes that they contained illicit drugs and that the patient had systemic drug toxicity, poisoning codes (T40 to T50 range) would need to be considered and sequenced under the ICD-10-AM poisoning rules. I would query the treating team before finalising, since the summary alone does not support that.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 749,
+    "output_tokens": 847
+  },
+  "seconds": 0.0
+}

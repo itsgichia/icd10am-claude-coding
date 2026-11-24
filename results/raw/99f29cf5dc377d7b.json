@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "5a5d374789e4",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [redacted]\n\nAge: 35\n\nSex: Female\n\nChief Complaint: Dyspnea and sickle cell crisis\nDiagnosis: [diagnosis section withheld]\nHospital Course: The patient presented with severe, progressive dyspnea and a sickle cell crisis. She had a history of severe tricuspid regurgitation, protein C deficiency, and recurrent deep vein thrombosis and pulmonary emboli. After examination, echocardiogram, and Doppler, a bioprosthetic tricuspid valve replacement surgery was conducted. Postoperatively, the patient had hypoxic respiratory failure requiring oxygen support, intermittent bilevel positive airway pressure ventilation, and diuresis. Twenty days after surgery, purulent secretion was noted on the sternotomy site. A CT of the thorax showed a large pericardial effusion, possibly a hemopericardium, and bilateral pleural effusions. A subxiphoid pericardial window and placement of a drainage catheter were conducted, leading to gradual improvement of her symptoms. Two months after discharge, a follow-up echocardiogram showed no pericardial effusion.\n\nTreatment: Bioprosthetic tricuspid valve replacement surgery, oxygen support, intermittent bilevel positive airway pressure ventilation, diuresis, subxiphoid pericardial window, and placement of a drainage catheter.\n\nCondition stabilized: Yes\n\nDischarge Instructions: The patient is advised to follow up with her treating physicians as scheduled."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **I07.1 \u2013 Tricuspid insufficiency** (rheumatic tricuspid regurgitation)\n\nThis is my best assignment from the summary as written. It is not a verified code, because the diagnosis section is withheld.\n\n## Why the tricuspid regurgitation is the principal diagnosis\n\nThe ICD-10-AM/ACS principal diagnosis is the condition that, after study, chiefly caused the admission.\n\n- The patient presented with **severe, progressive dyspnea**. Dyspnea is a symptom, so it should not be coded as principal when a definitive cause is found (ACS 0001).\n- The work-up (examination, echocardiogram, Doppler) pointed to **severe tricuspid regurgitation**. This was treated definitively with a **bioprosthetic tricuspid valve replacement**.\n- The surgery was the main focus of this admission, which supports TR as the principal diagnosis.\n\n## Why I07.1 rather than I36.1\n\n- In ICD-10-AM, the index entry *Insufficiency, tricuspid* defaults to **I07.1**, the rheumatic category.\n- **I36.1** (nonrheumatic tricuspid insufficiency) applies only if the documentation states a non-rheumatic cause, such as functional TR from pulmonary hypertension or from recurrent PE.\n- The cause isn't stated here. In practice, a coder should **query the clinician**. TR secondary to chronic thromboembolic pulmonary hypertension would be coded I36.1.\n\n## Additional diagnoses (secondary codes)\n\n- **D57.0- Sickle cell anaemia with crisis.** The crisis would only be principal if documentation showed it, rather than the TR, was the main reason for admission.\n- **D68.59 Other primary thrombophilia.** This covers the protein C deficiency.\n- **J96.0- Acute respiratory failure (hypoxic).** This occurred after surgery; link it to a complication code if the clinician documents it as a complication.\n- **Pericardial effusion/hemopericardium and sternal wound infection.** These are postoperative complications (T81.- / I97.- range, plus organism and site codes), with the relevant external cause and place of occurrence codes.\n- **J90 Pleural effusion.**\n- **Z86.7- / Z86.71 Personal history of venous thrombosis and embolism.**\n- Procedure codes for the valve replacement and the subxiphoid pericardial window with drain.\n\n**Caveat:** If the hidden diagnosis section lists the sickle cell crisis as the main reason for admission, the principal diagnosis would change to D57.0-. Check the final clinician documentation before coding.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 580,
+    "output_tokens": 1421
+  },
+  "seconds": 14.760270291997585
+}

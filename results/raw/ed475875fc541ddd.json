@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "c90337008ffc",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\nThe patient presented with altered mental status, visual disturbances, and seizures associated with a rash and polyarthralgia. She was found to have hypertension and polysubstance abuse. Antinuclear antibodies (ANA) and double-stranded deoxyribonuclease (dsDNA) antibodies were both positive, and C3 and C4 complement factors were low. The patient was diagnosed with SLE and started on methylprednisolone pulse therapy due to active proliferative lupus nephritis. Her kidney function and arthralgia improved, and she was transitioned to oral prednisone taper. Mycophenolate mofetil was also started, and pneumocystis pneumonia (PCP) prophylaxis was given. The patient's hospital stay was significant for treatment of SLE related manifestations and hypertension. \nDischarge Diagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was discharged home with close follow-up with her primary care physician and rheumatologist for continuation of management of her SLE and hypertension. \n\nInstructions:\nThe patient is advised to continue medications as prescribed and report any adverse effects to her physician. She should monitor her blood pressure and follow a low-sodium diet. She should avoid sun exposure and use sunscreen for protection. The patient is to have close follow-up with her physician for monitoring of her kidney function and disease activity. \n\nFollow-Up:\nUrgent follow-up is recommended with the primary care physician and rheumatologist within one week."
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis code: M32.14 \u2013 Glomerular disease in systemic lupus erythematosus**\n\n**Rationale**\n- The patient was diagnosed with SLE, supported by positive ANA and anti-dsDNA and low C3/C4.\n- The condition treated during the stay was active proliferative lupus nephritis. It was managed with pulse methylprednisolone, then an oral prednisone taper and mycophenolate mofetil.\n- ICD-10-AM (like ICD-10-CM, which uses the same M32 structure) classifies SLE with organ involvement in M32.1-. Lupus nephritis is coded to M32.14, so the more specific code is used rather than M32.9 (SLE, unspecified).\n- In the Australian ICD-10-AM/ACHI/ACS system, M32.1 has a fourth-character subdivision. The M32.14 code for glomerular disease is the one commonly used for lupus nephritis. Check it against your current edition's tabular list, because the code set is updated between editions.\n\n**Possible additional codes (secondary diagnoses)**\n- Neuropsychiatric lupus manifestations (altered mental status, seizures, visual disturbance). Where documented as lupus-related, these could be coded to M32.1- (for example, M32.18 for other organ involvement) plus a seizure code such as R56.8. This depends on the clinician's documentation.\n- Hypertension: I10 (or a secondary hypertension code if it is attributed to the renal disease).\n- Polysubstance abuse: F19.1 (harmful use) or F19.2 (dependence), depending on documentation.\n- Long-term or prophylactic drug therapy codes (for example, Z79.- for long-term immunosuppressant or steroid use), and prophylaxis for PCP if the facility captures it.\n\n**Caveat:** The discharge diagnosis section was withheld. If the clinician documented the principal diagnosis as \"SLE with neuropsychiatric involvement\" instead of lupus nephritis, the sequencing could change. A coder should confirm with the full record.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 543,
+    "output_tokens": 694
+  },
+  "seconds": 0.0
+}

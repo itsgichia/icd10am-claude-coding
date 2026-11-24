@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "97e62809272f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: [redacted]\nAge: 39\nGender: Male\nDate of Admission: [redacted]\nDate of Discharge: [redacted]\n\nHospital Course Summary:\nThe patient was admitted to Tri-Service General Hospital with multiple injuries including rib fractures, pelvic fracture with active bleeding, and dissection of the descending aorta with intramural hematoma caused by a fall from a fifth floor window. The patient underwent bilateral anterior thoracotomies and transcatheter embolization of the pelvic vessels for acute resuscitation. The patient then received thoracic endovascular aortic repair of the descending aortic aneurysm which was followed by oxygen desaturation and cardiac arrest. Advanced cardiac life support was performed immediately and the patient was placed on ECMO due to persistent bradycardia. Though diagnosed with brain death a few days later, the family decided to donate the patient's organs.\nDischarge Diagnosis: [diagnosis section withheld]\nCourse of Treatment:\nFollowing informed consent, both recipients received dialysis within the first postoperative week due to delayed graft function. Immunosuppressive therapy was used to treat the two patients. The SCr of the recipients decreased from 8.5 and 17.6 mg/dL to 1.1 and 1.8 mg/dL, respectively, at the 1-month postoperative follow-up. The grafts remained functional at the 8-month follow-up.\n\nFollow-up Plan:\nThe patients were advised to follow up with their respective nephrologists to monitor their kidney function and progress.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "S25",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 663,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

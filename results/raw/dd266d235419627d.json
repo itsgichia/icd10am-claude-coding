@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "16cc6ba7959c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\n- Name: [REDACTED]\n- Age: 57 years\n- Gender: Male\n- Medical Record Number: [REDACTED]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n- The patient was admitted to the hospital in July 2016 after being diagnosed with AML.\n- Investigations revealed a pancytopenia, a hypercellular marrow with 65% myeloid blasts, and del () (q22q36).\n- The patient achieved CR after 1 cycle of the IA regimen and received 6 courses of the HiDAC regimen as consolidation therapies.\n- The patient experienced his first relapse 2 years after first remission and was treated with the CAG regimen for 3 cycles, resulting in a second CR in March 2019.\n- A second relapse occurred 20 months later, and the patient began the VA regimen but did not respond after 2 courses of therapies.\n- The patient received a chidamide combined with venetoclax plus azacitidine regimen as salvage therapy and achieved his third CR.\n- There were no infectious complications observed with the combination, and the duration of neutropenia was 10 days.\n- The patient remains in CR after 1 month of follow-up and is preparing for transplantation.\n\nSummary of Hospital Course:\n- The patient was admitted for the treatment of AML and achieved two CRs before experiencing a second relapse.\n- After failing to respond to the VA regimen, the patient was successfully treated with a chidamide combined with venetoclax plus azacitidine regimen.\n- No infectious complications were observed, and the patient remains in CR after 1 month of follow-up and is preparing for transplantation."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: C92.00 (Acute myeloid leukaemia, without mention of remission)**\n\nThis is the best fit I can offer, and the choice of code depends on a few points.\n\n**Reasoning**\n- The admission was for treatment of acute myeloid leukaemia (AML). It was a relapsed and refractory case that was given salvage chemotherapy (chidamide, venetoclax and azacitidine).\n- In ICD-10-AM, AML is classified to C92.0-. The 5th character in the Australian modification records remission status.\n  - C92.00 is AML not having achieved remission. It also covers active disease in relapse and refractory disease.\n  - C92.01 is AML in remission.\n  - C92.02 is AML in relapse, in some code set versions.\n- The patient was in relapse and had failed the VA regimen when salvage therapy began. The disease was therefore active at the time of treatment, so a non-remission or relapse code applies rather than the remission code.\n\n**Caveats**\n- The summary says the patient achieved a third complete remission (CR) during or after the admission. Coding should still reflect the status for the episode of care in which the treatment was given. If the admission was for treatment of the relapsed disease, C92.00, or C92.02 if your edition has it, applies.\n- If this was instead a later admission for consolidation or pre-transplant care while the patient was in remission, C92.01 would apply.\n- The reported cytogenetic abnormality (del(q22q36)) is not a separate principal diagnosis. It could be added as an additional code if the facility's policy requires it.\n- The withheld admission diagnosis section and the exact ICD-10-AM edition could change the final 5th character. Please check against your local coding standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 606,
+    "output_tokens": 570
+  },
+  "seconds": 0.0
+}

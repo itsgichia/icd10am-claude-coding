@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "130cff4971de",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]\n\nMedical Record Number: [REDACTED]\n\nAdmission Date: March 2017\n\nDischarge Date: August 2018\nAdmitting Diagnosis: [diagnosis section withheld]\nInitial Presentation:\n\nThe patient presented with complaints of abdominal pain for 2 months and aggravated for 1 week, leading to the diagnosis of gastric adenocarcinoma.\n\nManagement:\n\nThe patient was assessed by our Multi-Disciplinary Treatment (MDT) team, who recommended initiating palliative chemotherapy treatment along with apatinib. The patient tolerated the treatment well with only Grade 2 neutropenia and Grade 1 vomiting observed during treatment. Post-treatment CT scans revealed partial response with further tumor shrinkage during treatment.\n\nSurgical Intervention:\n\nThe patient underwent total gastrectomy, D2 lymph node dissection, and Roux-en-Y anastomosis in August 2017 after being evaluated for acceptable radical surgery. The postoperative pathology report indicates no residual cancer tissue found in the resected tissue sample.\n\nPost-Surgery Management:\n\nAfter the surgical procedure, the patient recovered well and underwent maintenance treatment with apatinib in the same dose as before. No adverse events were noted in the postoperative period. However, in August 2018, the patient's ascites worsened, and adenocarcinoma cells were found by ascites biopsy, indicating disease progression.\n\nOutcome:\n\nThe patient passed away in September 2018. The progression-free survival (PFS) period was 12 months, and the overall survival (OS) period was 17 months.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C16",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 689,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

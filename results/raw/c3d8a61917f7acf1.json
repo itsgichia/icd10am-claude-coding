@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "575542c57a56",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nHospital Course:\nAdmission Date: [DATE]\nDischarge Date: [DATE]\nLength of Stay: [NUMBER] days\n\nPatient Information:\nName: [NAME]\nAge: 76 years old\nGender: Male\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\nThe patient, a 76-year-old Caucasian male with a family history of Parkinson's disease, was admitted to our hospital after experiencing a shuffling gait. Neurological examination revealed bilateral rigidity and slow gait with reduced arm swing, as well as processing speed and memory difficulties. The patient also presented with urinary retention, orthostatic hypotension, erectile dysfunction, and stridor. Carbidopa/levodopa was unsuccessfully administered. The patient was diagnosed with multiple system atrophy (MSA), due to levodopa-unresponsive parkinsonism and autonomic dysfunction.\n\nDuring the hospital course, the patient received comprehensive care from a multidisciplinary team, including neurologists and primary care physicians. Management of orthostatic hypotension and urinary retention were coordinated with the urology department. The patient was administered supportive therapy, including physical therapy and occupational therapy, to address mobility and activities of daily living. The patient's condition remained stable throughout his hospital stay.\n\nAt the time of discharge, the patient was instructed to continue with his current medications and follow up with his primary care physician and neurologist. The patient was also instructed to contact his healthcare provider if any new or worsening symptoms arise.\nDischarge Diagnosis: [diagnosis section withheld]\nFollow-up Instructions:\n1. Continue current medication regimen as prescribed.\n2. Follow up with primary care physician and neurologist.\n3. Contact healthcare provider if any new or worsening symptoms arise.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: G90**\n\nThe principal diagnosis is multiple system atrophy, which is coded to G90.3 (Multiple system degeneration) in category G90 (Disorders of autonomic nervous system). The diagnosis was established after investigation, and the parkinsonism, urinary retention, orthostatic hypotension, and erectile dysfunction are features of it. The levodopa-unresponsive parkinsonism is therefore not coded separately as G20.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 846,
+    "output_tokens": 449
+  },
+  "seconds": 0.0
+}

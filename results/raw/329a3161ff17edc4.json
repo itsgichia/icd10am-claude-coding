@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "d5cf95c4bce7",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: Not Specified\nMedical Record Number: Not Specified\nDate of Admission: Not Specified\nDate of Discharge: Not Specified\n\nINTRODUCTION:\nThe patient is an 81-year-old woman who visited the department of internal medicine in our hospital with complaints of loss of appetite, abdominal distension, and an upper abdominal mass. She had a history of left breast cancer 11 years ago. The patient was diagnosed with peritoneal metastasis of recurrent breast cancer and was put on endocrine therapy using letrozole.\n\nHOSPITAL COURSE:\nThe patient's symptoms improved with endocrine therapy, and she showed recovery from pleural metastasis and pleural effusion. Tumor marker values fluctuated during the course of treatment, with no abnormal CEA values obtained, and CA15-3 and BCA225 values gradually declining from the time of recurrence and returning to normal levels 2 years later. NCC-ST-439 value gradually increased up to 49 U/ml 6 months later, with a gradual decline thereafter along with the other tumor markers. The patient was currently receiving treatment in the outpatient department and is still alive on the same medication.\n\nDISCHARGE OUTCOME:\nThe patient is being discharged in stable condition with continued endocrine therapy.\n\nFOLLOW-UP:\nNo relapse of malignancy has been detected after a period of 6 years.\n\nATTENDING PHYSICIAN:\nNot Specified\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE MEDICATIONS:\nLetrozole.\n\nDISCHARGE INSTRUCTIONS:\nContinue endocrine therapy as prescribed. Follow up with your healthcare provider as recommended.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C78",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 738,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

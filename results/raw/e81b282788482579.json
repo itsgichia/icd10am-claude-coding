@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "context_rich_structure",
+  "record_id": "0e5540fd316d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nHospital Course:\n\nThe patient, a 15-year-old male, was evaluated in the Pediatric Pulmonology Clinic for excessive daytime sleepiness and snoring. The in-lab sleep study showed an overall Apnea-Hypopnea index (AHI) of 2.4, ruling out obstructive sleep apnea (OSA) and central sleep apnea. Further, on multiple sleep latency test (MSLT), the patient displayed pathological daytime sleepiness with a sleep latency < 8 mins on more than two occasions, along with four sleep-onset rapid eye movement (REM) periods, suggestive of the diagnosis of narcolepsy. The patient was then started on modafinil for the treatment of narcolepsy; however, his symptoms persisted.\n\nOn further evaluation, thyroid function tests (TFTs) were performed and revealed a mildly low free T4 with a TSH level inappropriately normal, indicating central hypothyroidism. Magnetic resonance imaging (MRI) of the brain revealed no significant abnormality. Other pituitary hormones were normal, except for a baseline cortisol level that was mildy low. A low-dose adrenocorticotropic hormone (ACTH) stimulation test (1 mcg IV) was done with cortisol levels checked at 30 and 60-minute intervals, which improved. A high-dose ACTH stimulation test (250 mcg IV) was also done with cortisol levels checked at 30 and 60-minute intervals, and the results were normal.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nThe patient was started on thyroid replacement therapy with an improvement in weight and sleep symptoms. The patient continued with the modafinil therapy, and no other treatment was planned.\n\nFollow-up:\n\nThe patient was advised to follow up with the referring physician to monitor the response to therapy.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "CODE: E23\n\nThe underlying cause of the episode was central hypothyroidism (inappropriately normal TSH with low free T4), with a mildly low baseline cortisol. Both point to pituitary hypofunction, which is category E23 (hypofunction and other disorders of the pituitary gland). The narcolepsy suspicion was not the chief cause, since the sleepiness improved with thyroid replacement.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1158,
+    "output_tokens": 494
+  },
+  "seconds": 0.0
+}

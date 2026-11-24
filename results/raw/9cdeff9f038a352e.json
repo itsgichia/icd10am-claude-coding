@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "a6c95a2bfb2e",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]\nAge: 69\nSex: Male\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHOSPITAL COURSE:\nThe patient was admitted with severely symptomatic atrial fibrillation (AF) requiring multiple cardioversions. He had a history of an implantable cardiac monitor, left bundle branch block with an ejection fraction of 25%, and a cardiac resynchronization therapy device (CRT-D). The patient underwent uncomplicated pulmonary vein isolation (PVI) using radiofrequency (RF) via the SANS FLUORO technique. There were no complications during or after the procedure. The patient was discharged the following day and remained free of AF at his three- and six-month follow-up visits.\n\nHISTORY AND FINDINGS:\nThe patient had previously undergone successful implantation of the Optimizer\u2122 III device as part of a clinical trial. The preprocedure chest radiograph showed increased scar burden in the left atrium (LA) based on voltage mapping, with ablation lesions showing the left atrial roof and posterior line. Post-PVI, entrance and exit blocks were demonstrated. The postprocedure CRT-D check revealed no change in lead sensing, threshold, or impedance values.\nDIAGNOSIS: [diagnosis section withheld]\nPROCEDURE/TREATMENT:\nUncomplicated pulmonary vein isolation (PVI) using radiofrequency (RF) via the SANS FLUORO technique.\n\nFOLLOW-UP:\nThe patient remained free of AF at his three- and six-month follow-up visits.\n\nDISCHARGE INSTRUCTIONS:\nThe patient is instructed to follow up with their healthcare provider as recommended.\n\nDISCHARGE MEDICATIONS:\nN/A\n\nDISCHARGE CONDITION:\nThe patient was discharged in stable condition."
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis code: I48.1 (Persistent atrial fibrillation)**, subject to the caveats below.\n\n**Rationale**\n- The condition treated and chiefly responsible for the admission was symptomatic atrial fibrillation. It needed multiple cardioversions and then pulmonary vein isolation.\n- ICD-10-AM (as used in Australia) classifies AF in I48:\n  - I48.0 Paroxysmal AF\n  - I48.1 Persistent AF\n  - I48.2 Chronic AF\n  - I48.9 Unspecified AF\n- Several features point to persistent AF. These are the need for repeated cardioversions, the increased left atrial scar burden, and the extra ablation lines (roof and posterior) beyond standard PVI. Even so, the summary never states the AF type.\n- If the diagnosis section or the clinician documents paroxysmal AF, use I48.0. If the type is not documented and cannot be clarified, use I48.9. In current ICD-10-AM editions, I48.1 may be further specified (for example, I48.11 longstanding persistent and I48.12 other persistent), depending on the edition.\n\n**Secondary diagnoses to consider**\n- I44.7 Left bundle branch block\n- I50.x Heart failure, with the LVEF of 25% indicating systolic dysfunction (only if documented as heart failure or cardiomyopathy)\n- Z95.810 Presence of an automatic (implantable) cardiac defibrillator (the CRT-D). Confirm the exact code in your edition.\n- Z95.8 or similar for the implantable cardiac monitor and the Optimizer device (the Optimizer III is a cardiac contractility modulation device)\n\n**Procedure codes (ACHI, not part of the diagnosis code)**\n- Pulmonary vein isolation by RF ablation, with cardioversion if performed during the admission\n\nI recommend querying the clinician to confirm the AF type before final coding.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 702,
+    "output_tokens": 658
+  },
+  "seconds": 0.0
+}

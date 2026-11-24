@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "65520ca99627",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Name]\n\nAge: 80 years\n\nSex: Male\n\nMedical Record Number: [Number]\n\nDate of Admission: [Date]\n\nDate of Discharge: [Date]\n\nHospital Course:\n\nThe patient was admitted to our hospital due to the incidentally discovered rectal tumor. The biopsy sample revealed that the 3 cm diameter tumor was a moderately differentiated adenocarcinoma. Imaging studies showed that the tumor invaded into the muscularis propria, and lateral pelvic lymph nodes were not enlarged. The patient also had a huge benign prostatic hypertrophy, with a size of 85 \u00d7 80 \u00d7 70 mm.\n\nTo achieve complete tumor removal with negative margins, a hybrid transabdominal-transanal approach for ISR was performed. The procedure involved laparoscopic mobilization of the left colon and transabdominal approach up to the anterior dissection of the rectum. Subsequently, a transanal approach was used to complete the dissection procedure. The bilateral pelvic splanchnic nerves were identified at the 5 and 7 o\u2019clock positions. Due to the perineal body and the enlarged prostate, the proper dissection layer at the anterior side was difficult to identify. However, the dissection plane between the rectum and the prostate was identified, and the procedure was completed along the same plane with the assistance of the laparoscopic approach.\n\nThe patient tolerated the procedure well and had an uneventful postoperative course. The patient was discharged home on [Date] with scheduled follow-up appointments.\nDiagnosis: [diagnosis section withheld]\nPlan:\n\nThe patient is advised to follow-up with his oncologist and urologist for monitoring and further treatment as per their recommendations. The patient is also advised to make diet changes and exercise regularly to maintain good health.\n\nClinician:\n\n[Name], [Title]\n\nAttending Physician:\n\n[Name], [Title]"
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: C20 \u2013 Malignant neoplasm of rectum**\n\n**Rationale**\n- The patient was admitted for the incidentally found rectal tumour. Biopsy confirmed moderately differentiated adenocarcinoma.\n- Treatment during the episode was directed at this condition: hybrid transabdominal\u2013transanal intersphincteric resection (ISR).\n- Under ACS 0001, the principal diagnosis is the condition established after study to be chiefly responsible for the admission. That is the rectal adenocarcinoma.\n- The summary calls the tumour \"rectal\" throughout. C20 therefore applies rather than C21.8 (anorectal junction) or C19 (rectosigmoid), even though ISR is typically done for low-lying tumours.\n\n**Associated codes**\n- **Morphology:** M8140/3 \u2013 Adenocarcinoma, NOS. Moderate differentiation is recorded in the grade/differentiation field per local practice.\n- **Additional diagnosis:** N40 \u2013 Hyperplasia of prostate. It meets ACS 0002 because it affected the conduct of the surgery: the enlarged prostate made the anterior dissection plane difficult to identify.\n- No nodal or distant metastasis was documented, so no secondary neoplasm codes are needed.\n\nThe diagnosis section was withheld, so please confirm against the full clinical documentation, such as the histopathology report and operation note, before final coding.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 689,
+    "output_tokens": 611
+  },
+  "seconds": 0.0
+}

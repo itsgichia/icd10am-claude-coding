@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "17b682c3c741",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\nLength of Stay: [REDACTED]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted for chest pain and dyspnea on exertion of one-day duration. Initial evaluation with electrocardiogram and left heart catheterization revealed a diagnosis of anterior wall ST segment elevation MI, with 50% stenosis of the proximal LAD, 100% occluded mid LAD with thrombus in place, and 30% in-stent restenosis in the distal LAD. The patient underwent successful drug-eluting stent placement in the mid LAD.\n\nThe patient's hospital course was complicated by cardiogenic shock approximately 48 hours following the procedure, requiring intravenous diuresis and inotrope support. The patient was evaluated for advanced heart failure therapies, underwent a thorough evaluation, and planning for LVAD placement with periprocedural anticoagulation using bivalirudin was initiated. The patient was eventually discharged to a cardiac rehabilitation center.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Condition: The patient was discharged to a cardiac rehabilitation center with stable vital signs, improved hemodynamics, and without any significant complications.\n\nDischarge Medications: [REDACTED]\n\nDischarge Instructions: The patient was advised to closely follow up with the advanced heart failure clinic at our hospital and adhere to the prescribed medication regimen. The patient was also instructed to maintain a heart-healthy diet, avoid smoking and excessive alcohol intake, and engage in regular exercise as tolerated.\n\nFollow-up: The patient will follow up periodically in the advanced heart failure clinic at our hospital."
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **I21.0 \u2013 Acute transmural myocardial infarction of anterior wall**\n\n## Rationale\n\n- **Condition that occasioned the admission:** The patient presented with chest pain and dyspnoea. ECG and left heart catheterisation established an **anterior wall STEMI**, with a 100% thrombotic occlusion of the mid LAD.\n- **Code selection:** In ICD-10-AM, an anterior STEMI is classified as an acute transmural MI of the anterior wall. That is category I21.0.\n- **Australian Coding Standard (ACS 0001 Principal Diagnosis):** The principal diagnosis is the condition established, after study, to be chiefly responsible for the admission. The symptoms (chest pain, dyspnoea) are integral to the MI and are not coded separately.\n- **Cardiogenic shock developed after admission.** It is a complication, not the reason for admission, so it is coded as an additional diagnosis.\n\n## Likely Additional Codes\n\n| Code | Description |\n|------|-------------|\n| R57.0 | Cardiogenic shock |\n| I50.x | Heart failure (type per documentation), if documented. \"Advanced heart failure therapies\" and LVAD planning suggest it, but the diagnosis should be confirmed. |\n| I25.1x | Atherosclerotic heart disease (native vessel or stented vessel, per ACS guidance) |\n| T82.8 / Z95.5 | In-stent restenosis of distal LAD (a prior stent is present). Code according to whether the restenosis is documented as a complication. |\n| Z95.5 | Presence of coronary angioplasty implant and graft |\n\n## Points to Clarify with the Clinician\n\n1. The discharge diagnosis section is withheld, so confirm the documented final diagnoses.\n2. Confirm whether heart failure was formally diagnosed and its type.\n3. Clarify the discrepancy between \"without any significant complications\" and the documented cardiogenic shock.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 701,
+    "output_tokens": 851
+  },
+  "seconds": 0.0
+}

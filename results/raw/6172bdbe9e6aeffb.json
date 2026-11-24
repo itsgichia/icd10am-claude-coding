@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "615b2cd470fd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nAge: 12\nSex: Female\nDate of Admission: [redacted]\nDate of Discharge: [redacted]\n\nHospital Course:\nThe patient presented to the emergency room with intense left flank pain, which was discovered to be caused by an obstructing calculus in the left ureter and nephrolithiasis. The patient was treated with pain control medications and hydration, and subsequently referred to a nephrologist. The patient underwent a \"stone risk study\" and renal ultrasound, which showed multiple bilateral cysts and renal calculi. Genetic testing was performed and identified dual mutations in GANAB and PKD1genes. \nDiagnosis: [diagnosis section withheld]\nDischarge Instructions:\n-The patient should follow up with the nephrologist for further evaluation and management of the polycystic kidney disease.\n-The patient should return if she experiences any further pain or symptoms.\n\nFollow-up:\nThe patient will follow up with the nephrologist for further evaluation and management of the polycystic kidney disease."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **N20.2 \u2013 Calculus of kidney with calculus of ureter**\n\n## Why this code\n- Under the ACS definition, the principal diagnosis is the condition established after study to be chiefly responsible for the admission.\n- The patient came in with acute left flank pain. This was caused by an **obstructing left ureteric calculus together with nephrolithiasis**. Pain control and hydration were given for the stone.\n- Because both kidney and ureteric calculi are documented, the combination code **N20.2** is used rather than N20.0 (kidney only) or N20.1 (ureter only).\n- **N13.2** (hydronephrosis with renal and ureteral calculous obstruction) is not appropriate. Hydronephrosis is not documented, and the term \"obstructing\" alone does not support that code.\n\n## Suggested additional diagnoses\n- **Q61.2 \u2013 Polycystic kidney, adult type.** The PKD1 and GANAB mutations are consistent with autosomal dominant polycystic kidney disease. Assign this only if the withheld diagnosis section documents polycystic kidney disease; the discharge instructions refer to it, but the clinician's final wording should be confirmed.\n- Flank pain (R10.x) is **not** coded separately, because it is a symptom of the established calculus diagnosis.\n\nIf the withheld diagnosis section shows that the admission was primarily for working up polycystic kidney disease, the sequencing should be reconsidered. Confirm against the final documented diagnoses.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 398,
+    "output_tokens": 853
+  },
+  "seconds": 0.0
+}

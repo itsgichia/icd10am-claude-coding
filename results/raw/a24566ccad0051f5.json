@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7be47456ff7d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: Maghrebian 8.2 year-old boy\nAdmission Date: [Date]\nDischarge Date: [Date]\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted for evaluation due to moderate mental retardation, mild intellectual disability, hyperactive behavior, and partial secondary generalized epilepsy with persistent atypical absences and psychogenic episodes. The physical and neurological exam revealed no abnormal findings. The EEG showed abnormal discharges of slow waves and spikes and bi-temporally localized waves. The MRI study showed cortico-subcortical atrophy and corpus callosum hypoplasia. A high definition karyotype and metabolic panel results were normal.\n\nValproic acid was administered to manage the seizures and hyperkinetic behavior. The patient's condition improved, leading to his discharge.\n\nThe genetic study showed 116 bases deletion in genomic sequence of EN2 gene: 155462376\u2013155462491 (G1 marker). The patient showed abnormalities in the transcription of the EN2 gene, that implies the deletion of 208 bases (between 1493 and 1719 bases of the complementary sequence, C4 marker).\n\nThe patient has been discharged with improved symptoms and has been advised to continue the medications prescribed by the treating physician. A follow-up visit has been scheduled to assess the patient's progress with regard to the aforementioned symptoms."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis is **F71 (Moderate intellectual disability)**.\n\nThe summary says the patient was admitted for evaluation of moderate intellectual disability, and it is listed first among the presenting problems. Under ICD-10-AM principal diagnosis rules, the condition established after study that was chiefly responsible for admission is coded first.\n\nSome caveats:\n\n- **Epilepsy:** The partial secondary generalized epilepsy (treated with valproic acid, which drove much of the inpatient management) could be argued as principal. It would be coded in the G40 category, most likely G40.2 or G40.4 depending on the documented seizure type. Whether it or F71 is principal depends on the reason for admission as documented in the withheld discharge diagnosis section.\n- **Genetic finding:** The EN2 gene deletion has no specific ICD-10-AM code. It would typically be captured as a secondary code, such as Q99.8 (other specified chromosome abnormalities), if the treating clinician documents it as a diagnosis.\n- **Documentation conflict:** The summary describes both \"moderate mental retardation\" and \"mild intellectual disability,\" which is inconsistent. The coder should query the physician for the correct severity before finalizing F71.\n\nI'd recommend checking the missing discharge diagnosis section and the attending's documentation of the reason for admission before assigning the final principal code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 541,
+    "output_tokens": 1209
+  },
+  "seconds": 0.0
+}

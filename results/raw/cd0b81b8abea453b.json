@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "edf12638d0cd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient name: [REDACTED]\n\nAge: 45\n\nSex: Male\n\nAdmission Date: [REDACTED]\n\nDischarge Date: [REDACTED]\nAdmission Diagnosis: [diagnosis section withheld]\nAdmission Procedure: Renal allograft transplant\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient, a 45-year-old South Indian man with end-stage renal disease, underwent a renal allograft transplant and received tacrolimus, mycophenolate, and prednisolone as immunosuppressive therapy. Six months post-surgery, he reported a small, painless nodule on his right calf. There was no associated fever, redness, or pruritus, and no other opportunistic infections were observed. Clinical examination revealed a 2 \u00d7 2-cm firm violaceous nodule, which was subcutaneous and had normal surrounding skin. A fine-needle aspiration was done, which revealed the presence of inflammatory cells and a few fungal hyphae. The nodule was subsequently excised and sent for microbiological evaluation, which confirmed the presence of Fusarium solani.\n\nTreatment:\n\nThe patient underwent surgical excision of the lesion, followed by four weeks of oral voriconazole treatment.\n\nResults:\n\nThe histopathological examination of the excised lesion confirmed Fusarium solani infection, and the fungus was identified using immunohistochemistry.\n\nFollow-up:\n\nThe patient was discharged with improved symptoms and was advised to follow-up for further monitoring.\n\nMedications:\n\nThe patient's medications were adjusted as needed during the hospital stay.\n\nDischarge Condition:\n\nThe patient's condition improved, and he was discharged with follow-up instructions.\n\nDischarge Instructions:\n\nThe patient was advised to follow-up as per the instructions provided by his physician.\n\nConditions for Follow-Up:\n\nThe patient was advised to follow-up for monitoring."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **B48.8 Other specified mycoses**\n\n## Rationale\n\n- **Reason for the episode of care.** The patient was admitted six months after his kidney transplant for a subcutaneous nodule on the right calf. The nodule was excised and treated with voriconazole.\n- **Confirmed diagnosis.** Microbiology, histopathology and immunohistochemistry confirmed **Fusarium solani** infection (subcutaneous fusariosis).\n- **Classification.** ICD-10 lists \"infection of tissues and organs by Fusarium\" as an inclusion term under **B48.8**. That makes B48.8 the most specific code for fusariosis.\n- **Why not B48.7 (Opportunistic mycoses)?** The patient is immunosuppressed. However, the Fusarium inclusion term directs the infection to B48.8. Ideally, check the ICD-10-AM edition in use to confirm this inclusion term appears there.\n- **Why not a transplant complication code (T86.1)?** The infection is not in the transplanted kidney, and there is no graft dysfunction or rejection.\n\n## Suggested additional codes\n\n| Code | Description |\n|---|---|\n| Y43.4 | Immunosuppressive agents causing adverse effects in therapeutic use (tacrolimus, mycophenolate, prednisolone), if the clinician links the infection to immunosuppression |\n| Z94.0 | Kidney transplant status |\n| Y92.22 | Place of occurrence: health service area (if required with the external cause code) |\n| ACHI code | Excision of lesion of skin and subcutaneous tissue of the leg |\n\n**Note:** The clinical documentation and your local coding standards (ACS) should confirm the link between the infection and immunosuppressive therapy before you assign the adverse-effect codes.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 692,
+    "output_tokens": 1107
+  },
+  "seconds": 0.0
+}

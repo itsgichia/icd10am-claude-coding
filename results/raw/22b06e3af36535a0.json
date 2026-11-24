@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "e525412d8764",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: Caucasian woman with insulin-dependent diabetes and hypertension\nAge: 51 years\n\nHISTORY OF PRESENT ILLNESS:\nThe patient was admitted with a perimesencephalic subarachnoid hemorrhage (SAH) in the prepontine, interpeduncular, ambient, and crural cisterns. She had a previous SAH due to a 6mm aneurysm in the anterior communicating artery (Acomm), which was treated with endovascular coiling.\n\nHOSPITAL COURSE:\nThe patient's hospital course was complicated by vasospasm and cerebral salt wasting. She was treated with hypervolemia, hypertension, intra-arterial nicardipine, and sodium and volume supplementation. After discharge, she returned to work with no residual neurologic deficits.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE MEDICATIONS:\nN/A\n\nFOLLOW-UP:\nThe patient had a follow-up magnetic resonance imaging and angiography performed six months later, which demonstrated no vascular abnormalities.\n\nCONDITION AT DISCHARGE:\nThe patient was discharged home in good condition on post-bleed day 10."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: I60.8 Other subarachnoid haemorrhage\n\nThis is a coding judgement. The discharge diagnosis section was withheld, so it should be confirmed against the full record.\n\n## Why I60.8\n\n- **The bleed is non-traumatic SAH.** That places the code in I60.\n- **The bleed pattern is perimesencephalic.** The blood sits in the prepontine, interpeduncular, ambient and crural cisterns, around the brainstem. That pattern typically means a non-aneurysmal, presumed venous bleed.\n- **Imaging found no vascular source.** Follow-up MRI and angiography at 6 months showed no abnormality.\n- **No specific artery code fits.** Codes I60.0\u2013I60.7 need a bleed from an identified artery, such as the carotid siphon, MCA, ACom or PCom. None was identified for this episode, but the bleed has a defined, recognised pattern. That makes I60.8 more fitting than I60.9 (unspecified).\n\n## Why not I60.2 (anterior communicating artery)\n\nThe earlier Acomm aneurysm was a separate, prior event and was already treated with coiling. The current bleed's distribution and the negative angiography do not support re-rupture. If the clinician had documented coil failure or re-bleeding from that aneurysm, I60.2 would apply instead.\n\n## Possible additional codes\n\nThese depend on documentation and local coding standards. Verify exact codes against the current ICD-10-AM edition.\n\n- Cerebral vasospasm, as a complication of the SAH\n- Cerebral salt wasting, as a sodium disorder (E87.1 if hyponatraemia is documented)\n- Type 1 or insulin-treated diabetes (E10.x / E11.x, as documented)\n- Hypertension (I10)\n- History of the coiled aneurysm (Z86.7- / Z95.- range, as applicable)",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 466,
+    "output_tokens": 946
+  },
+  "seconds": 0.0
+}

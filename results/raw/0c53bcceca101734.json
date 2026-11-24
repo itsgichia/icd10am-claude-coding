@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "882f5cdcd862",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [redacted] \nAge: 28 years \nSex: Female \n\nDate of Admission: [redacted] \nDate of Discharge: [redacted]\n\nReason for Admission:\nThe patient presented with right hip pain after a fall and was diagnosed with a pathologic hip fracture. \n\nClinical Course:\nFollowing admission, the patient underwent radiographic and imaging studies which revealed lytic lesions in the femoral neck and intertrochanteric region as well as osseous destructive lesions in the lumbar spine. The bone scan was suggestive of metastatic disease. A biopsy revealed diffuse large B-cell lymphoma with aggressive features and a germinal center subtype histology. The patient underwent a total right hip replacement and returned for follow-up evaluation.\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was managed for the pathologic hip fracture and underwent biopsy that confirmed the diagnosis of lymphoma. Following diagnosis, the patient underwent a total right hip replacement. The patient is scheduled for further evaluation and management by the oncology team. \n\nDischarge Medications: \nSee the oncology team. \n\nFollow-up Plan: \nThe patient is to follow up with the oncology team. \n\nDischarge Condition: \nThe patient is stable."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: **C83.3 Diffuse large B-cell lymphoma**\n\n## Why the lymphoma, not the fracture, is principal\n\n1. **The fracture is pathological and caused by the neoplasm.** Imaging showed lytic lesions in the femoral neck and intertrochanteric region, and biopsy showed the bone involvement was diffuse large B-cell lymphoma (DLBCL). A fracture through neoplastic bone is classified to **M90.7- Fracture of bone in neoplastic disease**, not to injury codes (S72.-) or to M84.4- (pathological fracture NEC, which excludes neoplastic disease).\n\n2. **Dagger\u2013asterisk convention (ACS 0001).** In ICD-10-AM, M90.7- is an asterisk (*) manifestation code. It must be paired with the underlying neoplasm (dagger \u2020) code, and it cannot be sequenced as the principal diagnosis. The underlying condition, the lymphoma, therefore goes first.\n\n3. **The lymphoma was diagnosed during this admission** by biopsy, and the hip replacement was performed because of the lymphomatous bone destruction.\n\n## Suggested code set\n\n| Code | Description |\n|---|---|\n| **C83.3** \u2020 | Diffuse large B-cell lymphoma (principal). Germinal centre B-cell subtype is included here. |\n| **M90.75** * | Fracture of bone in neoplastic disease, pelvic region and thigh |\n| **M9680/3** | Morphology: malignant lymphoma, large B-cell, diffuse |\n| W19 / W01 + place and activity codes | Fall as external cause, if your site's practice and documentation support it |\n| Procedure: total hip arthroplasty (block 1489) and bone biopsy | As documented |\n\n**Documentation note:** Clarify with the clinician whether the lumbar spine lesions are confirmed lymphomatous involvement. This affects whether additional bone involvement is documented, but it does not change the principal diagnosis, which remains C83.3.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 505,
+    "output_tokens": 1255
+  },
+  "seconds": 0.0
+}

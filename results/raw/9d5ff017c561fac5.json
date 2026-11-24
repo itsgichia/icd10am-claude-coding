@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "7f08982167b1",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nHospital Course:\n\nThe patient was admitted with cough, weight loss, and a cavity in the right upper pulmonary lobe. The patient tested positive for HIV and was diagnosed with tuberculosis infection. After starting antiviral and anti-tuberculosis therapy, the patient presented with urinary retention due to an enlarged prostate. The patient was transferred to a tertiary care hospital for further management.\n\nAssessment and Plan:\n\nDuring the hospital stay, the patient underwent several diagnostic tests including sputum culture, smear, and interferon-\u03b3 release assay, which were negative for Mycobacterium tuberculosis. Lumbar puncture indicated nearly normal cerebrospinal fluid profile, and CT scan revealed a cavity with effusion in the upper right lung. Bronchoscopy confirmed the presence of Cryptococcus neoformans in the bronchoalveolar lavage fluid. Enhanced MRI of the prostate showed an abnormal patchy signal in the central gland of the prostate with reduced T2W1 signal in the seminal vesicles and peripheral zone of the prostate. A prostatic biopsy revealed granulomatous inflammation with positive periodic acid\u2013Schiff staining. Culture of the prostatic tissue grew Cryptococcus neoformans.\n\nThe patient was diagnosed with AIDS with pulmonary cryptococcosis and cryptococcal prostatitis. Oral voriconazole and flucytosine combination therapy for 2 months followed by oral fluconazole maintenance treatment for 4 months was initiated and relieved the patient\u2019s urinary retention and the cryptococcal prostatitis.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Plan:\n\nThe patient was discharged in stable condition with a prescription for oral fluconazole. The patient was advised to follow up with an infectious disease specialist for further management of the underlying condition of AIDS. The patient was also advised to take necessary precautions to prevent future infections.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: B24**\n\n**Why this is the principal diagnosis**\n- After investigation, the condition chiefly responsible for the admission was AIDS with HIV-related cryptococcal infection of the lung and prostate.\n- Tuberculosis was the working diagnosis on admission. It was effectively excluded: sputum smear, culture and the interferon-\u03b3 release assay were all negative.\n- The cryptococcal infections are opportunistic infections caused by the patient's HIV disease.\n- Under ACS 0102 HIV/AIDS, when a patient is admitted for an HIV-related condition, the HIV disease code is sequenced first as principal diagnosis. The manifestations are coded after it.\n- Current ICD-10-AM editions no longer use the B20\u2013B23 categories that standard ICD-10 uses for HIV with specified conditions. The one category is B24, Unspecified HIV disease, and each related condition is coded separately. (Asymptomatic HIV is Z21, which does not apply here.)\n\n**Additional diagnoses to code after B24**\n- Cryptococcosis (B45), for the pulmonary infection and the cryptococcal prostatitis. Fourth characters should be assigned from the Tabular List.\n- Prostatitis in infectious disease classified elsewhere (N51.0\\*), as a dagger\u2013asterisk pair with the B45 code.\n- Urinary retention, if it meets additional diagnosis criteria. It needed management, but check whether the prostatitis already accounts for it under the symptom rules.\n\nI have not assigned the fourth characters from memory. Please confirm them against the current edition.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 894,
+    "output_tokens": 799
+  },
+  "seconds": 0.0
+}

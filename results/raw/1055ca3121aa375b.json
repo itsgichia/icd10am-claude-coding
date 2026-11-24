@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "893f620f0af0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHospital Course:\nThe patient, a 69-year-old male with a known duodenal diverticulum and remote history of Roux-en-Y gastric bypass surgery, was admitted to the hospital with bilateral upper quadrant abdominal pain for several weeks, nausea, abdominal distension, and food intolerance. A CT scan revealed a distended gastric remnant and a possible bowel obstruction.\n\nThe patient was taken to the operating room for an exploratory laparotomy where a 4.5 cm enterolith was found and removed from the distal jejunum. A cholecystectomy was also performed during which gallstones were discovered. The patient had an uneventful recovery and was discharged on postoperative day 8.\n\nFollow-up:\nAt the patient's postoperative visit, two weeks after surgery, he was reported to be in good health. Unfortunately, the patient was lost to follow-up after one month.\nDiagnosis: [diagnosis section withheld]\nSummary:\nThis 69-year-old male presented with bilateral upper quadrant abdominal pain, nausea, abdominal distension, and food intolerance. He was found to have a distended gastric remnant and a bowel obstruction caused by a 4.5 cm enterolith containing bile salts. Treatment included an exploratory laparotomy and enterolith removal, as well as a cholecystectomy. The patient had an uneventful recovery and was discharged on postoperative day 8. It is unfortunate that the patient was lost to follow-up after one month.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "K56",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 672,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

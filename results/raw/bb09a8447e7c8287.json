@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "dcda545ce1c2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient: 19-year-old male\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted to the hospital with severe dyspnea and diagnosed with elevated cardiac biomarkers. The initial blood pressure was high. The patient denied angina pectoris, and the ECG showed no notable abnormality. The transthoracic echocardiography showed impaired left ventricular function with basal hypokinesia. Treatment with medications was initiated, and the cardiac MRI showed no evidence of acute myocarditis. Endocarditis was excluded, and the normal blood levels of catecholamines excluded pheochromocytoma.\n\nAfter the acute phase, the patient complained of vertigo and neurological examination showed other neurological deficits. The brain and spinal MRI showed various lesions, including a prominent pontomedullary lesion. The CSF analysis revealed a lymphocytic pleocytosis, and serum neurofilament levels were elevated. Screening for other autoimmune or infectious diseases was negative, and serum-Aquaporin-4- and -MOG-antibodies were negative. The patient was diagnosed with MS, and medication with intravenous methylprednisolone was initiated. During the hospital stay, the patient showed improvement and no focal signs during discharge.\n\nFollow-up:\n\nThe patient was prescribed disease-modifying medication and showed no abnormalities in the follow-up exams. The patient showed no events suspicious of a relapse in the first 6 months of follow-up.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: I42**\n\nThe principal diagnosis is the cardiac condition: impaired left ventricular function with basal hypokinesia, an elevated cardiac biomarker and severe dyspnoea. That was the reason for admission, and the investigations that followed (cardiac MRI, echocardiography, exclusion of myocarditis, endocarditis and pheochromocytoma) were directed at it. The multiple sclerosis was diagnosed later in the stay, after the acute phase, so it is a secondary diagnosis, not the principal one.\n\nWithin Chapter I, the closest fit is the cardiomyopathy category (I42), because the record describes LV dysfunction without a more specific type. I have not assigned a more specific code such as I51.8 (other ill-defined heart diseases) or a stress-related cardiomyopathy code, because the record does not establish the aetiology. A coder should confirm the cardiomyopathy type against the full medical record, and query the physician if a more specific diagnosis is documented.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 736,
+    "output_tokens": 1191
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "615b2cd470fd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nAge: 12\nSex: Female\nDate of Admission: [redacted]\nDate of Discharge: [redacted]\n\nHospital Course:\nThe patient presented to the emergency room with intense left flank pain, which was discovered to be caused by an obstructing calculus in the left ureter and nephrolithiasis. The patient was treated with pain control medications and hydration, and subsequently referred to a nephrologist. The patient underwent a \"stone risk study\" and renal ultrasound, which showed multiple bilateral cysts and renal calculi. Genetic testing was performed and identified dual mutations in GANAB and PKD1genes. \nDiagnosis: [diagnosis section withheld]\nDischarge Instructions:\n-The patient should follow up with the nephrologist for further evaluation and management of the polycystic kidney disease.\n-The patient should return if she experiences any further pain or symptoms.\n\nFollow-up:\nThe patient will follow up with the nephrologist for further evaluation and management of the polycystic kidney disease.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"N20\", \"condition\": \"Calculus of kidney and ureter\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 490,
+    "output_tokens": 29
+  },
+  "seconds": 0.0
+}

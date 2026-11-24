@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "0d6bd47ba68f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\n\nPatient: 42-year-old female with a past medical history of rheumatoid arthritis\n\nHospital Course:\n\nThe patient was admitted due to psychomotor agitation and neutrophilia. The lumbar puncture showed a low glucose level in the cerebrospinal fluid and common germs in FilmArray despite negative Gram and Chinese ink. The patient was initiated on antibiotic therapy, antituberculosis drugs, and antifungal agents. The patient showed some improvements three days after initiating treatment but then presented a new episode of altered mental status, which was associated with transaminase elevation. Brain CT scan revealed ischemic areas in the corpus callosum and bilateral parietal lobes. The patient presented severe hemodynamic decompensation with metabolic acidosis, acute respiratory failure, and pancytopenia one day later, which required the transfer to the MICU. The autoimmune markers were requested due to the suspicion of immune alveolar hemorrhage, and the patient met the CAPS criteria. The patient was initiated on intravenous pulses of methylprednisolone 1 g daily IV and enoxaparin 60 mg daily SubQ. Despite the initial clinical improvement, the patient passed away due to new respiratory, renal, and encephalopathic deterioration in later days.\nDiagnosis: [diagnosis section withheld]\nDischarge Condition:\n\nThe patient passed away due to new respiratory, renal, and encephalopathic deterioration.\n\nDischarge Instructions:\n\nNone. This patient did not survive. \n\nFollow-Up Care:\n\nNone. This patient did not survive. \n\nSigned,\n\n[Physician's Name]\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The patient met criteria for CAPS (catastrophic antiphospholipid syndrome), which was established after investigation as the cause of the multi-organ deterioration. The meningitis workup was initially suspected, but the final diagnosis is CAPS.\n\nIn ICD-10-AM, antiphospholipid syndrome is coded D68.61 (Antiphospholipid syndrome), under D68 \"Other coagulation defects\". Catastrophic APS is also indexed there. In ICD-10-AM, D68.6 is \"Other thrombophilia\", and the antiphospholipid subcode sits beneath it.\n\nThe alternative would be M31.1 (thrombotic microangiopathy), but CAPS indexes to D68.61.\n\nCODE: D68",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1090,
+    "output_tokens": 247
+  },
+  "seconds": 0.0
+}

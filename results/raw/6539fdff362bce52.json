@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "b9ac59992a34",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n \nPatient Name: [Redacted] \nDate of Admission: [Redacted] \nDate of Discharge: [Redacted] \nAdmitting Diagnosis: [diagnosis section withheld]\nSummary:\nA 59-year-old male patient was admitted to our hospital with a high PSA level of 218.5 ng/mL and was diagnosed with adenocarcinoma of the prostate with a Gleason score of 4\uff0b5. Further testing revealed bone metastases of the right rib and L2 vertebra, with a clinical stage of T2aN0M1. The patient was treated with radiation therapy and androgen deprivation therapy (ADT), and his PSA level dropped to 0.053 ng/mL. At the age of 56 years, his PSA level was again elevated, and he was restarted on different hormonal treatments with flutamide, estramustine phosphate, enzalutamide, and abiraterone. At the age of 58 years, the patient developed a resistance to hormonal therapies.  \n \nUsing 11C-choline PET/CT imaging, multiple bone metastases without lymph node metastases or visceral metastases were confirmed. The patient then completed six cycles of Ra-223 therapy without any interruption and adverse effects. The third 11C-choline PET/CT after six cycles showed that existing lesions increased and new uptake spots were found in the thoracic spine, sacrum, right rib, and right ileum. During Ra-223 therapy, the patient\u2019s serum ALP did not dramatically change, but PSA levels gradually increased. After the completion of Ra-223 therapy, a new chemotherapy with cabazitaxel was started.  \n\nAt the time of discharge, the patient\u2019s symptoms and biochemical progression remained. Close monitoring, continuation of therapies, and further treatment are recommended. The patient should continue follow-ups with his primary care physician."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: C61 Malignant neoplasm of prostate**\n\nRationale:\n- The condition chiefly treated and investigated was castration-resistant prostate adenocarcinoma. This was managed with Ra-223 therapy, then cabazitaxel, and was monitored with PET/CT and PSA.\n- In ICD-10-AM, the primary site is coded as the principal diagnosis when it is still under active treatment. The bone metastases are secondary and are sequenced afterward.\n\nSuggested additional codes:\n- **C79.5** Secondary malignant neoplasm of bone and bone marrow (rib, L2 vertebra, thoracic spine, sacrum, ilium)\n- **Z92.3** Personal history of irradiation, if relevant\n- **Z92.21** Personal history of antineoplastic chemotherapy, if relevant\n- **Z79.8** Long-term drug therapy, if relevant\n- A morphology code (M8140/3, adenocarcinoma) accompanies C61 for cancer registry purposes.\n\nCaveats:\n- The summary does not state the specific episode of care. If the admission was solely for a Ra-223 administration or a chemotherapy session, the principal diagnosis would still be C61 in most cases. The Z51.- encounter codes (e.g., Z51.1 for a chemotherapy session) are generally not used as the principal diagnosis in ICD-10-AM when the malignancy is the reason for treatment. Final code assignment should follow your local coding standards and the full medical record.\n- Radium-223 treatment would be captured as a procedure code (ACHI), not a diagnosis code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 670,
+    "output_tokens": 547
+  },
+  "seconds": 0.0
+}

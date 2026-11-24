@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "32740d68001d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient Information:\nName: Anonymous\nGender: Female\nAge: 25\nAdmission Date: [date]\nDischarge Date: [date]\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient was administered with various medications including alprazolam 500 \u03bcg, duloxetine 90 mg, olanzapine 5 mg, haloperidol 2.5 mg, clonazepam, baclofen, diazepam, phenytoin, levetiracetam, lamotrigine, levodopa, oral baclofen, lacosamide and potassium channel antagonist 3,4 diaminopyridine.\n\nHospital Course:\nThe patient was admitted with vomiting, bilateral leg pain, difficulty mobilising and flexed posture of her neck. She later developed visual and auditory hallucinations, respiratory failure with a coma scale score of 3, hypertensive, tachycardic, pyrexic and severe limb rigidity. Subsequently, contractures of the hands and feet were also developed. The patient was intubated and ventilated. The patient intermittently reported visual hallucinations throughout the hospital admission. Further complications included ileus, ischaemic bowel and sepsis.\n\nOutcome:\nThe patient showed marked clinical improvement with the administration of potassium channel antagonist 3,4 diaminopyridine. This resulted in extubation, multiple medication decreases, transfer from ICU, and ultimately discharged home sixteen months after admission. The patient is now dependent on others for all activities of daily living and has developed contractures of the upper and lower limbs. There have been no documented seizures since discharge.\n\nFollow-up:\nThe patient requires long-term follow-up care for contractures of the upper and lower limbs. The patient may also benefit from genetic counselling and additional investigations as advised by the neurology team."
+      }
+    ]
+  },
+  "text": "The diagnosis section is withheld, so the code has to be inferred from the clinical picture. It is not certain.\n\n**Likely underlying condition:** The picture fits an autoimmune or neuro-excitability disorder. Features include neck flexion, limb rigidity, contractures, hallucinations, autonomic instability (hypertension, tachycardia, pyrexia), respiratory failure and coma. The dramatic response to the potassium channel blocker 3,4-diaminopyridine points the same way. Possible diagnoses include:\n- Stiff-person syndrome or progressive encephalomyelitis with rigidity and myoclonus (PERM)\n- Isaacs syndrome (neuromyotonia), or Morvan syndrome (CASPR2/LGI1 antibodies)\n- Autoimmune encephalitis\n\nThe combination of neuromyotonia-type rigidity, hallucinations, autonomic instability and encephalopathy is most consistent with **Morvan syndrome**. This is a voltage-gated potassium channel complex antibody disorder.\n\n**Suggested principal diagnosis code:**\n\n**G71.1 \u2013 Myotonic disorders** is not appropriate. Isaacs syndrome and neuromyotonia are indexed in ICD-10 to **G71.1**, but Morvan syndrome is not specifically indexed.\n\nThe best-fitting options are:\n- **G04.8 \u2013 Other encephalitis, myelitis and encephalomyelitis** (autoimmune/limbic encephalitis; in ICD-10-AM this includes other specified autoimmune encephalitis)\n- **G25.8 / G25.88 \u2013 Other specified extrapyramidal and movement disorders** (an alternative if the diagnosis is stiff-person syndrome; stiff-person syndrome itself is **G25.8** in ICD-10-AM)\n\n**My answer: G04.8 \u2013 Other encephalitis, myelitis and encephalomyelitis**, with the following as secondary codes:\n- Respiratory failure (J96.0)\n- Sepsis (A41.9)\n- Ileus (K56.7)\n- Ischaemic bowel (K55.x)\n- Contractures (M24.5-)\n- Hallucinations (R44.0, R44.1)\n\nPlease confirm against the withheld diagnosis. If it states Morvan syndrome or Isaacs syndrome, use **G71.1**. If it states stiff-person syndrome, use **G25.8**. Final code assignment should follow the documented diagnosis and the current ACS/ICD-10-AM coding standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 657,
+    "output_tokens": 852
+  },
+  "seconds": 0.0
+}

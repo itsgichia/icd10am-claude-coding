@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "775828a21477",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: 16-Year-Old Male\nDiagnosis: [diagnosis section withheld]\nHospital Course: \nThe patient was admitted to the hospital with symptoms of intellectual deficiency, proximal myopathy, and alterations in liver tests. Panel A was used for diagnostic purposes, which detected the presence of the hemizygous variant c.741+1G > A, described as pathogenic in HGMD CS003703.\nDuring the hospital stay, the patient received appropriate medical attention. The patient was provided with standard care and treatment for the associated symptoms. The patient's overall health was closely monitored throughout the hospital stay, and there were no major health incidents.\nA multidisciplinary team of doctors and medical professionals closely followed the patient's progress and offered medical care accordingly.\n\nDischarge Instructions:\nThe patient is being discharged from the hospital with instructions to closely monitor his health and to follow up with his primary physician and/or cardiologist. The patient should avoid strenuous exercise, and any new or concerning symptoms should be reported to the physician immediately. The patient has been instructed to continue to follow up with his healthcare providers to receive appropriate care and treatment for his condition.\n\nSummary:\nThe patient was admitted to the hospital with symptoms of intellectual deficiency, proximal myopathy, and alterations in liver tests. The patient was diagnosed with suspicion of Danon disease due to hypertrophic cardiomyopathy with anomalous pathway. The patient received standard care during the hospital stay with a multidisciplinary team of healthcare providers closely monitoring progress. The patient is being discharged from the hospital with instructions to follow up with his primary physician and/or cardiologist."
+      }
+    ]
+  },
+  "text": "**Most likely principal diagnosis code: E74.0 \u2013 Glycogen storage disease (Danon disease)**\n\n**Reasoning**\n- Danon disease is a lysosome-associated membrane protein 2 (LAMP2) deficiency. It is an X-linked disorder that causes cardiomyopathy, skeletal myopathy, intellectual disability and liver enzyme abnormalities. It is classified in ICD-10 under glycogen storage disease (E74.0), and ICD-10-AM follows the same classification.\n- The c.741+1G>A hemizygous variant is a pathogenic LAMP2 splice-site variant, and the presentation matches Danon disease.\n- The summary says \"suspicion of Danon disease.\" Under Australian Coding Standards, an uncertain diagnosis (such as \"suspected\" or \"probable\") at discharge is coded as if it were confirmed, in inpatient settings. Here, the pathogenic variant also supports the diagnosis. So E74.0 is appropriate.\n\n**Possible additional codes**\n- I42.2 Other hypertrophic cardiomyopathy (the hypertrophic cardiomyopathy). Some coders would also add I43.1* (cardiomyopathy in metabolic diseases) as the manifestation code. I43.1* is an asterisk code, so E74.0\u2020 would be the dagger code and the pair would be sequenced etiology first.\n- I45.6 Pre-excitation syndrome (the anomalous pathway).\n- G72.8/G72.89 or M62.89 for the myopathy, which is likely integral to Danon disease and so not coded separately.\n- F79.- Unspecified intellectual disability, and R94.5 Abnormal results of liver function studies. Both are likely integral to the disease.\n\n**Caveats**\n- The sequencing depends on the full record. If the admission was focused mainly on the cardiomyopathy, a coder might sequence differently, such as E74.0\u2020 with I43.1*. For this summary, E74.0 is the best answer.\n- Check the current ICD-10-AM edition and the Australian Coding Standards, since code availability and dagger/asterisk conventions can vary.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 625,
+    "output_tokens": 717
+  },
+  "seconds": 0.0
+}

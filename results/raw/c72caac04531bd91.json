@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "cd90f4235013",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: N/A\nAge: 51\nGender: Male\n\nAdmission Date: N/A\nDischarge Date: N/A\n\nHospital Course:\n\nThe patient was admitted to our radiation oncology unit complaining of headache, vomiting, and right hemiplegia as part of an intracranial hypertension syndrome. Physical examination revealed a mammary mass in the right breast along with cerebral and lung tumors, bilateral adrenal nodes, and right cerebellar location. The patient underwent total brain irradiation with a dosage of 30 Gray in 10 fractions of 3 Gray per fraction over two weeks, with remarkable improvement in clinical outcomes. The patient was later treated with palliative chemotherapy, which resulted in an incomplete radiological remission of more than 70%. The patient received gemcitabine monotherapy, 1,000 mg/m\u00b2 on Days 1 and 8 every 21 days after experiencing local breast and cerebral progression. During the follow-up period, the patient's general condition deteriorated rapidly, and they were referred for palliative care and passed away six weeks later.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nThe patient received total brain irradiation at a dose of 30 Gray in 10 fractions of 3 Gray per fraction over two weeks with remarkable improvement in clinical outcomes. The patient was later treated with palliative chemotherapy that resulted in an incomplete radiological remission estimated to be more than 70%. Second-line chemotherapy with gemcitabine monotherapy, 1,000 mg/m\u00b2 on Days 1 and 8 every 21 days was administered after the patient's condition deteriorated.\n\nOutcome:\n\nDespite initial improvement following the patient's first treatment, the patient's condition rapidly deteriorated, leading to palliative care and eventual passing. \n\nFollow-Up:\n\nN/A\n\nRecommendations:\n\nN/A\n\nSigned:\nN/A\nDate:\nN/A\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C79",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 791,
+    "output_tokens": 287
+  },
+  "seconds": 0.0
+}

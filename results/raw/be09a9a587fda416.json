@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "28a2cce4de09",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHOSPITAL COURSE:\n\nAdmitted from the emergency room due to severe dyspnea, a 69-year-old Japanese man was diagnosed with aspiration pneumonia and placed on mechanical ventilation. He underwent tracheostomy due to prolonged mechanical ventilation and had restrictive pulmonary dysfunction. He was weaned successfully from mechanical ventilation with support by HFT (flow at 40 L/minute with FIO2 of 0.25) and a ventilator (10 cmH2O pressure support with 5 cmH2O PEEP) at night. The patient was discharged from the ICU to the general ward on ICU day 51. His physiotherapy rehabilitation continued for 1 month.\nDISCHARGE DIAGNOSES: [diagnosis section withheld]\nTREATMENT:\n\nMechanical ventilation, tracheostomy, and respiratory support by HFT and a ventilator.\n\nFOLLOW-UP AND RECOMMENDATIONS:\n\nThe patient was discharged to home on day 86 of hospitalization and returned for a follow-up visit. No further recommendations were provided."
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **J69.0 Pneumonitis due to food and vomit**\n\n## Rationale\n\n**Condition chiefly responsible for admission:** The patient came through the emergency department with severe dyspnoea and was diagnosed with **aspiration pneumonia**. That is the underlying condition that caused the admission and drove the episode of care, including prolonged ventilation, tracheostomy and ICU stay.\n\n**Why J69.0:**\n- In ICD-10-AM, \"aspiration pneumonia\" (not otherwise specified) is indexed to **J69.0**.\n- Aspiration pneumonia is excluded from the J12\u2013J18 pneumonia codes.\n\n**Why not respiratory failure (J96.-) as principal:**\n- The severe dyspnoea and ventilator dependence are manifestations of the underlying pneumonia.\n- Under the Australian Coding Standards, the underlying cause is sequenced first when it is known and treated.\n- Respiratory failure is not explicitly documented here. If the clinician documented it, it would be coded as an **additional diagnosis**.\n\n## Other codes to consider\n\nThese depend on clinical documentation:\n- **J96.0- / J96.9-**: respiratory failure, if documented\n- **Restrictive pulmonary dysfunction**: code per the documentation\n- **Procedures**: continuous ventilatory support, by duration, which would be the \u226596-hour category given the prolonged ventilation; tracheostomy; and high-flow nasal oxygen therapy\n\nPlease verify the codes against the current ICD-10-AM edition and the full clinical record.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 420,
+    "output_tokens": 649
+  },
+  "seconds": 0.0
+}

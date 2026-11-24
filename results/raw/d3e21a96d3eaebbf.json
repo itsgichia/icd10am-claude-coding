@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "cot_then_extract",
+  "record_id": "17f79c34e34c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary\n\nPatient Name: [REDACTED] \nDOB: [REDACTED]\nRoom No: [REDACTED] \nAdmission Date: [REDACTED] \nDischarge Date: [REDACTED]\nPRINCIPAL DIAGNOSIS: [diagnosis section withheld]\nHOSPITAL COURSE:\nThe patient was admitted with a history of chronic constipation and presented complaining of severe lower abdominal pain with progressive abdominal distension and vomiting. The physical examination revealed diffuse abdominal distension, tenderness, and guarding. The plain film of the abdomen showed dilatation of the small intestine with a gas and air fluid level, with an associated moderately distended and obstructed sigmoid loop. A laparotomy was carried out for suspected intestinal obstruction presenting as severe abdominal pain and vomiting. Hemorrhagic fluid was encountered and the ileum and sigmoid colon was found to be gangrenous with a 360\u00b0 clockwise twist of the ileum around the sigmoid colon. In addition, a Meckel diverticulum with a small band was found at the base of the twist. The patient underwent 100-cm resection of the gangrenous ileum and sigmoid colon and had a primary anastomosis of the small gut and colon. Postoperative recovery was uneventful except for a minor wound infection.\n\nMEDICATIONS ON DISCHARGE:\nPlease refer to the medication list given at the time of discharge.\n\nFOLLOW-UP RECOMMENDATIONS:\nOutpatient follow-up in two weeks for wound check and suture removal.\n\nFURTHER INSTRUCTIONS:\nNo driving if taking pain medications. Resume a normal diet as tolerated. Avoid heavy lifting or strenuous activities for at least two weeks.\n\nDISCHARGE CONDITION:\nStable. \nDISCHARGE DIAGNOSES: [diagnosis section withheld]\nDISCHARGE MEDICATIONS:\nPlease refer to the medication list given at the time of discharge.\n\nDISCHARGE FOLLOW-UP:\nFollow-up arranged for two weeks. \n\nAUTHORIZED SIGNATURE:\n[REDACTED] \nMD\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The chief condition is a volvulus of the ileum around the sigmoid colon, with gangrene of both segments, which caused the obstruction and required resection. The Meckel diverticulum with its band is a contributing anatomical cause, but the presenting and treated condition is the intestinal volvulus, which falls under the digestive system chapter K. Intestinal volvulus is in category K56.\n\nCODE: K56",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1351,
+    "output_tokens": 403
+  },
+  "seconds": 0.0
+}

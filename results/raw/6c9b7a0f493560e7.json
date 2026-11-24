@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "b8ddda2dfd6f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nMedical Record Number: [redacted]\nDate of Admission: [redacted]\nDate of Discharge: [redacted]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe infant was admitted for surgical reduction of idiopathic ileocolic intussusception. She experienced postoperative ileus and later developed bilious vomiting on postoperative day seven, which prompted an abdominal x-ray and ultrasound that revealed ileoileal intussusception. The patient successfully underwent a laparotomy procedure where an ileoileal intussusception was manually reduced, with subsequent resection of a short necrotic segment. Following the procedure, the patient progressed well with no further complications. After satisfactory recovery, the patient was discharged home.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Medications:\nNot Applicable \n\nDischarge Instructions:\nThe patient should be monitored for any recurrent symptoms and advised to follow up with pediatric surgery as recommended. If any unusual symptom or behavior is observed, parents or family members should obtain medical advice immediately.\n\nFollow-Up:\nThe patient should be accompanied by a responsible adult for routine follow-up and progress monitoring with pediatric surgery as recommended. \n\nSigned By:\n[Redacted], M.D.\nDate and Time: [Redacted]"
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **K56.1 Intussusception**\n\n## Rationale\n\n**Reason for admission.** Under ACS 0001 Principal Diagnosis, the principal diagnosis is the condition established after study to be chiefly responsible for the admission. This infant was admitted for surgical reduction of an **idiopathic ileocolic intussusception**, which makes that condition the principal diagnosis.\n\n**Code selection.** The index pathway is *Intussusception (bowel) (colon) (enteric) (ileocaecal) (ileum) (intestine) (rectum)* \u2192 **K56.1**. This code covers ileocolic intussusception in an infant. It is not coded as congenital, and the appendix exclusion (K38.8) does not apply.\n\n## Secondary diagnoses and procedures to consider (not principal)\n\n- **Postoperative ileus.** Code K56.7 or K91.3, depending on the documentation and the ICD-10-AM edition. Add a Y83 external cause code and a place of occurrence code if the clinician documents it as a complication of the procedure.\n- **Recurrent ileoileal intussusception on postoperative day 7, with a necrotic segment.** Assign an additional K56.1 if it is clinically significant and documented separately. Note the necrosis or gangrene, and consider whether the documentation supports a postprocedural complication.\n- **Procedures.** These include the initial surgical reduction, a second laparotomy with manual reduction, and small bowel resection. They are coded with ACHI codes.\n\nConfirm the codes against your local edition of ICD-10-AM/ACHI/ACS and the full clinical documentation.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 523,
+    "output_tokens": 713
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "few_shot_six",
+  "record_id": "38f2e94efc75",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nExample 4\nHospital course: An 81-year-old woman was brought in after a fall at home. She could not weight-bear and the right leg was shortened and externally rotated. A pelvic radiograph showed a displaced subcapital fracture of the right femoral neck. She underwent hemiarthroplasty on day one.\nAnswer: S72\n\nExample 5\nHospital course: A 19-year-old man presented with 18 hours of periumbilical pain that migrated to the right iliac fossa, with anorexia and a low-grade fever. There was guarding at McBurney's point and the white cell count was 15.2. Laparoscopy confirmed an inflamed, non-perforated appendix.\nAnswer: K35\n\nExample 6\nHospital course: A 64-year-old woman with a history of oestrogen-receptor-positive breast carcinoma treated five years earlier presented with progressive thoracic back pain. Magnetic resonance imaging showed deposits in T7 and T9 with no cord compression. Biopsy confirmed deposits of breast origin and she received palliative radiotherapy to the spine.\nAnswer: C79\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\nDate of Birth: [Redacted]\nGender: Female\nAdmission Date: [Redacted]\nDischarge Date: [Redacted]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted following diagnosis of mucosal malignant melanoma of the hard palate. The tumor was found to have extensively spread within the hard palate with no involvement of the nasal cavity or nasopharynx, and with no neck lymph node metastasis.\n\nTreatment:\nThe patient refused surgery and underwent CIR at another facility as the initial treatment, followed by concurrent chemotherapy. After one cycle of chemotherapy was stopped due to severe hematological toxicity. The patient achieved a complete response following CIR and was monitored by physical examinations, endoscopy, enhanced CT, and MRI. At 16 months after CIR, a cervical metastasis of a left jugular lymph node was detected, leading to diagnosis of stage crT0N1M0 MMMHN. The patient was treated by en bloc salvage ND with preservation of the accessory nerve, internal jugular vein, and sternocleidomastoid muscle. The duration of surgery was 132 min, and blood loss was less than 10 mL. The patient was discharged on postoperative Day 7.\n\nPostoperative Management:\nThe patient experienced no Clavien-Dindo grade 3 or 4 postoperative complications. No recurrence was found by the whole-body enhanced CT performed 3 months after surgery.\nFinal Diagnosis: [diagnosis section withheld]\nFollow-up Care:\nPatient will continue to be monitored for any signs of recurrence or metastasis.\n\nDiscussions:\nThe patient was presented with several treatment options, including radiotherapy and systemic immunotherapy, before choosing surgery. The en bloc salvage ND with preservation of the accessory nerve, internal jugular vein, and sternocleidomastoid muscle was performed successfully, and the patient experienced no postoperative complications.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "C77",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1521,
+    "output_tokens": 87
+  },
+  "seconds": 1.3076735419745091
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "7d2b935ee4b4",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nHOSPITAL COURSE SUMMARY\n\nIDENTIFICATION:\nThe patient is a 60-year-old female with no medical or family history of lower limb symptoms admitted to the hospital for swelling and pain in the left lower extremity for 5 days. She was diagnosed with deep vein thrombosis (DVT) and May-Thurner syndrome (MTS).\n\nHISTORY:\nThe patient reported swelling of her left thigh, which gradually spread to her lower leg, and increased local skin tension and temperature. She had no fever, shortness of breath, chest pain, cough, expectoration, hemoptysis, amaurosis, or syncope. Deep vein ultrasound of the lower extremity at local hospital reported thrombosis of left common femoral vein, superficial femoral vein, deep femoral vein, popliteal vein, anterior tibial vein, posterior tibial vein, and intermuscular vein for the first time. She had no history of surgery or catheterization.\n\nPHYSICAL EXAMINATION:\nPhysical examination revealed swelling and edema with moderate tenderness and pain in the left lower limb while the right lower limb was normal. Blood tests were normal.\nDIAGNOSIS: [diagnosis section withheld]\nTREATMENT:\nThe patient underwent IVC angiography, filter placement, left iliac vein plasty, and stent implantation under local anesthesia. Rivaroxaban and aspirin were prescribed. After 28 days of surgery, she came back to the hospital for the removal of IVC filter, and the procedure was successful. The DVTs were ablated after four months of anticoagulation therapy.\n\nDISPOSITION:\nThe patient was discharged and tolerated well.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "I82",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 694,
+    "output_tokens": 229
+  },
+  "seconds": 0.0
+}

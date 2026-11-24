@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "0cfa054dc94b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Identification:\n24-year-old female with chronic myeloid leukemia (CML) presenting with multiple neck masses, fever, anemia, and profound thrombocytopenia.\n\nHospital Course:\nThe patient was initially diagnosed with CML based on bone marrow (BM) smear image, cytogenetic karyotype, and the BCR/ABL fusion transcript. She was treated with hydroxyurea and then imatinib with some success. However, she was readmitted to the hospital with multiple lymphadenopathies and progressive swelling, indicating blast crisis involving T cells. The BM showed marked hyperplasia with more than 20% blasts. The patient was treated with dasatinib and showed a significant decrease in the WBC. However, she stopped taking the medication and died two months after blast crisis treatment.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient was treated with hydroxyurea, then imatinib (400mg/day), and finally, dasatinib. The dasatinib treatment showed a significant decrease in the WBC. However, the patient stopped taking the medication and died two months after blast crisis treatment.\n\nFollow-up:\nThe patient died two months after blast crisis treatment.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: C92**\n\nThe principal diagnosis is chronic myeloid leukaemia (BCR/ABL-positive), which was established by bone marrow morphology, karyotype and the BCR/ABL transcript. The later blast crisis is a phase of the same CML, so it is captured within this category. The neck masses, fever, anaemia and thrombocytopenia are manifestations of the disease rather than separate principal conditions.\n\nThis assumes the blast crisis is coded as CML rather than as a separate lymphoid leukaemia. The summary's reference to \"T cells\" is a point to confirm against the pathology report. The final character-level code (C92.1, BCR/ABL-positive) should be checked against the ICD-10-AM index and the Australian Coding Standards before submission.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 637,
+    "output_tokens": 851
+  },
+  "seconds": 0.0
+}

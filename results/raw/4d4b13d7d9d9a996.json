@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "5941ca504c92",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHOSPITAL COURSE:\n\nThe patient, a 28-day-old female newborn with right congenital aural atresia, was admitted to our emergency department with postauricular erythema and edema, accompanied by irritability, anorexia, and insomnia, without fever, since two days. On initial examination, the newborn had a small, deformed auricular tag on the right side with no external auditory meatus. Her weight was 3780 grams.\nDIAGNOSIS: [diagnosis section withheld]\nTREATMENT:\n\nThe newborn was started immediately on meropenem and vancomycin i.v. Two days later, a mastoidectomy was performed, and abnormal bone was drilled or curetted away. Mastoid cells filled with granulation tissue were exenterated, and about 2 mL of pus were collected for culture. The antibiotic scheme continued for a total of four weeks.\n\nCONDITION AT DISCHARGE:\n\nThe patient's postoperative course was unremarkable, with progressive resolution of signs of inflammation on mastoid area. The baby girl remained afebrile and her inflammation markers improved gradually. She left the hospital in a very good condition upon completion of her treatment. The baby has no problem two months after her operation, and her weight is 5.100 grams.\n\nDISCHARGE INSTRUCTIONS:\n\nThe patient should be observed for any signs of recurrence of symptoms and should follow up with her primary care provider regularly."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis is acute mastoiditis, coded **H70.0 Acute mastoiditis** in ICD-10-AM. The diagnosis section was withheld, so this is inferred from the clinical picture.\n\n**Reasoning**\n- The infant had postauricular erythema and edema, irritability and anorexia.\n- She was treated with IV meropenem and vancomycin for four weeks.\n- A mastoidectomy found mastoid cells filled with granulation tissue and about 2 mL of pus, which fits acute mastoiditis with abscess.\n- The condition that occasioned the admission and was treated was the mastoiditis, not the congenital atresia.\n\n**Coding notes**\n- H70.0 includes mastoid abscess and empyema. A subperiosteal abscess would still fall under H70.0 and would not need a separate code.\n- Q16.1 (congenital absence, atresia and stricture of the auditory canal, external) would be an additional diagnosis. It is the underlying anomaly and likely predisposed her to the infection. The auricular tag could be coded with Q17.0 (accessory auricle), but that is optional.\n- If culture identified an organism, add a code from B95\u2013B96, for example B95.6 for Staphylococcus aureus. The organism is not given here.\n- The mastoidectomy is coded separately under the Australian Classification of Health Interventions (ACHI), not ICD-10-AM.\n\n**Principal diagnosis: H70.0 Acute mastoiditis**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 511,
+    "output_tokens": 499
+  },
+  "seconds": 0.0
+}

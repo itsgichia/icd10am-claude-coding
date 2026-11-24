@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "few_shot_three",
+  "record_id": "de62e271a8a2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nHospital course:\nHospital Course: \n\nThe patient, a 55-year-old female with a history of gastroesophageal reflux disease, high cholesterol, acne, depression, and history of cholecystectomy, was admitted to the hospital after presenting to the emergency room with abdominal pain and low-grade fever. The patient denied alcoholism and reported no recent history of insect bite. The patient stated that she started taking isotretinoin a month ago, which was prescribed by a dermatologist for severe acne. The patient was found to have mild acute pancreatitis. The patient was treated with bowel rest, intravenous fluid, and prescribed intravenous narcotic pain medications for pain control. Isotretinoin was discontinued, and the patient was advised not to retake it. The patient improved over the next few days and was discharged home in stable condition. \nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course: \n\nThe patient was admitted to the hospital with a diagnosis of acute pancreatitis, secondary to hypertriglyceridemia, and was treated with supportive measures, including bowel rest and intravenous hydration. The patient's acute pancreatitis improved over the course of the hospitalization, and she was subsequently discharged home in stable condition. \n\nTreatment: \n\nThe patient was treated with bowel rest, intravenous hydration, and intravenous narcotic pain medications for pain control. Isotretinoin was discontinued. \n\nFollow-Up: \n\nThe patient was advised to follow-up with her primary care physician for ongoing management of her hypertriglyceridemia.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "**K85**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 975,
+    "output_tokens": 313
+  },
+  "seconds": 0.0
+}

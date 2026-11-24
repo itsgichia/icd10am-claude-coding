@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "0cfa054dc94b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Identification:\n24-year-old female with chronic myeloid leukemia (CML) presenting with multiple neck masses, fever, anemia, and profound thrombocytopenia.\n\nHospital Course:\nThe patient was initially diagnosed with CML based on bone marrow (BM) smear image, cytogenetic karyotype, and the BCR/ABL fusion transcript. She was treated with hydroxyurea and then imatinib with some success. However, she was readmitted to the hospital with multiple lymphadenopathies and progressive swelling, indicating blast crisis involving T cells. The BM showed marked hyperplasia with more than 20% blasts. The patient was treated with dasatinib and showed a significant decrease in the WBC. However, she stopped taking the medication and died two months after blast crisis treatment.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient was treated with hydroxyurea, then imatinib (400mg/day), and finally, dasatinib. The dasatinib treatment showed a significant decrease in the WBC. However, the patient stopped taking the medication and died two months after blast crisis treatment.\n\nFollow-up:\nThe patient died two months after blast crisis treatment.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible for this admission is CML in blast crisis, with lymphadenopathy, fever, anemia and thrombocytopenia as manifestations of it. In ICD-10-AM, chronic myeloid leukaemia is classified to C92.1 (Chronic myeloid leukaemia). Blast crisis of CML is not classified as acute leukaemia. The Index entry \"Leukaemia, myeloid, chronic, blast crisis\" goes to C92.1, and \"blast phase/transformation\" of CML also goes to C92.1 (in ICD-10-AM 8th edition and later, C92.1 is a 4th-character category, with \"in blast crisis\" indexed to C92.1). The three-character category is therefore C92.\n\nThe blast crisis involves T cells, which could suggest lymphoid blast transformation. The coding convention still keeps blast transformation of CML in C92.1, since the underlying disease is CML.\n\nCODE: C92",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 637,
+    "output_tokens": 318
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "d2a5947b1fed",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: (patient's name)\nAge: 84 years old\nGender: Female\nAdmission Date: (date of admission)\nDischarge Date: (date of discharge)\nLength of Stay: (number of days of hospital stay)\nClinical Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted due to her underlying medical conditions including type 2 diabetes and hypertension. She also had a history of amblyopia OD and a resolved branch retinal vein occlusion (BRVO) in the left eye. During her hospital stay, she was treated with Eyefolate\u2122 capsules and no further complications were reported during the course of treatment.\n\nClinical Progress:\nIn October 2013, the patient's best corrected visual acuity (BCVA) was 20/150 OD and 20/25 OS. The OS fundus photo showed a large macular aneurysm (MA) in the superior temporal region with exudates. After being prescribed the Eyefolate\u2122 capsules, the BCVA of the left eye improved to 20/20 in August 2014. Further improvement was seen in December 2014 when the large exudates almost completely resolved in OS (Fig. b). In January 2016, the BCVA was 20/400 OD and 20/25 OS, and the MA was resolved as shown in the OS fundus photo (Fig. c) during 2016.\n\nFollow-up:\nThe patient was discharged in a stable condition with instructions to continue taking prescribed medications and regular follow-up appointments with her primary care physician to monitor her diabetes and hypertension. A referral to an ophthalmologist was also recommended to monitor her vision and perpetuate the effectiveness of the treatment."
+      }
+    ]
+  },
+  "text": "The record does not state a definitive principal diagnosis, so the code below is my best inference from the clinical picture.\n\n**Most likely principal diagnosis: retinal macroaneurysm with exudates in the left eye**\n\nThe treatment and follow-up were directed at a large macular aneurysm (arterial macroaneurysm) with exudates in the left eye. It was treated with Eyefolate and resolved. The admission statement mentions diabetes and hypertension, but the care described was for the eye lesion.\n\n**Suggested code: H35.0 Background retinopathy and retinal vascular changes**\n\nICD-10-AM has no specific code for retinal macroaneurysm. It is indexed to H35.0, and the specific subcode is **H35.08 Other retinal vascular changes**, which I would use here. H35.0 is the category and H35.08 is the more specific option.\n\n**Points to consider**\n- If the clinician documents the lesion as diabetic retinopathy, the code would change to **E11.3- (type 2 diabetes with ophthalmic complication)**, for example E11.31 or E11.39, with the matching H36.0 manifestation if applicable. Nothing in the summary states this link, so I would not assume it.\n- Hypertensive retinopathy (H35.0 with I10) is another possible alternative. It would also need explicit documentation.\n- Additional codes:\n  - E11.9 (type 2 diabetes without complication), if no diabetic complication is documented\n  - I10 (hypertension)\n  - H53.0 (amblyopia ex anopsia, OD)\n  - Z86.7 or a similar history code for the resolved BRVO. The history code needs coder verification, because the ICD-10-AM Z-code for personal history of retinal vascular occlusion is not clearly defined.\n\n**Recommendation:** Query the clinician to confirm the final diagnosis, since the \"Clinical Diagnosis\" section was withheld. Until then, assign **H35.08** as the principal diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 608,
+    "output_tokens": 656
+  },
+  "seconds": 0.0
+}

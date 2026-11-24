@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "f35b776271f2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nAdmission Date: November 2013\nDischarge Date: January 2017\nLength of Stay: 3 years and 2 months\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe 52-year-old male patient was diagnosed with a left temporal GBM in November 2013 after he presented with memory deficits and aphasia. He underwent standard radiation and temozolomide treatment initially. At the time of ketogenic diet therapy, the patient was on fifth-line treatment for recurrent GBM, which included the FDA-approved antiangiogenic therapy bevacizumab and irinotecan. Due to nausea, headaches, and fatigue, the patient started a ketogenic diet for 3.5 months. During the diet period, the patient was able to add physical exercise to his routine along with dance lessons. After discontinuation of the diet, the patient reported worsening symptoms, including difficulty reading and decreased short term memory. The patient's symptoms continued to progress, and he passed away in January 2017.\n\nClinical Findings:\nDuring the hospital course, the patient reported memory deficits and aphasia. The initial treatment included standard radiation and temozolomide, followed by the antiangiogenic therapy bevacizumab and irinotecan. The patient was then switched to a ketogenic diet for 3.5 months, which resulted in increased physical activity, but also cravings for carbs and sweets. The patient's symptoms worsened after discontinuation of the diet, and his disease continued to progress until his death in January 2017.\n\nCondition at Discharge:\nThe patient passed away due to the progression of his left temporal GBM.\n\nFollow-Up:\nThe patient passed away in January 2017, and no further follow-up was possible."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: C71.2 \u2013 Malignant neoplasm of brain, temporal lobe**\n\n**Rationale**\n- The condition chiefly responsible for the episode of care is the **left temporal glioblastoma multiforme (GBM)**. It was diagnosed at admission, treated throughout the stay (radiotherapy, temozolomide, bevacizumab/irinotecan, ketogenic diet), and its progression caused the patient's death.\n- GBM is a primary malignant brain tumour. Because it is confined to the temporal lobe, the site-specific code is **C71.2**. C71.8 (overlapping lesion) and C71.9 (unspecified) do not apply.\n- Laterality (left) does not change the code in ICD-10-AM.\n- The term \"recurrent\" GBM still codes to the primary site, since the recurrence is at the same site. It is not a secondary neoplasm.\n\n**Associated codes to consider**\n- **Morphology: M9440/3** \u2013 Glioblastoma NOS (ICD-O-3, used in ICD-10-AM).\n- **Symptoms such as aphasia (R47.0) and memory deficit (R41.3)** are integral to the tumour. They would generally not be coded separately unless the documentation shows they need specific management that meets ACS 0002 criteria for additional diagnoses.\n- **Drug adverse effects** such as nausea and fatigue may be coded only if documented as caused by chemotherapy and meeting additional diagnosis criteria. They would be paired with the appropriate Y43.- external cause code.\n- Treatments (chemotherapy, radiotherapy) would be captured with ACHI procedure codes.\n\nPlease verify against your current ICD-10-AM edition and local coding standards, because this summary has a very long admission and an unusual structure.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 618,
+    "output_tokens": 664
+  },
+  "seconds": 0.0
+}

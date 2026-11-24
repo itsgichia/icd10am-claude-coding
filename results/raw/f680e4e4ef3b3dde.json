@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "few_shot_six",
+  "record_id": "63ad1e03f360",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nExample 4\nHospital course: An 81-year-old woman was brought in after a fall at home. She could not weight-bear and the right leg was shortened and externally rotated. A pelvic radiograph showed a displaced subcapital fracture of the right femoral neck. She underwent hemiarthroplasty on day one.\nAnswer: S72\n\nExample 5\nHospital course: A 19-year-old man presented with 18 hours of periumbilical pain that migrated to the right iliac fossa, with anorexia and a low-grade fever. There was guarding at McBurney's point and the white cell count was 15.2. Laparoscopy confirmed an inflamed, non-perforated appendix.\nAnswer: K35\n\nExample 6\nHospital course: A 64-year-old woman with a history of oestrogen-receptor-positive breast carcinoma treated five years earlier presented with progressive thoracic back pain. Magnetic resonance imaging showed deposits in T7 and T9 with no cord compression. Biopsy confirmed deposits of breast origin and she received palliative radiotherapy to the spine.\nAnswer: C79\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nPatient Age: 32\nAdmission Date: [redacted]\nDischarge Date: [redacted]\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to the hospital with shortness of breath and was found to be COVID-19 positive. Upon examination, he was tachycardic and tachypneic with normotensive blood pressure and oxygen saturation at 92% on room air. Laboratory results showed increased levels of creatinine, ferritin, C-reactive protein, and D-dimer. A chest x-ray did not show any acute disease process, but a thoracic CT scan angiography showed a large saddle embolism extending into segmental branches in both lower lobes and the right middle lobe. Bedside echocardiogram revealed a dilated right ventricle consistent with right heart strain. He was transferred to the intensive care unit due to multiple episodes of hemoptysis and worsening tachypnea. The vascular surgeons performed mechanical embolectomy, and a large thrombus was removed. The patient remained clinically stable post-procedure. The patient was started on heparin and later transitioned to rivaroxaban for treatment. \n\nHospital Course Summary:\nA 32-year-old male with no prior medical history presented to the hospital with shortness of breath and was found to be COVID-19 positive. Extensive testing revealed a submassive pulmonary embolism leading to dilated right ventricle consistent with right heart strain. He underwent successful mechanical embolectomy and was discharged after a comprehensive treatment plan was established.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "**I26**\n\nThe admission centred on the large saddle pulmonary embolism with right heart strain, which needed ICU care and mechanical embolectomy. I26 is the pulmonary embolism category. Under ICD-10-AM practice, as I understand the Australian guidance, COVID-19 (U07.1) is coded after its manifestations rather than as the principal diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1365,
+    "output_tokens": 319
+  },
+  "seconds": 0.0
+}

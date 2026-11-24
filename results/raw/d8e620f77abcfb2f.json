@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "1a07866d60ba",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient Name: Not Specified\nGender: Male\nAge: 50\nDate of Admission: Not Specified\nDate of Discharge: Not Specified\nDate of Dictation: Not Specified\n\nHOSPITAL COURSE:\n\nThe patient is a 50-year-old male who presented with hoarseness and shortness of breath. The patient was diagnosed with Diffuse Large B-Cell Lymphoma (DLBCL), stage IV, after Fiberoptic Bronchoscopy revealed intratracheal mass in right main bronchi with complete right mainstem bronchus occlusion. The patient underwent several treatment regimens, including Dose Adjusted R-EPOCH therapy, R2-CHOP-I therapy, PD-1 inhibitor, DNMTi and the combination of decitabine, sintilimab plus HDACi (Chidamide). The patient experienced myelosuppression and achieved partial remission.\n\nThe patient was treated using venetoclax in combination with Chidamide, Sintilimab and radiotherapy after the PD was seen in repeat PET-CT. The patient experienced a decrease in lesion size and FDG uptake. The patient later underwent syngeneic stem cell transplantation and achieved CR.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\n\n1. It is important to continue the follow-up care with your oncologist.\n2. Please continue to take medications as prescribed and follow the recommended dosing schedule.\n3. Follow the recommended diet and nutrition plan given by your oncologist.\n4. It is important to stay hydrated to the recommended level of fluid intake.\n5. Follow the recommended activity guidelines set by your oncologist.\n6. Please report any side effects or unusual symptoms to your oncologist immediately.\n7. Follow the recommendations for required tests and imaging studies.\n8. Follow recommendations for self-care and regular follow-up appointments.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The principal diagnosis is diffuse large B-cell lymphoma (DLBCL), stage IV.\n\n1. **Chapter letter.** The presenting complaints were hoarseness and shortness of breath. Investigation found that these were caused by a lymphoma mass blocking the right main bronchus. That makes the lymphoma, not the respiratory symptoms, the condition chiefly responsible for the episode. Lymphoma is a malignant neoplasm, so the chapter letter is **C**.\n\n2. **Two digits.** In ICD-10-AM, diffuse large B-cell lymphoma falls under category **C83**, non-follicular lymphoma (subcode C83.3).\n\n3. **Codes not chosen.**\n   - The tracheal and bronchial involvement is part of the stage IV lymphoma, so it is not coded as a separate respiratory or lung cancer code.\n   - Myelosuppression is a complication of the chemotherapy, not the principal diagnosis.\n   - The treatments (chemotherapy regimens, radiotherapy, stem cell transplant) are procedures, so they are not the principal diagnosis.\n\nCODE: C83",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1213,
+    "output_tokens": 383
+  },
+  "seconds": 0.0
+}

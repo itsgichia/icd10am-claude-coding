@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "c59cbdc54125",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\n\nThe patient was admitted for screening mammography x-ray which showed a nodule of about 2 cm against the external quadrant of the right breast. The patient underwent a quadrantectomy of the right breast with removal of 2 cm neoplastic nodule and three ipsilateral sentinel lymph nodes. Follow-up tests showed a moderately differentiated invasive ductal carcinoma containing osteoclast-like giant cells. The patient was treated with adjuvant chemotherapy and hormone therapy with luteinizing hormone-releasing hormone (LHRH) analogue and exemestane. The patient will also undergo radiotherapy treatment on the residual breast after chemotherapy.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nAdjuvant chemotherapy with Docetaxel-Cyclophosphamide q21 scheme for 4 cycles followed by hormone therapy with luteinizing hormone-releasing hormone (LHRH) analogue and exemestane.\n\nDischarge Instructions:\n\nThe patient should continue with hormone therapy and attend follow-up appointments to monitor their condition. Patients should be aware of the benefits and risks related to the therapeutic proposals and follow the instructions as prescribed."
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis code: C50.4 \u2013 Malignant neoplasm of upper-outer quadrant of breast**\n\n**Rationale**\n- The pathology showed a moderately differentiated invasive ductal carcinoma with osteoclast-like giant cells. This is a primary malignant breast tumour, so it is coded to category C50 and not to a screening Z code.\n- The nodule was in the \"external quadrant\" of the right breast. This most likely means the upper-outer quadrant, which is C50.4. If the record does not specify upper or lower, C50.8 (overlapping lesion) or C50.9 (unspecified) would apply instead.\n- Laterality is not captured in ICD-10-AM C50 codes. The right side would only be recorded in free text or in the clinical documentation.\n- The morphology is coded separately with ICD-O. Invasive ductal carcinoma is M8500/3. Variants with osteoclast-like giant cells are usually coded as M8035/3 (carcinoma with osteoclast-like giant cells).\n\n**Other points**\n- The screening mammography was the route by which the cancer was found. Once the malignancy is confirmed, the cancer is the principal diagnosis for the episode, and Z12.31 is not needed.\n- Chemotherapy and hormone therapy sessions are normally coded as Z51.1 (encounter for antineoplastic chemotherapy) when the episode of care is for the treatment itself. For the surgical admission (quadrantectomy with sentinel node biopsy), the principal diagnosis stays C50.4.\n- Secondary codes should be added if the record documents nodal involvement (C77.3) or hormone receptor status.\n\nIf the surgeon documented a different quadrant, the code changes to match it: C50.1 central, C50.2 upper-inner, C50.3 lower-inner, C50.5 lower-outer.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 465,
+    "output_tokens": 621
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "dcda545ce1c2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 19-year-old male\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted to the hospital with severe dyspnea and diagnosed with elevated cardiac biomarkers. The initial blood pressure was high. The patient denied angina pectoris, and the ECG showed no notable abnormality. The transthoracic echocardiography showed impaired left ventricular function with basal hypokinesia. Treatment with medications was initiated, and the cardiac MRI showed no evidence of acute myocarditis. Endocarditis was excluded, and the normal blood levels of catecholamines excluded pheochromocytoma.\n\nAfter the acute phase, the patient complained of vertigo and neurological examination showed other neurological deficits. The brain and spinal MRI showed various lesions, including a prominent pontomedullary lesion. The CSF analysis revealed a lymphocytic pleocytosis, and serum neurofilament levels were elevated. Screening for other autoimmune or infectious diseases was negative, and serum-Aquaporin-4- and -MOG-antibodies were negative. The patient was diagnosed with MS, and medication with intravenous methylprednisolone was initiated. During the hospital stay, the patient showed improvement and no focal signs during discharge.\n\nFollow-up:\n\nThe patient was prescribed disease-modifying medication and showed no abnormalities in the follow-up exams. The patient showed no events suspicious of a relapse in the first 6 months of follow-up."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: G35 Multiple sclerosis**\n\nIn ICD-10-AM, G35 is a single code with no further subdivisions in the base classification. Some editions of the Australian Modification add a fifth character for the type of MS, but the core code is G35.\n\n**Rationale**\n\n- The case resembles a reported presentation of MS with a stress-cardiomyopathy-like (Takotsubo-like) picture. This is likely due to a brainstem (pontomedullary/area postrema) lesion, with acute dyspnea, elevated cardiac biomarkers, and basal hypokinesia on echocardiography.\n- The cardiac workup excluded myocarditis, endocarditis, and pheochromocytoma.\n- The condition established after study as chiefly responsible for the admission was MS, confirmed by:\n  - MRI showing brain and spinal lesions\n  - CSF lymphocytic pleocytosis\n  - elevated neurofilament levels\n  - negative AQP4 and MOG antibodies\n  - exclusion of other autoimmune and infectious causes\n  - treatment with IV methylprednisolone and then disease-modifying therapy\n\n**Possible additional codes**\n\n- A cardiac code for the stress-cardiomyopathy-like presentation could be added as a secondary diagnosis. For example, I51.81 (Takotsubo syndrome) is used in ICD-10-CM. In ICD-10-AM, a stress-cardiomyopathy code such as I51.8 or I42.8 would be chosen according to the coder's index lookup and local guidance.\n- Vertigo is a symptom integral to the MS and would not be coded separately.\n\n**Caveat:** The discharge summary's diagnosis was withheld. If the clinician documented the cardiac event as the main reason for admission, the sequencing could differ. Based on the narrative, though, G35 is the most appropriate principal diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 555,
+    "output_tokens": 635
+  },
+  "seconds": 0.0
+}

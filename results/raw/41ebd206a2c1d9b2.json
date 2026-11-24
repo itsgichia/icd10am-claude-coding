@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "4c037e919f43",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course Summary:\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe 54-year-old male was admitted with a diagnosis of left hemisphere ischemic stroke. The patient had significant muscle atrophy resulting in limited voluntary motion in the arm and hand and severe impairment as indicated by the patient's Chedoke-McMaster Stroke Assessment hand score of 2. The patient did not exhibit any cognitive impairments.\n\nTreatment:\nThe patient underwent a comprehensive treatment plan during their stay at the hospital. The treatment plan included rehabilitation sessions aimed at improving muscle strength and voluntary motion in the arm and hand. \n\nOutcome:\nThe patient's treatment plan resulted in gradual improvement in muscle strength and voluntary motion in the arm and hand. At the time of discharge, the patient's average ratio of maximum finger forces between hands was 0.076. Further follow-up sessions are recommended for continued improvement.\n\nFollow-Up:\nThe patient was discharged with a comprehensive follow-up plan. The patient's progress will be monitored by the treating physician."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: I63.9 \u2013 Cerebral infarction, unspecified**\n\n**Rationale:**\n- The documented condition is a left hemisphere ischemic stroke, which is a cerebral infarction (I63.-).\n- The record does not give the cause (thrombosis, embolism, or small vessel occlusion) or the specific artery involved. That rules out the more specific codes such as I63.0\u2013I63.5 and leaves I63.9.\n\n**Important caveats:**\n1. **Rehabilitation admission.** The stay appears to have been mainly for rehabilitation, with therapy sessions, strength and motion outcomes, and follow-up. If so, ICD-10-AM/ACHI coding standards would normally make the principal diagnosis the condition being rehabilitated, not the acute stroke.\n   - **Z50.\u2013 (Care involving use of rehabilitation procedures)**, such as Z50.1 (Other physical therapy), would be the principal diagnosis.\n   - The residual deficit would be a secondary diagnosis, for example **I69.3-** (sequelae of cerebral infarction) or the specific deficit such as hemiparesis.\n   - Under Australian Coding Standards, if the stroke deficits are still present after the acute episode, they are coded as sequelae (I69.-) and not as an acute I63.\n2. **Additional codes.** Muscle atrophy and limited arm and hand motion could be coded as additional diagnoses. Examples are monoplegia or hemiplegia of the upper limb (G83.2 / G81.-) or muscle wasting (M62.5-), depending on the documentation.\n3. **Missing information.** The admitting diagnosis section is withheld, and the record does not say whether this was the acute stroke admission or a later rehabilitation admission.\n\n**Answer:** If this is the acute stroke episode, the code is **I63.9**. If this is a rehabilitation admission, use **Z50.1** as principal, with **I69.3-** as secondary.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 456,
+    "output_tokens": 662
+  },
+  "seconds": 0.0
+}

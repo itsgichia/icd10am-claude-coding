@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "cot_then_extract",
+  "record_id": "14612a31f7d9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\n\nPatient Name: [PATIENT NAME]\nMedical Record Number: [MRN]\n\nHospital Course:\nThe patient is a 40-year-old female who was admitted with a complaint of lower extremity numbness and tingling. She subsequently developed left facial weakness, which had been previously diagnosed as Bell's Palsy. Neurological examination revealed bilateral decreased sensation to light touch, 4/5 strength in upper extremities, and 3/5 strength in lower extremities with no elicited reflex at any location. On day two of admission, she developed bilateral ptosis, urinary incontinence, and respiratory failure. On day three, the patient's ptosis worsened, and she also developed ophthalmoplegia. She was diagnosed with anti-GD1a antibody-positive Guillain-Barr\u00e9 Syndrome. The patient received five days of plasma exchange, IVIG, and high-dose solumedrol. Her condition began to improve on day seven and she was extubated on day eight. The vertical nystagmus was the first deficit to resolve, and the strength of her extremities recovered to 4+/5 in the upper extremities and 4-/5 in the lower extremities. She was transferred to an acute rehab unit after 20 days of hospitalization for continued management and rehabilitation.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Medications:\nNone\n\nDischarge Instructions:\nFollow up with primary care provider in 1-2 weeks\nReturn to work part-time as tolerated\nContinue with physical therapy and rehabilitation program\nRefrain from strenuous activity and prolonged sitting\nTake care to prevent falls\nIf symptoms worsen, notify your healthcare provider immediately\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The admission is chiefly for Guillain-Barr\u00e9 syndrome (anti-GD1a positive), a demyelinating polyneuropathy, rather than its respiratory failure complication. GBS belongs to chapter G, diseases of the nervous system. Its three-character category is G61, inflammatory polyneuropathy (G61.0 Guillain-Barr\u00e9 syndrome).\n\nCODE: G61",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1197,
+    "output_tokens": 131
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "context_rich_structure",
+  "record_id": "b4c0fcccee5f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nHospital Course Summary\n\nPatient: [Name]\n\nAdmission Date: [Date]\n\nDischarge Date: [Date]\nAdmission Diagnosis: [diagnosis section withheld]Discharge Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted to our clinic with chronic diarrhea and intermittent abdominal pain. Upon physical examination and review of medical history, a history of gastrointestinal hemorrhage due to peptic ulcer was noted. Abnormal laboratory findings were also identified, including elevated white blood cell count, C-reactive protein, and erythrocyte sedimentation rate. Additionally, during the colonoscopy, colitis was detected in the biopsy. Imaging, including ultrasonography and CT, revealed inflammation of intestinal loops, the presence of omental inflammatory thickening, and a fluid collection in the pericaecal area. \n\nGiven these findings, the patient was hydrated and prescribed empiric cefixime and metronidazole for treatment. Pain was reduced following drainage of purulent fluid, antibiotics and hydration, and laboratory values returned to within normal limits. The patient was discharged from the hospital and scheduled for elective appendectomy six weeks later.\n\nDischarge Instructions:\n\nThe patient is advised to continue the prescribed antibiotics and to carefully follow the instructions provided upon discharge. The patient should also seek medical attention if symptoms recur or worsen. It is important for the patient to avoid potentially harmful foods and drinks, and to follow a healthy and balanced diet while receiving ongoing treatment. Follow-up appointments are scheduled to monitor the patient's condition and progress, and to determine the ongoing course of treatment as necessary.\n\nSigned by: [Name of responsible medical professional]\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: K35**\n\nThe episode is best explained as an appendiceal (pericaecal) abscess managed conservatively: purulent pericaecal collection, omental inflammation, and response to drainage and antibiotics, with an elective appendectomy planned six weeks later. That makes acute appendicitis (K35) the condition chiefly responsible for the admission. The peptic ulcer history is a comorbidity, the diarrhoea and abdominal pain are presenting symptoms, and the drainage and colonoscopy are procedures, so none of them is the principal diagnosis.\n\nThis is an inference from the summary, which withholds the formal diagnosis sections. The colitis on biopsy could point toward an inflammatory bowel disease such as Crohn's disease (K50), so the coder should confirm against the full discharge diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1142,
+    "output_tokens": 973
+  },
+  "seconds": 0.0
+}

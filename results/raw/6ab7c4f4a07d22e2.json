@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "json_output",
+  "record_id": "7868c7a114d4",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDISCHARGE SUMMARY:\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient presented with low back pain that radiated down the right leg. She underwent L4\u2013L5 microdecompression, which alleviated her pain. However, at approximately 12 months after surgery, her pain began to increase, and she was treated with ALIF at L4\u2013L5 and L5\u2013S1. At 2 months post-operatively, she developed pain with radiation down both legs and difficulty with walking, and a fracture through the anterosuperior end plate of S1 was discovered.\n\nTreatment:\nThe patient underwent exploration of the posterior fusion and removal of instrumentation; revision and decompression of L5\u2013S1; instrumentation placement at the L4\u2013pelvis region; and posterolateral arthrodesis at L4\u2013L5 and L5\u2013S1, with application of pelvic instrumentation using the S2AI technique.\n\nCondition on Discharge:\nThe patient reported 100% improvement in low back pain with some low back soreness, the ability to walk farther, and 80% improvement in neurologic symptoms in the left lower extremity.\n\nInstructions:\nThe patient was instructed to follow-up with her primary care physician for ongoing management of her condition. She was also advised on proper nutrition and exercise to help manage her osteoporosis, as well as proper posture and lifting techniques to prevent further injury to her back.\n\nFollow-up:\nFollow-up appointments were scheduled with the patient's primary care physician and treating physician to monitor her progress and adjust her treatment plan as needed.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"M80\", \"condition\": \"Osteoporosis with pathological fracture (S1 end-plate fracture)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 677,
+    "output_tokens": 651
+  },
+  "seconds": 0.0
+}

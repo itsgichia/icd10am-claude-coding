@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "b7a4b7cf3ee1",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary\n\nPatient Name: [REDACTED]\n\nAge: 34 years\n\nSex: Female\n\nMedical Record Number: [REDACTED]\n\nAdmission Date: [REDACTED]\n\nDischarge Date: [REDACTED]\n\nHospital Course:\n\nThe patient was admitted to the emergency unit with complaints of moderate lower abdominal pain predominantly on the right side for the past 3 weeks. She did not present with any other symptoms such as fever, inappetence, nausea, or vomiting. A total abdomen ultrasonography (USG) was conducted, which revealed that the patient was in the second trimester of pregnancy without any evident alterations related to the pregnant uterus, the placenta, or the fetus. However, the iliac fossa was directed and revealed that the caecal appendix was thicker in the body portion, reaching a maximal transverse diameter of 9.2mm, which is above normal levels. The MRI results also corroborated the presence of lipomatosis in the appendix.\n\nThe patient was discharged after being prescribed analgesia, and she did not report any return of symptoms during follow-up.\nDiagnosis: [diagnosis section withheld]\nCondition at Discharge:\n \nAt the time of discharge, the patient was stable, and her vital signs were normal.\n\nDischarge Medications:\n\nThe patient was not prescribed any medication at the time of her discharge.\n\nFollow-Up:\n\nThe patient was advised to continue her follow-up visits to her obstetrician and/or primary care physician.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The patient is pregnant (second trimester) and was admitted with abdominal pain. Imaging showed lipomatosis of the appendix, which is a benign fatty lesion. The condition managed was in the appendix, and the pregnancy affected it only incidentally.\n\nIn ICD-10-AM, a pregnant patient with a condition that is not part of the pregnancy but complicates it is usually coded to O99.- (other maternal diseases classifiable elsewhere but complicating pregnancy). For digestive diseases, the code is O99.6, \"Diseases of the digestive system complicating pregnancy, childbirth and the puerperium.\" Coding rules state that if the pregnancy is incidental to the condition being treated, then the O code is not used. Here the pregnancy is not stated to be incidental, and the obstetric follow-up was advised, so the O chapter applies.\n\nThe alternative is to code the appendiceal lipomatosis itself. Lipomatosis of the appendix is a benign lipomatous neoplasm of the appendix, coded D17.- (benign lipomatous neoplasm), likely D17.4 or D17.5 for intra-abdominal organs. Alternatively, it could be K38.8 (other specified diseases of appendix). The pain was the reason for the admission, and the final diagnosis was probably \"appendiceal lipomatosis\" in a pregnant woman.\n\nTaking the O99 rule, the principal diagnosis would be O99.6. Pregnancy is generally treated as the principal diagnosis in this case. However, benign neoplasms do not fall under O99.6, since they are in the D chapter. Under the O99 category, the neoplasm would be coded to O99.8 (other specified diseases and conditions complicating pregnancy), or to O9A for related conditions. The Australian guidance sends neoplasms to O99.8.\n\nConsidering all of this, the choice is between O99 and D17 or K38. The source case was likely coded as the benign lipomatous neoplasm, because the diagnosis was \"lipomatosis of the appendix.\" Given the pregnancy and the ICD-10-AM sequencing rules, I will go with O99.\n\nCODE: O99",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1028,
+    "output_tokens": 715
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "dc843e96c2a0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Unspecified\nMedical Record Number: Unspecified\nDate of Admission: Unspecified\nDate of Discharge: Unspecified \n\nHospital Course:\nThe patient, a 68-year-old female presented to the emergency department with complaints of sudden onset of shortness of breath, chest pain, orthopnea, and paroxysmal nocturnal dyspnea. The notably past medical history includes hypertension, high cholesterol, chronic kidney disease stage 3, and hereditary hemorrhagic telangiectasia (HHT). Initial vital signs and laboratory investigations confirms acute systolic heart failure with markedly elevated BNP levels. Following prompt medical management, the patient demonstrated symptomatic improvement and was started on guideline-directed medical therapy including beta-blocker, ACE inhibitor, aldosterone antagonist and an oral diuretic. Subsequent left and right heart catheterization reveals widely patent coronary vessels, elevated pulmonary capillary wedge pressure, and elevated left ventricular end-diastolic pressure. The patient continued to attend regular bevacizumab infusions with her haematologist as this was not thought to be the cause of her cardiomyopathy at the time. Unfortunately, the patient developed recurrent episodes of flash pulmonary edema deemed to be due to medication non-compliance and subsequently experienced sudden onset of chest pain and shortness of breath at home followed by ventricular fibrillation related cardiac arrest which required prolonged resuscitation attempts leading to therapeutic hypothermia, but eventually passed away 3 days later. \nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Instructions:\n1. The patient was discharged to their family to pursue necessary funeral arrangements.\n2. No outpatient follow-up is needed.\n\nDischarge Medications:\nNone. \n\nFollow-up:\nThe patient did not survive.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "I50",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 787,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "8d13e48b6d14",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\n\nDate of Admission: [redacted]\n\nDate of Discharge: [redacted]\n\nReason for Admission:\nThe patient was admitted to the emergency department due to a 12-day history of cyclical fevers with vague abdominal pain.\n\nHospital Course:\nInitial vital signs showed a blood pressure of 149/80 mmHg, a heart rate of 107 beats per minute, a temperature of 99.2\u00baF, a respiratory rate of 16, and a pulse oximetry reading of 100% on room air. Laboratory values showed a drop in hemoglobin and mild leukocytosis with no evidence of urinary tract infection. A computed tomography (CT) of the abdomen and pelvis with IV contrast showed multiple liver abscesses, septic thrombophlebitis of the portal system, and evidence of ruptured appendicitis. The patient was started on broad-spectrum IV antibiotics and underwent IR-guided abscess drainage.\n\nTreatment:\nThe patient was treated with IV antibiotics and underwent abscess drainage.\n\nCondition at Discharge:\nThe patient's condition improved significantly after treatment.\n\nFollow-Up:\nFollow-up appointments were scheduled with the patient's primary care provider for further evaluation and treatment.\n\nRestrictions:\nThe patient was advised to avoid strenuous activities until further notice.\n\nMedications:\nNo medications were prescribed at the time of discharge.\n\nProcedures:\nThe patient underwent IR-guided abscess drainage and interval appendectomy.\nDiagnosis: [diagnosis section withheld]\nSummary:\nThe patient presented to the emergency department with a 12-day history of cyclical fevers with vague abdominal pain. Imaging studies revealed the presence of liver abscesses, septic thrombophlebitis of the portal system, and ruptured appendicitis. The patient was treated with IV antibiotics and underwent abscess drainage and interval appendectomy. The patient's condition improved significantly and follow-up appointments were scheduled with the primary care provider.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The underlying condition is ruptured appendicitis, which led to pylephlebitis (septic thrombophlebitis of the portal vein) and liver abscesses. Under ICD-10 conventions, the principal diagnosis is the condition chiefly responsible for the admission, and that is the underlying cause rather than its complications.\n\nThe candidate codes are:\n- K35 (acute appendicitis), including K35.3 or K35.2 for appendicitis with peritonitis or perforation.\n- K75.0 (liver abscess).\n- K65 (peritonitis).\n- K67.\n\nK35 has the strongest claim. The liver abscesses and portal vein thrombophlebitis (K75.1 phlebitis of the portal vein) are complications of the ruptured appendix. The appendicitis was the source, was ruptured, and an interval appendectomy was done. The admission was driven by the abscesses and drained, but the usual coding approach is to code the underlying cause when a manifestation arises directly from it. Since K35 is categorised as appendicitis with generalised peritonitis, localised peritonitis, or abscess, the appendiceal origin fits it better than the liver code.\n\nCODE: K35",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1228,
+    "output_tokens": 390
+  },
+  "seconds": 0.0
+}

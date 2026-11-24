@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "989391f9254d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient:\n\u2022 Name: Not provided\n\u2022 Age: 24-year-old\n\u2022 Gender: Male\n\nHospitalization Dates:\n\u2022 Admission: [not provided]\n\u2022 Discharge: POD #20\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\u2022 Patient underwent uncomplicated orthotopic liver transplantation after multiple thoracenteses for symtomatic relief of persistent right-sided hepatic hydrothorax.\n\u2022 Patient presented with respiratory distress and left-sided infiltrates consistent with pneumonia on POD #5 after OLT. Patient was started on antibiotics and underwent a right-sided therapeutic thoracentesis with removal of 1.3 liters of fluid.\n\u2022 Post-thoracentesis chest imaging revealed a large hydropneumothorax that was treated with a small-bore chest tube.\n\u2022 Diagnostic bronchoscopy was not performed due to the absence of endobronchial obstruction on CT.\n\u2022 Patient was stable without dyspnea and hypoxemia, so video-assisted thoracoscopic surgery was deferred after consultation with thoracic surgery.\n\u2022 Patient was discharged home on POD #20 without supplemental oxygen.\n\u2022 Follow-up chest x-ray 1 month later showed improvement in the hydropneumothorax and a chest x-ray obtained 6 months later showed near-complete re-expansion of the right lung without surgical intervention.\n\nDischarge Instructions:\n\u2022 Follow-up with liver transplant team as needed.\n\u2022 Follow-up with primary care physician for ongoing care."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis is **K74.6, Other and unspecified cirrhosis of liver**, because the admission was for orthotopic liver transplantation for end-stage liver disease with hepatic hydrothorax.\n\nThe summary doesn't name the underlying liver disease, so the code depends on documentation:\n\n- **K74.6** is the default when cirrhosis is documented without a specified cause.\n- **K70.3** (alcoholic cirrhosis) applies if alcohol-related disease is documented.\n- **K72.1** (chronic hepatic failure) may be preferred if the record describes end-stage liver failure as the reason for transplant.\n\nThe complications, including the post-transplant pneumonia, the post-thoracentesis hydropneumothorax, and the hepatic hydrothorax, are secondary diagnoses. The hydropneumothorax was treated with a chest tube and would be coded as a secondary condition. The liver transplant procedure is captured in the procedure coding, not the diagnosis code.\n\nConfirm the exact liver diagnosis against the full medical record and the coding standards in use before final submission.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 587,
+    "output_tokens": 1107
+  },
+  "seconds": 0.0
+}

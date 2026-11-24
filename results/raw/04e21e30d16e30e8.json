@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "4e3e19cc5a80",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [Name]\nMedical Record Number: [Medical Record Number]\nAge: 70\nSex: Male\n\nHOSPITAL COURSE:\n\nThe patient presented to the emergency department with left lower back pain and left flank pain, which had radiated to the left thigh over several days. The patient also had intermittent fever and chills. Upon admission, the patient exhibited drowsiness and was found to have tenderness in the left lower abdomen and swelling in the left thigh, with limited range of motion. Laboratory data indicated leukocytosis, severe coagulopathy, elevated C-reactive protein, hyperlactatemia, and acute kidney injury. CT scans revealed fluid accumulation over the left iliopsoas muscle that extended into the retroperitoneum, left pelvic cavity, and left thigh region, which suggested an iliopsoas abscess and necrotizing fasciitis. Blood culture was performed, and empirical antibiotic therapy was initiated.\n\nDuring the hospital stay, the patient's condition was managed appropriately with antibiotic therapy. The patient's vital signs were monitored regularly, and he was given supportive care. The patient's condition gradually improved, and he no longer exhibited any drowsiness. The patient's swelling in the left thigh improved, and he demonstrated a greater range of motion.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\n\n1. Take medications as prescribed.\n2. Rest and avoid any strenuous activity until cleared by a physician.\n3. Keep the area of swelling in the left thigh clean and dry.\n4. Follow up with a primary care physician or specialist as directed.\n5. Report any new symptoms or side effects to a physician immediately.\n\nDISCHARGE MEDICATIONS:\n\nNone mentioned in the case report\n\nFOLLOW UP:\n\nThe patient will follow up with a primary care physician or specialist as directed.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "A41",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 796,
+    "output_tokens": 403
+  },
+  "seconds": 0.0
+}

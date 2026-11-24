@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "few_shot_six",
+  "record_id": "928d3ff50e4f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nExample 4\nHospital course: An 81-year-old woman was brought in after a fall at home. She could not weight-bear and the right leg was shortened and externally rotated. A pelvic radiograph showed a displaced subcapital fracture of the right femoral neck. She underwent hemiarthroplasty on day one.\nAnswer: S72\n\nExample 5\nHospital course: A 19-year-old man presented with 18 hours of periumbilical pain that migrated to the right iliac fossa, with anorexia and a low-grade fever. There was guarding at McBurney's point and the white cell count was 15.2. Laparoscopy confirmed an inflamed, non-perforated appendix.\nAnswer: K35\n\nExample 6\nHospital course: A 64-year-old woman with a history of oestrogen-receptor-positive breast carcinoma treated five years earlier presented with progressive thoracic back pain. Magnetic resonance imaging showed deposits in T7 and T9 with no cord compression. Biopsy confirmed deposits of breast origin and she received palliative radiotherapy to the spine.\nAnswer: C79\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nGender: Male\nAge: 61 years old\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nDiagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted to the hospital on [REDACTED] with progressively worsening shortness of breath, weakness and fatigue. The patient was diagnosed with aortic valve stenosis, hypertensive heart disease, coronary artery disease, and COPD.\n\nDuring the course of the hospital stay, various tests were performed including cardiac catheterization and transthoracic echocardiography. These tests showed significant stenosis of the proximal and mid-left anterior descending artery, severe aortic valve stenosis with moderate insufficiency, an ejection fraction of 32%, and significant atherosclerotic burden in the ascending and descending aortas and aortic arch.\n\nBased on the results of the tests, the patient underwent minimally invasive aortic valve replacement with a 27 mm\u00b7St. Jude Trifecta stented pericardial bioprosthesis under general endotracheal anesthesia. Standard monitors were used including cerebral oximetry. The procedure was completed without any complications. The postoperative TEE showed that the previously described aortic arch atheroma remained intact.\n\nFollowing the procedure, the patient was monitored closely and his condition gradually improved. The patient did not experience any perioperative stroke events or other complications. The patient was discharged home in a stable condition five days postoperatively.\n\nUpon discharge, the patient was advised to continue taking his medications for hypertension and high cholesterol as prescribed by his doctor. The patient was also advised to avoid smoking and other forms of substance abuse, and to follow a healthy diet and exercise regime. The patient was advised to follow up with his physician as recommended.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is the condition that mainly occasioned the admission and was treated with aortic valve replacement. That is severe aortic valve stenosis with moderate insufficiency.\n\nIn ICD-10-AM, the options are I35 (nonrheumatic aortic valve disorders) and I06 (rheumatic aortic valve disease). Stenosis with insufficiency of unspecified cause is classified to I35, since the aortic valve disorder is not stated to be rheumatic. The patient also has hypertensive heart disease (I11) and coronary artery disease (I25), but the valve replacement was the main treatment, so I35 is the principal diagnosis.\n\n**I35**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1446,
+    "output_tokens": 224
+  },
+  "seconds": 0.0
+}

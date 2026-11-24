@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "3962a9bc2491",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\nDate of Admission: [Redacted]\nDate of Discharge: [Redacted]\nLength of Stay: [Redacted]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient presented with a gradual increase in abdominal girth over the past two years, along with abdominal distension and intermittent nausea for the past six months. The patient also experienced repeated intractable hiccups for two months, leading to the hospital admission. Physical examination revealed a longitudinal surgical scar on the upper abdomen and a swelling of the mass on the left side of the abdomen.\n\nFurther diagnostic investigations were performed, including ultrasonography, computerized tomography (CT), and an isotope kidney scan. These tests revealed the presence of a massive hypoechoic lesion occupying almost the entire abdomen, exerting pressure on the stomach, liver, pancreas, and spleen. Adhesion between the kidney and surrounding organs was evident during the laparoscopy and open simple nephrectomy procedure.\n\nAbout 7.5 liters of hydronephrosis fluid were drained, and the left kidney and upper ureter were successfully removed, resulting in the disappearance of long-lasting hiccups and improvement of the patient's appetite and overall health. After the operation, the patient was observed for six months, during which there was no recurrence of the hiccups.\n\nDischarge Instructions:\nThe patient was discharged with instructions to follow a proper diet and continue with regular follow-up appointments with the healthcare professional.\n\nDictated by: [Redacted]\nSigned electronically by: [Redacted]\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "N13",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 677,
+    "output_tokens": 274
+  },
+  "seconds": 0.0
+}

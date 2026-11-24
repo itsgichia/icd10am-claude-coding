@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "4e30eff810f5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: [Name]\n\nDate of Admission: [Date]\n\nDate of Discharge: [Date]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted to our hospital with persistent fever and diarrhea. The patient had a positive nasopharyngeal swab for severe acute respiratory syndrome coronavirus (SARS-CoV-2) RNA on real-time polymerase chain reaction (PCR). Chest X-ray and chest computed tomography (CT) on admission demonstrated diffuse ground-glass opacity located predominantly at the periphery of the lower lung lobes.\n\nThe patient developed respiratory failure and renal failure due to COVID-19 and was intubated on a ventilator. The patient received methylprednisolone and was administered tazobactam\u2212 piperacillin and levofloxacin to rule out bacterial pneumonia. The patient was injected with unfractionated heparin to prevent thrombus formation.\n\nThe patient was extubated on day 4 after intubation as his respiratory condition improved. The steroid was then changed to oral prednisolone, which was given every second day at reducing doses. The patient had an increase in serum creatinine levels and was given temporary haemodialysis for days 5, 6, 8, and 9. \n\nThe patient was diagnosed with functional (paralytic) ileus after suffering from vomit-like bile. The patient was treated conservatively, with discontinuation of solid food intake and total parenteral nutrition (TPN) management. A nasointestinal tube was inserted to keep the intestinal tract at rest.\n\nThe patient's urine output increased, and the patient began a liquid diet. Liver function improved gradually, and the man was discharged on day 38 after confirmation that there was no relapse of abdominal symptoms.\n\nDischarge Medications:\n\nThe patient was given oral prednisolone and tazobactam\u2212 piperacillin and levofloxacin.\n\nFollow-Up:\n\nThe patient was advised to follow up with their primary care physician for continued management of their condition."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: U07.1 \u2013 COVID-19, virus identified**\n\n**Why this code**\n- SARS-CoV-2 was confirmed by RT-PCR on a nasopharyngeal swab, so the \"virus identified\" code applies.\n- COVID-19 was the condition chiefly responsible for the admission. The summary explicitly attributes the respiratory failure and renal failure to it, and the ileus arose during the same COVID-related stay.\n- Under Australian (ACCD) COVID-19 coding guidance, U07.1 is sequenced first. Codes for the manifestations and complications follow as additional diagnoses.\n\n**Likely additional diagnoses**\n\n| Condition | Suggested code |\n|---|---|\n| COVID-19 pneumonia (ground-glass opacities) | J12.8 Other viral pneumonia |\n| Acute respiratory failure | J96.0- (type to be confirmed by blood gases or documentation) |\n| Acute kidney injury/failure | N17.9 |\n| Paralytic ileus | K56.0 |\n| Diarrhoea | Usually not coded separately if it is a symptom of COVID-19; check local guidance |\n\n**Likely procedures (ACHI)**\n- Invasive ventilation (under 96 hours)\n- Endotracheal intubation\n- Haemodialysis\n- Total parenteral nutrition\n- Nasointestinal tube insertion\n\nConfirm the final codes against the ICD-10-AM/ACHI/ACS edition your facility uses, since COVID-19 rules have changed between editions.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 722,
+    "output_tokens": 1023
+  },
+  "seconds": 0.0
+}

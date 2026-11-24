@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "dde46af04cd5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nPatient Name: Anonymous\nMedical Record Number: N/A\nGender: Female\nAge: 29 years\nDate of Admission: N/A\nDate of Discharge: N/A\n\nReason for Admission:\nThe patient was admitted to the hospital for treatment of HIV infection.\n\nHospital Course:\nDuring the admission, the patient was started on ART, and 186 SMS text messages were sent and received to remind her to take medication. The patient responded to only 28% of the text messages and did not respond to the remaining 72%. During feedback sessions, the patient claimed to have taken medication as per the instructions given and responded to all the text messages. Later, during an interview, the patient disclosed that she was not honest during the feedback sessions as she was depressed about unwanted disclosure of her HIV status and stigma related to HIV. She also mentioned that she deletes the SMS text messages once she replies to them to avoid any possible disclosure of her status.\nDiagnosis: [diagnosis section withheld]\nDischarge Condition:\nThe patient will be discharged once her treatment is completed.\n\nDischarge Instructions:\nThe patient is instructed to continue with ART medication as per the instructions given by the healthcare provider. The patient is also advised to follow up with the healthcare provider as per the scheduled appointments and to disclose any concerns or issues related to her treatment. The patient is also requested to maintain the confidentiality of her HIV status and not to reveal it to anyone without proper authorization. \n\nSignatures:\nThe discharge summary was dictated by the healthcare provider and reviewed and approved by the medical transcriptionist.\n\nDictated by: Dr. Sample\nReviewed by: John Doe, MT"
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **B24 \u2013 Unspecified human immunodeficiency virus [HIV] disease**\n\n## Rationale\n\n- **Reason for admission:** The patient was admitted specifically to treat HIV infection and was started on antiretroviral therapy (ART). Under the Australian Coding Standards' definition of principal diagnosis (ACS 0001), HIV is the condition chiefly responsible for the admission.\n- **Why not B20\u2013B23:** The summary documents no HIV-related manifestations, such as opportunistic infections, malignancies or other specified conditions. Codes from B20\u2013B23 therefore can't be supported.\n- **Why not Z21 (asymptomatic HIV infection status):** Z21 describes an incidental HIV-positive status. Here the HIV infection itself is being actively treated, so a disease code from category B24 is more appropriate.\n\n## Possible additional diagnoses (if documented by the clinician)\n\n- **Depression** (e.g., F32.9 Depressive episode, unspecified), linked to stigma and unwanted disclosure of HIV status.\n- **Non-adherence to medication** (Z91.1x, personal history of noncompliance with medical treatment), given the poor ART adherence and inaccurate self-reporting.\n\n## Caveat\n\nThe diagnosis section of the summary is withheld. Final code assignment should be confirmed against the full clinical documentation and the edition of ICD-10-AM/ACS in use, particularly ACS 0102 on HIV/AIDS. Any HIV-related manifestations, or a documented asymptomatic status, would change the code selection.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 613,
+    "output_tokens": 1010
+  },
+  "seconds": 0.0
+}

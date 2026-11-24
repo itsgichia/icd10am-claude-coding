@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "a1033456ece1",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\nMedical Record Number: [Redacted]\n\nAdmission date: [Redacted]\nDischarge date: [Redacted]\nAdmitting diagnosis: [diagnosis section withheld]Final diagnosis: [diagnosis section withheld]\nHospital course: The patient was admitted with a 2-week history of noncardiac-type central chest pain, which was diagnosed as possible anxiety/musculoskeletal pain. Upon follow-up review, the patient was discharged after further tests showed no significant abnormalities. Later, the patient re-presented with symptoms of pleuritic central chest pain and intermittent shortness of breath, and was diagnosed with bilateral subsegmental pulmonary embolism after confirmation via imaging.\n\nTreatment: The patient was initially treated with enoxaparin and later switched to apixaban. The treatment duration was planned for 3 months and the patient was advised to stop taking TXA due to increased risk of bleeding caused by drug\u2013drug interactions with apixaban.\n\nFollow-up: The patient was referred for routine follow-up in the anticoagulation clinic within the hematology unit following discharge. During 1-month follow-up, the patient reported significant improvement in symptoms. Later, a repeat CTPA scan showed the PE had resolved, and the patient was treated with appropriate antibiotics for new consolidation in the right lung.\n\nDischarge medications: none prescribed at this time\n\nFollow-up care: The patient was advised to continue with routine follow-up care in the anticoagulation clinic within the hematology unit."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is **pulmonary embolism**, which in ICD-10-AM falls under category **I26 (Pulmonary embolism)**. The specific code depends on your edition:\n\n- **If your edition includes subsegmental PE codes** (ICD-10-CM has them, and some ICD-10-AM editions may too), bilateral subsegmental PE is coded as **I26.94, Multiple subsegmental pulmonary embolism without acute cor pulmonale**.\n- **If not**, use **I26.9, Pulmonary embolism without mention of acute cor pulmonale**, or the nearest subdivision your edition provides.\n\nAcute cor pulmonale is not documented, so the \"without acute cor pulmonale\" subcategory applies.\n\nThe chest pain episode initially diagnosed as possible anxiety or musculoskeletal pain should not be coded as principal, since the PE was the condition confirmed and treated during the episode. The withheld admitting and final diagnosis sections should be checked to confirm that the PE was the condition chiefly responsible for the admission. Coders should also verify the edition and the subsegmental code availability against the official ICD-10-AM/ACHI tabular list.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 575,
+    "output_tokens": 1095
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "a9c015055748",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nSex: Male\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHospital Course:\n\nThe patient, an 18-year-old male with no significant past medical history, was admitted to the emergency department with complaints of suprapubic and periumbilical pain, accompanied by nausea for one day. Physical examination revealed mild tenderness to palpation in the periumbilical, right lower quadrant, and left upper quadrant regions. Respiratory rate, heart rate, and blood pressure were within normal limits, but complete blood count revealed leukocytosis with a left shift.\n\nA CT exam was performed to rule out any underlying causes of the aforementioned symptoms, demonstrating a dilated and hyperenhancing retrocecal appendix containing a form of calcified materials within it. Moreover, small air collections were identified anterior to the right and left common iliac arteries, and posterior to both psoas muscles in the retroperitoneal cavity of the abdomen.\n\nThe patient was taken to the operating room for an appendectomy, during which an additional inflamed appendix, and evidence of minor perforation into the retroperitoneum were found. Surgical team continued with appendectomy in view of inferior incision area revealing no pathologic process in the retroperitoneal cavity.\n\nThe patient was monitored in the post-operative care unit and demonstrated no post-operative complications. The patient was discharged the following day in stable condition.\nDiagnosis: [diagnosis section withheld]\nInstructions:\n\nThe patient is advised to take all prescribed medications and attend follow-up appointments as scheduled. Discharge instructions and the post-operative care plan have been explained to the patient in detail before being discharged."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis is **K35.8, Other and unspecified acute appendicitis** (ICD-10-AM). The discharge summary's diagnosis section is withheld, so this is inferred from the hospital course.\n\nThe reasoning:\n\n- **Condition treated:** The patient had an appendectomy for acute appendicitis. Surgery found an inflamed appendix with a minor perforation into the retroperitoneum, and the CT showed a dilated, hyperenhancing appendix with calcified material (likely an appendicolith).\n- **Peritonitis:** The record does not document generalised or localised peritonitis, which is what would move the code to K35.2 or K35.3. The retroperitoneal perforation is not the same as localised peritonitis, so the code falls back to K35.8.\n- **Additional codes:** The appendicolith may be coded additionally as appendicular calculus (K38.1), and the retroperitoneal perforation may be captured as a secondary condition, depending on local coding rules.\n\nIf the discharge diagnosis or the operative report explicitly documents localised peritonitis, K35.3 would be more appropriate. Coders should confirm against the full diagnosis section and local ICD-10-AM/ACHI guidelines.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 627,
+    "output_tokens": 1484
+  },
+  "seconds": 0.0
+}

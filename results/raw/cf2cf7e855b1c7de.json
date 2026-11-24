@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "dff9141abc15",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\nPatient: 16-year-old female\nAdmission Date: [DATE]\nDischarge Date: [DATE]\nMedical Record Number: [NUMBER]\n\nHospital Course:\n\nThe patient presented to the hospital for an exploratory laparotomy and resection of a small bowel anastomotic stricture due to her longstanding history of Crohn's disease. The patient underwent an epidural analgesia procedure for postoperative pain control and a test dose was administered without any evidence of intravascular or subarachnoid injection.\n\nThe patient showed signs of mild left unilateral Horner's syndrome and weakness of both lower extremities in the Post Anesthesia Care Unit (PACU) and was transferred to the ward stable and comfortable.\n\nOn postoperative day one, the patient complained of left-sided numbness and visual blur. Physical examination revealed left hemibody analgesia, weakness, and Horner's syndrome. The epidural infusion rate was adjusted and reduced, which produced progressive improvement in the patient's numbness, weakness, and Horner's syndrome.\n\nIn light of the patient's history of unilateral epidural block with a previous surgery two years earlier, an epidurogram was performed, which showed left unilateral spread of the contrast medium, indicating a midline barrier dividing the epidural space.\n\nAfter monitoring the patient for another three days, the epidural catheter was removed and the patient's neurological signs and symptoms completely resolved.\nDischarge Diagnosis: [diagnosis section withheld]\nTreatment:\n\nExploratory laparotomy and resection of small bowel anastomotic stricture\nEpidural analgesia for postoperative pain control\n\nFollow-Up Care:\n\nThe patient is advised to follow-up with a healthcare provider for ongoing management of Crohn's disease and any concerns related to the surgical procedure.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "K50",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 739,
+    "output_tokens": 128
+  },
+  "seconds": 0.0
+}

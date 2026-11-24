@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "8d19e88f1c90",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 86-year-old female with past medical history of hypertension and NSTEMI.\n\nHospital Course: The patient presented with chest pressure and left-hand numbness of one-day duration. Investigations revealed thrombocytopenia, NSTEMI, and hyponatremia. She was started on IV solumedrol, a high-intensity statin, and hypertonic saline. Anti-coagulation therapy was contraindicated at this time. She was presumed to have idiopathic thrombocytopenic purpura. However, her thrombocytopenia persisted, and she experienced a rapid decline in neurologic function. She became obtunded within six hours and was intubated to protect the airway. TTP was suspected due to the patient\u2019s declining neurologic function, and plasma exchange therapy was planned. But, the patient succumbed to cardiac arrest before any treatment could be initiated. An autopsy was performed which revealed an acute myocardial infarction.\nDiagnosis: [diagnosis section withheld]\nRecommendations: No recommendations available as the patient has expired."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: **I21.4 \u2013 Acute subendocardial myocardial infarction (NSTEMI)**\n\n## Rationale\n\n**1. Reason for admission (ACS 0001 Principal Diagnosis)**\nThe principal diagnosis is the condition established after study to be chiefly responsible for the admission.\n- She presented with chest pressure and left-hand numbness.\n- Investigations confirmed an NSTEMI.\n- Treatment was directed at it, including a high-intensity statin.\n- Autopsy confirmed an acute myocardial infarction.\n\n**2. Why TTP is not sequenced first**\n- TTP was only *suspected* late in the admission. It was prompted by neurological decline, and plasma exchange was never started.\n- The autopsy finding reported here is the acute MI, not thrombotic microangiopathy.\n- The working diagnosis of ITP was also never confirmed.\n\n**3. Fourth character**\nThe summary explicitly documents NSTEMI, which ICD-10-AM classifies to **I21.4**.\n\n## Suggested additional diagnoses\n- **D69.6** Thrombocytopenia, unspecified. If ITP is accepted as the documented diagnosis, use **D69.3** instead.\n- **E87.1** Hypo-osmolality and hyponatraemia\n- **R40.1 / R40.2** Obtundation or altered consciousness, as appropriate to the documentation\n- **I46.9** Cardiac arrest, if documented as occurring during the episode and meeting ACS 0002 criteria\n- **I10** Essential hypertension\n- **I25.2** Old myocardial infarction, for the prior NSTEMI history if appropriate\n- Procedure codes for intubation/ventilation\n\n## Caveat\nThe diagnosis section is withheld. If it (or the full autopsy report) confirms **TTP as the underlying cause of the MI**, such as coronary microvascular thrombi, sequencing should be reviewed. In that case **M31.1 Thrombotic microangiopathy** may be the principal diagnosis, with I21.4 as an additional diagnosis. Seek clinician clarification if that is the case.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 400,
+    "output_tokens": 1113
+  },
+  "seconds": 11.565266583987977
+}

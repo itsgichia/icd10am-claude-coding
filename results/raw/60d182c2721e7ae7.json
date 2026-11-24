@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "9e761020b901",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nGender: Male\nDate of Discharge: [REDACTED]\nAdmission Date: [REDACTED]\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient presented to the emergency department with right-sided chest pain and dyspnoea. Chest radiograph revealed a large right-sided pneumothorax. A pigtail intercostal catheter was inserted and placed on suction. The patient used nocturnal NIV and mouthpiece intermittent positive pressure ventilation (MIPPV) throughout the admission. The ICC was removed on day three, and the patient was discharged on day five with advice to cease all MI-E until clinical review in two weeks.\n\nFollow-up:\nAt review, the MI-E pressures were decreased by a physiotherapist with instructions to use sparingly for cough augmentation or saliva clearance only. Pharmacological modalities of saliva management were recommended; however, the patient had no success with these previously. Unfortunately, the patient represented on three occasions with right-sided pneumothorax in the following six months, with chemical pleurodesis conducted twice, both of which failed to prevent recurrence. The patient was discharged home with a long-term pleural catheter after the fourth admission, which was removed two months later. The patient continues to use MI-E sparingly and has had no subsequent recurrence.\n\nInstructions:\nThe patient is advised to continue using NIV and MIPPV. The patient should use MI-E sparingly for cough augmentation or saliva clearance only, as instructed by the physiotherapist. The patient should seek medical attention if he experiences any chest pain or dyspnoea. The patient should also pay attention to the signs of right-sided pneumothorax in the future and seek prompt medical attention if these occur again."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis code is **J93.1, Other spontaneous pneumothorax**.\n\nThe discharge diagnosis section is withheld, so this is inferred from the hospital course. The admission was for a large right-sided pneumothorax, treated with an intercostal catheter. Nothing in the notes indicates trauma or a procedural cause.\n\nThe patient's use of nocturnal NIV, MIPPV, and MI-E (mechanical insufflation-exsufflation) suggests a neuromuscular disorder with respiratory muscle weakness, most plausibly motor neurone disease (G12.2 in ICD-10-AM). That condition would normally be coded as an additional diagnosis, not the principal one, because it was not the reason for admission.\n\nCaveats:\n- If the treating team explicitly documented the pneumothorax as secondary to the underlying neuromuscular disease, coding guidelines may direct a different sequencing or code, so the full discharge diagnosis should be checked.\n- Confirm the exact neuromuscular diagnosis from the medical record before assigning the additional code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 651,
+    "output_tokens": 1109
+  },
+  "seconds": 0.0
+}

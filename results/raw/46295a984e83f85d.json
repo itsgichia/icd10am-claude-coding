@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "191f87a2d072",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 44-year-old male\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient presented at our primary care clinic with a lump in the right nipple associated with sharp pain. The mammogram revealed a 1.2 cm mass in the right retro areolar breast. Core needle biopsy was positive for invasive ductal carcinoma ER+ and PR+ and negative for HER2-. The patient underwent simple mastectomy and right sentinel lymph node biopsy. He received dose-dense adjuvant chemotherapy which was stopped after 3 doses of Taxanes. The lymph node biopsy came back positive for metastatic carcinoma, and the patient received radiation therapy. The patient was started on Tamoxifen therapy for>5 years.\n\nSummary:\n\nThe 44-year-old male was diagnosed with invasive ductal carcinoma stage IIA. He underwent simple mastectomy, right sentinel lymph node biopsy, radiation therapy, and chemotherapy. He was started on Tamoxifen therapy for>5 years. He denied any active complaints 3 years post diagnosis. The physical examination was positive for old healed lateral scar on the right chest. Genetic testing revealed no evidence of BRCA mutations or other evidence of familial breast cancer. The patient's annual mammographic screening and clinical exam of the contralateral breast were normal. He reported concerns of trouble maintaining erections and weight gain which were likely secondary to the effect of Tamoxifen."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: C50.1 \u2013 Malignant neoplasm of central portion of breast**\n\n(In ICD-10-AM, C50 has a fourth character for site, and the site here is the retroareolar/nipple region. Sex and laterality are not captured in the code. Laterality is recorded only in the morphology or free text.)\n\n**Rationale**\n- The mass is retroareolar (right), which indexes to the central portion of the breast, C50.1. The nipple and areola are classified separately as C50.0, but a retroareolar mass is conventionally coded to the central portion.\n- The morphology is invasive ductal carcinoma, M8500/3. ICD-10-AM uses a morphology code alongside the C code.\n- Lymph node metastasis (sentinel node positive) would be a secondary code, C77.3 (secondary malignant neoplasm of axillary and upper limb lymph nodes).\n\n**Caveats about the \"principal diagnosis\" in this scenario**\n- The summary describes a follow-up visit 3 years after diagnosis, with no active disease. The treatment is complete and the patient is on adjuvant Tamoxifen. In that situation, coding rules may point to a different principal diagnosis:\n  - If the encounter is surveillance or follow-up after completed treatment with no residual disease, use Z08.8 (follow-up examination after other treatment for malignant neoplasm) with Z85.3 (personal history of malignant neoplasm of breast).\n  - If the cancer is still being actively treated (ongoing Tamoxifen is regarded as current treatment), C50.1 remains appropriate as the principal diagnosis.\n- Additional codes that could apply:\n  - Z79.81 (long-term use of selective estrogen receptor modulators). The Australian version of this may differ, so check local codes.\n  - Y43.8 / Y42.x (adverse effect of an antineoplastic or hormonal agent), with N52.x/R25 or R63.5 for the erectile dysfunction and weight gain.\n  - Z15.x does not apply, because there is no BRCA mutation.\n\n**Answer: C50.1** (invasive ductal carcinoma of the central right breast, M8500/3), with the caveat that a surveillance-only encounter would instead be coded Z08.8 + Z85.3.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 559,
+    "output_tokens": 764
+  },
+  "seconds": 0.0
+}

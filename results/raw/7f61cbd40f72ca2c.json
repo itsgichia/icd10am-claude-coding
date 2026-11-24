@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "few_shot_six",
+  "record_id": "882f5cdcd862",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nExample 4\nHospital course: An 81-year-old woman was brought in after a fall at home. She could not weight-bear and the right leg was shortened and externally rotated. A pelvic radiograph showed a displaced subcapital fracture of the right femoral neck. She underwent hemiarthroplasty on day one.\nAnswer: S72\n\nExample 5\nHospital course: A 19-year-old man presented with 18 hours of periumbilical pain that migrated to the right iliac fossa, with anorexia and a low-grade fever. There was guarding at McBurney's point and the white cell count was 15.2. Laparoscopy confirmed an inflamed, non-perforated appendix.\nAnswer: K35\n\nExample 6\nHospital course: A 64-year-old woman with a history of oestrogen-receptor-positive breast carcinoma treated five years earlier presented with progressive thoracic back pain. Magnetic resonance imaging showed deposits in T7 and T9 with no cord compression. Biopsy confirmed deposits of breast origin and she received palliative radiotherapy to the spine.\nAnswer: C79\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [redacted] \nAge: 28 years \nSex: Female \n\nDate of Admission: [redacted] \nDate of Discharge: [redacted]\n\nReason for Admission:\nThe patient presented with right hip pain after a fall and was diagnosed with a pathologic hip fracture. \n\nClinical Course:\nFollowing admission, the patient underwent radiographic and imaging studies which revealed lytic lesions in the femoral neck and intertrochanteric region as well as osseous destructive lesions in the lumbar spine. The bone scan was suggestive of metastatic disease. A biopsy revealed diffuse large B-cell lymphoma with aggressive features and a germinal center subtype histology. The patient underwent a total right hip replacement and returned for follow-up evaluation.\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was managed for the pathologic hip fracture and underwent biopsy that confirmed the diagnosis of lymphoma. Following diagnosis, the patient underwent a total right hip replacement. The patient is scheduled for further evaluation and management by the oncology team. \n\nDischarge Medications: \nSee the oncology team. \n\nFollow-up Plan: \nThe patient is to follow up with the oncology team. \n\nDischarge Condition: \nThe patient is stable.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "This is a pathological fracture in a patient with a neoplasm, and ICD-10-AM codes it as M90.7* (fracture in neoplastic disease), not M84.5. The underlying neoplasm is coded first, with M84.5 as the manifestation. In ICD-10-AM, M84.5 is \"Pathological fracture in neoplastic disease\" and is a dagger/asterisk-style manifestation code. Its instruction is \"Code first neoplasm (C00-D48)\".\n\nThe principal diagnosis is therefore the lymphoma. Diffuse large B-cell lymphoma is C83.3. The lesions in the femoral neck and spine are bone involvement, which is a secondary site of the lymphoma. The lymphoma itself is coded to C83 regardless of the extranodal site.\n\nThe admission was for the fracture, but the code-first rule for pathological fracture in neoplastic disease puts the neoplasm first.\n\nC83",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1286,
+    "output_tokens": 311
+  },
+  "seconds": 0.0
+}

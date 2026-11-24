@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "14612a31f7d9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\n\nPatient Name: [PATIENT NAME]\nMedical Record Number: [MRN]\n\nHospital Course:\nThe patient is a 40-year-old female who was admitted with a complaint of lower extremity numbness and tingling. She subsequently developed left facial weakness, which had been previously diagnosed as Bell's Palsy. Neurological examination revealed bilateral decreased sensation to light touch, 4/5 strength in upper extremities, and 3/5 strength in lower extremities with no elicited reflex at any location. On day two of admission, she developed bilateral ptosis, urinary incontinence, and respiratory failure. On day three, the patient's ptosis worsened, and she also developed ophthalmoplegia. She was diagnosed with anti-GD1a antibody-positive Guillain-Barr\u00e9 Syndrome. The patient received five days of plasma exchange, IVIG, and high-dose solumedrol. Her condition began to improve on day seven and she was extubated on day eight. The vertical nystagmus was the first deficit to resolve, and the strength of her extremities recovered to 4+/5 in the upper extremities and 4-/5 in the lower extremities. She was transferred to an acute rehab unit after 20 days of hospitalization for continued management and rehabilitation.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Medications:\nNone\n\nDischarge Instructions:\nFollow up with primary care provider in 1-2 weeks\nReturn to work part-time as tolerated\nContinue with physical therapy and rehabilitation program\nRefrain from strenuous activity and prolonged sitting\nTake care to prevent falls\nIf symptoms worsen, notify your healthcare provider immediately\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The principal diagnosis is Guillain-Barr\u00e9 syndrome, which ICD-10-AM classifies to G61.0 (Guillain-Barr\u00e9 syndrome), within category G61, inflammatory polyneuropathy.\n\nThe respiratory failure, ptosis, ophthalmoplegia and incontinence all stem from the Guillain-Barr\u00e9 syndrome. The Bell's palsy label was a prior working diagnosis for the facial weakness, so it is not the principal diagnosis.\n\nCODE: G61",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1138,
+    "output_tokens": 167
+  },
+  "seconds": 0.0
+}

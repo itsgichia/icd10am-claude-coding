@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "615b2cd470fd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nAge: 12\nSex: Female\nDate of Admission: [redacted]\nDate of Discharge: [redacted]\n\nHospital Course:\nThe patient presented to the emergency room with intense left flank pain, which was discovered to be caused by an obstructing calculus in the left ureter and nephrolithiasis. The patient was treated with pain control medications and hydration, and subsequently referred to a nephrologist. The patient underwent a \"stone risk study\" and renal ultrasound, which showed multiple bilateral cysts and renal calculi. Genetic testing was performed and identified dual mutations in GANAB and PKD1genes. \nDiagnosis: [diagnosis section withheld]\nDischarge Instructions:\n-The patient should follow up with the nephrologist for further evaluation and management of the polycystic kidney disease.\n-The patient should return if she experiences any further pain or symptoms.\n\nFollow-up:\nThe patient will follow up with the nephrologist for further evaluation and management of the polycystic kidney disease."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: N20.1 \u2013 Calculus of ureter**\n\n**Reasoning:**\n- The patient was admitted for intense left flank pain. The condition established after study to be chiefly responsible for the admission was an obstructing calculus in the left ureter, with nephrolithiasis. Treatment during the episode (analgesia and hydration) was directed at this.\n- Under ICD-10-AM, N20.1 is the code for ureteric calculus. When calculi are present in both the kidney and the ureter, N20.2 (Calculus of kidney with calculus of ureter) is the more specific combination code. The note describes an obstructing ureteric stone plus nephrolithiasis, so **N20.2** is arguably the most accurate code if the kidney stone is documented as a separate calculus. If only the ureteric stone is being coded, use N20.1.\n- The polycystic kidney disease is a chronic underlying condition. It was identified through the work-up and is the focus of follow-up, but it was not the reason for this presentation, so it is coded as an additional diagnosis.\n\n**Suggested codes:**\n- Principal diagnosis: N20.2 (Calculus of kidney with calculus of ureter), or N20.1 if only the ureteric stone is coded.\n- Additional diagnosis: Q61.2 (Polycystic kidney, autosomal dominant), because the PKD1 mutation indicates the ADPKD type. The GANAB variant is also associated with polycystic kidney disease. If the clinician documents the type differently, Q61.3 (unspecified) or Q61.1 (autosomal recessive) would not apply here.\n\nThe \"diagnosis section withheld\" may list polycystic kidney disease as the main diagnosis. If the facility's documentation names it as the condition chiefly responsible for the admission, Q61.2 would then be the principal diagnosis. Based on the hospital course, however, the stone was the reason for the admission.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 398,
+    "output_tokens": 643
+  },
+  "seconds": 0.0
+}

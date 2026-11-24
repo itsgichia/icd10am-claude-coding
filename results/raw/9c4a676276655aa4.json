@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "faaba5f90a3b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Not provided\nMedical Record Number: Not provided\nDischarge Date: Not applicable\nAdmission Date: Not provided\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient, a 77-year-old Middle-Eastern female, was admitted to our facility with suspected COVID-19 after she presented with a fever, cough, lethargy, dyspnea, and bilateral opacities on chest X-ray. She was started on ceftazidime and azithromycin and was placed on oxygen via nasal cannula. A CT scan of the chest showed bilateral ground glass appearance throughout the lung, and she was transferred to the ICU due to worsening hypoxia and fever.\n\nDuring her hospitalization, the patient's condition deteriorated, and she required intubation. She was switched to antibiotic therapy with ceftriaxone and azithromycin and started on hydroxychloroquine and vitamin C. Tocilizumab, an anti-interleukin-6 monoclonal antibody, was administered twice.\n\nDue to worsening oxygen saturation, the patient was proned for 18 hours a day and given remdesivir. However, her condition continued to decline, requiring levophed for maintenance of hemodynamic stability and CVVHD due to acute kidney injury. Despite aggressive management, the patient's family ultimately chose to pursue comfort measures, and the patient passed away.\n\nDischarge Instructions:\nN/A\n\nFollow-Up Recommendations:\nN/A\n\nSigned by:\nNot applicable\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "U07",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 650,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

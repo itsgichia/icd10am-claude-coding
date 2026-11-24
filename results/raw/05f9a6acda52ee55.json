@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "615b2cd470fd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nAge: 12\nSex: Female\nDate of Admission: [redacted]\nDate of Discharge: [redacted]\n\nHospital Course:\nThe patient presented to the emergency room with intense left flank pain, which was discovered to be caused by an obstructing calculus in the left ureter and nephrolithiasis. The patient was treated with pain control medications and hydration, and subsequently referred to a nephrologist. The patient underwent a \"stone risk study\" and renal ultrasound, which showed multiple bilateral cysts and renal calculi. Genetic testing was performed and identified dual mutations in GANAB and PKD1genes. \nDiagnosis: [diagnosis section withheld]\nDischarge Instructions:\n-The patient should follow up with the nephrologist for further evaluation and management of the polycystic kidney disease.\n-The patient should return if she experiences any further pain or symptoms.\n\nFollow-up:\nThe patient will follow up with the nephrologist for further evaluation and management of the polycystic kidney disease.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "N20",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 482,
+    "output_tokens": 77
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "41daccafa734",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient: 25-year-old female\nAdmission date: [DATE]\nDischarge date: [DATE]\nLength of stay: [NUMBER] days\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient presented to the emergency department with complaints of acute onset of epigastric pain and nausea with bilious emesis. Initial workup did not demonstrate evidence of biliary or gallbladder pathology. However, her symptoms progressed and she was re-evaluated with a computed tomography that demonstrated a soft tissue mass located posterior to the gallbladder. Further evaluation with magnetic resonance cholangiopancreatography observed a complex cystic structure of indeterminate etiology at the porta hepatis.\n\nThe patient underwent surgery, during which a hemorrhagic pedunculated mass attached to the infundibulum of the gallbladder was identified and resected. A cholecystectomy was also performed due to inflammation from the hemorrhagic mass. Gross pathology and histology revealed a hemorrhagic benign ectopic liver tissue, and localized cholecystitis in the area adjacent to the mass was also observed.\n\nThe patient's postoperative course was uneventful and her symptoms resolved immediately. She was discharged home on the first postoperative day and was asymptomatic when seen in follow-up.\nDischarge Diagnosis: [diagnosis section withheld]\nTreatment:\nThe patient underwent surgery to remove the hemorrhagic benign ectopic liver tissue and cholecystitis. She was discharged with instructions to follow up with her healthcare provider.\n\nCondition at Discharge:\nThe patient was asymptomatic and in stable condition at the time of discharge.\n\nDischarge Medications: N/A\n\nFollow-up:\nThe patient was instructed to follow up with her healthcare provider.\n\nInstructions:\nThe patient was instructed to follow up with her healthcare provider.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: Q44**\n\n**Principal diagnosis: hemorrhagic ectopic liver tissue attached to the gallbladder infundibulum (Q44, congenital malformations of gallbladder, bile ducts and liver).**\n\n- **Why it is principal.** The hemorrhagic mass caused the epigastric pain and bilious vomiting. It was the reason for surgery. Symptoms resolved once it was removed.\n- **Where it sits in the classification.** Ectopic (accessory) liver tissue is a congenital malformation. It falls in Chapter XVII, under Q44. The likely full code is Q44.7, *Other congenital malformations of liver*, which includes accessory liver. The index entry should be confirmed against the current edition.\n- **Why cholecystitis is not principal.** The cholecystitis was localized and caused by inflammation from the hemorrhagic mass. It is secondary to the ectopic tissue, so it is an additional diagnosis (K81.x), not the principal.\n- **What is excluded.** The presenting symptoms (pain, vomiting) and the procedures (excision, cholecystectomy) are not the principal diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 871,
+    "output_tokens": 537
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "c11894e010f2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was referred for VT ablation due to electrical storm. Transventricular crossing was performed as it was thought to potentially be difficult to reach all parts of the LV apex using transapical access. A Swartz\u2122 Braided SL1 Transseptal Guiding Introducer Sheath was advanced to the basal right ventricular septum and the interventricular septum was crossed with a Brockenbrough needle. VTs originating from the LV apical and posterobasal regions were induced and ablated successfully. The procedure lasted about 5.3 hours without intraprocedural complications or residual ventricular septal defect. The patient recovered uneventfully and experienced one VT episode that responded to antitachycardia pacing therapy one day later. Heart failure therapy was started, and metoprolol, aldactone, furosemide, ramipril, and mexiletine were prescribed. \nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient underwent VT ablation via transventricular crossing without complications. The patient is being followed up with in the outpatient clinic and will continue on heart failure therapy."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is most likely **I47.2, Ventricular tachycardia**.\n\nThe admission was for catheter ablation of ventricular tachycardia (VT) due to electrical storm, which is recurrent VT. ICD-10-AM codes electrical storm to I47.2, and the procedure notes describe the VTs being induced and ablated.\n\nTwo points to check:\n- **Heart failure:** Heart failure therapy was started after the procedure, but the notes don't document a heart failure diagnosis made during this admission. Unless the treating clinicians document heart failure as a diagnosis, it would not be coded as principal, and it should not be coded at all without that documentation.\n- **Withheld sections:** The admitting and discharge diagnosis sections are blank, so this answer relies on the hospital course. Confirm against the full record and the coder's guidelines, since the final code depends on how the physician documented the reason for admission.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 449,
+    "output_tokens": 626
+  },
+  "seconds": 0.0
+}

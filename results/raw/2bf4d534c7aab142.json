@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "4054a6aedd1d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient Name: [REDACTED]\n\nGender: Female\n\nAge: 2 years 7 months\n\nDate of Admission: 31st March 2019\n\nDate of Discharge: 18th April 2019\n\nHospital: Regional Hospital of Buea\nPrimary Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted with a 4-day history of persistent fever, polyarthralgia and abdominal pain. Upon examination, she presented with moderate jaundice of the sclerae and a soft abdomen. Blood test results revealed abnormalities that prompted a urinalysis, which showed many bacteria and few pus cells. A request for urine and blood culture was made.\n\nThe culture results showed the presence of Shigella flexneri, which was initially treated with ceftriaxone. However, due to an increase in temperature and CRP, the patient was put on a combined therapy of ampicillin and gentamicin.\n\nAfter 3 days, the patient's temperature and CRP remained elevated, and the second urine culture showed the presence of Escherichia coli. Ofloxacin was discontinued and the patient was treated with Meropenem and Amikacin, which resulted in a progressive decrease in temperature and CRP over 7 days.\n\nA third urine culture was requested and revealed no significant growth after 48 hours of incubation. The patient was discharged on the 18th of April 2019 upon completion of treatment.\nDischarge Diagnoses: [diagnosis section withheld]\nDischarge Medications:\n\nThe patient was discharged with no medications.\n\nFollow-up Instructions:\n\nParents were advised to ensure good hygiene for the patient, including hand washing and regular bathing. They were encouraged to bring the patient for routine medical checkups following her discharge.\n\nDischarge Condition:\n\nThe patient was discharged in a stable condition and looked healthy with a normal body temperature."
+      }
+    ]
+  },
+  "text": "**Likely principal diagnosis: urinary tract infection, site not specified, due to Escherichia coli (N39.0 with B96.2).**\n\nThe diagnosis sections were withheld, so this is inferred from the course. The clinical picture is a febrile child with bacteriuria and pyuria. Urine and blood cultures were sent. Antibiotics were escalated to meropenem and amikacin once a second urine culture grew E. coli, and the fever and CRP settled after that. A third urine culture showed no significant growth.\n\n**Coding**\n- **N39.0** Urinary tract infection, site not specified. This is the principal diagnosis.\n- **B96.2** Escherichia coli as the cause of diseases classified elsewhere. This is an additional code identifying the organism.\n\n**Possible additional codes**\n- **A02.x or A03.x:** Shigella flexneri (A03.1) was reported on the initial culture. The case does not say which specimen grew it, and there was no diarrhoea. If it was from blood, it could be coded as shigella sepsis or bacteraemia. This is uncertain and needs clarification from the clinician.\n- **R17** Unspecified jaundice, if no more specific cause was documented.\n- **M25.5x** Pain in joint, if polyarthralgia was not integral to the diagnosis.\n\n**Caveat:** If the clinician documented the principal diagnosis as shigellosis (A03.1) or as sepsis, the principal code would change. A03.1 is the alternative if the Shigella infection was the main reason for admission. Please confirm against the withheld diagnosis sections.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 668,
+    "output_tokens": 530
+  },
+  "seconds": 0.0
+}

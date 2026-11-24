@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "cde5bf6b654a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHOSPITAL COURSE SUMMARY:\nThis is a discharge summary for a 64-year-old female who was admitted to the hospital with shortness of breath, cough, and fever. The patient had a past history of chronic obstructive pulmonary disease and left upper lobe cavitary lung lesion.\nDIAGNOSIS: [diagnosis section withheld]\nTREATMENT:\nThe patient was placed on intravenous vancomycin, levofloxacin, and fluconazole for a presumed hospital-acquired or fungal pneumonia. On day two, aztreonam was added to the patient's treatment due to a worsening clinical picture. The patient continued antibiotic and antifungal therapy and was discharged with cefpodoxime 400 mg twice a day for ten more days.\n\nCONSULTATIONS:\nThe patient underwent consultations from infectious disease, pulmonology, and cardiothoracic surgery due to her worsening pneumonia with associated cavitary lung lesion.\n\nDISCHARGE:\nThe patient was discharged after a protracted hospital course of nine days with instructions to follow up with infectious disease within the next two weeks."
+      }
+    ]
+  },
+  "text": "The diagnosis section is withheld, so I can't assign a code with certainty. The most likely principal diagnosis from the record is below.\n\n**Likely principal diagnosis: pneumonia in a patient with COPD, with a cavitary lung lesion**\n\nThe organism was never specified. The patient was treated for \"presumed hospital-acquired or fungal pneumonia\" with vancomycin, levofloxacin, fluconazole, then aztreonam, and was discharged on cefpodoxime.\n\n**Suggested code: J44.0 \u2013 Chronic obstructive pulmonary disease with acute lower respiratory infection**\n- In ICD-10-AM, J44.0 carries a \"use additional code to identify the infection\" instruction. COPD with pneumonia is therefore commonly sequenced as J44.0 first.\n- It is paired with **J18.9 \u2013 Pneumonia, unspecified organism**. J18.9 would be replaced by a more specific code if the organism were documented, for example J15.x for bacterial pneumonia or B44.x/B37.1 for fungal pneumonia.\n\n**Alternative:** If the clinician documented the pneumonia as the main reason for admission and the coding standards or index direct you to code it first, J18.9 would be the principal diagnosis, with J44.0 as an additional code. In practice, Australian coding standards usually sequence J44.0 first when COPD with acute lower respiratory infection is documented.\n\n**Additional codes to consider:**\n- J98.4 or an abscess/cavity code, such as J85.x (lung abscess), if the cavitary lesion is documented as part of the acute process. Otherwise, code it as a lung lesion (R91 \u2013 Abnormal findings on diagnostic imaging of lung).\n- Y95 \u2013 Nosocomial condition, if hospital-acquired pneumonia is confirmed.\n\n**Answer: J44.0, with J18.9 as the additional code.** Please check this against the withheld diagnosis statement, because organism-specific documentation would change the code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 421,
+    "output_tokens": 663
+  },
+  "seconds": 0.0
+}

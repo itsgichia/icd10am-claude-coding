@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "cot_then_extract",
+  "record_id": "91774e9fbdcf",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary\n\nPatient: XXXXXXX\n\nDate of Admission: XXXXXXX\n\nDate of Discharge: XXXXXXX\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nUpon admission, the patient presented with acute onset epigastric pain associated with vomiting. Subsequently, she was diagnosed with acute pancreatitis and a dilated common bile duct with no gallstones or other pathology. Further, a MRCP revealed a curious cystic lesion lying posterior to the head of the pancreas causing extrinsic compression. An abdominal CT scan revealed a cystic or necrotic mass behind the head of the pancreas representing an inflammatory lesion or abscess.\n\nDuring admission, the patient was treated with oral antibiotics and observed clinically and haematologically. However, her bilirubin continued to rise. An ERCP revealed a 10 cm duodenal diverticular abscess at the level of the major papilla draining pus and bile, likely causing extrinsic compression of the bile duct.\n\nThe patient experienced clinical and hematological improvement and was discharged with a plan for follow-up with the gastroenterology team.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Instructions:\n\nThe patient is advised to follow-up with the gastroenterology team and adhere to any prescribed medications. Additionally, the patient is instructed to consume a healthy diet and maintain a low-risk lifestyle.\n\nFollow-Up Care:\n\nFollow-up with the gastroenterology team.\n\nSigned:\n\nXXXXXXXXX\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible for the admission is a duodenal (small-intestine) diverticular abscess, which compressed the bile duct and drove the pancreatitis and rising bilirubin. It belongs to chapter K (digestive system diseases). Small-intestine diverticular disease with abscess falls under category K57.\n\nCODE: K57",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1130,
+    "output_tokens": 247
+  },
+  "seconds": 0.0
+}

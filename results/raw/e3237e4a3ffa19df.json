@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "cot_then_extract",
+  "record_id": "e978f0ec2dd7",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient Name: ____\nDate of Admission: ____\nDate of Discharge: ____\nPrimary Diagnosis: [diagnosis section withheld]\nSecondary Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to our facility on ____, exhibiting symptoms of tachycardia and acute kidney injury. It was later determined that the patient had ingested multiple foreign bodies. Treatment interventions included intravenous lorazepam and emergency laparotomy to remove all the packets. Postoperatively, the patient was transferred to the ICU where he remained for a total of one night before being transferred to ward level care. Pain management was achieved with a patient controlled analgesia (PCA) infusion pump, and the patient was extubated on day 1 postoperatively. The patient had a slow postoperative recovery mainly due to pain and limited oral fluid intake. He was discharged on day 10 back to police custody and returned once a week later for a dressing change.\n\nCourse of Treatment:\nThe course of treatment for this patient focused on the removal of the ingested foreign bodies through an emergency laparotomy. The patient was transferred to the ICU postoperatively and was managed with a patient controlled analgesia (PCA) infusion pump to manage pain.\n\nMedications:\nA detailed list of medications administered during the patient's hospitalization is not included in this summary.\n\nFollow-up:\nThe patient was discharged on day 10 back to police custody and returned once a week later for a dressing change. No further follow-up was scheduled upon the patient's discharge.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "Ingesting multiple drug packets (body packing) that required emergency laparotomy to remove them is a foreign body in the alimentary tract, which is chapter T. The tachycardia and lorazepam suggest some drug toxicity, but the summary names no drug, so the foreign body is coded as chiefly responsible. This makes the category T18.\n\nCODE: T18",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1120,
+    "output_tokens": 391
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "few_shot_six",
+  "record_id": "dff9141abc15",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nExample 4\nHospital course: An 81-year-old woman was brought in after a fall at home. She could not weight-bear and the right leg was shortened and externally rotated. A pelvic radiograph showed a displaced subcapital fracture of the right femoral neck. She underwent hemiarthroplasty on day one.\nAnswer: S72\n\nExample 5\nHospital course: A 19-year-old man presented with 18 hours of periumbilical pain that migrated to the right iliac fossa, with anorexia and a low-grade fever. There was guarding at McBurney's point and the white cell count was 15.2. Laparoscopy confirmed an inflamed, non-perforated appendix.\nAnswer: K35\n\nExample 6\nHospital course: A 64-year-old woman with a history of oestrogen-receptor-positive breast carcinoma treated five years earlier presented with progressive thoracic back pain. Magnetic resonance imaging showed deposits in T7 and T9 with no cord compression. Biopsy confirmed deposits of breast origin and she received palliative radiotherapy to the spine.\nAnswer: C79\n\nHospital course:\nDischarge Summary:\nPatient: 16-year-old female\nAdmission Date: [DATE]\nDischarge Date: [DATE]\nMedical Record Number: [NUMBER]\n\nHospital Course:\n\nThe patient presented to the hospital for an exploratory laparotomy and resection of a small bowel anastomotic stricture due to her longstanding history of Crohn's disease. The patient underwent an epidural analgesia procedure for postoperative pain control and a test dose was administered without any evidence of intravascular or subarachnoid injection.\n\nThe patient showed signs of mild left unilateral Horner's syndrome and weakness of both lower extremities in the Post Anesthesia Care Unit (PACU) and was transferred to the ward stable and comfortable.\n\nOn postoperative day one, the patient complained of left-sided numbness and visual blur. Physical examination revealed left hemibody analgesia, weakness, and Horner's syndrome. The epidural infusion rate was adjusted and reduced, which produced progressive improvement in the patient's numbness, weakness, and Horner's syndrome.\n\nIn light of the patient's history of unilateral epidural block with a previous surgery two years earlier, an epidurogram was performed, which showed left unilateral spread of the contrast medium, indicating a midline barrier dividing the epidural space.\n\nAfter monitoring the patient for another three days, the epidural catheter was removed and the patient's neurological signs and symptoms completely resolved.\nDischarge Diagnosis: [diagnosis section withheld]\nTreatment:\n\nExploratory laparotomy and resection of small bowel anastomotic stricture\nEpidural analgesia for postoperative pain control\n\nFollow-Up Care:\n\nThe patient is advised to follow-up with a healthcare provider for ongoing management of Crohn's disease and any concerns related to the surgical procedure.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "**T88**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1436,
+    "output_tokens": 592
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "2fcbd88b92a5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nGender: Female\nAge: 48\nDOB: [REDACTED]\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nHospital: [REDACTED]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient underwent a laparoscopic cholecystectomy and was discharged on the first postoperative day without any complications.\nFinal Diagnosis: [diagnosis section withheld]\nCourse in Hospital:\nThe patient was kept under observation for three months and no further complications were reported.\n\nDischarge Instructions:\nThe patient is advised to follow a low-fat diet and avoid fatty foods to prevent any recurrence of symptoms. The patient is advised to avoid smoking and alcohol as they can increase the risk of gallbladder diseases. In case of any symptoms, the patient should consult her healthcare provider immediately.\n\nFollow-up Care:\nThe patient is advised to follow up with her primary care physician for regular check-ups and monitoring.\n\nCompleted By:\n[REDACTED]\nMedical Doctor\n\nDate Completed:\n[REDACTED]"
+      }
+    ]
+  },
+  "text": "The discharge summary doesn't state the diagnosis, so I can't assign a principal diagnosis code with confidence. The withheld \"Admission Diagnosis\" and \"Final Diagnosis\" sections are needed.\n\nUnder ICD-10-AM, the principal diagnosis is the condition that, after study, was chiefly responsible for the admission. The laparoscopic cholecystectomy is the procedure, not the diagnosis, and it is coded separately with ACHI.\n\nThe most likely candidates are:\n\n- **K80.20, Calculus of gallbladder without cholecystitis, without obstruction**: the most common indication for elective laparoscopic cholecystectomy (symptomatic gallstones).\n- **K81.0, Acute cholecystitis**: if the admission was for acute inflammation.\n- **K81.1, Chronic cholecystitis**: if the histology or clinical picture showed chronic inflammation without acute disease.\n- **K80.x with obstruction or cholangitis codes**: if there was choledocholithiasis or a related complication.\n\nThe summary also has internal inconsistencies you should resolve before coding. It says the patient was discharged on the first postoperative day, but also that she was \"kept under observation for three months.\" The three-month period may refer to follow-up rather than the admission, so the length of stay and admission dates need checking.\n\nIf you can share the withheld admission and final diagnoses (or the operative and pathology reports), I can suggest the specific code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 440,
+    "output_tokens": 963
+  },
+  "seconds": 0.0
+}

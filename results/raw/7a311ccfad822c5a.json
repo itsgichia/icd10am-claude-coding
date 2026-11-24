@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "few_shot_three",
+  "record_id": "f3628e222519",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nPatient Name: [REDACTED]\nAge: 76 years\nGender: Male\n\nHospital Course:\nThe patient presented with a metachronous cancer in the sigmoid colon during surveillance colonoscopy after a previous right hemicolectomy for adenocarcinoma of the colon. He had undergone a second laparotomy with revision of the anastomosis due to an anastomotic leak during the immediate postoperative period. During the first postoperative week, the patient developed an enterocutaneous fistula with primary wound failure.\n\nAfter subsequent management for the non-surgical healing of the fistula for 10 months, the patient underwent an abdominal wall reconstruction with an inlay polypropylene/polyglactin 910 composite mesh that was fixed using polypropylene sutures. The patient remained asymptomatic for 16 months after the primary surgery, after which he was diagnosed with a sigmoid cancer during surveillance colonoscopy.\n\nAt surgery, the patient underwent subtotal colectomy with ileorectal anastomosis. Several loops of bowel were tightly adherent to the anterior abdominal wall. After separating the loops from the posterior rectus sheath, an enterotomy was made to extract the heavily deposited mesh from inside the bowel lumen. There were no signs of an abscess, fistula, or sinus formation in the surrounding area.\n\nPost-surgery, the patient had an uneventful recovery and was discharged in a stable condition.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n- Subtotal colectomy with ileorectal anastomosis\n- Abdominal wall reconstruction with polypropylene/polyglactin 910 composite mesh\n\nCondition at discharge:\nThe patient was discharged in a stable condition.\n\nFollow-up plan:\nThe patient is advised to continue with follow-up colonoscopies as part of his surveillance protocol.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "**C18**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1097,
+    "output_tokens": 572
+  },
+  "seconds": 0.0
+}

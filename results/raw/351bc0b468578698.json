@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "cot_then_extract",
+  "record_id": "349fe6e9c4f9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nHospital Course: \nThe patient, a 28-year-old male with moderate intellectual disability, presented with a history of comorbid diagnoses including autism spectrum disorder, hypertension, hypothyroidism, and GERD. The patient had a history of excoriation disorder, schizoaffective disorder bipolar type, and displayed symptoms of anxiety, irritability, and physical aggression. The patient was initially treated with quetiapine but was later transitioned to valbenazine due to intermittent abnormal movements. The patient's treatment was further adjusted, and clozapine was prescribed due to continued psychosis.\n\nHospital Stay: \nFour days after starting valbenazine treatment, improvement in abnormal movements was noted. Over two months, the patient no longer displayed any abnormal jaw movements, minimal to no arm/hand/finger movements or foot tapping, and no truncal movements. Caregivers reported that these improvements resulted in less isolating, aggressive, and confrontational behavior. The patient also became more cooperative, increasing participation in activities and displaying less resistance to caregiver assistance with activities of daily living. The patient currently remains stable on valbenazine (80 mg QHS).\nDiagnosis: [diagnosis section withheld]\nTreatment: \nThe patient was initially treated with quetiapine for symptoms of intermittent abnormal movements, which was later adjusted following persistent psychosis. Valbenazine was prescribed and later escalated to 80 mg QHS. Due to continued psychosis, clozapine was also introduced and titrated over 2 weeks to 300 mg daily.\n\nFollow-up Plan: \nThe patient is currently stable on valbenazine (80 mg QHS) with no reported adverse events. No further medication changes are planned at this time, and follow-up with the patient will continue to monitor for any changes in behavior or physical movements.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The admission was chiefly for schizoaffective disorder, bipolar type, with persistent psychosis and aggression that needed clozapine titration. This is a mental disorder in chapter F, and the three-character category is F25. The abnormal movements treated with valbenazine are a secondary problem.\n\nCODE: F25",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1228,
+    "output_tokens": 387
+  },
+  "seconds": 0.0
+}

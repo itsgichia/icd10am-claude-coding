@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "904e3611e433",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: Patient 5                                 Date of Admission: N/A\nAge: 9                                                       Date of Discharge: N/A\nGender: Female                                           Admitting Diagnosis: Epileptic seizures\n\nHOSPITAL COURSE:\n\nPatient 5 was admitted with a history of Epileptic seizures (ES) which has been documented for 7 years. MRI revealed pachygyria in the cortex and Scalp electroencephalogram (EEG) revealed spike and wave complexes mainly over the bilateral central\u2013parietal\u2013posterior temporal regions. During the hospitalization, the patient underwent three blocks of transcranial direct current stimulation treatment at 2 mA. The patient was discharged without achieving the expected result.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\n\nThe patient was advised to follow up with her healthcare provider and continue taking medication as prescribed.\n\nFOLLOW-UP:\n\nThe patient was referred to follow up with her healthcare provider as directed.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The key coding question is whether the seizures or the pachygyria is the principal diagnosis.\n\nPachygyria is a congenital malformation of the brain, coded to Q04.3 (other reduction deformities of brain) in ICD-10-AM. The epilepsy is a manifestation of that malformation. The patient was admitted for treatment of the epileptic seizures, which is what the transcranial direct current stimulation was aimed at.\n\nThe condition is a 7-year history of epileptic seizures, with spike and wave complexes on EEG. This points to epilepsy, coded to G40 (focal or generalised epilepsy). The seizures are structural and symptomatic of the cortical malformation, so they would be coded as localisation-related (focal) symptomatic epilepsy, G40.2 or similar.\n\nICD-10-AM has no instruction that makes the malformation take precedence. The admission was directed at treating the epilepsy, and the malformation would be an additional diagnosis. The principal diagnosis is therefore epilepsy.\n\nCODE: G40",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 598,
+    "output_tokens": 345
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "9f2fc330de4a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: [Name], [Age]-year-old female\n\nAdmission Date: [Date]\nDischarge Date: [Date]\n\nChief Complaint:\nLeft supraclavicular and axillary painful lump\n\nHospital Course and Treatment:\nThe patient was admitted to the Hematologic Clinic with a painful left supraclavicular and axillary lump. She had received the first dose of the Pfizer-BioNTech COVID-19 vaccine five days prior to presentation. The patient experienced injection site pain, headaches, chills, and a sense of \u201cheaviness\u201d of the neck and upper chest for two days after injection that gradually resolved. On physical examination and Doppler ultrasound, multiple enlarged lymph nodes were seen in the axillary, supraclavicular, and low lateral neck areas. Painful axillary lymphadenopathy also appeared after the second dose of the vaccine. No other abnormal findings were noted. Blood tests including full chemistry, blood count, and CRP levels were within normal limits. The patient was treated with pain relief medication and her symptoms improved gradually until complete resolution.\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient responded well to pain relief medication and her symptoms gradually resolved over time. No complications were reported during hospitalization.\n\nFollow-Up Plan:\nThe patient will be discharged with instructions to follow up with her primary care physician for any concerns or symptoms in the future. No further follow-up is required at this time.\n\nSummary:\nThis is a case of a healthy middle-aged woman who presented with an adverse reaction to the Pfizer-BioNTech COVID-19 vaccine resulting in painful axillary lymphadenopathy. The patient was treated with pain relief medication, and her symptoms resolved over time with no complications identified during hospitalization. The patient will be discharged with instructions to follow up with her primary care physician for any concerns or symptoms in the future."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: R59.0 Localised enlarged lymph nodes**\n\nThe diagnosis section was withheld, so this is inferred from the clinical picture. It is a vaccine-related reactive lymphadenopathy in the axillary, supraclavicular and lateral neck regions.\n\n**Why R59.0 and not another code**\n- Reactive lymphadenopathy after vaccination is not lymphadenitis. Blood tests, including CRP, were normal and there was no infection, so L04.- (acute lymphadenitis) and I88.- (nonspecific lymphadenitis) do not fit.\n- The nodes are enlarged in several adjacent regions (axillary, supraclavicular, low lateral neck). That is still regional or localised, so R59.0 is appropriate rather than R59.1 (generalised lymphadenopathy).\n- R59.0 is the symptom/sign code that best captures the condition being treated.\n\n**Additional codes**\n- **Y59.- (Other and unspecified vaccines and biological substances, as the cause of adverse effects in therapeutic use)** is the external cause code for an adverse reaction to a correctly administered vaccine. Use Y59.8 or Y59.9, or whichever Y59 subcode your coding edition assigns.\n- **U12.9 (COVID-19 vaccine causing adverse effects in therapeutic use)** is the code for an adverse effect of a COVID-19 vaccine. It was introduced with the ICD-10-AM 11th edition, and in the WHO ICD-10 it was added as an emergency code. Check which one applies in your edition.\n- Optional additional codes, if documented and relevant: R51 (headache) and R50.-/R68.8 for the transient post-vaccine symptoms. These had resolved before presentation, so they would usually be omitted.\n\n**Coding note:** Because the diagnosis section was withheld, the final code depends on the wording the clinician actually documents. If the clinician documented \"reactive lymphadenopathy,\" the index still leads to R59.0. If they documented \"lymphadenitis,\" coding would change. The adverse effect external cause code also needs to be sequenced after the principal diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 693,
+    "output_tokens": 725
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "cot_then_extract",
+  "record_id": "7868c7a114d4",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDISCHARGE SUMMARY:\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient presented with low back pain that radiated down the right leg. She underwent L4\u2013L5 microdecompression, which alleviated her pain. However, at approximately 12 months after surgery, her pain began to increase, and she was treated with ALIF at L4\u2013L5 and L5\u2013S1. At 2 months post-operatively, she developed pain with radiation down both legs and difficulty with walking, and a fracture through the anterosuperior end plate of S1 was discovered.\n\nTreatment:\nThe patient underwent exploration of the posterior fusion and removal of instrumentation; revision and decompression of L5\u2013S1; instrumentation placement at the L4\u2013pelvis region; and posterolateral arthrodesis at L4\u2013L5 and L5\u2013S1, with application of pelvic instrumentation using the S2AI technique.\n\nCondition on Discharge:\nThe patient reported 100% improvement in low back pain with some low back soreness, the ability to walk farther, and 80% improvement in neurologic symptoms in the left lower extremity.\n\nInstructions:\nThe patient was instructed to follow-up with her primary care physician for ongoing management of her condition. She was also advised on proper nutrition and exercise to help manage her osteoporosis, as well as proper posture and lifting techniques to prevent further injury to her back.\n\nFollow-up:\nFollow-up appointments were scheduled with the patient's primary care physician and treating physician to monitor her progress and adjust her treatment plan as needed.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible for this admission is a fracture through the anterosuperior S1 end plate. It appeared 2 months after anterior lumbar interbody fusion in a patient with osteoporosis, and it caused bilateral leg pain and difficulty walking, which led to revision surgery with pelvic fixation. The osteoporosis points to a fragility (pathological) fracture, which ICD-10-AM codes to M80 (osteoporosis with current pathological fracture, chapter M). The alternative is a complication of the internal fixation device (T84), but the documented osteoporosis makes M80 the better fit for a sacral fracture without a stated trauma.\n\nCODE: M80",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1137,
+    "output_tokens": 227
+  },
+  "seconds": 0.0
+}

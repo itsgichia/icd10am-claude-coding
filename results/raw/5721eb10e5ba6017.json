@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "c9159cda6e35",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: Case 3\nAge: 40 years old\nSex: Male\nAdmission Date: N/A\nDischarge Date: N/A\n\nChief Complaint:\nCase 3 presented with chronic sinusitis, hyperglycemia, difficulty in breathing, fever, dry cough, general body weakness, and 72% oximetry saturation. He was subsequently diagnosed with COVID-19.\n\nHospital Course:\nThe patient was isolated and taken to a designated isolation center for treatment and monitoring. He received supportive therapy for his symptoms.\nDiagnosis: [diagnosis section withheld]\nFollow-up:\nThe patient is advised to follow-up with his healthcare provider for further evaluation and management of his symptoms. He is also advised to take appropriate precautions to prevent the spread of COVID-19.\n\nDischarge Instructions:\nThe patient will be discharged home with instructions to continue self-isolation and monitor his symptoms. He is advised to seek further medical attention if his symptoms worsen or if he develops new symptoms. The patient is also advised to follow all public health guidelines to prevent the spread of COVID-19. \n\nSummary:\nCase 3, a 40-year-old male, presented with chronic sinusitis, hyperglycemia, difficulty in breathing, and fever. He was subsequently diagnosed with COVID-19 and received supportive therapy during his hospitalization. The patient will be discharged home with instructions to continue self-isolation and monitor his symptoms. He is advised to follow-up with his healthcare provider and to take appropriate precautions to prevent the spread of COVID-19.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: U07**\n\nThe discharge summary states the patient was \"subsequently diagnosed with COVID-19\", and his isolation and supportive care were all directed at it. That makes COVID-19 the condition established after study to be chiefly responsible for the admission. The full code would be U07.1, COVID-19 virus identified.\n\n- **Symptoms are not principal:** the breathing difficulty, fever, dry cough, weakness and 72% saturation are presenting features of the COVID-19. They are not coded as principal.\n- **Comorbidities are not principal:** chronic sinusitis and hyperglycaemia were pre-existing or co-existing conditions. They would be additional codes if they met additional diagnosis criteria. Sinusitis plus hyperglycaemia in a COVID-19 patient can point to COVID-associated mucormycosis. Nothing documented here supports that, so I have not coded it.\n- **Sequencing:** the 72% saturation suggests COVID-19 pneumonia or respiratory failure, but neither is documented. If the withheld diagnosis section confirms pneumonia, an additional code such as J12.8 would apply. I have sequenced U07.1 first, as I understand the Australian guidance requires. Check this against the current ACCD COVID-19 coding guidance for your edition.\n- **Documentation gap:** the diagnosis section is withheld, so \"virus identified\" assumes the diagnosis was laboratory-confirmed. If it was clinical only, the code would change within the same category (U07.2). The three-character answer stays U07.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 775,
+    "output_tokens": 895
+  },
+  "seconds": 0.0
+}

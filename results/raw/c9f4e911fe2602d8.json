@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "361b13c4e2fe",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nHospital Course:\n\nThe patient was admitted to the hospital after suffering syncope. On arrival, the patient was alert and showed impairments in speech fluency, comprehension, and repetition. Further examination revealed poor perfusion over the left middle cerebral artery. He was diagnosed with acute cerebral infarction with global aphasia and received a recombinant tissue plasminogen activator (rtPA) injection. After 12 days of inpatient treatment, the patient was later discharged under stable conditions with global aphasia status and no focal neurologic signs.\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted to the hospital after suffering syncope while playing tennis. The patient presented with global aphasia and impairments in audio comprehension and repetition. Brain CT with contrast revealed no apparent intracranial haemorrhage or mass, but CT perfusion indicated poor perfusion over the left middle cerebral territory. The patient diagnosed with acute cerebral infarction with global aphasia and received a recombinant tissue plasminogen activator (rtPA) injection. Brain non-contrast MRI was conducted on day 5, revealing an acute infarction in the territory of the left middle cerebral artery, just in the perisylvian gyri. The patient was switched to the intensive care unit for further management. After 12 days of inpatient treatment, the patient was later discharged under stable conditions with global aphasia status and no focal neurologic signs. The patient then received speech rehabilitation, including verbal production, auditory comprehension training, augmentative communication training, phonetic placement, and high-level cognitive function training at two hospitals. The patient's language expression gradually recovered. The CCAT was then performed 14 months after the initial stroke.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "I63",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 719,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

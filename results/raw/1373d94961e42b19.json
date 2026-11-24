@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "fe41074797c2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 74-year-old female admitted with subcutaneous masses, abdominal pain, and fever.\n\nClinical course: The patient was admitted with several subcutaneous masses, abdominal pain, and fever. Laboratory tests showed an extremely low platelet count, and serum protein electrophoresis showed a monoclonal band. Imaging studies revealed subcutaneous masses and intra-abdominal lymphadenopathy with moderate splenomegaly. Biopsy of the subcutaneous mass revealed a diagnosis of CSH associated with IgH and Ig\u03ba rearrangements, with suspicion of an underlying lymphoproliferative disorder. Further testing of the excised spleen confirmed a diagnosis of DLBCL, non-GCB subtype.\n\nTreatment: The patient underwent laparoscopic splenectomy and was administered eight courses of rituximab, cyclophosphamide, doxorubicin, vincristine, and prednisone. The patient was in partial remission 9 months after diagnosis. PET-CT scan showed resolution of some masses, but serum paraprotein levels remained elevated leading to four cycles of rituximab plus lenalidomide, MG is not visible at one-month follow-up.\n\nOutcome: The patient was evaluated and treated for CSH and DLBCL with rituximab and combination chemotherapy. The patient achieved PR with some improvement in PET-CT scans but elevated serum paraprotein levels; treated subsequently with rituximab plus lenalidomide leading to undetectable MG levels. The patient was discharged to the home for follow-up with routine laboratory tests and imaging scans.\nDiagnoses: [diagnosis section withheld]"
+      }
+    ]
+  },
+  "text": "## Principal diagnosis: **C83.3 Diffuse large B-cell lymphoma**\n\n**Morphology code:** M9680/3 (malignant lymphoma, large B-cell, diffuse, NOS)\n\n### Why C83.3 is the principal diagnosis\n- The excised spleen showed DLBCL, non-GCB subtype. This is the condition that explains the presentation: fever, abdominal pain, intra-abdominal lymphadenopathy, splenomegaly and the low platelet count.\n- It was also the main focus of treatment. She had a splenectomy, eight cycles of R-CHOP, and then rituximab plus lenalidomide.\n- C83.3 covers DLBCL whatever the sites involved (spleen and nodes here). Subtypes such as non-GCB are not coded separately.\n\n### Other conditions to code as additional diagnoses\n- **Crystal-storing histiocytosis.** This was the first biopsy finding, in the subcutaneous masses. It is a reactive manifestation of the underlying lymphoproliferative disorder, so it is not the principal diagnosis. Check your current edition's index for the right code; it is often assigned to D76.3 (other histiocytosis syndromes).\n- **Monoclonal paraproteinaemia.** This is part of the lymphoma presentation. Code it separately only if the ACS criteria for additional diagnoses are met.\n- **Thrombocytopenia (D69.6 or as specified).** Code it only if it met additional-diagnosis criteria, for example if it was investigated or treated.\n\n### Cautions\n- **Episode of care matters.** This summary covers diagnosis and treatment across many months. If this is a later admission given only for chemotherapy, ACS 0044 (Chemotherapy) applies instead. In that case Z51.1 (chemotherapy session for neoplasm) becomes the principal diagnosis, with C83.3 as an additional diagnosis.\n- **Edition check.** Confirm against your ICD-10-AM edition whether C83.3 needs further character extensions.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 618,
+    "output_tokens": 959
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "191f87a2d072",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 44-year-old male\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient presented at our primary care clinic with a lump in the right nipple associated with sharp pain. The mammogram revealed a 1.2 cm mass in the right retro areolar breast. Core needle biopsy was positive for invasive ductal carcinoma ER+ and PR+ and negative for HER2-. The patient underwent simple mastectomy and right sentinel lymph node biopsy. He received dose-dense adjuvant chemotherapy which was stopped after 3 doses of Taxanes. The lymph node biopsy came back positive for metastatic carcinoma, and the patient received radiation therapy. The patient was started on Tamoxifen therapy for>5 years.\n\nSummary:\n\nThe 44-year-old male was diagnosed with invasive ductal carcinoma stage IIA. He underwent simple mastectomy, right sentinel lymph node biopsy, radiation therapy, and chemotherapy. He was started on Tamoxifen therapy for>5 years. He denied any active complaints 3 years post diagnosis. The physical examination was positive for old healed lateral scar on the right chest. Genetic testing revealed no evidence of BRCA mutations or other evidence of familial breast cancer. The patient's annual mammographic screening and clinical exam of the contralateral breast were normal. He reported concerns of trouble maintaining erections and weight gain which were likely secondary to the effect of Tamoxifen."
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **C50.1, Malignant neoplasm of central portion of breast**\n\n## Rationale\n\n- **Condition:** Invasive ductal carcinoma of the breast (stage IIA, ER+/PR+, HER2\u2212).\n- **Site:** The mass is **retro-areolar**, meaning directly behind the nipple-areola complex.\n  - Retro-areolar and subareolar tumours are conventionally assigned to the **central portion of the breast (C50.1)**.\n  - **C50.0 (nipple and areola)** is reserved for tumours of the nipple or areolar skin itself, such as Paget disease.\n  - The patient presented with a \"lump in the right nipple,\" but imaging places the 1.2 cm mass in the retro-areolar breast tissue, which supports C50.1.\n- **Sex:** ICD-10-AM does not separate male and female breast cancer at the C50 category level, so the same code applies to this male patient.\n- **Laterality:** ICD-10-AM does not encode laterality in C50, unlike ICD-10-CM's C50.121 (right male breast, central portion).\n\n## Supporting/Additional Codes to Consider\n\n| Code | Description |\n|---|---|\n| **M8500/3** | Infiltrating duct carcinoma, NOS (morphology) |\n| **C77.3** | Secondary malignant neoplasm of axillary lymph nodes (positive sentinel node) |\n| **Z17.0** | Oestrogen receptor positive status [ER+] |\n| **N48.4 / Y42.5** | Erectile dysfunction as an adverse effect of tamoxifen, if documented as clinically significant (Y42.5 = other oestrogens and progestogens / antagonists; confirm against your edition) |\n| **Z90.1** | Acquired absence of breast(s) |\n\n## Note\nBecause the patient is **still on tamoxifen**, the malignancy is under active treatment. It should therefore still be coded as current (C50.1), not as a personal history (Z85.3).",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 559,
+    "output_tokens": 1245
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "989391f9254d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient:\n\u2022 Name: Not provided\n\u2022 Age: 24-year-old\n\u2022 Gender: Male\n\nHospitalization Dates:\n\u2022 Admission: [not provided]\n\u2022 Discharge: POD #20\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\u2022 Patient underwent uncomplicated orthotopic liver transplantation after multiple thoracenteses for symtomatic relief of persistent right-sided hepatic hydrothorax.\n\u2022 Patient presented with respiratory distress and left-sided infiltrates consistent with pneumonia on POD #5 after OLT. Patient was started on antibiotics and underwent a right-sided therapeutic thoracentesis with removal of 1.3 liters of fluid.\n\u2022 Post-thoracentesis chest imaging revealed a large hydropneumothorax that was treated with a small-bore chest tube.\n\u2022 Diagnostic bronchoscopy was not performed due to the absence of endobronchial obstruction on CT.\n\u2022 Patient was stable without dyspnea and hypoxemia, so video-assisted thoracoscopic surgery was deferred after consultation with thoracic surgery.\n\u2022 Patient was discharged home on POD #20 without supplemental oxygen.\n\u2022 Follow-up chest x-ray 1 month later showed improvement in the hydropneumothorax and a chest x-ray obtained 6 months later showed near-complete re-expansion of the right lung without surgical intervention.\n\nDischarge Instructions:\n\u2022 Follow-up with liver transplant team as needed.\n\u2022 Follow-up with primary care physician for ongoing care."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: **K74.6 \u2013 Other and unspecified cirrhosis of liver**\n\n## Why this code\n\nUnder ACS 0001 (Principal Diagnosis), the principal diagnosis is the condition that, after study, chiefly caused the admission. This patient was admitted for elective orthotopic liver transplantation (OLT). The condition that made the transplant necessary is end-stage liver disease, which here is presumed to be cirrhosis.\n\nHepatic hydrothorax is a recognised complication of cirrhosis with portal hypertension. That supports cirrhosis as the underlying disease.\n\n**Important caveat:** The admission diagnosis section is withheld, so the cause of the liver disease is not documented. If the record specifies a cause, use the more specific code instead. Examples:\n\n- K70.3 \u2013 Alcoholic cirrhosis\n- K74.3\u2013K74.5 \u2013 Biliary cirrhosis\n- K75.4 \u2013 Autoimmune hepatitis\n- E83.0 \u2013 Wilson disease (worth considering in a 24-year-old)\n- B18.x \u2013 Chronic viral hepatitis\n- K83.0 \u2013 Primary sclerosing cholangitis\n\nClinician clarification should be sought.\n\n## Likely additional diagnoses\n\n| Condition | Suggested code |\n|---|---|\n| Hepatic hydrothorax | J94.8 \u2013 Other specified pleural conditions |\n| Pneumonia (POD #5) | J18.9 \u2013 Pneumonia, unspecified, plus Y95 if hospital-acquired, per local standards |\n| Hydropneumothorax after thoracentesis | J95.8 / T81.x (procedural complication) with the relevant Y-code for misadventure or abnormal reaction, as per ACS 1904 |\n| Portal hypertension / ascites, if documented | K76.6 / R18 |\n\n## Key procedures (ACHI)\n\n- Liver transplantation: 90317-00\n- Thoracentesis\n- Intercostal catheter insertion (small-bore chest tube)\n\nFinal code selection depends on review of the complete medical record.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 587,
+    "output_tokens": 1031
+  },
+  "seconds": 0.0
+}

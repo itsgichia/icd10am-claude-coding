@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "cot_then_extract",
+  "record_id": "0482ac7e989a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Patient name]\n\nDOB: [Patient date of birth]\n\nMedical Record Number: [Patient's medical record number]\n\nAdmission Date: [Date of admission]\n\nDischarge Date: [Date of discharge]\nAdmitting Diagnosis: [diagnosis section withheld]Discharge Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient presented to the emergency department with abdominal pain and was diagnosed with an ectopic pregnancy in the right adnexa. A laparoscopic right salpingectomy was performed, and regular obstetric follow-up was done for the intrauterine pregnancy. The baby was delivered via spontaneous vaginal delivery at term with no significant complications.\n\nDischarge Instructions:\n\nThe patient is advised to continue with regular obstetric follow-up and to report any signs of complications immediately. Post-operative pain management should be done as prescribed. The patient should have a healthy diet and stay hydrated, and avoid strenuous physical activity until cleared by the obstetrician. \n\nFollow-up:\n\nThe patient is advised to schedule a follow-up appointment with their obstetrician as soon as possible.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The admission was for abdominal pain, and the condition established as chiefly responsible was a right adnexal (tubal) ectopic pregnancy treated by laparoscopic salpingectomy. The delivery at term belongs to a separate intrauterine pregnancy and is not the reason for this admission. Ectopic pregnancy falls in chapter O (pregnancy, childbirth and the puerperium) under category O00.\n\nCODE: O00",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 992,
+    "output_tokens": 447
+  },
+  "seconds": 0.0
+}

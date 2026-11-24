@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "1123f003be4c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nHOSPITAL COURSE SUMMARY:\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\n\nPATIENT INFORMATION:\n\nPatient: [NAME]\nSex: Male\nAge: 73 years old\nRace: African American\nADMISSION DIAGNOSIS: [diagnosis section withheld]\nHOSPITAL COURSE:\n\nThe patient presented to an outside hospital with shortness of breath on exertion, orthopnea and lower extremity swelling. He had a history of HFrEF and had stopped taking his cardiac medications. The physical examination revealed signs of heart failure and an elevated troponin level. The patient was treated for ACS and transferred to our hospital for further evaluation of a left atrial mass.\n\nCoronary angiography showed thrombotic subtotal occlusion of the ramus intermedius coronary artery branch. The patient had an echocardiogram that showed a left atrial mass and severe global hypokinesis of the left ventricle. The patient was anticoagulated with unfractionated heparin but developed biventricular thrombi. The patient underwent surgical removal of masses in the right atrium and left atrium, and a two-vessel coronary artery bypass graft was performed. An intraoperative biopsy of the left ventricle showed histopathologic evidence of amyloid deposition by Congo red staining and ATTRwt amyloidosis.\n\nThe patient's postoperative course was complicated by a cerebrovascular accident that was thought to be cardioembolic in nature. He was discharged on postoperative day 15 on chronic anticoagulation with warfarin.\nDISCHARGE DIAGNOSES: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\n\nFollow-up with your primary care physician in 1 week.\nContinue taking all prescribed medications.\nMaintain a low-salt diet as recommended by your physician.\nFollow a healthy lifestyle, including regular exercise and avoiding smoking and alcohol.\nWatch for signs and symptoms of heart failure, such as shortness of breath and swelling, and notify your physician immediately if they occur.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The episode at our hospital centred on the transfer for evaluation of a left atrial mass and ACS. Coronary angiography showed thrombotic subtotal occlusion of the ramus intermedius, with elevated troponin, which indicates acute myocardial infarction. The patient then had a two-vessel CABG for the coronary disease, along with removal of the intracardiac thrombi (the \"masses\"). Amyloidosis was an incidental finding on biopsy, and the stroke was a postoperative complication.\n\nThe condition chiefly responsible for the admitted care is the acute coronary event. It was treated as ACS, angiography showed thrombotic occlusion, and CABG was performed. The troponin elevation and thrombotic occlusion support an acute MI (I21), rather than unstable angina (I20.0). The type of MI is not clear. Because the patient was transferred from another hospital, ICD-10-AM guidance says that an MI still counts as acute (I21) for 4 weeks (28 days) from onset, including when the patient is transferred.\n\nThe alternatives are heart failure (I50), which is a chronic condition and was treated at the outside hospital, and amyloid cardiomyopathy (E85), which was found incidentally. The left atrial mass turned out to be thrombus, which would be coded as I51.3 or I74, but the CABG points to the coronary event as the main focus.\n\nCODE: I21",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 938,
+    "output_tokens": 460
+  },
+  "seconds": 0.0
+}

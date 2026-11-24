@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "0e5540fd316d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\n\nThe patient, a 15-year-old male, was evaluated in the Pediatric Pulmonology Clinic for excessive daytime sleepiness and snoring. The in-lab sleep study showed an overall Apnea-Hypopnea index (AHI) of 2.4, ruling out obstructive sleep apnea (OSA) and central sleep apnea. Further, on multiple sleep latency test (MSLT), the patient displayed pathological daytime sleepiness with a sleep latency < 8 mins on more than two occasions, along with four sleep-onset rapid eye movement (REM) periods, suggestive of the diagnosis of narcolepsy. The patient was then started on modafinil for the treatment of narcolepsy; however, his symptoms persisted.\n\nOn further evaluation, thyroid function tests (TFTs) were performed and revealed a mildly low free T4 with a TSH level inappropriately normal, indicating central hypothyroidism. Magnetic resonance imaging (MRI) of the brain revealed no significant abnormality. Other pituitary hormones were normal, except for a baseline cortisol level that was mildy low. A low-dose adrenocorticotropic hormone (ACTH) stimulation test (1 mcg IV) was done with cortisol levels checked at 30 and 60-minute intervals, which improved. A high-dose ACTH stimulation test (250 mcg IV) was also done with cortisol levels checked at 30 and 60-minute intervals, and the results were normal.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nThe patient was started on thyroid replacement therapy with an improvement in weight and sleep symptoms. The patient continued with the modafinil therapy, and no other treatment was planned.\n\nFollow-up:\n\nThe patient was advised to follow up with the referring physician to monitor the response to therapy."
+      }
+    ]
+  },
+  "text": "The most defensible principal diagnosis is **G47.4 Narcolepsy and cataplexy**. This is an inference, because the diagnosis section was withheld.\n\n**Reasoning**\n- The presenting problem was excessive daytime sleepiness and snoring. The sleep study ruled out obstructive and central sleep apnoea (AHI 2.4).\n- The MSLT showed pathological sleepiness, with sleep latency under 8 minutes and four sleep-onset REM periods. This is diagnostic of narcolepsy, and the patient was started on modafinil.\n- Central hypothyroidism (E03.8 Other specified hypothyroidism, or E23.0 Hypopituitarism if a pituitary cause were documented) was found on further work-up. It was treated with thyroid replacement, and the sleep symptoms improved.\n\n**Coding considerations**\n- In ICD-10-AM, the principal diagnosis is the condition chiefly responsible for the episode of care. Here that is the narcolepsy, which was the reason for the work-up and for the modafinil treatment.\n- The central hypothyroidism is a secondary diagnosis, coded as E03.8 or E23.0 depending on the documentation. The clinical picture suggests it contributed to the symptoms, but narcolepsy was still diagnosed and treated.\n- The cortisol results were normal on high-dose ACTH testing and improved on low-dose testing. This argues against adrenal insufficiency, so no code is needed for it.\n- G47.4 is used for narcolepsy with or without cataplexy. No cataplexy is documented, but the code covers both.\n\n**Caveat:** If the withheld diagnosis attributes the sleepiness to central hypothyroidism (for example, \"secondary narcolepsy due to hypothyroidism\"), the coding would change. The principal diagnosis would then be the hypothyroidism, E03.8 or E23.0, with G47.4 or G47.8 as an additional code.\n\n**Answer: G47.4 (Narcolepsy and cataplexy)**, with E03.8 as a secondary code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 665,
+    "output_tokens": 695
+  },
+  "seconds": 0.0
+}

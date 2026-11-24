@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "dc843e96c2a0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Unspecified\nMedical Record Number: Unspecified\nDate of Admission: Unspecified\nDate of Discharge: Unspecified \n\nHospital Course:\nThe patient, a 68-year-old female presented to the emergency department with complaints of sudden onset of shortness of breath, chest pain, orthopnea, and paroxysmal nocturnal dyspnea. The notably past medical history includes hypertension, high cholesterol, chronic kidney disease stage 3, and hereditary hemorrhagic telangiectasia (HHT). Initial vital signs and laboratory investigations confirms acute systolic heart failure with markedly elevated BNP levels. Following prompt medical management, the patient demonstrated symptomatic improvement and was started on guideline-directed medical therapy including beta-blocker, ACE inhibitor, aldosterone antagonist and an oral diuretic. Subsequent left and right heart catheterization reveals widely patent coronary vessels, elevated pulmonary capillary wedge pressure, and elevated left ventricular end-diastolic pressure. The patient continued to attend regular bevacizumab infusions with her haematologist as this was not thought to be the cause of her cardiomyopathy at the time. Unfortunately, the patient developed recurrent episodes of flash pulmonary edema deemed to be due to medication non-compliance and subsequently experienced sudden onset of chest pain and shortness of breath at home followed by ventricular fibrillation related cardiac arrest which required prolonged resuscitation attempts leading to therapeutic hypothermia, but eventually passed away 3 days later. \nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Instructions:\n1. The patient was discharged to their family to pursue necessary funeral arrangements.\n2. No outpatient follow-up is needed.\n\nDischarge Medications:\nNone. \n\nFollow-up:\nThe patient did not survive."
+      }
+    ]
+  },
+  "text": "The principal diagnosis would most likely be **I13.0, Hypertensive heart and chronic kidney disease with heart failure and stage 1-4 chronic kidney disease**.\n\nICD-10-AM presumes a causal link between hypertension and heart failure unless the documentation states otherwise. Here, the notes list hypertension and CKD stage 3 alongside acute heart failure, and the cardiomyopathy cause is not clearly attributed to another condition. That combination points to I13.0 as the principal code, with additional codes for:\n\n- **I50.21**, Acute systolic (congestive) heart failure\n- **N18.3**, Chronic kidney disease, stage 3\n\nOther codes may be added to reflect the full episode, such as **I46.0** (cardiac arrest) and **I49.01** (ventricular fibrillation), and **I78.0** (hereditary haemorrhagic telangiectasia) as a comorbidity.\n\nIf the treating clinicians had documented the heart failure as unrelated to hypertension, I50.21 would instead be sequenced as the principal diagnosis. The withheld discharge diagnosis section and the cause-of-death documentation should be checked, since the final coding depends on them and on local coding rules.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 703,
+    "output_tokens": 1103
+  },
+  "seconds": 0.0
+}

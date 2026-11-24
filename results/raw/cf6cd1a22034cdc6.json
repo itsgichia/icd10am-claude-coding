@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "b7a4b7cf3ee1",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary\n\nPatient Name: [REDACTED]\n\nAge: 34 years\n\nSex: Female\n\nMedical Record Number: [REDACTED]\n\nAdmission Date: [REDACTED]\n\nDischarge Date: [REDACTED]\n\nHospital Course:\n\nThe patient was admitted to the emergency unit with complaints of moderate lower abdominal pain predominantly on the right side for the past 3 weeks. She did not present with any other symptoms such as fever, inappetence, nausea, or vomiting. A total abdomen ultrasonography (USG) was conducted, which revealed that the patient was in the second trimester of pregnancy without any evident alterations related to the pregnant uterus, the placenta, or the fetus. However, the iliac fossa was directed and revealed that the caecal appendix was thicker in the body portion, reaching a maximal transverse diameter of 9.2mm, which is above normal levels. The MRI results also corroborated the presence of lipomatosis in the appendix.\n\nThe patient was discharged after being prescribed analgesia, and she did not report any return of symptoms during follow-up.\nDiagnosis: [diagnosis section withheld]\nCondition at Discharge:\n \nAt the time of discharge, the patient was stable, and her vital signs were normal.\n\nDischarge Medications:\n\nThe patient was not prescribed any medication at the time of her discharge.\n\nFollow-Up:\n\nThe patient was advised to continue her follow-up visits to her obstetrician and/or primary care physician.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"O99\", \"condition\": \"Other maternal diseases classifiable elsewhere but complicating pregnancy (appendiceal lipomatosis in pregnancy)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 627,
+    "output_tokens": 62
+  },
+  "seconds": 0.0
+}

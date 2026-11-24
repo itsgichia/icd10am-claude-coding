@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "cot_then_extract",
+  "record_id": "63ad1e03f360",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nPatient Age: 32\nAdmission Date: [redacted]\nDischarge Date: [redacted]\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to the hospital with shortness of breath and was found to be COVID-19 positive. Upon examination, he was tachycardic and tachypneic with normotensive blood pressure and oxygen saturation at 92% on room air. Laboratory results showed increased levels of creatinine, ferritin, C-reactive protein, and D-dimer. A chest x-ray did not show any acute disease process, but a thoracic CT scan angiography showed a large saddle embolism extending into segmental branches in both lower lobes and the right middle lobe. Bedside echocardiogram revealed a dilated right ventricle consistent with right heart strain. He was transferred to the intensive care unit due to multiple episodes of hemoptysis and worsening tachypnea. The vascular surgeons performed mechanical embolectomy, and a large thrombus was removed. The patient remained clinically stable post-procedure. The patient was started on heparin and later transitioned to rivaroxaban for treatment. \n\nHospital Course Summary:\nA 32-year-old male with no prior medical history presented to the hospital with shortness of breath and was found to be COVID-19 positive. Extensive testing revealed a submassive pulmonary embolism leading to dilated right ventricle consistent with right heart strain. He underwent successful mechanical embolectomy and was discharged after a comprehensive treatment plan was established.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible for this admission is the submassive saddle pulmonary embolism with right heart strain, which needed ICU care, mechanical embolectomy and anticoagulation. COVID-19 was found on admission but was not the focus of treatment, so it is coded as an additional diagnosis (a coder applying COVID-specific sequencing rules might instead list U07.1 first). Pulmonary embolism is in chapter I, category I26.\n\nCODE: I26",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1136,
+    "output_tokens": 333
+  },
+  "seconds": 0.0
+}

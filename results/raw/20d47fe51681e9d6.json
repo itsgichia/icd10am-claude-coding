@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "82081d7eb4e8",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]  \n\nMedical Record Number: [REDACTED]  \n\nDate of Admission: [REDACTED]  \n\nDate of Discharge: [REDACTED]  \nAdmission Diagnosis: [diagnosis section withheld]Principal Diagnosis: [diagnosis section withheld]\nOther Diagnoses: Hypertension, Retropharyngeal Gas, Bilateral Pulmonary Infiltrates, Pneumomediastinum, Subcutaneous Emphysema, Right Upper Lobe Pneumothorax, Right Pulmonary Artery Thrombosis, Left Renal Vein Thrombosis, Gastrointestinal Bleeding.  \n\nHospital Course:\n\nThe patient was admitted due to altered mental status and subsequently tested positive for COVID-19. During admission, the patient required high levels of oxygen therapy and imaging revealed several respiratory abnormalities. As a result, the patient's pneumothorax was managed and her oxygen requirement was gradually lowered. Management of the patient's thromboses required anti-coagulation treatment and placement of an inferior vena cava (IVC) filter. Further imaging also revealed retropharyngeal gas, bilateral pulmonary infiltrates, pneumomediastinum, and subcutaneous emphysema. The patient remained hospitalized for 21 days, during which time her condition improved significantly. Upon discharge, the patient was advised to follow up with her primary care provider for continued management of hypertension and other medical concerns.\n\nDischarge Instructions:\n\nThe patient is advised to continue taking any current medications as prescribed by her primary care provider. She is also reminded to continue practicing good hygiene, including washing hands frequently and wearing a mask in public areas. The patient is advised to monitor her health status closely and report any concerning symptoms to her primary care provider immediately. A follow-up appointment is scheduled with her primary care provider to ensure proper management of any ongoing medical concerns and to monitor her progress.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"U07\", \"condition\": \"COVID-19\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 818,
+    "output_tokens": 22
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "f8c33b519e45",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: [Redacted]\nAge: 53\nSex: Female\nDate of admission: [Redacted]\nDate of discharge: [Redacted]\n\nHospital Course:\n\nThe patient was admitted with a one-week history of abdominal pain, constipation, nausea, vomiting, and a single episode of bright red blood per rectum. Two days following her presentation, she developed bilateral facial weakness, perioral numbness, and difficulty in swallowing initiation. On examination, the patient had diminished bilateral facial musculature strength and an absent left patellar reflex. CT and MRI of the brain were obtained and showed changes consistent with chronic small vessel ischemic disease. Neurology was consulted and recommended a lumbar puncture which showed increased protein with absent white and red blood cells, raising the suspicion of Guillain-Barr\u00e9 syndrome. The patient was started on intravenous immunoglobulins and monitored in the progressive care unit. After a five-day course of IVIG, the patient showed a slight improvement but did not show up for her follow-up appointment and left against medical advice on day 9 of hospitalization.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Instructions:\n\nThe patient is advised to seek medical attention immediately if she experiences any new neurological symptoms such as numbness, tingling, or weakness in the extremities. She is also advised to attend all scheduled follow-up appointments and continue any prescribed medications as per the instructions of her primary care physician."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis is **G61.0, Guillain-Barr\u00e9 syndrome** (ICD-10-AM).\n\nHowever, this code is not certain from the record:\n\n- **The diagnosis is only suspected.** The notes say the lumbar puncture findings \"raised the suspicion\" of Guillain-Barr\u00e9 syndrome, and the discharge diagnosis section is blank. Under ICD-10-AM inpatient rules, uncertain diagnoses documented as \"probable\" or \"suspected\" at discharge can be coded as if established, but this should be confirmed with the treating team, ideally through a coding query.\n- **The neurological symptoms appeared after admission.** The facial weakness, dysphagia, and reflex changes began two days after presentation. The reason for admission was abdominal pain, constipation, vomiting, and rectal bleeding. If the admitting team never established a cause for those symptoms, the principal diagnosis could instead be the condition that occasioned admission, such as a GI or rectal bleeding code, with G61.0 coded as a secondary diagnosis that was not present on admission.\n- **The patient left against medical advice** on day 9 without follow-up, so the diagnosis was never confirmed.\n\nConfirm the final discharge diagnosis with the clinical team before assigning the principal code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 551,
+    "output_tokens": 1117
+  },
+  "seconds": 0.0
+}

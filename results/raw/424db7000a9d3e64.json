@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "dcda545ce1c2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient: 19-year-old male\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted to the hospital with severe dyspnea and diagnosed with elevated cardiac biomarkers. The initial blood pressure was high. The patient denied angina pectoris, and the ECG showed no notable abnormality. The transthoracic echocardiography showed impaired left ventricular function with basal hypokinesia. Treatment with medications was initiated, and the cardiac MRI showed no evidence of acute myocarditis. Endocarditis was excluded, and the normal blood levels of catecholamines excluded pheochromocytoma.\n\nAfter the acute phase, the patient complained of vertigo and neurological examination showed other neurological deficits. The brain and spinal MRI showed various lesions, including a prominent pontomedullary lesion. The CSF analysis revealed a lymphocytic pleocytosis, and serum neurofilament levels were elevated. Screening for other autoimmune or infectious diseases was negative, and serum-Aquaporin-4- and -MOG-antibodies were negative. The patient was diagnosed with MS, and medication with intravenous methylprednisolone was initiated. During the hospital stay, the patient showed improvement and no focal signs during discharge.\n\nFollow-up:\n\nThe patient was prescribed disease-modifying medication and showed no abnormalities in the follow-up exams. The patient showed no events suspicious of a relapse in the first 6 months of follow-up.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "This looks like a case report of takotsubo-like (stress) cardiomyopathy, with basal hypokinesia (inverted pattern), in a patient subsequently diagnosed with multiple sclerosis. The pontomedullary lesion (area postrema) is likely the trigger. The admission began with dyspnea, elevated troponin, and impaired LV function, which pointed to the cardiac event. The cardiac condition was worked up and treated first, then MS was diagnosed during the same stay, treated with IV methylprednisolone.\n\nThe principal diagnosis is the condition established after investigation to be chiefly responsible for the admission. The patient was admitted with the cardiac presentation, which was attributed to the neurological disease, with takotsubo cardiomyopathy being a manifestation of the MS lesion. However, the discharge summary's text states \"The patient was diagnosed with MS\", and the diagnosis section was withheld, which suggests the diagnosis is MS (possibly \"MS presenting with takotsubo syndrome\").\n\nThe cardiomyopathy was not stated explicitly in the text as a diagnosis. Only the findings were given, and myocarditis, endocarditis, and pheochromocytoma were excluded. With no documented cardiac diagnosis, the only established diagnosis is MS. The treatment given was IV methylprednisolone for MS, and the disease-modifying therapy was also for MS. The underlying cause chiefly responsible for the episode is MS, which is coded to G35.\n\nCODE: G35",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 736,
+    "output_tokens": 500
+  },
+  "seconds": 0.0
+}

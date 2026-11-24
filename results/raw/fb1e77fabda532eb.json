@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "json_output",
+  "record_id": "de62e271a8a2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nHospital Course: \n\nThe patient, a 55-year-old female with a history of gastroesophageal reflux disease, high cholesterol, acne, depression, and history of cholecystectomy, was admitted to the hospital after presenting to the emergency room with abdominal pain and low-grade fever. The patient denied alcoholism and reported no recent history of insect bite. The patient stated that she started taking isotretinoin a month ago, which was prescribed by a dermatologist for severe acne. The patient was found to have mild acute pancreatitis. The patient was treated with bowel rest, intravenous fluid, and prescribed intravenous narcotic pain medications for pain control. Isotretinoin was discontinued, and the patient was advised not to retake it. The patient improved over the next few days and was discharged home in stable condition. \nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course: \n\nThe patient was admitted to the hospital with a diagnosis of acute pancreatitis, secondary to hypertriglyceridemia, and was treated with supportive measures, including bowel rest and intravenous hydration. The patient's acute pancreatitis improved over the course of the hospitalization, and she was subsequently discharged home in stable condition. \n\nTreatment: \n\nThe patient was treated with bowel rest, intravenous hydration, and intravenous narcotic pain medications for pain control. Isotretinoin was discontinued. \n\nFollow-Up: \n\nThe patient was advised to follow-up with her primary care physician for ongoing management of her hypertriglyceridemia.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"K85\", \"condition\": \"Acute pancreatitis\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 655,
+    "output_tokens": 138
+  },
+  "seconds": 0.0
+}

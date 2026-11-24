@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "dc0449ea2395",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\nPatient Name: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHospital stay: The patient was admitted to the hospital due to the presence of a brain tumor located in the clivus region. He underwent surgical intervention via a left suboccipital craniotomy, which involved resection of the tumor. Oral intubation was done using the Macintosh laryngoscope blade, and the patient was placed in the left park bench position with neck flexion. Surgery was performed via the left lateral suboccipital approach. The lesion was decompressed, and the operation was completed successfully.\n\nMedical Condition at Discharge: The patient had minor swelling in the neck, tongue, and pharynx on the left side. He experienced pain in the tip of his tongue with a small ulcer on the left side after returning to the intensive care unit. The swelling of his tongue gradually improved after the administration of steroids. The patient was discharged 10 days after the surgery.\n\nFollow-Up Care: The patient was advised to undergo follow-up MRI after three months of surgery as well as clinical follow-up as per physician's recommendations.\n\nDischarge Medications: None.\n\nInstructions: The patient was advised to follow-up with his physician for regular check-up and take rest until complete recovery.\nFinal Diagnosis: [diagnosis section withheld]"
+      }
+    ]
+  },
+  "text": "I can't determine a definitive ICD-10-AM principal diagnosis from this summary. The final diagnosis section is withheld, and the tumor's histology and behavior (benign, malignant, uncertain, or unspecified) are not stated. ICD-10-AM codes neoplasms by both site and behavior, so this detail is needed.\n\n**What the record supports**\n- The principal diagnosis is the condition established after study to be chiefly responsible for the admission. Here that is the clival brain tumor, treated by left suboccipital craniotomy and resection.\n- The post-operative tongue, pharyngeal and neck swelling and the tongue ulcer are complications or additional diagnoses. They should not be the principal diagnosis.\n\n**Candidate codes, depending on the pathology**\n- **D33.1** Benign neoplasm of brain, infratentorial. This applies if the lesion is a benign tumor such as a schwannoma. Many clival tumors, such as meningiomas, are coded elsewhere (see below).\n- **D32.0** Benign neoplasm of cerebral meninges. This applies if the lesion is a meningioma.\n- **C41.0** Malignant neoplasm of bones of skull and face. The clivus is part of the skull base, so a chordoma or chondrosarcoma arising there is coded here. Chordoma is the classic clival tumor.\n- **D48.0** Neoplasm of uncertain or unknown behavior of bone and articular cartilage. This applies to uncertain behavior in bone.\n- **D49.6** Neoplasm of unspecified behavior of the brain. This applies if no pathology is available and the tumor is described only as a \"brain tumor.\"\n\n**Most likely code from the text alone**\nThe record says only \"brain tumor located in the clivus region.\" If the coder must work with that wording and no histology, **D49.6** (neoplasm of unspecified behavior of brain) is the default. If the pathology report confirms a specific tumor, the code should be changed to match it.\n\n**Additional codes to consider**\n- A post-procedural complication code for the swelling and ulcer. Tongue and pharyngeal edema after intubation or positioning could be coded as a complication, such as T88.8 or an appropriate site-specific code, if the clinician documents it as such.\n- K14.0 Glossitis (ulceration of tongue), if documented.\n\nIf you can share the histopathology or the final diagnosis, I can give a more precise code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 483,
+    "output_tokens": 803
+  },
+  "seconds": 0.0
+}

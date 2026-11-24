@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "98d7b7554966",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient: 75-year-old male with history of tobacco abuse and metastatic p16 positive squamous cell carcinoma (SCC)\n\nHospital Course:\nThe patient was admitted with initial symptoms of swelling in the left neck followed by progressive hoarseness and dysphagia over a span of one to two months. A biopsy of the left neck node confirmed squamous cell carcinoma and the patient was later found to have pulmonary metastases. He required tracheostomy and gastrostomy placement for threatened airway obstruction and dysphagia, respectively. \n\nTreatment and Progression:\nThe patient was initially enrolled in a clinical trial comparing first-line EXTREME chemotherapy versus ipilimumab and nivolumab and was randomized to combination ipilimumab and nivolumab delivered concurrently every three weeks for four cycles. However, follow-up imaging at eight weeks showed progression of disease. The patient was then treated with \u2018QUAD SHOT\u2019 for palliation and delivered 3.7 Gy BID x 2 days (total dose 14.8 Gy) to gross disease. The patient continued through the third and fourth cycles of nivolumab and ipilimumab without breaks or delays. Radiation was delivered during the three-week time frame between immunotherapy cycles and he tolerated treatment well with minimal pain and noticeable improvement in the left neck mass. Repeat imaging showed continued decrease in size of all neck and most lung disease, with one lung nodule minimally increasing in size.\n\nOutcome:\nAt the time of writing (10 months from initial diagnosis), the patient has completed a total of 14 cycles of ipilimumab and nivolumab on trial and is currently living with stable, asymptomatic disease. The patient continues to be followed up for response to treatment.\nDiagnoses: [diagnosis section withheld]\nProcedures:\n- Biopsy of the left neck node\n- Tracheostomy and gastrostomy placement \n- \u2018QUAD SHOT\u2019 for palliation \n\nFollow-up:\nThe patient continues to be followed up for response to treatment."
+      }
+    ]
+  },
+  "text": "The primary site is not documented, so the principal diagnosis is best coded as a metastatic squamous cell carcinoma of unknown primary. The code is **C77.0**, with C78.0 as an additional code.\n\n**Reasoning**\n\n- The record describes a p16-positive SCC found in a left neck node, with pulmonary metastases. p16 positivity suggests an HPV-related oropharyngeal primary, but no primary site is stated, so it cannot be coded as one.\n- The principal diagnosis is the condition chiefly responsible for the admission. Here that is the malignancy that was worked up, treated with immunotherapy and radiotherapy, and managed with tracheostomy and gastrostomy for its complications.\n- ICD-10-AM has no code for \"unknown primary\" in the sense of a primary site with no clinical evidence. When the primary is not documented, the code for the secondary site is assigned.\n- The cervical node is the first presentation, so **C77.0** (secondary and unspecified malignant neoplasm of lymph nodes of head, face and neck) is the best fit. Secondary lung disease is added as C78.0.\n\n**Suggested additional codes**\n\n- C78.0: secondary malignant neoplasm of lung\n- C80.0: malignant neoplasm, primary site unknown, stated as such. Use this if the clinician documents \"unknown primary\".\n- F17.1: tobacco use disorder (harmful use) or F17.2 for dependence, depending on documentation\n- R13.x: dysphagia\n- R49.0: dysphonia (hoarseness)\n- J98.8: other specified respiratory disorder, or J38.6: laryngeal stenosis, if the airway obstruction is documented\n- Z51.2: other chemotherapy, or the immunotherapy code (Z51.8), depending on the episode\n\n**Caveats**\n\n- If the clinician documents the primary site, such as the oropharynx (C09/C10) or the larynx (C32), that site becomes the principal diagnosis and the nodal and lung codes become additional codes.\n- Because the diagnosis section was withheld, the final assignment depends on the documented diagnostic statement.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 748,
+    "output_tokens": 709
+  },
+  "seconds": 0.0
+}

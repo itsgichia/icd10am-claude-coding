@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "82081d7eb4e8",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]  \n\nMedical Record Number: [REDACTED]  \n\nDate of Admission: [REDACTED]  \n\nDate of Discharge: [REDACTED]  \nAdmission Diagnosis: [diagnosis section withheld]Principal Diagnosis: [diagnosis section withheld]\nOther Diagnoses: Hypertension, Retropharyngeal Gas, Bilateral Pulmonary Infiltrates, Pneumomediastinum, Subcutaneous Emphysema, Right Upper Lobe Pneumothorax, Right Pulmonary Artery Thrombosis, Left Renal Vein Thrombosis, Gastrointestinal Bleeding.  \n\nHospital Course:\n\nThe patient was admitted due to altered mental status and subsequently tested positive for COVID-19. During admission, the patient required high levels of oxygen therapy and imaging revealed several respiratory abnormalities. As a result, the patient's pneumothorax was managed and her oxygen requirement was gradually lowered. Management of the patient's thromboses required anti-coagulation treatment and placement of an inferior vena cava (IVC) filter. Further imaging also revealed retropharyngeal gas, bilateral pulmonary infiltrates, pneumomediastinum, and subcutaneous emphysema. The patient remained hospitalized for 21 days, during which time her condition improved significantly. Upon discharge, the patient was advised to follow up with her primary care provider for continued management of hypertension and other medical concerns.\n\nDischarge Instructions:\n\nThe patient is advised to continue taking any current medications as prescribed by her primary care provider. She is also reminded to continue practicing good hygiene, including washing hands frequently and wearing a mask in public areas. The patient is advised to monitor her health status closely and report any concerning symptoms to her primary care provider immediately. A follow-up appointment is scheduled with her primary care provider to ensure proper management of any ongoing medical concerns and to monitor her progress.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: U07**\n\n**Principal diagnosis: COVID-19, virus identified (U07.1). The three-character category is U07.**\n\n- **Why COVID-19 is principal:** The patient presented with altered mental status, which is a symptom and so not coded as principal. Investigation confirmed COVID-19. The infection then drove the episode: high oxygen needs, lung infiltrates, pneumothorax, pneumomediastinum and the clotting complications. It is the condition chiefly responsible for the admission.\n- **Why U07 and not a respiratory code:** ICD-10-AM puts confirmed COVID-19 in Chapter 22 (Codes for special purposes) at U07.1. Australian coding guidance has it sequenced as principal when it meets the definition. Its manifestations are coded as additional diagnoses.\n\n**Additional diagnoses to code:**\n- COVID-19 pneumonia (for example J12.8)\n- Pneumothorax (J93.x)\n- Pneumomediastinum and subcutaneous emphysema (J98.2 / T79.7, depending on the cause documented)\n- Pulmonary embolism or thrombosis (I26.x)\n- Renal vein thrombosis (I82.3)\n- Gastrointestinal haemorrhage (K92.2)\n- Hypertension (I10)\n- IVC filter insertion, coded as a procedure\n\nMost of these subcodes are left at character level or marked \"for example\" because the exact choice depends on what the full record documents.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 907,
+    "output_tokens": 678
+  },
+  "seconds": 0.0
+}

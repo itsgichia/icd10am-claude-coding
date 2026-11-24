@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "882f5cdcd862",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [redacted] \nAge: 28 years \nSex: Female \n\nDate of Admission: [redacted] \nDate of Discharge: [redacted]\n\nReason for Admission:\nThe patient presented with right hip pain after a fall and was diagnosed with a pathologic hip fracture. \n\nClinical Course:\nFollowing admission, the patient underwent radiographic and imaging studies which revealed lytic lesions in the femoral neck and intertrochanteric region as well as osseous destructive lesions in the lumbar spine. The bone scan was suggestive of metastatic disease. A biopsy revealed diffuse large B-cell lymphoma with aggressive features and a germinal center subtype histology. The patient underwent a total right hip replacement and returned for follow-up evaluation.\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was managed for the pathologic hip fracture and underwent biopsy that confirmed the diagnosis of lymphoma. Following diagnosis, the patient underwent a total right hip replacement. The patient is scheduled for further evaluation and management by the oncology team. \n\nDischarge Medications: \nSee the oncology team. \n\nFollow-up Plan: \nThe patient is to follow up with the oncology team. \n\nDischarge Condition: \nThe patient is stable."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: a pathological fracture of the femur due to neoplastic disease, coded in category M84.5 (ICD-10-AM).** I believe the femur site is M84.56, but please verify the exact 5th-character code and laterality in the ICD-10-AM Tabular List, since I can't check the current edition.\n\n**Rationale:**\n- The admission was for a fall with right hip pain, and the fracture was pathological because of lymphoma-related lytic bone destruction.\n- The fracture is the condition that occasioned the admission and was treated (total right hip replacement).\n\n**Additional codes:**\n- **C83.3** \u2013 Diffuse large B-cell lymphoma (the germinal center subtype does not change the code).\n- **C79.5** \u2013 Secondary malignant neoplasm of bone, for the bone involvement (femoral, intertrochanteric, and lumbar lesions). Check whether your coding standards or the Australian Coding Standards call for this code with a lymphoma in bone.\n\n**Coding note:** Some coders sequence the neoplasm first when a pathological fracture is due to a neoplasm, so check the current ICD-10-AM Chapter 2 and Chapter 13 notes and your local coding policy. The discharge summary's diagnosis section is blank, so the final code assignment should be confirmed against the full medical record.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 505,
+    "output_tokens": 2085
+  },
+  "seconds": 0.0
+}

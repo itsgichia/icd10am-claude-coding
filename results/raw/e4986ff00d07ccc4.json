@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "few_shot_six",
+  "record_id": "0e5540fd316d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nExample 4\nHospital course: An 81-year-old woman was brought in after a fall at home. She could not weight-bear and the right leg was shortened and externally rotated. A pelvic radiograph showed a displaced subcapital fracture of the right femoral neck. She underwent hemiarthroplasty on day one.\nAnswer: S72\n\nExample 5\nHospital course: A 19-year-old man presented with 18 hours of periumbilical pain that migrated to the right iliac fossa, with anorexia and a low-grade fever. There was guarding at McBurney's point and the white cell count was 15.2. Laparoscopy confirmed an inflamed, non-perforated appendix.\nAnswer: K35\n\nExample 6\nHospital course: A 64-year-old woman with a history of oestrogen-receptor-positive breast carcinoma treated five years earlier presented with progressive thoracic back pain. Magnetic resonance imaging showed deposits in T7 and T9 with no cord compression. Biopsy confirmed deposits of breast origin and she received palliative radiotherapy to the spine.\nAnswer: C79\n\nHospital course:\nHospital Course:\n\nThe patient, a 15-year-old male, was evaluated in the Pediatric Pulmonology Clinic for excessive daytime sleepiness and snoring. The in-lab sleep study showed an overall Apnea-Hypopnea index (AHI) of 2.4, ruling out obstructive sleep apnea (OSA) and central sleep apnea. Further, on multiple sleep latency test (MSLT), the patient displayed pathological daytime sleepiness with a sleep latency < 8 mins on more than two occasions, along with four sleep-onset rapid eye movement (REM) periods, suggestive of the diagnosis of narcolepsy. The patient was then started on modafinil for the treatment of narcolepsy; however, his symptoms persisted.\n\nOn further evaluation, thyroid function tests (TFTs) were performed and revealed a mildly low free T4 with a TSH level inappropriately normal, indicating central hypothyroidism. Magnetic resonance imaging (MRI) of the brain revealed no significant abnormality. Other pituitary hormones were normal, except for a baseline cortisol level that was mildy low. A low-dose adrenocorticotropic hormone (ACTH) stimulation test (1 mcg IV) was done with cortisol levels checked at 30 and 60-minute intervals, which improved. A high-dose ACTH stimulation test (250 mcg IV) was also done with cortisol levels checked at 30 and 60-minute intervals, and the results were normal.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nThe patient was started on thyroid replacement therapy with an improvement in weight and sleep symptoms. The patient continued with the modafinil therapy, and no other treatment was planned.\n\nFollow-up:\n\nThe patient was advised to follow up with the referring physician to monitor the response to therapy.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "The case is a 15-year-old with narcolepsy on MSLT (sleep-onset REM periods, pathological sleepiness) and central hypothyroidism. The diagnosis section is withheld, so the principal diagnosis has to be inferred from the course.\n\nThe case report is probably titled something like \"central hypothyroidism presenting as narcolepsy\", or it describes narcolepsy with central hypothyroidism. The workup was prompted by persistent symptoms despite modafinil. Thyroid replacement improved weight and sleep symptoms, yet modafinil was continued, so the narcolepsy was treated as a real diagnosis.\n\nTwo candidate codes:\n- G47 covers sleep disorders, including narcolepsy (G47.4).\n- E03 covers other hypothyroidism, including central hypothyroidism (E03.8), while secondary hypothyroidism is E02 or E03.8.\n\nThe thyroid replacement was the new treatment and the main finding of the evaluation. Even so, the presenting problem was excessive sleepiness, the diagnosis of narcolepsy was established by MSLT, and the patient stayed on modafinil. The condition chiefly responsible for the visit was therefore narcolepsy, which gives G47.\n\nThe alternative reading is that the central hypothyroidism was the final explanation for the symptoms, which would give E03. I am going with narcolepsy because the case treats it as a confirmed diagnosis.\n\n**G47**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1446,
+    "output_tokens": 480
+  },
+  "seconds": 0.0
+}

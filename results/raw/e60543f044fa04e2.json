@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "few_shot_six",
+  "record_id": "ecbc47ac7bb5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nExample 4\nHospital course: An 81-year-old woman was brought in after a fall at home. She could not weight-bear and the right leg was shortened and externally rotated. A pelvic radiograph showed a displaced subcapital fracture of the right femoral neck. She underwent hemiarthroplasty on day one.\nAnswer: S72\n\nExample 5\nHospital course: A 19-year-old man presented with 18 hours of periumbilical pain that migrated to the right iliac fossa, with anorexia and a low-grade fever. There was guarding at McBurney's point and the white cell count was 15.2. Laparoscopy confirmed an inflamed, non-perforated appendix.\nAnswer: K35\n\nExample 6\nHospital course: A 64-year-old woman with a history of oestrogen-receptor-positive breast carcinoma treated five years earlier presented with progressive thoracic back pain. Magnetic resonance imaging showed deposits in T7 and T9 with no cord compression. Biopsy confirmed deposits of breast origin and she received palliative radiotherapy to the spine.\nAnswer: C79\n\nHospital course:\nDischarge Summary:\n\nPatient Information: \nName: [REDACTED]\nDOB: [REDACTED]\nGender: Male\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient, a 48-year-old male with a history of poorly controlled type 1 diabetes mellitus, presented with a neuroischemic ulcer of the fifth toe, which was classified as a grade 3 infection. He was diagnosed with signs of osteomyelitis and methicillin-resistant Staphylococcus aureus.\n\nTreatment: \nThe patient was treated with oral vancomycin and underwent wound care management according to the TIME algorithm for 1.5 months. The wound bed was cleaned and decontaminated, devitalized tissue was debrided, non-irritant skin protector was applied to protect the peri-lesional tissue, hydrogel was applied to the wound bed, nanocrystalline silver dressing was used, and polyurethane foam dressing was applied. After full healing, the patient's pre-prandial glucose and HbA1c levels improved.\n\nDischarge Information: \nThe patient was discharged with no acute complaints. Follow-up appointments will be scheduled with his primary care physician and podiatrist. A detailed instruction sheet for wound care management and glycemic control was provided to the patient.\n\nCondition at Discharge: \nStable with no acute complaints. Condition improved.\n\nInstructions: \n1. Follow up with Primary Care Physician and Podiatrist.\n2. Follow wound care instructions.\n3. Maintain healthy diet and exercise regime.\n4. Monitor blood sugar levels.\n5. Attend scheduled appointments.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "This is a type 1 diabetic with a neuroischemic foot ulcer, osteomyelitis and MRSA infection. In ICD-10-AM, diabetes with foot ulcer is coded to E10.5 (peripheral circulatory complications) or E10.6x. Because the ulcer is neuroischemic and diabetic, E10 is the most likely principal diagnosis category.\n\nThe alternative is M86 for osteomyelitis, but the diabetic foot complication is the underlying condition and is classified under E10, with osteomyelitis as an additional code. The ulcer is the main focus of treatment.\n\nE10",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1416,
+    "output_tokens": 204
+  },
+  "seconds": 0.0
+}

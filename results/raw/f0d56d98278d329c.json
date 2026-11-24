@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "1e776546d069",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED] \nAge: 68 \nGender: Male \nAdmission Date: [REDACTED] \nDischarge Date: [REDACTED] \n\nMedical History:\nThe patient presented with left-sided abdominal pain, early satiety, fatigue and 7 lbs weight loss for seven weeks. Past medical history significant for hypertension, emphysema and Hepatitis C Virus (HCV) with successful treatment with sofosbuvir and ribavirin.\n\nHospital Course:\nOn admission to the emergency department, the patient's vitals were stable. His clinical examination was unremarkable, except for left-sided abdominal tenderness. Abdominal ultrasound showed splenomegaly and MRI of the abdomen confirmed multiple hypoenhanced lobulated masses in the spleen. SPECT showed heterogeneous splenic uptake with areas of photopenia related to splenic masses, and liver biopsy showed chronic hepatitis. Bone marrow biopsy ruled out lymphoma and JAK2 mutation was negative. After performing splenic biopsy, DLBCL was diagnosed, and the patient was started on R-CHOP. \n\nAfter six cycles of R-CHOP, the patient's PET scan showed complete remission on PET and decrease in spleen size. However, six months later, he presented with left lower quadrant pain and splenic biopsy showed a relapse of DLBCL. Due to his poor performance status, the patient was started on palliative lenalidomide and rituximab.\nDischarge Diagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was discharged and will follow up for further treatment in the outpatient setting. \n\nFollow-up Instructions:\nThe patient was instructed to consult with the oncology team for further management.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: C83**\n\n**Principal diagnosis:** Diffuse large B-cell lymphoma (DLBCL) of the spleen, relapsed.\n\n- **Why this is the principal diagnosis:** The patient presented with abdominal pain, early satiety, fatigue and weight loss. These are symptoms, so they are not coded as principal. Investigation then established the cause. Splenic biopsy confirmed DLBCL, which was treated with R-CHOP. The relapse was also confirmed by splenic biopsy and treated with palliative lenalidomide and rituximab. The lymphoma was the condition chiefly responsible for the care.\n- **What was excluded as principal:**\n  - Splenomegaly is a manifestation of the lymphoma.\n  - Chronic hepatitis from treated HCV, hypertension and emphysema are comorbidities.\n  - The biopsies and chemotherapy are procedures.\n- **Category:** DLBCL is classified in ICD-10-AM to **C83 Non-follicular lymphoma**. The full code would be C83.3, diffuse large B-cell lymphoma.\n- **Site:** The lymphoma is confined to the spleen and is primary there. The bone marrow biopsy was negative. In ICD-10-AM, lymphoma site is not captured by changing the category, so it does not alter C83.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 830,
+    "output_tokens": 526
+  },
+  "seconds": 0.0
+}

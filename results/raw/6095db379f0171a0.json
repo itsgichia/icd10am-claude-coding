@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "575542c57a56",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\nAdmission Date: [DATE]\nDischarge Date: [DATE]\nLength of Stay: [NUMBER] days\n\nPatient Information:\nName: [NAME]\nAge: 76 years old\nGender: Male\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\nThe patient, a 76-year-old Caucasian male with a family history of Parkinson's disease, was admitted to our hospital after experiencing a shuffling gait. Neurological examination revealed bilateral rigidity and slow gait with reduced arm swing, as well as processing speed and memory difficulties. The patient also presented with urinary retention, orthostatic hypotension, erectile dysfunction, and stridor. Carbidopa/levodopa was unsuccessfully administered. The patient was diagnosed with multiple system atrophy (MSA), due to levodopa-unresponsive parkinsonism and autonomic dysfunction.\n\nDuring the hospital course, the patient received comprehensive care from a multidisciplinary team, including neurologists and primary care physicians. Management of orthostatic hypotension and urinary retention were coordinated with the urology department. The patient was administered supportive therapy, including physical therapy and occupational therapy, to address mobility and activities of daily living. The patient's condition remained stable throughout his hospital stay.\n\nAt the time of discharge, the patient was instructed to continue with his current medications and follow up with his primary care physician and neurologist. The patient was also instructed to contact his healthcare provider if any new or worsening symptoms arise.\nDischarge Diagnosis: [diagnosis section withheld]\nFollow-up Instructions:\n1. Continue current medication regimen as prescribed.\n2. Follow up with primary care physician and neurologist.\n3. Contact healthcare provider if any new or worsening symptoms arise."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: multiple system atrophy (MSA)**\n\n**ICD-10-AM code: G23.2 (Multiple system atrophy, parkinsonian type [MSA-P])**\n\nIn ICD-10-AM (and WHO ICD-10), multiple system atrophy is classified in Chapter VI under \"Other degenerative diseases of basal ganglia\" (G23). Note that WHO ICD-10 places MSA at G90.3, but ICD-10-AM and some national modifications differ in how they subdivide it. Check this against your edition's Tabular List.\n\n**Rationale**\n- The condition chiefly responsible for the admission was the shuffling gait, rigidity and bradykinesia, which were levodopa-unresponsive. These were attributed to MSA.\n- Parkinsonian features dominate the picture (rigidity, slow gait, reduced arm swing). That points to the parkinsonian subtype (MSA-P) rather than the cerebellar subtype (MSA-C).\n- The autonomic features are manifestations of MSA and are not coded as the principal diagnosis. These are orthostatic hypotension, urinary retention and erectile dysfunction.\n\n**Possible additional diagnoses (secondary codes), if documented and meeting reporting criteria**\n- Orthostatic hypotension: I95.1\n- Urinary retention: R33\n- Erectile dysfunction: N52.9, or N48.4 if it is psychogenic or organic as specified\n- Stridor: R06.1\n- Cognitive or memory difficulty: R41.3, or as specified by the clinician\n\n**Caveats**\n- The final code depends on the 'Discharge Diagnosis' wording, which was withheld here. If the clinician documents only \"multiple system atrophy\" without a subtype, use the default or unspecified code in your edition. That may be G90.3 in WHO ICD-10 or a different default under the ICD-10-AM Alphabetic Index.\n- A coder should confirm the code against the current ICD-10-AM/ACHI/ACS edition used by your facility.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 665,
+    "output_tokens": 688
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "17b682c3c741",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\nLength of Stay: [REDACTED]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted for chest pain and dyspnea on exertion of one-day duration. Initial evaluation with electrocardiogram and left heart catheterization revealed a diagnosis of anterior wall ST segment elevation MI, with 50% stenosis of the proximal LAD, 100% occluded mid LAD with thrombus in place, and 30% in-stent restenosis in the distal LAD. The patient underwent successful drug-eluting stent placement in the mid LAD.\n\nThe patient's hospital course was complicated by cardiogenic shock approximately 48 hours following the procedure, requiring intravenous diuresis and inotrope support. The patient was evaluated for advanced heart failure therapies, underwent a thorough evaluation, and planning for LVAD placement with periprocedural anticoagulation using bivalirudin was initiated. The patient was eventually discharged to a cardiac rehabilitation center.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Condition: The patient was discharged to a cardiac rehabilitation center with stable vital signs, improved hemodynamics, and without any significant complications.\n\nDischarge Medications: [REDACTED]\n\nDischarge Instructions: The patient was advised to closely follow up with the advanced heart failure clinic at our hospital and adhere to the prescribed medication regimen. The patient was also instructed to maintain a heart-healthy diet, avoid smoking and excessive alcohol intake, and engage in regular exercise as tolerated.\n\nFollow-up: The patient will follow up periodically in the advanced heart failure clinic at our hospital."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is **I21.02, Acute transmural myocardial infarction (STEMI) involving the left anterior descending coronary artery**.\n\nThe record supports this because the admission was for an anterior STEMI, and the angiogram showed a 100% occluded mid LAD with thrombus. The admitting and discharge diagnosis sections are withheld, so this is based on the hospital course.\n\nTwo related points:\n- **Cardiogenic shock** (R57.0) that developed after the MI is a secondary diagnosis, not the principal one.\n- **Drug-eluting stent placement** in the mid LAD is coded separately in the procedures section. Confirm the exact code and the current ICD-10-AM/ACHI edition with your local coding guidelines.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 701,
+    "output_tokens": 853
+  },
+  "seconds": 0.0
+}

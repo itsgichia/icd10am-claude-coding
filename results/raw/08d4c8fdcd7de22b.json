@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "e525412d8764",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: Caucasian woman with insulin-dependent diabetes and hypertension\nAge: 51 years\n\nHISTORY OF PRESENT ILLNESS:\nThe patient was admitted with a perimesencephalic subarachnoid hemorrhage (SAH) in the prepontine, interpeduncular, ambient, and crural cisterns. She had a previous SAH due to a 6mm aneurysm in the anterior communicating artery (Acomm), which was treated with endovascular coiling.\n\nHOSPITAL COURSE:\nThe patient's hospital course was complicated by vasospasm and cerebral salt wasting. She was treated with hypervolemia, hypertension, intra-arterial nicardipine, and sodium and volume supplementation. After discharge, she returned to work with no residual neurologic deficits.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE MEDICATIONS:\nN/A\n\nFOLLOW-UP:\nThe patient had a follow-up magnetic resonance imaging and angiography performed six months later, which demonstrated no vascular abnormalities.\n\nCONDITION AT DISCHARGE:\nThe patient was discharged home in good condition on post-bleed day 10."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: I60.8 \u2013 Other subarachnoid haemorrhage**\n\n**Reasoning:**\n- The reason for admission was a perimesencephalic subarachnoid haemorrhage, with blood in the prepontine, interpeduncular, ambient and crural cisterns.\n- ICD-10-AM Chapter 9 classifies nontraumatic SAH in I60.\u2013, by the source of the bleed:\n  - I60.0\u2013I60.6 apply when a specific artery is identified as the source, for example I60.5 for the vertebral artery and I60.2 for the anterior communicating artery.\n  - I60.7 is for an unspecified intracranial artery.\n  - I60.8 is for other subarachnoid haemorrhage.\n  - I60.9 is for unspecified subarachnoid haemorrhage.\n- The aneurysm in the anterior communicating artery was the cause of the earlier SAH and had already been coiled. Follow-up imaging showed no vascular abnormality. A perimesencephalic SAH is typically non-aneurysmal, so I60.2 is not appropriate for this admission. I60.8 fits best, though some coders might choose I60.9 if the source is considered unspecified.\n\n**Secondary diagnoses to code (not principal):**\n- Cerebral vasospasm: I67.8 (other specified cerebrovascular diseases). This is often added alongside the SAH code.\n- Cerebral salt wasting: E87.1 (hypo-osmolality and hyponatraemia). Some coders use E22.2 or E83.4, depending on local advice.\n- Insulin-dependent diabetes: E10.- or E11.- with the appropriate fourth character, depending on the type documented. Long-term insulin use is Z79.4.\n- Hypertension: I10.\n- Personal history of the previous SAH and coiling: Z86.7 for the history, plus Z95.- or Z98.8 as appropriate.\n\nI can't confirm the exact code without the withheld discharge diagnosis section. If it states a different specific source for the haemorrhage, the I60 code would change.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 466,
+    "output_tokens": 699
+  },
+  "seconds": 0.0
+}

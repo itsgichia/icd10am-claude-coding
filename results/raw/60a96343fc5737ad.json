@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "0069a6ff9c48",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nAge: 58 years\nGender: Male\nDate of Admission: June 8, 2020\nDate of Discharge: [REDACTED]\n\nReason for Admission:\nThe patient was admitted on June 8, 2020, due to increased oxygen requirements following a COVID-19 diagnosis.\n\nHospital Course:\nThe patient received high flow nasal cannula therapy on admission. However, on hospital day 6, mechanical ventilation (MV) was initiated due to respiratory distress, hypoxemia, and hypercapnia. Despite MV, the patient's respiratory failure continued to worsen. Therefore, venovenous extracorporeal membrane oxygenation (VV-ECMO) was implemented on hospital day 11. Meropenem, levofloxacin, convalescent plasma therapy, and dexamethasone were administered during the treatment course.\n\nOutcome:\nThe patient showed gradual improvement in lung compliance and chest radiography. Ultimately, VV-ECMO was discontinued on hospital day 38.\n\nFollow-Up Care:\nThe patient will continue to receive follow-up care and monitoring as required for complete recovery.\nPrimary Diagnosis: [diagnosis section withheld]Secondary Diagnoses: [diagnosis section withheld]\nCo-Morbidities:\nNone\n\nProcedures Performed:\nMV and VV-ECMO were performed during hospitalization.\n\nMedications Upon Discharge:\nThere were no medications prescribed at the time of discharge.\n\nRecommendations:\nThe patient was advised to continue following a healthy lifestyle routine and receiving regular medical checkups.\n\nClinical Team:\n- Attending Physician: [REDACTED]\n- Nurse: [REDACTED]\n- ECMO Specialist: [REDACTED]\n- Respiratory Therapist: [REDACTED]\n- Pharmacist: [REDACTED]\n- Social Worker: [REDACTED]\n\nDischarge Instructions:\nThe patient was advised to rest and follow a healthy routine as per routine health guidelines. The patient was informed of follow-up appointments and instructed to contact the hospital in case of any concerns or queries."
+      }
+    ]
+  },
+  "text": "The most likely ICD-10-AM principal diagnosis is **U07.1, COVID-19, virus identified**.\n\nThe discharge summary withholds the diagnosis section, so this is inferred from the reason for admission: the patient was admitted for increased oxygen requirements following a COVID-19 diagnosis.\n\nLikely secondary diagnoses include:\n- **Acute respiratory failure** (J96.- in ICD-10-AM). The summary documents hypoxemia and hypercapnia requiring mechanical ventilation, so check the subcode for the specific type.\n- **Pneumonia**, only if the record documents it (for example, J12.8 or J12.9).\n\nThe procedures (mechanical ventilation and VV-ECMO) are coded separately from the ICD-10-AM Procedures classification.\n\nCoding should be verified against the full medical record and the current ICD-10-AM/ACHI edition and Australian Coding Standards, since the principal diagnosis depends on the circumstances of admission and the physician's documentation.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 780,
+    "output_tokens": 1259
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "ac793132db98",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nPATIENT INFORMATION:\nName: [Patient Name]\nAge: 41 years\nSex: Female\nDate of Admission: [Admission Date]\nDate of Discharge: [Discharge Date]\n\nHOSPITAL COURSE:\nThe patient [Patient Name] was admitted to the hospital Emergency Room with complaints of dysarthria, edema of the inferior arts, bilateral inguinal lymphadenopathy and headache. The blood chemistry tests revealed an elevation of the tumor markers CA125, CA15.3, and HE-4. Her cerebral magnetic resonance (MRI) was suggestive of a secondary lesion in the left occipital area and of meningeal carcinomatosis. In her anamnesis, a history of repeated visits to her private gynecologist during the previous two years was reported.\nDIAGNOSIS: [diagnosis section withheld]\nTREATMENT:\nPalliative therapy was initiated after the patient was transferred to the oncology ward.\n\nDISCHARGE SUMMARY:\nThe patient's condition worsened very rapidly, and she exhibited symptoms including agitation, confusion, difficulty in swallowing, inability to walk, release of bronchial secretion with the need for repeated bronchoaspirations, epileptic tonic-clonic seizures, and stiffness of muscle tone. She expired 16 days after admission. \n\nRECOMMENDATIONS:\nNone."
+      }
+    ]
+  },
+  "text": "# Suggested Principal Diagnosis: **C56 \u2013 Malignant neoplasm of ovary**\n\nThis is a provisional code. The diagnosis section is withheld, so it should be confirmed against the documented histopathology or the treating clinician's final diagnosis before assignment.\n\n## Rationale\n\n**Clinical pattern points to an ovarian primary:**\n- The tumour markers CA125 and HE-4 together are highly suggestive of epithelial ovarian carcinoma. HE-4 adds specificity over CA125 alone.\n- Bilateral inguinal lymphadenopathy and lower limb oedema are consistent with pelvic or gynaecological malignancy and lymphatic spread.\n- Two years of repeated visits to her gynaecologist suggest a missed or delayed gynaecological diagnosis.\n- Raised CA15.3 can occur in advanced ovarian cancer. Taken alone it would raise breast cancer, but the overall picture favours ovary.\n\n**Why the primary site is principal:** Under ACS 0236 (Neoplasm coding and sequencing), the primary site is sequenced first when the episode of care is directed at the malignancy, including palliative care. The metastases are coded additionally.\n\n## Additional Codes to Consider\n\n| Code | Description |\n|---|---|\n| C79.3 | Secondary malignant neoplasm of brain and cerebral meninges (occipital lesion and meningeal carcinomatosis) |\n| C77.4 | Secondary malignant neoplasm of inguinal and lower limb lymph nodes |\n| R56.8 / G40.x | Seizures, as documented |\n| R13 | Dysphagia |\n| R47.1 | Dysarthria |\n| Z51.5 | Palliative care |\n| Morphology (M-code) | Per histology, e.g., M8441/3 serous carcinoma, if documented |\n\n## Caveat\n\nIf the withheld diagnosis states a different primary, the principal diagnosis changes accordingly:\n- Endometrial cancer: C54.1\n- Cervical cancer: C53.9\n- Breast cancer: C50.9\n- Primary unknown: C80.0\n\nPlease check the final documented diagnosis before finalising.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 519,
+    "output_tokens": 1094
+  },
+  "seconds": 0.0
+}

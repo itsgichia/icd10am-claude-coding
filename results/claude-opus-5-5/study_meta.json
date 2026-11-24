@@ -1,0 +1,39 @@
+{
+  "model": "claude-opus-5-5",
+  "started": "2026-11-24T01:05:13",
+  "model_ran": true,
+  "failure": null,
+  "stages_completed": [
+    "dev",
+    "test"
+  ],
+  "scan_config": {
+    "seed": 20260321,
+    "dev_n": 100,
+    "test_n": 100,
+    "scan_rows": 40000,
+    "min_chars": 600,
+    "max_chars": 2000,
+    "split": "train"
+  },
+  "n_dev": 100,
+  "n_test": 100,
+  "generation_config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "dev_winner": "cot_then_extract",
+  "dev_winner_accuracy": 0.5,
+  "test_templates": [
+    "cot_then_extract",
+    "zero_shot_minimal",
+    "zero_shot_strict_format",
+    "few_shot_six",
+    "context_rich_structure"
+  ],
+  "figure_template": "cot_then_extract",
+  "finished": "2026-11-24T01:40:26"
+}

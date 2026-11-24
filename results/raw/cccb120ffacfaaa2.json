@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "3a1233001d46",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nPatient Information:\n- Name: [REDACTED]\n- Age: 64 years old\n- Sex: Female\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n- The patient underwent resection of the seeding nodule of ovarian carcinoma and created a loop ileostomy due to direct invasion of the carcinoma to the terminal ileum.\n- Prolapse of the ileostomy appeared approximately 17 months after the operation, and it continued to progressively worsen.\n- The patient subsequently underwent a revision operation to reposition the prolapse.\n- After revision of the prolapse, there were no further troubles with the ileostomy.\n- The postoperative progress was good, and the chemotherapy was continued.\n- However, the patient's general state got worse gradually, and her treatment became a plan of best supportive care.\n- Nineteen months after the first time operation, the general state got even worse and she died.\n\nSummary:\nThe patient, a 64-year old female with unresectable ovarian carcinoma, underwent resection of the seeding nodule of ovarian carcinoma and created a loop ileostomy due to direct invasion of the carcinoma to the terminal ileum. Prolapse of the ileostomy appeared approximately 17 months after the operation, and it continued to progressively worsen. A revision operation was performed to reposition the prolapse, and after revision, there were no further troubles with the ileostomy. The postoperative progress was good, and the chemotherapy was continued. However, the patient's general state got worse gradually, and her treatment became a plan of best supportive care. Nineteen months after the first time operation, the general state got even worse and she died.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The episode in question is the admission for revision of the prolapsed ileostomy. The prolapse appeared about 17 months after the original operation, and the revision was performed to reposition it. The condition chiefly responsible for that admission is therefore the stoma complication, not the ovarian carcinoma.\n\nIn ICD-10-AM, complications of a stoma of the digestive tract are coded to K91.4 (Colostomy and enterostomy malfunction). Prolapse of an ileostomy falls under this category. The ovarian carcinoma (C56) would be an additional diagnosis, since it is a relevant comorbidity.\n\nThe chapter is Chapter 11 (Diseases of the digestive system), under K91 (Postprocedural disorders of digestive system, not elsewhere classified). Australian coding practice does place ileostomy complications at K91.4.\n\nThe alternative is C56, if the episode were read as the initial surgery. The question asks about the episode of care in which the prolapse was revised, and the narrative centres on that revision, so I am going with K91.\n\nCODE: K91",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 765,
+    "output_tokens": 350
+  },
+  "seconds": 0.0
+}

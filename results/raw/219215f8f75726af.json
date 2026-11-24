@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "3f1729a7cc5a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDISCHARGE SUMMARY\n\nAdmission Date: [Date]\nDischarge Date: [Date]\n\nPatient Name: [Patient Name]                   Age: 48                    Sex: Male\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient remained in a vegetative state with a CRS-R score of 6 upon arrival in the rehabilitation department of the university hospital. Through comprehensive rehabilitation that included the administration of neurotropic drugs, physical and occupational therapies, as well as the use of tDCS and rTMS, the patient recovered to a CRS-R score of 22 within 5 weeks.\n\nFollow-up:\nThe patient's wife provided signed, informed consent for publication, and approval for the study was obtained from the Institutional Review Board of Yeungnam University Hospital.\n\nDischarge Condition:\nThe patient was discharged to [preferred location] in a conscious state. \n\nPlan:\nReferred to [medical professional or organization] for future rehabilitation and care.\tA follow-up appointment with [medical professional or organization] was scheduled. \n\nMedications:\n[None noted in the case report.]\n\nAllergies:\n[None noted in the case report.]\n\nFollow-up Instructions:\nThe patient is advised to [list any instructions given to the patient]. \n\nPrimary Care Physician: [Physician Name]\n\nReviewed by: [Name of Responsible Medical Practitioner]\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"R40\", \"condition\": \"Somnolence, stupor and coma (prolonged disorder of consciousness / vegetative state)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 606,
+    "output_tokens": 49
+  },
+  "seconds": 0.0
+}

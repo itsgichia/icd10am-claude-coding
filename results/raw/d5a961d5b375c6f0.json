@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "cot_then_extract",
+  "record_id": "0069a6ff9c48",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nAge: 58 years\nGender: Male\nDate of Admission: June 8, 2020\nDate of Discharge: [REDACTED]\n\nReason for Admission:\nThe patient was admitted on June 8, 2020, due to increased oxygen requirements following a COVID-19 diagnosis.\n\nHospital Course:\nThe patient received high flow nasal cannula therapy on admission. However, on hospital day 6, mechanical ventilation (MV) was initiated due to respiratory distress, hypoxemia, and hypercapnia. Despite MV, the patient's respiratory failure continued to worsen. Therefore, venovenous extracorporeal membrane oxygenation (VV-ECMO) was implemented on hospital day 11. Meropenem, levofloxacin, convalescent plasma therapy, and dexamethasone were administered during the treatment course.\n\nOutcome:\nThe patient showed gradual improvement in lung compliance and chest radiography. Ultimately, VV-ECMO was discontinued on hospital day 38.\n\nFollow-Up Care:\nThe patient will continue to receive follow-up care and monitoring as required for complete recovery.\nPrimary Diagnosis: [diagnosis section withheld]Secondary Diagnoses: [diagnosis section withheld]\nCo-Morbidities:\nNone\n\nProcedures Performed:\nMV and VV-ECMO were performed during hospitalization.\n\nMedications Upon Discharge:\nThere were no medications prescribed at the time of discharge.\n\nRecommendations:\nThe patient was advised to continue following a healthy lifestyle routine and receiving regular medical checkups.\n\nClinical Team:\n- Attending Physician: [REDACTED]\n- Nurse: [REDACTED]\n- ECMO Specialist: [REDACTED]\n- Respiratory Therapist: [REDACTED]\n- Pharmacist: [REDACTED]\n- Social Worker: [REDACTED]\n\nDischarge Instructions:\nThe patient was advised to rest and follow a healthy routine as per routine health guidelines. The patient was informed of follow-up appointments and instructed to contact the hospital in case of any concerns or queries.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible for the admission is COVID-19 pneumonia; the respiratory failure needing high-flow oxygen, mechanical ventilation and VV-ECMO is a manifestation of it, not a separate principal condition. COVID-19 is coded in ICD-10-AM chapter U (codes for special purposes), as COVID-19 with the virus identified. That gives category U07.\n\nCODE: U07",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1332,
+    "output_tokens": 200
+  },
+  "seconds": 0.0
+}

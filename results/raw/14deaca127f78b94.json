@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "dd6490d94132",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\nPatient Name: N/A\nDOB: N/A\nSex: Female\nAdmission Date: N/A\nDischarge Date: N/A\nAdmitting Diagnosis: [diagnosis section withheld]\nFinal Diagnosis: [diagnosis section withheld]\nHospital Course: The patient, a 92-year-old Caucasian female with a medical history significant for Alzheimer's dementia, seizure disorder, osteoporosis, and osteoarthritis, was admitted for evaluation of new onset confusion and constipation. Review of symptoms revealed anorexia, weight loss, constipation for the last three weeks, and history of a fall one month prior to the presentation. An MRI of the brain showed lytic lesions and serum protein electrophoresis and urine protein electrophoresis confirmed the diagnosis of Multiple Myeloma. Primary Hyperparathyroidism was also suspected due to high intact PTH levels. Hypercalcemia was managed during the admission, and the patient was started on medication. The patient was later discharged and is currently following up with oncology services as an outpatient on a low dose of lenalidomide with a stable M protein. \n\nDisposition: Discharged\n\nMajor Procedures: N/A\n\nBrief hospitalization course: A 92-year-old Caucasian female was admitted to the hospital due to confusion and constipation. During the admission, the patient was diagnosed with Multiple Myeloma and Primary Hyperparathyroidism. Hypercalcemia was managed, and the patient was later discharged and is currently following up with oncology services as an outpatient."
+      }
+    ]
+  },
+  "text": "The ICD-10-AM principal diagnosis is most likely **C90.0 Multiple myeloma**.\n\nThe patient was admitted for new confusion and constipation, which were most likely caused by the hypercalcaemia from the underlying myeloma. Multiple myeloma was confirmed on serum and urine protein electrophoresis and is the condition chiefly responsible for the admission. Under ICD-10-AM principal diagnosis rules, the hypercalcaemia is classified as a manifestation of the neoplasm rather than as the principal diagnosis.\n\nLikely secondary codes include:\n- **E83.52 Hypercalcaemia**, managed during the admission\n- **E21.0 Primary hyperparathyroidism**, only if it is confirmed. The summary describes it as \"suspected,\" so the coder should check the final diagnosis section, which was withheld here. Under inpatient uncertain-diagnosis rules, a condition documented as suspected at discharge may be coded as if established, but this depends on local policy.\n- **F03 Unspecified dementia**, or a more specific Alzheimer's code (G30.- with F02.-), since the patient has Alzheimer's dementia\n- Codes for the seizure disorder, osteoporosis, and osteoarthritis, if they were treated or affected care\n- Any codes for anorexia, weight loss, or the fall, if not integral to the myeloma\n\nFinal code assignment should be checked against the complete record and the relevant ICD-10-AM/ACHI coding standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 575,
+    "output_tokens": 1127
+  },
+  "seconds": 0.0
+}

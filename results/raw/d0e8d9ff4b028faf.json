@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "8737b8aee5a2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nAdmission date: N/A\nDischarge date: N/A\n\nPatient Information: \nThe patient is a 71-year-old Finnish male diagnosed with early onset Parkinson's disease at the age of 40.\n\nHospital Course:\n\nDuring the years 2016-2017, the patient was categorized at stage 2.5 of the modified Hoehn and Yahr Scale, with a United Parkinson's Disease Rating Scale (UPDRS) score of 41/199. The patient demonstrated rigidity of the lower limbs, shortness of steps, and postural instability, but no tremors. He has experienced a mild gait disturbance with occasional freezing recently. The progression of his illness has been slow, with a sustained response to medication.\n\nDiagnostic Tests:\nDopamine transporter (DaT) single-photon emission computerized tomography (SPECT) of the brain was performed and demonstrated reduced density of DA synaptic terminals in the caudate and putamen consistent with degenerative Parkinson's disease.\n\nMedical History:\nThe patient has no reported family history of Parkinson's disease.\n\nGenetic Analysis:\nTargeted next-generation sequencing revealed that the patient carried a novel homozygous c.194G > A variant in exon 3 of the PARK2 gene, causing an amino acid change p.Ser65Asn (S65N) in the PARKIN protein. The variant is very rare, but the site is highly conserved in vertebrates, and in silico analysis of the variant predicted that the mutation is deleterious.\nDischarge Diagnosis: [diagnosis section withheld]\nFollow-Up Care and Recommendations:\nThe patient should follow up with his healthcare provider regularly to monitor his condition and adjust medication as needed. The patient should be advised to continue engaging in regular physical activity and cognitive stimulation.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: G20**\n\nThe principal diagnosis is Parkinson disease (G20). The SPECT result showing reduced dopamine transporter density consistent with degenerative Parkinson disease supports this. The PARK2 variant is an underlying genetic cause that may need an additional code, but it does not change the three-character category. The discharge diagnosis section is withheld and the admission and discharge dates are listed as N/A, so this assignment rests only on the clinical narrative provided.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 837,
+    "output_tokens": 399
+  },
+  "seconds": 0.0
+}

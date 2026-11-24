@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "cot_then_extract",
+  "record_id": "e89b81675cb4",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nHospital Course:\n\nThe patient, a 68-year-old man, underwent laparoscopic low anterior resection for rectal cancer. The patient's preoperative diagnosis was stage IIIB rectal cancer. Preoperative imaging showed a shortened mesentery of the descending colon due to adhesion of the sigmoid colon to the mesentery of the small intestine. During the laparoscopic procedure, the IMA, LCA, and IMV were ligated. The patient experienced no complications in their postoperative course. \n\nDischarge Summary:\nDischarge Diagnosis: [diagnosis section withheld]\nProcedures: Laparoscopic low anterior resection \n\nHospital Course: The patient underwent a laparoscopic low anterior resection for their stage IIIB rectal cancer. During the procedure, the IMA, LCA, and IMV were ligated. The patient tolerated the procedure well and experienced no complications during their postoperative course. \n\nDischarge Instructions: The patient is advised to follow up with their primary care provider and oncologist as scheduled. They are encouraged to maintain a nutritious diet and to engage in physical activity as recommended by their healthcare providers. \n\nFollow-Up: The patient is recommended to follow up with their healthcare providers as scheduled.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "Rectal cancer (stage IIIB) treated by laparoscopic low anterior resection is the condition chiefly responsible for this admission. It is a malignant neoplasm, which belongs to chapter C. The three-character category for malignant neoplasm of the rectum is C20.\n\nCODE: C20",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1020,
+    "output_tokens": 100
+  },
+  "seconds": 0.0
+}

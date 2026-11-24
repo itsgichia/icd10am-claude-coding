@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "ccde4e0663bf",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\n\nDOB: [Redacted]\n\nGender: Female\n\nMedical Record Number: [Redacted]\n\nDate of Admission: [Redacted]\n\nDate of Discharge: [Redacted]\n\nReason for Admission:\nThe patient was referred for neurological examination due to sudden onset of diplopia.\n\nHospital Course:\nThe patient underwent neurological examination which revealed convergent strabismus and no movement of the left lateral rectus muscle. Magnetic resonance imaging (MRI) of the brain showed multiple lesions affecting the periventricular, juxtacortical and infratentorial regions. A cerebrospinal fluid analysis was unremarkable. As no other structural abnormalities were identified, a diagnosis of multiple sclerosis (MS) was made. The patient was started on pulse corticosteroid therapy with methylprednisolone during three days. \n\nOutcomes:\nThe patient did not recover after 6 months of the diplopia and is currently being followed on outpatient appointments.\nDiagnosis: [diagnosis section withheld]\nRecommendation:\nThe patient is recommended to follow up on outpatient appointments."
+      }
+    ]
+  },
+  "text": "## Principal diagnosis: **G35 Multiple sclerosis**\n\n**Why G35 is principal**\n- The patient was admitted for sudden diplopia. Work-up showed a left lateral rectus palsy, which is a left sixth (abducens) nerve palsy.\n- MRI showed lesions in the periventricular, juxtacortical and infratentorial regions. This meets the McDonald criteria for dissemination in space. MS was diagnosed, and she was treated with IV methylprednisolone pulse therapy.\n- Under the Australian Coding Standards for principal diagnosis, the condition found after study to be chiefly responsible for the admission is sequenced first. The sixth nerve palsy and diplopia are manifestations of the MS. So the underlying disease, MS, is the principal diagnosis.\n\n**Possible additional diagnosis**\n- **H49.2 Sixth [abducent] nerve palsy** may be added. It met the criteria for an additional diagnosis because it was investigated and is persisting.\n- Diplopia (H53.2) would not be coded separately, because it is a symptom inherent to the nerve palsy.\n\n**Caveat:** The discharge summary's diagnosis section was withheld. G35 rests on the documented statement that \"a diagnosis of multiple sclerosis was made.\" If the final documented diagnosis differed, the code should be confirmed against the clinician's documentation. Examples would be clinically isolated syndrome or a demyelinating disease not yet confirmed as MS.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 435,
+    "output_tokens": 692
+  },
+  "seconds": 0.0
+}

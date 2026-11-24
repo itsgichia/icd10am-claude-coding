@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "8d13e48b6d14",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\n\nDate of Admission: [redacted]\n\nDate of Discharge: [redacted]\n\nReason for Admission:\nThe patient was admitted to the emergency department due to a 12-day history of cyclical fevers with vague abdominal pain.\n\nHospital Course:\nInitial vital signs showed a blood pressure of 149/80 mmHg, a heart rate of 107 beats per minute, a temperature of 99.2\u00baF, a respiratory rate of 16, and a pulse oximetry reading of 100% on room air. Laboratory values showed a drop in hemoglobin and mild leukocytosis with no evidence of urinary tract infection. A computed tomography (CT) of the abdomen and pelvis with IV contrast showed multiple liver abscesses, septic thrombophlebitis of the portal system, and evidence of ruptured appendicitis. The patient was started on broad-spectrum IV antibiotics and underwent IR-guided abscess drainage.\n\nTreatment:\nThe patient was treated with IV antibiotics and underwent abscess drainage.\n\nCondition at Discharge:\nThe patient's condition improved significantly after treatment.\n\nFollow-Up:\nFollow-up appointments were scheduled with the patient's primary care provider for further evaluation and treatment.\n\nRestrictions:\nThe patient was advised to avoid strenuous activities until further notice.\n\nMedications:\nNo medications were prescribed at the time of discharge.\n\nProcedures:\nThe patient underwent IR-guided abscess drainage and interval appendectomy.\nDiagnosis: [diagnosis section withheld]\nSummary:\nThe patient presented to the emergency department with a 12-day history of cyclical fevers with vague abdominal pain. Imaging studies revealed the presence of liver abscesses, septic thrombophlebitis of the portal system, and ruptured appendicitis. The patient was treated with IV antibiotics and underwent abscess drainage and interval appendectomy. The patient's condition improved significantly and follow-up appointments were scheduled with the primary care provider."
+      }
+    ]
+  },
+  "text": "The most likely ICD-10-AM principal diagnosis is **K35.2, Acute appendicitis with generalised peritonitis**, which covers the ruptured appendicitis. The discharge summary's diagnosis section is blank, so this is an inference from the course, not a confirmed code.\n\nThe reasoning:\n\n- **Sequencing:** The liver abscesses and portal vein septic thrombophlebitis appear to be complications of the ruptured appendicitis. Under ICD-10-AM sequencing rules, the underlying condition is coded first, and the complications are coded as additional diagnoses.\n- **Complications to code secondarily:**\n  - Pylephlebitis (portal vein septic thrombophlebitis): K75.1, Phlebitis of portal vein\n  - Liver abscess: K75.0, Hepatic abscess\n- **Caveat on the appendicitis code:** The exact code depends on whether the rupture is documented as generalised or localised peritonitis (K35.2 vs K35.3), and on the ICD-10-AM Alphabetic Index entry for \"ruptured/perforated appendicitis.\" Check the operative and radiology reports for peritoneal involvement and confirm against the index.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 735,
+    "output_tokens": 1380
+  },
+  "seconds": 0.0
+}

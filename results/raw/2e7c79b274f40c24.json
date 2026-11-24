@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "a8f1e542a3f8",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: N/A\nMedical Record Number: N/A\n\nAdmission Date: N/A\nDischarge Date: N/A\n\nBrief Hospital Course:\nThe patient was admitted for specialized care due to circulatory failure. On admission, he presented with fever, myalgia, headache, and a rash. The patient did not report any ticks or eschar. The patient was initially treated for septic shock with intravenous normal saline. Spotted fever rickettsial infection was considered due to the presence of a rash, and the patient was started on intravenous ceftriaxone and oral doxycycline. As the patient's condition worsened, he developed shortness of breath and hypoxemia, which indicated type 1 respiratory failure. An echocardiogram showed myocarditis and pulmonary edema leading to heart failure. Intravenous chloramphenicol was added to the treatment regimen, as it can be effective in cases like this. Three inotropes were required, including norepinephrine, dobutamine and dopamine, to maintain the patient's blood pressure. After increasing the steroids dosage, the patient began showing signs of improvement. The patient was extubated and transferred back to the High Dependency Unit of the medical ward. The patient was discharged from the hospital ten days following admission.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Medications:\nN/A\n\nFollow-Up:\nThe patient was reviewed in the out-patient clinic, and he was asymptomatic. Further species identification was not possible due to unavailability of facilities. The patient did not turn up for the follow-up echocardiogram. \n\nDischarge Condition:\nThe patient was discharged in stable condition.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"A77\", \"condition\": \"Spotted fever [tick-borne rickettsioses]\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 692,
+    "output_tokens": 36
+  },
+  "seconds": 0.0
+}

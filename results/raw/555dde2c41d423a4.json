@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "b9311054ccff",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\n\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient exhibited acute massive hemoptysis upon admission, which was successfully treated through a bronchial arteriography with distal embolization of the left bronchial and phrenic arteries. The patient's bleeding did not recur thereafter, and the outcome was favorable. The patient's respiratory tract sampling was positive for SARS-CoV-2, but there was no evidence of bacterial or viral co-infection.\n\nLaboratory Results:\nThe patient's CRP was measured at 256 mg/L, lactate dehydrogenase level was low at 237 UI/L, and D-Dimere level was 1228 ng/mL. The anti Xa activity was measured at 20 ng/ml. Serum Aspergillus-specific IgE level was low.\n\nConclusion:\nThe patient was discharged from the hospital on D14 with no complications of the vascular interventional procedure. Follow-up care was recommended.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The episode centres on acute massive hemoptysis treated with bronchial artery embolization, and the patient also tested positive for SARS-CoV-2. The question is whether the hemoptysis or the COVID-19 is the principal diagnosis.\n\nThe hemoptysis is the reason for admission and the target of treatment. No underlying cause such as bronchiectasis, tuberculosis or aspergilloma is identified, and the Aspergillus IgE was low. In ICD-10-AM, an unexplained symptom like hemoptysis is coded R04.2, haemoptysis.\n\nCOVID-19 is U07.1 and could be argued as principal, since the hemoptysis may be a manifestation of the infection. However, the stay was driven by the bleeding and its embolization, not by treatment of COVID pneumonia. There is no documented pneumonia, and the CRP of 256 mg/L is not attributed to a specific infection.\n\nThe hemoptysis is therefore the condition chiefly responsible for the admission. A confirmed COVID-19 infection could in principle be sequenced first under the coding standards, but here the treatment was directed at the bleeding. I choose R04.\n\nCODE: R04",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 930,
+    "output_tokens": 390
+  },
+  "seconds": 0.0
+}

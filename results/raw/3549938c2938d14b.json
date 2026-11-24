@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "ef67a827be0c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\n\nAge: 21\n\nGender: Male\n\nAdmission Date: [redacted]\n\nDischarge Date: [redacted]\nDischarge Diagnoses: [diagnosis section withheld]\nHospital Course: \n\nPatient presented with acute onset of left-sided chest pain and shortness of breath after using an E-cigarette during his break at work, which he had been using for the past 3 years. A chest X-ray at an urgent care center revealed a small left-sided pneumothorax, which progressed to a moderate sized pneumothorax as seen on a repeat chest X-ray in the ED. A left-sided chest tube was inserted, which successfully resolved his pneumothorax. CT chest was obtained and revealed left-sided atelectasis. \n\nThe patient remained stable throughout his hospital course and was discharged home on hospital day 3 with instructions to avoid vaping. He was advised to follow up with his primary care physician for further evaluation and management, and to seek medical attention if he experienced any recurrence of his symptoms.\n\nDischarge Medications: None\n\nDischarge Instructions: The patient was advised to avoid vaping and to follow up with his primary care physician for further evaluation and management. \n\nFollow-up: The patient was instructed to follow up with his primary care physician within the next 1-2 weeks for further evaluation and management.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "J93",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 578,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

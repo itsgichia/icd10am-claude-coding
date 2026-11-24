@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "88738ac02b6e",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\nThe patient, a 73-year-old male, was admitted to the Urology ward with a chief complaint of nocturia, frequency, dribbling, and urinary retention since last month. Ultrasound examination revealed left renal mass. Past medical history included diabetes mellitus, hypertension, and ischemic heart disease. The patient stopped cigarette smoking 20 years ago. The lab data reveals that the patient had mild anemia and his blood sugar was 159 mg/dl. Urine analysis showed 10-15 white blood cells in high power field with a negative urine culture. Digital rectal examination showed a nodular (2-3+) and symmetric prostate. The ultrasound examination showed mild bilateral hydroureteronephrosis with an over-distended urinary bladder. The prostatic volume was 25 cc with retained urine of 950 cc. Computer tomography scanning revealed a hypo attenuated mass in the lower pole of the left kidney with arterial and portal enhancement and delay washout in favor of infiltrative process such as RCC close to left psoas muscle. Mild bilateral hydronephrosis due to enlarged prostate was seen. He was subsequently referred to the surgery department of the hospital for nephrectomy. The specimen was referred to the pathology department. \nDiagnosis: [diagnosis section withheld]\nFollow-up:\nAfter surgery, the patient was followed-up for 5 months. No recurrence or metastasis was diagnosed."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis is **N40.1, Benign prostatic hyperplasia with lower urinary tract symptoms**, with **R33 (Retention of urine)** as an additional code.\n\nThe admission was for nocturia, frequency, dribbling, and urinary retention (950 mL retained). The record links these to the enlarged prostate: the rectal exam showed a nodular, symmetric prostate, and the CT attributed the hydronephrosis to the enlarged prostate. The left renal mass was the reason for nephrectomy, but it was a separate problem and did not occasion the admission.\n\nThe principal diagnosis would change to a malignant neoplasm of the kidney (**C64.-**, e.g., C64.2 for the left kidney) only if pathology confirmed renal cell carcinoma. The pathology result is withheld in this record, so I can't confirm that. The follow-up note of no recurrence or metastasis fits a confirmed malignancy, which is why the pathology report should be checked before final coding.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 536,
+    "output_tokens": 953
+  },
+  "seconds": 0.0
+}

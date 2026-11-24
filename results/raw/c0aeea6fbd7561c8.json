@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "11922b4f666b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY:\n\nAdmission Date: N/A\nDischarge Date: N/A\n\nPatient: 63-year-old woman\nDiagnosis: [diagnosis section withheld]\nHospital Course Summary: \n\nThe patient underwent an excision of a vulvar lesion and it was diagnosed as a BG-ACC. Although the patient did not undergo adjuvant therapy, the diagnosis was followed up. However, 4 years later, the patient was found to have metastasis to the lung. A video-assisted thoracoscopic surgery was performed which was followed by recurrence in the vulva 5 years later. The patient subsequently underwent an excision of the recurrent vulvar lesion which was used for molecular analysis.\n\nThe patient's case exempts her from being discharged or having any medication prescriptions. Further re-examinations may be conducted in the following weeks. \n\nFollow-up Care: The patient is advised to return for follow-up re-examinations as required by the treating physician.\n\nSigned,\n[Name and Title of Physician]"
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis is **C51.0, Malignant neoplasm of labium majus**, which is the ICD-10-AM code for a Bartholin gland carcinoma of the vulva. I'm not fully certain of this mapping, so please verify it against the ICD-10-AM index and your coding guidelines.\n\n**Reasoning:**\n- \"BG-ACC\" most likely means Bartholin gland adenoid cystic carcinoma. The Bartholin gland sits at the labium majus, so the site maps to C51.0. If the site cannot be confirmed as Bartholin gland or labium majus, C51.9 (Malignant neoplasm of vulva, unspecified) is the fallback.\n- The principal diagnosis is the vulvar malignancy because the encounter is for excision of the recurrent vulvar lesion, which was sent for molecular analysis.\n- The lung metastasis is a secondary diagnosis, coded as **C78.0** (Secondary malignant neoplasm of lung). It is not the principal diagnosis here because the reason for the encounter is the vulvar recurrence.\n- The adenoid cystic morphology (ICD-O 8200/3) is captured through histology coding and does not change the ICD-10-AM code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 384,
+    "output_tokens": 1394
+  },
+  "seconds": 0.0
+}

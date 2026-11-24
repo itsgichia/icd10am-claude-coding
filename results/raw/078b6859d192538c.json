@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "8f808a644d03",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nPatient Discharge Summary:\n\nPatient Name: [Patient Name]\nAdmission Date: [Admission Date]\nDischarge Date: [Discharge Date]\n\nHospital Course:\nThe patient was admitted to the hospital due to lower extremity swelling and pain for four days. Physical examination revealed left lower limb pitting edema and calf tenderness. Color Doppler ultrasound showed an extensive DVT affecting the common iliac, external iliac and common femoral vein as well as superficial femoral down to popliteal vein. Treatment included bed rest, elevation with bandaging of left leg, and low molecular weight heparin injections. Investigations revealed no underlying etiology. Abdominal and pelvic US and CT scan showed an impacting stone and a severe left hydroureteronephrosis with almost lost of cortical thickness. Percutaneous nephrostomy was performed to decompress the hydronephrotic kidney. JJ stent was inserted and subsequently removed. Six weeks later, Doppler US showed complete recanalization of the superficial femoral, popliteal as well as the proximal segment of deep veins of the leg but common iliac, external iliac and common femoral veins and proximal superficial femoral vein were still partially thrombosed. Through pneumatic lithotripsy, the stone was fragmented under spinal anesthesia. Three months after that, Doppler US showed complete recanalization of iliac vessels.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nTreatment included bed rest, elevation with bandaging of left leg, and low molecular weight heparin injections. Percutaneous nephrostomy was performed to decompress the hydronephrotic kidney. JJ stent was inserted and subsequently removed. Pneumatic lithotripsy was performed to fragment the stone under spinal anesthesia. The patient was discharged on oral anticoagulation in the form of rivaroxaban 20 mg daily.\n\nFollow-up:\nThe patient is advised to have regular follow-up visits with their healthcare provider.\n\nSigned by: [Healthcare Provider Name and Title]"
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: I80.2, Phlebitis and thrombophlebitis of other deep vessels of lower extremities (extensive left iliofemoral DVT)\n\n**Why the DVT is principal**\n\n- The patient presented with 4 days of left leg swelling, pain, pitting oedema and calf tenderness. The DVT is the condition that occasioned the admission.\n- Doppler showed thrombus in the common iliac, external iliac, common femoral, superficial femoral and popliteal veins.\n- Under the \"multiple sites\" principle, a single code covering the deep veins of the lower limb is used. The iliac and other deep vessels index to I80.2. Femoral-only involvement (I80.1) would not capture the full extent.\n- Check your ICD-10-AM edition for the 5th-character subdivision under I80.2.\n\n**Why the stone is not principal**\n\nThe obstructing ureteric stone with severe hydroureteronephrosis was found during work-up as the probable cause of the DVT, likely through extrinsic venous compression. It was not the reason for presentation, so it is coded as an additional diagnosis. Some coders might argue it should be principal because it was the underlying cause and drove most of the procedures. However, the standard approach favours the presenting condition here.\n\n**Suggested additional codes**\n\n- **N13.2**: Hydronephrosis with renal and ureteral calculous obstruction\n- Procedure codes for:\n  - percutaneous nephrostomy\n  - JJ ureteric stent insertion and removal\n  - pneumatic (intracorporeal) lithotripsy of the ureteric calculus\n- **Y-code or long-term anticoagulant use code** (e.g., Z92.1 or the equivalent in your edition), if local policy requires it.\n\nFinal code assignment should be confirmed against the full clinical record and the current ICD-10-AM/ACS edition used by your facility.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 748,
+    "output_tokens": 1482
+  },
+  "seconds": 0.0
+}

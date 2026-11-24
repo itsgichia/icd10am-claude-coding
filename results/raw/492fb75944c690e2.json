@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "4ffe57ea03a8",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHospital Course:\n\nThe patient, a 38-year-old female diagnosed with IgAN accompanied by iron deficiency anemia, was admitted to our center with complaints of abnormal urine tests and unexplained anemia. Physical examination revealed no positive signs such as bilateral lower limb edema or hepatosplenomegaly. The patient was treated with a combination of oral prednisolone, leflunomide, and angiotensin receptor blockers (ARBs) along with polysaccharide-iron complex. A complete remission of proteinuria was observed, and hematuria was also relieved.\n\nHowever, the patient's hemoglobin levels were constantly below the normal reference range, which could not be explained by the iron deficiency anemia. In 2016, the patient was diagnosed with \u03b1-thalassemia based on the results of our genetic tests showing the deletion of --SEA gene. Serum HbF and HbA2 were found to be elevated to 2.47 and 3.04%, respectively.\n\nDuring the 3-year follow-up, a significant improvement in anemia was observed following the treatment consisting of a small dose of ARB with folic acid and mecobalamin administration. Laboratory tests in March 2019 showed that Hb levels were elevated to 157 g/L. Urine occult blood was 2+, 24-h proteinuria was reduced to 0.08 g, and serum creatinine and albumin were normal.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nThe patient was treated with a combination of oral prednisolone, leflunomide, and angiotensin receptor blockers (ARBs) along with polysaccharide-iron complex. Later, a small dose of ARB with folic acid and mecobalamin administration was found to be effective in improving anemia.\n\nFollow-Up:\n\nThe patient should continue to take the prescribed medications as per the physician's instructions and follow-up with regular appointments for monitoring and symptom management.\n\nSigned, [REDACTED] (Physician)\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"N02\", \"condition\": \"Recurrent and persistent haematuria (IgA nephropathy)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 840,
+    "output_tokens": 40
+  },
+  "seconds": 0.0
+}

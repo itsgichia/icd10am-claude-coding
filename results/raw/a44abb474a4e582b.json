@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7d2b935ee4b4",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHOSPITAL COURSE SUMMARY\n\nIDENTIFICATION:\nThe patient is a 60-year-old female with no medical or family history of lower limb symptoms admitted to the hospital for swelling and pain in the left lower extremity for 5 days. She was diagnosed with deep vein thrombosis (DVT) and May-Thurner syndrome (MTS).\n\nHISTORY:\nThe patient reported swelling of her left thigh, which gradually spread to her lower leg, and increased local skin tension and temperature. She had no fever, shortness of breath, chest pain, cough, expectoration, hemoptysis, amaurosis, or syncope. Deep vein ultrasound of the lower extremity at local hospital reported thrombosis of left common femoral vein, superficial femoral vein, deep femoral vein, popliteal vein, anterior tibial vein, posterior tibial vein, and intermuscular vein for the first time. She had no history of surgery or catheterization.\n\nPHYSICAL EXAMINATION:\nPhysical examination revealed swelling and edema with moderate tenderness and pain in the left lower limb while the right lower limb was normal. Blood tests were normal.\nDIAGNOSIS: [diagnosis section withheld]\nTREATMENT:\nThe patient underwent IVC angiography, filter placement, left iliac vein plasty, and stent implantation under local anesthesia. Rivaroxaban and aspirin were prescribed. After 28 days of surgery, she came back to the hospital for the removal of IVC filter, and the procedure was successful. The DVTs were ablated after four months of anticoagulation therapy.\n\nDISPOSITION:\nThe patient was discharged and tolerated well."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: I82.4- (acute DVT of the deep veins of the lower limb), most likely I82.40 or I82.49. The fifth-character choice below is uncertain.**\n\n**Reasoning:**\n- The reason for admission was acute left lower limb DVT, and the treatment (IVC filter, iliac vein stenting, anticoagulation) was directed at it. May-Thurner syndrome (iliac vein compression) is the underlying cause, but the DVT was the presenting condition that occasioned the admission.\n- In ICD-10-AM, DVT is classified to I80\u2013I82 (Phlebitis, thrombophlebitis, venous embolism and thrombosis). The thrombus here involved the common femoral, superficial femoral, deep femoral, popliteal, tibial and intermuscular veins.\n- The ICD-10-AM 4th-character subdivisions are:\n  - I82.40: acute embolism and thrombosis of unspecified deep veins of the lower extremity\n  - I82.41: femoral vein\n  - I82.42: iliac vein\n  - I82.43: popliteal vein\n  - I82.44: tibial vein\n  - I82.49: other specified deep veins of the lower extremity\n- Because several different deep veins were involved, no single site code fits well. The usual choice is **I82.49**, or I82.40 if the site is treated as unspecified. Some coders would assign I82.41 (femoral vein), since the common femoral vein is the most proximal site involved. Check these against the current ICD-10-AM edition and its coding standards.\n\n**Secondary diagnosis:** May-Thurner syndrome (iliac vein compression syndrome) is coded to **I87.1** (compression of vein). Some coders use I82.42 if iliac vein thrombosis was documented.\n\n**Procedures (ACHI):** IVC filter insertion and later removal, iliac venoplasty, and stent insertion.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 610,
+    "output_tokens": 642
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "101064326bcc",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 10-year-old female with developmental delay, microcephaly, epilepsy, severe short stature, impaired speech, facial dysmorphism, congenital deafness, and skeletal abnormalities.\n\nHospital Course:\nThe patient was admitted to our Genetic Department due to the above-listed conditions. She was diagnosed with bilateral hip dysplasia, mixed hearing loss, and right conductive hearing loss. A genome-wide array, CGH (Agilent Human Genome CGH Microarray 44K), was conducted which diagnosed a minimal/maximal deletion of 5.238 Mb and 5.374Mb at 8q22.2q22.3. The patient\u2019s sleep electroencephalogram displayed epileptogenic activity during nonrapid eye movement (NREM) sleep. Cerebral MRI tests were normal, as was the screening for inborn errors of metabolism. The patient was discharged after following up on the diagnosis it was shown that the deletion was excluded in her mother's blood sample, and the father was not available for investigation. \nDiagnosis: [diagnosis section withheld]\nSummary:\nThe patient was a 10-year-old girl born with several conditions, including microcephaly, epilepsy, severe short stature, impaired speech, facial dysmorphism, congenital deafness, and skeletal abnormalities. After following up on the diagnosis, it was shown that the patient was diagnosed with a minimal/maximal deletion of 5.238 Mb and 5.374Mb at 8q22.2q22.3, which was not present in the mother's blood sample. The patient was discharged after the genome-wide array, and other tests showed no issues, but follow-up evaluation is necessary."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **Q93.5 \u2013 Other deletions of part of a chromosome**\n\n## Rationale\n\n- **Confirmed genetic diagnosis.** Array CGH showed an interstitial deletion of about 5.2\u20135.4 Mb at **8q22.2q22.3** (the 8q22.2q22.3 microdeletion syndrome). This is the underlying condition that explains her other problems. The deletion was absent in her mother, so it is likely de novo, although the father could not be tested.\n- **Reason for admission.** She was admitted to the Genetics Department to find the cause of her multiple congenital anomalies. The chromosomal deletion is the condition established after study as chiefly responsible for the admission, which meets the ACS 0001 definition of principal diagnosis.\n- **Code selection.** In the Q93 category (monosomies and deletions from the autosomes, NEC), a deletion of part of an autosome that is not a named syndrome indexes to **Q93.5**. Named syndromes with their own codes, such as 5p- (cri-du-chat, Q93.4), do not apply here.\n\n## Possible additional diagnoses\nCode these where they meet ACS 0002 criteria, for example where they were investigated or affected care:\n\n| Condition | Suggested code |\n|---|---|\n| Epilepsy (epileptiform activity in NREM sleep) | G40.9 or a more specific G40.x if the type is documented |\n| Congenital bilateral hip dysplasia | Q65.8 / Q65.1 (per documentation) |\n| Mixed conductive and sensorineural hearing loss, bilateral | H90.6 |\n| Conductive hearing loss, right (unilateral) | H90.1 |\n| Microcephaly | Q02 |\n| Short stature | E34.3 or R62.8 (per documentation) |\n| Speech disorder | F80.9 / R47.8 |\n| Developmental delay | F88 / R62.0 |\n| Facial dysmorphism | Q87.0 / Q18.8 (per documentation) |\n\nMany of these features are part of the deletion syndrome. Code them separately only if documentation supports it and coding standards allow.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 620,
+    "output_tokens": 1102
+  },
+  "seconds": 0.0
+}

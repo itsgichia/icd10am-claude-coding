@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "dc0449ea2395",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\nPatient Name: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHospital stay: The patient was admitted to the hospital due to the presence of a brain tumor located in the clivus region. He underwent surgical intervention via a left suboccipital craniotomy, which involved resection of the tumor. Oral intubation was done using the Macintosh laryngoscope blade, and the patient was placed in the left park bench position with neck flexion. Surgery was performed via the left lateral suboccipital approach. The lesion was decompressed, and the operation was completed successfully.\n\nMedical Condition at Discharge: The patient had minor swelling in the neck, tongue, and pharynx on the left side. He experienced pain in the tip of his tongue with a small ulcer on the left side after returning to the intensive care unit. The swelling of his tongue gradually improved after the administration of steroids. The patient was discharged 10 days after the surgery.\n\nFollow-Up Care: The patient was advised to undergo follow-up MRI after three months of surgery as well as clinical follow-up as per physician's recommendations.\n\nDischarge Medications: None.\n\nInstructions: The patient was advised to follow-up with his physician for regular check-up and take rest until complete recovery.\nFinal Diagnosis: [diagnosis section withheld]\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The record documents a brain tumor in the clivus, resected by craniotomy. The histology is not stated and the final diagnosis section is withheld, so I have to choose a category without knowing whether the tumor is benign, malignant or of uncertain behaviour.\n\nClivus tumors are most often chordoma or chondrosarcoma, but neither is documented. Without a stated morphology, ICD-10-AM indexes \"tumor, brain\" to behaviour unspecified, and \"neoplasm of uncertain or unknown behaviour\" for the skull base or brain goes to D43.\n\nThe other options are weaker. A malignant skull base neoplasm would be C41.0 (bones of skull and face) or C71.x (brain). A benign neoplasm would be D33 (brain) or D16.4 (bones of skull). A meningioma would be D32. None of these can be assigned without documented histology.\n\nThe tongue swelling is a postoperative complication, so it is not the principal diagnosis. The clivus is a bone of the skull base, so a bone tumor would be indexed to bone, but with no behaviour or type documented I would not assign C41 or D16.\n\nThe most defensible choice from the information given is the unspecified-behaviour category, D43 (brain and central nervous system). The alternative, D48 (other and unspecified sites), is less specific. Since a \"brain tumor\" is documented, D43 applies.\n\nCODE: D43",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 664,
+    "output_tokens": 460
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "989391f9254d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient:\n\u2022 Name: Not provided\n\u2022 Age: 24-year-old\n\u2022 Gender: Male\n\nHospitalization Dates:\n\u2022 Admission: [not provided]\n\u2022 Discharge: POD #20\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\u2022 Patient underwent uncomplicated orthotopic liver transplantation after multiple thoracenteses for symtomatic relief of persistent right-sided hepatic hydrothorax.\n\u2022 Patient presented with respiratory distress and left-sided infiltrates consistent with pneumonia on POD #5 after OLT. Patient was started on antibiotics and underwent a right-sided therapeutic thoracentesis with removal of 1.3 liters of fluid.\n\u2022 Post-thoracentesis chest imaging revealed a large hydropneumothorax that was treated with a small-bore chest tube.\n\u2022 Diagnostic bronchoscopy was not performed due to the absence of endobronchial obstruction on CT.\n\u2022 Patient was stable without dyspnea and hypoxemia, so video-assisted thoracoscopic surgery was deferred after consultation with thoracic surgery.\n\u2022 Patient was discharged home on POD #20 without supplemental oxygen.\n\u2022 Follow-up chest x-ray 1 month later showed improvement in the hydropneumothorax and a chest x-ray obtained 6 months later showed near-complete re-expansion of the right lung without surgical intervention.\n\nDischarge Instructions:\n\u2022 Follow-up with liver transplant team as needed.\n\u2022 Follow-up with primary care physician for ongoing care.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: K74**\n\nThe admission diagnosis is withheld, so this rests on inference.\n\n- **Principal diagnosis:** The episode centred on an orthotopic liver transplant. The transplant is the procedure, not the diagnosis. The condition chiefly responsible for admission is the underlying end-stage liver disease that made the transplant necessary.\n- **Chapter:** Liver disease belongs to the digestive system, so the letter is **K**.\n- **Category:** Persistent hepatic hydrothorax indicates cirrhosis with portal hypertension and ascites. Fibrosis and cirrhosis of liver is **K74**.\n- **What is excluded:**\n  - The hepatic hydrothorax is a complication of the cirrhosis, not its cause.\n  - The post-operative pneumonia and the hydropneumothorax after thoracentesis arose during the stay, so they are secondary diagnoses.\n\n**Caveat:** The specific cause of the liver disease is not stated. If records showed another aetiology, the category would change. For example, alcoholic liver disease is K70 and Wilson disease is E83.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1080,
+    "output_tokens": 502
+  },
+  "seconds": 0.0
+}

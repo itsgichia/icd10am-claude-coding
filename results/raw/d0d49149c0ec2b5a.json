@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "928d3ff50e4f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nGender: Male\nAge: 61 years old\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nDiagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted to the hospital on [REDACTED] with progressively worsening shortness of breath, weakness and fatigue. The patient was diagnosed with aortic valve stenosis, hypertensive heart disease, coronary artery disease, and COPD.\n\nDuring the course of the hospital stay, various tests were performed including cardiac catheterization and transthoracic echocardiography. These tests showed significant stenosis of the proximal and mid-left anterior descending artery, severe aortic valve stenosis with moderate insufficiency, an ejection fraction of 32%, and significant atherosclerotic burden in the ascending and descending aortas and aortic arch.\n\nBased on the results of the tests, the patient underwent minimally invasive aortic valve replacement with a 27 mm\u00b7St. Jude Trifecta stented pericardial bioprosthesis under general endotracheal anesthesia. Standard monitors were used including cerebral oximetry. The procedure was completed without any complications. The postoperative TEE showed that the previously described aortic arch atheroma remained intact.\n\nFollowing the procedure, the patient was monitored closely and his condition gradually improved. The patient did not experience any perioperative stroke events or other complications. The patient was discharged home in a stable condition five days postoperatively.\n\nUpon discharge, the patient was advised to continue taking his medications for hypertension and high cholesterol as prescribed by his doctor. The patient was also advised to avoid smoking and other forms of substance abuse, and to follow a healthy diet and exercise regime. The patient was advised to follow up with his physician as recommended.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The admission ended in aortic valve replacement for severe aortic stenosis with moderate insufficiency. That condition was the main reason for the admitted care.\n\nIn ICD-10-AM, aortic valve disorders with both stenosis and insufficiency are classified to I35 (Nonrheumatic aortic valve disorders). The record does not mention rheumatic disease, so I06 (Rheumatic aortic valve diseases) does not apply.\n\nHypertensive heart disease (I11) and coronary artery disease (I25) are coded as additional diagnoses. COPD (J44) is also an additional diagnosis, and the patient's symptoms are integral to the valve disease.\n\nCODE: I35",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 846,
+    "output_tokens": 229
+  },
+  "seconds": 0.0
+}

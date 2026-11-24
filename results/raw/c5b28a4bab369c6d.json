@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7567bbd24908",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\n\nThe 68-year-old male patient was admitted to the hospital for the removal of an intramedullary nail and a possible total knee arthroplasty after experiencing a traumatic event. His past medical history includes hypertension, high cholesterol, high potassium levels, a non-cancerous enlargement of the prostate gland that caused difficulty urinating, atrial fibrillation, a crush injury causing closed fractures of multiple ribs and the pelvis, and a history of tobacco use. Preoperative laboratory tests indicated slightly low sodium levels and slightly elevated glucose levels, but a well-functioning renal system.\n\nProcedure:\n\nThe anesthesia team planned for spinal block and monitored anesthesia care with a propofol infusion. The patient was given 2 mg of midazolam preoperatively. The surgery lasted for 5 hours and 32 minutes and the patient's urine output for the duration of the operation totaled 1240 mL, with 975 mL excreted within a two-hour span.\n\nPostoperative Period:\n\nThe patient had an uncomplicated postoperative period with normal sodium levels and electrolytes. He was monitored closely after surgery.\nDiagnoses: [diagnosis section withheld]\nDisposition:\n\nThe patient was discharged from the hospital in a satisfactory condition after his uncomplicated postoperative period. \n\nFollow-up Care:\n\nFollow-up appointments with the appropriate specialists recommended for the patient's multiple comorbidities."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis\n\n**The documentation doesn't support assigning a single code with confidence.** The diagnosis section is withheld, and the summary never states why the nail is being removed or whether the knee arthroplasty was performed. In ICD-10-AM, the principal diagnosis is the condition chiefly responsible for the admission, so the code depends on the underlying reason for surgery.\n\n## Most likely options\n\n| Scenario (if documented) | Principal diagnosis |\n|---|---|\n| Post-traumatic knee osteoarthritis led to the TKA, with nail removal done to allow it | **M17.3 \u2013 Other post-traumatic gonarthrosis** (unilateral) |\n| Routine elective removal of the nail only, with a healed fracture and no complication | **Z47.0 \u2013 Follow-up care involving removal of fracture plate and other internal fixation device** |\n| Nail removed because of a complication (pain, loosening, breakage, infection) | **T84.x** \u2013 complication of internal orthopaedic device (e.g., T84.1 mechanical complication, T84.6 infection) |\n| Fracture nonunion or malunion | **M84.0 / M84.1x** |\n\n## Most probable code\n\n**M17.3 \u2013 Other post-traumatic gonarthrosis** is the most plausible answer. The admission was for nail removal *and* possible TKA \"after a traumatic event.\" A TKA is performed for an arthritic joint, and removing a femoral or tibial nail is a common preliminary step. If the TKA went ahead, the knee arthritis is the condition chiefly responsible for the admission. Z47.0 would not be appropriate in that case, because the removal is not routine follow-up care.\n\n## Other notes\n\n- The listed comorbidities (hypertension I10, atrial fibrillation I48.x, BPH with lower urinary tract symptoms N40, hypercholesterolaemia E78.0, mild hyponatraemia E87.1) would only be coded as additional diagnoses if they meet ACS 0002 criteria.\n- The rib and pelvic crush fractures are historical, so they would be coded as sequelae (T91/T93-type codes) only if relevant.\n- Please check the operative report and discharge diagnoses before finalising. Without them, this is an informed inference, not a definitive code assignment.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 535,
+    "output_tokens": 1155
+  },
+  "seconds": 0.0
+}

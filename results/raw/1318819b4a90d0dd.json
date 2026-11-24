@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "98d7b7554966",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary\n\nPatient: 75-year-old male with history of tobacco abuse and metastatic p16 positive squamous cell carcinoma (SCC)\n\nHospital Course:\nThe patient was admitted with initial symptoms of swelling in the left neck followed by progressive hoarseness and dysphagia over a span of one to two months. A biopsy of the left neck node confirmed squamous cell carcinoma and the patient was later found to have pulmonary metastases. He required tracheostomy and gastrostomy placement for threatened airway obstruction and dysphagia, respectively. \n\nTreatment and Progression:\nThe patient was initially enrolled in a clinical trial comparing first-line EXTREME chemotherapy versus ipilimumab and nivolumab and was randomized to combination ipilimumab and nivolumab delivered concurrently every three weeks for four cycles. However, follow-up imaging at eight weeks showed progression of disease. The patient was then treated with \u2018QUAD SHOT\u2019 for palliation and delivered 3.7 Gy BID x 2 days (total dose 14.8 Gy) to gross disease. The patient continued through the third and fourth cycles of nivolumab and ipilimumab without breaks or delays. Radiation was delivered during the three-week time frame between immunotherapy cycles and he tolerated treatment well with minimal pain and noticeable improvement in the left neck mass. Repeat imaging showed continued decrease in size of all neck and most lung disease, with one lung nodule minimally increasing in size.\n\nOutcome:\nAt the time of writing (10 months from initial diagnosis), the patient has completed a total of 14 cycles of ipilimumab and nivolumab on trial and is currently living with stable, asymptomatic disease. The patient continues to be followed up for response to treatment.\nDiagnoses: [diagnosis section withheld]\nProcedures:\n- Biopsy of the left neck node\n- Tracheostomy and gastrostomy placement \n- \u2018QUAD SHOT\u2019 for palliation \n\nFollow-up:\nThe patient continues to be followed up for response to treatment.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C10",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 832,
+    "output_tokens": 231
+  },
+  "seconds": 0.0
+}

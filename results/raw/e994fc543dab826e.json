@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "587b40f261f0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\n\nPatient Identification:\nThis is a 43-year-old Jewish woman referred to our medical center for multinodular goiter evaluation. She had a history of a 2-stage total thyroidectomy and a right modified neck dissection for medullary thyroid carcinoma (MTC) with concomitant follicular adenoma and micropapillary carcinoma. The patient underwent surgical treatments followed by I-131 100 mCi.\n\nHospital Course and Treatment:\nThe patient underwent a 2-stage total thyroidectomy before being referred to our medical center for evaluation. The biopsy results revealed a proliferative lesion suspicious for neoplasia, with a second lesion measuring 1.2cm. The right lobe and isthmus biopsy specimen showed a well-demarcated two cm maximal diameter MTC and a partially circumscribed follicular adenoma measuring 1.2cm. The non-neoplastic thyroid tissue revealed lymphocytic infiltration and occasional colloid nodules. The left thyroid lobe histology disclosed a tiny focus, two mm in size, consistent with micropapillary carcinoma. No lymph node metastasis was found.\n\nThe patient\u2019s presurgical calcitonin level was 2170ng/L, and carcinoembryonic antigen (CEA) level was 51mg/L, while thyroid-stimulating hormone was within the normal range. One year postsurgery, the patient\u2019s calcitonin levels were less than five ng/L, and thyroglobulin levels were no longer measurable. Point mutation for RET proto-oncogene was tested and found to be negative.\n\nMedications and Follow-up:\nThe patient was discharged after her I-131 treatment. No further medication was prescribed. Follow-up at regular intervals is recommended to monitor the patient\u2019s progress.\nFinal Diagnosis: [diagnosis section withheld]\nPrognosis and Recommendations:\nThe patient\u2019s prognosis is positive. Follow-up at regular intervals is recommended to assess her progress. No further medications or treatments are needed. Close monitoring is advised to help ensure the best possible outcome.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The episode centres on medullary thyroid carcinoma, the main malignancy. The patient was discharged after I-131 treatment, and the follicular adenoma and micropapillary carcinoma were also present. Medullary carcinoma of the thyroid is coded to C73 (malignant neoplasm of thyroid gland), and the micropapillary carcinoma is also C73. Both lesions therefore fall under the same category, so the principal diagnosis is C73.\n\nOne alternative is Z51.8 or Z08 for follow-up after treatment of a malignancy. However, the stay was for I-131 treatment, and radioiodine given for a current malignancy is coded to the malignancy itself. The history of thyroidectomy with the cancer already excised could suggest Z85, but the I-131 treatment indicates active management of the cancer. C73 is the best choice.\n\nCODE: C73",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1245,
+    "output_tokens": 288
+  },
+  "seconds": 0.0
+}

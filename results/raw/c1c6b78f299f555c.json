@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "f3bf6ac5d474",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nHospital Course Summary:\n\nPatient Name: [Name]\n\nAdmission Date: 20 March 2020\n\nDischarge Date: [Date]\nAdmitting Diagnosis: [diagnosis section withheld]\nSignificant Past Medical History:\n- Ischaemic myocardiopathy with left ventricular assist device (LVAD) implantation in 2012\n- Chronic obstructive pulmonary disease (COPD)\n- Recurrent anaemia due to gastrointestinal bleeding\n- Arteriovenous malformations\n\nHospital Course:\nThe patient was admitted for blood transfusion due to ongoing gastrointestinal bleeding. The patient was diagnosed with COVID-19 during hospitalization. The patient\u2019s INR was found to be high on admission and was treated with parenteral heparin. Three units of red blood cells were transfused, which restored haemoglobin to normal levels. The melaena was controlled with precise control of anti-Xa under heparin infusion, and VKA was reintroduced after the resolution of melaena. The patient was managed for respiratory issues during hospitalization and was discharged with regular teleconsultations to monitor INR and respiratory parameters.\n\nHospital Course Details:\n- Admission date: 20 March 2020\n- Reason for admission: Gastrointestinal bleeding\n- COVID-19 status: Positive test, asymptomatic\n- Management:\n  - Parenteral heparin to treat high INR\n  - Blood transfusion to restore haemoglobin levels\n  - Monitoring respiratory parameters\n  - Regular teleconsultations for INR monitoring and management\n- Discharge date: [Date]\n\nSummary:\nThe patient with a history of ischaemic myocardiopathy and LVAD implantation was admitted for gastrointestinal bleeding and was diagnosed with COVID-19 during hospitalization. The patient\u2019s high INR was treated with parenteral heparin, and after a blood transfusion and resolution of melaena, VKA was reintroduced. The patient was managed for respiratory issues and was discharged with regular teleconsultations for continued monitoring of INR and respiratory parameters.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: K92**\n\n1. **Chapter letter.** The patient was admitted because of ongoing gastrointestinal bleeding with melaena. This is a digestive system condition, so the letter is **K**.\n\n2. **Category digits.** The bleeding presented as melaena, which falls under K92 (other diseases of the digestive system), at the fourth-character level K92.1.\n\n3. **Why not the obvious alternatives:**\n   - **COVID-19:** It was found during the stay and the patient had no symptoms, so it is a secondary diagnosis.\n   - **Anaemia from blood loss (D62):** This was treated with transfusion, but it resulted from the bleed. It is a secondary diagnosis.\n   - **High INR on anticoagulant therapy:** In ICD-10-AM, bleeding from a correctly prescribed anticoagulant is coded as the bleed itself. The drug is captured with an external cause code (Y44.2), not as the principal diagnosis.\n   - **Known arteriovenous malformations (angiodysplasia, K55.2):** These are the likely source. However, no endoscopy or other investigation this admission confirmed them as the bleeding site, so the bleed itself is coded. If a coder accepts the documented history as the established cause, K55 would be the alternative.\n   - **LVAD, COPD and ischaemic cardiomyopathy:** These are background conditions.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1246,
+    "output_tokens": 734
+  },
+  "seconds": 0.0
+}

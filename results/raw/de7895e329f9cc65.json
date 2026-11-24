@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "be032d0262d2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 23-year-old male\n\nAdmission Date: [date]\n\nDischarge Date: [date]\n\nReason for admission: One-day history of right-sided pleuritic chest pain, haemoptysis, and fever\n\nHospital Course:\n\nThe patient was admitted with right-sided pleuritic chest pain, haemoptysis, and fever. Physical examination revealed rales and bronchial breathing in the right infrascapular region. Chest X-ray demonstrated right lower lobe consolidation. The patient was diagnosed with community-acquired pneumonia. Computed tomography pulmonary angiogram (CTPA) ruled out pulmonary embolism (PE). The patient was treated with IV ceftriaxone for four days and oral amoxicillin for three days. The patient showed complete resolution of symptoms on day 4 and was discharged.\nDischarge Diagnosis: [diagnosis section withheld]\nInstructions for Follow-up Care:\n\nThe patient is advised to follow-up with their primary care physician and continue taking their prescribed medications as directed.\n\nFollow-up Lab and Diagnostic Exams:\n\nNone\n\nFollow-up Appointments:\n\nThe patient is advised to schedule a follow-up appointment with their primary care physician.\n\nTechnical Terms and Abbreviations:\n\nPE: Pulmonary Embolism\n\nCTPA: Computed Tomography Pulmonary Angiogram\n\nIV: Intravenous"
+      }
+    ]
+  },
+  "text": "The most likely ICD-10-AM principal diagnosis code is **J18.9, Pneumonia, unspecified organism**.\n\n- **Condition:** The documented diagnosis is community-acquired pneumonia, confirmed clinically and radiographically (right lower lobe consolidation).\n- **Organism:** No causative organism is identified, and the antibiotics given do not establish one, so the \"unspecified organism\" category applies.\n- **Symptoms:** Pleuritic chest pain, haemoptysis, and fever are integral to pneumonia and are not coded separately.\n- **Pulmonary embolism:** Ruled out on CTPA, so it is not coded.\n\nThe discharge diagnosis section is withheld, so this is based on the hospital course. If the discharge diagnosis specifies **lobar pneumonia**, the code would be **J18.1, Lobar pneumonia, unspecified organism**. If a bacterial organism were documented, a more specific code would apply.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 521,
+    "output_tokens": 890
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "json_output",
+  "record_id": "9f3b34af170c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient: 66-year-old woman of Turkish descent\nAdmission: January 2015\nDischarge: September 2015\n\nHospital Course: \n\nAdmitted for follow-up after kidney transplantation, the patient presented with a rise in creatinine and urinary protein-creatinine ratio, and later developed microhaematuria. Biopsy showed extracapillary proliferative changes, and positive autoimmune serology for anti-neutrophil cytoplasmic antibodies, indicative of AAV granulomatosis with polyangiitis. Treatment included intravenous prednisolone, rituximab, plasma exchange and maintenance therapy. However, corticosteroid-related diabetes mellitus, pneumonia, CMV reactivation, and donor-specific HLA antibodies emerged. Despite interventions, including resection of the transplanted kidney, regular hemodialysis became necessary. The patient experienced no further clinically significant vasculitis activity during two years of follow-up. \nDiagnosis: [diagnosis section withheld]\nSignificant Hospital Course Events: \n\n- Elevated creatinine and urinary protein-creatinine ratio, microhaematuria\n- Biopsy showed extracapillary proliferative changes consistent with pauci-immune crescentic glomerulonephritis and AAV\n- Positive autoimmune serology for anti-neutrophil cytoplasmic antibodies\n- Treatment with intravenous prednisolone, rituximab, plasma exchange and maintenance therapy\n- Complications included corticosteroid-related diabetes mellitus, pneumonia, CMV reactivation, and donor-specific HLA antibodies.\n- Regular hemodialysis was commenced four months after the initial presentation.\n- Transplanted kidney was resected due to new development of donor-specific HLA antibodies and persistent haematuria.\n- PR3-ANCA remained positive, but declined steadily.\n- No further clinical vasculitis activity during follow-up for two years.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"M31\", \"condition\": \"Granulomatosis with polyangiitis\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 804,
+    "output_tokens": 31
+  },
+  "seconds": 0.0
+}

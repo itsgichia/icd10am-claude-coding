@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "40f1a1da7b2c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Name]\nMRN: [Medical Record Number]\nAdmission Date: [Date]\nDischarge Date: [Date]\nHospital Course: \n\nThe patient, a 56-year-old Hispanic man, presented to the clinic with sudden-onset epigastric abdominal pain of 8/10 severity. He reported a past medical history of alcohol and cocaine abuse. During his physical examination, the patient presented with an abnormal blood glucose level and an elevated hemoglobin A1C. Computed tomography (CT) revealed abnormalities suggestive of malignancy, and elevated cancer antigen 19-9 was strongly suggestive of pancreatic carcinoma. A biopsy of the liver was performed, which showed results consistent with poorly differentiated primary pancreatic adenocarcinoma. Immunohistochemical analysis of biopsy results suggested a primary pancreaticobiliary neoplasm. \n\nDuring follow-up, the patient reported worsening left back pain, with tenderness upon palpation. A chemotherapy regimen of FOLFIRINOX was initiated. \n\nOverall, the patient's hospital course was notable for a diagnosis of stage IV pancreatic tail adenocarcinoma with multiple liver metastases, leading to the initiation of chemotherapy. \nDischarge Diagnosis: [diagnosis section withheld]\nDisposition: \n\nThe patient was discharged from the hospital on [date]. At the time of discharge, the patient reported continued pain but was able to manage his symptoms with medication. Follow-up appointments were scheduled to reassess pain management and chemotherapy progress. \n\nInstructions: \n\nThe patient was advised to continue with FOLFIRINOX chemotherapy as prescribed and to report any adverse reactions to the treatment. He was also instructed to contact his care team if his pain worsens or if he experiences new symptoms. The patient was advised to seek emergency medical attention if he experiences chest pain, shortness of breath, or other severe symptoms. \n\nPrimary Care Provider: [Name]\nSpecialist: Oncology\nFollow-up Appointment: [Date]"
+      }
+    ]
+  },
+  "text": "The ICD-10-AM principal diagnosis is **C25.2, Malignant neoplasm of tail of pancreas**.\n\nThe hospital course documents a diagnosis of stage IV pancreatic tail adenocarcinoma, which was the condition chiefly responsible for the admission. The liver metastases are coded as an additional diagnosis, **C78.7 (Secondary malignant neoplasm of liver)**, and should not be sequenced first because the primary site drives the principal diagnosis.\n\nBecause the discharge diagnosis section is blank, a coder would normally confirm the final diagnosis with the treating clinician. The documentation also describes the tumour as \"primary pancreatic adenocarcinoma\" in one place and \"pancreaticobiliary neoplasm\" in another, so the tail location should be confirmed in the pathology or imaging report.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 768,
+    "output_tokens": 694
+  },
+  "seconds": 0.0
+}

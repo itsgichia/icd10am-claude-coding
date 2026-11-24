@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "0597e19347c9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]\nAge: 65\nSex: Female\nDate of Admission: May 12, 2020\nDate of Discharge: May 16, 2020\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted to the surgical ward for elective right hemicolectomy due to the presence of a colon adenocarcinoma. The surgery was performed successfully on May 14, 2020, with laparoscopic right hemicolectomy and side-to-side extracorporeal ileocolonic anastomosis. The patient was stable in the initial postoperative days, despite a gradually dropping hemoglobin. She briefly experienced some bleeding from the anastomotic site, which presented as melena, but this was treated conservatively with a one-unit pack of red blood cells, and the patient's hemoglobin raised to 8.5 g/dl. After four days of hospitalization, the patient was discharged with a full diet and regular bowel motion.\nDischarge Diagnosis: [diagnosis section withheld]\nCondition on Discharge:\nThe patient's condition on discharge was stable, with no complications or obstacles to returning to her usual state of health. The patient was advised to continue with follow-up care and monitoring by her primary care provider.\n\nInstructions at Discharge:\nThe patient was instructed to contact her primary care provider to schedule her follow-up visits. She was also advised to obtain a computed tomography (CT) chest, abdomen, and pelvis, and to undergo tumor marker testing six months post-operation in the service of oncology follow-up.\n\nMedications on Discharge: None\n\nFollow-up Care: Follow-up care with the patient's primary care physician and oncologist is advised to ensure continued monitoring of her health status and to attend necessary appointments and procedures."
+      }
+    ]
+  },
+  "text": "The ICD-10-AM principal diagnosis is most likely **C18.9, Malignant neoplasm of colon, unspecified**.\n\nThe admission was for elective right hemicolectomy to treat a colon adenocarcinoma, so the neoplasm is the condition chiefly responsible for the admission. The summary does not name a more specific colonic subsite, so the unspecified code applies. If the full operative or pathology report specifies the cecum (C18.0) or the ascending colon (C18.2), that more specific code should be used instead.\n\nThe postoperative anastomotic bleeding (melena, transfused with one unit of red cells) is a secondary diagnosis. It would be coded as a complication of the procedure, not as the principal diagnosis. Coding it would require the treating team to document it as a complication, and the exact code would depend on that documentation.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 654,
+    "output_tokens": 700
+  },
+  "seconds": 3.9063240829855204
+}

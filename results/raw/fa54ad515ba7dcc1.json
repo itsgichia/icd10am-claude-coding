@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "few_shot_six",
+  "record_id": "be032d0262d2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nExample 4\nHospital course: An 81-year-old woman was brought in after a fall at home. She could not weight-bear and the right leg was shortened and externally rotated. A pelvic radiograph showed a displaced subcapital fracture of the right femoral neck. She underwent hemiarthroplasty on day one.\nAnswer: S72\n\nExample 5\nHospital course: A 19-year-old man presented with 18 hours of periumbilical pain that migrated to the right iliac fossa, with anorexia and a low-grade fever. There was guarding at McBurney's point and the white cell count was 15.2. Laparoscopy confirmed an inflamed, non-perforated appendix.\nAnswer: K35\n\nExample 6\nHospital course: A 64-year-old woman with a history of oestrogen-receptor-positive breast carcinoma treated five years earlier presented with progressive thoracic back pain. Magnetic resonance imaging showed deposits in T7 and T9 with no cord compression. Biopsy confirmed deposits of breast origin and she received palliative radiotherapy to the spine.\nAnswer: C79\n\nHospital course:\nDischarge Summary:\n\nPatient: 23-year-old male\n\nAdmission Date: [date]\n\nDischarge Date: [date]\n\nReason for admission: One-day history of right-sided pleuritic chest pain, haemoptysis, and fever\n\nHospital Course:\n\nThe patient was admitted with right-sided pleuritic chest pain, haemoptysis, and fever. Physical examination revealed rales and bronchial breathing in the right infrascapular region. Chest X-ray demonstrated right lower lobe consolidation. The patient was diagnosed with community-acquired pneumonia. Computed tomography pulmonary angiogram (CTPA) ruled out pulmonary embolism (PE). The patient was treated with IV ceftriaxone for four days and oral amoxicillin for three days. The patient showed complete resolution of symptoms on day 4 and was discharged.\nDischarge Diagnosis: [diagnosis section withheld]\nInstructions for Follow-up Care:\n\nThe patient is advised to follow-up with their primary care physician and continue taking their prescribed medications as directed.\n\nFollow-up Lab and Diagnostic Exams:\n\nNone\n\nFollow-up Appointments:\n\nThe patient is advised to schedule a follow-up appointment with their primary care physician.\n\nTechnical Terms and Abbreviations:\n\nPE: Pulmonary Embolism\n\nCTPA: Computed Tomography Pulmonary Angiogram\n\nIV: Intravenous\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "J18",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1302,
+    "output_tokens": 79
+  },
+  "seconds": 0.0
+}

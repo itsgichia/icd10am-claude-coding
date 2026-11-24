@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "few_shot_six",
+  "record_id": "7e16259e5a6b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nExample 4\nHospital course: An 81-year-old woman was brought in after a fall at home. She could not weight-bear and the right leg was shortened and externally rotated. A pelvic radiograph showed a displaced subcapital fracture of the right femoral neck. She underwent hemiarthroplasty on day one.\nAnswer: S72\n\nExample 5\nHospital course: A 19-year-old man presented with 18 hours of periumbilical pain that migrated to the right iliac fossa, with anorexia and a low-grade fever. There was guarding at McBurney's point and the white cell count was 15.2. Laparoscopy confirmed an inflamed, non-perforated appendix.\nAnswer: K35\n\nExample 6\nHospital course: A 64-year-old woman with a history of oestrogen-receptor-positive breast carcinoma treated five years earlier presented with progressive thoracic back pain. Magnetic resonance imaging showed deposits in T7 and T9 with no cord compression. Biopsy confirmed deposits of breast origin and she received palliative radiotherapy to the spine.\nAnswer: C79\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\nSex: Female\nAge: 29 Years\nHospital: Ora\u0161je County Hospital (Bosnia and Herzegovina)\nAdmission Date: [Redacted]\nDischarge Date: [Redacted]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nA 29-year-old female was admitted to the Department of Surgery with a history of recurrent colicky right upper quadrant abdominal pain. The patient was diagnosed as having multiple gallstones within the gallbladder on abdominal ultrasonography. Routine hematological and biochemical test results were normal. The patient underwent elective laparoscopic cholecystectomy, and there were no complications during the procedure, or postoperatively. The patient was discharged on the third postoperative day. \n\nPathology Report:\nHistologically, microscopic slides from the gallbladder body showed that almost the entire cylindrical epithelium of the mucosa was missing. There was a moderate mixed inflammatory cell infiltrate in the submucosa, and the muscular layer was slightly hypertrophic, which is consistent with chronic cholecystitis. The most unusual feature of the slide from the body of the gallbladder was the presence of large dilated vessels within the muscular layer extending into the submucosa and mucosa. The appearance of angiodysplasia of the gallbladder and its endothelial lining was confirmed immunohistochemically using CD34, CD31, and podoplanin (D2-40) monoclonal antibodies. \n\nFollow-up:\nThe patient remained healthy at 6-year follow-up. \n\nSummary:\nThe patient, a 29-year-old woman, underwent laparoscopic cholecystectomy for multiple gallstones within the gallbladder. The histopathological findings revealed chronic cholecystitis with the unusual feature of angiodysplasia of the gallbladder. There were no complications during the procedure, and the patient was discharged on the third postoperative day. The patient remained healthy at the 6-year follow-up.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "K80",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1510,
+    "output_tokens": 79
+  },
+  "seconds": 0.0
+}

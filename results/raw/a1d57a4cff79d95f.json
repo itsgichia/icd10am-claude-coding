@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "fbca0f1aed5c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]     MRN: [REDACTED]     DOB: [REDACTED]     Admission Date: [REDACTED]     Discharge Date: [REDACTED]\n\nHOSPITAL COURSE:\nThe patient was admitted to the emergency department with complaints of chest pain, shortness of breath, and a productive cough. Upon examination, the patient was found to have tachycardia and tachypnea. Laboratory findings revealed leukocytosis with elevated C-reactive protein and erythrocyte sedimentation rate. CT chest showed left lower lobe pneumonia and a large pericardial effusion. The patient received appropriate treatment for pneumonia and underwent transthoracic echocardiogram to further characterize the effusion as moderate circumferential pericardial effusion.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\nUpon consultation with the patient\u2019s psychiatrist, clozapine was stopped, which was thought to be the cause for the non-resolving pericardial effusion. Following the discontinuation of the drug, there was a gradual improvement in the respiratory status. The patient was discontinued from clozapine and discharged to home in stable and improved condition.\n\nFOLLOW-UP:\nThe patient is advised to follow up with their primary care provider for future management of high cholesterol and assistance with smoking cessation.\n\nDISCHARGE MEDICATIONS:\nNone prescribed at this time.\n\nFOLLOW-UP STUDIES:\nTransthoracic echocardiogram to be repeated for further evaluation in one year.\n\nDISCHARGE CONDITION:\nStable and improved.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "I31",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 710,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

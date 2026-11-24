@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "928d3ff50e4f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nGender: Male\nAge: 61 years old\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nDiagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted to the hospital on [REDACTED] with progressively worsening shortness of breath, weakness and fatigue. The patient was diagnosed with aortic valve stenosis, hypertensive heart disease, coronary artery disease, and COPD.\n\nDuring the course of the hospital stay, various tests were performed including cardiac catheterization and transthoracic echocardiography. These tests showed significant stenosis of the proximal and mid-left anterior descending artery, severe aortic valve stenosis with moderate insufficiency, an ejection fraction of 32%, and significant atherosclerotic burden in the ascending and descending aortas and aortic arch.\n\nBased on the results of the tests, the patient underwent minimally invasive aortic valve replacement with a 27 mm\u00b7St. Jude Trifecta stented pericardial bioprosthesis under general endotracheal anesthesia. Standard monitors were used including cerebral oximetry. The procedure was completed without any complications. The postoperative TEE showed that the previously described aortic arch atheroma remained intact.\n\nFollowing the procedure, the patient was monitored closely and his condition gradually improved. The patient did not experience any perioperative stroke events or other complications. The patient was discharged home in a stable condition five days postoperatively.\n\nUpon discharge, the patient was advised to continue taking his medications for hypertension and high cholesterol as prescribed by his doctor. The patient was also advised to avoid smoking and other forms of substance abuse, and to follow a healthy diet and exercise regime. The patient was advised to follow up with his physician as recommended."
+      }
+    ]
+  },
+  "text": "## Principal diagnosis: **I35.2 \u2013 Nonrheumatic aortic (valve) stenosis with insufficiency**\n\n### Why this code\n\n- **It caused the admission and the main treatment.** The patient came in with worsening shortness of breath and fatigue. Workup found severe aortic stenosis with moderate insufficiency, and he had an aortic valve replacement. Under ACS 0001 (Principal diagnosis), this condition is chiefly responsible for the episode of care.\n- **Stenosis and insufficiency are coded together.** When both are present, I35.2 is used instead of I35.0 (stenosis only) or I35.1 (insufficiency only).\n- **It is classed as nonrheumatic.** The aortic valve alone is affected, the mitral valve is not involved, and no rheumatic cause is documented. So the condition belongs in I35 rather than I06.2 (rheumatic aortic stenosis with insufficiency).\n- **The hypertension does not change the code.** ICD-10-AM does not presume a causal link between hypertension and valve disease. The hypertensive heart disease is coded separately.\n\n### Likely additional diagnoses (for context)\n\n| Condition | Suggested code |\n|---|---|\n| Hypertensive heart disease (EF 32% suggests heart failure; check the documentation) | I11.0 or I11.9 |\n| Coronary artery disease (LAD stenosis, native vessel) | I25.11 |\n| Atherosclerosis of aorta (ascending/descending/arch atheroma) | I70.0 |\n| COPD | J44.9 |\n| Hypercholesterolaemia | E78.0 |\n| Tobacco use, if confirmed current or past | Z72.0 or Z86.43 |\n\n**Procedure:** minimally invasive aortic valve replacement with a bioprosthesis (ACHI block 621, e.g., 38488-01). Confirm the exact code against your current ACHI edition.\n\nCode assignment should be checked against the full medical record and the ICD-10-AM/ACS edition your facility uses.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 665,
+    "output_tokens": 991
+  },
+  "seconds": 0.0
+}

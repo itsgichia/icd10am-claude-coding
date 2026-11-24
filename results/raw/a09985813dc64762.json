@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "9f3b34af170c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 66-year-old woman of Turkish descent\nAdmission: January 2015\nDischarge: September 2015\n\nHospital Course: \n\nAdmitted for follow-up after kidney transplantation, the patient presented with a rise in creatinine and urinary protein-creatinine ratio, and later developed microhaematuria. Biopsy showed extracapillary proliferative changes, and positive autoimmune serology for anti-neutrophil cytoplasmic antibodies, indicative of AAV granulomatosis with polyangiitis. Treatment included intravenous prednisolone, rituximab, plasma exchange and maintenance therapy. However, corticosteroid-related diabetes mellitus, pneumonia, CMV reactivation, and donor-specific HLA antibodies emerged. Despite interventions, including resection of the transplanted kidney, regular hemodialysis became necessary. The patient experienced no further clinically significant vasculitis activity during two years of follow-up. \nDiagnosis: [diagnosis section withheld]\nSignificant Hospital Course Events: \n\n- Elevated creatinine and urinary protein-creatinine ratio, microhaematuria\n- Biopsy showed extracapillary proliferative changes consistent with pauci-immune crescentic glomerulonephritis and AAV\n- Positive autoimmune serology for anti-neutrophil cytoplasmic antibodies\n- Treatment with intravenous prednisolone, rituximab, plasma exchange and maintenance therapy\n- Complications included corticosteroid-related diabetes mellitus, pneumonia, CMV reactivation, and donor-specific HLA antibodies.\n- Regular hemodialysis was commenced four months after the initial presentation.\n- Transplanted kidney was resected due to new development of donor-specific HLA antibodies and persistent haematuria.\n- PR3-ANCA remained positive, but declined steadily.\n- No further clinical vasculitis activity during follow-up for two years."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is granulomatosis with polyangiitis (GPA, Wegener's granulomatosis), ANCA-associated (PR3-ANCA positive), with renal involvement (pauci-immune crescentic glomerulonephritis) in a kidney transplant recipient.\n\n**Suggested principal diagnosis code: M31.3 Wegener's granulomatosis** (ICD-10-AM \nuses M31.3 for this; GPA is indexed here)\n\n**Reasoning:**\n- The reason for the work-up and treatment (prednisolone, rituximab, plasma exchange, maintenance therapy) was the new vasculitis, which was the condition mainly responsible for the prolonged admission.\n- The crescentic glomerulonephritis is a manifestation of the GPA. It is not coded separately as a principal diagnosis. If a renal manifestation code is wanted, N08.5* (glomerular disorders in systemic connective tissue disorders) is the optional asterisk code paired with M31.3\u2020.\n- The admission was for transplant follow-up, but the condition that, after study, occasioned the care was the GPA. Z09 or Z94.0 would not be the principal diagnosis in this case.\n\n**Likely additional diagnoses:**\n- Z94.0 Kidney transplant status, or T86.1 Kidney transplant failure and rejection, for the graft loss from donor-specific antibodies and persistent haematuria. Coders may consider T86.1 as the transplant complication, depending on documentation.\n- E09.- Drug-induced diabetes mellitus, with Y42.0 for the glucocorticoid adverse effect\n- J18.9 Pneumonia, unspecified (or a more specific organism code if known)\n- B25.9 Cytomegaloviral disease, unspecified (CMV reactivation)\n- N18.5 Chronic kidney disease stage 5, or Z99.2 Dependence on renal dialysis\n- Procedure codes for kidney graft nephrectomy, plasma exchange, and the rituximab infusion\n\n**Caveat:** Final code assignment depends on the full record and the Australian Coding Standards. If the coder judges that the graft failure (T86.1) was the main condition responsible for the admission, the sequencing could change. On the information given, M31.3 is the best-supported principal diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 712,
+    "output_tokens": 780
+  },
+  "seconds": 0.0
+}

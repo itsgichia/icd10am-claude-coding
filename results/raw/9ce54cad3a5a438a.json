@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "68574cbd4ea9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: N/A\nGender: Male\nAge: 65\nDate of Admission: N/A\nDate of Discharge: N/A\nLength of Stay: N/A\n\nHospital Course:\n\nThe patient was admitted to the hospital with complaints of abdominal pain, fatigue, weight loss and poor appetite which had led to the discontinuation of chemotherapy. The examination revealed moderate tenderness to palpation over the right upper quadrant and left side, no rebound, and no guarding. The laboratory tests revealed anemia, elevated alkaline phosphatase, elevated alanine aminotransferase and elevated aspartate aminotransferase. Abdominal computed tomography showed high-grade afferent loop obstruction due to a gastric mass. Upper endoscopy revealed a circumferential, fungating, and ulcerated friable 4\u20135 cm mass of malignant appearance involving the anastomosis that caused near-total obstruction of both the pancreatobiliary and efferent limbs. Following a successful double guidewire technique procedure, 2 uncovered metal stents were deployed across the gastric mass, into the afferent and efferent limbs under endoscopic and fluoroscopic guidance. Two clips were deployed to prevent stent migration. The patient was able to resume a clear liquid diet the first day followed by a duodenal stent diet. Liver function tests normalized except for alkaline phosphatase, but the patient continued to downtrend slowly.\nDiagnosis: [diagnosis section withheld]\nMedical Treatment:\n\nThe patient underwent a double guidewire technique followed by the placement of two uncovered metal stents across the gastric mass into the afferent and efferent limbs. The stents remained patent and the patient was tolerating oral intake prior to discharge.\n\nRecommendations:\n\nThe patient was discharged with recommendations to follow-up with the treating physician as recommended.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The patient has a malignant mass at a gastrojejunal anastomosis, which was causing afferent loop obstruction. The prior history suggests a gastric cancer treated with surgery, with chemotherapy discontinued. The mass is a malignant appearing recurrence at the anastomosis, and the stents were placed to treat the obstruction caused by it.\n\nUnder ICD-10-AM, the obstruction is a manifestation of the malignancy. The condition chiefly responsible for the admission is the malignant neoplasm of the stomach, C16, with the mass involving the anastomosis. An alternative would be K91.3 (postprocedural intestinal obstruction), but the obstruction is due to tumour recurrence, so the neoplasm takes precedence. A recurrence at the anastomosis after gastrectomy is coded to the primary site, here stomach.\n\nCODE: C16",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 859,
+    "output_tokens": 289
+  },
+  "seconds": 0.0
+}

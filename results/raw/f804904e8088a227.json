@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7d8ec08d9611",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHOSPITAL COURSE:\nThe patient, a 46-year-old male, was admitted in 2006 with a 3.7 mm skin cancer on his left forearm. He had multiple recurrences which were treated with surgical resections, topical imiquimod, and intra-tumour IL-2 as per protocol. The patient was enrolled in IMM-101-001 study which resulted in a decreased rate of new disease however his condition worsened with lung metastases developed. Subsequently, he received ipilimumab on a clinical trial which showed a remarkable response, with most of the lesions resolving and a couple of visceral lesions remaining stable over 5 years.  \nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nCONDITION AT DISCHARGE:\nStable with no acute problems.\n\nDISCHARGE INSTRUCTIONS:\nThe patient is advised to follow up for further evaluation to monitor his health status. \n\nFOLLOW-UP RECOMMENDATIONS:\nA follow-up with a specialist is recommended for ongoing care. \n\nMEDICATIONS:\nNone.\n\nFUTURE TREATMENT PLAN:\nTo be decided upon specialist consultation. \n\nSUMMARY:\nThe patient, a 46-year-old male, was admitted with a 3.7 mm skin cancer on his left forearm that had recurred several times. He was treated with surgical resections, topical imiquimod and intra-tumour IL-2, however, his condition worsened and he was enrolled in a clinical trial. The patient received ipilimumab and had a remarkable response, with most of the lesions resolving and a couple of visceral lesions stable over 5 years. The patient will follow up with a specialist for ongoing care and treatment planning."
+      }
+    ]
+  },
+  "text": "**Most likely principal diagnosis: C43.6 \u2013 Malignant melanoma of upper limb, including shoulder**\n\n**Why this code fits**\n- The record calls it \"skin cancer,\" but the details point to melanoma:\n  - A 3.7 mm thickness measurement is a Breslow depth, which is used for melanoma.\n  - Intralesional IL-2, topical imiquimod, the IMM-101 study and ipilimumab are all melanoma treatments.\n- The primary site is the left forearm, which falls under the upper limb category (C43.6).\n- The summary says the patient was admitted for the forearm cancer, so the primary melanoma is the principal diagnosis.\n\n**Additional codes**\n- **C78.0** \u2013 Secondary malignant neoplasm of lung, for the lung metastases. The \"visceral lesions\" may need further site-specific C78.x codes if their location is documented.\n- **M8720/3** \u2013 Malignant melanoma, NOS (morphology code).\n\n**Caveats**\n- The discharge diagnosis was withheld, so the coder should confirm the diagnosis is documented as melanoma before assigning C43.6. If it is not, the clinician should be asked.\n- If the documentation shows this admission was mainly to treat or manage the metastatic disease (for example, lung metastases), the principal diagnosis would instead be the secondary neoplasm (C78.0), with C43.6 as an additional diagnosis. This follows ACS 0236 (Neoplasm coding and sequencing).",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 626,
+    "output_tokens": 724
+  },
+  "seconds": 0.0
+}

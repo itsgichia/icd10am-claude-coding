@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "8f808a644d03",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nPatient Discharge Summary:\n\nPatient Name: [Patient Name]\nAdmission Date: [Admission Date]\nDischarge Date: [Discharge Date]\n\nHospital Course:\nThe patient was admitted to the hospital due to lower extremity swelling and pain for four days. Physical examination revealed left lower limb pitting edema and calf tenderness. Color Doppler ultrasound showed an extensive DVT affecting the common iliac, external iliac and common femoral vein as well as superficial femoral down to popliteal vein. Treatment included bed rest, elevation with bandaging of left leg, and low molecular weight heparin injections. Investigations revealed no underlying etiology. Abdominal and pelvic US and CT scan showed an impacting stone and a severe left hydroureteronephrosis with almost lost of cortical thickness. Percutaneous nephrostomy was performed to decompress the hydronephrotic kidney. JJ stent was inserted and subsequently removed. Six weeks later, Doppler US showed complete recanalization of the superficial femoral, popliteal as well as the proximal segment of deep veins of the leg but common iliac, external iliac and common femoral veins and proximal superficial femoral vein were still partially thrombosed. Through pneumatic lithotripsy, the stone was fragmented under spinal anesthesia. Three months after that, Doppler US showed complete recanalization of iliac vessels.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nTreatment included bed rest, elevation with bandaging of left leg, and low molecular weight heparin injections. Percutaneous nephrostomy was performed to decompress the hydronephrotic kidney. JJ stent was inserted and subsequently removed. Pneumatic lithotripsy was performed to fragment the stone under spinal anesthesia. The patient was discharged on oral anticoagulation in the form of rivaroxaban 20 mg daily.\n\nFollow-up:\nThe patient is advised to have regular follow-up visits with their healthcare provider.\n\nSigned by: [Healthcare Provider Name and Title]\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "I80 (DVT of the lower limb) is the best fit, though N13 (obstructive uropathy) is a reasonable alternative.\n\n**Chapter letter: I (circulatory system).** The patient was admitted for four days of left leg swelling and pain. Duplex ultrasound confirmed an extensive deep vein thrombosis running from the common iliac vein down to the popliteal vein. This thrombosis is the condition that prompted the admission and drove the main treatment: low molecular weight heparin, then rivaroxaban, with serial Doppler scans until the vessels fully reopened.\n\n**Digits: 80.** Category I80 (phlebitis and thrombophlebitis) is where deep vein thrombosis of the lower limb is classified. The likely subcode is I80.2, thrombosis of other deep vessels of the lower extremities.\n\n**Why not N13?** The obstructing stone with severe left hydroureteronephrosis was found during workup and treated with nephrostomy, a JJ stent and lithotripsy. It may have caused the DVT by compressing the iliac vein, but the summary never states this. Without a documented causal link, the DVT remains the condition chiefly responsible for the admission. If the record did attribute the DVT to the obstructed kidney, a coder could argue for N13.\n\nCODE: I80",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1241,
+    "output_tokens": 742
+  },
+  "seconds": 0.0
+}

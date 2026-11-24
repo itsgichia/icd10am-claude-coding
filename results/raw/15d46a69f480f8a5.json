@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "3127de73c5b5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 46-year-old male\n\nAdmission date: [DATE]\n\nDischarge date: [DATE]\n\nMedical history: None reported except exertional dyspnea.\n\nChief complaint: Exertional dyspnea\n\nHospital course:\n\nThe patient was admitted to the hospital with a chief complaint of exertional dyspnea. Physical examination revealed a systolic mitral murmur and a diastolic aortic murmur. TTE revealed a noncoronary SVA protruding into the mitral anterior leaflet, leading to moderate mitral regurgitation, severe aortic insufficiency, and a dilated aortic root. The ascending aorta measured 54-mm, and the left ventricular diastolic diameter was 75-mm, with a left ventricular ejection fraction of 66%. No ventricular septal defect was detected. Coronary CTA showed no abnormalities or stenoses found in the coronary tree and the sac of the noncoronary SVA (measuring 36 \u00d7 47 \u00d7 51 mm) was protruding into the anterior leaflet of the mitral valve. Surgery was performed via median sternotomy. The thickening of the wall of the tricuspid aortic valve and ascending aortic wall was consistent with inflammation. The patient underwent mitral valve and aortic valve replacement and replacement of the ascending aorta with an artificial vessel. Antibiotics were administered for 5 weeks. Follow-up TTE showed satisfactory functioning of both replaced valves. Aortic CTA demonstrated restoration of the normal anatomical relationship at the aortic root. The patient was discharged in stable condition.\nDischarge diagnosis: [diagnosis section withheld]\nDischarge instructions: The patient was advised to follow-up with a primary care physician and cardiologist and adhere to medication and lifestyle modification recommendations."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is most likely **Q25.4 Other congenital malformations of aorta**, because a sinus of Valsalva aneurysm (SVA) is classed there. The case is ambiguous, and the alternatives are covered below.\n\n**Reasoning**\n\n- The main pathology is a noncoronary sinus of Valsalva aneurysm. It protrudes into the anterior mitral leaflet and causes severe aortic insufficiency, moderate mitral regurgitation and a dilated aortic root. The surgery (aortic valve replacement, mitral valve replacement and ascending aortic replacement) was directed at these problems.\n- Congenital SVA is indexed in ICD-10 to Q25.4 (the ICD-10-AM index also routes \"aneurysm, sinus of Valsalva\" to Q25.4). The patient had no coronary disease and no ventricular septal defect, which fits a congenital or structural cause.\n- The wall thickening and the 5 weeks of antibiotics suggest an inflammatory or infective process. If the clinicians had documented infective endocarditis, the principal diagnosis would change. In that case I48 or I33.0 (acute and subacute infective endocarditis) with B95\u2013B97 for the organism would be considered. The summary does not document endocarditis or an organism, so I would not assign it without that documentation.\n- If the SVA were documented as acquired or inflammatory (for example, aortitis), the alternatives would be I71.2 or I72.8 (other specified aneurysm), or I77.6 (arteritis, unspecified). I would query the clinician before choosing one of these.\n\n**Suggested secondary codes**\n\n- I35.1 Aortic (valve) insufficiency, or I08.0 if both mitral and aortic valves are documented as rheumatic disorders. Here the cause is not rheumatic, so I34.0 (mitral insufficiency) and I35.1 are appropriate.\n- I71.2 or I77.81 for the dilated aortic root and ascending aorta (thoracic aortic ectasia or aneurysm), depending on the documentation.\n- Procedure codes (ACHI): aortic and mitral valve replacements and replacement of the ascending aorta, which would be coded from the operation report.\n\n**Query recommended:** Ask the surgeon to confirm whether the SVA is congenital, infective (endocarditis) or inflammatory, because that determines the final principal code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 661,
+    "output_tokens": 803
+  },
+  "seconds": 0.0
+}

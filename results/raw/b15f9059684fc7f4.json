@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "context_rich_structure",
+  "record_id": "e978f0ec2dd7",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: ____\nDate of Admission: ____\nDate of Discharge: ____\nPrimary Diagnosis: [diagnosis section withheld]\nSecondary Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to our facility on ____, exhibiting symptoms of tachycardia and acute kidney injury. It was later determined that the patient had ingested multiple foreign bodies. Treatment interventions included intravenous lorazepam and emergency laparotomy to remove all the packets. Postoperatively, the patient was transferred to the ICU where he remained for a total of one night before being transferred to ward level care. Pain management was achieved with a patient controlled analgesia (PCA) infusion pump, and the patient was extubated on day 1 postoperatively. The patient had a slow postoperative recovery mainly due to pain and limited oral fluid intake. He was discharged on day 10 back to police custody and returned once a week later for a dressing change.\n\nCourse of Treatment:\nThe course of treatment for this patient focused on the removal of the ingested foreign bodies through an emergency laparotomy. The patient was transferred to the ICU postoperatively and was managed with a patient controlled analgesia (PCA) infusion pump to manage pain.\n\nMedications:\nA detailed list of medications administered during the patient's hospitalization is not included in this summary.\n\nFollow-up:\nThe patient was discharged on day 10 back to police custody and returned once a week later for a dressing change. No further follow-up was scheduled upon the patient's discharge.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: T18**\n\nThe principal diagnosis is the ingested foreign bodies (the packets), which were the reason for the emergency laparotomy and the whole episode of care. The tachycardia and acute kidney injury were presenting features and complications, not the condition chiefly responsible for the admission. T18 is the ICD-10-AM category for foreign body in the alimentary tract.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1061,
+    "output_tokens": 488
+  },
+  "seconds": 0.0
+}

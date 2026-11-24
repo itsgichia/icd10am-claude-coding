@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "41daccafa734",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 25-year-old female\nAdmission date: [DATE]\nDischarge date: [DATE]\nLength of stay: [NUMBER] days\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient presented to the emergency department with complaints of acute onset of epigastric pain and nausea with bilious emesis. Initial workup did not demonstrate evidence of biliary or gallbladder pathology. However, her symptoms progressed and she was re-evaluated with a computed tomography that demonstrated a soft tissue mass located posterior to the gallbladder. Further evaluation with magnetic resonance cholangiopancreatography observed a complex cystic structure of indeterminate etiology at the porta hepatis.\n\nThe patient underwent surgery, during which a hemorrhagic pedunculated mass attached to the infundibulum of the gallbladder was identified and resected. A cholecystectomy was also performed due to inflammation from the hemorrhagic mass. Gross pathology and histology revealed a hemorrhagic benign ectopic liver tissue, and localized cholecystitis in the area adjacent to the mass was also observed.\n\nThe patient's postoperative course was uneventful and her symptoms resolved immediately. She was discharged home on the first postoperative day and was asymptomatic when seen in follow-up.\nDischarge Diagnosis: [diagnosis section withheld]\nTreatment:\nThe patient underwent surgery to remove the hemorrhagic benign ectopic liver tissue and cholecystitis. She was discharged with instructions to follow up with her healthcare provider.\n\nCondition at Discharge:\nThe patient was asymptomatic and in stable condition at the time of discharge.\n\nDischarge Medications: N/A\n\nFollow-up:\nThe patient was instructed to follow up with her healthcare provider.\n\nInstructions:\nThe patient was instructed to follow up with her healthcare provider."
+      }
+    ]
+  },
+  "text": "**Likely principal diagnosis code: Q44.7 \u2013 Other congenital malformations of liver** (ectopic liver tissue, here attached to the gallbladder).\n\n**Reasoning**\n- The condition chiefly responsible for the admission and surgery was a hemorrhagic pedunculated mass of ectopic liver tissue on the gallbladder infundibulum. It caused the epigastric pain, nausea and bilious emesis, and it was the target of the resection.\n- ICD-10-AM indexes ectopic or accessory liver tissue under \"Malformation, liver, specified NEC\", which gives Q44.7. This is a coding judgment, because the index entry for ectopic liver tissue is not explicit.\n- The cholecystitis was localized and secondary to the mass, and the cholecystectomy was done because of that inflammation. It would be coded as an additional diagnosis, K81.8 (other cholecystitis) or K81.9 (cholecystitis, unspecified), rather than as the principal diagnosis.\n\n**Alternative:** If the coder judged that the cholecystitis was the main reason for the cholecystectomy, K81.x could be sequenced first. The documentation shows the ectopic liver mass was the underlying cause, so Q44.7 is the better choice.\n\n**Procedure codes (ACHI, not part of the diagnosis code):** cholecystectomy (block 965) and excision of the lesion. The exact codes depend on whether the approach was laparoscopic or open, which is not stated.\n\nPlease confirm the final code against your current ICD-10-AM/ACHI/ACS edition and local coding policy.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 690,
+    "output_tokens": 536
+  },
+  "seconds": 0.0
+}

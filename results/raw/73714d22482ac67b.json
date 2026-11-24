@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "38f2e94efc75",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\nDate of Birth: [Redacted]\nGender: Female\nAdmission Date: [Redacted]\nDischarge Date: [Redacted]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted following diagnosis of mucosal malignant melanoma of the hard palate. The tumor was found to have extensively spread within the hard palate with no involvement of the nasal cavity or nasopharynx, and with no neck lymph node metastasis.\n\nTreatment:\nThe patient refused surgery and underwent CIR at another facility as the initial treatment, followed by concurrent chemotherapy. After one cycle of chemotherapy was stopped due to severe hematological toxicity. The patient achieved a complete response following CIR and was monitored by physical examinations, endoscopy, enhanced CT, and MRI. At 16 months after CIR, a cervical metastasis of a left jugular lymph node was detected, leading to diagnosis of stage crT0N1M0 MMMHN. The patient was treated by en bloc salvage ND with preservation of the accessory nerve, internal jugular vein, and sternocleidomastoid muscle. The duration of surgery was 132 min, and blood loss was less than 10 mL. The patient was discharged on postoperative Day 7.\n\nPostoperative Management:\nThe patient experienced no Clavien-Dindo grade 3 or 4 postoperative complications. No recurrence was found by the whole-body enhanced CT performed 3 months after surgery.\nFinal Diagnosis: [diagnosis section withheld]\nFollow-up Care:\nPatient will continue to be monitored for any signs of recurrence or metastasis.\n\nDiscussions:\nThe patient was presented with several treatment options, including radiotherapy and systemic immunotherapy, before choosing surgery. The en bloc salvage ND with preservation of the accessory nerve, internal jugular vein, and sternocleidomastoid muscle was performed successfully, and the patient experienced no postoperative complications."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: C77.0 \u2013 Secondary and unspecified malignant neoplasm of lymph nodes of head, face and neck**\n\n**Rationale**\n\n- **Reason for admission:** The patient was admitted for salvage neck dissection of a left jugular lymph node metastasis found 16 months after carbon-ion radiotherapy (CIR).\n- **Coding rule:** Under ACS 0236 (Neoplasm coding and sequencing), when treatment is directed only at the secondary site, the secondary malignancy is sequenced as the principal diagnosis.\n- **Status of the primary:** The hard palate primary was in complete response (crT0) and was not treated during this admission. So it is not the principal diagnosis.\n\n**Additional codes to consider**\n\n- **The primary melanoma.** Mucosal melanoma is classified by site, not to C43 (which covers skin melanoma). Code it as either:\n  - **C05.0** (malignant neoplasm of hard palate), if it is still documented as a current malignancy, or\n  - **Z85.8** (personal history of malignant neoplasm), if documentation confirms the primary was eradicated.\n- **Morphology code:** M8720/6 (malignant melanoma, metastatic).\n\nConfirm the choice for the primary against the clinician's documentation and local coding guidance.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 740,
+    "output_tokens": 701
+  },
+  "seconds": 7.758522542018909
+}

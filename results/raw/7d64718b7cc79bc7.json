@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "30e8ed8b7f7d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\n\nMedical Record Number: [REDACTED]\n\nGender/Age: Female, 31 years old\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient underwent surgical resection of a subcutaneous nodule, which was later diagnosed as an adenocarcinoma with positive margins. After excision of surgical margins, the pathology report revealed a Neuroendocrine Tumor (NET) with positive staining for chromogranin A and neuron-specific enolase.\n\nA chest CT scan revealed a pulmonary mass in the left lobar bronchia, which led to left pneumectomy. Pathology confirmed the diagnosis of a 4.5-cm well-differentiated neuroendocrine carcinoma with a low mitotic count of 1 mitosis per 10 high power field (HPF). There was no vascular or pleural invasion and surgical margins were free. However, it was found that one lymph node was involved.\n\nStaging abdominal ultrasound detected the presence of two hepatic nodules in segment VIII, measuring 1.8 and 1.0 cm. An abdominal MRI showed multiple hepatic nodules, with additional lesions in segments II and V. Octreoscan demonstrated increased activity on pulmonary and hepatic tumoral lesions, which confirmed the diagnosis.\n\nThe patient was treated with somatostatin analogs and everolimus was added later to the treatment regimen. Follow-up images revealed stable disease after three months.\n\nDischarge Condition:\n\nThe patient was discharged in a stable condition with the recommendation to follow up with her oncologist for regular check-ups and treatments.\n\nDischarge Medications:\n\nThe patient was prescribed the necessary medications for her condition to continue at home.\n\nFollow-up:\n\nThe patient is advised to return for scheduled follow-up visits with her oncologist."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is most likely **C34.9, Malignant neoplasm of unspecified part of bronchus or lung**.\n\nThe admission was for the pulmonary neuroendocrine carcinoma that led to the left pneumectomy. The record says only \"left lobar bronchia\" and does not name a specific lobe, so C34.9 is the appropriate code. If the operative or pathology report names the lobe, a more specific code applies: C34.1 for upper lobe, C34.2 for middle lobe, or C34.3 for lower lobe.\n\nSecondary codes would likely include the hepatic metastases (C78.7, secondary malignant neoplasm of liver) and the involved lymph node (C77.- for the relevant nodal region). The subcutaneous nodule's primary status is unclear from the summary and should be checked against the pathology reports. Coders should also verify the final morphology and the primary site against the full operative and pathology reports before assigning codes.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 674,
+    "output_tokens": 1124
+  },
+  "seconds": 0.0
+}

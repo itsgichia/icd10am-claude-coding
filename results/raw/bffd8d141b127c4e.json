@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "context_rich_structure",
+  "record_id": "717dee10ec65",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary for Case 1:\n\nPatient Information:\nName: [REDACTED]\nAge: 40 years\nGender: Male\n\nAdmission Information:\nThe patient was admitted to the hospital on [REDACTED] with symptoms of general malaise, arthralgia in his extremities, facial cyanosis, and fever (39\u00b0C). A medical history of post-traumatic splenectomy was reported.\n\nHospital Course:\nUpon admission, empirical antibiotic therapy was started with ceftriaxone and vancomycin as the patient was diagnosed with secondary sepsis caused by meningitis from Streptococcus pneumoniae. Due to a severe hemodynamic instability, the patient was transferred to the ICU where they exhibited persistent hypotension and an inflammatory state with high levels of CRP and PCT.\n\nThe patient underwent continuous renal replacement therapy (CRRT) in hemodiafiltration mode for a total of 68 hours along with Cytosorb cartridge. During this treatment, a general improvement was observed in terms of the patient's hemodynamic and metabolic stability as well as reducing levels of PCT and CRP. The patient's norepinephrine demand decreased significantly throughout the treatment and the patient could be stopped from CRRT after 12 days.\n\nDischarge Information:\nAfter further treatment and observation, the patient was discharged on [REDACTED]. At the time of discharge, the patient was alert, collaborative, tracheotomized, and spontaneously breathing with a recovery of diuresis. The patient was advised to continue with follow-up appointments according to the recommended medical protocols.\nDiagnosis: [diagnosis section withheld]\nRecommendations:\nThe patient was advised to follow up with medical appointments as per recommended medical protocols.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: A40**\n\nThe principal diagnosis is streptococcal sepsis due to *Streptococcus pneumoniae* (A40.3), which falls in category A40. Under ICD-10-AM sequencing conventions, when sepsis and a localised infection are both present on admission, sepsis is sequenced first. The pneumococcal meningitis (G00.1) is the localised source and is coded as an additional diagnosis. The post-traumatic splenectomy history is a status factor and does not change the principal diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1125,
+    "output_tokens": 476
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "77bfb711243b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Unknown\n\nDate of Admission: April 2011\n\nDate of Discharge: September 2011\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was treated with Zyloric and hydroxyurea for four days, which was followed by Imatinib mesylate for five months. Her laboratory values improved during the treatment period and the symptoms subsided.\n\nOutcome:\nThe patient was discharged in September 2011, after showing improvement in her clinical condition. However, she passed away for unknown reasons while under treatment in October 2011.\n\nFollow-up:\nThe patient's outcome was not favorable, and she passed away before completing her treatment. The cause of death remains unknown.\n\nSummary:\nThis 22-year-old female presented with a high white blood cell count, splenomegaly, and weight loss, which led to the diagnosis of CML-CP. She was treated with Zyloric, hydroxyurea, and Imatinib mesylate in the hospital, and her clinical condition improved. Unfortunately, the patient passed away in October 2011 for unknown reasons while undergoing treatment.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"C92\", \"condition\": \"Chronic myeloid leukaemia\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 509,
+    "output_tokens": 30
+  },
+  "seconds": 0.0
+}

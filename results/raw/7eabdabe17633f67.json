@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "bf7949dcece5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nHOSPITAL COURSE:\n\nAdmission Date: April 29th, 2016\nDischarge Date: N/A\n\nHISTORY OF PRESENT ILLNESS:\n\nMs. C, a 73-year-old woman with a history of uveal melanoma, was admitted to the hospital for epigastric pain and symptoms of gastric reflux following her second dose of ipilimumab as second line immunotherapy for liver metastases. She also had mild diarrhea with 3\u20134 loose stools daily. Esophagogastroduodenoscopy and flexible sigmoidoscopy were performed to inform further treatment.\n\nFINDINGS:\n\nEsophageal, gastric and duodenal mucosa appeared normal on endoscopic examination without evidence of ulceration or other significant mucosal injury. Gastric biopsies exhibited lymphocytic inflammation surrounding pigmented cells scattered throughout the gastric mucosa. S100 and SOX10 immunostains confirmed multiple microscopic foci of melanoma with tumor associated inflammation resembling gastritis. Flexible sigmoidoscopy and colonic biopsies were normal.\n\nHOSPITAL COURSE AND TREATMENT:\n\nGlucocorticoid treatment was initially deferred as this was considered an appropriate antitumor response, and she received her third dose of ipilimumab. After the 3rd dose, she developed an elevation in her transaminases and bilirubin concerning for checkpoint hepatitis. She was started on glucocorticoids and further immunotherapy was held. Her hepatitis resolved on glucocorticoids. Her gastric symptoms also improved on glucocorticoid therapy consistent with an immune-mediated mechanism.\n\nDISCHARGE INSTRUCTIONS:\n\nMs. C is advised to continue taking glucocorticoids and report any new symptoms to her healthcare provider. She is recommended to follow-up with her oncologist for further treatment options.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The admission was for epigastric pain and reflux symptoms. Investigation showed that the gastric biopsies contained microscopic foci of melanoma, which is metastatic disease in the stomach. The tumor-associated inflammation resembled gastritis. This metastatic gastric involvement was established as the cause of the symptoms.\n\nCheckpoint hepatitis developed after admission and is a separate condition. Liver metastases and the primary uveal melanoma are background context. The condition chiefly responsible for the admission was the gastric symptoms, which were explained by the metastatic melanoma in the stomach.\n\nIn ICD-10-AM, secondary malignant neoplasm of other and unspecified sites, including the stomach, is classified to C78 (secondary malignant neoplasm of respiratory and digestive organs). Stomach metastasis is coded C78.8 (other and unspecified digestive organs). The category is therefore C78.\n\nCODE: C78",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 907,
+    "output_tokens": 312
+  },
+  "seconds": 0.0
+}

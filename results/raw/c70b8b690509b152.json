@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "ef176fbbd8cc",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nElectronic Health Record Discharge Summary: Hispanic Male with Diabetes Mellitus Type 2 and Sepsis\n\nIdentification: \nPatient: 42-year-old Hispanic male with a history of diabetes mellitus type 2 \nAdmitted: Emergency department admission on September 1, 2017 for sepsis \n\nHospital Course: \nThe patient had a six-day history of malaise, headache, fever, and generalized body pain. He had developed diarrhea, tachypnea, and confusion three days prior to admission. On the day of admission, he became drowsy, dyspneic, and looked very ill. Physical examination showed the patient was severely dehydrated with a blood pressure of 60/30 mmHg and respiratory rate of 32 bpm. \nTreatment with intravenous fluids, antibiotics, insulin, and other supportive therapies was administered. Methimazole, hydrocortisone, and Lugol's solution were added on the second day of treatment. On the third day of treatment, there was a good evolution and the patient was discontinued from norepinephrine and insulin infusion. \nECG was normal but echocardiography showed severe left ventricular systolic dysfunction. Intravenous furosemide was administered for two days for acute lung edema. \nThe patient continued to improve and was discharged on September 7, 2017 with almost complete recovery. \nDiagnosis: [diagnosis section withheld]\nFollow-Up: \nFollow-up echocardiography showed complete resolution of left ventricular systolic dysfunction. After the patient was discharged, no additional study was performed.\n\nSignatures: \nThis discharge summary was reviewed and approved by (physician's name)."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: **A41.9 Sepsis, unspecified**\n\n## Rationale\nUnder ACS 0001 *Principal Diagnosis*, the principal diagnosis is the condition established after study to be chiefly responsible for the admission. The summary explicitly states the patient was admitted for **sepsis**. He presented with fever, hypotension (60/30 mmHg), tachypnoea, confusion and a need for vasopressors, and was treated with antibiotics. No causative organism is documented, so the unspecified code A41.9 applies.\n\n## Likely additional diagnoses\nThe final diagnosis section is withheld, so these are inferred from the treatment and should be confirmed in the clinical record before coding:\n\n| Code | Condition | Clinical basis |\n|---|---|---|\n| **R57.2** | Septic shock | Hypotension requiring norepinephrine |\n| **E05.5** | Thyroid crisis or storm | Methimazole, hydrocortisone and Lugol's solution |\n| **E11.1x** | Type 2 diabetes mellitus with ketoacidosis | Insulin infusion with severe dehydration. Check the ACS diabetes standards and your edition's fifth-character options for coma or lactic acidosis. |\n| **E86** | Volume depletion/dehydration | Severe dehydration |\n| **I50.1 / I42.x** | Acute pulmonary oedema / cardiomyopathy | Reversible severe LV systolic dysfunction treated with furosemide. This may be thyrotoxic or stress cardiomyopathy. |\n| **R41.0** | Confusion/disorientation | Only if not integral to the coded conditions |\n\n## Caveat\nIf the withheld diagnosis shows the admission was chiefly due to **thyroid storm** (E05.5), with sepsis ruled out or secondary, the principal diagnosis would change. Thyroid storm can closely mimic sepsis, and the specific therapy here suggests it was a major focus of care. In that case, clarify with the treating clinician which condition occasioned the admission before finalising the code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 601,
+    "output_tokens": 1254
+  },
+  "seconds": 0.0
+}

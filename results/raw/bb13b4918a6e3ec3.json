@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "a8f1e542a3f8",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: N/A\nMedical Record Number: N/A\n\nAdmission Date: N/A\nDischarge Date: N/A\n\nBrief Hospital Course:\nThe patient was admitted for specialized care due to circulatory failure. On admission, he presented with fever, myalgia, headache, and a rash. The patient did not report any ticks or eschar. The patient was initially treated for septic shock with intravenous normal saline. Spotted fever rickettsial infection was considered due to the presence of a rash, and the patient was started on intravenous ceftriaxone and oral doxycycline. As the patient's condition worsened, he developed shortness of breath and hypoxemia, which indicated type 1 respiratory failure. An echocardiogram showed myocarditis and pulmonary edema leading to heart failure. Intravenous chloramphenicol was added to the treatment regimen, as it can be effective in cases like this. Three inotropes were required, including norepinephrine, dobutamine and dopamine, to maintain the patient's blood pressure. After increasing the steroids dosage, the patient began showing signs of improvement. The patient was extubated and transferred back to the High Dependency Unit of the medical ward. The patient was discharged from the hospital ten days following admission.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Medications:\nN/A\n\nFollow-Up:\nThe patient was reviewed in the out-patient clinic, and he was asymptomatic. Further species identification was not possible due to unavailability of facilities. The patient did not turn up for the follow-up echocardiogram. \n\nDischarge Condition:\nThe patient was discharged in stable condition."
+      }
+    ]
+  },
+  "text": "The most likely ICD-10-AM principal diagnosis is **A77.9, Spotted fever, unspecified** (spotted fever rickettsiosis).\n\nThe rationale:\n\n- The clinical picture (fever, myalgia, headache, and rash, with the team treating spotted fever rickettsial infection with ceftriaxone, doxycycline, and chloramphenicol) points to a spotted fever group rickettsial infection.\n- The specific species could not be identified, so the unspecified spotted fever code applies.\n- The complications (septic-shock-like circulatory failure, type 1 respiratory failure, myocarditis, pulmonary edema, and heart failure) are manifestations of the underlying infection. Under ICD-10-AM sequencing rules, the infection is coded first as the principal diagnosis, and the complications are coded as additional diagnoses.\n\nCaveats:\n\n- The discharge diagnosis section is withheld, so this depends on the documented terminology. If the physician documents only \"rickettsial infection/rickettsiosis, unspecified,\" the code would be **A79.9, Rickettsiosis, unspecified**.\n- If the physician documents typhus, the code would fall under A75 instead.\n- Coders should confirm the final wording against the full discharge diagnosis before coding.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 600,
+    "output_tokens": 997
+  },
+  "seconds": 0.0
+}

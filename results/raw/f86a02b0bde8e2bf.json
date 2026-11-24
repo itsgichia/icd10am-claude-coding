@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "88738ac02b6e",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nHospital Course:\nThe patient, a 73-year-old male, was admitted to the Urology ward with a chief complaint of nocturia, frequency, dribbling, and urinary retention since last month. Ultrasound examination revealed left renal mass. Past medical history included diabetes mellitus, hypertension, and ischemic heart disease. The patient stopped cigarette smoking 20 years ago. The lab data reveals that the patient had mild anemia and his blood sugar was 159 mg/dl. Urine analysis showed 10-15 white blood cells in high power field with a negative urine culture. Digital rectal examination showed a nodular (2-3+) and symmetric prostate. The ultrasound examination showed mild bilateral hydroureteronephrosis with an over-distended urinary bladder. The prostatic volume was 25 cc with retained urine of 950 cc. Computer tomography scanning revealed a hypo attenuated mass in the lower pole of the left kidney with arterial and portal enhancement and delay washout in favor of infiltrative process such as RCC close to left psoas muscle. Mild bilateral hydronephrosis due to enlarged prostate was seen. He was subsequently referred to the surgery department of the hospital for nephrectomy. The specimen was referred to the pathology department. \nDiagnosis: [diagnosis section withheld]\nFollow-up:\nAfter surgery, the patient was followed-up for 5 months. No recurrence or metastasis was diagnosed.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The case is a left renal mass on imaging, suspected RCC, and the patient was referred for nephrectomy. The diagnosis section is withheld, so the final pathology is not stated. The follow-up of \"no recurrence or metastasis\" implies a malignancy was confirmed. The urinary symptoms (retention, nodular prostate) were presenting problems, but the episode ended in a nephrectomy, so the renal tumour is the condition chiefly responsible for the care.\n\nThe pathology result is not given, so renal cell carcinoma is the most likely diagnosis. Malignant neoplasm of kidney, except renal pelvis, is C64 in ICD-10-AM. This is an inference from imaging and follow-up, not a confirmed pathology report.\n\nCODE: C64",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 717,
+    "output_tokens": 255
+  },
+  "seconds": 0.0
+}

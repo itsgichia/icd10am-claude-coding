@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "8d13e48b6d14",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\n\nDate of Admission: [redacted]\n\nDate of Discharge: [redacted]\n\nReason for Admission:\nThe patient was admitted to the emergency department due to a 12-day history of cyclical fevers with vague abdominal pain.\n\nHospital Course:\nInitial vital signs showed a blood pressure of 149/80 mmHg, a heart rate of 107 beats per minute, a temperature of 99.2\u00baF, a respiratory rate of 16, and a pulse oximetry reading of 100% on room air. Laboratory values showed a drop in hemoglobin and mild leukocytosis with no evidence of urinary tract infection. A computed tomography (CT) of the abdomen and pelvis with IV contrast showed multiple liver abscesses, septic thrombophlebitis of the portal system, and evidence of ruptured appendicitis. The patient was started on broad-spectrum IV antibiotics and underwent IR-guided abscess drainage.\n\nTreatment:\nThe patient was treated with IV antibiotics and underwent abscess drainage.\n\nCondition at Discharge:\nThe patient's condition improved significantly after treatment.\n\nFollow-Up:\nFollow-up appointments were scheduled with the patient's primary care provider for further evaluation and treatment.\n\nRestrictions:\nThe patient was advised to avoid strenuous activities until further notice.\n\nMedications:\nNo medications were prescribed at the time of discharge.\n\nProcedures:\nThe patient underwent IR-guided abscess drainage and interval appendectomy.\nDiagnosis: [diagnosis section withheld]\nSummary:\nThe patient presented to the emergency department with a 12-day history of cyclical fevers with vague abdominal pain. Imaging studies revealed the presence of liver abscesses, septic thrombophlebitis of the portal system, and ruptured appendicitis. The patient was treated with IV antibiotics and underwent abscess drainage and interval appendectomy. The patient's condition improved significantly and follow-up appointments were scheduled with the primary care provider.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "K35",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 819,
+    "output_tokens": 516
+  },
+  "seconds": 0.0
+}

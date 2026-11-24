@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "c59cbdc54125",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\n\nThe patient was admitted for screening mammography x-ray which showed a nodule of about 2 cm against the external quadrant of the right breast. The patient underwent a quadrantectomy of the right breast with removal of 2 cm neoplastic nodule and three ipsilateral sentinel lymph nodes. Follow-up tests showed a moderately differentiated invasive ductal carcinoma containing osteoclast-like giant cells. The patient was treated with adjuvant chemotherapy and hormone therapy with luteinizing hormone-releasing hormone (LHRH) analogue and exemestane. The patient will also undergo radiotherapy treatment on the residual breast after chemotherapy.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nAdjuvant chemotherapy with Docetaxel-Cyclophosphamide q21 scheme for 4 cycles followed by hormone therapy with luteinizing hormone-releasing hormone (LHRH) analogue and exemestane.\n\nDischarge Instructions:\n\nThe patient should continue with hormone therapy and attend follow-up appointments to monitor their condition. Patients should be aware of the benefits and risks related to the therapeutic proposals and follow the instructions as prescribed."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is **C50.9, Malignant neoplasm of breast, unspecified**.\n\nThe record describes invasive ductal carcinoma of the right breast in the \"external quadrant\" but does not say whether it is upper or lower. ICD-10-AM codes the outer quadrant only as upper-outer (C50.4) or lower-outer (C50.5), so without that detail the unspecified code applies. If the operative or pathology report states the vertical position, recode to C50.4 or C50.5.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 465,
+    "output_tokens": 851
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "77bfb711243b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Unknown\n\nDate of Admission: April 2011\n\nDate of Discharge: September 2011\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was treated with Zyloric and hydroxyurea for four days, which was followed by Imatinib mesylate for five months. Her laboratory values improved during the treatment period and the symptoms subsided.\n\nOutcome:\nThe patient was discharged in September 2011, after showing improvement in her clinical condition. However, she passed away for unknown reasons while under treatment in October 2011.\n\nFollow-up:\nThe patient's outcome was not favorable, and she passed away before completing her treatment. The cause of death remains unknown.\n\nSummary:\nThis 22-year-old female presented with a high white blood cell count, splenomegaly, and weight loss, which led to the diagnosis of CML-CP. She was treated with Zyloric, hydroxyurea, and Imatinib mesylate in the hospital, and her clinical condition improved. Unfortunately, the patient passed away in October 2011 for unknown reasons while undergoing treatment."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: chronic myeloid leukaemia, chronic phase (CML-CP)**\n\n**ICD-10-AM code: C92.10**, Chronic myeloid leukaemia, BCR/ABL-positive, without mention of remission.\n\n**Reasoning**\n- The summary states that the high white cell count, splenomegaly and weight loss led to a diagnosis of CML in chronic phase. Treatment with hydroxyurea, allopurinol (Zyloric) and imatinib was directed at this condition, so it is the principal diagnosis.\n- In ICD-10-AM, C92.1 covers chronic myeloid leukaemia. Current editions split it into C92.10 (not having achieved remission) and C92.11 (in remission). Earlier editions, which applied in 2011, used C92.1 with a 5th character. The patient was admitted in 2011, so the edition in use then would apply.\n- Her laboratory values improved and her symptoms subsided, but the summary does not document complete remission. C92.10 is therefore the appropriate code.\n- The summary does not state whether the BCR-ABL (Philadelphia chromosome) result was positive. Imatinib treatment strongly suggests it was, and C92.1 is the default category for CML in any case. If the record documented BCR-ABL negative or atypical CML, C92.2 would apply instead.\n\n**Possible secondary codes, if documented**\n- R16.1, splenomegaly NEC. It is integral to the CML here, so it would not normally be coded separately.\n- R63.4, abnormal weight loss. This is also a symptom of the CML and would not normally be coded separately.\n- Hyperuricaemia or tumour lysis, only if documented as a separate condition. Allopurinol was probably given as prophylaxis.\n\nThe diagnosis section was withheld, so this code rests on the CML-CP diagnosis stated in the summary. The final code should be checked against the full record and the ICD-10-AM edition in force at the time.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 417,
+    "output_tokens": 660
+  },
+  "seconds": 0.0
+}

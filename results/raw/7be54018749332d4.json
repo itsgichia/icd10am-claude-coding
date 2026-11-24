@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7868c7a114d4",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY:\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient presented with low back pain that radiated down the right leg. She underwent L4\u2013L5 microdecompression, which alleviated her pain. However, at approximately 12 months after surgery, her pain began to increase, and she was treated with ALIF at L4\u2013L5 and L5\u2013S1. At 2 months post-operatively, she developed pain with radiation down both legs and difficulty with walking, and a fracture through the anterosuperior end plate of S1 was discovered.\n\nTreatment:\nThe patient underwent exploration of the posterior fusion and removal of instrumentation; revision and decompression of L5\u2013S1; instrumentation placement at the L4\u2013pelvis region; and posterolateral arthrodesis at L4\u2013L5 and L5\u2013S1, with application of pelvic instrumentation using the S2AI technique.\n\nCondition on Discharge:\nThe patient reported 100% improvement in low back pain with some low back soreness, the ability to walk farther, and 80% improvement in neurologic symptoms in the left lower extremity.\n\nInstructions:\nThe patient was instructed to follow-up with her primary care physician for ongoing management of her condition. She was also advised on proper nutrition and exercise to help manage her osteoporosis, as well as proper posture and lifting techniques to prevent further injury to her back.\n\nFollow-up:\nFollow-up appointments were scheduled with the patient's primary care physician and treating physician to monitor her progress and adjust her treatment plan as needed."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: M96.6, Fracture of bone following insertion of orthopaedic implant, joint prosthesis or bone plate\n\n**Why this code**\n- The condition that prompted this admission is the S1 anterosuperior endplate fracture, found 2 months after the L4\u2013L5/L5\u2013S1 ALIF.\n- The fracture is directly related to the spinal instrumentation (interbody cages and fixation) and occurred during the post-operative period.\n- The revision surgery, decompression and extension of instrumentation to the pelvis (S2AI) were done to treat this fracture and its effects: bilateral radicular pain and difficulty walking.\n- In ICD-10-AM, a fracture of bone after insertion of an orthopaedic implant goes to M96.6, not the injury chapter (S32.1-) and not a primary osteoporotic fracture code.\n\n**Likely additional codes**\n- **Y83.1** (surgical operation with implant of artificial internal device) as the external cause, with the appropriate place-of-occurrence and activity codes per ACS.\n- **M81.-** (osteoporosis without pathological fracture), or an M80.- code if the documentation supports it. Osteoporosis is mentioned in the discharge instructions and likely contributed to the fracture.\n- **Radiculopathy or lumbar stenosis codes**, if documented as separately managed. For example, M54.1- or M48.06 covering the L5\u2013S1 decompression.\n- **T84.-** codes, if a mechanical complication of the device itself (loosening, subsidence or displacement of the cage) is documented. Clarify this with the clinician.\n\n**Caveat:** If the clinician documents the fracture as an osteoporotic or pathological fracture not attributable to the implant, the principal diagnosis would shift to **M80.-** (osteoporosis with pathological fracture). Query the treating surgeon if the documentation is ambiguous.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 585,
+    "output_tokens": 953
+  },
+  "seconds": 0.0
+}

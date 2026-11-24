@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "json_output",
+  "record_id": "a03e0422f170",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\n[Medical Center Name]\n[Patient Name], Discharge Summary\n\nAdmission Date: [Date]\nDischarge Date: [Date]\n\nHospital Course:\nThe patient was admitted to the Department of Urology with complaints of repeated dizziness. Preoperative echocardiography revealed a variation in the arteries, including an ARSA derived from the initial descending aorta right rear to the LSA, an aberrant left vertebral artery that directly originated from the AA instead of the LSA, and an aberrant right vertebral artery that originated from the RCCA rather than the RSA. Computed tomography angiography confirmed these variances. The patient had no other cardiac or vascular anomalies. Mild stenosis was found in the proximal portion of the left common carotid artery (LCCA), adjacent to its aortic origin. The patient underwent treatment for urolithiasis and was administered aspirin and atorvastatin to prevent potential vascular stenosis. The patient was followed up continuously.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient underwent treatment for urolithiasis and was administered aspirin and atorvastatin to prevent potential vascular stenosis.\n\nFollow-up:\nThe patient will continue to be monitored for any potential vascular stenosis.\n\nDischarge Condition:\nThe patient was discharged in a stable condition.\n\nDischarge medications:\nNone specified.\n\nInstructions:\nNone specified.\n\nFollow-up appointments:\nNone specified.\n\nInstructions Given:\nNone specified.\n\nPrimary Care Physician:\nNone specified.\n\nAttending Physician:\nNone specified.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"Q27\", \"condition\": \"Congenital malformations of peripheral vascular system (aberrant subclavian and vertebral arteries)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 664,
+    "output_tokens": 600
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "16cc6ba7959c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\n- Name: [REDACTED]\n- Age: 57 years\n- Gender: Male\n- Medical Record Number: [REDACTED]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n- The patient was admitted to the hospital in July 2016 after being diagnosed with AML.\n- Investigations revealed a pancytopenia, a hypercellular marrow with 65% myeloid blasts, and del () (q22q36).\n- The patient achieved CR after 1 cycle of the IA regimen and received 6 courses of the HiDAC regimen as consolidation therapies.\n- The patient experienced his first relapse 2 years after first remission and was treated with the CAG regimen for 3 cycles, resulting in a second CR in March 2019.\n- A second relapse occurred 20 months later, and the patient began the VA regimen but did not respond after 2 courses of therapies.\n- The patient received a chidamide combined with venetoclax plus azacitidine regimen as salvage therapy and achieved his third CR.\n- There were no infectious complications observed with the combination, and the duration of neutropenia was 10 days.\n- The patient remains in CR after 1 month of follow-up and is preparing for transplantation.\n\nSummary of Hospital Course:\n- The patient was admitted for the treatment of AML and achieved two CRs before experiencing a second relapse.\n- After failing to respond to the VA regimen, the patient was successfully treated with a chidamide combined with venetoclax plus azacitidine regimen.\n- No infectious complications were observed, and the patient remains in CR after 1 month of follow-up and is preparing for transplantation.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C92",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 690,
+    "output_tokens": 47
+  },
+  "seconds": 0.0
+}

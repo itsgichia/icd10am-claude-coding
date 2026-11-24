@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "context_rich_structure",
+  "record_id": "97e62809272f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: [redacted]\nAge: 39\nGender: Male\nDate of Admission: [redacted]\nDate of Discharge: [redacted]\n\nHospital Course Summary:\nThe patient was admitted to Tri-Service General Hospital with multiple injuries including rib fractures, pelvic fracture with active bleeding, and dissection of the descending aorta with intramural hematoma caused by a fall from a fifth floor window. The patient underwent bilateral anterior thoracotomies and transcatheter embolization of the pelvic vessels for acute resuscitation. The patient then received thoracic endovascular aortic repair of the descending aortic aneurysm which was followed by oxygen desaturation and cardiac arrest. Advanced cardiac life support was performed immediately and the patient was placed on ECMO due to persistent bradycardia. Though diagnosed with brain death a few days later, the family decided to donate the patient's organs.\nDischarge Diagnosis: [diagnosis section withheld]\nCourse of Treatment:\nFollowing informed consent, both recipients received dialysis within the first postoperative week due to delayed graft function. Immunosuppressive therapy was used to treat the two patients. The SCr of the recipients decreased from 8.5 and 17.6 mg/dL to 1.1 and 1.8 mg/dL, respectively, at the 1-month postoperative follow-up. The grafts remained functional at the 8-month follow-up.\n\nFollow-up Plan:\nThe patients were advised to follow up with their respective nephrologists to monitor their kidney function and progress.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: S25**\n\nThe principal diagnosis is the traumatic injury to the descending thoracic aorta (dissection with intramural haematoma), which is category S25 (injury of blood vessels at thorax level). It is the most serious of the multiple injuries from the fall, and the definitive treatment (thoracic endovascular aortic repair) and the subsequent cardiac arrest relate to it. The pelvic fracture and rib fractures are secondary injuries. This is a judgement from the summary, since the discharge diagnosis section is withheld, so the coder should confirm it against the full record.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1072,
+    "output_tokens": 726
+  },
+  "seconds": 0.0
+}

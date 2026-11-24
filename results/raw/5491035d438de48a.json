@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "3962a9bc2491",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\nDate of Admission: [Redacted]\nDate of Discharge: [Redacted]\nLength of Stay: [Redacted]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient presented with a gradual increase in abdominal girth over the past two years, along with abdominal distension and intermittent nausea for the past six months. The patient also experienced repeated intractable hiccups for two months, leading to the hospital admission. Physical examination revealed a longitudinal surgical scar on the upper abdomen and a swelling of the mass on the left side of the abdomen.\n\nFurther diagnostic investigations were performed, including ultrasonography, computerized tomography (CT), and an isotope kidney scan. These tests revealed the presence of a massive hypoechoic lesion occupying almost the entire abdomen, exerting pressure on the stomach, liver, pancreas, and spleen. Adhesion between the kidney and surrounding organs was evident during the laparoscopy and open simple nephrectomy procedure.\n\nAbout 7.5 liters of hydronephrosis fluid were drained, and the left kidney and upper ureter were successfully removed, resulting in the disappearance of long-lasting hiccups and improvement of the patient's appetite and overall health. After the operation, the patient was observed for six months, during which there was no recurrence of the hiccups.\n\nDischarge Instructions:\nThe patient was discharged with instructions to follow a proper diet and continue with regular follow-up appointments with the healthcare professional.\n\nDictated by: [Redacted]\nSigned electronically by: [Redacted]"
+      }
+    ]
+  },
+  "text": "## Suggested principal diagnosis: **N13.3 \u2013 Other and unspecified hydronephrosis**\n\nThis code fits the documentation as written, but the actual diagnosis section was withheld, so it should be checked against the full record before it is finalised.\n\n### Why this code\n- **Condition that led to admission:** The patient had giant left hydronephrosis. About 7.5 L of fluid was drained, and the condition was treated with an open simple nephrectomy (left kidney and upper ureter removed).\n- **Symptoms are not coded separately:** The hiccups, abdominal distension, nausea and growing abdominal girth all came from the massive hydronephrotic kidney pressing on nearby organs. The hiccups resolved after surgery. Under ACS 0001 Principal Diagnosis and the symptom-coding standards, symptoms explained by a definitive diagnosis are not assigned as the principal diagnosis. So R06.6 (hiccough) and R14 (abdominal distension) should not be used here.\n- **Cause not documented:** The summary does not say what caused the hydronephrosis. It does not mention:\n  - ureteropelvic junction (UPJ) obstruction\n  - ureteric stricture\n  - calculus\n  - reflux\n\n  Without a stated cause, the \"other and unspecified\" category is the correct one.\n\n### Check with the clinician\nGiant hydronephrosis in adults is most often caused by **UPJ obstruction**. If the clinician or the histopathology confirms this, the code would change to:\n- **N13.0 \u2013 Hydronephrosis with ureteropelvic junction obstruction**\n\nOther cause-specific codes if documented:\n- **N13.1:** hydronephrosis with ureteral stricture, not elsewhere classified\n- **N13.2:** hydronephrosis with renal and ureteral calculous obstruction\n- **Q62.x:** a congenital cause\n\nThe upper abdominal surgical scar may also point to previous surgery that could be relevant to the cause. This is worth querying.\n\n### Procedure (for completeness)\nCode a nephrectomy (with partial ureterectomy) from ACHI block 1051, with the specific code chosen by approach. The summary mentions both laparoscopy and open surgery. If the operation started laparoscopically and was converted to open, code the open procedure.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 593,
+    "output_tokens": 969
+  },
+  "seconds": 0.0
+}

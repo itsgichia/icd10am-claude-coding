@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "9896dda7183d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: [redacted]\nAge: 2 years\nSex: Female\nDate of Admission: February 5, 2020\nDate of Discharge: February 10, 2020\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to the hospital on February 5, 2020 for intermittent fever and dry cough. She had previously received oral medications for three days consisting of Tamiflu and Cefaclor. The patient's aunt was a suspected case of COVID-19 and had developed symptoms on January 26, 2020. She passed away on February 1, 2020. The physical examination on admission showed a temperature of 38.8\u00b0C, pulse of 110 beats per minute, respiration of 25 breaths per minute, and SpO2 of 100%. The results of the nasopharyngeal swab sample taken on admission were negative for SARS-CoV-2.\n\nDiagnostic Results:\nThe chest computed tomography (CT) showed patchy and flocculent slightly high-density shadows in both lungs. The blood routine results revealed a leukocyte count of 9.29 \u00d7 109/L and lymphocytes of 1.63 \u00d7 109/L. C-reactive protein was 5 mg/L. The serum IgM antibody of influenza A was weakly positive. The third nasopharyngeal swab sample was also negative. However, the serum collected on February 5, 2020 was found to be positive for both IgG and IgM antibodies against SARS-CoV-2.\nFinal Diagnosis: [diagnosis section withheld]\nTreatment:\nThe patient was treated with Tamiflu continuously.\n\nDisposition and Condition on Discharge:\nThe patient was discharged on February 10, 2020 with a return to normal body temperature. \n\nFollow-up Recommendations:\nThe patient was advised to undergo follow-up testing to ensure a complete recovery.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "This episode is a COVID-19 case in February 2020. Under ICD-10-AM, U07.1 (COVID-19, virus identified) requires laboratory confirmation, and U07.2 (COVID-19, virus not identified) applies to a clinically or epidemiologically diagnosed case without confirmation.\n\nHere the nasopharyngeal swabs were negative, but serum IgG and IgM against SARS-CoV-2 were positive. The patient also had an epidemiological link (a suspected-case aunt) and CT changes in both lungs. The final diagnosis is withheld, but the picture points to COVID-19 with pneumonia. Treatment was Tamiflu, and the weakly positive influenza A IgM is a possible co-infection.\n\nUnder the Australian Coding Standards, positive SARS-CoV-2 serology is not classified as virus identified. In practice, the clinician's diagnosis of COVID-19 would be coded as U07.1 where confirmed by testing and U07.2 where it is clinical or epidemiological. The standard's wording for confirmation is laboratory testing, and antibody positivity could be considered confirmation by the clinician. Either way, the category is U07.\n\nCODE: U07",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 857,
+    "output_tokens": 401
+  },
+  "seconds": 0.0
+}

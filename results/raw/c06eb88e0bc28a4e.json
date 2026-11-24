@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "few_shot_three",
+  "record_id": "aec8b9f3685b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nAge: 53\nGender: Male\n\nHospitalization Dates: [redacted]\nAdmitting Diagnosis: [diagnosis section withheld]Discharge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient initially presented with acute myocardial infarction and underwent percutaneous coronary intervention with stent implantation. However, residual stenoses and stent malappositions were observed, and the patient was referred for CABG. Echocardiogram revealed a left ventricular dysfunction with an ejection fraction of 19%, and enhanced computed tomography showed bilateral occlusions of the internal thoracic arteries and a small fragile sternum after sternoturnover fixation. Left thoracotomy was performed without cardiopulmonary bypass, and the saphenous vein and radial artery grafts were successfully anastomosed to the target vessels. The patient had an uneventful recovery and was discharged on postoperative day 12.\n\nHospital Course Summary:\nA 53-year-old man presented with acute myocardial infarction and underwent percutaneous coronary intervention with stent implantation. Residual stenoses and stent malappositions were observed, and the decision was made to perform CABG due to the left anterior descending artery, high lateral branch, and left circumflex artery lesions. The patient had a left ventricular dysfunction with an ejection fraction of 19%, a bilateral internal thoracic artery occlusion, and a small fragile sternum after sternoturnover fixation, which made the left thoracotomy approach the preferred method. The procedure was performed successfully without cardiopulmonary bypass, and the patient had an uneventful recovery, resulting in a patent bypass graft of all target vessels. The patient was discharged on postoperative day 12 without any issues.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "**I21**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1068,
+    "output_tokens": 570
+  },
+  "seconds": 0.0
+}

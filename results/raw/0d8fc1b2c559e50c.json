@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "717dee10ec65",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary for Case 1:\n\nPatient Information:\nName: [REDACTED]\nAge: 40 years\nGender: Male\n\nAdmission Information:\nThe patient was admitted to the hospital on [REDACTED] with symptoms of general malaise, arthralgia in his extremities, facial cyanosis, and fever (39\u00b0C). A medical history of post-traumatic splenectomy was reported.\n\nHospital Course:\nUpon admission, empirical antibiotic therapy was started with ceftriaxone and vancomycin as the patient was diagnosed with secondary sepsis caused by meningitis from Streptococcus pneumoniae. Due to a severe hemodynamic instability, the patient was transferred to the ICU where they exhibited persistent hypotension and an inflammatory state with high levels of CRP and PCT.\n\nThe patient underwent continuous renal replacement therapy (CRRT) in hemodiafiltration mode for a total of 68 hours along with Cytosorb cartridge. During this treatment, a general improvement was observed in terms of the patient's hemodynamic and metabolic stability as well as reducing levels of PCT and CRP. The patient's norepinephrine demand decreased significantly throughout the treatment and the patient could be stopped from CRRT after 12 days.\n\nDischarge Information:\nAfter further treatment and observation, the patient was discharged on [REDACTED]. At the time of discharge, the patient was alert, collaborative, tracheotomized, and spontaneously breathing with a recovery of diuresis. The patient was advised to continue with follow-up appointments according to the recommended medical protocols.\nDiagnosis: [diagnosis section withheld]\nRecommendations:\nThe patient was advised to follow up with medical appointments as per recommended medical protocols."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: G00.1 Pneumococcal meningitis**\n\n**Reasoning:**\n- The summary describes sepsis secondary to *Streptococcus pneumoniae* meningitis in an asplenic patient, with septic shock (persistent hypotension needing norepinephrine) and CRRT with Cytosorb.\n- ICD-10-AM classifies meningitis due to *S. pneumoniae* as G00.1. It is a combination code for bacterial meningitis and the organism.\n- The documentation calls the sepsis \"secondary\" to the meningitis. The meningitis is therefore the underlying condition that occasioned the admission, and it is the principal diagnosis.\n- Sepsis would be coded additionally. A41.3 (sepsis due to *Haemophilus influenzae*) does not apply here. The correct code is A40.3 (sepsis due to *Streptococcus pneumoniae*). If septic shock is documented, add R65.1 (SIRS of infectious origin with acute organ dysfunction) according to local coding standards.\n\n**Suggested secondary codes (depending on documentation):**\n- A40.3 Sepsis due to *Streptococcus pneumoniae*\n- R57.2 Septic shock, if documented by the clinician\n- N17.- Acute kidney injury, if documented, since the patient had CRRT and \"recovery of diuresis\"\n- Z90.81 Acquired absence of spleen. ICD-10-AM uses D73.0 for hyposplenism or Z90.81 depending on the edition, so check your edition.\n- Z93.0 Tracheostomy status, or the relevant procedure codes for the tracheostomy\n- ACHI procedure codes for CRRT (hemodiafiltration, block 1060) and for ventilation or tracheostomy\n\n**Caveat:** The diagnosis section was withheld, so this is inferred from the narrative. The final code should be confirmed against the clinician's documented diagnosis and your local coding standards (ACS 0001 on sepsis, and ACS 0102 on meningitis).",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 632,
+    "output_tokens": 692
+  },
+  "seconds": 0.0
+}

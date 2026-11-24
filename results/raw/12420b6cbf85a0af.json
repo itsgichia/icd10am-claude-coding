@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "904e3611e433",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: Patient 5                                 Date of Admission: N/A\nAge: 9                                                       Date of Discharge: N/A\nGender: Female                                           Admitting Diagnosis: Epileptic seizures\n\nHOSPITAL COURSE:\n\nPatient 5 was admitted with a history of Epileptic seizures (ES) which has been documented for 7 years. MRI revealed pachygyria in the cortex and Scalp electroencephalogram (EEG) revealed spike and wave complexes mainly over the bilateral central\u2013parietal\u2013posterior temporal regions. During the hospitalization, the patient underwent three blocks of transcranial direct current stimulation treatment at 2 mA. The patient was discharged without achieving the expected result.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\n\nThe patient was advised to follow up with her healthcare provider and continue taking medication as prescribed.\n\nFOLLOW-UP:\n\nThe patient was referred to follow up with her healthcare provider as directed."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis is epilepsy secondary to pachygyria, and the code depends on how the epilepsy is classified.\n\n**Reasoning**\n\n- The admission was for epileptic seizures that have been present for 7 years, so this is chronic epilepsy rather than a single seizure. The EEG shows spike and wave complexes, which supports epilepsy.\n- MRI shows pachygyria, a cortical malformation (a neuronal migration disorder). It is the structural cause of the epilepsy.\n- The treatment was transcranial direct current stimulation (tDCS) aimed at seizure control, so the condition treated was the epilepsy.\n\n**Coding options**\n\n- **Q04.3 Other reduction deformities of brain.** Pachygyria is indexed here in ICD-10 and ICD-10-AM. Q04.3 would be the principal diagnosis if the cortical malformation were taken as the underlying condition.\n- **G40.x Epilepsy.** Because the seizures were the reason for admission and the target of treatment, the epilepsy code is the better choice for the principal diagnosis. Pachygyria is a structural cause, which makes this a focal (localization-related) symptomatic epilepsy.\n  - **G40.2 Localization-related symptomatic epilepsy with complex partial seizures** applies if the seizures are focal with impaired awareness.\n  - **G40.1 Localization-related symptomatic epilepsy with simple partial seizures** applies if they are simple partial.\n  - **G40.8 Other epilepsy** is the fallback if the type is not specified.\n  - The EEG shows bilateral spike-wave discharges, which suggests a generalized pattern. If the seizure type is undocumented, **G40.6 or G40.9** (epilepsy, unspecified) may be used.\n\n**Answer:** The principal diagnosis is **G40.9 Epilepsy, unspecified** if no seizure type is documented, with **Q04.3 Pachygyria** as an additional diagnosis. If the clinician documents a specific seizure type, assign the corresponding G40 code instead.\n\nThis is a best-fit choice and should be checked against the full record and the ACHI/ICD-10-AM coding standards for your edition.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 417,
+    "output_tokens": 742
+  },
+  "seconds": 0.0
+}

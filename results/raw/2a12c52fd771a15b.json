@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "eef334a41ef9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [redacted]\n\nAge: 56 years\n\nGender: Male\n\nAdmission Date: [redacted]\n\nDischarge Date: [redacted]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted with subjective fever, body aches, nonproductive cough, left-sided pleuritic chest pain, and recurrent infected skin cyst with MRSA. Physical examination revealed coarse breath sounds with no wheezing, and a thick purulence was exposed from the cyst. Radiographic and CT studies showed developments of multifocal regions of nodular appearing infiltration within both lungs. Blood culture resulted in positive with MRSA that grew with different antibiotic sensitivities. Despite being on the antibiotic/vancomycin, the patient continued to be bacteremic with MRSA, and repeated chest CT scan revealed the progression of lung pneumonia and multiple new nodules. Further TEE revealed a large vegetation was involving the pulmonic valve that was adherent to the artery itself. The patient underwent pulmonary valve replacement using a LivaNova extra-large sutureless valve. Tissue valve culture came back positive for MRSA, and the patient was discharged home on IV vancomycin for six weeks.\n\nHospital Course Summary:\nThe patient was admitted with a history of recurrent infected skin cyst with MRSA, subjective fever, body aches, nonproductive cough, and left-sided pleuritic chest pain. Workup revealed MRSA Pulmonary Valve Endocarditis, and the patient underwent a pulmonary valve replacement. After a total of six weeks of IV vancomycin therapy, the patient was discharged home."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: MRSA endocarditis of the pulmonic valve**\n\n**Suggested ICD-10-AM code: I33.0 Acute and subacute infective endocarditis**\n\n**Rationale**\n- The condition that occasioned the admission and was chiefly responsible for the work-up and surgery is infective endocarditis of the pulmonary valve. The patient had persistent MRSA bacteraemia, a large pulmonic valve vegetation on TEE, a positive valve culture, and a pulmonary valve replacement.\n- I33.0 is the code for acute or subacute infective endocarditis. In ICD-10-AM, the organism is identified with an additional code, and the category I33 note says to use an additional code (B95\u2013B97) to identify the infectious agent.\n- The presentation was acute, with fever, rapid progression and septic emboli. I have therefore chosen acute/subacute (I33.0) over unspecified endocarditis (I38).\n\n**Additional codes to consider**\n- **B95.62** Methicillin resistant Staphylococcus aureus as the cause of diseases classified to other chapters. This identifies the MRSA.\n- **A41.02** Sepsis due to MRSA, if the clinician documents sepsis rather than bacteraemia alone. Bacteraemia alone is R78.8 and is not coded when endocarditis is the cause.\n- **I26.9 / I26.0 or J85.1** for septic pulmonary emboli. The multifocal nodular lung infiltrates are most consistent with septic emboli, but this needs clinician documentation. Otherwise, code the pneumonia as J15.2 (staphylococcal pneumonia) with B95.62.\n- **L72.1** Trichilemmal (sebaceous) cyst, or **L08.9** or **L02.x**, for the recurrent infected skin cyst, depending on the documentation.\n- **Procedure:** pulmonary valve replacement is coded from the ACHI cardiac valve replacement block (approximately 38489-xx range). The exact code depends on the valve type, which is a bioprosthetic/tissue sutureless valve. Verify it in the current ACHI edition.\n\n**Caveat:** The diagnosis section of the summary was withheld, so this assignment is based on the narrative alone. Please verify it against the current ICD-10-AM/ACHI/ACS edition and the full medical record. Code assignment should be confirmed by a clinical coder.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 629,
+    "output_tokens": 815
+  },
+  "seconds": 0.0
+}

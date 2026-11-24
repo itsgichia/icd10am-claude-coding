@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "cde5bf6b654a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nHOSPITAL COURSE SUMMARY:\nThis is a discharge summary for a 64-year-old female who was admitted to the hospital with shortness of breath, cough, and fever. The patient had a past history of chronic obstructive pulmonary disease and left upper lobe cavitary lung lesion.\nDIAGNOSIS: [diagnosis section withheld]\nTREATMENT:\nThe patient was placed on intravenous vancomycin, levofloxacin, and fluconazole for a presumed hospital-acquired or fungal pneumonia. On day two, aztreonam was added to the patient's treatment due to a worsening clinical picture. The patient continued antibiotic and antifungal therapy and was discharged with cefpodoxime 400 mg twice a day for ten more days.\n\nCONSULTATIONS:\nThe patient underwent consultations from infectious disease, pulmonology, and cardiothoracic surgery due to her worsening pneumonia with associated cavitary lung lesion.\n\nDISCHARGE:\nThe patient was discharged after a protracted hospital course of nine days with instructions to follow up with infectious disease within the next two weeks.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: J18**\n\n- The documented condition treated throughout the admission is pneumonia. It was \"presumed hospital-acquired or fungal\" and later described as \"worsening pneumonia\". This is what drove the IV antimicrobials, the consultations and the discharge antibiotic.\n- No causative organism is documented. The antifungal was empirical and nothing was confirmed, so a bacterial-specific category (J13\u2013J16) or a fungal category is not supported. J18, *Pneumonia, organism unspecified*, is the conservative category.\n- The left upper lobe cavitary lesion is recorded as past history. It is not documented as a lung abscess, so J85.1, *Abscess of lung with pneumonia*, cannot be assigned without clinician confirmation. It would be coded as an additional diagnosis.\n- COPD is a comorbidity, not the principal diagnosis. Note that if the withheld diagnosis section records the pneumonia as a lower respiratory infection in a COPD patient, ACS 0920 directs coding of the COPD exacerbation code (J44.0) alongside the pneumonia code. That should be checked against the full record.\n\n**Query recommended:** confirm with the treating team whether a causative organism was identified, and whether the cavitary lesion represents an abscess or another specific pathology (e.g. TB or aspergilloma). Either could change the principal diagnosis category.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 602,
+    "output_tokens": 605
+  },
+  "seconds": 0.0
+}

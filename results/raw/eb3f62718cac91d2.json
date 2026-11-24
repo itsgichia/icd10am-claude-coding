@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7f08982167b1",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\n\nThe patient was admitted with cough, weight loss, and a cavity in the right upper pulmonary lobe. The patient tested positive for HIV and was diagnosed with tuberculosis infection. After starting antiviral and anti-tuberculosis therapy, the patient presented with urinary retention due to an enlarged prostate. The patient was transferred to a tertiary care hospital for further management.\n\nAssessment and Plan:\n\nDuring the hospital stay, the patient underwent several diagnostic tests including sputum culture, smear, and interferon-\u03b3 release assay, which were negative for Mycobacterium tuberculosis. Lumbar puncture indicated nearly normal cerebrospinal fluid profile, and CT scan revealed a cavity with effusion in the upper right lung. Bronchoscopy confirmed the presence of Cryptococcus neoformans in the bronchoalveolar lavage fluid. Enhanced MRI of the prostate showed an abnormal patchy signal in the central gland of the prostate with reduced T2W1 signal in the seminal vesicles and peripheral zone of the prostate. A prostatic biopsy revealed granulomatous inflammation with positive periodic acid\u2013Schiff staining. Culture of the prostatic tissue grew Cryptococcus neoformans.\n\nThe patient was diagnosed with AIDS with pulmonary cryptococcosis and cryptococcal prostatitis. Oral voriconazole and flucytosine combination therapy for 2 months followed by oral fluconazole maintenance treatment for 4 months was initiated and relieved the patient\u2019s urinary retention and the cryptococcal prostatitis.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Plan:\n\nThe patient was discharged in stable condition with a prescription for oral fluconazole. The patient was advised to follow up with an infectious disease specialist for further management of the underlying condition of AIDS. The patient was also advised to take necessary precautions to prevent future infections."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: B20.5 \u2013 HIV disease resulting in other mycoses**\n\n**Why this code**\n- The admission was driven by HIV-related opportunistic infections: pulmonary cryptococcosis and cryptococcal prostatitis.\n- Under the Australian Coding Standard for HIV/AIDS (ACS 0102), when a patient is treated for an HIV-related condition, the HIV disease code is sequenced as principal. The manifestations are then coded as additional diagnoses.\n- Cryptococcosis is a fungal infection (mycosis), so it falls under B20.5.\n\n**Additional diagnosis codes**\n- **B45.0** Pulmonary cryptococcosis\n- **B45.7** Disseminated cryptococcosis, or **B45.8** Other forms of cryptococcosis, for the prostatic involvement\n- **N51.0\\*** Disorders of prostate in diseases classified elsewhere, as the manifestation code paired with the cryptococcal code\n- **R33** Retention of urine, if it meets criteria as a separately reportable condition\n- **N40** Enlarged prostate, if documented as a separate condition rather than due to the cryptococcal infection\n\n**Caveat:** HIV coding rules have changed across ICD-10-AM editions. In some later editions, B20\u2013B23 were restructured and B24 is used with manifestation codes. Check which edition your facility uses before finalising.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 713,
+    "output_tokens": 1034
+  },
+  "seconds": 0.0
+}

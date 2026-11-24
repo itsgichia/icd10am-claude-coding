@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "28a116dcbaf0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nMedical Record Number: [redacted]\nDate of Discharge: [redacted]\n\nAdmission Date: [redacted]\nChief Complaint: Severe substernal chest pain and diaphoresis\nFinal Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient, a 38-year-old male with a past medical history of high blood pressure, high cholesterol, and HIV infection, presented to the ED with severe chest pain and sweating. He had been having intermittent chest pain for one month that was worsened by exercise and heavy lifting and was not relieved by medication.\nThe physical examination was unremarkable except for elevated levels of troponin-I and ST-segment elevation on ECG, suggesting an inferior wall myocardial infarction (IWMI). The patient was immediately transferred to the cardiac catheterization laboratory for an emergent coronary angiogram procedure, which revealed an LAD wrapped around the apex with 95% stenosis.\nBalloon angioplasty was successfully performed, and a drug-eluting stent was placed in the 95% lesion of the LAD with minimal residual stenosis. The patient remained stable in the post-operative period and was discharged on aspirin, atorvastatin, metoprolol, enalapril, and ticagrelor, which were prescribed to manage his condition.\n\nHospital Course Summary:\nThe patient was admitted to the ED with severe substernal chest pain and sweating, which was diagnosed as an impending STEMI. After being treated with an emergent coronary angiogram procedure, balloon angioplasty, and a drug-eluting stent, the patient remained stable and was discharged with medications to control his condition."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: I21.0 \u2013 ST elevation myocardial infarction of anterior wall (anterior wall STEMI involving the left anterior descending artery)**\n\nRationale:\n\n- The patient presented with severe substernal chest pain, elevated troponin-I and ST-segment elevation, which is an acute STEMI (I21.-, acute myocardial infarction, within 4 weeks/28 days of onset).\n- The documentation conflicts. The ECG was read as an \"inferior wall MI\" (which would suggest I21.1, STEMI of inferior wall). However, the angiogram showed a 95% stenosis of the LAD, the culprit vessel, which supplies the anterior wall. A wraparound LAD can occasionally supply the inferior apical region, which may explain the inferior ECG findings.\n- In ICD-10-AM, I21.0 is \"Acute transmural myocardial infarction of anterior wall\" (STEMI of anterior wall), and I21.1 is the inferior wall equivalent. The code depends on the documented site. Here the documentation is inconsistent, so the coder should query the physician. If the physician confirms inferior wall MI, assign I21.1. If the culprit LAD lesion is confirmed as the infarct site, assign I21.0. Based on the angiographic culprit vessel (LAD), I21.0 is the most defensible code pending clarification.\n- The summary also says \"impending STEMI\". An impending infarction would be I20.0 (unstable angina), but the troponin rise and ST elevation establish an actual infarction, so I21.- takes precedence.\n\nSecondary diagnoses to code:\n- I25.11 / I25.10: Coronary atherosclerotic heart disease (LAD stenosis). Check local coding guidance, as this is often not coded separately when the MI is coded.\n- I10: Hypertension\n- E78.0 / E78.5: Hypercholesterolaemia / hyperlipidaemia\n- B24 (or Z21 if asymptomatic HIV status is documented): HIV disease\n\nProcedures (ACHI):\n- Coronary angiography (38218-00)\n- Percutaneous transluminal coronary angioplasty with stent insertion (drug-eluting stent, 38306-00)\n\nPlease verify the exact codes against your current edition of ICD-10-AM/ACHI/ACS and confirm the MI site with the treating clinician before final coding.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 615,
+    "output_tokens": 802
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "0f1bccd11b80",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nPatient Information: \nName: Not specified\nAge: 62\nGender: Male\n\nHospital Course: \nThe patient was admitted to the hospital with complaints of abdominal pain and distension for the past month, which worsened in the last five days. The patient was diagnosed with small intestinal obstruction and underwent emergency laparotomy. During the operation, a small amount of food fiber was expelled, and multiple \u201cstenosis rings\u201d were found in the intestinal lumen at approximately 40 cm from the distal obstruction. The diseased bowel was removed, and the patient recovered without any discomfort. Pathological findings reported intestinal stenosis, mucosal erosion, and inflammatory granulation tissue formation. It showed neutrophil infiltration and vasodilation and congestion in the serosa. The muscle layer and serosa layer did not show any structural abnormality.\n\nSummary of Hospital Stay: \nThe patient was admitted to the hospital with abdominal pain and distension for the past month and was diagnosed with small intestinal obstruction. The patient underwent emergency laparotomy, and a diseased bowel was removed. The pathological findings reported intestinal stenosis and mucosal erosion. The patient recovered well without any discomfort. \nDiagnosis: [diagnosis section withheld]\nCondition at Discharge: \nRecovered.\n\nFollow-up Plan: \nPatient was followed up for two months, and no discomfort was found. No further treatment is required at this time."
+      }
+    ]
+  },
+  "text": "The most likely ICD-10-AM principal diagnosis code is **K56.69 (Other intestinal obstruction)**.\n\nThe record supports a small bowel obstruction caused by an intestinal stenosis (multiple stenotic rings, food fibre passage, and pathology showing stenosis). The diagnosis section is withheld, so this is an inference from the clinical findings, and a coder would need the final diagnostic statement to confirm it.\n\nTwo points could change the code:\n- **Underlying cause:** If the surgeon or pathologist documents a specific aetiology for the stricture, such as Crohn disease (K50.-) or an ischaemic stricture, that condition may need to be sequenced as principal diagnosis under the ICD-10-AM etiology-first conventions. The pathology here (mucosal erosion, inflammatory granulation tissue, neutrophil infiltration) does not name one.\n- **Coding conventions:** Verify the exact subcode and index entry for intestinal stenosis or stricture in the current ICD-10-AM edition and Australian Coding Standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 532,
+    "output_tokens": 1145
+  },
+  "seconds": 0.0
+}

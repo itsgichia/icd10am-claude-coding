@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "cot_then_extract",
+  "record_id": "ac793132db98",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nPATIENT INFORMATION:\nName: [Patient Name]\nAge: 41 years\nSex: Female\nDate of Admission: [Admission Date]\nDate of Discharge: [Discharge Date]\n\nHOSPITAL COURSE:\nThe patient [Patient Name] was admitted to the hospital Emergency Room with complaints of dysarthria, edema of the inferior arts, bilateral inguinal lymphadenopathy and headache. The blood chemistry tests revealed an elevation of the tumor markers CA125, CA15.3, and HE-4. Her cerebral magnetic resonance (MRI) was suggestive of a secondary lesion in the left occipital area and of meningeal carcinomatosis. In her anamnesis, a history of repeated visits to her private gynecologist during the previous two years was reported.\nDIAGNOSIS: [diagnosis section withheld]\nTREATMENT:\nPalliative therapy was initiated after the patient was transferred to the oncology ward.\n\nDISCHARGE SUMMARY:\nThe patient's condition worsened very rapidly, and she exhibited symptoms including agitation, confusion, difficulty in swallowing, inability to walk, release of bronchial secretion with the need for repeated bronchoaspirations, epileptic tonic-clonic seizures, and stiffness of muscle tone. She expired 16 days after admission. \n\nRECOMMENDATIONS:\nNone.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The workup points to ovarian carcinoma: raised CA125 with HE-4, which is fairly specific for ovarian cancer, inguinal lymphadenopathy, and two years of gynaecological visits. The admission was for the cancer's spread, with an occipital brain metastasis and meningeal carcinomatosis, managed with palliation rather than treatment aimed at the metastases. So I code the primary malignancy, chapter C, category C56, though C79.3 (secondary brain malignancy) could be argued if treatment were judged to target the metastases.\n\nCODE: C56",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1071,
+    "output_tokens": 504
+  },
+  "seconds": 0.0
+}

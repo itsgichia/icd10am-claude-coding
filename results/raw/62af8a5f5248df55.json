@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "4ffe57ea03a8",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHospital Course:\n\nThe patient, a 38-year-old female diagnosed with IgAN accompanied by iron deficiency anemia, was admitted to our center with complaints of abnormal urine tests and unexplained anemia. Physical examination revealed no positive signs such as bilateral lower limb edema or hepatosplenomegaly. The patient was treated with a combination of oral prednisolone, leflunomide, and angiotensin receptor blockers (ARBs) along with polysaccharide-iron complex. A complete remission of proteinuria was observed, and hematuria was also relieved.\n\nHowever, the patient's hemoglobin levels were constantly below the normal reference range, which could not be explained by the iron deficiency anemia. In 2016, the patient was diagnosed with \u03b1-thalassemia based on the results of our genetic tests showing the deletion of --SEA gene. Serum HbF and HbA2 were found to be elevated to 2.47 and 3.04%, respectively.\n\nDuring the 3-year follow-up, a significant improvement in anemia was observed following the treatment consisting of a small dose of ARB with folic acid and mecobalamin administration. Laboratory tests in March 2019 showed that Hb levels were elevated to 157 g/L. Urine occult blood was 2+, 24-h proteinuria was reduced to 0.08 g, and serum creatinine and albumin were normal.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nThe patient was treated with a combination of oral prednisolone, leflunomide, and angiotensin receptor blockers (ARBs) along with polysaccharide-iron complex. Later, a small dose of ARB with folic acid and mecobalamin administration was found to be effective in improving anemia.\n\nFollow-Up:\n\nThe patient should continue to take the prescribed medications as per the physician's instructions and follow-up with regular appointments for monitoring and symptom management.\n\nSigned, [REDACTED] (Physician)\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: N02**\n\n**Principal diagnosis: IgA nephropathy (IgAN)**\n\n- She was admitted for abnormal urine tests and unexplained anaemia. These are presenting features, not the final diagnosis.\n- The main treatment was directed at the IgAN: oral prednisolone, leflunomide and an ARB.\n- The outcome measures were renal: proteinuria went into complete remission and haematuria improved.\n- In ICD-10-AM, IgA (Berger) nephropathy indexes to **N02.-, Recurrent and persistent haematuria**. The fourth character would be N02.8 unless biopsy morphology supports a more specific subcategory.\n\n**Secondary diagnoses, not principal:**\n\n- **\u03b1-thalassaemia (D56.0):** The summary implies it was diagnosed in 2016, and it explains the persistent anaemia. It is a significant comorbidity, but it was not the chief reason for this episode.\n- **Iron deficiency anaemia (D50.-):** This was treated with the polysaccharide-iron complex, so it should also be coded as an additional diagnosis.\n\n**Caveat:** The summary runs over three years of follow-up, so the episode boundaries are unclear. If this admission was specifically to work up the anaemia, ending in the thalassaemia diagnosis, D56 could be argued as principal. On the documentation as written, the renal disease drove the admitted care, so N02 is the defensible choice. I would query the treating clinician to confirm.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 929,
+    "output_tokens": 732
+  },
+  "seconds": 0.0
+}

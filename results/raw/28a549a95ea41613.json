@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "97e62809272f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: [redacted]\nAge: 39\nGender: Male\nDate of Admission: [redacted]\nDate of Discharge: [redacted]\n\nHospital Course Summary:\nThe patient was admitted to Tri-Service General Hospital with multiple injuries including rib fractures, pelvic fracture with active bleeding, and dissection of the descending aorta with intramural hematoma caused by a fall from a fifth floor window. The patient underwent bilateral anterior thoracotomies and transcatheter embolization of the pelvic vessels for acute resuscitation. The patient then received thoracic endovascular aortic repair of the descending aortic aneurysm which was followed by oxygen desaturation and cardiac arrest. Advanced cardiac life support was performed immediately and the patient was placed on ECMO due to persistent bradycardia. Though diagnosed with brain death a few days later, the family decided to donate the patient's organs.\nDischarge Diagnosis: [diagnosis section withheld]\nCourse of Treatment:\nFollowing informed consent, both recipients received dialysis within the first postoperative week due to delayed graft function. Immunosuppressive therapy was used to treat the two patients. The SCr of the recipients decreased from 8.5 and 17.6 mg/dL to 1.1 and 1.8 mg/dL, respectively, at the 1-month postoperative follow-up. The grafts remained functional at the 8-month follow-up.\n\nFollow-up Plan:\nThe patients were advised to follow up with their respective nephrologists to monitor their kidney function and progress."
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **S25.0 \u2013 Injury of thoracic aorta**\n\n## Rationale\n\n**Clinical picture:** The patient fell from a fifth-floor window and had multiple serious injuries:\n- Traumatic dissection of the descending thoracic aorta with intramural haematoma\n- Pelvic fracture with active haemorrhage\n- Rib fractures\n\n**Why the aortic injury is principal:** ICD-10-AM coding standards (ACS 0001 and the multiple-injury guidance in ACS 1917) say that when a patient has several injuries, the principal diagnosis is the one most responsible for the admission and its resource use. That is usually the most severe injury.\n\nThe aortic injury fits best because:\n- It is immediately life-threatening.\n- It led to the major definitive procedure (TEVAR).\n- The cardiac arrest, ECMO and brain death all followed from its management.\n\n**Why S25.0 rather than an I71 code:** The dissection was caused by trauma, so it is coded in the injury chapter (S25.0). The non-traumatic codes for aortic dissection or aneurysm (I71.0x) do not apply.\n\n## Suggested additional codes (for completeness)\n- **S32.8x** \u2013 Fracture of pelvis (sub-code depends on fracture specifics; consider haemorrhage/vascular injury codes as documented)\n- **S22.4x / S22.3x** \u2013 Rib fracture(s) (multiple vs single)\n- **I46.x** \u2013 Cardiac arrest (procedural complication; check documentation for causality)\n- **G93.82 / brain death** as documented per local ICD-10-AM edition\n- **W13.x** \u2013 External cause: fall from, out of or through a building/structure, with place-of-occurrence and activity codes\n- Procedure codes (ACHI) for thoracotomy, embolisation, TEVAR, ECMO and organ retrieval\n\n*Note:* A deceased organ donor is not assigned Z52.x, because those codes are intended for living donors. The kidney recipients described in the summary would have their own separate episodes of care.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 579,
+    "output_tokens": 1041
+  },
+  "seconds": 0.0
+}

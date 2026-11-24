@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "5941ca504c92",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nHOSPITAL COURSE:\n\nThe patient, a 28-day-old female newborn with right congenital aural atresia, was admitted to our emergency department with postauricular erythema and edema, accompanied by irritability, anorexia, and insomnia, without fever, since two days. On initial examination, the newborn had a small, deformed auricular tag on the right side with no external auditory meatus. Her weight was 3780 grams.\nDIAGNOSIS: [diagnosis section withheld]\nTREATMENT:\n\nThe newborn was started immediately on meropenem and vancomycin i.v. Two days later, a mastoidectomy was performed, and abnormal bone was drilled or curetted away. Mastoid cells filled with granulation tissue were exenterated, and about 2 mL of pus were collected for culture. The antibiotic scheme continued for a total of four weeks.\n\nCONDITION AT DISCHARGE:\n\nThe patient's postoperative course was unremarkable, with progressive resolution of signs of inflammation on mastoid area. The baby girl remained afebrile and her inflammation markers improved gradually. She left the hospital in a very good condition upon completion of her treatment. The baby has no problem two months after her operation, and her weight is 5.100 grams.\n\nDISCHARGE INSTRUCTIONS:\n\nThe patient should be observed for any signs of recurrence of symptoms and should follow up with her primary care provider regularly.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "H70",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 595,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

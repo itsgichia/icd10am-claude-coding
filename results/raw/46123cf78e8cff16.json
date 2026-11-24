@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "few_shot_three",
+  "record_id": "b89c6c41fd8a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nHospital course:\nHospital Course:\nThe patient, an 83-year-old woman with a history of developmental disorders, presented to the emergency outpatient unit with a one-week history of dyspnea. She had heavily decreased breath sounds in the left lung. Chest radiograph and CT scan of the chest showed pleural effusions on the left lung. Two diagnostic thoracenteses were non-diagnostic, and a semirigid thoracoscopy was performed to visualize the pleura. Thoracoscopy revealed diffuse thickening of the parietal and visceral pleura, compatible with pleural dissemination with biopsy samples taken from only the visceral pleura node. Hematoxylin and eosin staining and immunohistochemical staining revealed a diagnosis of lung adenocarcinoma with malignant neoplasm. \nDischarge Diagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was discharged to the care of her family. \n\nCondition:\nThe patient had a stable condition upon discharge. \n\nClinical Course:\nThe patient required semirigid thoracoscopy with biopsy samples taken from only the visceral pleura node. Hematoxylin and eosin staining and immunohistochemical staining revealed a diagnosis of lung adenocarcinoma.\n\nFollow-up:\nThe patient was referred for follow-up care with an oncologist. \n\nInstructions:\nThe patient was instructed to follow-up with an oncologist. \n\nTreatment:\nThe patient underwent semirigid thoracoscopy for biopsy samples, which was successful. The treatment plan includes referral to an oncologist for further management. \n\nComplications:\nNo complications were noted during the hospitalization.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is lung adenocarcinoma, which has spread to the pleura (pleural dissemination) and caused a malignant pleural effusion.\n\nIn ICD-10-AM, the primary lung malignancy is coded to C34 (malignant neoplasm of bronchus and lung). The pleural metastasis would be coded separately as C78.2 (secondary malignant neoplasm of pleura). The primary site is the principal diagnosis here, since the workup established the lung adenocarcinoma diagnosis.\n\nAlternatively, if the pleura were considered the main site, C78 might apply. But the pathology states lung adenocarcinoma, so C34 is the better fit.\n\n**C34**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1010,
+    "output_tokens": 231
+  },
+  "seconds": 0.0
+}

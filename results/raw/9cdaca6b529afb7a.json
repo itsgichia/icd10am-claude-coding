@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "ef67a827be0c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\n\nAge: 21\n\nGender: Male\n\nAdmission Date: [redacted]\n\nDischarge Date: [redacted]\nDischarge Diagnoses: [diagnosis section withheld]\nHospital Course: \n\nPatient presented with acute onset of left-sided chest pain and shortness of breath after using an E-cigarette during his break at work, which he had been using for the past 3 years. A chest X-ray at an urgent care center revealed a small left-sided pneumothorax, which progressed to a moderate sized pneumothorax as seen on a repeat chest X-ray in the ED. A left-sided chest tube was inserted, which successfully resolved his pneumothorax. CT chest was obtained and revealed left-sided atelectasis. \n\nThe patient remained stable throughout his hospital course and was discharged home on hospital day 3 with instructions to avoid vaping. He was advised to follow up with his primary care physician for further evaluation and management, and to seek medical attention if he experienced any recurrence of his symptoms.\n\nDischarge Medications: None\n\nDischarge Instructions: The patient was advised to avoid vaping and to follow up with his primary care physician for further evaluation and management. \n\nFollow-up: The patient was instructed to follow up with his primary care physician within the next 1-2 weeks for further evaluation and management."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is most likely **J93.1, Other spontaneous pneumothorax**.\n\nThe patient is a 21-year-old with no documented trauma or underlying lung disease, so the pneumothorax is spontaneous (primary). In ICD-10-AM, J93.1 covers spontaneous pneumothorax that is not tension and has no specified underlying cause.\n\nOther codes you may consider:\n- **J93.0** (spontaneous tension pneumothorax) does not apply, since no tension physiology is documented.\n- **J98.11** (atelectasis) is a secondary diagnosis.\n- **F17.-** (nicotine dependence) may be added as a secondary code if the coder documents e-cigarette/nicotine dependence rather than simple use.\n- The chest tube insertion is recorded as a procedure code, not a diagnosis.\n\nThe discharge diagnosis section was withheld, so confirm the final code against the full clinical documentation and the coding rules for your edition of ICD-10-AM and the ACHI procedure classification.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 494,
+    "output_tokens": 829
+  },
+  "seconds": 0.0
+}

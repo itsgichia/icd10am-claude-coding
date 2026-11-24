@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "e538e4d3e379",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient Name: [Name]\n\nMedical Record Number: [Number]\n\nDate of Admission: [Date]\n\nDate of Discharge: [Date]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted to the hospital with complaints of fatigue, malaise, spontaneous ecchymosis, bleeding gums, and subjective fevers. Initial laboratory tests revealed severe pancytopenia and circulating blasts suggestive of underlying leukemia. Subsequent bone marrow biopsy confirmed AML, with abnormal karyotype of 47,x,t(x:8)(q13:q24.1),+8(6)/46,XX[14], and positive for several molecular markers. The patient received induction chemotherapy with daunorubicin and cytarabine 7 + 3 regimen in two cycles. During the first cycle, the patient's PT increased to 18.7 with an INR of 1.61. The bone marrow aplasia was suspected secondary to chemotherapy. Factor VII level deficiency, related to trisomy chromosol abnormality involving chromosome 8, was considered as a differential diagnosis due to isolated and persistent PT prolongation. The factor VII activity level was later confirmed to be low at 49% (normal level 60% to 150%). The patient received multiple packed red blood cell transfusions and platelet transfusion due to intermittent mucocutaneous bleeding.\n\nFollow Up:#\n\nThe patient's second cycle of chemotherapy resulted in her complete remission, with no residual blasts and normalization of hematologic abnormalities, with normal white blood count, hemoglobin, platelet counts, and normal PT time. Flow cytometry confirmed no residual blasts, and repeat molecular and cytogenetic studies showed the resolution of previously detected abnormalities.\nFinal Diagnosis: [diagnosis section withheld]\nDischarge Medications:\n\nNot applicable. Patient is not yet discharged. \n\nDischarge Condition:\n\nPending Discharge."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: **C92.00 \u2013 Acute myeloid leukaemia, without mention of remission**\n\n## Rationale\n\n**Why AML is the principal diagnosis**\n- The patient presented with pancytopenia symptoms: fatigue, malaise, ecchymosis, gum bleeding and fevers.\n- Circulating blasts were found, and bone marrow biopsy confirmed AML, with abnormal karyotype t(X;8) and trisomy 8.\n- The admission was for diagnostic workup and two cycles of 7+3 induction chemotherapy.\n- AML is therefore the condition, established after study, that was chiefly responsible for the admission (ACS 0001 Principal Diagnosis).\n\n**Why the 5th character is \"0\" (not in remission)**\n- The patient was not in remission at admission, and the episode of care was driven by active, untreated disease.\n- Complete remission was only achieved at the end of the admission after the second induction cycle.\n- **Caveat:** Some coders may argue for C92.01 (in remission) because remission is documented before discharge. Check your local coding policy or the ACS/IHACPA guidance for your edition. The more defensible choice reflects disease status for the episode, which is C92.00.\n\n## Suggested Additional Diagnoses\n\n| Code | Description |\n|------|-------------|\n| D61.1 | Drug-induced aplastic anaemia (chemotherapy-induced marrow aplasia/pancytopenia) |\n| Y43.3 | Adverse effect of other antineoplastic drugs (with place of occurrence/activity codes as required) |\n| D68.2 | Hereditary deficiency of other clotting factors (Factor VII deficiency). The deficiency appears acquired or disease-related, so consider **D68.4 \u2013 Acquired coagulation factor deficiency** if documentation supports this. Clinician clarification is recommended. |\n| R23.3 / K06.8 | Spontaneous ecchymoses / gum bleeding. These are usually not coded separately because they are integral to AML or pancytopenia. |\n\n## Procedures (ACHI)\n- Bone marrow biopsy\n- Chemotherapy administration (the Y43.3 adverse-effect code pairs with this)\n- Transfusions of packed red cells and platelets (13706-xx series)\n\n\u26a0\ufe0f Final code assignment should be confirmed against the full clinical record, the ICD-10-AM/ACHI/ACS edition in use, and your facility's coding guidelines.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 737,
+    "output_tokens": 1203
+  },
+  "seconds": 0.0
+}

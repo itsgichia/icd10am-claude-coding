@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "f8c33b519e45",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: [Redacted]\nAge: 53\nSex: Female\nDate of admission: [Redacted]\nDate of discharge: [Redacted]\n\nHospital Course:\n\nThe patient was admitted with a one-week history of abdominal pain, constipation, nausea, vomiting, and a single episode of bright red blood per rectum. Two days following her presentation, she developed bilateral facial weakness, perioral numbness, and difficulty in swallowing initiation. On examination, the patient had diminished bilateral facial musculature strength and an absent left patellar reflex. CT and MRI of the brain were obtained and showed changes consistent with chronic small vessel ischemic disease. Neurology was consulted and recommended a lumbar puncture which showed increased protein with absent white and red blood cells, raising the suspicion of Guillain-Barr\u00e9 syndrome. The patient was started on intravenous immunoglobulins and monitored in the progressive care unit. After a five-day course of IVIG, the patient showed a slight improvement but did not show up for her follow-up appointment and left against medical advice on day 9 of hospitalization.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Instructions:\n\nThe patient is advised to seek medical attention immediately if she experiences any new neurological symptoms such as numbness, tingling, or weakness in the extremities. She is also advised to attend all scheduled follow-up appointments and continue any prescribed medications as per the instructions of her primary care physician."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: Guillain-Barr\u00e9 syndrome, ICD-10-AM code G61.0**\n\n**Rationale**\n- The workup pointed to Guillain-Barr\u00e9 syndrome (GBS). Bilateral facial weakness, perioral numbness, dysphagia and a lost reflex developed. The lumbar puncture showed raised protein with no cells (albuminocytological dissociation). The patient was treated with IVIG and monitored in a progressive care unit, and most of the resource use went to this condition.\n- In ICD-10-AM, GBS is classified to G61.0 (Guillain-Barr\u00e9 syndrome), which includes acute (post-)infective polyneuritis.\n- The principal diagnosis is the condition established after study to be chiefly responsible for the episode of care. The admitting abdominal symptoms (pain, constipation, nausea and vomiting, a single episode of PR bleeding) were not worked up or treated as a separate cause, and they may be part of the GBS presentation (e.g. autonomic involvement) or a preceding illness. The GBS is therefore the principal diagnosis.\n\n**Possible additional diagnoses**\n- Dysphagia: R13.x, only if it is not integral to the GBS and meets the criteria for coding.\n- Chronic small vessel ischemic disease on imaging: I67.8, only if it is clinically significant.\n- Discharge against medical advice: Z53.2 (procedure not carried out because of patient's decision for other and unspecified reasons). Some coders use a discharge-status code instead, since the DAMA is recorded in the separation mode.\n\n**Caveats**\n- The discharge diagnosis section was withheld. If the clinician documented the diagnosis only as \"suspected\" GBS, ICD-10-AM coding standards allow uncertain diagnoses to be coded as if confirmed when they are documented at discharge. This applies to inpatients.\n- If the final diagnosis was a different variant, such as Miller Fisher syndrome (also G61.0) or a different polyneuropathy, the code would need review.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 551,
+    "output_tokens": 683
+  },
+  "seconds": 0.0
+}

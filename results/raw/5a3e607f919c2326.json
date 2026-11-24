@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "8d13e48b6d14",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\n\nDate of Admission: [redacted]\n\nDate of Discharge: [redacted]\n\nReason for Admission:\nThe patient was admitted to the emergency department due to a 12-day history of cyclical fevers with vague abdominal pain.\n\nHospital Course:\nInitial vital signs showed a blood pressure of 149/80 mmHg, a heart rate of 107 beats per minute, a temperature of 99.2\u00baF, a respiratory rate of 16, and a pulse oximetry reading of 100% on room air. Laboratory values showed a drop in hemoglobin and mild leukocytosis with no evidence of urinary tract infection. A computed tomography (CT) of the abdomen and pelvis with IV contrast showed multiple liver abscesses, septic thrombophlebitis of the portal system, and evidence of ruptured appendicitis. The patient was started on broad-spectrum IV antibiotics and underwent IR-guided abscess drainage.\n\nTreatment:\nThe patient was treated with IV antibiotics and underwent abscess drainage.\n\nCondition at Discharge:\nThe patient's condition improved significantly after treatment.\n\nFollow-Up:\nFollow-up appointments were scheduled with the patient's primary care provider for further evaluation and treatment.\n\nRestrictions:\nThe patient was advised to avoid strenuous activities until further notice.\n\nMedications:\nNo medications were prescribed at the time of discharge.\n\nProcedures:\nThe patient underwent IR-guided abscess drainage and interval appendectomy.\nDiagnosis: [diagnosis section withheld]\nSummary:\nThe patient presented to the emergency department with a 12-day history of cyclical fevers with vague abdominal pain. Imaging studies revealed the presence of liver abscesses, septic thrombophlebitis of the portal system, and ruptured appendicitis. The patient was treated with IV antibiotics and underwent abscess drainage and interval appendectomy. The patient's condition improved significantly and follow-up appointments were scheduled with the primary care provider."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: K35.32 Acute appendicitis with perforation and localised peritonitis** (ICD-10-AM 11th edition). The diagnosis section was withheld, so this is my inference from the narrative.\n\n**Reasoning**\n- The underlying condition that led to the admission was ruptured (perforated) appendicitis. The liver abscesses and portal vein septic thrombophlebitis (pylephlebitis) are complications that arose from it.\n- Under the Australian Coding Standards, the principal diagnosis is the condition established after study to be chiefly responsible for the admission. Here that is the appendicitis, which the abscesses and thrombophlebitis stem from.\n- The appendicitis was perforated, and the CT showed an abscess and a walled-off process. In the current ICD-10-AM edition, K35.3 is \"Acute appendicitis with localised peritonitis\" and has fifth-character or sub-code detail for perforation. Older editions used K35.3 alone.\n- If the record documented generalised peritonitis, the code would be K35.2x. If it documented only appendicitis without peritonitis, it would be K35.8.\n\n**Likely secondary codes**\n- K75.0 Abscess of liver\n- K65.x if there is a documented peritoneal abscess\n- I81 Portal vein thrombosis, which includes portal pylephlebitis, for the septic thrombophlebitis of the portal system\n- B95/B96 for the organism, if cultures identified one\n- Procedure codes for percutaneous drainage of the liver abscess and for the interval appendectomy\n\n**Caveat:** The final code depends on the documented diagnosis statement, the exact peritonitis wording, and the edition in use. A clinical coder should confirm it against the full record.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 735,
+    "output_tokens": 585
+  },
+  "seconds": 0.0
+}

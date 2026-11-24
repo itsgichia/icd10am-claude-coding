@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "88738ac02b6e",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\nThe patient, a 73-year-old male, was admitted to the Urology ward with a chief complaint of nocturia, frequency, dribbling, and urinary retention since last month. Ultrasound examination revealed left renal mass. Past medical history included diabetes mellitus, hypertension, and ischemic heart disease. The patient stopped cigarette smoking 20 years ago. The lab data reveals that the patient had mild anemia and his blood sugar was 159 mg/dl. Urine analysis showed 10-15 white blood cells in high power field with a negative urine culture. Digital rectal examination showed a nodular (2-3+) and symmetric prostate. The ultrasound examination showed mild bilateral hydroureteronephrosis with an over-distended urinary bladder. The prostatic volume was 25 cc with retained urine of 950 cc. Computer tomography scanning revealed a hypo attenuated mass in the lower pole of the left kidney with arterial and portal enhancement and delay washout in favor of infiltrative process such as RCC close to left psoas muscle. Mild bilateral hydronephrosis due to enlarged prostate was seen. He was subsequently referred to the surgery department of the hospital for nephrectomy. The specimen was referred to the pathology department. \nDiagnosis: [diagnosis section withheld]\nFollow-up:\nAfter surgery, the patient was followed-up for 5 months. No recurrence or metastasis was diagnosed."
+      }
+    ]
+  },
+  "text": "# Likely principal diagnosis: C64, Malignant neoplasm of kidney, except renal pelvis\n\nThis is provisional, because the diagnosis section with the pathology result has been withheld.\n\n## Why C64 is the probable answer\n- **The renal mass was the main focus of care.** The patient came in with lower urinary tract symptoms and urinary retention, but the mass found on work-up led to the major procedure, a nephrectomy. Under ACS 0001 (Principal Diagnosis), the condition chiefly responsible for the episode of care is sequenced first.\n- **Imaging strongly suggested malignancy.** CT showed an enhancing mass in the lower pole of the left kidney with delayed washout, \"in favor of an infiltrative process such as RCC.\"\n- **Follow-up reported no recurrence or metastasis.** This suggests a primary malignant renal tumour was removed.\n\nICD-10-AM does not have laterality at the C64 level, so no left-sided code is needed.\n\n## Where the pathology could change the code\nYou must confirm against the histopathology report before finalising. Possible outcomes:\n\n| Pathology result | Code |\n|---|---|\n| Renal cell carcinoma or other primary kidney malignancy | **C64** (plus an ICD-O morphology code, e.g. M8312/3 for RCC) |\n| Lymphoma involving the kidney | C82\u2013C85 (lymphoma code, not C64) |\n| Secondary (metastatic) tumour in the kidney | C79.0, with the primary site coded |\n| Benign tumour (e.g. oncocytoma, angiomyolipoma) | D30.0 |\n| Uncertain or unknown behaviour | D41.0 |\n| Non-neoplastic (e.g. xanthogranulomatous pyelonephritis) | N11.8 or as appropriate |\n\nBecause this reads like a published case report with the diagnosis deliberately hidden, the tumour may be unusual (for example, lymphoma or a rare histology). That makes confirming the pathology especially important.\n\n## Suggested additional diagnoses\n- **R33** Retention of urine, or **N40** Hyperplasia of prostate. An enlarged prostate was blamed for the hydronephrosis.\n- **N13.3** Other and unspecified hydronephrosis, if not already covered by the obstructive uropathy coding.\n- **E11.x** Type 2 diabetes mellitus. Specify the type and complications if documented.\n- **I10** Essential hypertension.\n- **I25.9** Chronic ischaemic heart disease, unspecified.\n- **D64.9** Anaemia, unspecified, if it meets ACS 0002 criteria for an additional diagnosis.\n- **Z86.43** Personal history of tobacco use disorder, if your local coding policy applies it.\n\n**Answer: C64**, conditional on histopathology confirming a primary malignant renal neoplasm.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 536,
+    "output_tokens": 1215
+  },
+  "seconds": 0.0
+}

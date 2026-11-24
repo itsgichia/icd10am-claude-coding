@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "b9311054ccff",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\n\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient exhibited acute massive hemoptysis upon admission, which was successfully treated through a bronchial arteriography with distal embolization of the left bronchial and phrenic arteries. The patient's bleeding did not recur thereafter, and the outcome was favorable. The patient's respiratory tract sampling was positive for SARS-CoV-2, but there was no evidence of bacterial or viral co-infection.\n\nLaboratory Results:\nThe patient's CRP was measured at 256 mg/L, lactate dehydrogenase level was low at 237 UI/L, and D-Dimere level was 1228 ng/mL. The anti Xa activity was measured at 20 ng/ml. Serum Aspergillus-specific IgE level was low.\n\nConclusion:\nThe patient was discharged from the hospital on D14 with no complications of the vascular interventional procedure. Follow-up care was recommended."
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis code: U07.1 COVID-19, virus identified**\n\nThis is a coding judgement from a limited summary, and the diagnosis section was withheld, so it should be checked against the full record.\n\n**Reasoning**\n- The patient was admitted with acute massive hemoptysis, and SARS-CoV-2 was confirmed on respiratory sampling.\n- Bacterial and viral co-infection were excluded, and the Aspergillus-specific IgE was low. This makes aspergillosis or allergic bronchopulmonary aspergillosis unlikely as the cause.\n- The hemoptysis is most plausibly attributed to COVID-19. The raised CRP and D-dimer, and the anticoagulant (anti-Xa) monitoring, fit this picture.\n- Under ICD-10-AM, the condition established after study to be chiefly responsible for the admission is the principal diagnosis. If the clinician documents the hemoptysis as due to COVID-19, U07.1 is the principal diagnosis. Hemoptysis (R04.2) is a symptom code and is normally not coded when it is integral to a definitive diagnosis.\n\n**Possible additional codes**\n- R04.2 Haemoptysis, only if the coder or clinician treats it as not integral to the COVID-19 disease process. In that case it could be sequenced as principal, with U07.1 as an additional diagnosis.\n- ACHI procedure codes for bronchial artery embolization (selective arteriography with embolization), assigned from the operative report.\n- Z79.01 (long-term anticoagulant use) or an equivalent code, if relevant.\n\n**Caveat:** Where COVID-19 pneumonia or another respiratory manifestation is documented (for example J12.82 in ICD-10-CM, or the Australian equivalent with U07.1), that documentation could change the sequencing. The full record and the Australian Coding Standards for COVID-19 should be checked before final assignment.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 437,
+    "output_tokens": 653
+  },
+  "seconds": 0.0
+}

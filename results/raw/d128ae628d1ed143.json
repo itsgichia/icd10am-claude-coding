@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "a6ac4cfbb3ec",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\n\nHospital Course:\nThe patient, a 50-year-old Asian woman, was admitted to our hospital due to sudden anterior chest pain. Hematology, biochemistry, and blood gas analyses were performed and found to be normal. A chest computed tomography (CT) scan revealed a ground-glass opacity (GGO) in her left S10 lung segment and a solitary small nodule in her left S4 segment. Further testing was carried out, which led to suspicion of lung carcinoma. However, the patient did not provide consent for surgical resection.\n\nAfter follow-up with CT scans, it was suggested that the GGO was lung carcinoma, and a pathological diagnosis was established through a left lower lobectomy and an upper lung partial resection. The cancer was identified as primary lung adenocarcinoma (localized bronchioloalveolar carcinoma).\n\nThere was also a small nodule in her left S4, which was initially suspected to be lung metastasis, however, it was later discovered to be a benign metastasizing leiomyoma (BML). The patient had a history of undergoing a total abdominal hysterectomy for uterine leiomyoma in the past, which is why the small nodule was identified as BML.\n\nManagement and Outcome:\nNo additional therapy was given, and the patient was monitored by follow-up chest CT scans over four years. No recurrence of lung cancer or BML could be detected throughout her follow-up.\nDischarge Diagnosis: [diagnosis section withheld]\nInstructions:\nThe patient is advised to continue her follow-up with her physician and have periodic screening of the chest CT scans.\n\nScheduled Follow-up Appointments:\nFollow-up screening every six months for two years and then annually.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "CODE: C34\n\nThe principal diagnosis is primary lung adenocarcinoma (documented as localized bronchioloalveolar carcinoma), confirmed by pathology after left lower lobectomy. It is coded to C34 (malignant neoplasm of bronchus and lung). The benign metastasizing leiomyoma is a secondary diagnosis and does not displace the carcinoma.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 824,
+    "output_tokens": 381
+  },
+  "seconds": 0.0
+}

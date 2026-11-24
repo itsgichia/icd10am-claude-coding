@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "3127de73c5b5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient: 46-year-old male\n\nAdmission date: [DATE]\n\nDischarge date: [DATE]\n\nMedical history: None reported except exertional dyspnea.\n\nChief complaint: Exertional dyspnea\n\nHospital course:\n\nThe patient was admitted to the hospital with a chief complaint of exertional dyspnea. Physical examination revealed a systolic mitral murmur and a diastolic aortic murmur. TTE revealed a noncoronary SVA protruding into the mitral anterior leaflet, leading to moderate mitral regurgitation, severe aortic insufficiency, and a dilated aortic root. The ascending aorta measured 54-mm, and the left ventricular diastolic diameter was 75-mm, with a left ventricular ejection fraction of 66%. No ventricular septal defect was detected. Coronary CTA showed no abnormalities or stenoses found in the coronary tree and the sac of the noncoronary SVA (measuring 36 \u00d7 47 \u00d7 51 mm) was protruding into the anterior leaflet of the mitral valve. Surgery was performed via median sternotomy. The thickening of the wall of the tricuspid aortic valve and ascending aortic wall was consistent with inflammation. The patient underwent mitral valve and aortic valve replacement and replacement of the ascending aorta with an artificial vessel. Antibiotics were administered for 5 weeks. Follow-up TTE showed satisfactory functioning of both replaced valves. Aortic CTA demonstrated restoration of the normal anatomical relationship at the aortic root. The patient was discharged in stable condition.\nDischarge diagnosis: [diagnosis section withheld]\nDischarge instructions: The patient was advised to follow-up with a primary care physician and cardiologist and adhere to medication and lifestyle modification recommendations.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The key condition is a noncoronary sinus of Valsalva aneurysm (SVA) with severe aortic insufficiency, a dilated aortic root and ascending aorta, and moderate mitral regurgitation. The surgery involved replacing both valves and the ascending aorta, and the patient received 5 weeks of antibiotics. The wall inflammation suggests an infective or inflammatory aortitis, but the discharge diagnosis is withheld and endocarditis is not stated, so I will not code it.\n\nThe main candidates are:\n- I71 Aortic aneurysm and dissection. In ICD-10-AM, a sinus of Valsalva aneurysm that is not congenital falls under I71.\n- Q25.4 (other congenital malformations of the aorta) covers a congenital SVA, and Q25 is also a possible category.\n- I35 Nonrheumatic aortic valve disorders, for the aortic insufficiency.\n\nThe presenting complaint was exertional dyspnea, which is a symptom and not the principal diagnosis. The condition chiefly responsible for the admission and the surgery is the SVA. The aortic root and ascending aorta are dilated to 54 mm, and the sac measures 36 \u00d7 47 \u00d7 51 mm. That sac protrudes into the mitral leaflet, causing the mitral regurgitation, and it also drives the aortic insufficiency. The noncoronary SVA is therefore the underlying cause.\n\nThe question is whether to code it as congenital (Q25) or acquired (I71). The inflammation found at surgery and the 5-week antibiotic course suggest an acquired, infective or inflammatory etiology, which is a common cause of SVA in a 46-year-old with no prior history. Congenital SVA usually presents earlier and is often accompanied by a ventricular septal defect, and none was detected here. The aneurysm with aortic dilatation is best coded to I71 (aortic aneurysm, without rupture).\n\nCODE: I71",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 842,
+    "output_tokens": 651
+  },
+  "seconds": 0.0
+}

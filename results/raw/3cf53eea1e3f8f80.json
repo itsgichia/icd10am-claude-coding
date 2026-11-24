@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "a03e0422f170",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\n[Medical Center Name]\n[Patient Name], Discharge Summary\n\nAdmission Date: [Date]\nDischarge Date: [Date]\n\nHospital Course:\nThe patient was admitted to the Department of Urology with complaints of repeated dizziness. Preoperative echocardiography revealed a variation in the arteries, including an ARSA derived from the initial descending aorta right rear to the LSA, an aberrant left vertebral artery that directly originated from the AA instead of the LSA, and an aberrant right vertebral artery that originated from the RCCA rather than the RSA. Computed tomography angiography confirmed these variances. The patient had no other cardiac or vascular anomalies. Mild stenosis was found in the proximal portion of the left common carotid artery (LCCA), adjacent to its aortic origin. The patient underwent treatment for urolithiasis and was administered aspirin and atorvastatin to prevent potential vascular stenosis. The patient was followed up continuously.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient underwent treatment for urolithiasis and was administered aspirin and atorvastatin to prevent potential vascular stenosis.\n\nFollow-up:\nThe patient will continue to be monitored for any potential vascular stenosis.\n\nDischarge Condition:\nThe patient was discharged in a stable condition.\n\nDischarge medications:\nNone specified.\n\nInstructions:\nNone specified.\n\nFollow-up appointments:\nNone specified.\n\nInstructions Given:\nNone specified.\n\nPrimary Care Physician:\nNone specified.\n\nAttending Physician:\nNone specified.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The admission was to the Department of Urology, and the treatment given was for urolithiasis. The dizziness led to echocardiography, which found the arterial variants (an aberrant right subclavian artery and aberrant vertebral arteries). Those were incidental findings and were not treated surgically. The condition chiefly responsible for the episode of admitted care is therefore urolithiasis.\n\nThe complaint of dizziness is a presenting symptom, not the principal diagnosis. The vascular anomalies (Q27.8, other specified congenital malformations of the peripheral vascular system) and the mild LCCA stenosis are secondary findings.\n\nThe urolithiasis site is not specified (kidney, ureter, bladder). The summary says only \"urolithiasis\", which indexes to N20.9 (urinary calculus, unspecified). The three-character category is N20.\n\nCODE: N20",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 753,
+    "output_tokens": 285
+  },
+  "seconds": 0.0
+}

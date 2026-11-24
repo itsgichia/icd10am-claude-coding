@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "f7b64cd0b324",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\nPatient Name: [REDACTED]\nDOB: [REDACTED]\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nAdmitting Diagnosis: [diagnosis section withheld]\nFinal Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted with a moderate traumatic brain injury, stigmas of trauma in the anterior chest wall, and signs of respiratory distress after falling off a cliff while riding his bicycle. Upon admission, a thoracoabdominal computed tomography angiography reported pneumomediastinum, a small right pneumothorax, and an image of loss of continuity in the anterior superior wall of the right main bronchus highly suggestive of bronchial rupture. The bronchial lesion was confirmed by fiberoptic bronchoscopy, showing a linear 1-cm rupture at the level of the root of the right main bronchus, in its lateral aspect, with fracture of the entire bronchial wall. Conservative management was chosen, and the patient was transferred to the intensive care unit (ICU) with protective tracheal intubation. The patient\u2019s ICU stay included a respiratory rate of 12 breaths per minute, tidal volume of 6\u20138 ml/kg, I/E 1:3, PEEP 5 cm H2O, and plateau pressure of < 30 mmHg. After 48 hours, the pneumothorax and pneumomediastinum resolved spontaneously, with limited subcutaneous emphysema, and the patient was successfully extubated on day 4. Strict follow-up was performed without evidence of swallowing or respiratory disorders, which allowed for the patient\u2019s discharge 1 week later.\n\nCondition at Discharge:\nThe patient is considered stable with no evidence of respiratory or swallowing disorders.\n\nFollow-Up Plans:\nPatient will follow-up in 4-6 weeks for scheduled evaluation."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: S27.4 (Injury of bronchus), or more specifically S27.41 in ICD-10-AM, if your edition supports it.**\n\nI'm confident about the category but less sure of the exact fifth-character code. Please check it against your edition's Tabular List.\n\n**Reasoning**\n\n- The condition mainly treated and investigated was a traumatic rupture of the right main bronchus. It was confirmed by bronchoscopy and managed in ICU with protective intubation and lung-protective ventilation.\n- In ICD-10-AM, injury of the bronchus is classified to **S27.4-** (Injury of bronchus), within S27 (Injury of other and unspecified intrathoracic organs). Traumatic pneumothorax is S27.0 and traumatic pneumomediastinum is also in the S27 range, but both are manifestations of the bronchial rupture. They were not the underlying focus of care.\n- The principal diagnosis is the condition chiefly responsible for the admission. Here the bronchial rupture had the greatest resource use and was the focus of management, so it takes precedence over the moderate traumatic brain injury.\n\n**Additional codes (not the principal diagnosis)**\n\n- **S06.- (intracranial injury)**, such as S06.0 concussion or S06.2 diffuse brain injury, depending on documentation of the moderate TBI. Note that ICD-10-AM uses S06.- with a level-of-consciousness code.\n- **S27.0** Traumatic pneumothorax. It may be coded additionally if it was not integral to the bronchial injury.\n- **T79.7** Traumatic subcutaneous emphysema.\n- **Open wound codes (S21.-)** are not applicable, because the chest wall findings were described only as \"stigmas of trauma\".\n- **External cause:** V10\u2013V19 (pedal cyclist injured in a transport accident) or W15 (fall from a cliff). The choice depends on whether the event occurred on a public road and involved a transport accident, so it needs clarification. Also add place of occurrence and activity codes.\n- **Procedure codes (ACHI):** Mechanical ventilation, with duration in hours, and fibreoptic bronchoscopy.\n\nIf the coder wants a single answer, the principal diagnosis is **S27.4x, Injury of bronchus**.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 700,
+    "output_tokens": 775
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "1e840eb867e4",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: [REDACTED]\nAge: 52-year-old female\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to the hospital due to acute change in mental status, with a history of hypertension, smoking, alcohol dependence, and coronary vascular disease with recent myocardial infarction. An emergency bedside ventriculostomy was performed due to a spontaneous intraventricular hemorrhage. Multiple negative blood, cerebrospinal fluid (CSF), and urinary cultures were conducted, despite persistent fevers, and she received empiric infections treatment with intravenous levofloxacin and vancomycin.\n\nThe patient's neurologic function steadily improved, and the ventriculostomy was discontinued. However, her CSF cultures on day 11 revealed Coagulase-Negative Staphylococcal (CoNS) species, for which she was administered intravenous vancomycin and rifampin.\n\nOn day 15, computerized tomography (CT) of the head showed increased intraventricular hemorrhage requiring reinsertion of an external ventriculostomy. Repeated CSF analysis showed elevated white blood cell count with decreased glucose, and CSF cultures yielded CoNS again. Treatment with daptomycin was started, both intravenously and intraventricularly, and the cultures became sterile following 7 days of treatment.\n\nThe patient's hospital course was further complicated with respiratory failure requiring tracheostomy and ventilation support, ventilator-associated pneumonia, and sacral pressure ulcer, and Clostridium difficile colitis. \n\nThe patient was successfully discharged on day 65 to a rehabilitation center.\n\nDischarge Medications:\nNone\n\nFollow-Up Care:\nFollow-up appointments with a primary care physician and a neurologist are recommended.\n\nPlan:\nDischarge plan: Transfer to a rehabilitation center.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "I61",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 805,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

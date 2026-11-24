@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "63ad1e03f360",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nPatient Age: 32\nAdmission Date: [redacted]\nDischarge Date: [redacted]\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to the hospital with shortness of breath and was found to be COVID-19 positive. Upon examination, he was tachycardic and tachypneic with normotensive blood pressure and oxygen saturation at 92% on room air. Laboratory results showed increased levels of creatinine, ferritin, C-reactive protein, and D-dimer. A chest x-ray did not show any acute disease process, but a thoracic CT scan angiography showed a large saddle embolism extending into segmental branches in both lower lobes and the right middle lobe. Bedside echocardiogram revealed a dilated right ventricle consistent with right heart strain. He was transferred to the intensive care unit due to multiple episodes of hemoptysis and worsening tachypnea. The vascular surgeons performed mechanical embolectomy, and a large thrombus was removed. The patient remained clinically stable post-procedure. The patient was started on heparin and later transitioned to rivaroxaban for treatment. \n\nHospital Course Summary:\nA 32-year-old male with no prior medical history presented to the hospital with shortness of breath and was found to be COVID-19 positive. Extensive testing revealed a submassive pulmonary embolism leading to dilated right ventricle consistent with right heart strain. He underwent successful mechanical embolectomy and was discharged after a comprehensive treatment plan was established.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: I26**\n\nThe principal diagnosis is pulmonary embolism, category I26.\n\n- **Chapter I (circulatory system):** The condition chiefly responsible for this admission was the saddle pulmonary embolism with right heart strain.\n  - It was found on CT angiography.\n  - It drove the ICU transfer for haemoptysis and worsening tachypnoea.\n  - It was treated with mechanical embolectomy, then heparin and rivaroxaban.\n- **Digits 26:** I26 is the category for pulmonary embolism.\n\n**What was not chosen as principal:**\n- **Shortness of breath** was the presenting symptom, so it is not principal.\n- **The embolectomy** is a procedure, not a diagnosis.\n- **COVID-19** would be coded as an additional diagnosis. Its code is U07.1, but the U chapter is outside the letter set given in the brief. I judged it secondary because the treatment was directed at the embolism rather than the infection. Australian coding standards have specific sequencing rules for COVID-19, so a coder should check that this reading applies.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1077,
+    "output_tokens": 536
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "4bbf8b80acdc",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nDOB: [REDACTED]\nMRN: [REDACTED]\n\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nLength of Stay: [REDACTED]\nAdmitting Diagnosis: [diagnosis section withheld]\nFinal Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to the hospital complaining of fever and cough over the last few days. The clinical evaluation revealed micro nodular shadowing consistent with miliary TB, which was confirmed through chest computed tomography. Broncho-alveolar lavage fluid was negative for acid-fast bacilli, but M. tuberculosis was identified through culture. Cerebrospinal fluid examination led to the diagnosis of probable TB meningitis. The patient developed a right side stroke and was subsequently transferred to a different hospital where the prescribed treatments and rehabilitation were continued. The patient continued with anti-TB, anti-HIV, and aspirin treatments leading to improvement in general and neurologic conditions. After five weeks, the patient was discharged.\n\nDischarge Instructions:\nThe patient was discharged with follow-up appointments scheduled with the infectious disease clinic and neurological department. The patient was advised to continue with anti-TB, anti-HIV, and aspirin treatments as prescribed by the physician. The patient was also advised to maintain a healthy diet and lifestyle, quit smoking, take prescribed medications as directed, and avoid alcohol and recreational drugs. The patient is advised to seek medical attention immediately if any new symptoms or complications arise."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: **B20 Human immunodeficiency virus [HIV] disease**\n\n## Why B20 is the principal diagnosis\n\nThe patient is on ongoing anti-HIV treatment, so they have known HIV. They were admitted with an HIV-related opportunistic infection: disseminated (miliary) TB with probable TB meningitis.\n\nUnder **ACS 0102 HIV/AIDS**, when a patient is admitted for an HIV-related condition, B20 is sequenced as the principal diagnosis. The manifestations are coded as additional diagnoses.\n\n(In ICD-10-AM, B20 is a single code without a 4th character. It replaces the WHO B20.0\u2013B24 subdivisions. Z21 is used only for asymptomatic HIV infection.)\n\n## Suggested additional diagnoses\n\n| Condition | Suggested code |\n|---|---|\n| Miliary TB, multiple sites (lung plus probable meninges), culture-confirmed | **A19.1** Acute miliary tuberculosis of multiple sites |\n| Probable TB meningitis | **A17.0** Tuberculous meningitis |\n| Right-sided stroke (likely vasculitic, from TB meningitis), arising during admission | **I63.x** Cerebral infarction (I63.9 if unspecified), condition onset flag = 1 |\n| Smoking, if current use is documented | Z72.0 or F17.x |\n\n## Caveats\n\n- Code selection depends on facility documentation and the ICD-10-AM edition in use.\n- The admitting and final diagnosis fields are withheld, so the summary alone doesn't confirm HIV disease status. This should be verified with the clinician.\n- If the stroke led to the transfer, separate episode coding rules may apply for the rehabilitation episode.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 608,
+    "output_tokens": 1255
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "cot_then_extract",
+  "record_id": "9f2fc330de4a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient: [Name], [Age]-year-old female\n\nAdmission Date: [Date]\nDischarge Date: [Date]\n\nChief Complaint:\nLeft supraclavicular and axillary painful lump\n\nHospital Course and Treatment:\nThe patient was admitted to the Hematologic Clinic with a painful left supraclavicular and axillary lump. She had received the first dose of the Pfizer-BioNTech COVID-19 vaccine five days prior to presentation. The patient experienced injection site pain, headaches, chills, and a sense of \u201cheaviness\u201d of the neck and upper chest for two days after injection that gradually resolved. On physical examination and Doppler ultrasound, multiple enlarged lymph nodes were seen in the axillary, supraclavicular, and low lateral neck areas. Painful axillary lymphadenopathy also appeared after the second dose of the vaccine. No other abnormal findings were noted. Blood tests including full chemistry, blood count, and CRP levels were within normal limits. The patient was treated with pain relief medication and her symptoms improved gradually until complete resolution.\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient responded well to pain relief medication and her symptoms gradually resolved over time. No complications were reported during hospitalization.\n\nFollow-Up Plan:\nThe patient will be discharged with instructions to follow up with her primary care physician for any concerns or symptoms in the future. No further follow-up is required at this time.\n\nSummary:\nThis is a case of a healthy middle-aged woman who presented with an adverse reaction to the Pfizer-BioNTech COVID-19 vaccine resulting in painful axillary lymphadenopathy. The patient was treated with pain relief medication, and her symptoms resolved over time with no complications identified during hospitalization. The patient will be discharged with instructions to follow up with her primary care physician for any concerns or symptoms in the future.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The admission was for painful, enlarged lymph nodes (axillary and supraclavicular) that began after a Pfizer-BioNTech COVID-19 vaccine dose, a reactive adverse effect that resolved with analgesia. Under ICD-10-AM adverse-effect rules, the manifestation is sequenced first, so the principal diagnosis is lymphadenopathy, chapter R (symptoms and signs), category R59, with the vaccine's T-code added as secondary.\n\nCODE: R59",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1245,
+    "output_tokens": 1020
+  },
+  "seconds": 0.0
+}

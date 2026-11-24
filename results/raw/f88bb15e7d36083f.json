@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "760f2bb68a63",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nMedical Record Number: [redacted]\nDate of Admission: [redacted]\nDate of Discharge: [redacted]\nFinal Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient, a 23-year-old male, presented with a chief complaint of mechanical low back pain that had been present for 8 months. He had a history of falling in the sitting position on two different occasions during his martial arts practice. Initially, his symptoms were localised, infrequent, and aggravated by prolonged sitting. Over the course of six months, he developed sciatica radiating to the dorsum of his left foot and associated with numbness but no weakness. Systemic review was unremarkable, and he had no constitutional symptoms.\n\nAfter undergoing an MRI, a discal cyst located in the anterior epidural space with low signal intensity on T1-weighted images and high signal intensity on T2-weighted images was discovered. It appeared faintly white in colour, contained serous fluid, and partially indented the L5 nerve root. The patient underwent an endoscopic interlaminar surgery under general anaesthesia, in prone position on Jackson table. The cyst was excised at the base of the connection by performing an annulotomy. A fragment of the cyst wall composed of fibrocartilaginous tissue devoid of epithelial lining was found on histopathological examination.\n\nThe patient had immediate relief of his sciatica symptoms and was ambulating well two days after surgery. He was discharged home with no signs of post-operative complications. At ten months post-surgery, there were no signs indicating any recurrence.\n\nDischarge Medications:\nN/A\n\nFollow-up Instructions:\nThe patient is advised to follow up with his medical provider as needed to monitor any recurring symptoms. He should continue to avoid prolonged sitting and take the necessary precautions to prevent any further falls during his martial arts practice."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: **M51.1 \u2013 Lumbar and other intervertebral disc disorders with radiculopathy**\n\n## Why this code fits\n\n**Condition treated:** The surgery was directed at a discal cyst, a cystic lesion arising from the intervertebral disc.\n- It sat in the anterior epidural space.\n- It connected to the disc, and the excision required an annulotomy at the base.\n- Histology showed fibrocartilaginous tissue without an epithelial lining, which confirms disc origin. This rules out a synovial/facet cyst or an arachnoid cyst.\n\n**Classification:** A discal cyst is a disorder of the intervertebral disc, so it falls in category **M51** (thoracic, thoracolumbar and lumbosacral disc disorders).\n\n**Radiculopathy is present:**\n- The cyst indented the L5 nerve root.\n- He had sciatica radiating to the dorsum of the left foot, which matches the L5 dermatome, with numbness.\n- Symptoms resolved after the cyst was excised.\n\nBecause the disc disorder is directly causing the radiculopathy, the combination code **M51.1** applies. Coding M51.8 (other specified disc disorder) plus a separate radiculopathy or sciatica code would not be correct.\n\n**No separate sciatica code:** M54.3 (sciatica) and M54.4 (lumbago with sciatica) are excluded when the sciatica is due to an intervertebral disc disorder.\n\n**Principal diagnosis status:** This is the condition that, after study, was found to be chiefly responsible for the admission, and it was the reason for the endoscopic surgery.\n\n## Additional codes to consider\n- **External cause:** Falls during martial arts practice are mentioned. However, the link to the cyst is not clearly documented, and the falls happened months earlier. An external cause or activity code would only apply if the clinician documented the cyst as a sequel of injury.\n- **Procedure:** Code the endoscopic interlaminar excision of the discal cyst with annulotomy using ACHI.\n\nCheck your current edition of ICD-10-AM and the Australian Coding Standards for any local fifth-character extensions to M51.1.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 679,
+    "output_tokens": 1150
+  },
+  "seconds": 0.0
+}

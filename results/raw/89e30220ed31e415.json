@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "521280629b72",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\nLength of Stay: [REDACTED]\n\nHospital Course:\nThe patient presented to the pediatric emergency with confusion and disorientation. She was diagnosed with bacterial meningitis based on clinical examination and CSF analysis and was treated with intravenous ceftriaxone and vancomycin. A CT scan was performed, and pneumocephalus was observed in the right frontal region. The patient was treated for signs of chronic sinusitis and pansinusitis. She showed initial symptomatic improvements to antibiotics but suffered a deterioration of her GCS to 7/15, with a high-grade fever.\n\nSubdural empyema was diagnosed through a repeat CT scan, requiring immediate neurosurgical intervention. The surgical drainage was performed, and on the second day, the patient's GCS improved to 15/15, and her fever had subsided. The patient was discharged with a prescription for oral antibiotics, nasal saline spray, and nasal decongestants.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient received intravenous ceftriaxone and vancomycin to treat bacterial meningitis. Subdural empyema was treated through immediate neurosurgical intervention, which involved surgical drainage. The patient was prescribed oral antibiotics, nasal saline spray, and nasal decongestants upon discharge.\n\nFollow-up:\nThe patient was seen at two-week and four-week follow-ups and experienced significant improvements in symptoms.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: G00**\n\n**Principal diagnosis: bacterial meningitis (G00, bacterial meningitis, not elsewhere classified)**\n\n- **Why meningitis:** The patient presented with confusion and disorientation. Clinical examination and CSF analysis on arrival established bacterial meningitis, and she was admitted and treated with IV ceftriaxone and vancomycin. This is the condition that occasioned the admission.\n- **Why not subdural empyema (G06.2):** The empyema was diagnosed on a repeat CT after she deteriorated during the stay. It needed neurosurgical drainage and used significant resources, but it developed after admission. It should be coded as an additional diagnosis, not the principal one.\n- **Why not sinusitis (J32.4, chronic pansinusitis):** This is the likely underlying source of infection, but it was not the reason she was admitted. It is coded as an additional diagnosis.\n- **Pneumocephalus:** This was an imaging finding and is coded as an additional diagnosis if documentation supports its clinical significance.\n\n**Caveat:** The diagnosis section of the summary is withheld. If the clinician's final documentation showed the empyema was present on arrival and was the main condition, the principal diagnosis would change to G06. On the course as documented, G00 is correct. The fourth character depends on the organism (for example, G00.9 if unspecified), which the summary does not identify.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 769,
+    "output_tokens": 621
+  },
+  "seconds": 0.0
+}

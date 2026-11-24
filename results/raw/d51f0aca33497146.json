@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "17f79c34e34c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient Name: [REDACTED] \nDOB: [REDACTED]\nRoom No: [REDACTED] \nAdmission Date: [REDACTED] \nDischarge Date: [REDACTED]\nPRINCIPAL DIAGNOSIS: [diagnosis section withheld]\nHOSPITAL COURSE:\nThe patient was admitted with a history of chronic constipation and presented complaining of severe lower abdominal pain with progressive abdominal distension and vomiting. The physical examination revealed diffuse abdominal distension, tenderness, and guarding. The plain film of the abdomen showed dilatation of the small intestine with a gas and air fluid level, with an associated moderately distended and obstructed sigmoid loop. A laparotomy was carried out for suspected intestinal obstruction presenting as severe abdominal pain and vomiting. Hemorrhagic fluid was encountered and the ileum and sigmoid colon was found to be gangrenous with a 360\u00b0 clockwise twist of the ileum around the sigmoid colon. In addition, a Meckel diverticulum with a small band was found at the base of the twist. The patient underwent 100-cm resection of the gangrenous ileum and sigmoid colon and had a primary anastomosis of the small gut and colon. Postoperative recovery was uneventful except for a minor wound infection.\n\nMEDICATIONS ON DISCHARGE:\nPlease refer to the medication list given at the time of discharge.\n\nFOLLOW-UP RECOMMENDATIONS:\nOutpatient follow-up in two weeks for wound check and suture removal.\n\nFURTHER INSTRUCTIONS:\nNo driving if taking pain medications. Resume a normal diet as tolerated. Avoid heavy lifting or strenuous activities for at least two weeks.\n\nDISCHARGE CONDITION:\nStable. \nDISCHARGE DIAGNOSES: [diagnosis section withheld]\nDISCHARGE MEDICATIONS:\nPlease refer to the medication list given at the time of discharge.\n\nDISCHARGE FOLLOW-UP:\nFollow-up arranged for two weeks. \n\nAUTHORIZED SIGNATURE:\n[REDACTED] \nMD"
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **K56.2 Volvulus**\n\n## Rationale\n\nThe condition chiefly responsible for the admission is a **compound volvulus (ileosigmoid knot)**. The ileum was twisted 360\u00b0 around the sigmoid colon, causing:\n- intestinal obstruction (small bowel dilatation with air-fluid levels and an obstructed sigmoid loop)\n- strangulation and gangrene of both the ileum and the sigmoid colon\n\n**Why K56.2 is the right code:**\n- K56.2 covers volvulus, torsion and knotting of the intestine (small or large), including strangulation of the intestine.\n- The gangrene is part of the strangulated volvulus. It does not need a separate code because K56.2 captures it.\n- The obstruction is a manifestation of the volvulus, so a separate K56.x obstruction code is not assigned.\n\n## Suggested additional diagnosis codes\n\n| Code | Description |\n|------|-------------|\n| **Q43.0** | Meckel diverticulum. It was found with a band at the base of the twist, so it is relevant as a likely predisposing factor. |\n| **T81.4** + organism code if known (e.g., B95.x) | Postprocedural wound infection |\n| **K59.0** | Constipation. Code it only if it meets ACS 0002 Additional Diagnoses criteria, such as being treated or managed during the admission. |\n\nAlso add the relevant procedure codes (ACHI) for the resection of the small intestine and sigmoid colon with primary anastomosis, plus external cause/place codes for the complication as per your local coding standards.\n\n*Please verify against the current ICD-10-AM edition and local coding standards. Code selection should also be confirmed against the full clinical documentation, since the diagnosis sections were withheld.*",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 799,
+    "output_tokens": 712
+  },
+  "seconds": 0.0
+}

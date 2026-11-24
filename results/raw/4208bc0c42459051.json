@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "dc0449ea2395",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\nPatient Name: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHospital stay: The patient was admitted to the hospital due to the presence of a brain tumor located in the clivus region. He underwent surgical intervention via a left suboccipital craniotomy, which involved resection of the tumor. Oral intubation was done using the Macintosh laryngoscope blade, and the patient was placed in the left park bench position with neck flexion. Surgery was performed via the left lateral suboccipital approach. The lesion was decompressed, and the operation was completed successfully.\n\nMedical Condition at Discharge: The patient had minor swelling in the neck, tongue, and pharynx on the left side. He experienced pain in the tip of his tongue with a small ulcer on the left side after returning to the intensive care unit. The swelling of his tongue gradually improved after the administration of steroids. The patient was discharged 10 days after the surgery.\n\nFollow-Up Care: The patient was advised to undergo follow-up MRI after three months of surgery as well as clinical follow-up as per physician's recommendations.\n\nDischarge Medications: None.\n\nInstructions: The patient was advised to follow-up with his physician for regular check-up and take rest until complete recovery.\nFinal Diagnosis: [diagnosis section withheld]"
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis for a Clival Tumour\n\n**The summary doesn't contain enough information to assign a definitive principal diagnosis code.** The decisive detail is the **histopathology**, and it's missing from this summary.\n\n## Why histology matters\n\nThe principal diagnosis is clearly the clival tumour, since it was the reason for admission and was surgically resected. But ICD-10-AM neoplasm codes depend on behaviour (malignant, benign, uncertain) and site, and the summary only says \"brain tumor located in the clivus region.\"\n\nThe most likely histologies for a clival lesion approached through a lateral suboccipital craniotomy code very differently:\n\n| Likely histology | ICD-10-AM code |\n|---|---|\n| Chordoma (classic clival tumour, arising from bone) | **C41.0** Malignant neoplasm of bones of skull and face (morphology M9370/3) |\n| Petroclival meningioma | **D32.0** Benign neoplasm of cerebral meninges (morphology M9530/0) |\n| Chondrosarcoma | **C41.0** (morphology M9220/3) |\n| Epidermoid / other | Varies |\n\n## If no histology is available\n\nIf the pathology report and the withheld Final Diagnosis section confirm that histology was never established, a provisional fallback could be:\n\n- **D43.1** Neoplasm of uncertain or unknown behaviour, brain, infratentorial, if documented as an intracranial (posterior fossa) lesion, or\n- **D48.0** Neoplasm of uncertain or unknown behaviour, bone and articular cartilage, if documented as arising from the clival bone.\n\nCoding without histology is a last resort. You should first query the clinician or check the pathology report.\n\n## Additional codes to consider (not principal)\n\n- Tongue, pharyngeal and neck swelling (postoperative macroglossia, likely positional or compressive from the park bench position with neck flexion) and the tongue ulcer may qualify as complications of the procedure if they meet ACS 0002 additional diagnosis criteria. They were treated with steroids. Examples include **K14.8** (other diseases of tongue), **K14.0** (glossitis/ulcer of tongue), or a T81.x / Y83/Y84 complication code with a place-of-occurrence code, depending on clinical documentation linking them to the surgery.\n\n**Recommendation:** Check the Final Diagnosis and pathology report before finalising the principal diagnosis code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 483,
+    "output_tokens": 1381
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "30e8ed8b7f7d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\n\nMedical Record Number: [REDACTED]\n\nGender/Age: Female, 31 years old\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient underwent surgical resection of a subcutaneous nodule, which was later diagnosed as an adenocarcinoma with positive margins. After excision of surgical margins, the pathology report revealed a Neuroendocrine Tumor (NET) with positive staining for chromogranin A and neuron-specific enolase.\n\nA chest CT scan revealed a pulmonary mass in the left lobar bronchia, which led to left pneumectomy. Pathology confirmed the diagnosis of a 4.5-cm well-differentiated neuroendocrine carcinoma with a low mitotic count of 1 mitosis per 10 high power field (HPF). There was no vascular or pleural invasion and surgical margins were free. However, it was found that one lymph node was involved.\n\nStaging abdominal ultrasound detected the presence of two hepatic nodules in segment VIII, measuring 1.8 and 1.0 cm. An abdominal MRI showed multiple hepatic nodules, with additional lesions in segments II and V. Octreoscan demonstrated increased activity on pulmonary and hepatic tumoral lesions, which confirmed the diagnosis.\n\nThe patient was treated with somatostatin analogs and everolimus was added later to the treatment regimen. Follow-up images revealed stable disease after three months.\n\nDischarge Condition:\n\nThe patient was discharged in a stable condition with the recommendation to follow up with her oncologist for regular check-ups and treatments.\n\nDischarge Medications:\n\nThe patient was prescribed the necessary medications for her condition to continue at home.\n\nFollow-up:\n\nThe patient is advised to return for scheduled follow-up visits with her oncologist.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"C34\", \"condition\": \"Malignant neoplasm of bronchus and lung (well-differentiated neuroendocrine carcinoma/atypical carcinoid of the left lung with nodal and hepatic metastases)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 766,
+    "output_tokens": 80
+  },
+  "seconds": 0.0
+}

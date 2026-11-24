@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "40f1a1da7b2c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Name]\nMRN: [Medical Record Number]\nAdmission Date: [Date]\nDischarge Date: [Date]\nHospital Course: \n\nThe patient, a 56-year-old Hispanic man, presented to the clinic with sudden-onset epigastric abdominal pain of 8/10 severity. He reported a past medical history of alcohol and cocaine abuse. During his physical examination, the patient presented with an abnormal blood glucose level and an elevated hemoglobin A1C. Computed tomography (CT) revealed abnormalities suggestive of malignancy, and elevated cancer antigen 19-9 was strongly suggestive of pancreatic carcinoma. A biopsy of the liver was performed, which showed results consistent with poorly differentiated primary pancreatic adenocarcinoma. Immunohistochemical analysis of biopsy results suggested a primary pancreaticobiliary neoplasm. \n\nDuring follow-up, the patient reported worsening left back pain, with tenderness upon palpation. A chemotherapy regimen of FOLFIRINOX was initiated. \n\nOverall, the patient's hospital course was notable for a diagnosis of stage IV pancreatic tail adenocarcinoma with multiple liver metastases, leading to the initiation of chemotherapy. \nDischarge Diagnosis: [diagnosis section withheld]\nDisposition: \n\nThe patient was discharged from the hospital on [date]. At the time of discharge, the patient reported continued pain but was able to manage his symptoms with medication. Follow-up appointments were scheduled to reassess pain management and chemotherapy progress. \n\nInstructions: \n\nThe patient was advised to continue with FOLFIRINOX chemotherapy as prescribed and to report any adverse reactions to the treatment. He was also instructed to contact his care team if his pain worsens or if he experiences new symptoms. The patient was advised to seek emergency medical attention if he experiences chest pain, shortness of breath, or other severe symptoms. \n\nPrimary Care Provider: [Name]\nSpecialist: Oncology\nFollow-up Appointment: [Date]"
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **C25.2 \u2013 Malignant neoplasm of tail of pancreas**\n\n## Why C25.2\n\n- **Primary site:** The summary specifies a **pancreatic tail** adenocarcinoma, and liver biopsy immunohistochemistry confirmed a pancreaticobiliary primary.\n- **Condition chiefly responsible for the admission:** The patient presented with epigastric pain. The admission covered workup, diagnosis, and initiation of chemotherapy.\n- **ACS 0236 (Neoplasm coding and sequencing):** When an admission is for investigation, diagnosis and/or treatment of a malignancy, the primary neoplasm is sequenced as principal. The metastases are coded as additional diagnoses.\n- **Why not Z51.1 (Pharmacotherapy session for neoplasm):** Under ACS 0044, Z51.1 is principal only for same-day admissions solely for chemotherapy. Here chemotherapy was started during a diagnostic and therapeutic multi-day episode, so the neoplasm takes precedence.\n- **Why not symptom codes:** Codes such as R10.1 (epigastric pain) and M54.5 (back pain) are not assigned as principal because the pain is explained by the confirmed malignancy (ACS 0001).\n\n## Suggested Additional Codes\n\n| Code | Description |\n|------|-------------|\n| **C78.7** | Secondary malignant neoplasm of liver (multiple liver metastases) |\n| **M8140/3** | Adenocarcinoma NOS (morphology code) |\n| **R73.9** | Hyperglycaemia, unspecified, unless the clinician documents diabetes. If so, query whether it is pancreatogenic (E13.x) or Type 2 (E11.x). |\n| **Z86.4** | Personal history of psychoactive substance abuse (alcohol/cocaine), if consistent with local coding policy and relevant to the episode |\n\n## Procedure Codes to Consider (ACHI)\n\n- Percutaneous liver biopsy\n- CT abdomen\n- Administration of antineoplastic agent (FOLFIRINOX)\n\n**Note:** The discharge diagnosis section was withheld, so it is worth confirming against the clinician's documented final diagnoses. In particular, query whether a diabetes diagnosis was made and whether the back pain was attributed to the tumour.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 768,
+    "output_tokens": 1244
+  },
+  "seconds": 0.0
+}

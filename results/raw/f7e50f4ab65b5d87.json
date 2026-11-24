@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "904e3611e433",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: Patient 5                                 Date of Admission: N/A\nAge: 9                                                       Date of Discharge: N/A\nGender: Female                                           Admitting Diagnosis: Epileptic seizures\n\nHOSPITAL COURSE:\n\nPatient 5 was admitted with a history of Epileptic seizures (ES) which has been documented for 7 years. MRI revealed pachygyria in the cortex and Scalp electroencephalogram (EEG) revealed spike and wave complexes mainly over the bilateral central\u2013parietal\u2013posterior temporal regions. During the hospitalization, the patient underwent three blocks of transcranial direct current stimulation treatment at 2 mA. The patient was discharged without achieving the expected result.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\n\nThe patient was advised to follow up with her healthcare provider and continue taking medication as prescribed.\n\nFOLLOW-UP:\n\nThe patient was referred to follow up with her healthcare provider as directed."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis code is **G40.9, Epilepsy, unspecified**.\n\nThe admitting diagnosis was \"epileptic seizures,\" and the ICD-10-AM Alphabetic Index directs \"Seizure(s), epileptic\" to Epilepsy (G40.-). The summary doesn't specify the epilepsy type or syndrome, so the unspecified code applies.\n\nCoding caveats:\n- **Pachygyria** is a congenital cerebral malformation, which would be coded to Chapter 17 (likely Q04.3, with Q04.8 as a possible alternative). It would be recorded as an additional diagnosis, though it could be sequenced first if it were the main reason for admission.\n- **Specificity:** If the treating team documented a focal or localisation-related epilepsy (e.g., G40.2 or G40.1) or a symptomatic epilepsy linked to the malformation, the code would be more specific.\n- **Discharge diagnosis:** That section is withheld, so the final code should be confirmed against the full diagnosis documentation and the coding rules for the admission.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 417,
+    "output_tokens": 1488
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "d7034671e367",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Unknown\nMedical Record Number: Unknown\nDate of admission: Unknown\nDate of discharge: Unknown\n\nHospital Course:\nThe 76-year-old woman with a medical history of cerebral infarction, endometrial cancer, and lumbar spine tumor was admitted to the Emergency Room with complaints of swelling, redness, and warmth on the left anterior chest wall. Physical examination and various medical tests revealed infectious arthritis in the left SCJ with multiple abscess pockets, small abscesses posterior to the left SCJ and sternum, and posterior to the clavicle. Treatment with the antibiotic cefazolin was started, but after two weeks, the antibiotic was switched to penicillin G due to the presence of Penicillin-sensitive Streptococcus agalactiae. However, the patient developed leukopenia and thrombocytopenia, which were suspected to be the side effects of penicillin. Cefazolin was then replaced by vancomycin and the treatment continued for another 2 weeks. After a total treatment duration of 6 weeks, the CRP level of the patient decreased to the normal range, and follow-up computed tomography of the chest showed improved SCJ swelling and abscess. The patient was discharged, and no signs of recurrence were observed after 3 months.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient was started on cefazolin empirically, targeting methicillin-susceptible S aureus (MSSA), which is the most common pathogen of SCJ septic arthritis. After identifying Penicillin-sensitive Streptococcus agalactiae, the treatment was switched to penicillin G for two weeks. Due to the side effects of penicillin, cefazolin was then restarted but later replaced by vancomycin.\n\nFollow-Up Care:\nThe patient was discharged and lost to follow-up after 3 months.\n\nRecommendations:\nNone\n\nSigned,\n[Physician\u2019s Signature]\n[Date of discharge]"
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **M00.21 \u2013 Other streptococcal arthritis and polyarthritis, shoulder region**\n\n## Rationale\n\n**Condition:** The patient had infectious (septic) arthritis of the left sternoclavicular joint (SCJ), with associated periarticular abscesses. This was the reason for admission and the focus of 6 weeks of IV antibiotic treatment.\n\n**Organism:** Cultures grew *Streptococcus agalactiae*, which is Group B Streptococcus.\n- M00.0 (staphylococcal) does not apply. Cefazolin was started empirically for MSSA, but MSSA was not confirmed.\n- M00.1 (pneumococcal) does not apply.\n- So **M00.2, Other streptococcal arthritis**, is the correct category.\n\n**Site:** In the ICD-10-AM site classification for musculoskeletal codes, the **shoulder region (site 1)** includes the clavicle, scapula, and the acromioclavicular, glenohumeral and **sternoclavicular** joints. This gives the 5th character **1**.\n\n## Suggested additional codes\n- **B95.1** \u2013 Streptococcus, group B, as the cause of diseases classified elsewhere. This specifies the organism further, per coding standards.\n- **D70.x / D61.x or D69.5x** with **Y40.0** (adverse effect of penicillins). These capture the drug-induced leukopenia and thrombocytopenia from penicillin G. The exact neutropenia or cytopenia code depends on the documentation.\n- History codes, if relevant to the episode, for example:\n  - **Z86.73** \u2013 personal history of cerebral infarction\n  - **Z85.42** \u2013 personal history of malignant neoplasm of the uterus (endometrial cancer)",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 715,
+    "output_tokens": 815
+  },
+  "seconds": 0.0
+}

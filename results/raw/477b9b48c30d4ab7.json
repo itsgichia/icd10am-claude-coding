@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "101064326bcc",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 10-year-old female with developmental delay, microcephaly, epilepsy, severe short stature, impaired speech, facial dysmorphism, congenital deafness, and skeletal abnormalities.\n\nHospital Course:\nThe patient was admitted to our Genetic Department due to the above-listed conditions. She was diagnosed with bilateral hip dysplasia, mixed hearing loss, and right conductive hearing loss. A genome-wide array, CGH (Agilent Human Genome CGH Microarray 44K), was conducted which diagnosed a minimal/maximal deletion of 5.238 Mb and 5.374Mb at 8q22.2q22.3. The patient\u2019s sleep electroencephalogram displayed epileptogenic activity during nonrapid eye movement (NREM) sleep. Cerebral MRI tests were normal, as was the screening for inborn errors of metabolism. The patient was discharged after following up on the diagnosis it was shown that the deletion was excluded in her mother's blood sample, and the father was not available for investigation. \nDiagnosis: [diagnosis section withheld]\nSummary:\nThe patient was a 10-year-old girl born with several conditions, including microcephaly, epilepsy, severe short stature, impaired speech, facial dysmorphism, congenital deafness, and skeletal abnormalities. After following up on the diagnosis, it was shown that the patient was diagnosed with a minimal/maximal deletion of 5.238 Mb and 5.374Mb at 8q22.2q22.3, which was not present in the mother's blood sample. The patient was discharged after the genome-wide array, and other tests showed no issues, but follow-up evaluation is necessary."
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis code: Q93.5 (Other deletions of part of a chromosome)**\n\n**Rationale**\n- The admission was to a genetics department to work up multiple congenital anomalies, developmental delay, epilepsy, deafness and dysmorphism. The array CGH found an interstitial 8q22.2q22.3 deletion of about 5.2 Mb, which explains all of these features.\n- In ICD-10-AM, a chromosomal abnormality with multiple anomalies is coded to the chromosomal category (Q90\u2013Q99) rather than to the individual manifestations. Q93.5 covers a partial deletion of a chromosome, including an interstitial deletion. Q93.8 (Other deletions from the autosomes) is the alternative if the local index or coding advice directs it there, but Q93.5 is the usual choice for a microdeletion.\n- The deletion was confirmed as the underlying condition, so it is the condition established after study to be chiefly responsible for the admission.\n\n**Additional codes**\n- H90.6 Mixed conductive and sensorineural hearing loss, bilateral. The notes also record a right conductive loss (H90.1 or H90.2 depending on laterality and the unspecified side), so check the audiology report.\n- G40.x Epilepsy. Choose the subtype from the EEG and clinical findings. If the type is unspecified, use G40.9.\n- Q65.x Congenital hip dysplasia (for example Q65.8 or Q65.0/Q65.1 depending on the documentation).\n- R62.0 Delayed milestone, or F88/F89 for developmental delay, depending on the documentation.\n- R47.x or F80.x Speech disorder.\n- Q02 Microcephaly. This is usually included in the chromosomal syndrome, but it can be coded if the facility policy requires it.\n- E34.3 Short stature due to endocrine or other causes, or R62.8 Other lack of normal physiological development. Assign only if it is not integral to the chromosomal condition.\n\nThe final code assignment depends on the withheld diagnosis section and on the coding standards and local index at your facility.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 620,
+    "output_tokens": 708
+  },
+  "seconds": 0.0
+}

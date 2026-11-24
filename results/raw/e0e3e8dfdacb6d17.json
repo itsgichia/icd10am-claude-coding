@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "c11894e010f2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was referred for VT ablation due to electrical storm. Transventricular crossing was performed as it was thought to potentially be difficult to reach all parts of the LV apex using transapical access. A Swartz\u2122 Braided SL1 Transseptal Guiding Introducer Sheath was advanced to the basal right ventricular septum and the interventricular septum was crossed with a Brockenbrough needle. VTs originating from the LV apical and posterobasal regions were induced and ablated successfully. The procedure lasted about 5.3 hours without intraprocedural complications or residual ventricular septal defect. The patient recovered uneventfully and experienced one VT episode that responded to antitachycardia pacing therapy one day later. Heart failure therapy was started, and metoprolol, aldactone, furosemide, ramipril, and mexiletine were prescribed. \nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient underwent VT ablation via transventricular crossing without complications. The patient is being followed up with in the outpatient clinic and will continue on heart failure therapy.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "I47",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 533,
+    "output_tokens": 98
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "e89b81675cb4",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nHospital Course:\n\nThe patient, a 68-year-old man, underwent laparoscopic low anterior resection for rectal cancer. The patient's preoperative diagnosis was stage IIIB rectal cancer. Preoperative imaging showed a shortened mesentery of the descending colon due to adhesion of the sigmoid colon to the mesentery of the small intestine. During the laparoscopic procedure, the IMA, LCA, and IMV were ligated. The patient experienced no complications in their postoperative course. \n\nDischarge Summary:\nDischarge Diagnosis: [diagnosis section withheld]\nProcedures: Laparoscopic low anterior resection \n\nHospital Course: The patient underwent a laparoscopic low anterior resection for their stage IIIB rectal cancer. During the procedure, the IMA, LCA, and IMV were ligated. The patient tolerated the procedure well and experienced no complications during their postoperative course. \n\nDischarge Instructions: The patient is advised to follow up with their primary care provider and oncologist as scheduled. They are encouraged to maintain a nutritious diet and to engage in physical activity as recommended by their healthcare providers. \n\nFollow-Up: The patient is recommended to follow up with their healthcare providers as scheduled.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The principal diagnosis is the rectal cancer (stage IIIB), because it is the reason for this admission and was treated by laparoscopic low anterior resection. The adhesion of the sigmoid colon to the small-bowel mesentery was an incidental anatomical finding. The resection itself is a procedure, not a diagnosis.\n\n- **Chapter letter:** The condition is a malignant neoplasm, so the letter is **C**.\n- **Digits:** Malignant neoplasm of the rectum is category **20**.\n\nCODE: C20",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 961,
+    "output_tokens": 210
+  },
+  "seconds": 0.0
+}

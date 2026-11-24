@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "bdc0a6707a96",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [Name]\nAge: 31\nGender: Female\nAdmission date: [Date]\nDischarge date: [Date]\n\nHOSPITAL COURSE:\nThe patient was admitted for radical resection of right renal carcinoma after CT scans revealed a solid cystic and low-density foci in the right kidney. The surgery was performed under general anesthesia. The kidney was opened, and a white mass of 4 cm size and fine papilla on the surface of the lump in the right kidney was observed. Postoperative pathology revealed Xp11.2 translocations/TFE3 gene fusions associated with renal cell carcinoma. The patient did not receive any other treatments and tolerated the surgery well.\n\nIMPRESSION:\nThe patient underwent the successful resection of renal cell carcinoma associated with Xp11.2 translocations/TFE3 gene fusions. A follow-up examination one month after the operation showed no recurrence.\n\nPLAN:\nThe patient will be monitored for any signs of recurrence of renal cell carcinoma. Further follow-up and imaging studies will be recommended as necessary.\n\nDISCHARGE INSTRUCTIONS:\nThe patient should continue her hemodialysis without any changes. The patient should make sure to attend all scheduled follow-up appointments and imaging studies. Any unusual symptoms should be reported to their primary care physician immediately.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE MEDICATIONS:\nNone.\n\nDISCHARGE DISPOSITION:\nThe patient was discharged in stable condition.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"C64\", \"condition\": \"Malignant neoplasm of kidney, except renal pelvis\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 683,
+    "output_tokens": 38
+  },
+  "seconds": 0.0
+}

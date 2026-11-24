@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "2fcbd88b92a5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nGender: Female\nAge: 48\nDOB: [REDACTED]\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nHospital: [REDACTED]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient underwent a laparoscopic cholecystectomy and was discharged on the first postoperative day without any complications.\nFinal Diagnosis: [diagnosis section withheld]\nCourse in Hospital:\nThe patient was kept under observation for three months and no further complications were reported.\n\nDischarge Instructions:\nThe patient is advised to follow a low-fat diet and avoid fatty foods to prevent any recurrence of symptoms. The patient is advised to avoid smoking and alcohol as they can increase the risk of gallbladder diseases. In case of any symptoms, the patient should consult her healthcare provider immediately.\n\nFollow-up Care:\nThe patient is advised to follow up with her primary care physician for regular check-ups and monitoring.\n\nCompleted By:\n[REDACTED]\nMedical Doctor\n\nDate Completed:\n[REDACTED]\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "K80",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 524,
+    "output_tokens": 129
+  },
+  "seconds": 0.0
+}

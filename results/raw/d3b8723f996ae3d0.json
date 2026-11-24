@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "b7a4b7cf3ee1",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient Name: [REDACTED]\n\nAge: 34 years\n\nSex: Female\n\nMedical Record Number: [REDACTED]\n\nAdmission Date: [REDACTED]\n\nDischarge Date: [REDACTED]\n\nHospital Course:\n\nThe patient was admitted to the emergency unit with complaints of moderate lower abdominal pain predominantly on the right side for the past 3 weeks. She did not present with any other symptoms such as fever, inappetence, nausea, or vomiting. A total abdomen ultrasonography (USG) was conducted, which revealed that the patient was in the second trimester of pregnancy without any evident alterations related to the pregnant uterus, the placenta, or the fetus. However, the iliac fossa was directed and revealed that the caecal appendix was thicker in the body portion, reaching a maximal transverse diameter of 9.2mm, which is above normal levels. The MRI results also corroborated the presence of lipomatosis in the appendix.\n\nThe patient was discharged after being prescribed analgesia, and she did not report any return of symptoms during follow-up.\nDiagnosis: [diagnosis section withheld]\nCondition at Discharge:\n \nAt the time of discharge, the patient was stable, and her vital signs were normal.\n\nDischarge Medications:\n\nThe patient was not prescribed any medication at the time of her discharge.\n\nFollow-Up:\n\nThe patient was advised to continue her follow-up visits to her obstetrician and/or primary care physician."
+      }
+    ]
+  },
+  "text": "The principal diagnosis would most likely be **O99.6, Diseases of the digestive system complicating pregnancy**, with **K38.8, Other specified diseases of appendix** (appendiceal lipomatosis) as an additional code.\n\n**Rationale:**\n- The patient was pregnant (second trimester), and the appendiceal condition was incidental to the pregnancy but complicated it. ICD-10-AM sequencing rules give chapter 15 (pregnancy) codes priority when pregnancy is present, so the O code is sequenced first.\n- The imaging findings (appendiceal wall thickening and MRI-confirmed lipomatosis) describe a specified appendix disease, which maps to K38.8.\n- Appendicitis (K35.-) should not be coded because the record does not diagnose it. The thickened appendix was not treated as inflammatory, and the patient was discharged with analgesia only.\n- The presenting symptom, right lower abdominal pain, is integral to the diagnosis and should not be coded separately as R10.3 once a definitive diagnosis is established.\n\n**Caveats:**\n- The diagnosis section is withheld, so this is inferred from the hospital course. The coder should confirm the physician's documented diagnosis.\n- Gestational age is not specified, so a Z3A code (weeks of gestation) cannot be assigned.\n- Verify the code against the current ICD-10-AM/ACHI edition and local coding guidelines.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 535,
+    "output_tokens": 1120
+  },
+  "seconds": 0.0
+}

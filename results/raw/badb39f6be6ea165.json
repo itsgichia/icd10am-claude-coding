@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "e5395175b2fe",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nElectronic Health Record: Discharge Summary\n\nPatient Information:\nName: Anonymous\nGender: Male\nAge: 63 years\nAdmission Date: [Date]\nDischarge Date: [Date]\n\nReason for Admission:\nThe patient presented with a three-month history of dull epigastric pain radiating to the right hypochondrium and was diagnosed with mild gastritis. Ultrasonography revealed many gallstones with a thickened wall of the gall bladder. He was transferred to our center for an elective cholecystectomy.\n\nHospital Course:\nThe patient underwent a laparoscopic cholecystectomy, which revealed an empyema of the gallbladder with stones that made dissection difficult due to local inflammation. On the first day after the surgery, he complained of pain at the right hypochondrium and a decrease in hemoglobin. Computed tomography (CT) showed a perihepatic hematoma extending to the right paracolic gutter without evidence of any other neoplasm. The patient was monitored for seven weeks with follow-up CTs and ultrasound scans until a 19 mm hypodense nodule was discovered on the eighth liver segment. A fine needle aspiration (FNA) revealed that it was a metastatic signet-ring cell carcinoma. Several CTs and ultrasound scans were performed for surveillance until retroperitoneal and right axillary adenopathies, liver masses, peritoneal dissemination, subcutaneous nodules on the chest wall, and, at the entrance of the right laparoscopy trocar, were described as metastases 9 months later. The patient was placed on palliative care, which lasted for one month until his eventual death.\nDiagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was placed on palliative care and eventually died.\n\nFollow-up:\nN/A\n\nSigned,\n[Physician's Name and Title]"
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis code is **K81.0 Acute cholecystitis**, which covers empyema of the gallbladder. This is a judgement call, explained below.\n\n**Reasoning:**\n- The principal diagnosis is the condition established after study to be chiefly responsible for the admission. The patient was admitted for an elective cholecystectomy because of gallstones with a thickened gallbladder wall.\n- Surgery found empyema of the gallbladder with stones. In ICD-10-AM this is coded as cholelithiasis with acute cholecystitis, K80.0 (calculus of gallbladder with acute cholecystitis). Empyema of the gallbladder is indexed to cholecystitis, and when stones are present the combination code K80.0 takes precedence over K81.0.\n- The metastatic signet-ring cell carcinoma was found weeks later, during follow-up. It was not the reason for this admission and was not known at the time, so it is not the principal diagnosis for this episode.\n- The perihepatic hematoma is a postprocedural complication. It would be coded as an additional diagnosis, for example K91.840 (postprocedural haemorrhage of a digestive system organ following a digestive system procedure) or a similar code.\n\n**Answer: K80.0 \u2013 Calculus of gallbladder with acute cholecystitis.** I am giving this rather than K81.0 because stones were documented alongside the empyema.\n\nCaveats:\n- If the whole course, including the later cancer diagnosis, were treated as one episode, the principal diagnosis could instead be the metastatic carcinoma, with the primary site unknown (C79.x for secondary sites, C80.0 for an unknown primary).\n- The diagnosis section of the summary is withheld, so this code is inferred from the clinical narrative. The final code should be confirmed against the full record and the current ICD-10-AM coding standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 661,
+    "output_tokens": 621
+  },
+  "seconds": 0.0
+}

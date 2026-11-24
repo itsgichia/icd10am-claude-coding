@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "32740d68001d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary\n\nPatient Information:\nName: Anonymous\nGender: Female\nAge: 25\nAdmission Date: [date]\nDischarge Date: [date]\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient was administered with various medications including alprazolam 500 \u03bcg, duloxetine 90 mg, olanzapine 5 mg, haloperidol 2.5 mg, clonazepam, baclofen, diazepam, phenytoin, levetiracetam, lamotrigine, levodopa, oral baclofen, lacosamide and potassium channel antagonist 3,4 diaminopyridine.\n\nHospital Course:\nThe patient was admitted with vomiting, bilateral leg pain, difficulty mobilising and flexed posture of her neck. She later developed visual and auditory hallucinations, respiratory failure with a coma scale score of 3, hypertensive, tachycardic, pyrexic and severe limb rigidity. Subsequently, contractures of the hands and feet were also developed. The patient was intubated and ventilated. The patient intermittently reported visual hallucinations throughout the hospital admission. Further complications included ileus, ischaemic bowel and sepsis.\n\nOutcome:\nThe patient showed marked clinical improvement with the administration of potassium channel antagonist 3,4 diaminopyridine. This resulted in extubation, multiple medication decreases, transfer from ICU, and ultimately discharged home sixteen months after admission. The patient is now dependent on others for all activities of daily living and has developed contractures of the upper and lower limbs. There have been no documented seizures since discharge.\n\nFollow-up:\nThe patient requires long-term follow-up care for contractures of the upper and lower limbs. The patient may also benefit from genetic counselling and additional investigations as advised by the neurology team.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: G04**\n\nThis is a provisional category. The diagnosis section is withheld, so I am inferring the condition from the clinical course, and the answer depends on that inference.\n\n- **Features pointing to encephalitis:** coma (GCS 3), visual and auditory hallucinations, and a course with fever and autonomic instability (hypertension, tachycardia).\n- **Features pointing to an autoimmune or channelopathy mechanism:** severe rigidity with flexed neck and contractures, and marked improvement with 3,4-diaminopyridine, a potassium channel blocker.\n- **Supporting context:** the multiple antiseizure medications suggest seizures were treated, and the summary notes no documented seizures after discharge.\n\nOn this basis, the best fit is an autoimmune or other encephalitis, coded to G04 (other encephalitis, myelitis and encephalomyelitis). Two alternatives I considered:\n\n- **G25 (stiff-person syndrome):** plausible given the rigidity and contractures, but the hallucinations, coma and autonomic features are less typical of it.\n- **G21 (neuroleptic malignant syndrome):** the antipsychotic exposure and hyperthermia fit, but this does not explain the response to 3,4-diaminopyridine or the prolonged course.\n\nBefore finalising, the coder should check the withheld diagnosis section, the specific antibody or neurological workup, and the treating team's final diagnosis. If the confirmed diagnosis is stiff-person syndrome or another named condition, the code would change to match.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 838,
+    "output_tokens": 2120
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "d0d5d40b00e0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\n\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\n\nHospital Course:\nThe patient, a 67-year-old male, presented with severe shortness of breath and fast atrial fibrillation. Coronary angiogram revealed no significant coronary artery disease, CT scan revealed a large penetrating atherosclerotic ulcer at the junction of the distal ascending aorta and the undersurface of aortic arch, and echocardiogram showed grossly abnormal-looking distal ascending aorta with a large pseudoaneurysm in relation to the distal ascending aorta. The patient underwent aortic surgery and made an uncomplicated recovery.\n\nThe patient subsequently represented with worsening shortness of breath 6 months later and was found to have a large pseudoaneurysm in relation to the aortic arch. A redo sternotomy was performed, and the patient underwent total arch replacement. The false aneurysm cavity was extensively debrided and laid open. The patient had gradual respiratory weaning and required a percutaneous tracheostomy and antibiotics.\n\nHowever, the patient's condition deteriorated suddenly after 6 weeks when a rupture and contrast leak of the descending thoracic aorta were discovered, along with a large hematoma. The patient underwent TEVAR with an excellent result. The patient also developed a pathological fracture of left proximal tibia and was diagnosed with metastatic renal cancer. The patient was referred to the palliative care team.\n\nThe patient continued to deteriorate and passed away peacefully 65 days following his total arch replacement.\nDiagnosis: [diagnosis section withheld]\nProcedures:\nTotal arch replacement, TEVAR.\n\nCondition at Discharge:\nThe patient passed away.\n\nInstructions at Discharge:\nNone.\n\nFollow-Up Care:\nNone."
+      }
+    ]
+  },
+  "text": "# Suggested principal diagnosis: I71.2 Thoracic aortic aneurysm, without mention of rupture\n\n## Why this code\n\n- **The admission being coded is the re-presentation.** It is the episode with the total arch replacement, TEVAR and death.\n- **The condition chiefly responsible for that admission** was the large false (pseudo-) aneurysm of the aortic arch. It caused his worsening shortness of breath and was the reason for the redo sternotomy and total arch replacement.\n- **Indexing:** In the ICD-10-AM Alphabetic Index, Aneurysm, false (pseudoaneurysm) of the aorta follows the same path as true aortic aneurysm. Aneurysm \u2192 aorta \u2192 thoracic (arch) \u2192 I71.2.\n- **Rupture code not used as principal.** The rupture of the descending thoracic aorta developed about 6 weeks into the stay. It was not present on admission, so it does not change the principal diagnosis to I71.1. It is coded as an additional diagnosis.\n\n## Likely additional diagnoses (secondary)\n\n- I71.1 Thoracic aortic aneurysm, ruptured (descending thoracic aorta rupture with haematoma)\n- I48.- Atrial fibrillation (if still current or treated during this admission)\n- J96.- Respiratory failure (prolonged ventilation requiring tracheostomy), if documented\n- M84.4- / M90.7- Pathological fracture of the left proximal tibia, in neoplastic disease\n- C64 Malignant neoplasm of kidney, plus C79.5 Secondary malignant neoplasm of bone\n- Z51.5 Palliative care\n- Infection codes, if the antibiotics were for a documented infection, such as an infected false aneurysm or pneumonia\n\n## Caveat: clarify with the clinician\n\nThe pseudoaneurysm arose 6 months after previous aortic surgery, and the cavity needed extensive debridement and antibiotics. If the surgeon documents it as:\n\n- an **anastomotic false aneurysm or graft-related complication**, the principal diagnosis becomes **T82.8** (Other complications of cardiac and vascular prosthetic devices, implants and grafts), with I71.2 as an additional code. Infection of the graft would be **T82.7**.\n- a **mycotic or infected aneurysm**, the infection should be coded as well.\n\nBecause the discharge summary does not explicitly link the pseudoaneurysm to the prior graft, **I71.2** is the most defensible code from the documentation as written. Confirm against your edition-specific ICD-10-AM Index and the ACS standards (ACS 0001 Principal diagnosis).",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 688,
+    "output_tokens": 1345
+  },
+  "seconds": 0.0
+}

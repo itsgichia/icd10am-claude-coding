@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "c11894e010f2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was referred for VT ablation due to electrical storm. Transventricular crossing was performed as it was thought to potentially be difficult to reach all parts of the LV apex using transapical access. A Swartz\u2122 Braided SL1 Transseptal Guiding Introducer Sheath was advanced to the basal right ventricular septum and the interventricular septum was crossed with a Brockenbrough needle. VTs originating from the LV apical and posterobasal regions were induced and ablated successfully. The procedure lasted about 5.3 hours without intraprocedural complications or residual ventricular septal defect. The patient recovered uneventfully and experienced one VT episode that responded to antitachycardia pacing therapy one day later. Heart failure therapy was started, and metoprolol, aldactone, furosemide, ramipril, and mexiletine were prescribed. \nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient underwent VT ablation via transventricular crossing without complications. The patient is being followed up with in the outpatient clinic and will continue on heart failure therapy."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: I47.2 \u2013 Ventricular tachycardia**\n\n**Rationale**\n\n- The patient was admitted specifically for VT ablation because of **electrical storm**, meaning recurrent or incessant ventricular tachycardia.\n- Electrical storm has no separate ICD-10-AM code. It is classified to ventricular tachycardia.\n- Under the ACS 0001 Principal diagnosis standard, the principal diagnosis is the condition chiefly responsible for the admission after study. Here that is the VT, which was the focus of the procedure.\n- The patient has an ICD that delivered antitachycardia pacing, and heart failure therapy was started. This suggests an underlying cardiomyopathy or ischaemic substrate. However, the admission was for treatment of the arrhythmia, so VT stays as principal.\n\n**Likely additional codes (if documented)**\n\n- **Heart failure (I50.-):** heart failure therapy was started, so this meets ACS 0002 Additional diagnoses criteria.\n- **Underlying cardiomyopathy or ischaemic heart disease (I42.- / I25.-):** code if the cause is documented. For example, an apical aneurysm or scar would be I25.3 or I25.2.\n- **Z95.810:** presence of automatic implantable cardiac defibrillator.\n\n**Procedure**\n\n- Catheter ablation of ventricular arrhythmia (ACHI block 0601, e.g., 38290-01 or the applicable code for the edition in use).\n\n**Edition note:** If your ICD-10-AM edition splits I47.2 into more specific subcodes, use the subcode for unspecified or other ventricular tachycardia. Check this against your edition's Tabular List.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 449,
+    "output_tokens": 761
+  },
+  "seconds": 0.0
+}

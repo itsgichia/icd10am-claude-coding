@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "ecbc47ac7bb5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient Information: \nName: [REDACTED]\nDOB: [REDACTED]\nGender: Male\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient, a 48-year-old male with a history of poorly controlled type 1 diabetes mellitus, presented with a neuroischemic ulcer of the fifth toe, which was classified as a grade 3 infection. He was diagnosed with signs of osteomyelitis and methicillin-resistant Staphylococcus aureus.\n\nTreatment: \nThe patient was treated with oral vancomycin and underwent wound care management according to the TIME algorithm for 1.5 months. The wound bed was cleaned and decontaminated, devitalized tissue was debrided, non-irritant skin protector was applied to protect the peri-lesional tissue, hydrogel was applied to the wound bed, nanocrystalline silver dressing was used, and polyurethane foam dressing was applied. After full healing, the patient's pre-prandial glucose and HbA1c levels improved.\n\nDischarge Information: \nThe patient was discharged with no acute complaints. Follow-up appointments will be scheduled with his primary care physician and podiatrist. A detailed instruction sheet for wound care management and glycemic control was provided to the patient.\n\nCondition at Discharge: \nStable with no acute complaints. Condition improved.\n\nInstructions: \n1. Follow up with Primary Care Physician and Podiatrist.\n2. Follow wound care instructions.\n3. Maintain healthy diet and exercise regime.\n4. Monitor blood sugar levels.\n5. Attend scheduled appointments.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"E10\", \"condition\": \"Type 1 diabetes mellitus with foot ulcer and osteomyelitis\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 727,
+    "output_tokens": 45
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "91774e9fbdcf",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary\n\nPatient: XXXXXXX\n\nDate of Admission: XXXXXXX\n\nDate of Discharge: XXXXXXX\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nUpon admission, the patient presented with acute onset epigastric pain associated with vomiting. Subsequently, she was diagnosed with acute pancreatitis and a dilated common bile duct with no gallstones or other pathology. Further, a MRCP revealed a curious cystic lesion lying posterior to the head of the pancreas causing extrinsic compression. An abdominal CT scan revealed a cystic or necrotic mass behind the head of the pancreas representing an inflammatory lesion or abscess.\n\nDuring admission, the patient was treated with oral antibiotics and observed clinically and haematologically. However, her bilirubin continued to rise. An ERCP revealed a 10 cm duodenal diverticular abscess at the level of the major papilla draining pus and bile, likely causing extrinsic compression of the bile duct.\n\nThe patient experienced clinical and hematological improvement and was discharged with a plan for follow-up with the gastroenterology team.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Instructions:\n\nThe patient is advised to follow-up with the gastroenterology team and adhere to any prescribed medications. Additionally, the patient is instructed to consume a healthy diet and maintain a low-risk lifestyle.\n\nFollow-Up Care:\n\nFollow-up with the gastroenterology team.\n\nSigned:\n\nXXXXXXXXX\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The episode involved acute pancreatitis, a dilated bile duct with raised bilirubin, and a duodenal diverticular abscess found at ERCP. The abscess was judged to be the underlying cause of the extrinsic bile duct compression, and presumably of the pancreatitis as well.\n\n**Candidate principal diagnoses**\n- Acute pancreatitis (K85) was the initial diagnosis. The summary does not clearly say the pancreatitis was due to the abscess, and the pancreatitis may be secondary to it.\n- Duodenal diverticulitis or abscess belongs in K57.0 to K57.9 (diverticular disease of intestine), with the duodenum as the site. The 10 cm size suggests a large diverticulum.\n- The abscess is the condition established after investigation as chiefly responsible. It explains the biliary obstruction, the rising bilirubin and, likely, the pancreatitis.\n\n**Coding choice**\nDiverticular disease of the small intestine with abscess is K57.0 (small intestine with perforation and abscess) or K57.1 (small intestine without perforation or abscess). Because an abscess is present, K57.0 applies. In ICD-10-AM the category is K57 (Diverticular disease of intestine), and the duodenum counts as small intestine.\n\nThe alternative is K85 on the basis that the patient was admitted with pancreatitis. However, the abscess was established after investigation as the underlying cause, so it takes precedence as the principal diagnosis.\n\nCODE: K57",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 759,
+    "output_tokens": 503
+  },
+  "seconds": 0.0
+}

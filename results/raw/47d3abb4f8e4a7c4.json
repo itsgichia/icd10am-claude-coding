@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "8d19e88f1c90",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 86-year-old female with past medical history of hypertension and NSTEMI.\n\nHospital Course: The patient presented with chest pressure and left-hand numbness of one-day duration. Investigations revealed thrombocytopenia, NSTEMI, and hyponatremia. She was started on IV solumedrol, a high-intensity statin, and hypertonic saline. Anti-coagulation therapy was contraindicated at this time. She was presumed to have idiopathic thrombocytopenic purpura. However, her thrombocytopenia persisted, and she experienced a rapid decline in neurologic function. She became obtunded within six hours and was intubated to protect the airway. TTP was suspected due to the patient\u2019s declining neurologic function, and plasma exchange therapy was planned. But, the patient succumbed to cardiac arrest before any treatment could be initiated. An autopsy was performed which revealed an acute myocardial infarction.\nDiagnosis: [diagnosis section withheld]\nRecommendations: No recommendations available as the patient has expired."
+      }
+    ]
+  },
+  "text": "The most defensible principal diagnosis is **I21.4 \u2013 Acute subendocardial myocardial infarction (NSTEMI)**. This is a judgment call, because the record is ambiguous, and the alternatives are discussed below.\n\n**Reasoning**\n- The patient presented with chest pressure and left-hand numbness. Investigations confirmed NSTEMI, and the autopsy confirmed an acute myocardial infarction.\n- Under Australian Coding Standards, the principal diagnosis is the condition established after study to be chiefly responsible for the admission. The NSTEMI explains the presenting symptoms and was the condition that prompted the admission.\n- ICD-10-AM indexes NSTEMI to I21.4. The patient's history of NSTEMI does not change this, because the MI is described as acute in this episode and the autopsy confirmed it.\n\n**Additional diagnoses (secondary)**\n- D69.6 Thrombocytopenia, unspecified. ITP (D69.3) was only presumed and TTP (M31.1) only suspected. Neither was confirmed, and the autopsy did not confirm either.\n- E87.1 Hyponatraemia\n- I10 Hypertension\n- R40.2- Coma/obtundation, with the appropriate coma scale code if documented\n- I46.9 Cardiac arrest, unspecified, as the terminal event. It would be coded only if it is not already integral to the MI.\n- Intubation procedure code, if required by the facility\n\n**Caveat**\nIf the final diagnosis, which was withheld, had established TTP as the underlying cause of the thrombocytopenia, neurologic decline and MI, the principal diagnosis could change to M31.1 (Thrombotic microangiopathy). The documentation here only says TTP was suspected, and for inpatient coding in Australia, uncertain diagnoses documented at discharge or death may be coded as if confirmed. Clarification from the clinician would therefore be advisable. Based on the information given, I21.4 is the best choice.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 400,
+    "output_tokens": 668
+  },
+  "seconds": 5.8356977500079665
+}

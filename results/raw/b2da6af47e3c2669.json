@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "9d852a8e6fb1",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nDate of Admission: [INSERT DATE]\nDate of Discharge: [INSERT DATE]\n\nPatient Name: [INSERT NAME]                    MR#[INSERT MR NUMBER]\nClinical Diagnosis: [diagnosis section withheld]\nMedical History:\nThe patient had chronic renal failure, hypertension, and a history of smoking and morbid obesity.\n\nHospital Course:\nThe patient was admitted to the emergency department with exertional dyspnea, shortness of breath, and recurrent episodes of acute pulmonary edema. Upon physical examination, he had bilateral pulmonary rales, lower extremities edema, and a large pulsative mass that was noticed during abdominal examination. Emergency CT scans revealed an infrarenal abdominal aortic aneurysm (AAA) of 9.8 cm size with communication between the aorta and the IVC without any signs of a retroperitoneal rupture. \n\nTreatment:\nThe patient underwent an emergency laparotomy and aortic cross-clamping, during which a 20 \u00d7 15 mm aortocaval communication was discovered after opening the aortic sac. The bleeding from the IVC was controlled by digital compression, and the fistula was oversawn from within the sac with monofilament sutures. After that, a 20mm Dacron tube graft was placed to restore perfusion.\n\nPost-Surgical Management:\nThe patient was shifted to the ICU after surgery and received continuous venovenous haemofiltration due to acute renal failure, which resolved on the fourth postoperative day. The patient was extubated on the tenth postoperative day and discharged after 25 days of hospitalization. At discharge, he exhibited bilateral peripheral edema but no evidence of deep vein thrombosis. His edemas' have resolved, and the patient remains in good health 16 months after the operation.\n\nFollow-up Care:\nThe patient's follow-up appointments for the surgical site have been scheduled. The clinical team will monitor and manage related medical symptoms and tackle his pre-existing conditions appropriately."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **I71.3 Abdominal aortic aneurysm, ruptured**\n\n**Why I71.3**\n- The condition that prompted admission and surgery was the 9.8 cm infrarenal abdominal aortic aneurysm. It had eroded into the inferior vena cava, forming an aortocaval fistula.\n- An aortocaval fistula from an AAA is a **rupture of the aneurysm into the IVC**. The aneurysm wall has broken through into an adjacent vessel.\n- \"No signs of retroperitoneal rupture\" only means there was no free or contained rupture into the retroperitoneum. It does not make the aneurysm unruptured. I71.4 (AAA without rupture) would therefore not reflect the actual pathology.\n- The emergency surgery (aortic cross-clamping, oversewing the fistula from within the sac, and a Dacron tube graft) treated the ruptured aneurysm as a whole.\n\n**Key additional codes**\n\n| Code | Description |\n|---|---|\n| I77.0 | Arteriovenous fistula, acquired (aortocaval fistula) |\n| I50.1 / I50.0 | Left ventricular failure / heart failure (acute pulmonary oedema and high-output failure from the shunt) |\n| N17.9 | Acute kidney failure, unspecified (required CVVH postoperatively) |\n| I12.0 or I12.9 + N18.x | Hypertensive chronic kidney disease, with stage per documentation |\n| E66.x | Obesity (morbid), plus a BMI code if documented |\n| Z72.0 / Z87.891 | Tobacco use, current or history, as documented |\n\n**Caveat**\nSome coders argue for **I71.4** with I77.0 because the clinician states there was no rupture. However, aortocaval fistula is classically recognised as a form of spontaneous AAA rupture. If local practice or the documentation is unclear, a clinician query is advisable to confirm whether the aneurysm should be documented as \"ruptured into the IVC.\"",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 735,
+    "output_tokens": 1043
+  },
+  "seconds": 0.0
+}

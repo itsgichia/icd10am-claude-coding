@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "ebf0ae3afa74",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\n\nThe patient is a 67-year-old male who presented with an enlarging heterogeneous mass in the right upper lobe and shortness of breath with activity. On examination, he had a grade 3-4 of 6 holosystolic murmur. Imaging studies including Echography, Computed tomography (CT), bone scintigraphy, and Positron Emission Tomography (PET) identified the pulmonary malignancy, classified as T2N0M0. An electrocardiogram (ECG) showed severe prolapse of the posterior mitral leaflet with flail of the middle scallop (P2, P3 segment), with severe mitral regurgitation and New York Heart Association (NYHA) class II. The patient elected to have a one-stage ipsilateral Video-Assisted Thoracic Surgery (VATS) and minimally invasive cardiac surgery.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nThe patient underwent right upper lobectomy and minimally invasive surgery (MIS) of mitral valve for definitive diagnostic and therapeutic procedures. The procedures were performed smoothly without complications. Gore-Tex loops were used for ring sizing and valve competency testing. The patient recovered well after the operation and was discharged from the hospital 10 days after the surgery.\n\nFollow-up:\n\nThe patient did not experience any complications during follow-up."
+      }
+    ]
+  },
+  "text": "The ICD-10-AM principal diagnosis is most likely **C34.1, Malignant neoplasm of upper lobe, bronchus or lung**, for the right upper lobe lung cancer (T2N0M0).\n\nThe enlarging right upper lobe mass prompted the admission and was the focus of the lobectomy. The mitral valve prolapse with severe regurgitation is a significant secondary diagnosis, coded as **I34.1, Nonrheumatic mitral valve prolapse** (or I34.0, Nonrheumatic mitral insufficiency, depending on how the coder captures the regurgitation). It was also surgically treated, so it would be recorded as a secondary diagnosis with its procedure.\n\nBecause the mitral valve disease caused part of the presenting shortness of breath, a coder could argue that both conditions equally meet the principal diagnosis definition. In that case, either may be sequenced first under the ICD-10-AM guidelines. Final sequencing should be confirmed against the hospital's coding policy and the full diagnosis section, which was withheld here.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 501,
+    "output_tokens": 1011
+  },
+  "seconds": 0.0
+}

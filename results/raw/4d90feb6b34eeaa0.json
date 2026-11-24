@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "41daccafa734",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient: 25-year-old female\nAdmission date: [DATE]\nDischarge date: [DATE]\nLength of stay: [NUMBER] days\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient presented to the emergency department with complaints of acute onset of epigastric pain and nausea with bilious emesis. Initial workup did not demonstrate evidence of biliary or gallbladder pathology. However, her symptoms progressed and she was re-evaluated with a computed tomography that demonstrated a soft tissue mass located posterior to the gallbladder. Further evaluation with magnetic resonance cholangiopancreatography observed a complex cystic structure of indeterminate etiology at the porta hepatis.\n\nThe patient underwent surgery, during which a hemorrhagic pedunculated mass attached to the infundibulum of the gallbladder was identified and resected. A cholecystectomy was also performed due to inflammation from the hemorrhagic mass. Gross pathology and histology revealed a hemorrhagic benign ectopic liver tissue, and localized cholecystitis in the area adjacent to the mass was also observed.\n\nThe patient's postoperative course was uneventful and her symptoms resolved immediately. She was discharged home on the first postoperative day and was asymptomatic when seen in follow-up.\nDischarge Diagnosis: [diagnosis section withheld]\nTreatment:\nThe patient underwent surgery to remove the hemorrhagic benign ectopic liver tissue and cholecystitis. She was discharged with instructions to follow up with her healthcare provider.\n\nCondition at Discharge:\nThe patient was asymptomatic and in stable condition at the time of discharge.\n\nDischarge Medications: N/A\n\nFollow-up:\nThe patient was instructed to follow up with her healthcare provider.\n\nInstructions:\nThe patient was instructed to follow up with her healthcare provider.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: Q44**\n\nThe principal diagnosis is the hemorrhagic benign ectopic liver tissue attached to the gallbladder infundibulum. It was the mass found at surgery, and its resection accounts for the episode. The localized cholecystitis was secondary, a reaction to the mass, and the cholecystectomy was performed because of it. Q44 (congenital malformations of gallbladder, cystic duct and bile ducts) is the category I would expect for gallbladder heterotopia. I'd confirm the exact four-character subcategory (Q44.7 or Q44.8) against the ICD-10-AM index and any local coding guidance before finalising.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 871,
+    "output_tokens": 938
+  },
+  "seconds": 0.0
+}

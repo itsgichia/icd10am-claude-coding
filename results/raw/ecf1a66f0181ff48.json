@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "json_output",
+  "record_id": "8f808a644d03",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nPatient Discharge Summary:\n\nPatient Name: [Patient Name]\nAdmission Date: [Admission Date]\nDischarge Date: [Discharge Date]\n\nHospital Course:\nThe patient was admitted to the hospital due to lower extremity swelling and pain for four days. Physical examination revealed left lower limb pitting edema and calf tenderness. Color Doppler ultrasound showed an extensive DVT affecting the common iliac, external iliac and common femoral vein as well as superficial femoral down to popliteal vein. Treatment included bed rest, elevation with bandaging of left leg, and low molecular weight heparin injections. Investigations revealed no underlying etiology. Abdominal and pelvic US and CT scan showed an impacting stone and a severe left hydroureteronephrosis with almost lost of cortical thickness. Percutaneous nephrostomy was performed to decompress the hydronephrotic kidney. JJ stent was inserted and subsequently removed. Six weeks later, Doppler US showed complete recanalization of the superficial femoral, popliteal as well as the proximal segment of deep veins of the leg but common iliac, external iliac and common femoral veins and proximal superficial femoral vein were still partially thrombosed. Through pneumatic lithotripsy, the stone was fragmented under spinal anesthesia. Three months after that, Doppler US showed complete recanalization of iliac vessels.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nTreatment included bed rest, elevation with bandaging of left leg, and low molecular weight heparin injections. Percutaneous nephrostomy was performed to decompress the hydronephrotic kidney. JJ stent was inserted and subsequently removed. Pneumatic lithotripsy was performed to fragment the stone under spinal anesthesia. The patient was discharged on oral anticoagulation in the form of rivaroxaban 20 mg daily.\n\nFollow-up:\nThe patient is advised to have regular follow-up visits with their healthcare provider.\n\nSigned by: [Healthcare Provider Name and Title]\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"I80\", \"condition\": \"Deep vein thrombosis of left lower limb (iliofemoral)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 840,
+    "output_tokens": 198
+  },
+  "seconds": 0.0
+}

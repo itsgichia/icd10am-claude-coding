@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "9f3b34af170c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient: 66-year-old woman of Turkish descent\nAdmission: January 2015\nDischarge: September 2015\n\nHospital Course: \n\nAdmitted for follow-up after kidney transplantation, the patient presented with a rise in creatinine and urinary protein-creatinine ratio, and later developed microhaematuria. Biopsy showed extracapillary proliferative changes, and positive autoimmune serology for anti-neutrophil cytoplasmic antibodies, indicative of AAV granulomatosis with polyangiitis. Treatment included intravenous prednisolone, rituximab, plasma exchange and maintenance therapy. However, corticosteroid-related diabetes mellitus, pneumonia, CMV reactivation, and donor-specific HLA antibodies emerged. Despite interventions, including resection of the transplanted kidney, regular hemodialysis became necessary. The patient experienced no further clinically significant vasculitis activity during two years of follow-up. \nDiagnosis: [diagnosis section withheld]\nSignificant Hospital Course Events: \n\n- Elevated creatinine and urinary protein-creatinine ratio, microhaematuria\n- Biopsy showed extracapillary proliferative changes consistent with pauci-immune crescentic glomerulonephritis and AAV\n- Positive autoimmune serology for anti-neutrophil cytoplasmic antibodies\n- Treatment with intravenous prednisolone, rituximab, plasma exchange and maintenance therapy\n- Complications included corticosteroid-related diabetes mellitus, pneumonia, CMV reactivation, and donor-specific HLA antibodies.\n- Regular hemodialysis was commenced four months after the initial presentation.\n- Transplanted kidney was resected due to new development of donor-specific HLA antibodies and persistent haematuria.\n- PR3-ANCA remained positive, but declined steadily.\n- No further clinical vasculitis activity during follow-up for two years.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The condition established after investigation as chiefly responsible for the admission is granulomatosis with polyangiitis (AAV), which presented as a rise in creatinine, proteinuria and microhaematuria in the transplanted kidney. Biopsy showed pauci-immune crescentic glomerulonephritis, and PR3-ANCA was positive.\n\nIn ICD-10-AM, granulomatosis with polyangiitis (Wegener's granulomatosis) is classified to M31.3 in Chapter XIII (diseases of the musculoskeletal system and connective tissue). That makes the three-character category M31.\n\nOther categories were considered and set aside:\n- T86 (complications of transplanted organs and tissues) could apply if the kidney dysfunction were attributed to rejection or transplant failure. Here the documented cause is recurrent or de novo ANCA vasculitis, a systemic disease, so the vasculitis is the underlying condition under treatment.\n- The steroid-related diabetes, pneumonia, CMV reactivation and donor-specific antibodies arose during the stay, so they are additional diagnoses.\n- Dialysis and nephrectomy are procedures and do not determine the principal diagnosis.\n\nCODE: M31",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 893,
+    "output_tokens": 407
+  },
+  "seconds": 0.0
+}

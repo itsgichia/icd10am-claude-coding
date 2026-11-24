@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "19a788b5e2bb",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge summary:\nPatient: 78-year-old woman\nDiagnosis: [diagnosis section withheld]\nTreatment: Successfully treated conservatively\nFollow-up: Recommended\n\nHospital Course:  \nThe patient, a 78-year-old woman, presented with epigastric pain and non-bloody diarrhea six days after a second cure of adjuvant chemotherapy for gastric adenocarcinoma. Further examination revealed Massive Pneumatosis Intestinalis (PI) involving colonic submucosal, extensive subserosal, mesenteric, and free posterior retroperitoneal gas, as seen on subsequent Computed Tomography (CT) scans. The precise etiology of PI was not identified, but chemotherapy (notably 5-Fluorouracil (5-FU)) was a likely contributor. The absence of alarm CT findings allowed for successful conservative treatment of the patient.\n\nDischarge Instructions:  \nThe patient is recommended to continue follow-up care with their primary care physician and attend future appointments as scheduled. Any significant changes in medical condition should be reported immediately to a healthcare provider."
+      }
+    ]
+  },
+  "text": "The most likely ICD-10-AM principal diagnosis code is **K63.8** (Other specified diseases of intestine), which is the index entry for pneumatosis intestinalis.\n\nBecause the summary says chemotherapy, likely 5-fluorouracil, probably contributed, the coder would also consider an adverse-effect code. This would be **T45.1X5A** (Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter), sequenced after K63.8 under the ICD-10-AM adverse-effect convention. The gastric adenocarcinoma (C16.9) would be an additional secondary diagnosis.\n\nVerify against the current ICD-10-AM/ACHI edition and the Australian Coding Standards before final coding, since the summary's diagnosis section is withheld and the final code depends on the documented etiology.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 421,
+    "output_tokens": 753
+  },
+  "seconds": 0.0
+}

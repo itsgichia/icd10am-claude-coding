@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "cot_then_extract",
+  "record_id": "cde5bf6b654a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nHOSPITAL COURSE SUMMARY:\nThis is a discharge summary for a 64-year-old female who was admitted to the hospital with shortness of breath, cough, and fever. The patient had a past history of chronic obstructive pulmonary disease and left upper lobe cavitary lung lesion.\nDIAGNOSIS: [diagnosis section withheld]\nTREATMENT:\nThe patient was placed on intravenous vancomycin, levofloxacin, and fluconazole for a presumed hospital-acquired or fungal pneumonia. On day two, aztreonam was added to the patient's treatment due to a worsening clinical picture. The patient continued antibiotic and antifungal therapy and was discharged with cefpodoxime 400 mg twice a day for ten more days.\n\nCONSULTATIONS:\nThe patient underwent consultations from infectious disease, pulmonology, and cardiothoracic surgery due to her worsening pneumonia with associated cavitary lung lesion.\n\nDISCHARGE:\nThe patient was discharged after a protracted hospital course of nine days with instructions to follow up with infectious disease within the next two weeks.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The chief condition is a necrotising pneumonia with a left upper lobe cavitary lesion, best classed as lung abscess. This is a chapter J (respiratory) condition, so the category is J85. The diagnosis section is withheld, so this is an inference from the cavitary lesion and the cardiothoracic surgery consultation.\n\nCODE: J85",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 973,
+    "output_tokens": 646
+  },
+  "seconds": 0.0
+}

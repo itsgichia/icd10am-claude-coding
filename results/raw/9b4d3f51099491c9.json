@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "882f5cdcd862",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [redacted] \nAge: 28 years \nSex: Female \n\nDate of Admission: [redacted] \nDate of Discharge: [redacted]\n\nReason for Admission:\nThe patient presented with right hip pain after a fall and was diagnosed with a pathologic hip fracture. \n\nClinical Course:\nFollowing admission, the patient underwent radiographic and imaging studies which revealed lytic lesions in the femoral neck and intertrochanteric region as well as osseous destructive lesions in the lumbar spine. The bone scan was suggestive of metastatic disease. A biopsy revealed diffuse large B-cell lymphoma with aggressive features and a germinal center subtype histology. The patient underwent a total right hip replacement and returned for follow-up evaluation.\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was managed for the pathologic hip fracture and underwent biopsy that confirmed the diagnosis of lymphoma. Following diagnosis, the patient underwent a total right hip replacement. The patient is scheduled for further evaluation and management by the oncology team. \n\nDischarge Medications: \nSee the oncology team. \n\nFollow-up Plan: \nThe patient is to follow up with the oncology team. \n\nDischarge Condition: \nThe patient is stable.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "This is a pathological fracture in neoplastic disease. In ICD-10-AM, a pathological fracture due to a neoplasm is coded to M84.5- (pathological fracture in neoplastic disease), with the underlying neoplasm coded as an additional diagnosis. The M84.5 code carries a \"code also\" note for the neoplasm, so the fracture is the principal diagnosis when it is the condition chiefly responsible for the admission and treated (here with a total hip replacement). ICD-10 ch. XIII M84.5 \"Pathological fracture in neoplastic disease\" has an asterisk-free structure in ICD-10-AM, and the classification instructs coding the neoplasm in addition.\n\nAlternatively, the lymphoma could be sequenced as principal, since the underlying malignancy is often coded first. However, ICD-10-AM does not use a dagger/asterisk pairing for M84.5. The fracture is the focus of care: the hip replacement was performed for the fracture, and oncology management was deferred to follow-up. Lymphoma was diagnosed by biopsy but not treated during this stay.\n\nCODE: M84",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 686,
+    "output_tokens": 376
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "ecbc47ac7bb5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Information: \nName: [REDACTED]\nDOB: [REDACTED]\nGender: Male\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient, a 48-year-old male with a history of poorly controlled type 1 diabetes mellitus, presented with a neuroischemic ulcer of the fifth toe, which was classified as a grade 3 infection. He was diagnosed with signs of osteomyelitis and methicillin-resistant Staphylococcus aureus.\n\nTreatment: \nThe patient was treated with oral vancomycin and underwent wound care management according to the TIME algorithm for 1.5 months. The wound bed was cleaned and decontaminated, devitalized tissue was debrided, non-irritant skin protector was applied to protect the peri-lesional tissue, hydrogel was applied to the wound bed, nanocrystalline silver dressing was used, and polyurethane foam dressing was applied. After full healing, the patient's pre-prandial glucose and HbA1c levels improved.\n\nDischarge Information: \nThe patient was discharged with no acute complaints. Follow-up appointments will be scheduled with his primary care physician and podiatrist. A detailed instruction sheet for wound care management and glycemic control was provided to the patient.\n\nCondition at Discharge: \nStable with no acute complaints. Condition improved.\n\nInstructions: \n1. Follow up with Primary Care Physician and Podiatrist.\n2. Follow wound care instructions.\n3. Maintain healthy diet and exercise regime.\n4. Monitor blood sugar levels.\n5. Attend scheduled appointments."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: **E10.73 \u2013 Type 1 diabetes mellitus with foot ulcer due to multiple causes**\n\n## Rationale\n\n- **Diabetes type:** The patient has documented **type 1 diabetes mellitus**, so the E10 category applies.\n- **Reason for admission:** He was admitted for a **neuroischaemic ulcer of the fifth toe**. \"Neuroischaemic\" means the ulcer has two causes: diabetic peripheral neuropathy and peripheral angiopathy (ischaemia).\n- **Coding standard:** Under ACS 0401 *Diabetes mellitus and intermediate hyperglycaemia*, a diabetic foot ulcer with more than one cause is assigned the combination code **E1x.73 (foot ulcer due to multiple causes)**. This takes precedence over the neuropathic-only or angiopathic-only codes.\n- **Sequencing:** In ICD-10-AM, a diabetes complication that is the reason for admission is captured by the E10 combination code, which is sequenced first.\n\n## Likely Additional Codes\n\n| Condition | Suggested code(s) |\n|---|---|\n| Neuropathy component | E10.42 (diabetic polyneuropathy) |\n| Peripheral angiopathy component | E10.51 (peripheral angiopathy, without gangrene) |\n| Osteomyelitis of toe | M86.97 (osteomyelitis, unspecified, ankle and foot), or a more specific M86.x code if the type is documented |\n| Ulcer site | L97 (ulcer of lower limb, NEC), per ACS guidance for site specificity |\n| MRSA | B95.6 (*Staphylococcus aureus* as cause of disease), plus U06.x (resistance to antimicrobial drugs) depending on the edition |\n| Debridement | Procedure code from block 1628 (excisional debridement), if performed in theatre or by a clinician |\n\n*Note:* Check the specific ICD-10-AM/ACS edition in use, as code details (particularly the antimicrobial resistance codes and the E1x.6x hyperglycaemia guidance) vary between editions.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 635,
+    "output_tokens": 1221
+  },
+  "seconds": 0.0
+}

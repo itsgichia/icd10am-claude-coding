@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "0f1bccd11b80",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nPatient Information: \nName: Not specified\nAge: 62\nGender: Male\n\nHospital Course: \nThe patient was admitted to the hospital with complaints of abdominal pain and distension for the past month, which worsened in the last five days. The patient was diagnosed with small intestinal obstruction and underwent emergency laparotomy. During the operation, a small amount of food fiber was expelled, and multiple \u201cstenosis rings\u201d were found in the intestinal lumen at approximately 40 cm from the distal obstruction. The diseased bowel was removed, and the patient recovered without any discomfort. Pathological findings reported intestinal stenosis, mucosal erosion, and inflammatory granulation tissue formation. It showed neutrophil infiltration and vasodilation and congestion in the serosa. The muscle layer and serosa layer did not show any structural abnormality.\n\nSummary of Hospital Stay: \nThe patient was admitted to the hospital with abdominal pain and distension for the past month and was diagnosed with small intestinal obstruction. The patient underwent emergency laparotomy, and a diseased bowel was removed. The pathological findings reported intestinal stenosis and mucosal erosion. The patient recovered well without any discomfort. \nDiagnosis: [diagnosis section withheld]\nCondition at Discharge: \nRecovered.\n\nFollow-up Plan: \nPatient was followed up for two months, and no discomfort was found. No further treatment is required at this time.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: K56**\n\n1. **Chapter:** The condition is a disease of the small bowel, so it falls in the digestive system chapter (K).\n2. **Principal diagnosis:** The episode was driven by small intestinal obstruction, which was treated by emergency laparotomy and resection.\n   - At operation the obstruction was found to be caused by multiple stenosing rings in the bowel lumen.\n   - Pathology showed stricture, mucosal erosion and inflammatory granulation tissue.\n3. **Category:** Obstruction or stenosis of the intestine without hernia is classified to K56 (paralytic ileus and intestinal obstruction without hernia). Stenosis of the intestine is indexed under K56.6.\n\nThe diagnosis section is withheld, so the exact cause of the rings is uncertain. The picture could fit NSAID-related \"diaphragm disease\" or cryptogenic multifocal ulcerous stenosing enteritis. A confirmed specific cause might change the code. On the available documentation, though, the obstruction from intestinal stenosis is what was chiefly responsible for the admission.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1025,
+    "output_tokens": 586
+  },
+  "seconds": 0.0
+}

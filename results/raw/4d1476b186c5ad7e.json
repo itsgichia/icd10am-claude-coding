@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "7484ebf71696",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient: [Name]\n\nSex: Male\n\nAge: 76 years\n\nMedical Record No.: [Number]\n\nHospital Admission Date: [Date]\n\nDischarge Date: [Date]\n\nHospital Course:\n\nA 76-year-old male patient was admitted to the hospital with an incidental 4 cm left renal mass, which was treated with a left partial nephrectomy. Upon pathological examination, it was discovered that the patient was suffering from WHO/ISUP grade 1, TNM stage pT1 clear cell RCC, with the resection margin positive for the tumor.\n\nThe patient underwent a right radical orchiectomy when he was found to have a metastatic tumor in the right testis. The metastatic tumor was two centimeters in size, and it was confined to the testicular parenchyma.\n\nFourteen months after the orchiectomy, he underwent a completion left radical nephrectomy due to the recurrence of the tumor.\n\nOngoing imaging surveillance discovered several soft tissue masses in the left posterior chest wall, as well as masses in the pancreas. A two-centimeter enhancing mass was found in the upper pole of the right kidney 87 months following the orchiectomy.\n\nThe patient has been offered systemic therapy of VEGF inhibitor and discharged with continued medical supervision. He is alive with disease, 93 months post-orchiectomy.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Status:\n\nThe patient is discharged with continued medical supervision.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "This discharge summary spans several years of care and several procedures, so it does not describe one clean episode. The question is which condition was chiefly responsible for this admission.\n\nThe final episode, as written, ends with the patient being offered systemic VEGF inhibitor therapy and discharged. The condition being managed at that point is metastatic or recurrent clear cell renal cell carcinoma. The primary site is the kidney, and the primary was previously resected, with a completion left nephrectomy. A new 2 cm enhancing mass in the right kidney is described, which is likely a recurrence or new renal lesion, along with metastases in the chest wall and pancreas.\n\nThe coding question is whether the principal diagnosis is the renal primary (C64) or a secondary site. The patient is receiving systemic therapy for the disease overall. Where the primary has been excised and there is a new renal mass and metastases, the right renal mass is a malignant lesion of the kidney. The systemic therapy targets the renal cell carcinoma, and the primary is still active, as the right kidney mass shows. So C64 (malignant neoplasm of kidney, except renal pelvis) is the most defensible choice.\n\nThe alternative is C79 (secondary malignant neoplasm of other sites), but with an active renal lesion and therapy directed at the RCC, C64 is better.\n\nCODE: C64",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 728,
+    "output_tokens": 440
+  },
+  "seconds": 0.0
+}

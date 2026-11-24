@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "3db73b0f0932",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Unidentified\n\nDate of Admission: Not specified\n\nDate of Discharge: Not specified\n\nReason for Admission: Pain in right shoulder and left thigh with prior history of moderate trauma\n\nSummary:\n\nA 14-year-old male of Afghan descent was admitted to the hospital with pain in his right shoulder and left thigh following a history of moderate trauma. Physical examination revealed fever, elevated leukocyte count, mild polymorphonuclear predominance, and reduced range of motion in the right shoulder. X-ray imaging showed mixed density, periosteal reaction, and cortical disruption with soft tissue swelling in the metaphysis of the right humerus and left fibula. Computed tomography and magnetic resonance imaging detected two lesions involving the bone marrow and cortex in the head of the humerus and body of the fibula. A biopsy of the proximal humerus revealed diffuse inflammatory infiltration, consistent with xanthogranulomatous osteomyelitis. Deep fluid samples also showed Staphylococcus aureus infection, sensitive to cloxacillin, which was administered to the patient. After hospitalization, the patient's general condition improved, and he was able to walk without pain. The patient left the hospital without completing the duration of treatment, but did not report any relapse of pain or discharge at his follow-up appointment within 4 months in an outpatient clinical setting.\nDischarge Diagnosis: [diagnosis section withheld]\nCondition at Discharge: Improved\n\nTreatment: Cloxacillin\n\nFollow-up Care: Follow-up appointment within 4 months in an outpatient clinical setting\n\nPrognosis: Good\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "M86",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 693,
+    "output_tokens": 167
+  },
+  "seconds": 0.0
+}

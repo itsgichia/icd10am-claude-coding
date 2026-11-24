@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "d972a0a232a5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient Name: [REDACTED]\nPatient Age: 45 years\nGender: Male\nDate of admission: [REDACTED]\nDate of discharge: [REDACTED]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted with symptoms of intermittent fever, chills and rigors along with night sweats, loss of appetite, and weight loss. The patient also had a transient macular rash and generalized painful lymphadenopathy. Synovitis involving lower limb small joints was noted following the presentation that progressed to larger joints in the lower and upper limbs. Laboratory investigations revealed high white cell counts, normocytic anemia and high inflammatory markers which were in a rising trend following the onset of arthritis. The patient was diagnosed as a case of DLBCL following a lymph node biopsy.\n\nTreatment:\nThe patient was started on non-steroidal anti-inflammatory agents and colchicine for the arthritis but there was no response to treatment. Treatment with RCHOP chemotherapy commenced which showed a marked response in the synovitis following the first cycle of therapy. The patient completed the chemotherapy with intermittent infections.\n\nSummary:\nThe patient presented with symptoms of intermittent fever, chills, and rigors along with night sweats, loss of appetite, and weight loss. The patient had synovitis involving the small and large joints of the upper and lower limbs with a lower limb predominance. Laboratory investigations revealed high white cell counts and anemia. A lymph node biopsy was positive for DLBCL. The patient underwent RCHOP chemotherapy which resulted in the complete resolution of synovitis. The patient was discharged in stable condition with a follow-up plan for further evaluation and management."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is **diffuse large B-cell lymphoma (DLBCL)**, which in ICD-10-AM is coded **C83.3-**, with the fifth character specifying the site.\n\nI'd suggest **C83.38 (Diffuse large B-cell lymphoma, lymph nodes of multiple sites)**, because the patient had generalized lymphadenopathy.\n\nPoints to check:\n- **Site:** If the discharge summary or pathology report documents a single nodal region, use the matching site code instead (e.g., C83.31 for head, face and neck nodes, or C83.35 for inguinal and lower limb nodes). If no site is documented, C83.30 (unspecified site) applies.\n- **Principal diagnosis:** The admission symptoms (fever, night sweats, weight loss) and the arthritis are integral to or secondary to the lymphoma, so they are not coded as principal. The synovitis/arthritis may be coded as an additional diagnosis if it is clinically significant. The anaemia and raised inflammatory markers may also be coded as additional diagnoses.\n- **Final coding:** Confirm against the full record and the current ICD-10-AM/ACHI edition, and check any local coding guidelines.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 636,
+    "output_tokens": 1109
+  },
+  "seconds": 0.0
+}

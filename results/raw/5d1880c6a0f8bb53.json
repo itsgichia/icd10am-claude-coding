@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "cot_then_extract",
+  "record_id": "df7ed05e020c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nHospital Course Summary:\n\nAdmission Date: March 10, 2020\nDischarge Date: April 7, 2020\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course: A 50-year-old male patient presented with symptoms of cough and fever lasting for 47 days. The patient was diagnosed with COVID-19 infection based on positive nucleic acid results on February 15th. Prior treatment included arbidol and lianhua qingwen granules. The patient was admitted to Wuhan Huoshenshan Hospital on March 10th with peripheral oxygen saturation of 96% and respiratory rate of 18 breaths/minute. CT findings showed a bilateral, scattered, high-density shadow and fiber- and spine-like opacities. \n\nDuring his hospitalization, convalescent plasma from COVID-19 patients, recombinant human interferon, lianhua qingwen granules, arbidol, and chloroquine phosphate were administered. On March 24th, the patient's CT scan showed substantial improvement with no obvious pulmonary lesions. On April 3-5, nucleic acid test results for SARS-CoV-2 were all negative. SARS-CoV-2 IgM and IgG levels were markedly reduced. The patient was discharged from the hospital on April 7th after three consecutively negative SARS-CoV-2 RNA tests. \nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Condition: The patient was discharged from the hospital in good condition and stable. The patient was advised to follow COVID-19 prevention protocols and report any symptoms of illness to their primary care provider.\n\nFollow-up Care: Follow-up care was recommended for the patient to monitor their health and recovery progress.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible for the admission is COVID-19 with pulmonary involvement. It was confirmed by a positive nucleic acid test and CT lung changes, and treated with convalescent plasma, interferon and antivirals. In ICD-10-AM, COVID-19 is coded U07.1 (virus identified) in chapter U, \"codes for special purposes\", so the category is U07.\n\nCODE: U07",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1180,
+    "output_tokens": 138
+  },
+  "seconds": 0.0
+}

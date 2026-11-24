@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "39c0d5885b21",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\n\nDOB: [REDACTED]     Age: 54     Sex: Male\n\nAdmission Date: [REDACTED]     Discharge Date: [REDACTED]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted post-SIRT after whole-body 18-fluorine-fluorodeoxyglucose positron-emission-tomography/computed tomography (18F-FDG PET/CT) revealed malignant lesions in the medial segment of the left hepatic lobe, following left lateral segmentectomy that had been performed. The patient was referred to our hospital as there were no local options of stereotactic ablative radiation therapy.\n\nDuring the course of follow-up, the patient developed progressive dyspnea and dry cough three weeks post-SIRT. Chest radiogram and computed tomography of the thorax were performed, and the patient put on intravenous prednisone at 1 mg/Kg/day with antibiotic therapy. Seven weeks post-SIRT, 18F-FDG PET/CT scan appeared to show multiple ground-glass opacities in both lungs compatible with radiation pneumonitis. The patient was rehospitalized and glucocorticoid treatment with modified antibiotherapy continued. Four weeks post-SIRT, DLCO reduction was more remarkable and the SpO2 level dropped to 97%.\n\nEleven weeks post-SIRT, a CT scan revealed bilateral diffuse, patchy ground-glass attenuation/consolidation areas seemed to have progressed, along with a significant decrease in SpO2 from 92 to 82%. The patient was transferred to the Intensive Care Unit (ICU), and one week later, the patient expired due to pulmonary complications.\n\nDischarge Medications:\n\nNone.\n\nFollow-up:\n\nThe patient expired during Hospitalization. \n\nDischarge Condition:\n\nDeceased.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The episode centres on radiation pneumonitis after SIRT (selective internal radiation therapy) for liver malignancy. The patient was rehospitalized for it, treated with glucocorticoids and antibiotics, transferred to ICU, and died of pulmonary complications. The condition chiefly responsible for this admission is therefore radiation pneumonitis.\n\nIn ICD-10-AM, radiation pneumonitis is coded to J70.0 (acute pulmonary manifestations due to radiation) or J70.1 (chronic and other pulmonary manifestations due to radiation). Both fall under the three-character category J70, \"Respiratory conditions due to other external agents\". The underlying liver malignancy would be a secondary diagnosis, since the admission was for the pneumonitis rather than the cancer.\n\nCODE: J70",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1191,
+    "output_tokens": 272
+  },
+  "seconds": 0.0
+}

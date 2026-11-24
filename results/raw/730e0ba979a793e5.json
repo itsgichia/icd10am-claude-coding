@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "faaba5f90a3b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Not provided\nMedical Record Number: Not provided\nDischarge Date: Not applicable\nAdmission Date: Not provided\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient, a 77-year-old Middle-Eastern female, was admitted to our facility with suspected COVID-19 after she presented with a fever, cough, lethargy, dyspnea, and bilateral opacities on chest X-ray. She was started on ceftazidime and azithromycin and was placed on oxygen via nasal cannula. A CT scan of the chest showed bilateral ground glass appearance throughout the lung, and she was transferred to the ICU due to worsening hypoxia and fever.\n\nDuring her hospitalization, the patient's condition deteriorated, and she required intubation. She was switched to antibiotic therapy with ceftriaxone and azithromycin and started on hydroxychloroquine and vitamin C. Tocilizumab, an anti-interleukin-6 monoclonal antibody, was administered twice.\n\nDue to worsening oxygen saturation, the patient was proned for 18 hours a day and given remdesivir. However, her condition continued to decline, requiring levophed for maintenance of hemodynamic stability and CVVHD due to acute kidney injury. Despite aggressive management, the patient's family ultimately chose to pursue comfort measures, and the patient passed away.\n\nDischarge Instructions:\nN/A\n\nFollow-Up Recommendations:\nN/A\n\nSigned by:\nNot applicable"
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis is **U07.2, COVID-19 (virus not identified)**, but the record doesn't support this with certainty.\n\n- **Why U07.2:** The patient was admitted with suspected COVID-19 and had bilateral ground-glass opacities on CT. The record never documents a positive SARS-CoV-2 test, so U07.2 fits a clinically diagnosed case.\n- **U07.1 instead:** If a laboratory test confirmed SARS-CoV-2, use **U07.1, COVID-19 (virus identified)**.\n- **Pneumonia:** If the discharge diagnoses document COVID-19 pneumonia, the Australian coding standards generally add **J12.8** (other viral pneumonia) as an additional code.\n- **Missing information:** The discharge diagnosis section is withheld, so the final code depends on the attending physician's documented diagnoses and the confirmed test result. Coders should verify these before assigning a principal diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 566,
+    "output_tokens": 1067
+  },
+  "seconds": 0.0
+}

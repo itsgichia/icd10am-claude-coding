@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "3db73b0f0932",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Unidentified\n\nDate of Admission: Not specified\n\nDate of Discharge: Not specified\n\nReason for Admission: Pain in right shoulder and left thigh with prior history of moderate trauma\n\nSummary:\n\nA 14-year-old male of Afghan descent was admitted to the hospital with pain in his right shoulder and left thigh following a history of moderate trauma. Physical examination revealed fever, elevated leukocyte count, mild polymorphonuclear predominance, and reduced range of motion in the right shoulder. X-ray imaging showed mixed density, periosteal reaction, and cortical disruption with soft tissue swelling in the metaphysis of the right humerus and left fibula. Computed tomography and magnetic resonance imaging detected two lesions involving the bone marrow and cortex in the head of the humerus and body of the fibula. A biopsy of the proximal humerus revealed diffuse inflammatory infiltration, consistent with xanthogranulomatous osteomyelitis. Deep fluid samples also showed Staphylococcus aureus infection, sensitive to cloxacillin, which was administered to the patient. After hospitalization, the patient's general condition improved, and he was able to walk without pain. The patient left the hospital without completing the duration of treatment, but did not report any relapse of pain or discharge at his follow-up appointment within 4 months in an outpatient clinical setting.\nDischarge Diagnosis: [diagnosis section withheld]\nCondition at Discharge: Improved\n\nTreatment: Cloxacillin\n\nFollow-up Care: Follow-up appointment within 4 months in an outpatient clinical setting\n\nPrognosis: Good"
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: M86.19 Other acute osteomyelitis, site unspecified**, with site-specific alternatives noted below.\n\n**Reasoning**\n\n- The final diagnosis is xanthogranulomatous osteomyelitis. It is a histological variant of osteomyelitis, and the culture grew Staphylococcus aureus. The patient had fever, raised white cell count, and a short history after trauma, so it is best coded as acute (or subacute) osteomyelitis.\n- ICD-10-AM (like ICD-10-WHO) uses a fifth-character site code in category M86. Here the lesions are multifocal: the right humerus and left fibula.\n- ICD-10-AM M86.- has the following structure:\n  - M86.0 Acute haematogenous osteomyelitis\n  - M86.1 Other acute osteomyelitis\n  - M86.2 Subacute osteomyelitis\n  - M86.6 Other chronic osteomyelitis\n- Multifocal haematogenous S. aureus osteomyelitis in an adolescent, with no direct inoculation, fits **M86.0 Acute haematogenous osteomyelitis**. The trauma was only moderate and there was no open wound, so M86.1 is less appropriate.\n- Site: the principal lesion is the humerus (the biopsy was from the proximal humerus), so I would use the upper arm site (the humerus), and code the fibular site as an additional code. In ICD-10-AM the site characters are 0 multiple sites, 1 shoulder region, 2 upper arm, 3 forearm, 4 hand, 5 pelvic region/thigh, 6 lower leg, 7 ankle/foot, 9 unspecified. Because two sites are involved, multiple sites (0) is also defensible.\n\n**Suggested coding**\n- Principal: **M86.00 Acute haematogenous osteomyelitis, multiple sites**\n- Additional: B95.6 Staphylococcus aureus as the cause of diseases classified to other chapters\n\nIf the coder prefers to code by the main biopsied site, the alternative is M86.01 (shoulder region, which includes the proximal humerus).\n\nI can't be certain of the exact fifth character without the original coding manual and the withheld diagnosis, so please verify against the current ICD-10-AM edition.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 609,
+    "output_tokens": 772
+  },
+  "seconds": 0.0
+}

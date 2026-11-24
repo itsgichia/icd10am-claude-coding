@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "7c591e864a3b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient: 46-year-old male with a history of MSA with predominant parkinsonism\n\nHospital Course:\nThe patient was emergently admitted to our neurological department with tracheal intubation due to sudden respiratory failure at night. He had a history of high-pitched snore at age 38 and neck and trunk rigidity, bradykinesia, postural tremor, and dysuria at age 44. He was diagnosed with MSA at age 45. The possibility of MSA-related central respiratory disorder or obstructive respiratory disorder due to MSA and/or obesity was considered after pulmonary inflammatory diseases were excluded. The patient underwent tracheostomy to maintain the airway after extubation which was successful, but continuous positive airway pressure may have also been helpful. Polysomnography showed obstructive SA, but not central SA. Awake fiberoptic laryngoscopy displayed no upper-airway obstruction but slight vocal-cord abduction impairment during inspiration while sleep laryngoscopy was refused by the patient. To assess the spatial and temporal conditions of the upper respiratory tract, including the nasal passages, pharynx, larynx, and portion of the trachea, 4D-CT during sleep was performed. The effective dose was 1.84 mSv.\n\nFindings:\nReconstructed 4D-CT images of respiration during sleep revealed abnormal upper-airway findings compared with the images acquired during awake respiration: glottis closure at the terminal stage of inspiration, subsequent velopharyngeal closure, and succeeding glottis opening and expansion of pharyngeal pressure, but no other upper airway-obstruction findings.\nDiagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was discharged with tracheostoma retained which was determined to be indispensable, although central apnea after tracheostomy may cause sudden central origin-related death. The patient was followed up at 14 months postoperatively, and no further airway-related complications were reported.\n\nProcedures:\nTracheostomy.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"G90\", \"condition\": \"Multiple system atrophy (disorder of autonomic nervous system)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 815,
+    "output_tokens": 40
+  },
+  "seconds": 0.0
+}

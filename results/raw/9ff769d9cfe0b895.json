@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "f35b776271f2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nAdmission Date: November 2013\nDischarge Date: January 2017\nLength of Stay: 3 years and 2 months\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe 52-year-old male patient was diagnosed with a left temporal GBM in November 2013 after he presented with memory deficits and aphasia. He underwent standard radiation and temozolomide treatment initially. At the time of ketogenic diet therapy, the patient was on fifth-line treatment for recurrent GBM, which included the FDA-approved antiangiogenic therapy bevacizumab and irinotecan. Due to nausea, headaches, and fatigue, the patient started a ketogenic diet for 3.5 months. During the diet period, the patient was able to add physical exercise to his routine along with dance lessons. After discontinuation of the diet, the patient reported worsening symptoms, including difficulty reading and decreased short term memory. The patient's symptoms continued to progress, and he passed away in January 2017.\n\nClinical Findings:\nDuring the hospital course, the patient reported memory deficits and aphasia. The initial treatment included standard radiation and temozolomide, followed by the antiangiogenic therapy bevacizumab and irinotecan. The patient was then switched to a ketogenic diet for 3.5 months, which resulted in increased physical activity, but also cravings for carbs and sweets. The patient's symptoms worsened after discontinuation of the diet, and his disease continued to progress until his death in January 2017.\n\nCondition at Discharge:\nThe patient passed away due to the progression of his left temporal GBM.\n\nFollow-Up:\nThe patient passed away in January 2017, and no further follow-up was possible."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: glioblastoma of the left temporal lobe**\n\n**ICD-10-AM code: C71.2 \u2013 Malignant neoplasm of the temporal lobe**\n\n**Rationale:**\n- The condition treated and monitored throughout the episode was glioblastoma multiforme (GBM) in the left temporal lobe. It was the cause of the memory deficit and aphasia at presentation and the cause of death.\n- In ICD-10-AM, glioblastoma is classified by site as a malignant brain neoplasm. The morphology code is M9440/3 (glioblastoma, NOS), and the topography code is C71.2 for the temporal lobe. Laterality is not captured in the C71 category.\n- The patient was on fifth-line treatment for recurrent disease. Recurrence of a primary brain tumour is still coded to the primary site (C71.2), not to a secondary site code.\n\n**Additional codes to consider (optional):**\n- R47.0 Dysphasia and aphasia, and R41.3 Other amnesia, are not usually coded separately because they are integral to the brain tumour.\n- Z51.1 Chemotherapy session for neoplasm could apply to the bevacizumab and irinotecan encounters.\n- Z71.3 Dietary counselling and surveillance could apply to the ketogenic diet.\n\n**Caveat:** The stay described (November 2013 to January 2017) is really a series of encounters over about 3 years, not one continuous admission. In practice, each episode of care would be coded separately, with C71.2 as the principal diagnosis for oncology-related admissions.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 618,
+    "output_tokens": 531
+  },
+  "seconds": 0.0
+}

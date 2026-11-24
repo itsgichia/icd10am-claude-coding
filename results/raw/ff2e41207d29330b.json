@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "2fcbd88b92a5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nGender: Female\nAge: 48\nDOB: [REDACTED]\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nHospital: [REDACTED]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient underwent a laparoscopic cholecystectomy and was discharged on the first postoperative day without any complications.\nFinal Diagnosis: [diagnosis section withheld]\nCourse in Hospital:\nThe patient was kept under observation for three months and no further complications were reported.\n\nDischarge Instructions:\nThe patient is advised to follow a low-fat diet and avoid fatty foods to prevent any recurrence of symptoms. The patient is advised to avoid smoking and alcohol as they can increase the risk of gallbladder diseases. In case of any symptoms, the patient should consult her healthcare provider immediately.\n\nFollow-up Care:\nThe patient is advised to follow up with her primary care physician for regular check-ups and monitoring.\n\nCompleted By:\n[REDACTED]\nMedical Doctor\n\nDate Completed:\n[REDACTED]"
+      }
+    ]
+  },
+  "text": "I can't assign a definitive principal diagnosis code from this summary, because the admission and final diagnosis sections are withheld. The note only documents the procedure (laparoscopic cholecystectomy) and advice about gallbladder disease. Coding standards require the principal diagnosis to be the condition established after study to be chiefly responsible for the admission, and it must be documented by the clinician. A code cannot be inferred from the procedure alone.\n\n**Likely candidates, depending on what the full record documents (ICD-10-AM/ACHI):**\n\n| Documented condition | ICD-10-AM code |\n|---|---|\n| Calculus of gallbladder with acute cholecystitis | K80.00 (K80.0- group) |\n| Calculus of gallbladder with other cholecystitis (chronic) | K80.10 / K80.11 |\n| Calculus of gallbladder without cholecystitis (biliary colic, symptomatic gallstones) | K80.20 |\n| Acute cholecystitis without calculus | K81.0 |\n| Chronic cholecystitis without calculus | K81.1 |\n| Cholesterolosis or polyp of gallbladder | K82.4 / K82.8 |\n\nCode assignment should be checked against the current ICD-10-AM edition, as the K80 fourth- and fifth-character subdivisions differ between editions.\n\n**Procedure code:** laparoscopic cholecystectomy is ACHI 30445-00 [965], or 30443-00 if a cholangiogram was also performed. This is a procedure code, not a diagnosis code.\n\n**What I'd need to finalize the code:**\n- The admission and final diagnosis, or the histopathology and operative report.\n- Whether stones were present.\n- Whether cholecystitis was acute or chronic.\n- Whether there was choledocholithiasis or cholangitis.\n\nIf you can share the withheld diagnosis section, I can give you the specific code. If I had to pick the most common scenario, it would be K80.20 (gallstones without cholecystitis), but that is a guess, not a coding determination.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 440,
+    "output_tokens": 682
+  },
+  "seconds": 0.0
+}

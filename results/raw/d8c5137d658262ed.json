@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "be032d0262d2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 23-year-old male\n\nAdmission Date: [date]\n\nDischarge Date: [date]\n\nReason for admission: One-day history of right-sided pleuritic chest pain, haemoptysis, and fever\n\nHospital Course:\n\nThe patient was admitted with right-sided pleuritic chest pain, haemoptysis, and fever. Physical examination revealed rales and bronchial breathing in the right infrascapular region. Chest X-ray demonstrated right lower lobe consolidation. The patient was diagnosed with community-acquired pneumonia. Computed tomography pulmonary angiogram (CTPA) ruled out pulmonary embolism (PE). The patient was treated with IV ceftriaxone for four days and oral amoxicillin for three days. The patient showed complete resolution of symptoms on day 4 and was discharged.\nDischarge Diagnosis: [diagnosis section withheld]\nInstructions for Follow-up Care:\n\nThe patient is advised to follow-up with their primary care physician and continue taking their prescribed medications as directed.\n\nFollow-up Lab and Diagnostic Exams:\n\nNone\n\nFollow-up Appointments:\n\nThe patient is advised to schedule a follow-up appointment with their primary care physician.\n\nTechnical Terms and Abbreviations:\n\nPE: Pulmonary Embolism\n\nCTPA: Computed Tomography Pulmonary Angiogram\n\nIV: Intravenous"
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: **J18.9 \u2013 Pneumonia, unspecified**\n\n## Rationale\n\n1. **Condition chiefly responsible for admission:** The patient's presenting symptoms (pleuritic chest pain, haemoptysis, fever) were attributed to **community-acquired pneumonia**, which was confirmed and treated with IV ceftriaxone followed by oral amoxicillin.\n\n2. **No organism identified:** No sputum culture, blood culture, or other microbiological result is documented. So pathogen-specific codes such as J13 (*Streptococcus pneumoniae*) or J15.x (other bacterial pneumonia) cannot be assigned. Coders should not infer an organism from the choice of antibiotic.\n\n3. **Symptoms are not coded separately:** Pleuritic chest pain (R07.1), haemoptysis (R04.2) and fever (R50.9) are integral to pneumonia. Under ACS 0001, they are not coded as additional diagnoses.\n\n4. **Pulmonary embolism was excluded:** The CTPA ruled out PE, so no code is assigned for it.\n\n## Coding note: J18.1 vs J18.9\n\nThe chest X-ray showed **right lower lobe consolidation**. The clinician, however, documented the diagnosis as \"community-acquired pneumonia,\" not \"lobar pneumonia.\"\n\n- Coders should not assign codes based on radiology findings alone, and should not infer a more specific diagnosis than the clinician documented.\n- If the clinician confirms \"lobar pneumonia\" or \"right lower lobe pneumonia,\" **J18.1 \u2013 Lobar pneumonia, unspecified** would be appropriate.\n- Clinician clarification is advisable, since the withheld discharge diagnosis section may contain more specific wording.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 521,
+    "output_tokens": 1069
+  },
+  "seconds": 0.0
+}

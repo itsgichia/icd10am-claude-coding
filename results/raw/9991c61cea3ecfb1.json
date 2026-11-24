@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "0beba3f33a3c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nMedical Record Number: [redacted]\nDate of Admission: [redacted]\nDate of Discharge: [redacted]\n\nHospital Course:\nThe patient was admitted to our hospital with shortness of breath, dry coughing and fever, after testing positive for COVID-19. The patient was intubated and put on ventilator support within 36 hours of presentation, as he had severe hypoxia and increased work of breathing. Treatment was initiated with various medications to manage his COVID-19 symptoms. \nThroughout his 31-day hospital course, the patient's clinical condition was complicated by septic shock, acute respiratory distress syndrome (ARDS), volume overload, and uncontrolled diabetes. The chest X-ray revealed bilateral pneumothoraces, which were confirmed with a chest CT, along with pneumomediastinum. The patient was transferred to a hospital where thoracic surgery was available. Imaging after transfer showed that the pneumothorax had slightly increased without tension physiology. The PEEP was decreased from 8 to 6 cm H20 where it remained till his discharge. On the 31st day of admission the patient passed away from hypoxic respiratory failure.\nDiagnosis: [diagnosis section withheld]\nProcedures:\nThe patient was intubated and put on ventilator support within 36 hours of presentation. \n\nHospital Course:\nThe patient was admitted with COVID-19 and developed severe hypoxia and increased work of breathing. Treatment was initiated with various medications to manage his COVID-19 symptoms. Throughout his hospital course, the patient's clinical condition was complicated by septic shock, ARDS, volume overload, and uncontrolled diabetes. The patient passed away from hypoxic respiratory failure on hospital day 31.\n\nOutcome:\nThe patient passed away from hypoxic respiratory failure after a prolonged hospital stay. \n\nFollow-Up:\nN/A\n\nDischarge Medications:\nN/A \n\nFollow-up Instructions:\nN/A\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: U07**\n\nThe principal diagnosis is **COVID-19, virus identified (U07.1)**. The three-character category is **U07**.\n\n**Why COVID-19 is the principal diagnosis**\n- The patient was admitted after testing positive for COVID-19, with shortness of breath, dry cough and fever.\n- After study, COVID-19 is the condition chiefly responsible for the admission. The ventilation and drug treatment were directed at it.\n- The virus was confirmed by testing, so U07.1 (virus identified) applies, not U07.2 (virus not identified).\n\n**Why the other conditions are not principal**\n- **Presenting symptoms** (dyspnoea, cough, fever, hypoxia) are integral to COVID-19 and are not coded as principal.\n- **Septic shock, ARDS, pneumothoraces, pneumomediastinum, volume overload and hypoxic respiratory failure** arose during the stay as complications or manifestations. They are additional diagnoses, for example J80 for ARDS.\n- **Uncontrolled diabetes** is a comorbidity and is coded as an additional diagnosis (E11.x, if confirmed as type 2).\n- **Intubation and ventilation** are procedures, not diagnoses.\n\n**Sequencing basis**\nAustralian COVID-19 coding guidance (ACCD advice and the related ACS) sequences U07.1 first when COVID-19 meets the principal diagnosis criteria. Its manifestations, such as viral pneumonia and ARDS, follow as additional codes. I'd confirm the exact standard number against the current ACS edition before finalising.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 912,
+    "output_tokens": 808
+  },
+  "seconds": 0.0
+}

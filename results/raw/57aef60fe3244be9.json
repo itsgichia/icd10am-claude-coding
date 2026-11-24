@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "2fcbd88b92a5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nGender: Female\nAge: 48\nDOB: [REDACTED]\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nHospital: [REDACTED]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient underwent a laparoscopic cholecystectomy and was discharged on the first postoperative day without any complications.\nFinal Diagnosis: [diagnosis section withheld]\nCourse in Hospital:\nThe patient was kept under observation for three months and no further complications were reported.\n\nDischarge Instructions:\nThe patient is advised to follow a low-fat diet and avoid fatty foods to prevent any recurrence of symptoms. The patient is advised to avoid smoking and alcohol as they can increase the risk of gallbladder diseases. In case of any symptoms, the patient should consult her healthcare provider immediately.\n\nFollow-up Care:\nThe patient is advised to follow up with her primary care physician for regular check-ups and monitoring.\n\nCompleted By:\n[REDACTED]\nMedical Doctor\n\nDate Completed:\n[REDACTED]\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The diagnosis sections are withheld, so the record does not state the condition. The best inference is gallbladder disease, since the procedure was a laparoscopic cholecystectomy and the discharge advice is about gallbladder disease and a low-fat diet. That points to chapter XI, K80 (cholelithiasis), but the exact condition is not documented.\n\nA coder would normally query the clinician here rather than assign a diagnosis from the procedure alone. The procedure does not establish the diagnosis. Cholecystitis (K81) or a gallbladder polyp (K82) are also possible. Cholelithiasis is the most common indication for this operation, and the advice to avoid fatty foods \"to prevent recurrence of symptoms\" fits gallstone disease best. I am giving K80 as a provisional code, to be confirmed by a query or the full record.\n\nCODE: K80",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 621,
+    "output_tokens": 284
+  },
+  "seconds": 0.0
+}

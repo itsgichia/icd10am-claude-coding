@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "ef67a827be0c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\n\nAge: 21\n\nGender: Male\n\nAdmission Date: [redacted]\n\nDischarge Date: [redacted]\nDischarge Diagnoses: [diagnosis section withheld]\nHospital Course: \n\nPatient presented with acute onset of left-sided chest pain and shortness of breath after using an E-cigarette during his break at work, which he had been using for the past 3 years. A chest X-ray at an urgent care center revealed a small left-sided pneumothorax, which progressed to a moderate sized pneumothorax as seen on a repeat chest X-ray in the ED. A left-sided chest tube was inserted, which successfully resolved his pneumothorax. CT chest was obtained and revealed left-sided atelectasis. \n\nThe patient remained stable throughout his hospital course and was discharged home on hospital day 3 with instructions to avoid vaping. He was advised to follow up with his primary care physician for further evaluation and management, and to seek medical attention if he experienced any recurrence of his symptoms.\n\nDischarge Medications: None\n\nDischarge Instructions: The patient was advised to avoid vaping and to follow up with his primary care physician for further evaluation and management. \n\nFollow-up: The patient was instructed to follow up with his primary care physician within the next 1-2 weeks for further evaluation and management."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **J93.1 \u2013 Other spontaneous pneumothorax**\n\n## Rationale\n\n**Condition chiefly responsible for the admission**\n- The patient is a 21-year-old male with acute left chest pain and dyspnoea.\n- The pneumothorax was confirmed on X-ray, enlarged from small to moderate, and needed an intercostal catheter (chest tube).\n- This condition prompted the admission and used most of the resources.\n\n**Why spontaneous pneumothorax**\n- There was no trauma and no procedure, so it is not iatrogenic.\n- No underlying lung disease is documented (such as COPD, cystic fibrosis or emphysema). It fits a primary spontaneous pneumothorax in a young male.\n\n**Why J93.1 rather than other J93 codes**\n- **J93.0 (tension pneumothorax)** does not apply. There is no documentation of tension physiology or mediastinal shift.\n- **J93.8 or J93.9** are not needed, because the pneumothorax is clearly spontaneous.\n\n## Additional codes to consider\n\n- **Atelectasis (J98.1).** This is generally not coded separately. Collapse of the lung is inherent to pneumothorax unless the clinician documents it as a separate condition.\n- **Vaping.** The summary records e-cigarette use as a temporal trigger. It does not diagnose vaping-associated lung injury (EVALI), so a vaping lung injury code should not be assigned without clinician confirmation. A nicotine dependence or tobacco use code (e.g., F17.x or Z72.0) may apply as an additional diagnosis, depending on documentation and local coding standards.\n- **Procedure.** Code the intercostal catheter insertion with the appropriate ACHI code.\n\nIf coding for official purposes, query the clinician about any underlying lung pathology, such as blebs on the CT report, or a confirmed vaping-related lung injury. Either could change the code selection.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 494,
+    "output_tokens": 1013
+  },
+  "seconds": 0.0
+}

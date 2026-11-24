@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "cot_then_extract",
+  "record_id": "587b40f261f0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient Identification:\nThis is a 43-year-old Jewish woman referred to our medical center for multinodular goiter evaluation. She had a history of a 2-stage total thyroidectomy and a right modified neck dissection for medullary thyroid carcinoma (MTC) with concomitant follicular adenoma and micropapillary carcinoma. The patient underwent surgical treatments followed by I-131 100 mCi.\n\nHospital Course and Treatment:\nThe patient underwent a 2-stage total thyroidectomy before being referred to our medical center for evaluation. The biopsy results revealed a proliferative lesion suspicious for neoplasia, with a second lesion measuring 1.2cm. The right lobe and isthmus biopsy specimen showed a well-demarcated two cm maximal diameter MTC and a partially circumscribed follicular adenoma measuring 1.2cm. The non-neoplastic thyroid tissue revealed lymphocytic infiltration and occasional colloid nodules. The left thyroid lobe histology disclosed a tiny focus, two mm in size, consistent with micropapillary carcinoma. No lymph node metastasis was found.\n\nThe patient\u2019s presurgical calcitonin level was 2170ng/L, and carcinoembryonic antigen (CEA) level was 51mg/L, while thyroid-stimulating hormone was within the normal range. One year postsurgery, the patient\u2019s calcitonin levels were less than five ng/L, and thyroglobulin levels were no longer measurable. Point mutation for RET proto-oncogene was tested and found to be negative.\n\nMedications and Follow-up:\nThe patient was discharged after her I-131 treatment. No further medication was prescribed. Follow-up at regular intervals is recommended to monitor the patient\u2019s progress.\nFinal Diagnosis: [diagnosis section withheld]\nPrognosis and Recommendations:\nThe patient\u2019s prognosis is positive. Follow-up at regular intervals is recommended to assess her progress. No further medications or treatments are needed. Close monitoring is advised to help ensure the best possible outcome.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The admission was for evaluation of thyroid nodules, but the work-up established medullary thyroid carcinoma, which was treated with radioactive iodine (I-131) ablation. That malignant thyroid neoplasm falls under chapter C (neoplasms), category C73.\nCODE: C73",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1304,
+    "output_tokens": 339
+  },
+  "seconds": 0.0
+}

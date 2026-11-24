@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "269a414b9351",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\nAge: 59\nAdmission date: [Redacted]\nDischarge Date: [Redacted]\nFinal Diagnosis: [diagnosis section withheld]\nMedical History:\nThe patient had no significant medical history.\n\nHospital Course:\nThe patient was admitted with symptoms of cough with phlegm, runny nose, fever, and shortness of breath. A CXR was performed, and the results showed bilateral consolidation in the basal lung. The patient was diagnosed with COVID-19 and bronchial asthma and received intravenous ceftazidime 1 gr and intravenous levofloxacin 500 mg during treatment. Symptomatic treatment with medication for asthma was also administered.\n\nClinical Course:\nThe patient's symptoms significantly improved during hospitalization. The patient remained afebrile, and shortness of breath was significantly reduced. The patient's cough and runny nose also improved.\n\nFollow-up:\nThe patient was advised to self-isolate at home and to continue monitoring her symptoms. Follow-up care was coordinated with the patient's primary care physician for further management.\n\nSigned,\n[Redacted]"
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis code: U07.1 COVID-19, virus identified**\n\n**Rationale**\n- The patient was admitted with cough, phlegm, runny nose, fever and dyspnoea. The CXR showed bilateral basal consolidation, and the diagnosis was COVID-19. The condition chiefly responsible for the admission and treatment is therefore COVID-19 with pneumonia.\n- Under ICD-10-AM/ACHI, and the Australian Coding Standards for COVID-19, U07.1 is assigned when the virus is confirmed by lab testing or clinically documented as confirmed. This applies even when pneumonia is present.\n- Ceftazidime and levofloxacin were given, and the CXR showed consolidation. This suggests pneumonia, but the record does not explicitly document \"pneumonia\". A coder cannot assign it from the imaging findings alone and should query the clinician.\n\n**Likely additional codes**\n- J12.82 Pneumonia due to coronavirus disease 2019 (in ICD-10-AM this is typically sequenced with U07.1). This is only valid if the clinician documents pneumonia.\n- J45.9 Asthma, unspecified (the documented \"bronchial asthma\"). A more specific J45.x code applies if an acute exacerbation is documented.\n\n**Caveats**\n- The final diagnosis section was withheld, and the record does not state whether the COVID-19 was lab-confirmed. If it was only suspected or probable, the code would be U07.2 (COVID-19, virus not identified), and local coding guidance should be checked.\n- Sequencing between U07.1 and J12.82 and the use of the \"code first\" convention can vary by ICD-10-AM edition. Check the edition in use.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 431,
+    "output_tokens": 582
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "5941ca504c92",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nHOSPITAL COURSE:\n\nThe patient, a 28-day-old female newborn with right congenital aural atresia, was admitted to our emergency department with postauricular erythema and edema, accompanied by irritability, anorexia, and insomnia, without fever, since two days. On initial examination, the newborn had a small, deformed auricular tag on the right side with no external auditory meatus. Her weight was 3780 grams.\nDIAGNOSIS: [diagnosis section withheld]\nTREATMENT:\n\nThe newborn was started immediately on meropenem and vancomycin i.v. Two days later, a mastoidectomy was performed, and abnormal bone was drilled or curetted away. Mastoid cells filled with granulation tissue were exenterated, and about 2 mL of pus were collected for culture. The antibiotic scheme continued for a total of four weeks.\n\nCONDITION AT DISCHARGE:\n\nThe patient's postoperative course was unremarkable, with progressive resolution of signs of inflammation on mastoid area. The baby girl remained afebrile and her inflammation markers improved gradually. She left the hospital in a very good condition upon completion of her treatment. The baby has no problem two months after her operation, and her weight is 5.100 grams.\n\nDISCHARGE INSTRUCTIONS:\n\nThe patient should be observed for any signs of recurrence of symptoms and should follow up with her primary care provider regularly.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The clinical picture is acute mastoiditis: postauricular erythema and edema, pus and granulation tissue in the mastoid cells, treatment with IV antibiotics and mastoidectomy. The diagnosis section was withheld, but the findings support this diagnosis.\n\nIn ICD-10-AM, acute mastoiditis is coded to H70.0 (Acute mastoiditis), in the category H70 (Mastoiditis and related conditions). Congenital aural atresia (Q16.1) is a comorbidity and not the reason for the admission. The newborn is 28 days old, which is at the boundary of the perinatal period. Chapter XVI (P codes) applies only to conditions originating in the perinatal period, and this infection is not one of them, so H70 stands.\n\nCODE: H70",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 692,
+    "output_tokens": 262
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "521280629b72",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\nLength of Stay: [REDACTED]\n\nHospital Course:\nThe patient presented to the pediatric emergency with confusion and disorientation. She was diagnosed with bacterial meningitis based on clinical examination and CSF analysis and was treated with intravenous ceftriaxone and vancomycin. A CT scan was performed, and pneumocephalus was observed in the right frontal region. The patient was treated for signs of chronic sinusitis and pansinusitis. She showed initial symptomatic improvements to antibiotics but suffered a deterioration of her GCS to 7/15, with a high-grade fever.\n\nSubdural empyema was diagnosed through a repeat CT scan, requiring immediate neurosurgical intervention. The surgical drainage was performed, and on the second day, the patient's GCS improved to 15/15, and her fever had subsided. The patient was discharged with a prescription for oral antibiotics, nasal saline spray, and nasal decongestants.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient received intravenous ceftriaxone and vancomycin to treat bacterial meningitis. Subdural empyema was treated through immediate neurosurgical intervention, which involved surgical drainage. The patient was prescribed oral antibiotics, nasal saline spray, and nasal decongestants upon discharge.\n\nFollow-up:\nThe patient was seen at two-week and four-week follow-ups and experienced significant improvements in symptoms.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "G00",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 672,
+    "output_tokens": 152
+  },
+  "seconds": 0.0
+}

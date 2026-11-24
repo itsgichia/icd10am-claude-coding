@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "d972a0a232a5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient Name: [REDACTED]\nPatient Age: 45 years\nGender: Male\nDate of admission: [REDACTED]\nDate of discharge: [REDACTED]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted with symptoms of intermittent fever, chills and rigors along with night sweats, loss of appetite, and weight loss. The patient also had a transient macular rash and generalized painful lymphadenopathy. Synovitis involving lower limb small joints was noted following the presentation that progressed to larger joints in the lower and upper limbs. Laboratory investigations revealed high white cell counts, normocytic anemia and high inflammatory markers which were in a rising trend following the onset of arthritis. The patient was diagnosed as a case of DLBCL following a lymph node biopsy.\n\nTreatment:\nThe patient was started on non-steroidal anti-inflammatory agents and colchicine for the arthritis but there was no response to treatment. Treatment with RCHOP chemotherapy commenced which showed a marked response in the synovitis following the first cycle of therapy. The patient completed the chemotherapy with intermittent infections.\n\nSummary:\nThe patient presented with symptoms of intermittent fever, chills, and rigors along with night sweats, loss of appetite, and weight loss. The patient had synovitis involving the small and large joints of the upper and lower limbs with a lower limb predominance. Laboratory investigations revealed high white cell counts and anemia. A lymph node biopsy was positive for DLBCL. The patient underwent RCHOP chemotherapy which resulted in the complete resolution of synovitis. The patient was discharged in stable condition with a follow-up plan for further evaluation and management."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: diffuse large B-cell lymphoma (DLBCL), with lymph node involvement**\n\n**ICD-10-AM code: C83.3 \u2013 Diffuse large B-cell lymphoma**\n\nThe 6th edition and later of ICD-10-AM use a fifth-character extension for site. In the Australian Coding Standards the DLBCL code is C83.3 with an extension for the site of involvement, for example C83.38 for lymph nodes of multiple sites. The generalized lymphadenopathy here would fit that, but the record doesn't say which nodes were involved. If the biopsy site or nodal region is not specified, code to C83.3 with the \"unspecified site\" extension (C83.30). Check which extension your edition uses.\n\n**Rationale**\n- The condition established after study as chiefly responsible for the admission is DLBCL, confirmed by lymph node biopsy. The fever, night sweats, weight loss, lymphadenopathy and anemia are B symptoms and features of the lymphoma, so they are not coded separately.\n- The synovitis and arthritis did not respond to NSAIDs and colchicine, but resolved with R-CHOP. This suggests a paraneoplastic or lymphoma-associated arthropathy. It would be coded as an additional diagnosis, for example M14.8* (arthropathy in other specified diseases classified elsewhere) or M13.- (other specified arthritis), depending on the documentation and the coder's query to the clinician.\n- The chemotherapy-related infections would be coded separately if they were treated during the episode. Add Z51.1 (encounter for antineoplastic chemotherapy) only if the admission was specifically for a chemotherapy session. In that case the principal diagnosis would still be the malignancy.\n\n**Caveat:** the discharge diagnosis section was withheld, so confirm the final wording and the nodal site with the clinician or the full record before final coding.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 636,
+    "output_tokens": 637
+  },
+  "seconds": 0.0
+}

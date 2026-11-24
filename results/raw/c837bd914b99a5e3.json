@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "806845a87c2f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Info:\nName: \nDOB: \nGender: \nAdmission Date: \nDischarge Date: \n\nHospital Course:\nThe patient was admitted to our facility with incidentally detected bilateral small solid renal and adrenal masses, a cystic mass at the head of the pancreas, and a paracaval mass. The patient was diagnosed with VHL disease and staged surgical approach was recommended based on the radiologic findings.\nIn the first stage, through a subcostal anterior transperitoneal approach, right adrenalectomy, resection of the paracaval mass, and enucleation for the 9 small solid renal masses were performed. A Whipple procedure was also performed to remove two smaller pancreatic lesions.\nIn the second stage, through an intercostal extraperitoneal approach, 5 pheochromocytomas were removed and 4 cystic renal cell carcinomas were enucleated.\nAfter a followup of 1,5 years, the patient developed a left 1 cm renal mass, which was treated by percutaneous, ultrasound-guided radiofrequency ablation.\nPancreatic and adrenal functions were normal throughout the follow-up period. Blood cortisol level was 21 \u03bcg/dL upon his last control visit. There was no adrenal or extra-adrenal pheochromocytoma recurrence being detected to date.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nSurgery for right adrenalectomy, resection of the paracaval mass, enucleation of small renal masses, and Whipple procedure. Followed by surgery for removal of pheochromocytomas and enucleation of cystic renal cell carcinomas. Finally, percutaneous, ultrasound-guided radiofrequency ablation for the left renal mass. No replacement therapy was required for pancreatic and adrenal functions.\n\nFollow-up:\nThe patient will be followed up regularly for the recurrence of renal masses, pheochromocytomas, and paragangliomas. Additionally, pancreatic and adrenal functions will also be monitored."
+      }
+    ]
+  },
+  "text": "# Suggested principal diagnosis: **C64 \u2013 Malignant neoplasm of kidney, except renal pelvis**\n\n## Why C64\n\n- In ICD-10-AM the principal diagnosis is the condition chiefly responsible for the admission (ACS 0001).\n- The documented histology is renal cell carcinoma, with multiple bilateral tumours enucleated.\n- Under ACS 0005 (Syndromes), when a syndrome's code does not fully describe its manifestations, you code the manifestations as well. The VHL code (Q85.8) does not tell you about the cancer being treated, so the malignancy that drove the surgery takes priority.\n\n## Likely additional codes\n\n| Code | Description |\n|---|---|\n| **Q85.8** | Other phakomatoses, not elsewhere classified (von Hippel-Lindau disease) |\n| **D35.0** | Benign neoplasm of adrenal gland (pheochromocytomas), unless documented as malignant, in which case C74.1 |\n| **D44.7 / D35.6** | Paraganglioma, if histology confirms the paracaval mass as an extra-adrenal paraganglioma (behaviour per histology) |\n| **D13.6 / K86.2** | Pancreatic lesions, depending on histology (e.g., serous cystadenoma or neuroendocrine tumour, which would need a different code) |\n| Morphology (M) codes | e.g., M8310/3 for clear cell RCC, M8700/0 for pheochromocytoma, as required |\n\n## Caveats\n\n- **The summary covers several episodes of care.** These are the first-stage surgery, the second-stage surgery, and a later radiofrequency ablation, and each would be coded separately.\n  - If the episode being coded were specifically the pheochromocytoma resection, the principal diagnosis could instead be **D35.0**.\n  - For the ablation admission it would remain **C64**.\n- **The diagnosis section was withheld.** Final code selection should be confirmed against the histopathology reports and the clinician's documented diagnoses.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 731,
+    "output_tokens": 1120
+  },
+  "seconds": 11.570256874983897
+}

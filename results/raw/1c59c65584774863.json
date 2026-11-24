@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "9f3b34af170c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 66-year-old woman of Turkish descent\nAdmission: January 2015\nDischarge: September 2015\n\nHospital Course: \n\nAdmitted for follow-up after kidney transplantation, the patient presented with a rise in creatinine and urinary protein-creatinine ratio, and later developed microhaematuria. Biopsy showed extracapillary proliferative changes, and positive autoimmune serology for anti-neutrophil cytoplasmic antibodies, indicative of AAV granulomatosis with polyangiitis. Treatment included intravenous prednisolone, rituximab, plasma exchange and maintenance therapy. However, corticosteroid-related diabetes mellitus, pneumonia, CMV reactivation, and donor-specific HLA antibodies emerged. Despite interventions, including resection of the transplanted kidney, regular hemodialysis became necessary. The patient experienced no further clinically significant vasculitis activity during two years of follow-up. \nDiagnosis: [diagnosis section withheld]\nSignificant Hospital Course Events: \n\n- Elevated creatinine and urinary protein-creatinine ratio, microhaematuria\n- Biopsy showed extracapillary proliferative changes consistent with pauci-immune crescentic glomerulonephritis and AAV\n- Positive autoimmune serology for anti-neutrophil cytoplasmic antibodies\n- Treatment with intravenous prednisolone, rituximab, plasma exchange and maintenance therapy\n- Complications included corticosteroid-related diabetes mellitus, pneumonia, CMV reactivation, and donor-specific HLA antibodies.\n- Regular hemodialysis was commenced four months after the initial presentation.\n- Transplanted kidney was resected due to new development of donor-specific HLA antibodies and persistent haematuria.\n- PR3-ANCA remained positive, but declined steadily.\n- No further clinical vasculitis activity during follow-up for two years."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: M31.3, Wegener granulomatosis** (granulomatosis with polyangiitis, GPA)\n\nThis is the best fit because the admission was driven by the GPA-associated pauci-immune crescentic glomerulonephritis, confirmed by biopsy and PR3-ANCA positivity, and the treatment was directed at it.\n\nSome caveats:\n\n- **Edition:** The 2015 admission falls under ICD-10-AM 8th or 9th edition, where M31.3 is the single GPA code. Later editions subdivide it, so check the edition in force at discharge.\n- **Transplant complication:** The presentation was framed as follow-up after kidney transplantation, and the graft was later resected. If coding guidelines direct the transplant complication to be sequenced first, T86.1 (kidney transplant failure/rejection) could be considered. The GPA is the underlying cause, though, so M31.3 is the more defensible principal diagnosis.\n- **Additional codes:** Secondary codes would likely include the renal involvement, corticosteroid-induced diabetes, pneumonia, CMV infection, dialysis dependence, and the HLA-antibody issue. Confirm these against the full coding manual and the complete record.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 712,
+    "output_tokens": 1373
+  },
+  "seconds": 0.0
+}

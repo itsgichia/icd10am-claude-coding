@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "b6f4a6633c4d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\n\nDate of Admission: [REDACTED] - Date of Discharge: [REDACTED]\n\nHospitalization Reason: Generalized seizure episode, persistent cough, and shortness of breath\n\nHospital Course:\nThe patient, a 50-year-old female with a medical history significant for immune thrombocytopenia and seizure disorder was admitted to the ER after experiencing a generalized seizure episode. She reported having a persistent cough, shortness of breath, and recent general malaise.\n\nUpon hospitalization, a chest radiogram revealed bilateral patchy infiltrates, and her oxygen saturation levels were found to be decreasing. She was provided with supplemental oxygen during her stay, and a six-minute walk test was conducted to assess her oxygen levels further. A repeat chest radiogram was done on the third hospital day and revealed significant clearance of the infiltrates with much improvement in her oxygen saturation values both at rest and with ambulation.\n\nCardiac markers and 2D echocardiogram revealed no notable abnormalities. The patient did not experience any more seizures during hospitalization and remained stable. After four days of observation, the patient was discharged to be followed up in the office.\nDiagnoses: [diagnosis section withheld]\nFollow Up:\nThe patient was discharged to be followed up in the office, where her symptoms and overall health will be evaluated by a medical professional regularly. \n\nConclusion:\nThe patient was admitted to the hospital on [REDACTED] after experiencing a generalized seizure episode and other symptoms. After four days of observation and treatment, the patient's condition improved, and she was discharged with instructions to follow up in the office. She was diagnosed with non-cardiogenic pulmonary edema based on her presenting symptoms."
+      }
+    ]
+  },
+  "text": "The conclusion states the diagnosis as non-cardiogenic pulmonary edema, so that is what I coded as the principal diagnosis.\n\n**Principal diagnosis: J81 Pulmonary oedema**\n\n- In ICD-10-AM, non-cardiogenic (acute) pulmonary oedema without mention of heart disease indexes to J81 (Pulmonary oedema). In the Alphabetic Index, \"Oedema, lung, acute\" is J81.\n- Pulmonary oedema due to heart failure or other cardiac causes would be coded I50.1 (left ventricular failure) instead. The cardiac markers and 2D echo were normal, so that does not apply here.\n- The ICD-10-AM 11th edition (and some earlier editions) uses J81 without further subdivision. Some versions of ICD-10 use J81.0 (acute pulmonary oedema) and J81.1 (chronic). Check which edition your facility uses.\n- Excludes notes under J81 cover pulmonary oedema with mention of heart disease, chemical (acute) pulmonary oedema (J68.1), and pulmonary oedema due to external agents.\n\n**Suggested additional diagnoses (secondary codes):**\n- Seizure disorder (epilepsy, G40.-, or G40.9 if unspecified). The generalized seizure at presentation may be coded here, or as R56.8 if epilepsy is not confirmed.\n- Immune thrombocytopenia: D69.3 (Idiopathic thrombocytopenic purpura).\n- Hypoxaemia (R09.02), if it was documented and treated with supplemental oxygen and not integral to the pulmonary oedema.\n\nThe diagnosis section was withheld, so these secondary codes depend on the clinician's final documentation.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 647,
+    "output_tokens": 593
+  },
+  "seconds": 0.0
+}

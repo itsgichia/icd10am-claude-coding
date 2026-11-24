@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "2c56c73a35fe",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary\n\nPatient Name: [CONFIDENTIAL]\n\nAge: 52\n\nSex: Female\n\nDate of Admission: [CONFIDENTIAL]\n\nDate of Discharge: [CONFIDENTIAL]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient is a 52-year-old woman who was diagnosed with SLE eight years ago. She was admitted to the hospital with elevated ANA levels and mild clinical symptoms such as oral ulcers, urticarial vasculitis lesions, and joint pain. Her pharmacologic treatment lasted three years and consisted of steroids in combination with other non-steroidal anti-inflammatory medication. The patient did not tolerate antimalarials, and she refused further immune suppressive therapy.\n\nDuring regular check-ups between the first diagnosis and admission, the patient had minor clinical disease manifestations related to SLE such as oral ulcers, urticarial vasculitis lesions, joint pain, fatigue, tiredness, and fever. These symptoms did not require steroidal or immunosuppressive drug therapy and were treated symptomatically.\n\nAt admission, the patient's ANA was elevated with the mild clinical symptoms mentioned earlier, which did not require steroid treatment. During her hospital stay, she received supportive care and counseling, and her symptoms improved. The patient was discharged from the hospital with instructions to continue symptomatic treatment and regular follow-up appointments.\nDischarge Diagnosis: [diagnosis section withheld]\nOutcome and Plan: The patient's symptoms improved during her hospital stay, and she was discharged home with instructions to continue symptomatic treatment and regular follow-up appointments. The patient should continue to monitor her ANA levels and report any new or worsening symptoms to her healthcare provider.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "M32",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 747,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

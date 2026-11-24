@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "2c56c73a35fe",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient Name: [CONFIDENTIAL]\n\nAge: 52\n\nSex: Female\n\nDate of Admission: [CONFIDENTIAL]\n\nDate of Discharge: [CONFIDENTIAL]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient is a 52-year-old woman who was diagnosed with SLE eight years ago. She was admitted to the hospital with elevated ANA levels and mild clinical symptoms such as oral ulcers, urticarial vasculitis lesions, and joint pain. Her pharmacologic treatment lasted three years and consisted of steroids in combination with other non-steroidal anti-inflammatory medication. The patient did not tolerate antimalarials, and she refused further immune suppressive therapy.\n\nDuring regular check-ups between the first diagnosis and admission, the patient had minor clinical disease manifestations related to SLE such as oral ulcers, urticarial vasculitis lesions, joint pain, fatigue, tiredness, and fever. These symptoms did not require steroidal or immunosuppressive drug therapy and were treated symptomatically.\n\nAt admission, the patient's ANA was elevated with the mild clinical symptoms mentioned earlier, which did not require steroid treatment. During her hospital stay, she received supportive care and counseling, and her symptoms improved. The patient was discharged from the hospital with instructions to continue symptomatic treatment and regular follow-up appointments.\nDischarge Diagnosis: [diagnosis section withheld]\nOutcome and Plan: The patient's symptoms improved during her hospital stay, and she was discharged home with instructions to continue symptomatic treatment and regular follow-up appointments. The patient should continue to monitor her ANA levels and report any new or worsening symptoms to her healthcare provider."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **M32.9 Systemic lupus erythematosus, unspecified**\n\nThis is the most defensible code from the information given, but it involves some judgement.\n\n**Why SLE is the principal diagnosis**\n- The admission was for a flare of known SLE: elevated ANA, oral ulcers, urticarial vasculitis lesions, joint pain, fatigue and fever.\n- Care during the stay (supportive care and counselling) was directed at the lupus.\n- The individual symptoms are part of the SLE picture, so they are not coded separately as the principal diagnosis.\n\n**Why M32.9 rather than other M32 codes**\n- **M32.1x (SLE with organ or system involvement)** fits documented internal organ disease, such as kidney, lung, heart lining, blood or nervous system involvement. None is documented here.\n- **M32.0 (drug-induced SLE)** doesn't apply.\n- **M32.8 (other forms of SLE)** is a reasonable alternative. Some coders would choose it for the skin and joint involvement, particularly the urticarial vasculitis. This is where clinical documentation and local coding guidance should decide.\n\n**Possible additional codes**, depending on documentation and local coding standards:\n- **R76.8** for the raised ANA, though it is generally inherent to SLE and not coded separately.\n- A code for the long-term NSAID or steroid history, if relevant.\n- **Z53.2** for refused immunosuppressive treatment, only if it applies to this admission.\n\nIf the withheld discharge diagnosis names specific organ involvement or a specific lupus subtype, a more specific M32.1x or M32.8 code would be correct. It's worth confirming with the treating clinician's documentation before finalising.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 663,
+    "output_tokens": 1022
+  },
+  "seconds": 0.0
+}

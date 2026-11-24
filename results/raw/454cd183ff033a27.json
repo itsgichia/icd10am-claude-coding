@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "3a1233001d46",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nPatient Information:\n- Name: [REDACTED]\n- Age: 64 years old\n- Sex: Female\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n- The patient underwent resection of the seeding nodule of ovarian carcinoma and created a loop ileostomy due to direct invasion of the carcinoma to the terminal ileum.\n- Prolapse of the ileostomy appeared approximately 17 months after the operation, and it continued to progressively worsen.\n- The patient subsequently underwent a revision operation to reposition the prolapse.\n- After revision of the prolapse, there were no further troubles with the ileostomy.\n- The postoperative progress was good, and the chemotherapy was continued.\n- However, the patient's general state got worse gradually, and her treatment became a plan of best supportive care.\n- Nineteen months after the first time operation, the general state got even worse and she died.\n\nSummary:\nThe patient, a 64-year old female with unresectable ovarian carcinoma, underwent resection of the seeding nodule of ovarian carcinoma and created a loop ileostomy due to direct invasion of the carcinoma to the terminal ileum. Prolapse of the ileostomy appeared approximately 17 months after the operation, and it continued to progressively worsen. A revision operation was performed to reposition the prolapse, and after revision, there were no further troubles with the ileostomy. The postoperative progress was good, and the chemotherapy was continued. However, the patient's general state got worse gradually, and her treatment became a plan of best supportive care. Nineteen months after the first time operation, the general state got even worse and she died."
+      }
+    ]
+  },
+  "text": "The ICD-10-AM principal diagnosis is **C56 Malignant neoplasm of ovary**.\n\nThe principal diagnosis is the condition chiefly responsible for the admission. Here that was the ovarian carcinoma, which required resection of the seeding nodule and creation of the loop ileostomy. The ileostomy prolapse and its revision came later and are secondary complications, so they would be coded as additional diagnoses rather than the principal one.\n\nICD-10-AM does not subdivide C56 by laterality, so C56 is the complete code. Secondary codes such as the terminal ileum involvement and the ileostomy prolapse (an enterostomy complication) would be added to the record. Final code assignment should be checked against the ICD-10-AM edition and Australian Coding Standards in use, and the diagnosis section, which was withheld here, should be reviewed.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 584,
+    "output_tokens": 899
+  },
+  "seconds": 0.0
+}

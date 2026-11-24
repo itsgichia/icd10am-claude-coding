@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "f35b776271f2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nAdmission Date: November 2013\nDischarge Date: January 2017\nLength of Stay: 3 years and 2 months\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe 52-year-old male patient was diagnosed with a left temporal GBM in November 2013 after he presented with memory deficits and aphasia. He underwent standard radiation and temozolomide treatment initially. At the time of ketogenic diet therapy, the patient was on fifth-line treatment for recurrent GBM, which included the FDA-approved antiangiogenic therapy bevacizumab and irinotecan. Due to nausea, headaches, and fatigue, the patient started a ketogenic diet for 3.5 months. During the diet period, the patient was able to add physical exercise to his routine along with dance lessons. After discontinuation of the diet, the patient reported worsening symptoms, including difficulty reading and decreased short term memory. The patient's symptoms continued to progress, and he passed away in January 2017.\n\nClinical Findings:\nDuring the hospital course, the patient reported memory deficits and aphasia. The initial treatment included standard radiation and temozolomide, followed by the antiangiogenic therapy bevacizumab and irinotecan. The patient was then switched to a ketogenic diet for 3.5 months, which resulted in increased physical activity, but also cravings for carbs and sweets. The patient's symptoms worsened after discontinuation of the diet, and his disease continued to progress until his death in January 2017.\n\nCondition at Discharge:\nThe patient passed away due to the progression of his left temporal GBM.\n\nFollow-Up:\nThe patient passed away in January 2017, and no further follow-up was possible.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "CODE: C71\n\nThe principal diagnosis is the glioblastoma of the left temporal lobe, which is a malignant neoplasm of the brain (ICD-10-AM category C71). The recurrence and the terminal progression are part of this same condition, so they do not change the category.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 799,
+    "output_tokens": 203
+  },
+  "seconds": 0.0
+}

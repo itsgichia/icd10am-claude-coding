@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "c11894e010f2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was referred for VT ablation due to electrical storm. Transventricular crossing was performed as it was thought to potentially be difficult to reach all parts of the LV apex using transapical access. A Swartz\u2122 Braided SL1 Transseptal Guiding Introducer Sheath was advanced to the basal right ventricular septum and the interventricular septum was crossed with a Brockenbrough needle. VTs originating from the LV apical and posterobasal regions were induced and ablated successfully. The procedure lasted about 5.3 hours without intraprocedural complications or residual ventricular septal defect. The patient recovered uneventfully and experienced one VT episode that responded to antitachycardia pacing therapy one day later. Heart failure therapy was started, and metoprolol, aldactone, furosemide, ramipril, and mexiletine were prescribed. \nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient underwent VT ablation via transventricular crossing without complications. The patient is being followed up with in the outpatient clinic and will continue on heart failure therapy.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"I47\", \"condition\": \"Ventricular tachycardia\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 541,
+    "output_tokens": 27
+  },
+  "seconds": 0.0
+}

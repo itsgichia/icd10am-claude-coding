@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "a7405fc40bca",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: \nThe 53-year-old male with a history of pleural effusion and cardiac dysfunction who underwent video-assisted empyema curettage under sedation with DEX and regional anesthesia is now being discharged from the hospital.\n\nHospital Course:\nThe patient was monitored for cardiac arrest and had DOB administered prior to surgery due to cardiac dysfunction. The surgery was performed under regional anesthesia with lidocaine and fentanyl administered for pain. The operative time was 37 minutes, and the anesthetic time was 59 minutes. After surgery, the patient was fully awake and returned to the ICU without oxygen supplementation. The patient was moved out of the ICU on POD 1 and had no complications due to anesthesia. The patient was discharged from hospital on POD 19.\n\nMedications:\nNo medication details were given in the case report. \n\nFollow-up Care:\nThe patient was followed up without any problems, and no further follow-up care was mentioned in the case report. \nDiagnoses: [diagnosis section withheld]\nProcedures:\nThe patient underwent video-assisted empyema curettage under sedation with DEX and regional anesthesia. Lidocaine and fentanyl were used for pain as required.\n\nDischarge Condition:\nStable condition."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis is empyema (pleural infection), but the summary does not state the diagnosis, so this is an inference.\n\n**Likely code: J86.9 \u2013 Pyothorax without fistula** (empyema, pleural abscess, without fistula). In ICD-10-AM, empyema of the pleura is indexed to J86.-.\n\n**Reasoning:**\n- The procedure was video-assisted curettage of empyema (VATS decortication/debridement). The condition that occasioned the admission and was treated surgically was therefore the empyema.\n- The history of \"pleural effusion\" most likely refers to a parapneumonic effusion that progressed to empyema. Effusion is a symptom of the underlying condition, so it should not be the principal diagnosis (J90 is excluded when a more specific cause is known).\n- The cardiac dysfunction is a comorbidity and would be coded as an additional diagnosis. For example, I50.9 for heart failure or I51.9 for unspecified heart disease, depending on the documentation. It is not the principal diagnosis.\n\n**Caveats:**\n- If the organism is documented, such as Staphylococcus or Streptococcus pneumoniae, use J86.0 (pyothorax with fistula) only if a fistula is documented. Otherwise use J86.9, with a B95\u2013B96 organism code added.\n- If the empyema is tuberculous, the code would be A15.6 instead.\n- If it is documented as pneumonia with empyema, check the coding rules for the combined condition (J85.1 is for abscess of lung with pneumonia).\n\n**Answer: J86.9**, with the cardiac dysfunction coded as a secondary diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 470,
+    "output_tokens": 555
+  },
+  "seconds": 0.0
+}

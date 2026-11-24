@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "cot_then_extract",
+  "record_id": "101064326bcc",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient: 10-year-old female with developmental delay, microcephaly, epilepsy, severe short stature, impaired speech, facial dysmorphism, congenital deafness, and skeletal abnormalities.\n\nHospital Course:\nThe patient was admitted to our Genetic Department due to the above-listed conditions. She was diagnosed with bilateral hip dysplasia, mixed hearing loss, and right conductive hearing loss. A genome-wide array, CGH (Agilent Human Genome CGH Microarray 44K), was conducted which diagnosed a minimal/maximal deletion of 5.238 Mb and 5.374Mb at 8q22.2q22.3. The patient\u2019s sleep electroencephalogram displayed epileptogenic activity during nonrapid eye movement (NREM) sleep. Cerebral MRI tests were normal, as was the screening for inborn errors of metabolism. The patient was discharged after following up on the diagnosis it was shown that the deletion was excluded in her mother's blood sample, and the father was not available for investigation. \nDiagnosis: [diagnosis section withheld]\nSummary:\nThe patient was a 10-year-old girl born with several conditions, including microcephaly, epilepsy, severe short stature, impaired speech, facial dysmorphism, congenital deafness, and skeletal abnormalities. After following up on the diagnosis, it was shown that the patient was diagnosed with a minimal/maximal deletion of 5.238 Mb and 5.374Mb at 8q22.2q22.3, which was not present in the mother's blood sample. The patient was discharged after the genome-wide array, and other tests showed no issues, but follow-up evaluation is necessary.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible for this genetic admission is the interstitial 8q22.2q22.3 microdeletion found on array CGH, which explains her multiple congenital anomalies and developmental features. This is a chromosomal abnormality, so it belongs to chapter Q. A deletion of part of an autosome falls under category Q93, monosomies and deletions from the autosomes not elsewhere classified.\n\nCODE: Q93",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1172,
+    "output_tokens": 236
+  },
+  "seconds": 0.0
+}

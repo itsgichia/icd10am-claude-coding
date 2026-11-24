@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "fe41074797c2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient: 74-year-old female admitted with subcutaneous masses, abdominal pain, and fever.\n\nClinical course: The patient was admitted with several subcutaneous masses, abdominal pain, and fever. Laboratory tests showed an extremely low platelet count, and serum protein electrophoresis showed a monoclonal band. Imaging studies revealed subcutaneous masses and intra-abdominal lymphadenopathy with moderate splenomegaly. Biopsy of the subcutaneous mass revealed a diagnosis of CSH associated with IgH and Ig\u03ba rearrangements, with suspicion of an underlying lymphoproliferative disorder. Further testing of the excised spleen confirmed a diagnosis of DLBCL, non-GCB subtype.\n\nTreatment: The patient underwent laparoscopic splenectomy and was administered eight courses of rituximab, cyclophosphamide, doxorubicin, vincristine, and prednisone. The patient was in partial remission 9 months after diagnosis. PET-CT scan showed resolution of some masses, but serum paraprotein levels remained elevated leading to four cycles of rituximab plus lenalidomide, MG is not visible at one-month follow-up.\n\nOutcome: The patient was evaluated and treated for CSH and DLBCL with rituximab and combination chemotherapy. The patient achieved PR with some improvement in PET-CT scans but elevated serum paraprotein levels; treated subsequently with rituximab plus lenalidomide leading to undetectable MG levels. The patient was discharged to the home for follow-up with routine laboratory tests and imaging scans.\nDiagnoses: [diagnosis section withheld]\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C83",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 702,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

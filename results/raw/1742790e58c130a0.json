@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "11922b4f666b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY:\n\nAdmission Date: N/A\nDischarge Date: N/A\n\nPatient: 63-year-old woman\nDiagnosis: [diagnosis section withheld]\nHospital Course Summary: \n\nThe patient underwent an excision of a vulvar lesion and it was diagnosed as a BG-ACC. Although the patient did not undergo adjuvant therapy, the diagnosis was followed up. However, 4 years later, the patient was found to have metastasis to the lung. A video-assisted thoracoscopic surgery was performed which was followed by recurrence in the vulva 5 years later. The patient subsequently underwent an excision of the recurrent vulvar lesion which was used for molecular analysis.\n\nThe patient's case exempts her from being discharged or having any medication prescriptions. Further re-examinations may be conducted in the following weeks. \n\nFollow-up Care: The patient is advised to return for follow-up re-examinations as required by the treating physician.\n\nSigned,\n[Name and Title of Physician]"
+      }
+    ]
+  },
+  "text": "BG-ACC most likely refers to adenoid cystic carcinoma of the Bartholin gland. This is a rare vulvar malignancy.\n\n**Suggested principal diagnosis code: C51.0 \u2013 Malignant neoplasm of the labium majus (Bartholin's gland)**\n\nReasoning:\n- In ICD-10 and ICD-10-AM, the Bartholin gland is indexed to C51.0, under malignant neoplasm of the vulva and labium majus.\n- The morphology is adenoid cystic carcinoma, M8200/3. ICD-10-AM allows this to be added as a morphology code, so the full coding is C51.0 with M8200/3.\n- The current episode is excision of a recurrent vulvar lesion for molecular analysis. The lesion is a recurrence at the primary site, so it is coded to the primary site (C51.0) and not as a secondary neoplasm.\n\nAdditional codes to consider:\n- C78.0 \u2013 Secondary malignant neoplasm of the lung. This is relevant only if the lung metastasis is being actively managed or documented in the current episode. Here it is history, so Z85.- or Z08/Z09-type codes might apply depending on the facility's coding standards.\n- Z92.- or Z85.- codes for personal history, if appropriate.\n\nCaveats:\n- The discharge summary does not state the diagnosis. The code depends on BG-ACC meaning Bartholin gland adenoid cystic carcinoma. If the source defines it otherwise, the code would change.\n- The final code should be checked against the pathology report and the current edition of the ICD-10-AM/ACHI and Australian Coding Standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 384,
+    "output_tokens": 550
+  },
+  "seconds": 0.0
+}

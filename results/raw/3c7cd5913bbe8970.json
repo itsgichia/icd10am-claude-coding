@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "717dee10ec65",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary for Case 1:\n\nPatient Information:\nName: [REDACTED]\nAge: 40 years\nGender: Male\n\nAdmission Information:\nThe patient was admitted to the hospital on [REDACTED] with symptoms of general malaise, arthralgia in his extremities, facial cyanosis, and fever (39\u00b0C). A medical history of post-traumatic splenectomy was reported.\n\nHospital Course:\nUpon admission, empirical antibiotic therapy was started with ceftriaxone and vancomycin as the patient was diagnosed with secondary sepsis caused by meningitis from Streptococcus pneumoniae. Due to a severe hemodynamic instability, the patient was transferred to the ICU where they exhibited persistent hypotension and an inflammatory state with high levels of CRP and PCT.\n\nThe patient underwent continuous renal replacement therapy (CRRT) in hemodiafiltration mode for a total of 68 hours along with Cytosorb cartridge. During this treatment, a general improvement was observed in terms of the patient's hemodynamic and metabolic stability as well as reducing levels of PCT and CRP. The patient's norepinephrine demand decreased significantly throughout the treatment and the patient could be stopped from CRRT after 12 days.\n\nDischarge Information:\nAfter further treatment and observation, the patient was discharged on [REDACTED]. At the time of discharge, the patient was alert, collaborative, tracheotomized, and spontaneously breathing with a recovery of diuresis. The patient was advised to continue with follow-up appointments according to the recommended medical protocols.\nDiagnosis: [diagnosis section withheld]\nRecommendations:\nThe patient was advised to follow up with medical appointments as per recommended medical protocols.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "A40",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 716,
+    "output_tokens": 341
+  },
+  "seconds": 0.0
+}

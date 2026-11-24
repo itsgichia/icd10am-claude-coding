@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "5ca74342e7bb",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient Name: [redacted]\nMedical Record Number: [redacted]\nDOB: [redacted]\nAdmission Date: [redacted]\nDischarge Date: [redacted]\n\nHospital Course:\nThe patient was admitted with complaints of headache and altered sensory perception. MRI images revealed gyriform enhancement with FLAIR hyperintensity and restricted diffusion in the right parietal cortex. The patient was found to have elevated protein and lymphocytic pleocytosis through CSF analysis. Additionally, the patient's glucose levels were elevated, and he was diagnosed with diabetes mellitus. The patient had spent significant time outdoors, including recent trips to Maine and New York, but had not reported any tick or mosquito bites. Serum was positive by JCV IgM ELISA with a PRNT of 1:160.\n\nThe patient remained in the hospital for observation and monitoring. The patient's headache and fatigue persisted over the next year, but repeat MRI 14 months later was normal. The patient was discharged with recommendations for outpatient follow-up appointments and further evaluation and monitoring as needed.\nDiagnosis: [diagnosis section withheld]\nFollow-Up:\nIt is recommended that the patient follow up with a neurologist for ongoing evaluation and monitoring. The patient should also continue following recommendations for diabetes management.\n\nDischarge Medications:\nN/A\n\nDischarge Plan:\nThe patient was discharged in stable condition with recommendations for outpatient follow-up appointments. The patient should continue following recommendations for management of diabetes. Further evaluation and monitoring is recommended for ongoing neurological symptoms."
+      }
+    ]
+  },
+  "text": "This presentation fits Jamestown Canyon virus (JCV) encephalitis. JCV is a California serogroup orthobunyavirus transmitted by mosquitoes. The patient had headache and altered sensory perception, cortical MRI changes, CSF lymphocytic pleocytosis with raised protein, and positive serum JCV IgM with a PRNT titre of 1:160.\n\n**Suggested principal diagnosis code: A83.5 \u2013 California encephalitis**\n\nReasoning:\n- ICD-10-AM Chapter 1 classifies mosquito-borne viral encephalitis under A83.-. A83.5 (California encephalitis) includes California meningoencephalitis and encephalitis caused by the California serogroup, which includes La Crosse, snowshoe hare and Jamestown Canyon viruses.\n- The alternative would be A83.8 (other mosquito-borne viral encephalitis) or A83.9 (unspecified). Jamestown Canyon belongs to the California serogroup, so A83.5 is the most specific fit.\n- The MRI showed cortical involvement (gyriform enhancement, FLAIR hyperintensity, restricted diffusion), which supports encephalitis rather than meningitis alone.\n\nAdditional codes:\n- **E11.-** (type 2 diabetes mellitus) would be a secondary diagnosis for the newly diagnosed diabetes. The type and any complications must be documented, and E14.9 applies if the type is unspecified.\n- Headache and fatigue are symptoms integral to the principal diagnosis and would not be coded separately.\n\n**Caveats:**\n- A coder should confirm the final diagnosis wording in the withheld diagnosis section.\n- Australian coding conventions or the current ICD-10-AM edition may also affect the choice of code.\n- If the diagnosis was documented only as meningitis, or as a non-specific viral infection of the CNS, a different code would apply, such as A87.- or A86.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 601,
+    "output_tokens": 654
+  },
+  "seconds": 0.0
+}

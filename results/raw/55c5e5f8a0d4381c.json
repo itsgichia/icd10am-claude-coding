@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "few_shot_six",
+  "record_id": "d2a5947b1fed",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nExample 4\nHospital course: An 81-year-old woman was brought in after a fall at home. She could not weight-bear and the right leg was shortened and externally rotated. A pelvic radiograph showed a displaced subcapital fracture of the right femoral neck. She underwent hemiarthroplasty on day one.\nAnswer: S72\n\nExample 5\nHospital course: A 19-year-old man presented with 18 hours of periumbilical pain that migrated to the right iliac fossa, with anorexia and a low-grade fever. There was guarding at McBurney's point and the white cell count was 15.2. Laparoscopy confirmed an inflamed, non-perforated appendix.\nAnswer: K35\n\nExample 6\nHospital course: A 64-year-old woman with a history of oestrogen-receptor-positive breast carcinoma treated five years earlier presented with progressive thoracic back pain. Magnetic resonance imaging showed deposits in T7 and T9 with no cord compression. Biopsy confirmed deposits of breast origin and she received palliative radiotherapy to the spine.\nAnswer: C79\n\nHospital course:\nDischarge Summary:\n\nPatient Name: (patient's name)\nAge: 84 years old\nGender: Female\nAdmission Date: (date of admission)\nDischarge Date: (date of discharge)\nLength of Stay: (number of days of hospital stay)\nClinical Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted due to her underlying medical conditions including type 2 diabetes and hypertension. She also had a history of amblyopia OD and a resolved branch retinal vein occlusion (BRVO) in the left eye. During her hospital stay, she was treated with Eyefolate\u2122 capsules and no further complications were reported during the course of treatment.\n\nClinical Progress:\nIn October 2013, the patient's best corrected visual acuity (BCVA) was 20/150 OD and 20/25 OS. The OS fundus photo showed a large macular aneurysm (MA) in the superior temporal region with exudates. After being prescribed the Eyefolate\u2122 capsules, the BCVA of the left eye improved to 20/20 in August 2014. Further improvement was seen in December 2014 when the large exudates almost completely resolved in OS (Fig. b). In January 2016, the BCVA was 20/400 OD and 20/25 OS, and the MA was resolved as shown in the OS fundus photo (Fig. c) during 2016.\n\nFollow-up:\nThe patient was discharged in a stable condition with instructions to continue taking prescribed medications and regular follow-up appointments with her primary care physician to monitor her diabetes and hypertension. A referral to an ophthalmologist was also recommended to monitor her vision and perpetuate the effectiveness of the treatment.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "The case centres on a retinal macroaneurysm (the \"MA\" here is a macular aneurysm, with exudates) in the left eye, in a patient with a prior branch retinal vein occlusion. The diagnosis section is withheld, so I have to infer it from the course.\n\nCandidate categories:\n- Retinal macroaneurysm is coded to H35.0 (background retinopathy and retinal vascular changes), which includes retinal aneurysm and retinal vascular changes.\n- Retinal vascular occlusion is H34.\n- Diabetic retinopathy is E11.3 with H36.0, but the case describes a macroaneurysm rather than diabetic retinopathy.\n\nThe macroaneurysm with exudates is the main treated condition. Retinal macroaneurysm in ICD-10 falls under H35.0 (H35.0 \"Background retinopathy and retinal vascular changes\" includes retinal aneurysm NOS in ICD-10-AM).\n\n**H35**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1389,
+    "output_tokens": 323
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "a7405fc40bca",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient: \nThe 53-year-old male with a history of pleural effusion and cardiac dysfunction who underwent video-assisted empyema curettage under sedation with DEX and regional anesthesia is now being discharged from the hospital.\n\nHospital Course:\nThe patient was monitored for cardiac arrest and had DOB administered prior to surgery due to cardiac dysfunction. The surgery was performed under regional anesthesia with lidocaine and fentanyl administered for pain. The operative time was 37 minutes, and the anesthetic time was 59 minutes. After surgery, the patient was fully awake and returned to the ICU without oxygen supplementation. The patient was moved out of the ICU on POD 1 and had no complications due to anesthesia. The patient was discharged from hospital on POD 19.\n\nMedications:\nNo medication details were given in the case report. \n\nFollow-up Care:\nThe patient was followed up without any problems, and no further follow-up care was mentioned in the case report. \nDiagnoses: [diagnosis section withheld]\nProcedures:\nThe patient underwent video-assisted empyema curettage under sedation with DEX and regional anesthesia. Lidocaine and fentanyl were used for pain as required.\n\nDischarge Condition:\nStable condition.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"J86\", \"condition\": \"Pyothorax (empyema)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 562,
+    "output_tokens": 28
+  },
+  "seconds": 0.0
+}

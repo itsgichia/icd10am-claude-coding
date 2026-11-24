@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "1471065dc7fd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nAge: 34\nGender: Female\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nPatient with platin-resistant metastatic ovarian cancer was admitted to the hospital after experiencing fever and chills during infusion of nivolumab. Physical examination showed nausea and a known pelvic mass. Infusion was stopped and antihistamines and corticosteroids were administered. However, the patient remained febrile and was found to have a positive blood culture for bacillus Gram-positive bacteria. Combination therapy with antibiotics was started, but three blood cultures returned positive for rapidly growing mycobacteria. The port-a-cath was removed and antibiotics were switched to clarithromycin and ethambutol. Diagnosis of M. mucogenicum port-a-cath related bloodstream infection was retained.\n\nTreatment and Management:\nPatient received combination antibiotherapy for two months and antibiotics were pursued for six months. Despite concomitant chemotherapy, no relapse of infection was observed after antibiotic discontinuation.\n\nFollow-up:\nPatient was discharged in stable condition with instructions to continue chemotherapy and to monitor for any signs of infection."
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis code: T80.2 (Infections following infusion, transfusion and therapeutic injection)**, with an additional code for the organism. This is a judgement call about code selection and sequencing, so please verify it against the coding standards and your local Australian Coding Standards (ACS) guidance.\n\n**Reasoning**\n\n- The admission was for fever and a bloodstream infection. The infection was a port-a-cath (central venous catheter) related bloodstream infection caused by *Mycobacterium mucogenicum*, a rapidly growing nontuberculous mycobacterium.\n- In ICD-10-AM, catheter-related bloodstream infection is classified to the complications chapter, not to the organism-specific infection chapter. The usual code is **T80.2** (Infections following infusion, transfusion and therapeutic injection). The alternative is **T82.7** (Infection and inflammatory reaction due to other cardiac and vascular devices, implants and grafts). T82.7 is generally used for infection of an implanted vascular device. A totally implanted port such as a port-a-cath is often coded to T82.7 in Australian practice, so check local coding advice on which applies.\n- For an implanted port-a-cath bloodstream infection, **T82.7** is arguably the more specific code. If your facility follows the Australian Coding Standards or the Coding Rules for central line infections, use T82.7.\n\n**Secondary codes**\n\n- **A49.8** (Other bacterial infections of unspecified site) or **A31.8** (Other mycobacterial infections), plus **B99** or the appropriate organism code. *M. mucogenicum* is a nontuberculous mycobacterium, so A31.8 is most appropriate.\n- **A41.8** or **R78.8** may be considered depending on whether sepsis was documented. Sepsis is not explicitly documented here, so bacteraemia coding would apply.\n- **C56** (Malignant neoplasm of ovary), with **C79.-** codes for the metastatic sites.\n- **Y84.8** or the relevant external cause code for the procedure or device, as applicable.\n- **T88.7** or **T80.8** for the infusion reaction to nivolumab (fever and chills), if documented as a reaction.\n\n**Answer:** Principal diagnosis **T82.7** (infection due to the vascular device, the port-a-cath), with **A31.8** as an additional code for *M. mucogenicum*. T80.2 is the alternative if your coders classify the infection as following infusion.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 463,
+    "output_tokens": 834
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "bf74c73dee78",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\n\nDate of Admission: [Redacted]\n\nDate of Discharge: [Redacted]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted to the Department of Rehabilitation Medicine for rehabilitation after suffering from a rib fracture. The patient presented with motor disturbance in all four limbs, gait disturbance, and decreased activities of daily living function for more than 10 years. The cognitive test score was 25 according to the mini-mental status examination (MMSE). The patient showed symptoms of Parkinson's disease, including bilateral tremors, bradykinesia, facial masking, infrequent blinking, short arm swing, cogwheel rigidity, stooped posture, freezing, festination, axial instability, and micrographia.\n\nThe patient was treated with Tango therapy for 1 hour per day for 5 days a week for two weeks. After 10 hours of Tango therapy, the UPDRS score improved dramatically from 105 (grade 4) to 82 (grade 3) points, and the BBS score improved from 2 to 12 points. The patient's posture was improved drastically to an upright posture, while the gait was also improved with less freezing and festination symptoms. His stride became wider, and he was able to walk with greater stability after Tango therapy.\n\nThe patient was discharged with appropriate instructions for follow-up care and recommendations to continue the exercises and therapy prescribed during the hospital stay. Close follow-up with a healthcare provider is recommended to monitor the progression of the patient's symptoms.\n\nDischarge Medications: None\n\nFollow-up Instructions: Continue with the prescribed exercises and therapy as instructed during the hospital stay. Follow-up with a healthcare provider is recommended for close monitoring of the progression of symptoms. \n\nPrimary Care Provider: [Redacted]\nDate of Follow-up: [Redacted]"
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: G20, Parkinson disease**\n\nThe discharge summary is mainly about Parkinson disease. The patient had more than 10 years of motor disturbance, gait disturbance, and reduced daily function, with classic features including bilateral tremor, bradykinesia, rigidity, freezing, festination, and micrographia. Tango therapy was given to treat these motor impairments, and the UPDRS and BBS scores were used to measure progress. Under ICD-10-AM principal diagnosis rules, the condition chiefly responsible for the rehabilitation admission is the Parkinson disease.\n\nThe rib fracture is described as the event that preceded the admission. It would normally be coded as a secondary diagnosis, most likely **S22.3 (fracture of rib)**, along with any external cause code. The summary doesn't describe a rib fracture specifically enough to confirm this, so it should be checked against the full record.\n\nCoders should confirm the final code against the complete medical record and the current ICD-10-AM edition.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 696,
+    "output_tokens": 1246
+  },
+  "seconds": 0.0
+}

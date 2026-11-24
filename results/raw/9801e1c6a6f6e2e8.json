@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "97d7cb7d2576",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nHOSPITAL COURSE SUMMARY\n\nPatient Name: [REDACTED]\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\nLength of Stay: [REDACTED]\n\nCHIEF COMPLAINT: RUQ pain\n\nHISTORY OF PRESENT ILLNESS:\nThe patient, a 26-year-old male, presented to the emergency department with a three-day history of RUQ pain, which worsened with food. Physical exam demonstrated focal RUQ peritonitis with a positive Murphy\u2019s sign, but no rebound or guarding. Ultrasound revealed a stone in the gallbladder neck and no pericholecystic fluid. Surgery was consulted and the patient was offered outpatient follow-up for biliary colic.\n\nPAST MEDICAL HISTORY:\nThe patient has a prior history of good health. No past medical conditions or significant illnesses were noted in the chart.\n\nHOSPITAL COURSE:\nThe patient was monitored in the hospital for a brief period and discharged with a plan for outpatient follow-up for biliary colic. The following day, the patient returned to the emergency department with persistent pain and underwent cholecystectomy for cholecystitis.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\nThe patient is advised to take adequate rest and avoid heavy lifting for a few days. The surgical incisions should be kept clean and dry. The patient should follow the medication regimen as prescribed. The patient is instructed to return to the hospital if there are any signs of fever, redness, swelling, or discharge at the surgical site, or if the pain persists.\n\nFOLLOW-UP:\nThe patient will have a follow-up appointment with the surgeon in approximately one week to assess postoperative recovery and discuss any further management or treatment options.\n\nDISCHARGE CONDITION:\nThe patient was discharged in stable condition with the appropriate medical care and follow-up plan in place.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"K80\", \"condition\": \"Calculus of gallbladder with acute cholecystitis (cholelithiasis)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 813,
+    "output_tokens": 45
+  },
+  "seconds": 1.1412622080242727
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "e5395175b2fe",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nElectronic Health Record: Discharge Summary\n\nPatient Information:\nName: Anonymous\nGender: Male\nAge: 63 years\nAdmission Date: [Date]\nDischarge Date: [Date]\n\nReason for Admission:\nThe patient presented with a three-month history of dull epigastric pain radiating to the right hypochondrium and was diagnosed with mild gastritis. Ultrasonography revealed many gallstones with a thickened wall of the gall bladder. He was transferred to our center for an elective cholecystectomy.\n\nHospital Course:\nThe patient underwent a laparoscopic cholecystectomy, which revealed an empyema of the gallbladder with stones that made dissection difficult due to local inflammation. On the first day after the surgery, he complained of pain at the right hypochondrium and a decrease in hemoglobin. Computed tomography (CT) showed a perihepatic hematoma extending to the right paracolic gutter without evidence of any other neoplasm. The patient was monitored for seven weeks with follow-up CTs and ultrasound scans until a 19 mm hypodense nodule was discovered on the eighth liver segment. A fine needle aspiration (FNA) revealed that it was a metastatic signet-ring cell carcinoma. Several CTs and ultrasound scans were performed for surveillance until retroperitoneal and right axillary adenopathies, liver masses, peritoneal dissemination, subcutaneous nodules on the chest wall, and, at the entrance of the right laparoscopy trocar, were described as metastases 9 months later. The patient was placed on palliative care, which lasted for one month until his eventual death.\nDiagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was placed on palliative care and eventually died.\n\nFollow-up:\nN/A\n\nSigned,\n[Physician's Name and Title]"
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: K80.00\n\n**K80.00 \u2013 Calculus of gallbladder with acute cholecystitis, without mention of obstruction**\n\n## Rationale\n\nUnder ACS 0001 (Principal Diagnosis), the principal diagnosis is the condition established after study to be chiefly responsible for the admission.\n\n- **Reason for admission:** The patient was transferred for an elective cholecystectomy because of symptomatic gallstones with a thickened gallbladder wall.\n- **Established at surgery:** Laparoscopy found an empyema of the gallbladder with stones. In ICD-10-AM, empyema of the gallbladder is classified as acute cholecystitis (K81.0). When calculi are also present, the combination code K80.0- applies.\n- **No obstruction is documented**, so the fifth character is **0**.\n\n## Additional Diagnoses to Consider\n\nThese depend on the episode of care and on the documentation.\n\n| Condition | Suggested code |\n|---|---|\n| Postoperative perihepatic hematoma | T81.0 (haemorrhage/haematoma complicating a procedure) plus an external cause code (Y83.6 / Y92.22) |\n| Postoperative haemorrhagic anaemia (drop in haemoglobin), if documented as such | D62 |\n| Secondary malignancy of the liver | C78.7 |\n| Secondary malignancy of the peritoneum and retroperitoneum | C78.6 |\n| Secondary malignancy of lymph nodes (retroperitoneal, axillary) | C77.2, C77.3 |\n| Secondary malignancy of skin/subcutaneous tissue, including the port-site deposit | C79.2 |\n| Signet-ring cell carcinoma morphology | M8490/6 (metastatic) |\n\n## Important Caveat\n\nThe diagnosis section is withheld. This pattern (gallstones, then signet-ring cell metastases appearing at the trocar site) is classic for **incidental primary gallbladder carcinoma**. If histopathology of the gallbladder specimen confirmed a primary signet-ring cell carcinoma, the principal diagnosis would change to **C23 \u2013 Malignant neoplasm of gallbladder** (morphology M8490/3). In that case, K80.00 would become an additional diagnosis.\n\nThe metastases and palliative care also occurred months later, likely during separate admissions. Each of those episodes would be coded separately. For a palliative care admission, Z51.5 would be relevant.\n\n**Recommendation:** Confirm the gallbladder histopathology report and the documented final diagnosis before assigning the code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 661,
+    "output_tokens": 1404
+  },
+  "seconds": 0.0
+}

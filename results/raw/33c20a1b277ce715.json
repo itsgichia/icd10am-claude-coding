@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "111025efe52f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]          Admission Date: [REDACTED]      Discharge Date: [REDACTED]\n\nHistory of Present Illness:\nA 79-year-old male with a history of prostate cancer presented with progressively worsening double vision and eventual right eye ptosis. Neurological examination revealed complete third and sixth nerve palsies on the right side. MR imaging showed an enhancing soft tissue mass involving the clivus, pituitary fossa, cavernous sinus, and posterior nasal cavity. An endonasal transsphenoidal approach to the sphenoid sinus was carried out to obtain a biopsy of the lesion. A histopathological diagnosis of metastatic melanoma was made, and evaluation was undertaken by the oncology team.\n\nHospital Course Summary:\nDuring the patient's hospital stay, he underwent a number of diagnostic tests and a biopsy following which he was diagnosed with metastatic melanoma. The medical team consulted with the oncology team, who evaluated the patient and recommended further treatment options. The patient's clinical condition stabilised, and he was discharged with the oncology team's recommended course of treatment.\n\nCondition at Discharge:\nThe patient's medical condition at discharge was stable, with no further significant neurological or ophthalmological deficits.\n\nDischarge Medications:\nNo medications were prescribed at the time of discharge.\n\nFollow-up Care:\nThe oncology team recommended further outpatient treatment and follow-up evaluations for the patient, which the patient accepted.\n\nDischarge Instructions:\nThe patient was advised to follow up with the oncology team on a regular basis, and to report any new or concerning symptoms.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Condition:\nStable.\n\nDischarge Plan:\nThe patient was discharged with the recommended course of treatment and follow-up evaluations by the oncology team."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: **C79.5 \u2013 Secondary malignant neoplasm of bone and bone marrow**\n\n## Rationale\n\n**1. Reason for admission**\nThe patient was admitted to investigate a skull base mass causing a right third and sixth nerve palsy. That mass was biopsied and found to be metastatic melanoma. Under ACS 0236 (Neoplasm coding and sequencing), when the episode of care is directed at a secondary (metastatic) site, the secondary neoplasm is sequenced as the principal diagnosis.\n\n**2. Choice of site**\nThe lesion is centred on the **clivus**, which is part of the skull base (bone). It extends into the pituitary fossa, cavernous sinus and posterior nasal cavity. The clivus is the dominant site, so C79.5 is the most appropriate principal code.\n\n**3. Primary site**\nNo primary melanoma is documented, so it is treated as unknown.\n\n## Suggested additional codes\n\n| Code | Description |\n|------|-------------|\n| C78.3 | Secondary malignant neoplasm of other respiratory organs (nasal cavity/sinus extension) |\n| C79.8 | Secondary malignant neoplasm of other specified sites (pituitary fossa / cavernous sinus extension) |\n| C43.9 | Malignant melanoma of skin, unspecified (primary site unknown) |\n| M8720/6 | Malignant melanoma, metastatic (morphology code) |\n| H49.0 | Third (oculomotor) nerve palsy |\n| H49.2 | Sixth (abducent) nerve palsy |\n| Z85.4 | Personal history of malignant neoplasm of genital organs (prostate cancer), if no current treatment |\n| Procedure | Endoscopic transsphenoidal biopsy of the sphenoid/skull base lesion (ACHI code) |\n\n## Caveats\n- If the withheld discharge diagnosis documents a cutaneous, mucosal or other primary site, the C43 code would change accordingly.\n- If the coding query process confirms the pituitary or nasal cavity as the predominant site rather than the clivus, the principal diagnosis would change to C79.8 or C78.3 respectively.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 683,
+    "output_tokens": 1097
+  },
+  "seconds": 0.0
+}

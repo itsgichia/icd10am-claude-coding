@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7f0a1375a954",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\nThe patient, a 19-year-old male with no significant past medical history, presented to the emergency room with symptoms of four hours of abdominal pain and emesis. He reported undergoing a strict regimen of dieting and exercise which resulted in significant weight loss over the past months. The family member added that the symptoms started after a heavy meal ingestion.\n\nOn physical examination, the patient presented with a scaphoid abdomen, tender abdomen and diminished high-pitched bowel sounds. The laboratory workup was within normal limits. The patient stayed overnight in the ER and was managed conservatively with NPO, intravenous crystalloid rehydration, nasogastric tube, ondansetron and omeprazole. Next day reevaluation showed persistence of abdominal pain, nausea and bilious emesis. Computed tomography study revealed gastric dilatation extended to the third portion of the duodenum, suggestive of proximal small bowel obstruction. The patient was admitted for inpatient treatment.\nDiagnosis: [diagnosis section withheld]\nManagement:\nInitial management included gastric decompression by placing a nasojejunal feeding tube to alleviate symptoms of obstruction and later use for enteral nutritional support. The patient was provided with a normocaloric hyperproteic formula starting with 600 and progressed to 1500 kcal per day to reverse protein caloric malnutrition state. Additionally, psychiatry and psychology teams were consulted concerning major weight loss. The patient was diagnosed with depression and an eating disorder and was started on sertraline. The patient was discharged asymptomatic, with hyperproteic diet plus nutritional supplements and selective serotonin reuptake inhibitor.\n\nFollow-up:\nThe patient's follow-ups showed weight gain and no symptoms. Psychiatry and psychology teams will follow up the patient after discharge."
+      }
+    ]
+  },
+  "text": "This presentation is most consistent with **superior mesenteric artery (SMA) syndrome**, also called Wilkie syndrome. The diagnosis section was withheld, so this is inferred from the clinical picture: major weight loss, gastric dilatation extending to the third part of the duodenum, and a proximal obstruction that resolved with nasojejunal feeding and weight restoration.\n\n**Principal diagnosis code: K31.5 \u2013 Obstruction of duodenum**\n\nRationale:\n- ICD-10-AM has no specific code for SMA syndrome. The Alphabetic Index directs \"Syndrome, superior mesenteric artery\" to K31.5 (duodenal obstruction, which includes duodenal compression).\n- The condition occasioning admission was the duodenal obstruction, which was investigated and treated with decompression and enteral feeding. That makes it the principal diagnosis.\n\nLikely additional diagnoses:\n- E44.x or E46 \u2013 Protein-energy malnutrition (the note mentions protein caloric malnutrition). The severity code depends on documentation.\n- F50.9 \u2013 Eating disorder, unspecified, or a more specific F50.- code if documented.\n- F32.x \u2013 Depressive episode, with severity as documented.\n- R63.4 \u2013 Abnormal weight loss, only if not already captured by the codes above.\n\nCoding caveats:\n- The code depends on the clinician documenting \"superior mesenteric artery syndrome\" or \"duodenal obstruction.\" If the record states only \"proximal small bowel obstruction,\" the code would be K56.6 (other and unspecified intestinal obstruction, with the 5th-character update in newer editions). The final diagnosis wording should be checked.\n- Australian Coding Standards also require ACHI procedure codes, for example for nasojejunal tube insertion and enteral nutrition. These are separate from the diagnosis codes.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 668,
+    "output_tokens": 621
+  },
+  "seconds": 5.6047529589850456
+}

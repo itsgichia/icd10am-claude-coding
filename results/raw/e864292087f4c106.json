@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "4beb4decadab",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient: 35-year-old G2P2 female\n\nAdmission date: [insert date]\nDischarge date: [insert date]\nAdmission diagnosis: [diagnosis section withheld]\nHospital course:\nThe patient was admitted to the CCU on [insert date] with complaints of retrosternal chest discomfort radiating to jaw, associated with nausea and diaphoresis. Based on physical examination, EKG and cardiac enzyme levels, as well as coronary angiography and TTE results, the patient was diagnosed with an acute inferior STEMI secondary to spontaneous dissection of the OM2.\n\nTreatment:\nThe patient was appropriately discharged on dual antiplatelet therapy including ASA and Clopidogrel including beta blockade with Metoprolol.\n\nFollow-up plan:\nThe patient was advised to continue with the prescribed medication and instructed to come for follow-up after one month.\n\nReadmission:\nOne month later, the patient returned with diplopia and numbness of her left arm and face. Computed tomographic angiography showed a focal 8mm long dissection of the right vertebral artery in its V1 segment with mild associated aneurysmal dilatation. The patient was subsequently started on anticoagulation therapy to prevent future spontaneous dissections.\n\nDischarge condition:\nThe patient's condition was stable at the time of discharge.\n\nDischarge disposition:\nThe patient was discharged home with family members.\n\nFollow-up plan:\nThe patient was advised to continue with the prescribed medication and instructed to come for follow-up after three months."
+      }
+    ]
+  },
+  "text": "The principal diagnosis for the index admission is **I21.1, ST elevation (STEMI) myocardial infarction of inferior wall**.\n\nThe STEMI was caused by a spontaneous dissection of the second obtuse marginal branch (OM2). In ICD-10-AM, the coronary dissection should be coded as an additional diagnosis, **I25.42 (coronary artery dissection)**, if your edition includes that code. Verify the exact code against your edition's tabular list and local coding rules.\n\nThe readmission for the right vertebral artery dissection is a separate episode with its own principal diagnosis, which I haven't coded here.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 557,
+    "output_tokens": 1099
+  },
+  "seconds": 0.0
+}

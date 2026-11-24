@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "9f2fc330de4a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient: [Name], [Age]-year-old female\n\nAdmission Date: [Date]\nDischarge Date: [Date]\n\nChief Complaint:\nLeft supraclavicular and axillary painful lump\n\nHospital Course and Treatment:\nThe patient was admitted to the Hematologic Clinic with a painful left supraclavicular and axillary lump. She had received the first dose of the Pfizer-BioNTech COVID-19 vaccine five days prior to presentation. The patient experienced injection site pain, headaches, chills, and a sense of \u201cheaviness\u201d of the neck and upper chest for two days after injection that gradually resolved. On physical examination and Doppler ultrasound, multiple enlarged lymph nodes were seen in the axillary, supraclavicular, and low lateral neck areas. Painful axillary lymphadenopathy also appeared after the second dose of the vaccine. No other abnormal findings were noted. Blood tests including full chemistry, blood count, and CRP levels were within normal limits. The patient was treated with pain relief medication and her symptoms improved gradually until complete resolution.\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient responded well to pain relief medication and her symptoms gradually resolved over time. No complications were reported during hospitalization.\n\nFollow-Up Plan:\nThe patient will be discharged with instructions to follow up with her primary care physician for any concerns or symptoms in the future. No further follow-up is required at this time.\n\nSummary:\nThis is a case of a healthy middle-aged woman who presented with an adverse reaction to the Pfizer-BioNTech COVID-19 vaccine resulting in painful axillary lymphadenopathy. The patient was treated with pain relief medication, and her symptoms resolved over time with no complications identified during hospitalization. The patient will be discharged with instructions to follow up with her primary care physician for any concerns or symptoms in the future.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "R59",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 777,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

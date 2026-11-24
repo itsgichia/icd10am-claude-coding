@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "bf7949dcece5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHOSPITAL COURSE:\n\nAdmission Date: April 29th, 2016\nDischarge Date: N/A\n\nHISTORY OF PRESENT ILLNESS:\n\nMs. C, a 73-year-old woman with a history of uveal melanoma, was admitted to the hospital for epigastric pain and symptoms of gastric reflux following her second dose of ipilimumab as second line immunotherapy for liver metastases. She also had mild diarrhea with 3\u20134 loose stools daily. Esophagogastroduodenoscopy and flexible sigmoidoscopy were performed to inform further treatment.\n\nFINDINGS:\n\nEsophageal, gastric and duodenal mucosa appeared normal on endoscopic examination without evidence of ulceration or other significant mucosal injury. Gastric biopsies exhibited lymphocytic inflammation surrounding pigmented cells scattered throughout the gastric mucosa. S100 and SOX10 immunostains confirmed multiple microscopic foci of melanoma with tumor associated inflammation resembling gastritis. Flexible sigmoidoscopy and colonic biopsies were normal.\n\nHOSPITAL COURSE AND TREATMENT:\n\nGlucocorticoid treatment was initially deferred as this was considered an appropriate antitumor response, and she received her third dose of ipilimumab. After the 3rd dose, she developed an elevation in her transaminases and bilirubin concerning for checkpoint hepatitis. She was started on glucocorticoids and further immunotherapy was held. Her hepatitis resolved on glucocorticoids. Her gastric symptoms also improved on glucocorticoid therapy consistent with an immune-mediated mechanism.\n\nDISCHARGE INSTRUCTIONS:\n\nMs. C is advised to continue taking glucocorticoids and report any new symptoms to her healthcare provider. She is recommended to follow-up with her oncologist for further treatment options.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]"
+      }
+    ]
+  },
+  "text": "The principal diagnosis is gastric metastasis of uveal melanoma, which codes to **C78.8 Secondary malignant neoplasm of other and unspecified digestive organs**.\n\n**Reasoning**\n- The condition chiefly responsible for the admission was epigastric pain and reflux symptoms. Biopsies showed these were caused by microscopic foci of melanoma in the gastric mucosa. S100 and SOX10 staining confirmed this, with tumor-associated inflammation resembling gastritis.\n- In ICD-10-AM, the principal diagnosis is the condition established after study to be chiefly responsible for the admission. Here that is the secondary malignancy of the stomach, not the symptoms.\n- Secondary malignant neoplasm of the stomach is not a separate code in ICD-10. It falls under C78.8, which covers other and unspecified digestive organs. (C78.4 is small intestine, C78.5 is large intestine and rectum, and C78.6 is retroperitoneum and peritoneum.)\n\n**Suggested additional codes**\n- C69.4 (or the appropriate C69.3, C69.4 or C69.8 site code) for the primary uveal melanoma of the eye, ciliary body or choroid\n- C78.7 for secondary malignant neoplasm of the liver\n- K71.x/K75.x or K71.6, plus Y43.1 or Y43.8 or similar, for the drug-induced (checkpoint) hepatitis arising during the stay, depending on the coder's interpretation. Hepatitis due to ipilimumab is usually coded as toxic liver disease with an external cause code for the adverse drug effect.\n- R19.7 for diarrhea, if it is not integral to the above\n- Z51.8 or Z51.1, depending on how the immunotherapy is classified\n\nIf the coder treated the epigastric symptoms as the reason for admission and the metastasis as an incidental finding, the symptom code would be used instead. Because the biopsy diagnosis explains the symptoms, C78.8 is the best choice.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 726,
+    "output_tokens": 683
+  },
+  "seconds": 0.0
+}

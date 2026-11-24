@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "few_shot_three",
+  "record_id": "101064326bcc",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nHospital course:\nDischarge Summary:\n\nPatient: 10-year-old female with developmental delay, microcephaly, epilepsy, severe short stature, impaired speech, facial dysmorphism, congenital deafness, and skeletal abnormalities.\n\nHospital Course:\nThe patient was admitted to our Genetic Department due to the above-listed conditions. She was diagnosed with bilateral hip dysplasia, mixed hearing loss, and right conductive hearing loss. A genome-wide array, CGH (Agilent Human Genome CGH Microarray 44K), was conducted which diagnosed a minimal/maximal deletion of 5.238 Mb and 5.374Mb at 8q22.2q22.3. The patient\u2019s sleep electroencephalogram displayed epileptogenic activity during nonrapid eye movement (NREM) sleep. Cerebral MRI tests were normal, as was the screening for inborn errors of metabolism. The patient was discharged after following up on the diagnosis it was shown that the deletion was excluded in her mother's blood sample, and the father was not available for investigation. \nDiagnosis: [diagnosis section withheld]\nSummary:\nThe patient was a 10-year-old girl born with several conditions, including microcephaly, epilepsy, severe short stature, impaired speech, facial dysmorphism, congenital deafness, and skeletal abnormalities. After following up on the diagnosis, it was shown that the patient was diagnosed with a minimal/maximal deletion of 5.238 Mb and 5.374Mb at 8q22.2q22.3, which was not present in the mother's blood sample. The patient was discharged after the genome-wide array, and other tests showed no issues, but follow-up evaluation is necessary.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "Q93",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1032,
+    "output_tokens": 112
+  },
+  "seconds": 0.0
+}

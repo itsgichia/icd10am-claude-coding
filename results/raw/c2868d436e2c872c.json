@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "bf74c73dee78",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\n\nDate of Admission: [Redacted]\n\nDate of Discharge: [Redacted]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted to the Department of Rehabilitation Medicine for rehabilitation after suffering from a rib fracture. The patient presented with motor disturbance in all four limbs, gait disturbance, and decreased activities of daily living function for more than 10 years. The cognitive test score was 25 according to the mini-mental status examination (MMSE). The patient showed symptoms of Parkinson's disease, including bilateral tremors, bradykinesia, facial masking, infrequent blinking, short arm swing, cogwheel rigidity, stooped posture, freezing, festination, axial instability, and micrographia.\n\nThe patient was treated with Tango therapy for 1 hour per day for 5 days a week for two weeks. After 10 hours of Tango therapy, the UPDRS score improved dramatically from 105 (grade 4) to 82 (grade 3) points, and the BBS score improved from 2 to 12 points. The patient's posture was improved drastically to an upright posture, while the gait was also improved with less freezing and festination symptoms. His stride became wider, and he was able to walk with greater stability after Tango therapy.\n\nThe patient was discharged with appropriate instructions for follow-up care and recommendations to continue the exercises and therapy prescribed during the hospital stay. Close follow-up with a healthcare provider is recommended to monitor the progression of the patient's symptoms.\n\nDischarge Medications: None\n\nFollow-up Instructions: Continue with the prescribed exercises and therapy as instructed during the hospital stay. Follow-up with a healthcare provider is recommended for close monitoring of the progression of symptoms. \n\nPrimary Care Provider: [Redacted]\nDate of Follow-up: [Redacted]\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "G20",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 780,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

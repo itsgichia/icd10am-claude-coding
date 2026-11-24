@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "8737b8aee5a2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nAdmission date: N/A\nDischarge date: N/A\n\nPatient Information: \nThe patient is a 71-year-old Finnish male diagnosed with early onset Parkinson's disease at the age of 40.\n\nHospital Course:\n\nDuring the years 2016-2017, the patient was categorized at stage 2.5 of the modified Hoehn and Yahr Scale, with a United Parkinson's Disease Rating Scale (UPDRS) score of 41/199. The patient demonstrated rigidity of the lower limbs, shortness of steps, and postural instability, but no tremors. He has experienced a mild gait disturbance with occasional freezing recently. The progression of his illness has been slow, with a sustained response to medication.\n\nDiagnostic Tests:\nDopamine transporter (DaT) single-photon emission computerized tomography (SPECT) of the brain was performed and demonstrated reduced density of DA synaptic terminals in the caudate and putamen consistent with degenerative Parkinson's disease.\n\nMedical History:\nThe patient has no reported family history of Parkinson's disease.\n\nGenetic Analysis:\nTargeted next-generation sequencing revealed that the patient carried a novel homozygous c.194G > A variant in exon 3 of the PARK2 gene, causing an amino acid change p.Ser65Asn (S65N) in the PARKIN protein. The variant is very rare, but the site is highly conserved in vertebrates, and in silico analysis of the variant predicted that the mutation is deleterious.\nDischarge Diagnosis: [diagnosis section withheld]\nFollow-Up Care and Recommendations:\nThe patient should follow up with his healthcare provider regularly to monitor his condition and adjust medication as needed. The patient should be advised to continue engaging in regular physical activity and cognitive stimulation."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: G20 Parkinson's disease**\n\nRationale:\n\n- The patient has early-onset, degenerative Parkinson's disease. This is supported by rigidity, short steps, postural instability, gait disturbance with freezing, a Hoehn and Yahr stage of 2.5, and a DaT-SPECT showing reduced dopaminergic terminals in the caudate and putamen.\n- Genetic testing found a homozygous PARK2 (PARKIN) variant. This identifies the cause as autosomal recessive juvenile or early-onset parkinsonism.\n- ICD-10-AM (like ICD-10-WHO) has no separate code for genetic subtypes of Parkinson's disease. G20 covers idiopathic, primary, and hereditary or genetic Parkinson's disease, including PARK2-related disease. ICD-10-AM does not subdivide G20, and the later ICD-11 does (8A00.0).\n- Other G-codes do not fit:\n  - G21 (secondary parkinsonism) applies to drug-induced or other external causes.\n  - G23 (other degenerative diseases of the basal ganglia) is not appropriate for a typical Parkinson's disease picture.\n- No additional ICD-10-AM codes are needed for the principal diagnosis. The gait disturbance and freezing are integral features of the disease and should not be coded separately.\n\n**Notes:**\n- The record has no admission or discharge dates, so this appears to be an outpatient or clinic summary rather than an inpatient episode. Principal diagnosis assignment would normally apply to an admitted episode.\n- Coding is based on the documented diagnosis and clinical evidence. The discharge diagnosis section was withheld, so the diagnosis is inferred.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 656,
+    "output_tokens": 589
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7456c0a158b6",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 51 year old female\n\nAdmission: Shimane University Hospital\nDiagnosis: [diagnosis section withheld]\nMedical History: Insomnia, auditory hallucinations, delusions of persecution\n\nHospital Course: The patient was admitted to Shimane University Hospital with auditory hallucinations and delusions of persecution at the age of 49. Examination showed an autistic state, catatonic stupor, and deterioration of social functioning. The Positive and Negative Syndrome Scale (PANSS) was used to evaluate her psychiatric symptoms. Other routine laboratory examinations were within normal limits. Risperidone was started and her symptoms gradually decreased. However, at the age of 51, the patient developed psychomotor excitement and auditory hallucinations which led to a catatonic stupor. Haloperidol and perospirone were prescribed but worsened her symptoms. Modified electroconvulsive therapy (ECT) was started as a supplementary strategy and her symptoms gradually improved. The patient became almost symptom-free after the seventh ECT so the treatment was discontinued. During ECT, her prescription was not changed. \n\nOutcome: The patient's symptoms improved and she was transferred to another hospital for further training in social skills.\n\nFollow-up Recommendations: The patient should continue her follow-up care with her psychiatrist and attend regular therapy sessions to monitor her symptoms and adjust medications as needed."
+      }
+    ]
+  },
+  "text": "**Most likely principal diagnosis: F20.2 Catatonic schizophrenia**\n\nThe diagnosis section is withheld, so this code is inferred from the clinical picture.\n\n**Why schizophrenia (F20):**\n- Persistent psychotic symptoms over at least two years, with auditory hallucinations and persecutory delusions.\n- Negative symptoms: an autistic (withdrawn) state and declining social functioning.\n- Relapse after initial response to antipsychotics (risperidone).\n- Routine labs were normal, which argues against an organic or medical cause of the catatonia (F06.1).\n\n**Why the catatonic subtype (F20.2):**\n- Catatonic features dominate this admission: catatonic stupor alternating with psychomotor excitement.\n- ECT was needed after haloperidol and perospirone worsened her symptoms. ECT is a typical treatment for catatonia that doesn't respond to medication.\n- ICD-10 guidance says catatonic schizophrenia takes precedence when prominent catatonic symptoms are present, even if hallucinations and delusions also occur.\n\n**Alternative to consider:**\n- F20.0 Paranoid schizophrenia could apply if the documentation identifies hallucinations and delusions, rather than catatonia, as the main clinical picture.\n- Confirm against the clinician's documented diagnosis before final code assignment.\n\n**Additional code:**\n- Under ICD-10-AM/ACHI, the modified ECT would be captured as a procedure code in the 93340-xx block. The exact code depends on the number of treatments per episode.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 529,
+    "output_tokens": 644
+  },
+  "seconds": 0.0
+}

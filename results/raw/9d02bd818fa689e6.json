@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "4054a6aedd1d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary\n\nPatient Name: [REDACTED]\n\nGender: Female\n\nAge: 2 years 7 months\n\nDate of Admission: 31st March 2019\n\nDate of Discharge: 18th April 2019\n\nHospital: Regional Hospital of Buea\nPrimary Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted with a 4-day history of persistent fever, polyarthralgia and abdominal pain. Upon examination, she presented with moderate jaundice of the sclerae and a soft abdomen. Blood test results revealed abnormalities that prompted a urinalysis, which showed many bacteria and few pus cells. A request for urine and blood culture was made.\n\nThe culture results showed the presence of Shigella flexneri, which was initially treated with ceftriaxone. However, due to an increase in temperature and CRP, the patient was put on a combined therapy of ampicillin and gentamicin.\n\nAfter 3 days, the patient's temperature and CRP remained elevated, and the second urine culture showed the presence of Escherichia coli. Ofloxacin was discontinued and the patient was treated with Meropenem and Amikacin, which resulted in a progressive decrease in temperature and CRP over 7 days.\n\nA third urine culture was requested and revealed no significant growth after 48 hours of incubation. The patient was discharged on the 18th of April 2019 upon completion of treatment.\nDischarge Diagnoses: [diagnosis section withheld]\nDischarge Medications:\n\nThe patient was discharged with no medications.\n\nFollow-up Instructions:\n\nParents were advised to ensure good hygiene for the patient, including hand washing and regular bathing. They were encouraged to bring the patient for routine medical checkups following her discharge.\n\nDischarge Condition:\n\nThe patient was discharged in a stable condition and looked healthy with a normal body temperature.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "N39",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 752,
+    "output_tokens": 143
+  },
+  "seconds": 0.0
+}

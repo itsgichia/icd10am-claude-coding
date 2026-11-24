@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "3f1729a7cc5a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nAdmission Date: [Date]\nDischarge Date: [Date]\n\nPatient Name: [Patient Name]                   Age: 48                    Sex: Male\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient remained in a vegetative state with a CRS-R score of 6 upon arrival in the rehabilitation department of the university hospital. Through comprehensive rehabilitation that included the administration of neurotropic drugs, physical and occupational therapies, as well as the use of tDCS and rTMS, the patient recovered to a CRS-R score of 22 within 5 weeks.\n\nFollow-up:\nThe patient's wife provided signed, informed consent for publication, and approval for the study was obtained from the Institutional Review Board of Yeungnam University Hospital.\n\nDischarge Condition:\nThe patient was discharged to [preferred location] in a conscious state. \n\nPlan:\nReferred to [medical professional or organization] for future rehabilitation and care.\tA follow-up appointment with [medical professional or organization] was scheduled. \n\nMedications:\n[None noted in the case report.]\n\nAllergies:\n[None noted in the case report.]\n\nFollow-up Instructions:\nThe patient is advised to [list any instructions given to the patient]. \n\nPrimary Care Physician: [Physician Name]\n\nReviewed by: [Name of Responsible Medical Practitioner]"
+      }
+    ]
+  },
+  "text": "The most likely ICD-10-AM code is **R40.3, Persistent vegetative state** (also called apallic syndrome). It is the only diagnosis the summary clearly supports, since the patient was in a vegetative state with a CRS-R score of 6 on rehabilitation admission.\n\nThe summary doesn't give the underlying cause, and the diagnosis section is blank. Under ICD-10-AM sequencing rules, the principal diagnosis is the condition chiefly responsible for the admission. If the record identifies the cause, that condition should be coded first. For example, traumatic brain injury would be coded from the S06 block, and anoxic brain damage would be G93.1. R40.3 would then be a secondary code. Confirm the aetiology in the full medical record before finalising the code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 514,
+    "output_tokens": 851
+  },
+  "seconds": 0.0
+}

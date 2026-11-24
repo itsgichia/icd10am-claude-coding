@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7d68c729f7dd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 65-year-old male with multiple comorbidities including hypertension, heart failure, end-stage renal disease, and Parkinson's disease.\n\nHospital Course:\n\nThe patient was admitted with fever, altered mental status, and syncope while undergoing dialysis. On admission, he was tachycardic and hypotensive. The patient was empirically started on antibiotics for possible sepsis with unknown sources and was admitted to the ICU. During his stay, the patient was found to have elevated levels of troponin and was diagnosed with aortic valve vegetation with moderately severe aortic regurgitation, severe pulmonary hypertension, and endocarditis. Blood cultures grew methicillin-resistant Staphylococcus aureus. The patient subsequently underwent aortic valve replacement and was stabilized with long-term antibiotics treatment.\n\nHospital course summary:\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course: Patient was diagnosed with aortic valve vegetation with moderately severe aortic regurgitation, severe pulmonary hypertension, and endocarditis. Blood cultures grew methicillin-resistant Staphylococcus aureus.\nDischarge Diagnosis: [diagnosis section withheld]\nProblems:\n\n1. Aortic valve vegetation with moderately severe aortic regurgitation, severe pulmonary hypertension, and endocarditis\n2. Methicillin-resistant Staphylococcus aureus bacteremia\n3. Right bundle branch block and left anterior fascicular block with atrial flutter\n4. Small vessel disease with multiple infarctions in multiple vascular territories including an old right frontal infarct\n\nProcedures:\n\n1. Aortic valve replacement\n\nDischarge medications:\n\nThe patient was prescribed medications to be managed by his primary care provider. \n\nFollow-up:\n\nThe patient was instructed to follow up with his primary care provider and obtain an echocardiogram 4-6 weeks post-discharge.\n\nCondition on discharge:\n\nStable condition."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: I33.0 Acute and subacute infective endocarditis**, with B95.62 (Methicillin-resistant *Staphylococcus aureus* as the cause of diseases classified elsewhere) as an additional code to identify the organism.\n\n**Rationale**\n- The condition established after study to be chiefly responsible for the admission and the ICU care, the valve surgery and the prolonged antibiotics was MRSA infective endocarditis of the aortic valve.\n- The ICD-10 index places bacterial endocarditis under I33.0, with the organism coded additionally. In ICD-10-AM, I33.0 is the standard code for acute or subacute infective endocarditis. The record does not specify a chronic course, and the presentation was acute (fever, sepsis, vegetation).\n- The sepsis was only \"possible\" on admission and was never confirmed. The bacteremia is integral to the endocarditis, so A41.02 (sepsis due to MRSA) should not be the principal diagnosis unless the clinician documents sepsis explicitly. If the physician does document MRSA sepsis, query the coding rules. Sepsis would then be coded and sequenced according to the ACS guidelines, but the documentation here does not support it.\n\n**Suggested secondary codes (to verify against full documentation)**\n- B95.62: MRSA as the cause of the endocarditis\n- I35.1 or I35.2: aortic regurgitation (the valve disease is documented as part of the endocarditis, so check whether it needs separate coding)\n- I27.2x: pulmonary hypertension\n- I48.x: atrial flutter\n- I45.1 and I44.4: right bundle branch block and left anterior fascicular block\n- I67.x or I69.x: small vessel disease and old infarcts\n- N18.5: end-stage renal disease (N18.5 is CKD stage 5; use N18.6 for ESRD requiring dialysis), plus Z99.2 for dialysis dependence\n- I50.x: heart failure\n- I10 or I12/I13: hypertension (hypertension with heart failure and renal disease should be coded as I13.x)\n- G20: Parkinson's disease\n\n**Procedure**\n- Aortic valve replacement, coded with ACHI (Australian Classification of Health Interventions) block 38489 or 38493 depending on the valve type used.\n\nFinal code assignment depends on the complete medical record and the current ICD-10-AM/ACHI/ACS edition.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 733,
+    "output_tokens": 821
+  },
+  "seconds": 7.7499956660030875
+}

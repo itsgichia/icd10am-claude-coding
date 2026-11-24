@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "dc0449ea2395",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\nPatient Name: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHospital stay: The patient was admitted to the hospital due to the presence of a brain tumor located in the clivus region. He underwent surgical intervention via a left suboccipital craniotomy, which involved resection of the tumor. Oral intubation was done using the Macintosh laryngoscope blade, and the patient was placed in the left park bench position with neck flexion. Surgery was performed via the left lateral suboccipital approach. The lesion was decompressed, and the operation was completed successfully.\n\nMedical Condition at Discharge: The patient had minor swelling in the neck, tongue, and pharynx on the left side. He experienced pain in the tip of his tongue with a small ulcer on the left side after returning to the intensive care unit. The swelling of his tongue gradually improved after the administration of steroids. The patient was discharged 10 days after the surgery.\n\nFollow-Up Care: The patient was advised to undergo follow-up MRI after three months of surgery as well as clinical follow-up as per physician's recommendations.\n\nDischarge Medications: None.\n\nInstructions: The patient was advised to follow-up with his physician for regular check-up and take rest until complete recovery.\nFinal Diagnosis: [diagnosis section withheld]"
+      }
+    ]
+  },
+  "text": "The most likely code is **D49.6, Neoplasm of unspecified behaviour of brain**, but the record doesn't support that with confidence.\n\n- **Why D49.6:** The summary describes a \"brain tumor located in the clivus region\" that was resected, with no histology or behaviour stated. Without that, the default for a brain tumour of unspecified behaviour is D49.6.\n- **Caveat on site:** The clivus is part of the skull base (bone), not brain tissue. If the final pathology shows a clivus chordoma, which is common in this location, the principal diagnosis would more likely be **C41.0, Malignant neoplasm of bone of skull and face**.\n- **Other possibilities:** If pathology reports uncertain behaviour of an infratentorial brain lesion, D43.1 would apply.\n\nThe \"Final Diagnosis\" section is withheld, so the histology report or operative pathology should be checked before final code assignment. Coding guidelines require the principal diagnosis to be the condition established after study to be chiefly responsible for the admission, so the pathology result will determine the correct code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 483,
+    "output_tokens": 1176
+  },
+  "seconds": 0.0
+}

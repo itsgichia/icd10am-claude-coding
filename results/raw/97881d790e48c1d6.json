@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "9e761020b901",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nGender: Male\nDate of Discharge: [REDACTED]\nAdmission Date: [REDACTED]\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient presented to the emergency department with right-sided chest pain and dyspnoea. Chest radiograph revealed a large right-sided pneumothorax. A pigtail intercostal catheter was inserted and placed on suction. The patient used nocturnal NIV and mouthpiece intermittent positive pressure ventilation (MIPPV) throughout the admission. The ICC was removed on day three, and the patient was discharged on day five with advice to cease all MI-E until clinical review in two weeks.\n\nFollow-up:\nAt review, the MI-E pressures were decreased by a physiotherapist with instructions to use sparingly for cough augmentation or saliva clearance only. Pharmacological modalities of saliva management were recommended; however, the patient had no success with these previously. Unfortunately, the patient represented on three occasions with right-sided pneumothorax in the following six months, with chemical pleurodesis conducted twice, both of which failed to prevent recurrence. The patient was discharged home with a long-term pleural catheter after the fourth admission, which was removed two months later. The patient continues to use MI-E sparingly and has had no subsequent recurrence.\n\nInstructions:\nThe patient is advised to continue using NIV and MIPPV. The patient should use MI-E sparingly for cough augmentation or saliva clearance only, as instructed by the physiotherapist. The patient should seek medical attention if he experiences any chest pain or dyspnoea. The patient should also pay attention to the signs of right-sided pneumothorax in the future and seek prompt medical attention if these occur again."
+      }
+    ]
+  },
+  "text": "# Suggested principal diagnosis: **J93.1 \u2013 Other spontaneous pneumothorax**\n\n## Rationale\n\n- **Reason for admission:** The patient presented with chest pain and dyspnoea, and the chest X-ray showed a large right-sided pneumothorax. This condition was the reason for admission and was treated with a pigtail ICC on suction.\n- **Underlying condition:** The patient uses nocturnal NIV, MIPPV, MI-E and needs saliva management. This strongly suggests an underlying neuromuscular disease, such as MND/ALS or muscular dystrophy. A pneumothorax in a patient with underlying disease is a **secondary spontaneous pneumothorax**, which is coded to **J93.1** rather than J93.0 (primary/tension) or J93.9 (unspecified).\n- **Not traumatic:** No injury is documented, so S27.0 (traumatic pneumothorax) does not apply.\n\n## Important query point: possible MI-E\u2013related (iatrogenic) pneumothorax\n\nThe management strongly implies the clinicians suspected the **MI-E (cough assist) device caused or contributed to the pneumothorax**. They stopped MI-E, then later reduced its pressures and restricted its use. However, the summary **does not explicitly document a cause-and-effect relationship**. Under ACS 0010 *Clinical documentation and general abstraction guidelines* and ACS 1904 *Procedural complications*, the coder cannot assume that link.\n\n**Recommend a clinician query.** If the treating clinician confirms the pneumothorax was a complication of MI-E barotrauma, the coding would change to:\n- **J95.8x \u2013 Other postprocedural respiratory disorders**, at the pneumothorax-specific subcode in your edition. Check your current ICD-10-AM edition for the exact code.\n- **Y84.8 \u2013 Other medical procedures as the cause of abnormal reaction of the patient, or of later complication**, as the external cause.\n- **Y92.xx** for place of occurrence. Use home if the device was used at home.\n\n## Additional diagnoses to consider (if documented)\n- The underlying neuromuscular disease (e.g., **G12.2** for MND), once the specific diagnosis is confirmed.\n- **Z99.1 \u2013 Dependence on respirator** (NIV/MIPPV use), as appropriate per local standards.\n- Sialorrhoea (**K11.7**) if it meets ACS 0002 *Additional diagnoses* criteria.\n\n## Procedure\n- **Intercostal catheter insertion (pleural drainage)**, coded with the appropriate ACHI code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 651,
+    "output_tokens": 1431
+  },
+  "seconds": 0.0
+}

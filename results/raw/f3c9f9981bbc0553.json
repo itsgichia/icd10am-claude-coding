@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "98d7b7554966",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary\n\nPatient: 75-year-old male with history of tobacco abuse and metastatic p16 positive squamous cell carcinoma (SCC)\n\nHospital Course:\nThe patient was admitted with initial symptoms of swelling in the left neck followed by progressive hoarseness and dysphagia over a span of one to two months. A biopsy of the left neck node confirmed squamous cell carcinoma and the patient was later found to have pulmonary metastases. He required tracheostomy and gastrostomy placement for threatened airway obstruction and dysphagia, respectively. \n\nTreatment and Progression:\nThe patient was initially enrolled in a clinical trial comparing first-line EXTREME chemotherapy versus ipilimumab and nivolumab and was randomized to combination ipilimumab and nivolumab delivered concurrently every three weeks for four cycles. However, follow-up imaging at eight weeks showed progression of disease. The patient was then treated with \u2018QUAD SHOT\u2019 for palliation and delivered 3.7 Gy BID x 2 days (total dose 14.8 Gy) to gross disease. The patient continued through the third and fourth cycles of nivolumab and ipilimumab without breaks or delays. Radiation was delivered during the three-week time frame between immunotherapy cycles and he tolerated treatment well with minimal pain and noticeable improvement in the left neck mass. Repeat imaging showed continued decrease in size of all neck and most lung disease, with one lung nodule minimally increasing in size.\n\nOutcome:\nAt the time of writing (10 months from initial diagnosis), the patient has completed a total of 14 cycles of ipilimumab and nivolumab on trial and is currently living with stable, asymptomatic disease. The patient continues to be followed up for response to treatment.\nDiagnoses: [diagnosis section withheld]\nProcedures:\n- Biopsy of the left neck node\n- Tracheostomy and gastrostomy placement \n- \u2018QUAD SHOT\u2019 for palliation \n\nFollow-up:\nThe patient continues to be followed up for response to treatment.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The primary site is not documented, so the coded condition is the confirmed secondary deposit in the neck lymph nodes.\n\nCODE: C77\n\n1. **What is established after investigation.** The left neck node biopsy confirmed squamous cell carcinoma. Pulmonary metastases were found later.\n\n2. **What the admission was chiefly for.** He presented with a left neck mass. The tracheostomy and gastrostomy were for threatened airway obstruction and dysphagia from the head and neck disease. That disease is the focus of the episode, not the lung secondaries (C78).\n\n3. **Why not code a primary site.** The summary never names the primary.\n   - p16 positivity suggests an HPV-related oropharyngeal primary (C09\u2013C10).\n   - Hoarseness could suggest larynx (C32) or hypopharynx (C13).\n   - Neither is stated, and I won't assign a primary site from inference.\n\n4. **Code assigned.** With only the nodal disease confirmed, I code secondary malignant neoplasm of lymph nodes, C77 (C77.0 at 4th character, head, face and neck). I would add C80.0 for primary site unknown and C78.0 for the lung secondaries.\n\n5. **Query.** I would query the treating team to confirm the primary site. If they document an oropharyngeal or laryngeal primary, the principal diagnosis should be re-sequenced to that primary category.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 929,
+    "output_tokens": 832
+  },
+  "seconds": 0.0
+}

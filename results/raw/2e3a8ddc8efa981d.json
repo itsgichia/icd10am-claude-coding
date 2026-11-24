@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "101064326bcc",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient: 10-year-old female with developmental delay, microcephaly, epilepsy, severe short stature, impaired speech, facial dysmorphism, congenital deafness, and skeletal abnormalities.\n\nHospital Course:\nThe patient was admitted to our Genetic Department due to the above-listed conditions. She was diagnosed with bilateral hip dysplasia, mixed hearing loss, and right conductive hearing loss. A genome-wide array, CGH (Agilent Human Genome CGH Microarray 44K), was conducted which diagnosed a minimal/maximal deletion of 5.238 Mb and 5.374Mb at 8q22.2q22.3. The patient\u2019s sleep electroencephalogram displayed epileptogenic activity during nonrapid eye movement (NREM) sleep. Cerebral MRI tests were normal, as was the screening for inborn errors of metabolism. The patient was discharged after following up on the diagnosis it was shown that the deletion was excluded in her mother's blood sample, and the father was not available for investigation. \nDiagnosis: [diagnosis section withheld]\nSummary:\nThe patient was a 10-year-old girl born with several conditions, including microcephaly, epilepsy, severe short stature, impaired speech, facial dysmorphism, congenital deafness, and skeletal abnormalities. After following up on the diagnosis, it was shown that the patient was diagnosed with a minimal/maximal deletion of 5.238 Mb and 5.374Mb at 8q22.2q22.3, which was not present in the mother's blood sample. The patient was discharged after the genome-wide array, and other tests showed no issues, but follow-up evaluation is necessary.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "Q93",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 704,
+    "output_tokens": 5
+  },
+  "seconds": 0.0
+}

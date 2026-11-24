@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "cot_then_extract",
+  "record_id": "98d7b7554966",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary\n\nPatient: 75-year-old male with history of tobacco abuse and metastatic p16 positive squamous cell carcinoma (SCC)\n\nHospital Course:\nThe patient was admitted with initial symptoms of swelling in the left neck followed by progressive hoarseness and dysphagia over a span of one to two months. A biopsy of the left neck node confirmed squamous cell carcinoma and the patient was later found to have pulmonary metastases. He required tracheostomy and gastrostomy placement for threatened airway obstruction and dysphagia, respectively. \n\nTreatment and Progression:\nThe patient was initially enrolled in a clinical trial comparing first-line EXTREME chemotherapy versus ipilimumab and nivolumab and was randomized to combination ipilimumab and nivolumab delivered concurrently every three weeks for four cycles. However, follow-up imaging at eight weeks showed progression of disease. The patient was then treated with \u2018QUAD SHOT\u2019 for palliation and delivered 3.7 Gy BID x 2 days (total dose 14.8 Gy) to gross disease. The patient continued through the third and fourth cycles of nivolumab and ipilimumab without breaks or delays. Radiation was delivered during the three-week time frame between immunotherapy cycles and he tolerated treatment well with minimal pain and noticeable improvement in the left neck mass. Repeat imaging showed continued decrease in size of all neck and most lung disease, with one lung nodule minimally increasing in size.\n\nOutcome:\nAt the time of writing (10 months from initial diagnosis), the patient has completed a total of 14 cycles of ipilimumab and nivolumab on trial and is currently living with stable, asymptomatic disease. The patient continues to be followed up for response to treatment.\nDiagnoses: [diagnosis section withheld]\nProcedures:\n- Biopsy of the left neck node\n- Tracheostomy and gastrostomy placement \n- \u2018QUAD SHOT\u2019 for palliation \n\nFollow-up:\nThe patient continues to be followed up for response to treatment.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible for the episode is metastatic p16-positive squamous cell carcinoma presenting with a left neck nodal mass, hoarseness and dysphagia. The primary site is not stated. The p16 positivity suggests an oropharyngeal origin, but that is not confirmed, and the neck node and lung disease are both secondary. In ICD-10-AM, with the primary unknown, the lymph node metastasis is coded to C77 (secondary and unspecified malignant neoplasm of lymph nodes) and the lung metastasis to C78. Which of these is principal depends on the coding rules for an unknown primary. C77 is the best fit because the presenting problem was the neck node, and the chapter is C. The alternative, C80 (malignant neoplasm without specification of site), applies when the site is not specified at all. Here the sites of the metastases are specified, so C77 is the better choice.\n\nCODE: C77",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1300,
+    "output_tokens": 306
+  },
+  "seconds": 0.0
+}

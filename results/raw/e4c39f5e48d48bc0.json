@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "f7b64cd0b324",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\nPatient Name: [REDACTED]\nDOB: [REDACTED]\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nAdmitting Diagnosis: [diagnosis section withheld]\nFinal Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted with a moderate traumatic brain injury, stigmas of trauma in the anterior chest wall, and signs of respiratory distress after falling off a cliff while riding his bicycle. Upon admission, a thoracoabdominal computed tomography angiography reported pneumomediastinum, a small right pneumothorax, and an image of loss of continuity in the anterior superior wall of the right main bronchus highly suggestive of bronchial rupture. The bronchial lesion was confirmed by fiberoptic bronchoscopy, showing a linear 1-cm rupture at the level of the root of the right main bronchus, in its lateral aspect, with fracture of the entire bronchial wall. Conservative management was chosen, and the patient was transferred to the intensive care unit (ICU) with protective tracheal intubation. The patient\u2019s ICU stay included a respiratory rate of 12 breaths per minute, tidal volume of 6\u20138 ml/kg, I/E 1:3, PEEP 5 cm H2O, and plateau pressure of < 30 mmHg. After 48 hours, the pneumothorax and pneumomediastinum resolved spontaneously, with limited subcutaneous emphysema, and the patient was successfully extubated on day 4. Strict follow-up was performed without evidence of swallowing or respiratory disorders, which allowed for the patient\u2019s discharge 1 week later.\n\nCondition at Discharge:\nThe patient is considered stable with no evidence of respiratory or swallowing disorders.\n\nFollow-Up Plans:\nPatient will follow-up in 4-6 weeks for scheduled evaluation."
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis: S27.5- (Injury of bronchus), specifically the traumatic laceration/rupture of the right main bronchus.** Confirm the exact subcode and any final character in the ICD-10-AM tabular list for your edition, because I can't verify the full code from memory.\n\n**Why this code:**\n- The patient had several injuries: moderate traumatic brain injury (S06.-), pneumomediastinum, right pneumothorax, and chest wall trauma.\n- ICD-10-AM directs that, with multiple injuries, the most serious injury (the one chiefly responsible for the admission and the main focus of treatment) is sequenced first.\n- The bronchial rupture was confirmed by bronchoscopy and drove the main treatment: ICU transfer, protective intubation, mechanical ventilation, and conservative bronchial management.\n- The TBI is listed first in the admitting description, so the principal diagnosis is a judgment call. If the treating team documents the TBI as the most serious injury, sequence S06.- first instead. Query the clinician if the discharge summary's diagnosis section, which is withheld here, does not clarify this.\n\n**Secondary codes to consider:**\n- S06.- for the moderate TBI, with the appropriate severity subcode\n- Pneumothorax and pneumomediastinum traumatic codes (S27.- / S27.8- series, depending on the documented injury)\n- Subcutaneous emphysema from trauma\n- External cause codes for a cyclist falling from a height (e.g., transport or fall codes), plus place of occurrence and activity codes as required by your coding standards\n- Procedure codes for the bronchoscopy, intubation, and mechanical ventilation hours",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 700,
+    "output_tokens": 1768
+  },
+  "seconds": 0.0
+}

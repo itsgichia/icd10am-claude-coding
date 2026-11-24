@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "c727c2953886",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY:\n\nAdmission Date: [date]\nDischarge Date: [date]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient, an 82-year-old Caucasian female, was admitted to the hospital due to fatigue and a hemoglobin level of 6.2 g/dL. She had a past medical history of heart failure with reduced ejection fraction, low AS, persistent hypotension, coronary artery disease, paroxysmal atrial fibrillation, chronic kidney disease, and chronic obstructive pulmonary disease. She was noted to have evidence of heart failure exacerbation with bibasilar crackles and pedal edema. During her hospital course, she developed atrial fibrillation with rapid ventricular response and was transferred to the cardiac critical care unit. There was a multi-disciplinary discussion about potential treatment options, including balloon aortic valvuloplasty and subsequent TAVR. Transthoracic echocardiogram (TTE) demonstrated low flow low gradient moderate to severe AS, and left heart catheterization showed areas between 1.22 and 1.42 cm2 with lower concern for severe AS. The patient was transferred back to the intermediate cardiac care unit with optimized rate control for atrial fibrillation, anticoagulation bridging, and diuresis for heart failure exacerbation. The patient also had elevated vWF activity on laboratory workup, but there was no evidence of active GI bleeding.\n\nDischarge Medications:\nThe patient was discharged on oral medication regimens, which included [list of medications], to be continued as directed by a primary care physician.\n\nFollow-up:\nThe patient is advised to follow up with her primary care physician, interventional cardiology services, cardiothoracic surgery, and other necessary specialists as per her routine schedule.\n\nDischarge Condition:\nThe patient was discharged in stable condition with resolution of active GI bleeding, and improved heart failure exacerbation."
+      }
+    ]
+  },
+  "text": "# Suggested Principal Diagnosis: D64.9 Anaemia, unspecified\n\nThe documentation is internally inconsistent, so a coder would normally query the clinician before finalising this code.\n\n## Why D64.9\n\n- **Reason for admission:** ACS 0001 defines the principal diagnosis as the condition chiefly responsible for the admission. The summary says she was \"admitted to the hospital due to fatigue and a hemoglobin level of 6.2 g/dL.\"\n- **GI bleed not confirmed:** The hospital course says there was \"no evidence of active GI bleeding.\" So K92.2 (GI haemorrhage, unspecified) and D62 (acute posthaemorrhagic anaemia) are not supported as the cause of the anaemia.\n- **Unspecified type:** No aetiology of the anaemia is documented, so D64.9 is the default.\n\n## Documentation Problems to Query\n\n1. **GI bleeding contradiction:** The discharge condition says \"resolution of active GI bleeding,\" which conflicts with the hospital course. If the clinician confirms a GI bleed caused the anaemia, the principal diagnosis would change to **K92.2**, with **D62** as an additional code. If angiodysplasia is confirmed, as in Heyde syndrome with aortic stenosis, use **K55.2x** instead.\n2. **Main focus of care:** Heart failure exacerbation was present on admission, with crackles and oedema, and much of the stay was spent managing it. If the clinician indicates heart failure was the main reason for admission, the principal diagnosis would be **I50.0** (congestive heart failure). Under ACS 0001, when two conditions equally meet the definition, either may be sequenced first.\n\n## Likely Additional Diagnoses\n\n| Code | Condition |\n|---|---|\n| I50.0 / I50.1 | Heart failure exacerbation (HFrEF) |\n| I35.0 | Aortic stenosis (low-flow, low-gradient, moderate to severe) |\n| I48.0 | Paroxysmal atrial fibrillation, with rapid ventricular response |\n| I25.9 | Coronary artery disease |\n| N18.x | Chronic kidney disease (stage needed) |\n| J44.9 | COPD |\n| I95.x | Hypotension (persistent) |\n\n**Note:** With heart failure and CKD both present, check whether hypertension is documented. If it is, the I13.x combination codes apply.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 706,
+    "output_tokens": 1443
+  },
+  "seconds": 0.0
+}

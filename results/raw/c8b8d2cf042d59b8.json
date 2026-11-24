@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "df7ed05e020c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course Summary:\n\nAdmission Date: March 10, 2020\nDischarge Date: April 7, 2020\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course: A 50-year-old male patient presented with symptoms of cough and fever lasting for 47 days. The patient was diagnosed with COVID-19 infection based on positive nucleic acid results on February 15th. Prior treatment included arbidol and lianhua qingwen granules. The patient was admitted to Wuhan Huoshenshan Hospital on March 10th with peripheral oxygen saturation of 96% and respiratory rate of 18 breaths/minute. CT findings showed a bilateral, scattered, high-density shadow and fiber- and spine-like opacities. \n\nDuring his hospitalization, convalescent plasma from COVID-19 patients, recombinant human interferon, lianhua qingwen granules, arbidol, and chloroquine phosphate were administered. On March 24th, the patient's CT scan showed substantial improvement with no obvious pulmonary lesions. On April 3-5, nucleic acid test results for SARS-CoV-2 were all negative. SARS-CoV-2 IgM and IgG levels were markedly reduced. The patient was discharged from the hospital on April 7th after three consecutively negative SARS-CoV-2 RNA tests. \nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Condition: The patient was discharged from the hospital in good condition and stable. The patient was advised to follow COVID-19 prevention protocols and report any symptoms of illness to their primary care provider.\n\nFollow-up Care: Follow-up care was recommended for the patient to monitor their health and recovery progress."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: U07.1 COVID-19, virus identified**\n\n**Rationale:**\n- The patient had laboratory-confirmed COVID-19. Nucleic acid testing was positive on February 15th, and SARS-CoV-2 IgM and IgG were measured during the stay.\n- The admission was for treatment of this infection, using convalescent plasma, interferon, arbidol, chloroquine and lianhua qingwen.\n- The CT showed bilateral scattered high-density shadows, which suggests COVID-19 pneumonia. In ICD-10-AM, U07.1 is assigned for confirmed COVID-19. Pneumonia due to it is coded additionally as J12.8 (other viral pneumonia), and only if the clinician documents pneumonia. Here, pneumonia was not explicitly documented, so I would not assign it.\n- Oxygen saturation was 96% and the respiratory rate was 18, so there was no documented respiratory failure to code.\n\n**Notes:**\n- The ICD-10-AM code set is Australian and was not used in Wuhan, but U07.1 is the applicable code in ICD-10-AM. The classification introduced it in the 11th Edition, with COVID-19 coding advice in effect from 2020.\n- If the clinician documented pneumonia, add J12.8 as a secondary diagnosis. Sequencing would follow the current Australian Coding Standards, which is U07.1 first and then the manifestation code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 628,
+    "output_tokens": 490
+  },
+  "seconds": 0.0
+}

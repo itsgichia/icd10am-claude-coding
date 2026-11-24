@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "0d6bd47ba68f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 42-year-old female with a past medical history of rheumatoid arthritis\n\nHospital Course:\n\nThe patient was admitted due to psychomotor agitation and neutrophilia. The lumbar puncture showed a low glucose level in the cerebrospinal fluid and common germs in FilmArray despite negative Gram and Chinese ink. The patient was initiated on antibiotic therapy, antituberculosis drugs, and antifungal agents. The patient showed some improvements three days after initiating treatment but then presented a new episode of altered mental status, which was associated with transaminase elevation. Brain CT scan revealed ischemic areas in the corpus callosum and bilateral parietal lobes. The patient presented severe hemodynamic decompensation with metabolic acidosis, acute respiratory failure, and pancytopenia one day later, which required the transfer to the MICU. The autoimmune markers were requested due to the suspicion of immune alveolar hemorrhage, and the patient met the CAPS criteria. The patient was initiated on intravenous pulses of methylprednisolone 1 g daily IV and enoxaparin 60 mg daily SubQ. Despite the initial clinical improvement, the patient passed away due to new respiratory, renal, and encephalopathic deterioration in later days.\nDiagnosis: [diagnosis section withheld]\nDischarge Condition:\n\nThe patient passed away due to new respiratory, renal, and encephalopathic deterioration.\n\nDischarge Instructions:\n\nNone. This patient did not survive. \n\nFollow-Up Care:\n\nNone. This patient did not survive. \n\nSigned,\n\n[Physician's Name]"
+      }
+    ]
+  },
+  "text": "# Suggested principal diagnosis: **D68.6 \u2013 Other thrombophilia** (catastrophic antiphospholipid syndrome)\n\n## Why CAPS is the likely principal diagnosis\n- The patient met the CAPS criteria.\n- CAPS explains the main clinical picture:\n  - Encephalopathy and ischaemic lesions in the corpus callosum and parietal lobes\n  - Rising liver enzymes\n  - Pancytopenia\n  - Suspected immune alveolar haemorrhage with respiratory failure\n  - Renal deterioration\n  - Death from multi-organ failure\n- Treatment was directed at CAPS (pulse methylprednisolone and enoxaparin).\n- In ICD-10-AM, antiphospholipid syndrome, including the catastrophic form, is classified to **D68.6**.\n\n## Important caveats\n1. **Possible meningitis.** The patient was admitted with agitation and cerebrospinal fluid showing low glucose and a positive multiplex PCR (FilmArray) result. If the coder or treating team confirms that bacterial meningitis was the condition chiefly responsible for admission, that could be sequenced as principal instead, with CAPS as an additional diagnosis. Under ACS 0001, the principal diagnosis is the condition established after study to be chiefly responsible for the admission. The withheld diagnosis section and a clinician query should settle this.\n2. **Edition differences.** Check the ICD-10-AM edition in use. Some editions or other classifications (such as ICD-10-CM) have a more specific subcode for antiphospholipid syndrome, such as D68.61.\n\n## Likely additional codes\n- **M06.9** \u2013 Rheumatoid arthritis\n- **J96.0** \u2013 Acute respiratory failure\n- **N17.9** \u2013 Acute kidney failure\n- **D61.9** \u2013 Pancytopenia (or another code as appropriate)\n- **E87.2** \u2013 Acidosis\n- **I63.x** \u2013 Cerebral infarction\n- **R57.x** \u2013 Shock\n- **R74.0** \u2013 Raised transaminases\n- **G03.9 / G00.x** \u2013 Meningitis, if confirmed\n\nThese should be checked against the full documentation before assigning.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 597,
+    "output_tokens": 1150
+  },
+  "seconds": 0.0
+}

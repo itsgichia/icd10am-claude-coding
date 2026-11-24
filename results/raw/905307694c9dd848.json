@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "bf7949dcece5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nHOSPITAL COURSE:\n\nAdmission Date: April 29th, 2016\nDischarge Date: N/A\n\nHISTORY OF PRESENT ILLNESS:\n\nMs. C, a 73-year-old woman with a history of uveal melanoma, was admitted to the hospital for epigastric pain and symptoms of gastric reflux following her second dose of ipilimumab as second line immunotherapy for liver metastases. She also had mild diarrhea with 3\u20134 loose stools daily. Esophagogastroduodenoscopy and flexible sigmoidoscopy were performed to inform further treatment.\n\nFINDINGS:\n\nEsophageal, gastric and duodenal mucosa appeared normal on endoscopic examination without evidence of ulceration or other significant mucosal injury. Gastric biopsies exhibited lymphocytic inflammation surrounding pigmented cells scattered throughout the gastric mucosa. S100 and SOX10 immunostains confirmed multiple microscopic foci of melanoma with tumor associated inflammation resembling gastritis. Flexible sigmoidoscopy and colonic biopsies were normal.\n\nHOSPITAL COURSE AND TREATMENT:\n\nGlucocorticoid treatment was initially deferred as this was considered an appropriate antitumor response, and she received her third dose of ipilimumab. After the 3rd dose, she developed an elevation in her transaminases and bilirubin concerning for checkpoint hepatitis. She was started on glucocorticoids and further immunotherapy was held. Her hepatitis resolved on glucocorticoids. Her gastric symptoms also improved on glucocorticoid therapy consistent with an immune-mediated mechanism.\n\nDISCHARGE INSTRUCTIONS:\n\nMs. C is advised to continue taking glucocorticoids and report any new symptoms to her healthcare provider. She is recommended to follow-up with her oncologist for further treatment options.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: C79**\n\nThe principal diagnosis is metastatic uveal melanoma involving the stomach, coded to C79 (secondary malignant neoplasm of other specified sites). The admission was for epigastric pain and reflux, and after investigation the gastric biopsies showed microscopic melanoma foci, which is the condition chiefly responsible for the episode. The gastric inflammation was tumour-associated, and the endoscopy was otherwise normal.\n\nTwo alternatives were considered and rejected:\n- **Checkpoint-inhibitor hepatitis and immune-mediated gastritis** arose during the admission and were treated, but the gastric histology was attributed to the tumour, so they are secondary rather than principal.\n- **Uveal melanoma (C69)** is the primary site and would be an additional code, since the principal diagnosis is the secondary site being managed.\n\nThe four-character subcategory and any adverse-effect codes (for ipilimumab, T45.1 with an external cause code) would be assigned at the next level of detail. I have not confirmed these against the current ICD-10-AM tabular and index, so verify them before finalising.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 907,
+    "output_tokens": 1046
+  },
+  "seconds": 0.0
+}

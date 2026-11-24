@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "cde5bf6b654a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nHOSPITAL COURSE SUMMARY:\nThis is a discharge summary for a 64-year-old female who was admitted to the hospital with shortness of breath, cough, and fever. The patient had a past history of chronic obstructive pulmonary disease and left upper lobe cavitary lung lesion.\nDIAGNOSIS: [diagnosis section withheld]\nTREATMENT:\nThe patient was placed on intravenous vancomycin, levofloxacin, and fluconazole for a presumed hospital-acquired or fungal pneumonia. On day two, aztreonam was added to the patient's treatment due to a worsening clinical picture. The patient continued antibiotic and antifungal therapy and was discharged with cefpodoxime 400 mg twice a day for ten more days.\n\nCONSULTATIONS:\nThe patient underwent consultations from infectious disease, pulmonology, and cardiothoracic surgery due to her worsening pneumonia with associated cavitary lung lesion.\n\nDISCHARGE:\nThe patient was discharged after a protracted hospital course of nine days with instructions to follow up with infectious disease within the next two weeks.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "J18",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 505,
+    "output_tokens": 84
+  },
+  "seconds": 0.0
+}

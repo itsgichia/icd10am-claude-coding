@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "74d57f2e9126",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nName: [Patient Name]\nMedical Record Number: [MRN]\n\nAdmission Date: [Admission Date]\nDischarge Date: [Discharge Date]\n\nHistory of Present Illness:\nThe patient, a 53-year-old male with a history of type 2 diabetes mellitus and dyslipidemia, underwent laparoscopic right hemicolectomy with D3 lymphadenectomy for moderately differentiated tubular adenocarcinoma of the ascending colon. Postoperative surveillance revealed a 23-mm sessile polyp at the superior rectum, which was successfully removed by endoscopic mucosal resection. 39 months after EMR, a mass lesion was found in the presacral area on CT as postoperative surveillance. The patient underwent LAR with D3 lymphadenectomy, and the recurrent site was completely removed without adjuvant chemotherapy.\n\nHospital Course:\n\nAdmission:\nThe patient was admitted for LAR with D3 lymphadenectomy due to presacral lymph node recurrence of rectal cancer.\n\nTreatment:\nThe patient underwent LAR with D3 lymphadenectomy, and the recurrent site was completely removed by surgery.\n\nClinical Progress:\nThe postoperative course was uneventful, and he was discharged from our hospital on postoperative day 11.\n\nDischarge Condition:\nThe patient was discharged in a stable condition.\nDischarge Diagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was discharged home in stable condition.\n\nInstructions:\nThe patient should follow up with his primary care physician and oncologist for postoperative surveillance per their recommendations.\n\nSigned,\n[Physician Name]\n[Title]\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C77",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 690,
+    "output_tokens": 439
+  },
+  "seconds": 0.0
+}

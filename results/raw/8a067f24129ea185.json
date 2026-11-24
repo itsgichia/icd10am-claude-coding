@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "fbca0f1aed5c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]     MRN: [REDACTED]     DOB: [REDACTED]     Admission Date: [REDACTED]     Discharge Date: [REDACTED]\n\nHOSPITAL COURSE:\nThe patient was admitted to the emergency department with complaints of chest pain, shortness of breath, and a productive cough. Upon examination, the patient was found to have tachycardia and tachypnea. Laboratory findings revealed leukocytosis with elevated C-reactive protein and erythrocyte sedimentation rate. CT chest showed left lower lobe pneumonia and a large pericardial effusion. The patient received appropriate treatment for pneumonia and underwent transthoracic echocardiogram to further characterize the effusion as moderate circumferential pericardial effusion.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\nUpon consultation with the patient\u2019s psychiatrist, clozapine was stopped, which was thought to be the cause for the non-resolving pericardial effusion. Following the discontinuation of the drug, there was a gradual improvement in the respiratory status. The patient was discontinued from clozapine and discharged to home in stable and improved condition.\n\nFOLLOW-UP:\nThe patient is advised to follow up with their primary care provider for future management of high cholesterol and assistance with smoking cessation.\n\nDISCHARGE MEDICATIONS:\nNone prescribed at this time.\n\nFOLLOW-UP STUDIES:\nTransthoracic echocardiogram to be repeated for further evaluation in one year.\n\nDISCHARGE CONDITION:\nStable and improved."
+      }
+    ]
+  },
+  "text": "**Most likely principal diagnosis: J18.9 Pneumonia, unspecified organism** (left lower lobe pneumonia). The diagnosis section was withheld, so this depends on how the pneumonia and the effusion are sequenced, as explained below.\n\n**Reasoning**\n- The patient presented with chest pain, dyspnoea and productive cough. CT showed left lower lobe pneumonia and a large pericardial effusion.\n- Under ICD-10-AM/ACS 0001, the principal diagnosis is the condition established after study to be chiefly responsible for the admission. Pneumonia was the condition treated on arrival and explains the presenting symptoms (cough, tachypnoea, raised inflammatory markers).\n- The pericardial effusion was investigated with echocardiography. It was attributed to clozapine and described as non-resolving, which drove the later management (stopping the drug). It could arguably be the principal diagnosis, but the narrative frames the admission around the pneumonia.\n\n**Likely additional diagnoses**\n- **I31.3** Pericardial effusion (noninflammatory). Alternatively **I30.8/I31.8** may apply if the effusion were considered inflammatory, which the summary does not support.\n- **Y49.0** Adverse effect of clozapine (antipsychotic and neuroleptic) in therapeutic use. Check the current Y-code for antipsychotics (Y49.-).\n- **F17.2** Nicotine dependence (smoking).\n- **E78.0 or E78.5** Hyperlipidaemia/high cholesterol (E78.5 if unspecified).\n- **Z-codes** for the underlying psychiatric condition (for example F20.- if schizophrenia is documented), which is not stated.\n\n**Caveats**\n- If the clinician documents the effusion as the main reason for the prolonged stay and the pneumonia as incidental, I31.3 with Y49.- could become principal. A drug-induced effusion might also be coded to I31.8 or I31.3, depending on index guidance.\n- If the pneumonia organism is specified (for example, aspiration or bacterial), the code would change from J18.9. A lobar pneumonia label would be J18.1.\n- Confirm the final codes against the current ICD-10-AM/ACHI/ACS edition and the full discharge diagnosis statement.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 626,
+    "output_tokens": 778
+  },
+  "seconds": 0.0
+}

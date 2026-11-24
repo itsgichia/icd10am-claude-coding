@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "3a1233001d46",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nPatient Information:\n- Name: [REDACTED]\n- Age: 64 years old\n- Sex: Female\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n- The patient underwent resection of the seeding nodule of ovarian carcinoma and created a loop ileostomy due to direct invasion of the carcinoma to the terminal ileum.\n- Prolapse of the ileostomy appeared approximately 17 months after the operation, and it continued to progressively worsen.\n- The patient subsequently underwent a revision operation to reposition the prolapse.\n- After revision of the prolapse, there were no further troubles with the ileostomy.\n- The postoperative progress was good, and the chemotherapy was continued.\n- However, the patient's general state got worse gradually, and her treatment became a plan of best supportive care.\n- Nineteen months after the first time operation, the general state got even worse and she died.\n\nSummary:\nThe patient, a 64-year old female with unresectable ovarian carcinoma, underwent resection of the seeding nodule of ovarian carcinoma and created a loop ileostomy due to direct invasion of the carcinoma to the terminal ileum. Prolapse of the ileostomy appeared approximately 17 months after the operation, and it continued to progressively worsen. A revision operation was performed to reposition the prolapse, and after revision, there were no further troubles with the ileostomy. The postoperative progress was good, and the chemotherapy was continued. However, the patient's general state got worse gradually, and her treatment became a plan of best supportive care. Nineteen months after the first time operation, the general state got even worse and she died."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **K94.1 \u2013 Complications of enterostomy** (prolapsed loop ileostomy)\n\n## Rationale\n\n- **The admission was for the stoma problem.** The episode of care described here is the one in which the patient had a revision operation to reposition a progressively worsening prolapse of her loop ileostomy. In ICD-10-AM, the principal diagnosis is the condition chiefly responsible for the admission. That is the ileostomy prolapse, not the underlying malignancy.\n- **K94.1 is the right category.** In current ICD-10-AM editions, complications of artificial openings of the digestive tract are classified to K94. Index pathway: Complication \u2192 enterostomy (ileostomy) \u2192 K94.1-. A prolapse is a mechanical or structural stoma complication.\n- **You may need a further digit.** Your edition may subdivide K94.1, for example into haemorrhage, infection, malfunction and other complication. Assign the subcode for \"other/mechanical complication (prolapse)\" according to the Tabular List of your edition.\n\n## Suggested additional diagnosis codes\n\n| Code | Description |\n|---|---|\n| C56 | Malignant neoplasm of ovary |\n| C78.6 | Secondary malignant neoplasm of retroperitoneum and peritoneum (peritoneal seeding) |\n| C78.4 | Secondary malignant neoplasm of small intestine (terminal ileum invasion), if documented as secondary |\n| Y83.3 | Surgical operation with formation of external stoma, as the cause of abnormal reaction or later complication |\n| Y92.22 | Place of occurrence: health service area |\n\n## Caveat\nThe summary spans the whole disease course. If you are coding a different episode, the principal diagnosis changes:\n\n- **The initial admission** (resection of the seeding nodule and creation of the loop ileostomy): **C56** would be principal.\n- **The terminal admission for best supportive care:** a neoplasm code would generally be principal, possibly with **Z51.5** (palliative care) as an additional code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 584,
+    "output_tokens": 1188
+  },
+  "seconds": 0.0
+}

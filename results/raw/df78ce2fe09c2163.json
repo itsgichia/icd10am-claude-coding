@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "d2a5947b1fed",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: (patient's name)\nAge: 84 years old\nGender: Female\nAdmission Date: (date of admission)\nDischarge Date: (date of discharge)\nLength of Stay: (number of days of hospital stay)\nClinical Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted due to her underlying medical conditions including type 2 diabetes and hypertension. She also had a history of amblyopia OD and a resolved branch retinal vein occlusion (BRVO) in the left eye. During her hospital stay, she was treated with Eyefolate\u2122 capsules and no further complications were reported during the course of treatment.\n\nClinical Progress:\nIn October 2013, the patient's best corrected visual acuity (BCVA) was 20/150 OD and 20/25 OS. The OS fundus photo showed a large macular aneurysm (MA) in the superior temporal region with exudates. After being prescribed the Eyefolate\u2122 capsules, the BCVA of the left eye improved to 20/20 in August 2014. Further improvement was seen in December 2014 when the large exudates almost completely resolved in OS (Fig. b). In January 2016, the BCVA was 20/400 OD and 20/25 OS, and the MA was resolved as shown in the OS fundus photo (Fig. c) during 2016.\n\nFollow-up:\nThe patient was discharged in a stable condition with instructions to continue taking prescribed medications and regular follow-up appointments with her primary care physician to monitor her diabetes and hypertension. A referral to an ophthalmologist was also recommended to monitor her vision and perpetuate the effectiveness of the treatment."
+      }
+    ]
+  },
+  "text": "The most defensible principal diagnosis is **E11.9, Type 2 diabetes mellitus without complications**.\n\nThe summary says the patient was admitted because of her underlying conditions, \"including type 2 diabetes and hypertension.\" The clinical diagnosis section is withheld, so this is an inference from the hospital course, not a confirmed coding decision.\n\n- **Hypertension (I10)** is documented but not stated as the reason for admission, so it would be a secondary diagnosis.\n- **Eye conditions** are not clearly the reason for admission. The amblyopia of the right eye (H53.0) would be secondary, and the left-eye branch retinal vein occlusion (H34.8-) and macular aneurysm are described as resolved, so they likely wouldn't be coded as current conditions. The Eyefolate\u2122 treatment suggests a folate-related or vascular focus, but the summary doesn't state that as the admitting problem.\n- **Diabetic retinopathy** (E11.3-) is not documented, so it should not be assigned.\n\nConfirm the principal diagnosis from the withheld clinical diagnosis section or the admitting clinician's documentation before final coding. If the admission was actually for a retinal or vascular condition, the principal diagnosis would change.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 608,
+    "output_tokens": 999
+  },
+  "seconds": 0.0
+}

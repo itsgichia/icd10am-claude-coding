@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "f8c33b519e45",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: [Redacted]\nAge: 53\nSex: Female\nDate of admission: [Redacted]\nDate of discharge: [Redacted]\n\nHospital Course:\n\nThe patient was admitted with a one-week history of abdominal pain, constipation, nausea, vomiting, and a single episode of bright red blood per rectum. Two days following her presentation, she developed bilateral facial weakness, perioral numbness, and difficulty in swallowing initiation. On examination, the patient had diminished bilateral facial musculature strength and an absent left patellar reflex. CT and MRI of the brain were obtained and showed changes consistent with chronic small vessel ischemic disease. Neurology was consulted and recommended a lumbar puncture which showed increased protein with absent white and red blood cells, raising the suspicion of Guillain-Barr\u00e9 syndrome. The patient was started on intravenous immunoglobulins and monitored in the progressive care unit. After a five-day course of IVIG, the patient showed a slight improvement but did not show up for her follow-up appointment and left against medical advice on day 9 of hospitalization.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Instructions:\n\nThe patient is advised to seek medical attention immediately if she experiences any new neurological symptoms such as numbness, tingling, or weakness in the extremities. She is also advised to attend all scheduled follow-up appointments and continue any prescribed medications as per the instructions of her primary care physician."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: G61.0 Guillain-Barr\u00e9 syndrome\n\n## Why G61.0\n\n- **Clinical picture fits GBS.** She had bilateral facial weakness (facial diplegia), perioral numbness, difficulty initiating swallowing, and an absent left patellar reflex. This is consistent with the bifacial weakness with paraesthesias variant, which is classified under GBS.\n- **Investigations support it.** The lumbar puncture showed albuminocytologic dissociation: raised protein with no white or red cells. Brain imaging showed only chronic small vessel disease, which does not explain the acute presentation.\n- **Treatment targeted it.** She received a 5-day course of IVIG and was monitored in the progressive care unit. GBS consumed most of the admission's resources.\n- **The GI symptoms point to the same illness.** Abdominal pain, vomiting and constipation are consistent with a gastrointestinal prodrome (e.g., *Campylobacter*) or early autonomic involvement in GBS. No separate definitive GI diagnosis was made.\n\n## Coding caveat (ACS 0001)\n\nUnder ACS 0001, the principal diagnosis is the condition established after study to be chiefly responsible for the admission. GBS was recognised two days after presentation. Strictly, a coder could argue it arose after admission and is an additional diagnosis, with the GI symptoms as principal. Most coders would still assign G61.0, because the presenting symptoms were plausibly part of the same evolving process and no other cause was found. A query to the clinician would settle this. If they confirm the GI symptoms were unrelated, the presenting symptom codes would apply instead.\n\n## Possible additional codes\n\n- **Gastrointestinal symptoms**, only if documented as unrelated to GBS:\n  - R10.4 Other and unspecified abdominal pain\n  - R11 Nausea and vomiting\n  - K59.0 Constipation\n  - K62.5 Haemorrhage of anus and rectum\n- **I67.88 Other specified cerebrovascular diseases**: chronic small vessel ischaemic disease, if it meets the additional diagnosis criteria (it is usually an incidental finding)\n- **Z53.2 Procedure not carried out because of patient's decision**: generally not appropriate for an against-medical-advice discharge. Discharge against advice is captured through the mode-of-separation data item, not a diagnosis code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 551,
+    "output_tokens": 1118
+  },
+  "seconds": 0.0
+}

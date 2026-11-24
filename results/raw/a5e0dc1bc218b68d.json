@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "2fcbd88b92a5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nGender: Female\nAge: 48\nDOB: [REDACTED]\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nHospital: [REDACTED]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient underwent a laparoscopic cholecystectomy and was discharged on the first postoperative day without any complications.\nFinal Diagnosis: [diagnosis section withheld]\nCourse in Hospital:\nThe patient was kept under observation for three months and no further complications were reported.\n\nDischarge Instructions:\nThe patient is advised to follow a low-fat diet and avoid fatty foods to prevent any recurrence of symptoms. The patient is advised to avoid smoking and alcohol as they can increase the risk of gallbladder diseases. In case of any symptoms, the patient should consult her healthcare provider immediately.\n\nFollow-up Care:\nThe patient is advised to follow up with her primary care physician for regular check-ups and monitoring.\n\nCompleted By:\n[REDACTED]\nMedical Doctor\n\nDate Completed:\n[REDACTED]\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "CODE: UNABLE TO ASSIGN. A query is required before coding.\n\nThe record does not state the condition treated. Both the Admission Diagnosis and Final Diagnosis sections are withheld, and the only clinical content is that a laparoscopic cholecystectomy was performed. A procedure cannot establish the principal diagnosis, and I won't infer one from it.\n\nThe record also has internal inconsistencies to resolve with the treating doctor:\n- The hospital course says discharge on postoperative day 1, but the \"Course in Hospital\" section describes three months of observation.\n- The discharge advice refers to preventing \"recurrence of symptoms,\" which implies a documented gallbladder condition that isn't named.\n\n**Query to the treating surgeon:** What was the condition for which the cholecystectomy was performed? For example: calculous cholecystitis, cholecystitis without stones, cholelithiasis without cholecystitis, or another condition. Please also confirm the actual length of stay.\n\n**Provisional guidance, pending the query:** If the surgeon documents gallstones without acute cholecystitis, the principal diagnosis would normally fall in K80 (cholelithiasis). If acute cholecystitis is documented, it would fall in K81 (cholecystitis). Please do not finalise either code until the diagnosis is confirmed in the record.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 621,
+    "output_tokens": 872
+  },
+  "seconds": 0.0
+}

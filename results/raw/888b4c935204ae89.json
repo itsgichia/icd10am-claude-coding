@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "130cff4971de",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]\n\nMedical Record Number: [REDACTED]\n\nAdmission Date: March 2017\n\nDischarge Date: August 2018\nAdmitting Diagnosis: [diagnosis section withheld]\nInitial Presentation:\n\nThe patient presented with complaints of abdominal pain for 2 months and aggravated for 1 week, leading to the diagnosis of gastric adenocarcinoma.\n\nManagement:\n\nThe patient was assessed by our Multi-Disciplinary Treatment (MDT) team, who recommended initiating palliative chemotherapy treatment along with apatinib. The patient tolerated the treatment well with only Grade 2 neutropenia and Grade 1 vomiting observed during treatment. Post-treatment CT scans revealed partial response with further tumor shrinkage during treatment.\n\nSurgical Intervention:\n\nThe patient underwent total gastrectomy, D2 lymph node dissection, and Roux-en-Y anastomosis in August 2017 after being evaluated for acceptable radical surgery. The postoperative pathology report indicates no residual cancer tissue found in the resected tissue sample.\n\nPost-Surgery Management:\n\nAfter the surgical procedure, the patient recovered well and underwent maintenance treatment with apatinib in the same dose as before. No adverse events were noted in the postoperative period. However, in August 2018, the patient's ascites worsened, and adenocarcinoma cells were found by ascites biopsy, indicating disease progression.\n\nOutcome:\n\nThe patient passed away in September 2018. The progression-free survival (PFS) period was 12 months, and the overall survival (OS) period was 17 months."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: C16.9 \u2013 Malignant neoplasm of stomach, unspecified**\n\n**Rationale**\n- The record describes gastric adenocarcinoma as the condition that led to admission, treatment and eventual death. This includes palliative chemotherapy with apatinib, total gastrectomy with D2 lymph node dissection, and later progression with malignant ascites.\n- The summary does not state the primary site within the stomach (cardia, pylorus, body, etc.). Without that detail, the correct code is C16.9 and not a more specific subcategory.\n- ICD-10-AM codes the morphology separately with an M-code. Adenocarcinoma NOS is M8140/3.\n\n**Additional codes to consider (not the principal diagnosis)**\n- **C78.6** \u2013 Secondary malignant neoplasm of retroperitoneum and peritoneum. This applies if the ascites with adenocarcinoma cells is documented as peritoneal metastasis.\n- **R18** \u2013 Malignant ascites. In ICD-10-AM this is generally coded as R18 along with the underlying malignancy, depending on the edition and coding standards.\n- **D70** with **Y43.-** (adverse effect of antineoplastic drugs) \u2013 for the Grade 2 neutropenia from chemotherapy, if it was clinically significant.\n- **R11** \u2013 Vomiting, if it was clinically significant.\n\n**Caveats**\n- The record spans March 2017 to August 2018, so in practice it would be several separate episodes of care. The principal diagnosis could differ by episode. For example, the final episode for ascites progression would still be coded to C16.9, with C78.6 as the secondary site.\n- The postoperative pathology showed no residual cancer. The stomach cancer is still coded as current because it was treated during this period and later progressed.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 605,
+    "output_tokens": 602
+  },
+  "seconds": 0.0
+}

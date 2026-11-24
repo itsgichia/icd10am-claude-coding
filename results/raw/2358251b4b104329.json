@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "context_rich_structure",
+  "record_id": "bf74c73dee78",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\n\nDate of Admission: [Redacted]\n\nDate of Discharge: [Redacted]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted to the Department of Rehabilitation Medicine for rehabilitation after suffering from a rib fracture. The patient presented with motor disturbance in all four limbs, gait disturbance, and decreased activities of daily living function for more than 10 years. The cognitive test score was 25 according to the mini-mental status examination (MMSE). The patient showed symptoms of Parkinson's disease, including bilateral tremors, bradykinesia, facial masking, infrequent blinking, short arm swing, cogwheel rigidity, stooped posture, freezing, festination, axial instability, and micrographia.\n\nThe patient was treated with Tango therapy for 1 hour per day for 5 days a week for two weeks. After 10 hours of Tango therapy, the UPDRS score improved dramatically from 105 (grade 4) to 82 (grade 3) points, and the BBS score improved from 2 to 12 points. The patient's posture was improved drastically to an upright posture, while the gait was also improved with less freezing and festination symptoms. His stride became wider, and he was able to walk with greater stability after Tango therapy.\n\nThe patient was discharged with appropriate instructions for follow-up care and recommendations to continue the exercises and therapy prescribed during the hospital stay. Close follow-up with a healthcare provider is recommended to monitor the progression of the patient's symptoms.\n\nDischarge Medications: None\n\nFollow-up Instructions: Continue with the prescribed exercises and therapy as instructed during the hospital stay. Follow-up with a healthcare provider is recommended for close monitoring of the progression of symptoms. \n\nPrimary Care Provider: [Redacted]\nDate of Follow-up: [Redacted]\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: G20**\n\nThe discharge summary says the patient was admitted for rehabilitation after a rib fracture. However, the course describes no treatment for the fracture. The rehabilitation (Tango therapy) targeted the motor and gait disturbance of Parkinson's disease, which the summary documents in detail (bilateral tremor, bradykinesia, cogwheel rigidity, freezing, festination, and so on). Parkinson's disease is the condition chiefly responsible for the episode of admitted care, so it is the principal diagnosis. Parkinson's disease is classified to G20 in the nervous system chapter.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1189,
+    "output_tokens": 444
+  },
+  "seconds": 0.0
+}

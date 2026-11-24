@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "5a5d374789e4",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [redacted]\n\nAge: 35\n\nSex: Female\n\nChief Complaint: Dyspnea and sickle cell crisis\nDiagnosis: [diagnosis section withheld]\nHospital Course: The patient presented with severe, progressive dyspnea and a sickle cell crisis. She had a history of severe tricuspid regurgitation, protein C deficiency, and recurrent deep vein thrombosis and pulmonary emboli. After examination, echocardiogram, and Doppler, a bioprosthetic tricuspid valve replacement surgery was conducted. Postoperatively, the patient had hypoxic respiratory failure requiring oxygen support, intermittent bilevel positive airway pressure ventilation, and diuresis. Twenty days after surgery, purulent secretion was noted on the sternotomy site. A CT of the thorax showed a large pericardial effusion, possibly a hemopericardium, and bilateral pleural effusions. A subxiphoid pericardial window and placement of a drainage catheter were conducted, leading to gradual improvement of her symptoms. Two months after discharge, a follow-up echocardiogram showed no pericardial effusion.\n\nTreatment: Bioprosthetic tricuspid valve replacement surgery, oxygen support, intermittent bilevel positive airway pressure ventilation, diuresis, subxiphoid pericardial window, and placement of a drainage catheter.\n\nCondition stabilized: Yes\n\nDischarge Instructions: The patient is advised to follow up with her treating physicians as scheduled.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: I36**\n\nThe principal diagnosis is **severe tricuspid regurgitation**, which is nonrheumatic tricuspid insufficiency (I36.1, category I36). The summary doesn't state a rheumatic etiology, so the nonrheumatic category applies.\n\n- **Why this condition:** The presenting dyspnoea was investigated with echocardiogram and Doppler, and the bioprosthetic tricuspid valve replacement was the definitive treatment for the valve disease that the admission was for.\n- **Why not the sickle cell crisis (D57.0):** It was the chief complaint alongside the dyspnoea, but the summary does not show that it was the condition chiefly responsible for the episode. It would be a significant additional diagnosis.\n- **Why not the pericardial or respiratory complications:** The hypoxic respiratory failure, pericardial effusion and sternotomy-site infection arose after surgery, so they are additional diagnoses, not the principal.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 761,
+    "output_tokens": 867
+  },
+  "seconds": 4.635052166995592
+}

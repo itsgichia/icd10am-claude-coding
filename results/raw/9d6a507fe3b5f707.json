@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "ebf0ae3afa74",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\n\nThe patient is a 67-year-old male who presented with an enlarging heterogeneous mass in the right upper lobe and shortness of breath with activity. On examination, he had a grade 3-4 of 6 holosystolic murmur. Imaging studies including Echography, Computed tomography (CT), bone scintigraphy, and Positron Emission Tomography (PET) identified the pulmonary malignancy, classified as T2N0M0. An electrocardiogram (ECG) showed severe prolapse of the posterior mitral leaflet with flail of the middle scallop (P2, P3 segment), with severe mitral regurgitation and New York Heart Association (NYHA) class II. The patient elected to have a one-stage ipsilateral Video-Assisted Thoracic Surgery (VATS) and minimally invasive cardiac surgery.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nThe patient underwent right upper lobectomy and minimally invasive surgery (MIS) of mitral valve for definitive diagnostic and therapeutic procedures. The procedures were performed smoothly without complications. Gore-Tex loops were used for ring sizing and valve competency testing. The patient recovered well after the operation and was discharged from the hospital 10 days after the surgery.\n\nFollow-up:\n\nThe patient did not experience any complications during follow-up."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: C34.1 Malignant neoplasm of upper lobe, bronchus or lung**\n\n**Reasoning:**\n- The case doesn't state the final diagnosis, so this is inferred from the course. The patient was admitted for an enlarging right upper lobe mass that imaging identified as a pulmonary malignancy (T2N0M0). The lobectomy was the main definitive treatment.\n- Under ICD-10-AM/ACS principles, the principal diagnosis is the condition established after study to be chiefly responsible for the admission. Here that is the lung cancer, which drove the admission, the work-up and the VATS lobectomy.\n- The mitral valve disease is coded as an additional diagnosis because it was treated in the same episode. It is I34.1 (mitral valve prolapse) or, for a flail leaflet with severe regurgitation, I34.0 (mitral valve insufficiency). Local coding advice or the clinical documentation would decide between them, and the heart failure class (NYHA II) is not coded separately unless heart failure is documented.\n- Histology is not given. If it were documented, for example adenocarcinoma, the morphology code (M8140/3) would be added. C34.1 is the site code regardless.\n- Secondary sites are not mentioned. The N0M0 staging means no secondary codes are needed.\n\n**Suggested coding summary:**\n- Principal diagnosis: C34.1\n- Additional diagnosis: I34.0 or I34.1 (mitral valve disease)\n- Procedures (ACHI): right upper lobectomy by VATS and minimally invasive mitral valve repair. The specific block numbers depend on the ACHI edition and the operative detail.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 501,
+    "output_tokens": 567
+  },
+  "seconds": 0.0
+}

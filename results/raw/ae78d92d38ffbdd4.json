@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "7567bbd24908",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nHospital Course:\n\nThe 68-year-old male patient was admitted to the hospital for the removal of an intramedullary nail and a possible total knee arthroplasty after experiencing a traumatic event. His past medical history includes hypertension, high cholesterol, high potassium levels, a non-cancerous enlargement of the prostate gland that caused difficulty urinating, atrial fibrillation, a crush injury causing closed fractures of multiple ribs and the pelvis, and a history of tobacco use. Preoperative laboratory tests indicated slightly low sodium levels and slightly elevated glucose levels, but a well-functioning renal system.\n\nProcedure:\n\nThe anesthesia team planned for spinal block and monitored anesthesia care with a propofol infusion. The patient was given 2 mg of midazolam preoperatively. The surgery lasted for 5 hours and 32 minutes and the patient's urine output for the duration of the operation totaled 1240 mL, with 975 mL excreted within a two-hour span.\n\nPostoperative Period:\n\nThe patient had an uncomplicated postoperative period with normal sodium levels and electrolytes. He was monitored closely after surgery.\nDiagnoses: [diagnosis section withheld]\nDisposition:\n\nThe patient was discharged from the hospital in a satisfactory condition after his uncomplicated postoperative period. \n\nFollow-up Care:\n\nFollow-up appointments with the appropriate specialists recommended for the patient's multiple comorbidities.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The admission was for removal of an intramedullary nail and a possible total knee arthroplasty. This follows a traumatic event, and the history includes closed fractures of the pelvis and ribs from a crush injury. The nail was probably placed for a femur or tibia fracture, and the knee issue is likely post-traumatic arthritis or a complication of the fracture.\n\nThe diagnosis section is withheld, so the principal diagnosis has to be inferred. Several candidates fit:\n- M17 (post-traumatic osteoarthritis of the knee) would apply if the arthroplasty was the main aim.\n- T84 (complication of an internal orthopaedic prosthetic device) would apply if the nail was causing a problem.\n- Z47 (orthopaedic aftercare, including removal of an internal fixation device) would apply if the nail was simply removed.\n- S72 or S82 (sequela of a fracture) is also possible.\n\nThe \"possible total knee arthroplasty\" suggests knee pathology. The nail is most likely a femoral or tibial nail, and the surgery ran 5.5 hours, which suggests a major procedure. A long case of this kind often involves nail removal with knee replacement for post-traumatic arthritis, so M17 seems most likely. However, \"removal of intramedullary nail\" is listed first, and ICD-10-AM codes removal of internal fixation device as Z47.0, \"Aftercare involving removal of fracture plate and other internal fixation device\". The stem also says the patient was admitted \"after experiencing a traumatic event\", which could point to a fracture or an injury sequela.\n\nI'll go with post-traumatic arthritis of the knee, as the arthroplasty is the main intent.\n\nCODE: M17",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1028,
+    "output_tokens": 565
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "cde5bf6b654a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHOSPITAL COURSE SUMMARY:\nThis is a discharge summary for a 64-year-old female who was admitted to the hospital with shortness of breath, cough, and fever. The patient had a past history of chronic obstructive pulmonary disease and left upper lobe cavitary lung lesion.\nDIAGNOSIS: [diagnosis section withheld]\nTREATMENT:\nThe patient was placed on intravenous vancomycin, levofloxacin, and fluconazole for a presumed hospital-acquired or fungal pneumonia. On day two, aztreonam was added to the patient's treatment due to a worsening clinical picture. The patient continued antibiotic and antifungal therapy and was discharged with cefpodoxime 400 mg twice a day for ten more days.\n\nCONSULTATIONS:\nThe patient underwent consultations from infectious disease, pulmonology, and cardiothoracic surgery due to her worsening pneumonia with associated cavitary lung lesion.\n\nDISCHARGE:\nThe patient was discharged after a protracted hospital course of nine days with instructions to follow up with infectious disease within the next two weeks."
+      }
+    ]
+  },
+  "text": "# Likely principal diagnosis: **J44.0 \u2013 Chronic obstructive pulmonary disease with acute lower respiratory infection**\n\nThis is an inference. The diagnosis section is withheld, so the final code depends on what the clinician actually documented.\n\n## Why J44.0\n\n- The patient has known COPD and was admitted with shortness of breath, cough and fever.\n- She was treated for pneumonia with IV vancomycin, levofloxacin, fluconazole and later aztreonam.\n- ICD-10-AM has a combination code for COPD with an acute lower respiratory infection such as pneumonia. Under ACS 0920 *Chronic obstructive pulmonary disease*, J44.0 is sequenced as the principal diagnosis. You then add a code for the infection.\n\n## Suggested additional codes\n\n- **J18.9 \u2013 Pneumonia, unspecified.** This fits because no organism was confirmed; the pneumonia was \"presumed hospital-acquired or fungal.\"\n  - If an organism is documented, use the specific code instead. For example, use B44.- or B49 with J17.2 for fungal pneumonia, or the relevant J15.- code for bacterial pneumonia.\n- **Code for the left upper lobe cavitary lesion, depending on documentation:**\n  - J85.1 (abscess of lung with pneumonia), if documented as a lung abscess\n  - R91 (abnormal findings on diagnostic imaging of lung), if documented only as a cavitary lesion\n\n## When the principal diagnosis would change\n\n- **Lung abscess as the main condition:** if the clinician documents a lung abscess (cavitary lesion) as the primary reason for admission, consider **J85.1**.\n- **Fungal infection confirmed:** if aspergillosis or another fungal infection is confirmed (e.g., chronic cavitary pulmonary aspergillosis, B44.1), code it accordingly. Apply ACS 0920 sequencing rules.\n\nPlease check the withheld diagnosis section and the latest Australian Coding Standards edition you are using before finalising.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 421,
+    "output_tokens": 1223
+  },
+  "seconds": 0.0
+}

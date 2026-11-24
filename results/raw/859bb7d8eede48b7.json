@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "904e3611e433",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: Patient 5                                 Date of Admission: N/A\nAge: 9                                                       Date of Discharge: N/A\nGender: Female                                           Admitting Diagnosis: Epileptic seizures\n\nHOSPITAL COURSE:\n\nPatient 5 was admitted with a history of Epileptic seizures (ES) which has been documented for 7 years. MRI revealed pachygyria in the cortex and Scalp electroencephalogram (EEG) revealed spike and wave complexes mainly over the bilateral central\u2013parietal\u2013posterior temporal regions. During the hospitalization, the patient underwent three blocks of transcranial direct current stimulation treatment at 2 mA. The patient was discharged without achieving the expected result.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\n\nThe patient was advised to follow up with her healthcare provider and continue taking medication as prescribed.\n\nFOLLOW-UP:\n\nThe patient was referred to follow up with her healthcare provider as directed.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The principal diagnosis is **epilepsy, category G40**.\n\n- **Reason for admission:** The patient was admitted for treatment of her seizures. She had three blocks of transcranial direct current stimulation, which is a seizure therapy. So epilepsy is the condition chiefly responsible for the episode of care.\n- **Why not the pachygyria (Q04.3):** The pachygyria is the structural cause of her epilepsy. However, this admission was for treating the epilepsy, not the brain malformation. Q04.3 would be coded as an additional diagnosis.\n- **Why only three characters:** The discharge diagnosis section is withheld. Without it, the fourth character can't be safely assigned, for example focal versus generalised, or whether the epilepsy is intractable.\n\nCODE: G40",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 598,
+    "output_tokens": 370
+  },
+  "seconds": 0.0
+}

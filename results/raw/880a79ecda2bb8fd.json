@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "bf7949dcece5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nHOSPITAL COURSE:\n\nAdmission Date: April 29th, 2016\nDischarge Date: N/A\n\nHISTORY OF PRESENT ILLNESS:\n\nMs. C, a 73-year-old woman with a history of uveal melanoma, was admitted to the hospital for epigastric pain and symptoms of gastric reflux following her second dose of ipilimumab as second line immunotherapy for liver metastases. She also had mild diarrhea with 3\u20134 loose stools daily. Esophagogastroduodenoscopy and flexible sigmoidoscopy were performed to inform further treatment.\n\nFINDINGS:\n\nEsophageal, gastric and duodenal mucosa appeared normal on endoscopic examination without evidence of ulceration or other significant mucosal injury. Gastric biopsies exhibited lymphocytic inflammation surrounding pigmented cells scattered throughout the gastric mucosa. S100 and SOX10 immunostains confirmed multiple microscopic foci of melanoma with tumor associated inflammation resembling gastritis. Flexible sigmoidoscopy and colonic biopsies were normal.\n\nHOSPITAL COURSE AND TREATMENT:\n\nGlucocorticoid treatment was initially deferred as this was considered an appropriate antitumor response, and she received her third dose of ipilimumab. After the 3rd dose, she developed an elevation in her transaminases and bilirubin concerning for checkpoint hepatitis. She was started on glucocorticoids and further immunotherapy was held. Her hepatitis resolved on glucocorticoids. Her gastric symptoms also improved on glucocorticoid therapy consistent with an immune-mediated mechanism.\n\nDISCHARGE INSTRUCTIONS:\n\nMs. C is advised to continue taking glucocorticoids and report any new symptoms to her healthcare provider. She is recommended to follow-up with her oncologist for further treatment options.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The admission was for epigastric pain and reflux symptoms. Biopsies showed microscopic foci of melanoma in the gastric mucosa, which means gastric metastasis from uveal melanoma. The inflammation was tumor-associated, described as an appropriate antitumor response, and not a drug-induced gastritis.\n\nThe principal diagnosis is the condition established after investigation to be chiefly responsible for the admission. That condition is the metastatic melanoma in the stomach, so the code is a secondary malignant neoplasm of the stomach or digestive tract. C78 covers secondary malignant neoplasm of respiratory and digestive organs, and C78.8 is other and unspecified digestive organs. The stomach itself is C78.8 in ICD-10 (C78.7 is liver, C78.8 is other digestive organs).\n\nThe alternative is checkpoint hepatitis, but this developed after the third dose and was not the reason for admission. The alternative of an immune-mediated gastritis (K29) is not supported, because the pathology showed tumor-associated inflammation resembling gastritis. The gastric metastasis is the best fit for the symptoms that led to the admission.\n\nCODE: C78",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1219,
+    "output_tokens": 394
+  },
+  "seconds": 0.0
+}

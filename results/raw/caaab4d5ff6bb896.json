@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "cot_then_extract",
+  "record_id": "e6ec7ab43b35",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\n\nAge: 82\n\nSex: Female\n\nReason for Hospitalization:\nThe patient presented to the emergency department with epigastric pain, heartburn, and nausea due to a large hiatus hernia with a portion of the stomach within the intrathoracic cavity.\n\nHospital Course:\nThe patient was admitted to the Observation department and was treated with nasogastric decompression, zero diet, fluid therapy, a prokinetic and a proton pump inhibitor, which resulted in clinical improvement. The patient was then discharged and advised to perform an upper endoscopy, but declined due to her age and multiple comorbidities.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient received nasogastric decompression, zero diet, fluid therapy, a prokinetic and a proton pump inhibitor, which resulted in clinical improvement. The patient was advised to perform an upper endoscopy, but declined surgical intervention or any other invasive intervention.\n\nFollow-up:\nThe patient was advised to continue with dietary advice and pharmacological treatment directed at her symptoms. A solid link with the family doctor was made, leading to the optimal possible resolution of the patient's symptoms and improved physical and mental well-being.\n\nDisposition:\nThe patient was discharged with outpatient follow-up.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible is a large hiatus hernia with intrathoracic stomach, which caused the epigastric pain, heartburn and nausea that drove the admission. Diaphragmatic hernia falls in the digestive system chapter, chapter K. The three-character category is K44.\n\nCODE: K44",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1045,
+    "output_tokens": 240
+  },
+  "seconds": 0.0
+}

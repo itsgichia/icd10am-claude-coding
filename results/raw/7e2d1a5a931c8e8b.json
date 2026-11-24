@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "a1033456ece1",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\nMedical Record Number: [Redacted]\n\nAdmission date: [Redacted]\nDischarge date: [Redacted]\nAdmitting diagnosis: [diagnosis section withheld]Final diagnosis: [diagnosis section withheld]\nHospital course: The patient was admitted with a 2-week history of noncardiac-type central chest pain, which was diagnosed as possible anxiety/musculoskeletal pain. Upon follow-up review, the patient was discharged after further tests showed no significant abnormalities. Later, the patient re-presented with symptoms of pleuritic central chest pain and intermittent shortness of breath, and was diagnosed with bilateral subsegmental pulmonary embolism after confirmation via imaging.\n\nTreatment: The patient was initially treated with enoxaparin and later switched to apixaban. The treatment duration was planned for 3 months and the patient was advised to stop taking TXA due to increased risk of bleeding caused by drug\u2013drug interactions with apixaban.\n\nFollow-up: The patient was referred for routine follow-up in the anticoagulation clinic within the hematology unit following discharge. During 1-month follow-up, the patient reported significant improvement in symptoms. Later, a repeat CTPA scan showed the PE had resolved, and the patient was treated with appropriate antibiotics for new consolidation in the right lung.\n\nDischarge medications: none prescribed at this time\n\nFollow-up care: The patient was advised to continue with routine follow-up care in the anticoagulation clinic within the hematology unit."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: I26.9 \u2013 Pulmonary embolism without mention of acute cor pulmonale**\n\n**Rationale**\n- The condition that led to the admission was the **bilateral subsegmental pulmonary embolism**, confirmed on imaging (CTPA). After study, this is the condition chiefly responsible for the episode of care, so it meets the ACS 0001 Principal Diagnosis definition.\n- There is **no documentation of acute cor pulmonale**, such as right heart strain or RV dysfunction, so I26.9 applies rather than I26.0.\n- **Chest pain and shortness of breath** (R07.x, R06.0) are not coded separately. They are symptoms integral to the confirmed diagnosis.\n\n**Possible additional codes (depending on documentation and local policy)**\n- **Tranexamic acid (TXA):** The patient was taking TXA. If the clinician documents that TXA contributed to the PE (an adverse effect of a prothrombotic drug in therapeutic use), add the external cause code **Y44.3** (anticoagulant antagonists, vitamin K and other coagulants) with a place of occurrence code. Do not assign it without clinician confirmation of the causal link.\n- **Right lung consolidation/pneumonia:** This was found on the later repeat CTPA, apparently at a separate follow-up encounter. It would be coded in that episode (e.g., J18.9 or J18.1, depending on documentation), not in this admission.\n\n**Caveat:** The admitting and final diagnosis fields are withheld. If the documented final diagnosis differs, or the summary actually covers a different episode (e.g., the initial chest pain presentation, which would be R07.x), clarify with the treating clinician before final code assignment.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 575,
+    "output_tokens": 853
+  },
+  "seconds": 0.0
+}

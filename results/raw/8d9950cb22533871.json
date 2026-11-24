@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "82081d7eb4e8",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]  \n\nMedical Record Number: [REDACTED]  \n\nDate of Admission: [REDACTED]  \n\nDate of Discharge: [REDACTED]  \nAdmission Diagnosis: [diagnosis section withheld]Principal Diagnosis: [diagnosis section withheld]\nOther Diagnoses: Hypertension, Retropharyngeal Gas, Bilateral Pulmonary Infiltrates, Pneumomediastinum, Subcutaneous Emphysema, Right Upper Lobe Pneumothorax, Right Pulmonary Artery Thrombosis, Left Renal Vein Thrombosis, Gastrointestinal Bleeding.  \n\nHospital Course:\n\nThe patient was admitted due to altered mental status and subsequently tested positive for COVID-19. During admission, the patient required high levels of oxygen therapy and imaging revealed several respiratory abnormalities. As a result, the patient's pneumothorax was managed and her oxygen requirement was gradually lowered. Management of the patient's thromboses required anti-coagulation treatment and placement of an inferior vena cava (IVC) filter. Further imaging also revealed retropharyngeal gas, bilateral pulmonary infiltrates, pneumomediastinum, and subcutaneous emphysema. The patient remained hospitalized for 21 days, during which time her condition improved significantly. Upon discharge, the patient was advised to follow up with her primary care provider for continued management of hypertension and other medical concerns.\n\nDischarge Instructions:\n\nThe patient is advised to continue taking any current medications as prescribed by her primary care provider. She is also reminded to continue practicing good hygiene, including washing hands frequently and wearing a mask in public areas. The patient is advised to monitor her health status closely and report any concerning symptoms to her primary care provider immediately. A follow-up appointment is scheduled with her primary care provider to ensure proper management of any ongoing medical concerns and to monitor her progress.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "Principal diagnosis: COVID-19 with pneumonia/respiratory manifestations. In ICD-10-AM (the Australian modification), COVID-19 is coded to U07.1 (COVID-19, virus identified). The three-character category is U07.\n\nThe patient was admitted with altered mental status and then tested positive for COVID-19. COVID-19 was the condition chiefly responsible for the high oxygen requirement, the pneumothorax, the pneumomediastinum and the thromboses, and it drove the 21-day stay. Altered mental status is a symptom, so it is not coded as principal when a cause is established. The pneumothorax and thromboses are complications and are coded as other diagnoses.\n\nCODE: U07",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 907,
+    "output_tokens": 239
+  },
+  "seconds": 0.0
+}

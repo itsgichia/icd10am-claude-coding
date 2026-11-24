@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "fe41074797c2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 74-year-old female admitted with subcutaneous masses, abdominal pain, and fever.\n\nClinical course: The patient was admitted with several subcutaneous masses, abdominal pain, and fever. Laboratory tests showed an extremely low platelet count, and serum protein electrophoresis showed a monoclonal band. Imaging studies revealed subcutaneous masses and intra-abdominal lymphadenopathy with moderate splenomegaly. Biopsy of the subcutaneous mass revealed a diagnosis of CSH associated with IgH and Ig\u03ba rearrangements, with suspicion of an underlying lymphoproliferative disorder. Further testing of the excised spleen confirmed a diagnosis of DLBCL, non-GCB subtype.\n\nTreatment: The patient underwent laparoscopic splenectomy and was administered eight courses of rituximab, cyclophosphamide, doxorubicin, vincristine, and prednisone. The patient was in partial remission 9 months after diagnosis. PET-CT scan showed resolution of some masses, but serum paraprotein levels remained elevated leading to four cycles of rituximab plus lenalidomide, MG is not visible at one-month follow-up.\n\nOutcome: The patient was evaluated and treated for CSH and DLBCL with rituximab and combination chemotherapy. The patient achieved PR with some improvement in PET-CT scans but elevated serum paraprotein levels; treated subsequently with rituximab plus lenalidomide leading to undetectable MG levels. The patient was discharged to the home for follow-up with routine laboratory tests and imaging scans.\nDiagnoses: [diagnosis section withheld]"
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: diffuse large B-cell lymphoma (DLBCL), non-GCB subtype, involving the spleen and lymph nodes.**\n\n**Suggested ICD-10-AM code: C83.3 \u2013 Diffuse large B-cell lymphoma**\n\nThe ICD-10-AM 8th and 9th editions use a fifth character to give the site. For this patient, the choice would be:\n- C83.38 \u2013 lymph nodes of multiple sites, if the intra-abdominal and other nodal involvement is coded as multiple sites. This is the usual choice for widespread disease.\n- C83.37 \u2013 spleen, if the coder wants to reflect the splenic specimen. Extranodal or splenic involvement is generally captured this way.\n\nWhere nodal and extranodal disease coexist, the multiple-sites code (C83.38) is generally preferred.\n\n**Reasoning**\n- The condition established after study and responsible for the admission and treatment is DLBCL. It was confirmed on the splenectomy specimen and treated with R-CHOP and then rituximab plus lenalidomide.\n- The presenting problems (subcutaneous masses, abdominal pain, fever, thrombocytopenia) were manifestations of the lymphoma or its associated process. Under ICD-10-AM principal diagnosis rules, they are not coded as the principal diagnosis.\n- \"CSH\" is most likely cutaneous (or crystal-storing) histiocytosis. It was a paraprotein-related finding associated with the lymphoproliferative disorder. It would be coded as an additional diagnosis, for example under D76.- or another histiocytic code depending on the documentation.\n- Further additional diagnoses to consider:\n  - Monoclonal gammopathy: D47.2 (monoclonal gammopathy)\n  - Thrombocytopenia: D69.6\n  - Splenomegaly: R16.1, only if it is not integral to the lymphoma\n\n**Final answer: C83.3- (DLBCL), most likely C83.38 with multiple-site involvement.** The exact fifth character should be confirmed against the withheld diagnosis section and your edition's code set.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 618,
+    "output_tokens": 714
+  },
+  "seconds": 0.0
+}

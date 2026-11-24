@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "ad2dd7ca7aaa",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nHospital Course Summary:\n\nThis 47-year-old male patient was admitted to our institution with a diagnosis of acute myeloid leukemia (AML) with multiple mutations, including DNMT3A, RUNX1, and U2AF1, along with FLT3\u2013ITD mutation. The patient had received various treatments for his condition but did not respond well to them. After a bone marrow analysis, emergent BCR\u2013ABL1 rearrangement was detected along with increased allelic ratio of FLT3-ITD mutation. The patient was then treated with different therapies, including CPX-351 plus venetoclax, ponatinib, and gilteritinib combination, which resulted in a marrow remission. The patient underwent allogeneic stem-cell transplantation (ASCT) and achieved full remission on day 30 post-ASCT. Unfortunately, the patient expired 8 months after ASCT due to infectious complications.\n\nSummary of Hospital Stay:\nDiagnosis: [diagnosis section withheld]\nTreatment: CPX-351, decitabine, FLAG-IDA, single-agent gilteritinib, cladribine, idarubicin, cytarabine, sorafenib, decitabine, venetoclax, ponatinib, CPX-351 plus venetoclax, ponatinib, and gilteritinib combination, Allogeneic stem-cell transplantation\nComplications: infectious complications\nOutcome: Achieved Marrow remission; Achieved full remission post-ASCT\n\nAssessment and Plan:\n\nThe patient presented with AML with FLT3\u2013ITD, DNMT3A, RUNX1, and U2AF1 mutations that were resistant to several chemotherapy treatments. After various therapies, the patient achieved a marrow remission with the CPX-351 plus venetoclax, ponatinib, and gilteritinib combination. Allogeneic stem-cell transplantation was performed, which resulted in full remission post-ASCT. Despite successful remission, the patient died eight months post-ASCT due to infectious complications.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C92",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 800,
+    "output_tokens": 87
+  },
+  "seconds": 0.0
+}

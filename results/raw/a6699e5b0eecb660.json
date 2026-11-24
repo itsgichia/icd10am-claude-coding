@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "a1033456ece1",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\nMedical Record Number: [Redacted]\n\nAdmission date: [Redacted]\nDischarge date: [Redacted]\nAdmitting diagnosis: [diagnosis section withheld]Final diagnosis: [diagnosis section withheld]\nHospital course: The patient was admitted with a 2-week history of noncardiac-type central chest pain, which was diagnosed as possible anxiety/musculoskeletal pain. Upon follow-up review, the patient was discharged after further tests showed no significant abnormalities. Later, the patient re-presented with symptoms of pleuritic central chest pain and intermittent shortness of breath, and was diagnosed with bilateral subsegmental pulmonary embolism after confirmation via imaging.\n\nTreatment: The patient was initially treated with enoxaparin and later switched to apixaban. The treatment duration was planned for 3 months and the patient was advised to stop taking TXA due to increased risk of bleeding caused by drug\u2013drug interactions with apixaban.\n\nFollow-up: The patient was referred for routine follow-up in the anticoagulation clinic within the hematology unit following discharge. During 1-month follow-up, the patient reported significant improvement in symptoms. Later, a repeat CTPA scan showed the PE had resolved, and the patient was treated with appropriate antibiotics for new consolidation in the right lung.\n\nDischarge medications: none prescribed at this time\n\nFollow-up care: The patient was advised to continue with routine follow-up care in the anticoagulation clinic within the hematology unit.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The episode in question is the admission for bilateral subsegmental pulmonary embolism. This was confirmed by imaging after the patient re-presented with pleuritic chest pain and shortness of breath, and it was treated with enoxaparin and then apixaban. The earlier presentation with possible anxiety or musculoskeletal chest pain ended in discharge after normal tests, and it was not the condition responsible for the treated episode. The later consolidation was a follow-up finding.\n\nIn ICD-10-AM, pulmonary embolism is classified to I26 (Pulmonary embolism), in Chapter 9 (Diseases of the circulatory system). Subsegmental PE without acute cor pulmonale falls under I26.9.\n\nCODE: I26",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 756,
+    "output_tokens": 246
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "context_rich_structure",
+  "record_id": "98d7b7554966",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary\n\nPatient: 75-year-old male with history of tobacco abuse and metastatic p16 positive squamous cell carcinoma (SCC)\n\nHospital Course:\nThe patient was admitted with initial symptoms of swelling in the left neck followed by progressive hoarseness and dysphagia over a span of one to two months. A biopsy of the left neck node confirmed squamous cell carcinoma and the patient was later found to have pulmonary metastases. He required tracheostomy and gastrostomy placement for threatened airway obstruction and dysphagia, respectively. \n\nTreatment and Progression:\nThe patient was initially enrolled in a clinical trial comparing first-line EXTREME chemotherapy versus ipilimumab and nivolumab and was randomized to combination ipilimumab and nivolumab delivered concurrently every three weeks for four cycles. However, follow-up imaging at eight weeks showed progression of disease. The patient was then treated with \u2018QUAD SHOT\u2019 for palliation and delivered 3.7 Gy BID x 2 days (total dose 14.8 Gy) to gross disease. The patient continued through the third and fourth cycles of nivolumab and ipilimumab without breaks or delays. Radiation was delivered during the three-week time frame between immunotherapy cycles and he tolerated treatment well with minimal pain and noticeable improvement in the left neck mass. Repeat imaging showed continued decrease in size of all neck and most lung disease, with one lung nodule minimally increasing in size.\n\nOutcome:\nAt the time of writing (10 months from initial diagnosis), the patient has completed a total of 14 cycles of ipilimumab and nivolumab on trial and is currently living with stable, asymptomatic disease. The patient continues to be followed up for response to treatment.\nDiagnoses: [diagnosis section withheld]\nProcedures:\n- Biopsy of the left neck node\n- Tracheostomy and gastrostomy placement \n- \u2018QUAD SHOT\u2019 for palliation \n\nFollow-up:\nThe patient continues to be followed up for response to treatment.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: C77**\n\nThe episode is for metastatic squamous cell carcinoma with the neck node as the main site of disease. The biopsy of the left neck node confirmed SCC, and the neck mass caused the airway and swallowing problems that led to the tracheostomy and gastrostomy. The palliative radiotherapy was also directed at the neck disease. The primary site is not established, so the neck nodal metastasis is the principal condition. C77 is \"secondary and unspecified malignant neoplasm of lymph nodes of head, face and neck.\" The pulmonary metastases are secondary diagnoses.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1241,
+    "output_tokens": 719
+  },
+  "seconds": 0.0
+}

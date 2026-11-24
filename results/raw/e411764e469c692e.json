@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "111025efe52f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]          Admission Date: [REDACTED]      Discharge Date: [REDACTED]\n\nHistory of Present Illness:\nA 79-year-old male with a history of prostate cancer presented with progressively worsening double vision and eventual right eye ptosis. Neurological examination revealed complete third and sixth nerve palsies on the right side. MR imaging showed an enhancing soft tissue mass involving the clivus, pituitary fossa, cavernous sinus, and posterior nasal cavity. An endonasal transsphenoidal approach to the sphenoid sinus was carried out to obtain a biopsy of the lesion. A histopathological diagnosis of metastatic melanoma was made, and evaluation was undertaken by the oncology team.\n\nHospital Course Summary:\nDuring the patient's hospital stay, he underwent a number of diagnostic tests and a biopsy following which he was diagnosed with metastatic melanoma. The medical team consulted with the oncology team, who evaluated the patient and recommended further treatment options. The patient's clinical condition stabilised, and he was discharged with the oncology team's recommended course of treatment.\n\nCondition at Discharge:\nThe patient's medical condition at discharge was stable, with no further significant neurological or ophthalmological deficits.\n\nDischarge Medications:\nNo medications were prescribed at the time of discharge.\n\nFollow-up Care:\nThe oncology team recommended further outpatient treatment and follow-up evaluations for the patient, which the patient accepted.\n\nDischarge Instructions:\nThe patient was advised to follow up with the oncology team on a regular basis, and to report any new or concerning symptoms.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Condition:\nStable.\n\nDischarge Plan:\nThe patient was discharged with the recommended course of treatment and follow-up evaluations by the oncology team."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: C79.3 \u2013 Secondary malignant neoplasm of brain and cerebral meninges**\n\nThis is a judgement call, because the summary leaves the primary site unspecified and the coding depends on how the lesion is classified.\n\n**Reasoning**\n\n- The condition treated and investigated during the admission was metastatic melanoma. It involved the clivus, pituitary fossa, cavernous sinus and posterior nasal cavity, and caused the cranial nerve III and VI palsies.\n- The primary melanoma site is not documented. The only prior cancer mentioned is prostate cancer, and the lesion was histologically melanoma, so it is not a prostate metastasis.\n- In ICD-10-AM, a secondary site is coded as the principal diagnosis when it is the focus of care and the primary is unknown or not being treated.\n\n**Site options**\n\n- **C79.3** (brain and cerebral meninges) is a reasonable choice if the skull base and cavernous sinus lesion is taken as intracranial. The cavernous sinus and pituitary fossa are intracranial.\n- **C79.5** (bone and bone marrow) applies if the clivus bone is the main site of disease. The clivus is bone, but the mass is described as a soft tissue mass, so this fits less well.\n- **C79.88** (other specified sites) could apply to the nasal cavity or sinus involvement.\n\n**Additional codes**\n\n- **C80.0** (malignant neoplasm, primary site unknown), if the primary is truly unknown. Some coders would instead use **C43.9** (malignant melanoma of skin, unspecified) for a \"metastatic melanoma\" with no site stated, though this is only appropriate if documentation supports it.\n- **H49.0** (third nerve palsy) and **H49.2** (sixth nerve palsy), which are manifestations that can be coded additionally.\n- **Z85.46** (personal history of prostate cancer), if the prostate cancer is no longer active.\n\n**Procedure:** endonasal transsphenoidal biopsy, coded in ACHI.\n\nA coder should confirm the primary site and the exact location of the lesion with the treating clinician. If the primary melanoma site is later identified, or if the clinician documents the lesion as a skull base bone metastasis, the secondary-site code would change.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 683,
+    "output_tokens": 765
+  },
+  "seconds": 0.0
+}

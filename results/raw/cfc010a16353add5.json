@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "28a2cce4de09",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHOSPITAL COURSE:\n\nAdmitted from the emergency room due to severe dyspnea, a 69-year-old Japanese man was diagnosed with aspiration pneumonia and placed on mechanical ventilation. He underwent tracheostomy due to prolonged mechanical ventilation and had restrictive pulmonary dysfunction. He was weaned successfully from mechanical ventilation with support by HFT (flow at 40 L/minute with FIO2 of 0.25) and a ventilator (10 cmH2O pressure support with 5 cmH2O PEEP) at night. The patient was discharged from the ICU to the general ward on ICU day 51. His physiotherapy rehabilitation continued for 1 month.\nDISCHARGE DIAGNOSES: [diagnosis section withheld]\nTREATMENT:\n\nMechanical ventilation, tracheostomy, and respiratory support by HFT and a ventilator.\n\nFOLLOW-UP AND RECOMMENDATIONS:\n\nThe patient was discharged to home on day 86 of hospitalization and returned for a follow-up visit. No further recommendations were provided."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: aspiration pneumonia, ICD-10-AM code J69.0 (Pneumonitis due to food and vomit)**\n\nThis is based on the hospital course alone, because the discharge diagnoses section was withheld.\n\n**Rationale:**\n- The patient was admitted with severe dyspnea, and the condition established after study as the reason for admission was aspiration pneumonia. In ICD-10-AM, the principal diagnosis is the condition chiefly responsible for the episode of care. Dyspnea (R06.0) is a symptom explained by the pneumonia, so it is not coded as principal.\n- J69.0 covers aspiration pneumonia (pneumonitis due to inhalation of food, vomit or gastric contents). If the aspirated material were specified differently, such as oils or solids, a different J69.- code would apply.\n\n**Likely additional codes (not principal):**\n- Procedures: continuous ventilatory support, with the hours-of-ventilation code (ACHI block 13882). Tracheostomy would be coded with the ACHI temporary or permanent tracheostomy code (block 41881).\n- Restrictive pulmonary dysfunction: J98.4 (other disorders of lung), or the code for the specific underlying cause if documented.\n- Respiratory failure, if documented by the clinician: J96.0 or J96.1. This is not stated in the text provided, so it should not be assumed.\n- The underlying cause of the aspiration, such as dysphagia or a neuromuscular disease, if documented.\n\nThe final code assignment would need to be confirmed against the withheld discharge diagnoses.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 420,
+    "output_tokens": 537
+  },
+  "seconds": 0.0
+}

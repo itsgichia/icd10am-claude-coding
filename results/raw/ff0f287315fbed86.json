@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "ef67a827be0c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\n\nAge: 21\n\nGender: Male\n\nAdmission Date: [redacted]\n\nDischarge Date: [redacted]\nDischarge Diagnoses: [diagnosis section withheld]\nHospital Course: \n\nPatient presented with acute onset of left-sided chest pain and shortness of breath after using an E-cigarette during his break at work, which he had been using for the past 3 years. A chest X-ray at an urgent care center revealed a small left-sided pneumothorax, which progressed to a moderate sized pneumothorax as seen on a repeat chest X-ray in the ED. A left-sided chest tube was inserted, which successfully resolved his pneumothorax. CT chest was obtained and revealed left-sided atelectasis. \n\nThe patient remained stable throughout his hospital course and was discharged home on hospital day 3 with instructions to avoid vaping. He was advised to follow up with his primary care physician for further evaluation and management, and to seek medical attention if he experienced any recurrence of his symptoms.\n\nDischarge Medications: None\n\nDischarge Instructions: The patient was advised to avoid vaping and to follow up with his primary care physician for further evaluation and management. \n\nFollow-up: The patient was instructed to follow up with his primary care physician within the next 1-2 weeks for further evaluation and management."
+      }
+    ]
+  },
+  "text": "**Most likely principal diagnosis code: J93.1 \u2013 Spontaneous pneumothorax, other (secondary/unspecified spontaneous pneumothorax)**\n\nThe note does not state the diagnosis, so this is my coding reasoning from the documentation.\n\n**Reasoning**\n- The patient is a 21-year-old male with acute chest pain and dyspnoea. Imaging showed a pneumothorax that progressed from small to moderate. It was treated with an intercostal chest tube.\n- No trauma and no procedure caused it, so it is a spontaneous pneumothorax. This was the condition chiefly responsible for the admission.\n- The CT showed only left-sided atelectasis. No bullae, blebs or underlying lung disease were documented.\n- In ICD-10-AM, the spontaneous pneumothorax codes are:\n  - J93.0 Spontaneous tension pneumothorax\n  - J93.1 Other spontaneous pneumothorax\n  - J93.8 Other pneumothorax\n  - J93.9 Pneumothorax, unspecified\n\n  The pneumothorax is non-tension and spontaneous, so J93.1 fits.\n\n**Alternatives to consider**\n- **Vaping-related lung injury (U07.0, EVALI):** it is not documented as the diagnosis, and the record does not link the pneumothorax to the vaping. A coder cannot assume that link without clinician documentation. If the clinician documented \"vaping-associated pneumothorax\" or EVALI, the coding would change (U07.0 with J93.x as an additional code, subject to current ACS/Coding Rules).\n- **Primary spontaneous pneumothorax:** some code sets classify this as J93.1 and others use J93.8 or J93.9. In ICD-10-AM, J93.1 is the usual choice.\n\n**Suggested additional codes**\n- J98.1 Atelectasis, only if the clinician considers it clinically significant. It may be an incidental imaging finding.\n- F17.x or Z72.0 for nicotine or vaping use, depending on documentation (for example, F17.2 Nicotine dependence if documented).\n- Procedure: ACHI block 38812-00 [1550] Insertion of intercostal catheter for drainage (chest tube).\n\n**Recommendation:** query the treating clinician to confirm the final diagnosis and whether the pneumothorax is linked to vaping, and then finalise J93.1 as the principal diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 494,
+    "output_tokens": 817
+  },
+  "seconds": 0.0
+}

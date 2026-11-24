@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "0597e19347c9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]\nAge: 65\nSex: Female\nDate of Admission: May 12, 2020\nDate of Discharge: May 16, 2020\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted to the surgical ward for elective right hemicolectomy due to the presence of a colon adenocarcinoma. The surgery was performed successfully on May 14, 2020, with laparoscopic right hemicolectomy and side-to-side extracorporeal ileocolonic anastomosis. The patient was stable in the initial postoperative days, despite a gradually dropping hemoglobin. She briefly experienced some bleeding from the anastomotic site, which presented as melena, but this was treated conservatively with a one-unit pack of red blood cells, and the patient's hemoglobin raised to 8.5 g/dl. After four days of hospitalization, the patient was discharged with a full diet and regular bowel motion.\nDischarge Diagnosis: [diagnosis section withheld]\nCondition on Discharge:\nThe patient's condition on discharge was stable, with no complications or obstacles to returning to her usual state of health. The patient was advised to continue with follow-up care and monitoring by her primary care provider.\n\nInstructions at Discharge:\nThe patient was instructed to contact her primary care provider to schedule her follow-up visits. She was also advised to obtain a computed tomography (CT) chest, abdomen, and pelvis, and to undergo tumor marker testing six months post-operation in the service of oncology follow-up.\n\nMedications on Discharge: None\n\nFollow-up Care: Follow-up care with the patient's primary care physician and oncologist is advised to ensure continued monitoring of her health status and to attend necessary appointments and procedures."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: colon adenocarcinoma, requiring right hemicolectomy.**\n\nThe note doesn't specify the site within the colon, so the code depends on that detail.\n\n**Most likely code: C18.9, Malignant neoplasm of colon, unspecified.**\n\nThis is the code to use if the record gives no more detail than \"colon adenocarcinoma.\" A right hemicolectomy points to a right-sided tumour, so a more specific code applies if the pathology or operation report documents the site:\n\n- C18.0 Caecum\n- C18.2 Ascending colon\n- C18.3 Hepatic flexure\n- C18.4 Transverse colon (proximal transverse tumours are sometimes managed this way)\n\n**Why this is the principal diagnosis:** The patient was admitted for elective surgery to treat the malignancy. That condition was chiefly responsible for the episode of care, so it is sequenced first.\n\n**Secondary diagnoses to code:**\n- **Postprocedural haemorrhage or GI bleeding from the anastomosis (melena):** K91.84 Postprocedural haemorrhage of a digestive system organ or structure following a digestive system procedure. In ICD-10-AM this is often paired with a Y83.- external cause code. Check the local coding standards.\n- **Acute blood loss anaemia:** D62, if the clinician documents it. The note mentions only a falling hemoglobin and a transfusion, so the diagnosis needs to be documented before coding.\n\n**Procedure codes (ACHI):** Laparoscopic right hemicolectomy with ileocolic anastomosis, plus the blood transfusion (packed cells). Use the ACHI index, since the exact block numbers depend on the edition.\n\nFinal code assignment should be checked against the pathology report and the ICD-10-AM/ACHI/ACS edition in use.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 654,
+    "output_tokens": 613
+  },
+  "seconds": 5.737607916991692
+}

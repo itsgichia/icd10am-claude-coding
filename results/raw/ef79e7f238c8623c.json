@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "cot_then_extract",
+  "record_id": "2be96ddf1bf9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient History:\n\nA 64-year-old woman was admitted to the hospital after experiencing right back pain for 6 days. She was evaluated in the emergency outpatient unit of our hospital 5 days PTA for concern of aortic dissection, infected arterial aneurysm, and purulent arthritis. Blood cultures taken at the time revealed methicillin-resistant Staphylococcus epidermidis (MRSE). She refused hospitalization and returned home until MRSE was once again detected in two sets of repeated blood cultures and she was admitted to our hospital.\n\nHospital Course:\n\nOn admission, the patient had a systolic murmur at the left sternal border and a punctate spot hemorrhage in the palpebral conjunctiva. Prosthetic valve endocarditis (PVE) was the suspected diagnosis based on PMH of aortic valve replacement, a physical examination of systolic cardiac murmur, and conjunctival hemorrhage. Trans-esophageal echocardiography (TEE) confirmed vegetations on her aortic valve, with a diagnosis of PVE. Vancomycin was started immediately on day 1. A repeated blood culture on day 5 was positive, but turned negative on day 8. Rifampicin was added on day 13 to decrease bacterial burden. Vancomycin was switched to teicoplanin on day 19 due to leukopenia, thrombocytopenia, and fever, and rifampicin was discontinued due to a subsequent rash. Blood cultures taken on day 20 were negative, indicating successful treatment.\n\nDischarge Instructions:\n\nThe patient underwent aortic valve re-replacement on day 33, and was discharged on day 50 with good postoperative recovery. The patient is advised to follow up with her physician in 4-6 weeks for further evaluation.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nVancomycin followed by rifampicin and teicoplanin, with successful aortic valve re-replacement.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "Prosthetic valve endocarditis from methicillin-resistant S. epidermidis, confirmed on TEE and persisting until valve re-replacement, is the condition chiefly responsible for the admission. It is an infection of a cardiac valve prosthesis, which ICD-10-AM classifies under complications of prosthetic devices (T82.6) in chapter XIX, with the endocarditis and organism codes added as secondary. The three-character category is therefore T82.\n\nCODE: T82",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1263,
+    "output_tokens": 726
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7484ebf71696",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: [Name]\n\nSex: Male\n\nAge: 76 years\n\nMedical Record No.: [Number]\n\nHospital Admission Date: [Date]\n\nDischarge Date: [Date]\n\nHospital Course:\n\nA 76-year-old male patient was admitted to the hospital with an incidental 4 cm left renal mass, which was treated with a left partial nephrectomy. Upon pathological examination, it was discovered that the patient was suffering from WHO/ISUP grade 1, TNM stage pT1 clear cell RCC, with the resection margin positive for the tumor.\n\nThe patient underwent a right radical orchiectomy when he was found to have a metastatic tumor in the right testis. The metastatic tumor was two centimeters in size, and it was confined to the testicular parenchyma.\n\nFourteen months after the orchiectomy, he underwent a completion left radical nephrectomy due to the recurrence of the tumor.\n\nOngoing imaging surveillance discovered several soft tissue masses in the left posterior chest wall, as well as masses in the pancreas. A two-centimeter enhancing mass was found in the upper pole of the right kidney 87 months following the orchiectomy.\n\nThe patient has been offered systemic therapy of VEGF inhibitor and discharged with continued medical supervision. He is alive with disease, 93 months post-orchiectomy.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Status:\n\nThe patient is discharged with continued medical supervision."
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis code: C64 \u2013 Malignant neoplasm of kidney, except renal pelvis**\n\nIn ICD-10-AM (which has laterality-free C64 at the 3-character level, with a 4th/5th character in some editions), the primary renal clear cell carcinoma is classified to C64.\n\n**Rationale**\n- The condition chiefly responsible for the admission was the left renal mass, which was found to be clear cell renal cell carcinoma and treated with partial nephrectomy. Clear cell RCC is classified to C64 (morphology M8310/3).\n- The testicular metastasis would be coded separately as a secondary site: C79.8 (secondary malignant neoplasm of other specified sites). Some coders use C79.88 depending on the edition.\n- Other secondary sites could be added as additional diagnoses: chest wall soft tissue masses (C79.88 or C79.8) and pancreatic masses (C78.8 or C79.8, depending on the edition).\n- The right renal mass could also be coded as C64, either as a second primary or as a metastasis or recurrence. This depends on the documentation.\n- A positive resection margin has no separate code. It is captured by the C64 diagnosis and the morphology.\n\n**Caveats**\n- The summary describes several episodes over about 93 months (partial nephrectomy, orchiectomy, completion nephrectomy). The \"principal diagnosis\" depends on which episode is being coded. For each of these episodes the principal diagnosis would be:\n  - Partial nephrectomy: C64\n  - Orchiectomy: C79.8 (secondary malignancy of testis), with C64 as an additional diagnosis if the primary is still present or recently treated\n  - Completion nephrectomy for recurrence: C64\n- Please check the code against your edition of ICD-10-AM/ACHI and local coding standards, because the 4th and 5th characters and the secondary-site codes differ between editions.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 547,
+    "output_tokens": 643
+  },
+  "seconds": 0.0
+}

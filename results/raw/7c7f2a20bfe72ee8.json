@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "14771633680b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nA 60-year-old female presented to the emergency room with a sudden onset of severe headache associated with vomiting. On the administration of a CT scan of the brain, subarachnoid hemorrhage was observed, and an aneurysm was suspected. The patient underwent CT cerebral angiogram, and a bilobed anterior communicating artery aneurysm was discovered, projecting anterosuperiorly with a size of 8 x 7 x 5 mm. On the fourth day of ictus, the patient underwent right pterional craniotomy and clipping of the aneurysm. Following surgery, the patient developed right-sided ptosis that advanced to complete right-sided oculomotor nerve paralysis with a dilated and nonreacting pupil. A CT scan of the brain was performed, but no hematoma or infarct was noted. The patient was discharged on the eighth postoperative day and kept under regular follow-up in our outpatient department.\n\nDischarge Condition:\nStable with recovered oculomotor nerve paralysis.\n\nCourse of Treatment:\nThe patient was administered antiedema measures, anticonvulsant, analgesic, and Nimodipine. The medication was continued for a total of 21 days following the ictus.\n\nDischarge Instructions:\nThe patient is advised to follow up with their healthcare provider regularly.\n\nFollow-up Care:\nThe patient underwent a Magnetic Resonance Imaging scan of the brain with venogram to rule out any infarct or thrombosis of the cavernous sinus after a week of discharge. No abnormalities were noted. The patient came for follow-up on the 61st postoperative day, and her ptosis had fully recovered. A full recovery of the ocular motor nerve paralysis was noted. The patient was advised to continue regular follow-up with their healthcare provider.\n\nDischarge Medications:\nMedications are not listed as per case report instructions."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: I60.7 \u2013 Subarachnoid haemorrhage from intracranial artery, unspecified**\n\nThis is the code I would assign, but ICD-10-AM has a more specific option that I think fits better.\n\n**Reasoning**\n- The patient was admitted with a subarachnoid haemorrhage (SAH) from a ruptured anterior communicating artery aneurysm. The sudden severe headache and vomiting, the CT showing SAH, and the angiogram finding the aneurysm all support this.\n- The condition chiefly responsible for the admission and treated by clipping is the ruptured aneurysm.\n- ICD-10-AM classifies SAH from a specific artery to I60.-. The anterior communicating artery has its own code, **I60.2 \u2013 Subarachnoid haemorrhage from anterior communicating artery**. This is more specific than I60.7, so **I60.2** is the correct principal diagnosis.\n\n**Final answer: I60.2** (Subarachnoid haemorrhage from anterior communicating artery)\n\n**Additional diagnoses**\n- Postoperative oculomotor (third) nerve palsy: H49.0 (Third [oculomotor] nerve palsy), together with a complication code such as G97.8 (Other intraoperative and postprocedural disorders of nervous system). Coders should check the current edition for the exact choice, and add a Y83.- or Y60-Y69 external cause code if required.\n- Ptosis is integral to the nerve palsy and is not coded separately.\n\n**Procedure (ACHI)**\n- Craniotomy with clipping of the intracranial aneurysm (block 1 of ACHI, intracranial vascular procedures).\n- CT cerebral angiogram and MRI/MR venogram as applicable.\n\nThe ICD-10-AM code set is updated by edition, so verify the codes against your local edition and coding standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 699,
+    "output_tokens": 626
+  },
+  "seconds": 0.0
+}

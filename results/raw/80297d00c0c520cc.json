@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "107667d8ef80",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nHOSPITAL COURSE SUMMARY:\n\nAdmission Date: [insert date]\nDischarge Date: [insert date]\nPatient Name: [insert name]\nMedical Record Number: [insert number]\nSex: Female \nAge: 21\nDischarge Diagnosis: [diagnosis section withheld]\nHOSPITAL COURSE:\nThe patient presented to the Emergency Department (ED) complaining of right lower quadrant pain with associated nausea. The physical examination demonstrated tenderness in the lower right quadrant and guarding and rebound. The laboratory evaluation demonstrated leukocytosis, with a high white blood cell count and neutrophilia.\nImaging studies revealed the presence of an intrauterine gestational sac containing a fetal pole, with no adnexal lesions visible. A noncompressible fluid-filled, slightly hypervascular tubular structure was located in the right lower quadrant, measuring 16mm in diameter, confirming the diagnosis of acute appendicitis.\nThe patient was treated with intravenous antibiotics and underwent a laparoscopic appendectomy without any postoperative complications. The obstetric service examined the patient the next day, and the pregnancy remained intact. Repeat ultrasonography demonstrated a properly progressing pregnancy two weeks following the surgery.\nThe patient was discharged in stable condition and instructed to follow up with her obstetrician and the surgeon as necessary. Educational material regarding postoperative care and follow-up was provided.\n\nDISCHARGE INSTRUCTIONS:\n1. Take medications as prescribed by your physician.\n2. Continue follow-up appointments with your obstetrician and the surgeon as directed.\n3. Avoid heavy lifting and strenuous activity for four weeks.\n4. Notify your healthcare provider immediately if you experience fever, increasing pain, or wound drainage.\n5. Use a stool softener as needed to prevent constipation.\n6. Maintain a healthy diet and increase fluid intake.\n7. Contact your healthcare provider if you have any questions or concerns.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "O99",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 825,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

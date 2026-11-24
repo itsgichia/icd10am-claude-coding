@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "7868c7a114d4",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDISCHARGE SUMMARY:\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient presented with low back pain that radiated down the right leg. She underwent L4\u2013L5 microdecompression, which alleviated her pain. However, at approximately 12 months after surgery, her pain began to increase, and she was treated with ALIF at L4\u2013L5 and L5\u2013S1. At 2 months post-operatively, she developed pain with radiation down both legs and difficulty with walking, and a fracture through the anterosuperior end plate of S1 was discovered.\n\nTreatment:\nThe patient underwent exploration of the posterior fusion and removal of instrumentation; revision and decompression of L5\u2013S1; instrumentation placement at the L4\u2013pelvis region; and posterolateral arthrodesis at L4\u2013L5 and L5\u2013S1, with application of pelvic instrumentation using the S2AI technique.\n\nCondition on Discharge:\nThe patient reported 100% improvement in low back pain with some low back soreness, the ability to walk farther, and 80% improvement in neurologic symptoms in the left lower extremity.\n\nInstructions:\nThe patient was instructed to follow-up with her primary care physician for ongoing management of her condition. She was also advised on proper nutrition and exercise to help manage her osteoporosis, as well as proper posture and lifting techniques to prevent further injury to her back.\n\nFollow-up:\nFollow-up appointments were scheduled with the patient's primary care physician and treating physician to monitor her progress and adjust her treatment plan as needed.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The admission was for revision surgery after a fracture through the anterosuperior S1 end plate, found 2 months after ALIF at L4\u2013L5 and L5\u2013S1. The patient has osteoporosis, so the fracture could be coded as pathological (M80 osteoporosis with current pathological fracture). The alternative is a complication of the fusion, or a fracture of the sacrum (S32).\n\nConsiderations:\n- The fracture occurred post-fusion, with graft or instrumentation subsidence or stress at the S1 end plate. The summary mentions osteoporosis in the instructions, so the fracture was likely a fragility fracture.\n- ICD-10-AM classifies a fracture in a patient with osteoporosis, where there is no significant trauma, to M80 (osteoporosis with current pathological fracture). The code is M80.- with a site, such as M80.08 for postmenopausal osteoporosis with pathological fracture at another site, or M80.88 for other osteoporosis with pathological fracture at the vertebra/other site.\n- The alternative is T84.- (complication of internal orthopaedic prosthetic devices) or M96.- (postprocedural musculoskeletal disorders). The fracture through the end plate could be a complication of the ALIF, but nothing documents it as a device complication. Osteoporosis is documented in the discharge instructions, and the fracture was found without trauma, so M80 is the better-supported choice.\n\nThe excluded alternatives are the S32 fracture codes, because there was no trauma, and the T84 complication codes, because no device complication is documented.\n\nCODE: M80",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 766,
+    "output_tokens": 525
+  },
+  "seconds": 0.0
+}

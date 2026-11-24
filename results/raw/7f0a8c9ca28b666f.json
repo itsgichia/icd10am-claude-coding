@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "d46b5736cbc7",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient: Case 9\nAge: 6 months 18 days\nDiagnosis: [diagnosis section withheld]\nTreatment: None\n\nHospital Course:\nCase 9, a 6-month-old boy, was admitted to the hospital for further evaluation and management of his medical conditions. He was diagnosed with epilepsy, infantile spasms, developmental delay, and obesity. During his hospital stay, he underwent genetic testing to identify the underlying cause of his conditions.\n\nDiagnostic Results:\nThe test results showed a de novo heterozygous missense variant in GABRB3. This variant is associated with epileptic encephalopathy, early infantile, 43 (EIEE43), a rare autosomal dominant disease. The patient's variant was classified as pathogenic according to the ACMG guidelines. This mutation of the GABRB3 gene is predicted to impact receptor function.\n\nTreatment and Plan:\nNo treatment was initiated during the patient's hospital stay. The medical team provided the family with a comprehensive report on the results of the diagnostic test and the possible long-term implications of the diagnosis. The patient will continue to receive close medical follow-up and monitoring.\n\nFollow-up:\nThe patient's family was advised to schedule a follow-up appointment with their primary care physician or a specialist in pediatric neurology to discuss the patient's care plan and the need for any further evaluations or testing.\n\nOverall Impression:\nCase 9 is a 6-month-old boy diagnosed with epilepsy, infantile spasms, developmental delay, and obesity. The diagnostic test identified a rare de novo heterozygous missense variant in GABRB3, classified as pathogenic, which is linked to epileptic encephalopathy, early infantile 43 (EIEE43). No treatment was initiated during the hospital stay, and the patient's family has been advised to schedule a follow-up appointment with a specialist in pediatric neurology to discuss the implications of the diagnosis and the patient's care plan.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "G40",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 794,
+    "output_tokens": 326
+  },
+  "seconds": 0.0
+}

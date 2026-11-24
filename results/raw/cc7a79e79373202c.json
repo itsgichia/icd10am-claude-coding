@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "8f808a644d03",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nPatient Discharge Summary:\n\nPatient Name: [Patient Name]\nAdmission Date: [Admission Date]\nDischarge Date: [Discharge Date]\n\nHospital Course:\nThe patient was admitted to the hospital due to lower extremity swelling and pain for four days. Physical examination revealed left lower limb pitting edema and calf tenderness. Color Doppler ultrasound showed an extensive DVT affecting the common iliac, external iliac and common femoral vein as well as superficial femoral down to popliteal vein. Treatment included bed rest, elevation with bandaging of left leg, and low molecular weight heparin injections. Investigations revealed no underlying etiology. Abdominal and pelvic US and CT scan showed an impacting stone and a severe left hydroureteronephrosis with almost lost of cortical thickness. Percutaneous nephrostomy was performed to decompress the hydronephrotic kidney. JJ stent was inserted and subsequently removed. Six weeks later, Doppler US showed complete recanalization of the superficial femoral, popliteal as well as the proximal segment of deep veins of the leg but common iliac, external iliac and common femoral veins and proximal superficial femoral vein were still partially thrombosed. Through pneumatic lithotripsy, the stone was fragmented under spinal anesthesia. Three months after that, Doppler US showed complete recanalization of iliac vessels.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nTreatment included bed rest, elevation with bandaging of left leg, and low molecular weight heparin injections. Percutaneous nephrostomy was performed to decompress the hydronephrotic kidney. JJ stent was inserted and subsequently removed. Pneumatic lithotripsy was performed to fragment the stone under spinal anesthesia. The patient was discharged on oral anticoagulation in the form of rivaroxaban 20 mg daily.\n\nFollow-up:\nThe patient is advised to have regular follow-up visits with their healthcare provider.\n\nSigned by: [Healthcare Provider Name and Title]\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: I82**\n\nThe principal diagnosis is the extensive left lower-limb deep vein thrombosis (iliac, femoral and popliteal veins), which the Doppler ultrasound established as the reason for admission. It is coded to category I82, Other venous embolism and thrombosis.\n\nThe ureteric calculus with hydronephrosis was found during the workup and needed nephrostomy and lithotripsy, so it is a significant additional diagnosis. It is the more serious condition in terms of kidney damage, but it was not the reason the patient was admitted. The DVT is therefore sequenced first.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 929,
+    "output_tokens": 1107
+  },
+  "seconds": 0.0
+}

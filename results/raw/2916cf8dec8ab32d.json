@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "ae67d374024a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Identification:\nThe patient is a 67-year-old male who underwent video-assisted right lung upper lobectomy and lymph node dissection for primary lung adenocarcinoma.\n\nHospital Course:\nThe patient was admitted to the hospital in March 2012 for surgical treatment of the lung cancer. He had a history of hypertension and had been a three-packs-a-day smoker for 40 years. Blood examination on admission suggested polycythemia, which was diagnosed as smokers' polycythemia after consulting with hematologists. The appropriate phlebotomy and infusion volumes were calculated, and the patient was discharged uneventfully on postoperative day 7. The pathological diagnosis of the lung adenocarcinoma was made after the surgery.\n\nPatient Status at Discharge:\nAt the time of discharge, the patient's respiratory function examination showed obstructive impairment. The serum erythropoietin level was normal, but the Hb and HCT were high. The patient was advised to continue with prescribed blood pressure medication, adhere to a healthy lifestyle, and was advised to attend regular check-ups by their physician.\n\nFollow-up:\nThe patient was advised to follow up with their physician to monitor their polycythemia and lung cancer.\nPrimary Diagnosis: [diagnosis section withheld]Secondary Diagnosis: [diagnosis section withheld]\nProcedures:\nVideo-assisted right lung upper lobectomy and lymph node dissection.\n\nAllergies:\nNot Applicable.\n\nMedications:\nNot Applicable.\n\nCondition at Discharge:\nStable.\n\nRecommendations:\nThe patient was advised to adhere to a healthy lifestyle and attend regular check-ups with their physician to monitor their polycythemia and lung cancer."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is **malignant neoplasm of the right upper lobe of the lung, C34.11** (ICD-10-AM). The category is C34.1, and the right-side subdivision is C34.11. Verify the subdivision against your local ICD-10-AM edition.\n\nThe reason for admission was surgical treatment of the primary lung adenocarcinoma, so it is the principal diagnosis. The adenocarcinoma morphology can be captured separately as a morphology code (M8140/3), but it does not change the C34 category.\n\nSecondary diagnoses would include:\n- **Smokers' polycythemia**, coded as secondary polycythemia (D75.1), which was investigated and managed during the admission.\n- **Hypertension** (I10), which was treated with ongoing medication.\n- **Obstructive respiratory impairment** on lung function testing, if clinically significant.\n- **Tobacco dependence/history of heavy smoking**, which may be coded with a Z-code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 637,
+    "output_tokens": 1014
+  },
+  "seconds": 0.0
+}

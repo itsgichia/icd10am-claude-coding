@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "cot_then_extract",
+  "record_id": "8f808a644d03",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nPatient Discharge Summary:\n\nPatient Name: [Patient Name]\nAdmission Date: [Admission Date]\nDischarge Date: [Discharge Date]\n\nHospital Course:\nThe patient was admitted to the hospital due to lower extremity swelling and pain for four days. Physical examination revealed left lower limb pitting edema and calf tenderness. Color Doppler ultrasound showed an extensive DVT affecting the common iliac, external iliac and common femoral vein as well as superficial femoral down to popliteal vein. Treatment included bed rest, elevation with bandaging of left leg, and low molecular weight heparin injections. Investigations revealed no underlying etiology. Abdominal and pelvic US and CT scan showed an impacting stone and a severe left hydroureteronephrosis with almost lost of cortical thickness. Percutaneous nephrostomy was performed to decompress the hydronephrotic kidney. JJ stent was inserted and subsequently removed. Six weeks later, Doppler US showed complete recanalization of the superficial femoral, popliteal as well as the proximal segment of deep veins of the leg but common iliac, external iliac and common femoral veins and proximal superficial femoral vein were still partially thrombosed. Through pneumatic lithotripsy, the stone was fragmented under spinal anesthesia. Three months after that, Doppler US showed complete recanalization of iliac vessels.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nTreatment included bed rest, elevation with bandaging of left leg, and low molecular weight heparin injections. Percutaneous nephrostomy was performed to decompress the hydronephrotic kidney. JJ stent was inserted and subsequently removed. Pneumatic lithotripsy was performed to fragment the stone under spinal anesthesia. The patient was discharged on oral anticoagulation in the form of rivaroxaban 20 mg daily.\n\nFollow-up:\nThe patient is advised to have regular follow-up visits with their healthcare provider.\n\nSigned by: [Healthcare Provider Name and Title]\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The admission was for four days of left leg swelling and pain, and the extensive left iliofemoral and femoropopliteal DVT was the condition that was investigated and treated throughout the stay. The ureteric stone with hydroureteronephrosis was found while searching for a cause, and its treatment was largely separate, so the DVT is the principal condition. DVT belongs to the circulatory system, chapter I, under embolism and thrombosis of other veins, category I82.\n\nCODE: I82",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1300,
+    "output_tokens": 855
+  },
+  "seconds": 0.0
+}

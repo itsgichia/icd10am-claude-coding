@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "5ca75f1b82c5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: Unknown\n\nAge: 75 years\n\nDate of Admission: Unknown\n\nDate of Discharge: Unknown\nAdmitting Diagnosis: [diagnosis section withheld]Principal Diagnosis: [diagnosis section withheld]\nClinical Presentation:\n\nThe patient, who had a medical history of hypertension, was admitted to the hospital with a complaint of fecal occult blood. A colonoscopy revealed a type II tumor in the sigmoid colon, which was located 23 cm from the anal verge. Histopathology of a biopsy specimen revealed moderately differentiated tubular adenocarcinoma. CT imaging showed sigmoid colon wall thickening, and regional lymph node metastasis was suspected. Blood examination showed an elevated carcinoembryonic antigen (CEA) concentration (32.7 ng/ml).\n\nHospital Course:\n\nThe patient underwent a laparoscopic sigmoid colectomy, which was performed without complications. Postoperative histopathological examination revealed moderately differentiated to mucinous adenocarcinoma, and three of the 16 retrieved lymph nodes contained malignant cells. The cancer was classified as stage IIIb [pT4a, pN1b, M0]. The patient was discharged after 10 days of recovery.\n\nTreatment:\n\nFollowing the diagnosis of stage III colorectal cancer, the patient was recommended to receive adjuvant chemotherapy with CAPOX starting 4 weeks after surgery. The selected regimen consisted of capecitabine and L-OHP. The anticancer drug dosage was reduced to 80% because of the patient's age. The patient also received 7.5 g of NYT daily throughout the course of adjuvant chemotherapy.\n\nOutcome:\n\nThe patient did not report any significant adverse effects. Follow-up examination did not show any recurrence during a 1-year postoperative follow-up.\n\nDischarge Condition:\n\nThe patient was discharged in stable condition with prescribed medications and follow-up appointment schedules.\n\nDischarge Medications:\n\nDetailed medication list not provided in the case report.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "Choosing the category step by step:\n\n1. **Chapter letter:** The condition chiefly responsible for this admission is the cancer that was resected. Histopathology confirmed adenocarcinoma, which is a malignant neoplasm, so the letter is **C**.\n2. **Two digits:** The tumour sits in the sigmoid colon, 23 cm from the anal verge. The sigmoid colon falls under the category for malignant neoplasm of colon, **C18** (the site would be refined to C18.7 at four characters). It is not the rectosigmoid junction (C19) or the rectum (C20).\n3. **Checking alternatives:**\n   - The faecal occult blood was the presenting symptom, so it is not the principal diagnosis.\n   - Hypertension is a comorbidity.\n   - The lymph node involvement is a secondary spread of the primary tumour, which remains the principal diagnosis.\n\nCODE: C18",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1252,
+    "output_tokens": 306
+  },
+  "seconds": 0.0
+}

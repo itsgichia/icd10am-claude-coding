@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "df7ed05e020c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nHospital Course Summary:\n\nAdmission Date: March 10, 2020\nDischarge Date: April 7, 2020\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course: A 50-year-old male patient presented with symptoms of cough and fever lasting for 47 days. The patient was diagnosed with COVID-19 infection based on positive nucleic acid results on February 15th. Prior treatment included arbidol and lianhua qingwen granules. The patient was admitted to Wuhan Huoshenshan Hospital on March 10th with peripheral oxygen saturation of 96% and respiratory rate of 18 breaths/minute. CT findings showed a bilateral, scattered, high-density shadow and fiber- and spine-like opacities. \n\nDuring his hospitalization, convalescent plasma from COVID-19 patients, recombinant human interferon, lianhua qingwen granules, arbidol, and chloroquine phosphate were administered. On March 24th, the patient's CT scan showed substantial improvement with no obvious pulmonary lesions. On April 3-5, nucleic acid test results for SARS-CoV-2 were all negative. SARS-CoV-2 IgM and IgG levels were markedly reduced. The patient was discharged from the hospital on April 7th after three consecutively negative SARS-CoV-2 RNA tests. \nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Condition: The patient was discharged from the hospital in good condition and stable. The patient was advised to follow COVID-19 prevention protocols and report any symptoms of illness to their primary care provider.\n\nFollow-up Care: Follow-up care was recommended for the patient to monitor their health and recovery progress.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: J12**\n\nICD-10-AM coding guidance for COVID-19 is the uncertain point here, so this rests on my recollection of it.\n\n1. **Condition chiefly responsible for the admission:** The patient had confirmed SARS-CoV-2 infection (positive nucleic acid test) with a lung manifestation. The CT showed bilateral scattered high-density shadows, which is viral pneumonia. He was admitted and treated until the lung lesions resolved and the virus tests turned negative.\n\n2. **Sequencing in ICD-10-AM:** As I recall the Australian guidance, the emergency code U07.1 (COVID-19, virus identified) is an additional code, not the principal diagnosis. The coder instead assigns the manifestation as principal: here J12.8 (other viral pneumonia), with B97.2 (coronavirus as the cause) and U07.1 added. The chapter list in your prompt has no U chapter, which fits this reading.\n\n3. **Chapter and category:** The principal diagnosis is in the respiratory chapter (J). The category is J12, viral pneumonia not elsewhere classified.\n\nIf the guidance edition you work under instead makes U07.1 the principal diagnosis, the answer would be U07.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1121,
+    "output_tokens": 963
+  },
+  "seconds": 0.0
+}

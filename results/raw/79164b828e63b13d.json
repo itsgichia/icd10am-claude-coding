@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "4ffe57ea03a8",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHospital Course:\n\nThe patient, a 38-year-old female diagnosed with IgAN accompanied by iron deficiency anemia, was admitted to our center with complaints of abnormal urine tests and unexplained anemia. Physical examination revealed no positive signs such as bilateral lower limb edema or hepatosplenomegaly. The patient was treated with a combination of oral prednisolone, leflunomide, and angiotensin receptor blockers (ARBs) along with polysaccharide-iron complex. A complete remission of proteinuria was observed, and hematuria was also relieved.\n\nHowever, the patient's hemoglobin levels were constantly below the normal reference range, which could not be explained by the iron deficiency anemia. In 2016, the patient was diagnosed with \u03b1-thalassemia based on the results of our genetic tests showing the deletion of --SEA gene. Serum HbF and HbA2 were found to be elevated to 2.47 and 3.04%, respectively.\n\nDuring the 3-year follow-up, a significant improvement in anemia was observed following the treatment consisting of a small dose of ARB with folic acid and mecobalamin administration. Laboratory tests in March 2019 showed that Hb levels were elevated to 157 g/L. Urine occult blood was 2+, 24-h proteinuria was reduced to 0.08 g, and serum creatinine and albumin were normal.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nThe patient was treated with a combination of oral prednisolone, leflunomide, and angiotensin receptor blockers (ARBs) along with polysaccharide-iron complex. Later, a small dose of ARB with folic acid and mecobalamin administration was found to be effective in improving anemia.\n\nFollow-Up:\n\nThe patient should continue to take the prescribed medications as per the physician's instructions and follow-up with regular appointments for monitoring and symptom management.\n\nSigned, [REDACTED] (Physician)"
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: IgA nephropathy, ICD-10-AM code N02.8** (recurrent and persistent haematuria, other morphologic changes), with the fourth-character subdivision to be confirmed by the coder.\n\n**Reasoning**\n\n- The patient was admitted for abnormal urine tests and unexplained anemia. Biopsy-proven IgAN was the main condition investigated and treated with prednisolone, leflunomide and ARBs, so it is the principal diagnosis.\n- ICD-10-AM has no dedicated IgAN code. Berger's disease (IgA nephropathy) is indexed to N02.8 (recurrent and persistent haematuria with other morphologic changes). The index entry is \"Disease, Berger's \u2192 N02.8\". The ICD-10-AM version also adds a fifth-character level for the morphologic lesion, which depends on the biopsy report. This detail is not in the summary, so it needs checking.\n- If the biopsy had shown a specific pattern such as mesangial proliferative glomerulonephritis, the code would be N02.8 with the relevant extension. Without a stated pattern, N02.8 is the best match.\n\n**Secondary diagnoses**\n\n- Alpha-thalassaemia, D56.0\n- Iron deficiency anaemia, D50.9 (or D50.8 if a specific cause is documented)\n\n**Caveats**\n\n- The diagnosis section was withheld, so this is inferred from the narrative.\n- The summary describes follow-up over several years rather than a single admission. For a real episode of care, the principal diagnosis would be whatever was established after study to be chiefly responsible for that admission. If a particular admission was only for investigating the anemia, D56.0 could instead be principal.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 748,
+    "output_tokens": 576
+  },
+  "seconds": 0.0
+}

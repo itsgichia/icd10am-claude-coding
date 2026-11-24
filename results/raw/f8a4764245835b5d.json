@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7579af382c24",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient: 66-year-old male with a past medical history of well-controlled diabetes and high cholesterol\nDiagnosis: [diagnosis section withheld]\nHospital course:\n\nThe patient presented with progressive shortness of breath, dry cough, weight loss and night sweats. Initial treatment for severe community-acquired pneumonia was unsuccessful and he rapidly progressed to respiratory failure requiring mechanical ventilation. Diagnostic tests were performed, ruling out possible infections and connective tissue diseases. A CT-guided lung biopsy and VATs were done, ultimately leading to a diagnosis of organizing pneumonia. The patient was started on a systemic steroid course which resulted in remarkable improvement in his breathing and oxygen requirement. He was finally liberated from the ventilator and switched to oral prednisone. His condition continued to improve steadily over the hospitalization and was later discharged with a decreased dose of oral prednisone.\n\nFollow-up:\n\nHis follow-up CT showed resolution of the micronodular infiltration. He is currently doing well clinically at 2 years post-hospitalization. \n\nDischarge medications:\n\nThe patient was discharged with oral prednisone. \n\nRecommendations:\n\nFollow up with primary care physician."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: J84.89 (Other specified interstitial pulmonary diseases)**\n\nThis is the code I would expect for organizing pneumonia in ICD-10-AM. Here is my reasoning, with the caveats.\n\n**Reasoning**\n- The final diagnosis was organizing pneumonia, confirmed by biopsy. It was cryptogenic because infection and connective tissue disease were excluded and no cause was identified.\n- In ICD-10-AM, the Alphabetic Index lists \"Pneumonia, organizing (cryptogenic)\" under J84.8 (Other specified interstitial pulmonary diseases). Bronchiolitis obliterans organizing pneumonia (BOOP) is indexed there too.\n- In ICD-10-AM (and in the WHO ICD-10 base), the code is J84.8. Later editions of ICD-10-AM (from roughly the 9th/10th edition onward) use a fifth character, J84.88 or J84.89, to specify the interstitial disease further. I have not confirmed which fifth character applies to cryptogenic organizing pneumonia in the edition you are using, so please check it in the Tabular List. J84.89 is my best estimate, and J84.8 is the code at the three-plus-one-character level.\n\n**Why not other codes**\n- **J18.9 (Pneumonia, unspecified):** the initial presumed diagnosis was community-acquired pneumonia, but it was ruled out.\n- **J96.0x (Acute respiratory failure):** the patient developed respiratory failure and needed ventilation. This is a secondary diagnosis, not the principal one, because the underlying organizing pneumonia was the condition chiefly responsible for the admission.\n- **J84.116 (Cryptogenic organizing pneumonia):** this code exists in ICD-10-CM (US), not in ICD-10-AM.\n\n**Secondary codes you might add**\n- E11.x (type 2 diabetes mellitus, if documented as type 2)\n- E78.0 or E78.5 (hypercholesterolemia or hyperlipidemia)\n- J96.0x (acute respiratory failure)\n- Procedure codes (ACHI) for mechanical ventilation, lung biopsy, and VATS\n\nPlease verify the final code in the ICD-10-AM edition your facility uses, as the fifth-character options differ between editions.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 468,
+    "output_tokens": 790
+  },
+  "seconds": 0.0
+}

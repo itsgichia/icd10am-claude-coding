@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "few_shot_three",
+  "record_id": "e978f0ec2dd7",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nHospital course:\nDischarge Summary:\n\nPatient Name: ____\nDate of Admission: ____\nDate of Discharge: ____\nPrimary Diagnosis: [diagnosis section withheld]\nSecondary Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to our facility on ____, exhibiting symptoms of tachycardia and acute kidney injury. It was later determined that the patient had ingested multiple foreign bodies. Treatment interventions included intravenous lorazepam and emergency laparotomy to remove all the packets. Postoperatively, the patient was transferred to the ICU where he remained for a total of one night before being transferred to ward level care. Pain management was achieved with a patient controlled analgesia (PCA) infusion pump, and the patient was extubated on day 1 postoperatively. The patient had a slow postoperative recovery mainly due to pain and limited oral fluid intake. He was discharged on day 10 back to police custody and returned once a week later for a dressing change.\n\nCourse of Treatment:\nThe course of treatment for this patient focused on the removal of the ingested foreign bodies through an emergency laparotomy. The patient was transferred to the ICU postoperatively and was managed with a patient controlled analgesia (PCA) infusion pump to manage pain.\n\nMedications:\nA detailed list of medications administered during the patient's hospitalization is not included in this summary.\n\nFollow-up:\nThe patient was discharged on day 10 back to police custody and returned once a week later for a dressing change. No further follow-up was scheduled upon the patient's discharge.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "This case looks like body packing: the patient ingested multiple packets, probably drugs, and was in police custody. He had tachycardia and acute kidney injury, which fits a stimulant toxicity picture such as cocaine, and he was given lorazepam. The packets were removed by laparotomy.\n\nThe question is which category is the principal diagnosis. The candidates are:\n\n- T50.9 or T40/T43: poisoning by drugs. Cocaine poisoning is T40.5. Under ICD-10-AM, a packet that is intact and causing no toxicity is not coded as poisoning. Here the tachycardia and acute kidney injury suggest toxicity, and the diagnosis section is withheld, so the picture is probably cocaine or amphetamine toxicity.\n- T18: foreign body in the alimentary tract. Body packing without toxicity is often coded here, as T18.- (for example T18.2 or T18.3, depending on site).\n\nThe case says \"ingested multiple foreign bodies\" and \"remove all the packets\", with the treatment focused on removal. Tachycardia and acute kidney injury could be symptoms of toxicity, and lorazepam was given for stimulant toxicity or agitation. Even so, the surgery was directed at the foreign bodies, and the \"ingested foreign bodies\" wording points toward T18.\n\nIf the packets had leaked, the principal diagnosis would be poisoning (T40.5 for cocaine). The case does not say they leaked, and the summary emphasises the foreign bodies, so I'll go with T18.\n\n**T18**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 980,
+    "output_tokens": 511
+  },
+  "seconds": 0.0
+}

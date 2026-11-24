@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "b7a4b7cf3ee1",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary\n\nPatient Name: [REDACTED]\n\nAge: 34 years\n\nSex: Female\n\nMedical Record Number: [REDACTED]\n\nAdmission Date: [REDACTED]\n\nDischarge Date: [REDACTED]\n\nHospital Course:\n\nThe patient was admitted to the emergency unit with complaints of moderate lower abdominal pain predominantly on the right side for the past 3 weeks. She did not present with any other symptoms such as fever, inappetence, nausea, or vomiting. A total abdomen ultrasonography (USG) was conducted, which revealed that the patient was in the second trimester of pregnancy without any evident alterations related to the pregnant uterus, the placenta, or the fetus. However, the iliac fossa was directed and revealed that the caecal appendix was thicker in the body portion, reaching a maximal transverse diameter of 9.2mm, which is above normal levels. The MRI results also corroborated the presence of lipomatosis in the appendix.\n\nThe patient was discharged after being prescribed analgesia, and she did not report any return of symptoms during follow-up.\nDiagnosis: [diagnosis section withheld]\nCondition at Discharge:\n \nAt the time of discharge, the patient was stable, and her vital signs were normal.\n\nDischarge Medications:\n\nThe patient was not prescribed any medication at the time of her discharge.\n\nFollow-Up:\n\nThe patient was advised to continue her follow-up visits to her obstetrician and/or primary care physician.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "CODE: O99\n\nThe principal diagnosis is appendiceal lipomatosis (K38.8), which is the condition that accounts for the admission. Because the patient is pregnant, ICD-10-AM sequencing rules give Chapter 15 priority, so the code is O99.6- (diseases of the digestive system complicating pregnancy), with K38.8 added as an additional code. The three-character category is O99.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 716,
+    "output_tokens": 839
+  },
+  "seconds": 0.0
+}

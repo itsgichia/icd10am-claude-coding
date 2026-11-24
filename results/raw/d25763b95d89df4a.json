@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "json_output",
+  "record_id": "5a5d374789e4",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [redacted]\n\nAge: 35\n\nSex: Female\n\nChief Complaint: Dyspnea and sickle cell crisis\nDiagnosis: [diagnosis section withheld]\nHospital Course: The patient presented with severe, progressive dyspnea and a sickle cell crisis. She had a history of severe tricuspid regurgitation, protein C deficiency, and recurrent deep vein thrombosis and pulmonary emboli. After examination, echocardiogram, and Doppler, a bioprosthetic tricuspid valve replacement surgery was conducted. Postoperatively, the patient had hypoxic respiratory failure requiring oxygen support, intermittent bilevel positive airway pressure ventilation, and diuresis. Twenty days after surgery, purulent secretion was noted on the sternotomy site. A CT of the thorax showed a large pericardial effusion, possibly a hemopericardium, and bilateral pleural effusions. A subxiphoid pericardial window and placement of a drainage catheter were conducted, leading to gradual improvement of her symptoms. Two months after discharge, a follow-up echocardiogram showed no pericardial effusion.\n\nTreatment: Bioprosthetic tricuspid valve replacement surgery, oxygen support, intermittent bilevel positive airway pressure ventilation, diuresis, subxiphoid pericardial window, and placement of a drainage catheter.\n\nCondition stabilized: Yes\n\nDischarge Instructions: The patient is advised to follow up with her treating physicians as scheduled.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"I36\", \"condition\": \"Nonrheumatic tricuspid valve disorder (tricuspid regurgitation)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 672,
+    "output_tokens": 47
+  },
+  "seconds": 1.1418777499930002
+}

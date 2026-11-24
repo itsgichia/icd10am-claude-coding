@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "6b385b74c7a0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient Name: [REDACTED]\nGender: Female\nAge: 70 years old\n\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\n\nHospital Course:\nThe patient was admitted with worsening right upper quadrant pain, anorexia, and 10 lb weight loss. A CT scan revealed hepatomegaly and several hypodense lesions consistent with liver metastases, indicating recurrent/metastatic disease. The patient was started on pembrolizumab and axitinib as first-line therapy for her condition.\n\nDuring treatment, the patient experienced side effects and required a dose reduction of axitinib due to fatigue. Elevated thyroid stimulating hormone levels were also monitored and subsequently managed with medication.\n\nAfter 12 weeks of combination axitinib/pembrolizumab, repeat CT scans showed progression of liver metastases, prompting a liver biopsy.\n\nGenomic testing revealed loss of function mutations in von Hippel-Lindau (VHL) and BRCA1-associated protein (BAP1) genes, as well as copy-number loss of cyclin-dependent kinase inhibitor 2A (CDKN2A).\n\nThe patient was discharged home with appropriate follow-up measures.\nDiagnoses: [diagnosis section withheld]\nProcedures:\n1. CT-guided liver biopsy\n\nUpdated Medications:\nNone.\n\nFollow-up Care:\nThe patient will receive appropriate follow-up care as recommended by her healthcare provider."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **C78.7, Secondary malignant neoplasm of liver and intrahepatic bile duct**\n\nThis assumes the primary is renal cell carcinoma. The diagnosis section is withheld, so the primary site is inferred from the clinical picture.\n\n**Why C78.7 is the principal diagnosis**\n- The patient presented with right upper quadrant pain, anorexia and weight loss.\n- CT showed hepatomegaly with hypodense lesions described as liver metastases, indicating recurrent/metastatic disease.\n- The workup and treatment during the stay focused on the liver: systemic therapy, monitoring of progression, and CT-guided liver biopsy.\n- Under ACS 0236 (Neoplasm coding and sequencing), when an admission is directed mainly at a metastatic site, the secondary neoplasm is sequenced as the principal diagnosis.\n\n**Why the primary is likely renal cell carcinoma (clear cell type)**\n- Pembrolizumab plus axitinib is a standard first-line regimen for advanced clear cell RCC.\n- Loss-of-function mutations in VHL and BAP1, with CDKN2A copy-number loss, are a typical clear cell RCC genomic profile.\n- \"Recurrent\" disease suggests the primary was treated earlier, probably by nephrectomy.\n\n**Likely additional codes**\n- **Primary site:**\n  - Z85.5 (Personal history of malignant neoplasm of urinary tract) if the primary was excised or eradicated and is no longer being treated.\n  - C64 (Malignant neoplasm of kidney, except renal pelvis) if the primary is still present or under treatment.\n- **Morphology:** M8310/6 (clear cell adenocarcinoma, metastatic site) and M8310/3 for the primary.\n- **Thyroid finding:** if documented, an endocrine code such as E03.x (hypothyroidism) with an external cause code for the adverse effect of an antineoplastic drug. This is likely immune-related thyroiditis from pembrolizumab.\n- **Fatigue:** an adverse-effect code from axitinib only if it meets the criteria for an additional diagnosis under ACS 0002.\n- **Procedure:** a code for percutaneous (CT-guided) liver biopsy.\n\nThe withheld diagnosis section should be checked to confirm the primary site and its status before final coding.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 558,
+    "output_tokens": 1006
+  },
+  "seconds": 0.0
+}

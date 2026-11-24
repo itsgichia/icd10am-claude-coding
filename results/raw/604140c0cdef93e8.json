@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "b89c6c41fd8a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nHospital Course:\nThe patient, an 83-year-old woman with a history of developmental disorders, presented to the emergency outpatient unit with a one-week history of dyspnea. She had heavily decreased breath sounds in the left lung. Chest radiograph and CT scan of the chest showed pleural effusions on the left lung. Two diagnostic thoracenteses were non-diagnostic, and a semirigid thoracoscopy was performed to visualize the pleura. Thoracoscopy revealed diffuse thickening of the parietal and visceral pleura, compatible with pleural dissemination with biopsy samples taken from only the visceral pleura node. Hematoxylin and eosin staining and immunohistochemical staining revealed a diagnosis of lung adenocarcinoma with malignant neoplasm. \nDischarge Diagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was discharged to the care of her family. \n\nCondition:\nThe patient had a stable condition upon discharge. \n\nClinical Course:\nThe patient required semirigid thoracoscopy with biopsy samples taken from only the visceral pleura node. Hematoxylin and eosin staining and immunohistochemical staining revealed a diagnosis of lung adenocarcinoma.\n\nFollow-up:\nThe patient was referred for follow-up care with an oncologist. \n\nInstructions:\nThe patient was instructed to follow-up with an oncologist. \n\nTreatment:\nThe patient underwent semirigid thoracoscopy for biopsy samples, which was successful. The treatment plan includes referral to an oncologist for further management. \n\nComplications:\nNo complications were noted during the hospitalization.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C34",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 682,
+    "output_tokens": 274
+  },
+  "seconds": 0.0
+}

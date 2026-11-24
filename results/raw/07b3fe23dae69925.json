@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "3127de73c5b5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 46-year-old male\n\nAdmission date: [DATE]\n\nDischarge date: [DATE]\n\nMedical history: None reported except exertional dyspnea.\n\nChief complaint: Exertional dyspnea\n\nHospital course:\n\nThe patient was admitted to the hospital with a chief complaint of exertional dyspnea. Physical examination revealed a systolic mitral murmur and a diastolic aortic murmur. TTE revealed a noncoronary SVA protruding into the mitral anterior leaflet, leading to moderate mitral regurgitation, severe aortic insufficiency, and a dilated aortic root. The ascending aorta measured 54-mm, and the left ventricular diastolic diameter was 75-mm, with a left ventricular ejection fraction of 66%. No ventricular septal defect was detected. Coronary CTA showed no abnormalities or stenoses found in the coronary tree and the sac of the noncoronary SVA (measuring 36 \u00d7 47 \u00d7 51 mm) was protruding into the anterior leaflet of the mitral valve. Surgery was performed via median sternotomy. The thickening of the wall of the tricuspid aortic valve and ascending aortic wall was consistent with inflammation. The patient underwent mitral valve and aortic valve replacement and replacement of the ascending aorta with an artificial vessel. Antibiotics were administered for 5 weeks. Follow-up TTE showed satisfactory functioning of both replaced valves. Aortic CTA demonstrated restoration of the normal anatomical relationship at the aortic root. The patient was discharged in stable condition.\nDischarge diagnosis: [diagnosis section withheld]\nDischarge instructions: The patient was advised to follow-up with a primary care physician and cardiologist and adhere to medication and lifestyle modification recommendations."
+      }
+    ]
+  },
+  "text": "The most likely ICD-10-AM principal diagnosis is **Q24.8, Other specified congenital malformations of heart**, which is where a congenital sinus of Valsalva aneurysm is typically classified.\n\nThe principal diagnosis is the condition chiefly responsible for the admission. Here that is the noncoronary sinus of Valsalva aneurysm protruding into the mitral anterior leaflet, which caused the moderate mitral regurgitation, severe aortic insufficiency, and dilated aortic root that prompted surgery. The discharge diagnosis section is withheld, so this is an inference from the course.\n\nTwo caveats:\n\n- **Infective endocarditis:** The thickened aortic valve and wall described as \"inflammation\" and the 5-week antibiotic course raise the possibility of infective endocarditis. If the discharge diagnosis confirms endocarditis, the principal diagnosis would more likely be I33.0 (acute and subacute infective endocarditis), with an additional code for the causative organism.\n- **Verify with the coder:** Check the final discharge diagnosis and the ICD-10-AM Index entry for \"Aneurysm, sinus of Valsalva,\" since coding conventions can vary.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 661,
+    "output_tokens": 1049
+  },
+  "seconds": 0.0
+}

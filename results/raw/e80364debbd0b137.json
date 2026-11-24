@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "4bbf8b80acdc",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nDOB: [REDACTED]\nMRN: [REDACTED]\n\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nLength of Stay: [REDACTED]\nAdmitting Diagnosis: [diagnosis section withheld]\nFinal Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to the hospital complaining of fever and cough over the last few days. The clinical evaluation revealed micro nodular shadowing consistent with miliary TB, which was confirmed through chest computed tomography. Broncho-alveolar lavage fluid was negative for acid-fast bacilli, but M. tuberculosis was identified through culture. Cerebrospinal fluid examination led to the diagnosis of probable TB meningitis. The patient developed a right side stroke and was subsequently transferred to a different hospital where the prescribed treatments and rehabilitation were continued. The patient continued with anti-TB, anti-HIV, and aspirin treatments leading to improvement in general and neurologic conditions. After five weeks, the patient was discharged.\n\nDischarge Instructions:\nThe patient was discharged with follow-up appointments scheduled with the infectious disease clinic and neurological department. The patient was advised to continue with anti-TB, anti-HIV, and aspirin treatments as prescribed by the physician. The patient was also advised to maintain a healthy diet and lifestyle, quit smoking, take prescribed medications as directed, and avoid alcohol and recreational drugs. The patient is advised to seek medical attention immediately if any new symptoms or complications arise."
+      }
+    ]
+  },
+  "text": "The principal diagnosis code is **A19.1, Acute miliary tuberculosis of multiple sites**.\n\nMiliary TB is the condition that occasioned the admission. The fever and cough were its presenting features, and chest CT confirmed it. Because the TB involves multiple sites (lungs and meninges), A19.1 is more specific than A19.9 (unspecified) or A19.0 (single site).\n\nSecondary codes would likely include:\n- **A17.0** Tuberculous meningitis (probable, from CSF findings)\n- **B20** HIV disease, since anti-HIV treatment was given (confirm the documented HIV status)\n- **I63.-** Cerebral infarction, for the right-sided stroke (the specific code depends on the documented mechanism and laterality)\n- Status or history codes, such as smoking history, as documented\n\nThe discharge summary withholds the formal diagnosis sections, so confirm the principal diagnosis against the complete record and the coding rules for your ICD-10-AM edition.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 608,
+    "output_tokens": 1074
+  },
+  "seconds": 0.0
+}

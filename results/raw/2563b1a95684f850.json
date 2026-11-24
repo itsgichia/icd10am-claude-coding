@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "d7034671e367",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Unknown\nMedical Record Number: Unknown\nDate of admission: Unknown\nDate of discharge: Unknown\n\nHospital Course:\nThe 76-year-old woman with a medical history of cerebral infarction, endometrial cancer, and lumbar spine tumor was admitted to the Emergency Room with complaints of swelling, redness, and warmth on the left anterior chest wall. Physical examination and various medical tests revealed infectious arthritis in the left SCJ with multiple abscess pockets, small abscesses posterior to the left SCJ and sternum, and posterior to the clavicle. Treatment with the antibiotic cefazolin was started, but after two weeks, the antibiotic was switched to penicillin G due to the presence of Penicillin-sensitive Streptococcus agalactiae. However, the patient developed leukopenia and thrombocytopenia, which were suspected to be the side effects of penicillin. Cefazolin was then replaced by vancomycin and the treatment continued for another 2 weeks. After a total treatment duration of 6 weeks, the CRP level of the patient decreased to the normal range, and follow-up computed tomography of the chest showed improved SCJ swelling and abscess. The patient was discharged, and no signs of recurrence were observed after 3 months.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient was started on cefazolin empirically, targeting methicillin-susceptible S aureus (MSSA), which is the most common pathogen of SCJ septic arthritis. After identifying Penicillin-sensitive Streptococcus agalactiae, the treatment was switched to penicillin G for two weeks. Due to the side effects of penicillin, cefazolin was then restarted but later replaced by vancomycin.\n\nFollow-Up Care:\nThe patient was discharged and lost to follow-up after 3 months.\n\nRecommendations:\nNone\n\nSigned,\n[Physician\u2019s Signature]\n[Date of discharge]"
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: septic (infectious) arthritis of the left sternoclavicular joint due to Streptococcus agalactiae (Group B streptococcus).**\n\n**ICD-10-AM code: M00.2 \u2013 Other streptococcal arthritis and polyarthritis**\n\nRationale:\n- The condition treated and investigated was pyogenic arthritis of the left sternoclavicular joint with abscess formation. Cultures grew Streptococcus agalactiae, a Group B streptococcus.\n- In ICD-10-AM, M00.- covers pyogenic arthritis. M00.0 is staphylococcal, M00.1 is pneumococcal, and M00.2 is other streptococcal, which includes Group B. M00.8 is for other specified bacteria.\n- The site is the sternoclavicular joint, which is classified under shoulder region/other sites. Australian coding uses the 5th-character site extension for M00 (for example, M00.21 for shoulder region). The sternoclavicular joint is part of the shoulder girdle, so the more specific code would be **M00.21 (other streptococcal arthritis, shoulder region)**. Check the local ICD-10-AM site-character table, because some editions use a different site digit.\n\nSecondary or additional codes to consider:\n- An additional code for the Group B streptococcus is not needed, since M00.2 already identifies the organism.\n- Abscess: this is integral to the joint infection, so no separate code is needed.\n- D70.- (agranulocytosis/neutropenia) with Y40.0 (penicillin adverse effect) and D69.59 (other secondary thrombocytopenia) for the suspected drug-induced leukopenia and thrombocytopenia.\n- Z85.4 (personal history of endometrial malignancy) and Z86.73 (personal history of cerebral infarction).",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 715,
+    "output_tokens": 613
+  },
+  "seconds": 0.0
+}

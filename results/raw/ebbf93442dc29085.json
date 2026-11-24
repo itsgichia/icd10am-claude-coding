@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "587b40f261f0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Identification:\nThis is a 43-year-old Jewish woman referred to our medical center for multinodular goiter evaluation. She had a history of a 2-stage total thyroidectomy and a right modified neck dissection for medullary thyroid carcinoma (MTC) with concomitant follicular adenoma and micropapillary carcinoma. The patient underwent surgical treatments followed by I-131 100 mCi.\n\nHospital Course and Treatment:\nThe patient underwent a 2-stage total thyroidectomy before being referred to our medical center for evaluation. The biopsy results revealed a proliferative lesion suspicious for neoplasia, with a second lesion measuring 1.2cm. The right lobe and isthmus biopsy specimen showed a well-demarcated two cm maximal diameter MTC and a partially circumscribed follicular adenoma measuring 1.2cm. The non-neoplastic thyroid tissue revealed lymphocytic infiltration and occasional colloid nodules. The left thyroid lobe histology disclosed a tiny focus, two mm in size, consistent with micropapillary carcinoma. No lymph node metastasis was found.\n\nThe patient\u2019s presurgical calcitonin level was 2170ng/L, and carcinoembryonic antigen (CEA) level was 51mg/L, while thyroid-stimulating hormone was within the normal range. One year postsurgery, the patient\u2019s calcitonin levels were less than five ng/L, and thyroglobulin levels were no longer measurable. Point mutation for RET proto-oncogene was tested and found to be negative.\n\nMedications and Follow-up:\nThe patient was discharged after her I-131 treatment. No further medication was prescribed. Follow-up at regular intervals is recommended to monitor the patient\u2019s progress.\nFinal Diagnosis: [diagnosis section withheld]\nPrognosis and Recommendations:\nThe patient\u2019s prognosis is positive. Follow-up at regular intervals is recommended to assess her progress. No further medications or treatments are needed. Close monitoring is advised to help ensure the best possible outcome.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: C73**\n\n- **Why C73:** Medullary thyroid carcinoma is a malignant neoplasm of the thyroid gland, which falls under C73 (Malignant neoplasm of thyroid gland). It was confirmed on histology: a 2 cm well-demarcated MTC in the right lobe and isthmus. Presurgical calcitonin (2170 ng/L) and CEA were raised. The admitted care (2-stage total thyroidectomy, right modified neck dissection, then I-131) was given to treat this malignancy.\n- **Other findings:** The papillary microcarcinoma also falls under C73, so the category is the same either way. The follicular adenoma (D34) and lymphocytic infiltration or colloid nodules are incidental. None of them drove the admission.\n- **Not the principal diagnosis:**\n  - The \"multinodular goiter\" referral reason (E04.-) is the presenting reason, and investigation replaced it with the established malignancy.\n  - The surgery and I-131 are procedures, not diagnoses.\n- **Caveat:** If this episode were solely the I-131 admission after the cancer had been fully excised, some coders might consider follow-up or history codes. Australian coding practice (ACS 0236) still assigns the malignancy code while the patient is receiving treatment directed at it, including adjuvant radioiodine. So C73 stands.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 933,
+    "output_tokens": 524
+  },
+  "seconds": 0.0
+}

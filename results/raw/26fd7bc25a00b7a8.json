@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "d0d5d40b00e0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\n\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\n\nHospital Course:\nThe patient, a 67-year-old male, presented with severe shortness of breath and fast atrial fibrillation. Coronary angiogram revealed no significant coronary artery disease, CT scan revealed a large penetrating atherosclerotic ulcer at the junction of the distal ascending aorta and the undersurface of aortic arch, and echocardiogram showed grossly abnormal-looking distal ascending aorta with a large pseudoaneurysm in relation to the distal ascending aorta. The patient underwent aortic surgery and made an uncomplicated recovery.\n\nThe patient subsequently represented with worsening shortness of breath 6 months later and was found to have a large pseudoaneurysm in relation to the aortic arch. A redo sternotomy was performed, and the patient underwent total arch replacement. The false aneurysm cavity was extensively debrided and laid open. The patient had gradual respiratory weaning and required a percutaneous tracheostomy and antibiotics.\n\nHowever, the patient's condition deteriorated suddenly after 6 weeks when a rupture and contrast leak of the descending thoracic aorta were discovered, along with a large hematoma. The patient underwent TEVAR with an excellent result. The patient also developed a pathological fracture of left proximal tibia and was diagnosed with metastatic renal cancer. The patient was referred to the palliative care team.\n\nThe patient continued to deteriorate and passed away peacefully 65 days following his total arch replacement.\nDiagnosis: [diagnosis section withheld]\nProcedures:\nTotal arch replacement, TEVAR.\n\nCondition at Discharge:\nThe patient passed away.\n\nInstructions at Discharge:\nNone.\n\nFollow-Up Care:\nNone.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The principal diagnosis is aortic aneurysm (pseudoaneurysm) of the aortic arch, category I71.\n\n1. **Episode in scope:** The summary covers two admissions. The episode that ends in death is the re-presentation six months after the first aortic surgery. In that episode the patient had worsening shortness of breath, and a large pseudoaneurysm of the aortic arch was found.\n2. **Chiefly responsible condition:** The pseudoaneurysm led to the redo sternotomy and total arch replacement. Later in the stay the descending thoracic aorta ruptured, which is the same disease and was treated with TEVAR. The other problems are secondary:\n   - Shortness of breath is the presenting symptom.\n   - The tracheostomy and antibiotics were part of post-operative care.\n   - The pathological tibial fracture and metastatic renal cancer were found later in the stay. They contributed to his decline but were not the reason for admission.\n3. **Chapter:** An aortic aneurysm is a disease of the arteries, so it falls in the circulatory system chapter, I.\n4. **Category:** I71 is aortic aneurysm and dissection. It covers aneurysm and rupture of the thoracic aorta, including the arch and descending segments.\n\nOne alternative is worth noting. Because this pseudoaneurysm arose after the earlier aortic repair, it could be classed as a complication of a vascular graft, which would put it in the T82 category instead. Nothing in the summary says the graft or previous surgery caused it, so I71 is the better choice.\n\nCODE: I71",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1181,
+    "output_tokens": 696
+  },
+  "seconds": 0.0
+}

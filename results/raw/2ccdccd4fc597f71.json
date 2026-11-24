@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "9e761020b901",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nGender: Male\nDate of Discharge: [REDACTED]\nAdmission Date: [REDACTED]\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient presented to the emergency department with right-sided chest pain and dyspnoea. Chest radiograph revealed a large right-sided pneumothorax. A pigtail intercostal catheter was inserted and placed on suction. The patient used nocturnal NIV and mouthpiece intermittent positive pressure ventilation (MIPPV) throughout the admission. The ICC was removed on day three, and the patient was discharged on day five with advice to cease all MI-E until clinical review in two weeks.\n\nFollow-up:\nAt review, the MI-E pressures were decreased by a physiotherapist with instructions to use sparingly for cough augmentation or saliva clearance only. Pharmacological modalities of saliva management were recommended; however, the patient had no success with these previously. Unfortunately, the patient represented on three occasions with right-sided pneumothorax in the following six months, with chemical pleurodesis conducted twice, both of which failed to prevent recurrence. The patient was discharged home with a long-term pleural catheter after the fourth admission, which was removed two months later. The patient continues to use MI-E sparingly and has had no subsequent recurrence.\n\nInstructions:\nThe patient is advised to continue using NIV and MIPPV. The patient should use MI-E sparingly for cough augmentation or saliva clearance only, as instructed by the physiotherapist. The patient should seek medical attention if he experiences any chest pain or dyspnoea. The patient should also pay attention to the signs of right-sided pneumothorax in the future and seek prompt medical attention if these occur again."
+      }
+    ]
+  },
+  "text": "**Likely principal diagnosis code: J95.81 \u2013 Pneumothorax due to medical procedure/intervention (or an equivalent iatrogenic/ventilator-related code). This is uncertain, and the alternative is J93.1/J93.8, as explained below.**\n\n**Reasoning**\n\n- The patient presented with a large right-sided pneumothorax, which was drained with an intercostal catheter.\n- The patient uses mechanical insufflation-exsufflation (MI-E), NIV and MIPPV. This points to an underlying neuromuscular disease, probably motor neurone disease (bulbar involvement is suggested by the saliva problems). The summary does not state the condition.\n- The pneumothorax was attributed to MI-E barotrauma. The pressures were reduced and the pneumothoraces stopped recurring.\n\n**Coding options**\n\n1. **Barotrauma from MI-E (my preferred choice):** Code the pneumothorax as a complication of care. In ICD-10-AM this is **J95.88 Other intraoperative and postprocedural complications and disorders of respiratory system, not elsewhere classified**. Add an external cause code for the device or procedure, with Y-codes for the misadventure or adverse effect of the ventilatory device. I am not certain of the exact subcode, so please verify it in the Alphabetic Index.\n2. **If the clinician does not document a causal link:** Use **J93.8 Other pneumothorax**, or **J93.1 Other spontaneous pneumothorax** if the pneumothorax is described as spontaneous. ICD-10-AM does not use J93.2 or J93.0 for this scenario.\n\n**Summary:** The principal diagnosis is the right pneumothorax. If it is documented as caused by MI-E barotrauma, I would code it as a complication (J95.88). Otherwise I would code J93.8 or J93.1. The underlying neuromuscular disease, for example G12.21 for MND, would be an additional diagnosis. Please check the final choice against the full record and the Australian Coding Standards. The discharge diagnosis section was withheld, so I cannot confirm which option applies.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 651,
+    "output_tokens": 709
+  },
+  "seconds": 0.0
+}

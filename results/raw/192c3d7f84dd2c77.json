@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "context_rich_structure",
+  "record_id": "91774e9fbdcf",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary\n\nPatient: XXXXXXX\n\nDate of Admission: XXXXXXX\n\nDate of Discharge: XXXXXXX\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nUpon admission, the patient presented with acute onset epigastric pain associated with vomiting. Subsequently, she was diagnosed with acute pancreatitis and a dilated common bile duct with no gallstones or other pathology. Further, a MRCP revealed a curious cystic lesion lying posterior to the head of the pancreas causing extrinsic compression. An abdominal CT scan revealed a cystic or necrotic mass behind the head of the pancreas representing an inflammatory lesion or abscess.\n\nDuring admission, the patient was treated with oral antibiotics and observed clinically and haematologically. However, her bilirubin continued to rise. An ERCP revealed a 10 cm duodenal diverticular abscess at the level of the major papilla draining pus and bile, likely causing extrinsic compression of the bile duct.\n\nThe patient experienced clinical and hematological improvement and was discharged with a plan for follow-up with the gastroenterology team.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Instructions:\n\nThe patient is advised to follow-up with the gastroenterology team and adhere to any prescribed medications. Additionally, the patient is instructed to consume a healthy diet and maintain a low-risk lifestyle.\n\nFollow-Up Care:\n\nFollow-up with the gastroenterology team.\n\nSigned:\n\nXXXXXXXXX\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: K57**\n\nThe principal diagnosis is most likely the duodenal diverticular abscess (diverticular disease of the intestine, K57), not the acute pancreatitis that prompted admission. ERCP identified the abscess at the major papilla as the cause of the extrinsic compression of the bile duct and the rising bilirubin, and it is the underlying condition that the investigation established. This is a judgement from the summary, which does not state the final discharge diagnosis, so coding should be checked against the full record.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1071,
+    "output_tokens": 672
+  },
+  "seconds": 0.0
+}

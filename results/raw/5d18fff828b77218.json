@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "14612a31f7d9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\n\nPatient Name: [PATIENT NAME]\nMedical Record Number: [MRN]\n\nHospital Course:\nThe patient is a 40-year-old female who was admitted with a complaint of lower extremity numbness and tingling. She subsequently developed left facial weakness, which had been previously diagnosed as Bell's Palsy. Neurological examination revealed bilateral decreased sensation to light touch, 4/5 strength in upper extremities, and 3/5 strength in lower extremities with no elicited reflex at any location. On day two of admission, she developed bilateral ptosis, urinary incontinence, and respiratory failure. On day three, the patient's ptosis worsened, and she also developed ophthalmoplegia. She was diagnosed with anti-GD1a antibody-positive Guillain-Barr\u00e9 Syndrome. The patient received five days of plasma exchange, IVIG, and high-dose solumedrol. Her condition began to improve on day seven and she was extubated on day eight. The vertical nystagmus was the first deficit to resolve, and the strength of her extremities recovered to 4+/5 in the upper extremities and 4-/5 in the lower extremities. She was transferred to an acute rehab unit after 20 days of hospitalization for continued management and rehabilitation.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Medications:\nNone\n\nDischarge Instructions:\nFollow up with primary care provider in 1-2 weeks\nReturn to work part-time as tolerated\nContinue with physical therapy and rehabilitation program\nRefrain from strenuous activity and prolonged sitting\nTake care to prevent falls\nIf symptoms worsen, notify your healthcare provider immediately"
+      }
+    ]
+  },
+  "text": "The ICD-10-AM principal diagnosis code is **G61.0, Guillain-Barr\u00e9 syndrome**.\n\nThe discharge summary documents that the patient was diagnosed with anti-GD1a antibody-positive Guillain-Barr\u00e9 syndrome and treated for it with plasma exchange, IVIG, and high-dose steroids. That condition occasioned the admission and accounted for most of the hospital stay. The antibody finding is supporting detail and does not change the code.\n\nOther conditions in the record are secondary, not principal:\n- **Respiratory failure** (required intubation) is a complication of GBS and would be coded as an additional diagnosis.\n- **Bell's palsy** was a prior diagnosis that preceded the GBS diagnosis.\n- **Ptosis, ophthalmoplegia, urinary incontinence, and sensory or motor deficits** are manifestations of GBS.\n\nBecause the discharge diagnosis section was withheld, a coder would confirm the final diagnosis against the full record before assigning the code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 645,
+    "output_tokens": 575
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "521280629b72",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\nLength of Stay: [REDACTED]\n\nHospital Course:\nThe patient presented to the pediatric emergency with confusion and disorientation. She was diagnosed with bacterial meningitis based on clinical examination and CSF analysis and was treated with intravenous ceftriaxone and vancomycin. A CT scan was performed, and pneumocephalus was observed in the right frontal region. The patient was treated for signs of chronic sinusitis and pansinusitis. She showed initial symptomatic improvements to antibiotics but suffered a deterioration of her GCS to 7/15, with a high-grade fever.\n\nSubdural empyema was diagnosed through a repeat CT scan, requiring immediate neurosurgical intervention. The surgical drainage was performed, and on the second day, the patient's GCS improved to 15/15, and her fever had subsided. The patient was discharged with a prescription for oral antibiotics, nasal saline spray, and nasal decongestants.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient received intravenous ceftriaxone and vancomycin to treat bacterial meningitis. Subdural empyema was treated through immediate neurosurgical intervention, which involved surgical drainage. The patient was prescribed oral antibiotics, nasal saline spray, and nasal decongestants upon discharge.\n\nFollow-up:\nThe patient was seen at two-week and four-week follow-ups and experienced significant improvements in symptoms.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "In ICD-10-AM, intracranial subdural abscess/empyema is coded to G06.2 (extradural and subdural abscess, unspecified). Bacterial meningitis is G00.-. The question is which condition is chiefly responsible for the episode.\n\nThe patient was admitted with confusion and diagnosed with bacterial meningitis. Pneumocephalus and chronic sinusitis suggest a sinogenic source. The subdural empyema was diagnosed later and needed neurosurgical drainage. Both are intracranial infections, and the empyema is a complication or extension of the same sinogenic infection.\n\nCoding guidance: where meningitis and intracranial abscess occur together, ICD-10-AM uses the combination code G06.- (intracranial abscess) with G00-G02 as the category for meningitis in a separate code. G00 has an Excludes note for meningitis with abscess? Actually G06 includes \"intracranial abscess and granuloma, intracranial empyema (extradural, subdural)\". G00 excludes \"bacterial meningoencephalitis (G04.2)\". Meningitis and abscess are generally both coded, and the principal diagnosis is the condition that occasioned the admission after study. The patient was treated for meningitis from the outset, with a subdural empyema evolving later. The empyema was likely present from the start, since it is a complication of the sinusitis and the pneumocephalus was already visible on the first CT.\n\nThe case seems designed so that the empyema is the definitive condition requiring the major treatment, the surgery. The question's wording (\"not the presenting symptom, not the procedure\") points to a definitive diagnosis rather than a presentation. Still, the meningitis was the diagnosis established on admission and treated first, so the ambiguity is real. I choose the meningitis, since it was the condition that occasioned the admission, and the empyema developed during the stay despite treatment.\n\nCounterpoint: the empyema is a more specific intracranial infection that explains the whole picture, including the meningitis. The Australian Coding Standards say that when a condition is diagnosed on admission and a more specific one is found later, the more definitive one is generally used. Here the empyema was present on admission (pneumocephalus, confusion) and only identified on the repeat CT. The meningitis is arguably a feature of the same intracranial suppurative infection.\n\nI will go with the meningitis, as the initially established and treated condition and the reason for admission.\n\nCODE: G00",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 769,
+    "output_tokens": 806
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "c21280ae53ae",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Name]\nMedical Record Number: [Number]\nDate of Admission: [Date]\nDate of Discharge: [Date]\n\nHospital Course:\n\nThe patient, a 46-year-old Caucasian male, was admitted to the hospital due to a new onset headache, nausea, and vomiting. The patient had a history of pancreatic cancer with metastases to the liver and omentum, and had undergone treatment with chemotherapy. The patient was also previously hospitalized for a pulmonary embolism and small bowel obstruction.\n\nUpon admission, the patient presented with dull, intractable headache, icteric eyes, decreased air entry, and decreased muscle strength. The patient reported hitting his head in the bathroom one week prior to admission and had a family history of colon cancer.\n\nDuring hospitalization, the patient developed syncope and a generalized tonic-clonic seizure. Imaging studies revealed bihemispheric subdural hematomas and left hemispheric extra-axial metastatic lesions. The patient was started on levetiracetam and received cranial irradiation with right and lateral fields. The treatment significantly improved the patient's headache and nausea, and he did not experience any new seizures.\n\nThe patient tolerated radiotherapy well and did not require a treatment break. However, he died 2.5 months later at home. No autopsy was performed as per family request.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nOndansetron, metoclopramide, and dexamethasone\nLevetiracetam\nCranial irradiation with right and lateral fields\n\nFollow-up:\n\nThe patient passed away and there is no follow-up needed.\n\nDischarge Medications:\n\nNone.\n\nAllergies:\n\nNot reported.\n\nCondition at Discharge:\n\nThe patient passed away."
+      }
+    ]
+  },
+  "text": "The principal diagnosis would most likely be **C79.3, Secondary malignant neoplasm of brain and cerebral meninges**.\n\nUnder the ICD-10-AM principal diagnosis definition (the condition established after study to be chiefly responsible for the admission), the headache, nausea, and vomiting were due to the brain metastases. The imaging showed left hemispheric extra-axial metastatic lesions, and the cranial irradiation was directed at those lesions. Coding guidelines generally place the secondary site as principal when the admission is for its treatment.\n\nOther codes to consider as secondary diagnoses:\n- **C25.-** Malignant neoplasm of pancreas (primary, with the specific site code based on the documentation)\n- **C78.7** Secondary malignant neoplasm of liver, and **C78.6** Secondary malignant neoplasm of retroperitoneum and peritoneum (omentum)\n- **Subdural haemorrhage codes** (e.g., S06.5, traumatic subdural haemorrhage). The record links the hematomas to the head strike a week earlier, but it does not state their cause, so this needs clarification.\n- **R56.9** Unspecified convulsions (generalized tonic-clonic seizure) and **R55** Syncope\n- **Z51.1** / chemotherapy-related and other status codes, as applicable\n\nThe final principal diagnosis should be confirmed by a clinical coder against the full medical record, especially the cause of the subdural hematomas and whether the admission was predominantly for the brain metastases.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 636,
+    "output_tokens": 1276
+  },
+  "seconds": 0.0
+}

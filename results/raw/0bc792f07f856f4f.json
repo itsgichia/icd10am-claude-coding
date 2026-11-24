@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "fe41074797c2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient: 74-year-old female admitted with subcutaneous masses, abdominal pain, and fever.\n\nClinical course: The patient was admitted with several subcutaneous masses, abdominal pain, and fever. Laboratory tests showed an extremely low platelet count, and serum protein electrophoresis showed a monoclonal band. Imaging studies revealed subcutaneous masses and intra-abdominal lymphadenopathy with moderate splenomegaly. Biopsy of the subcutaneous mass revealed a diagnosis of CSH associated with IgH and Ig\u03ba rearrangements, with suspicion of an underlying lymphoproliferative disorder. Further testing of the excised spleen confirmed a diagnosis of DLBCL, non-GCB subtype.\n\nTreatment: The patient underwent laparoscopic splenectomy and was administered eight courses of rituximab, cyclophosphamide, doxorubicin, vincristine, and prednisone. The patient was in partial remission 9 months after diagnosis. PET-CT scan showed resolution of some masses, but serum paraprotein levels remained elevated leading to four cycles of rituximab plus lenalidomide, MG is not visible at one-month follow-up.\n\nOutcome: The patient was evaluated and treated for CSH and DLBCL with rituximab and combination chemotherapy. The patient achieved PR with some improvement in PET-CT scans but elevated serum paraprotein levels; treated subsequently with rituximab plus lenalidomide leading to undetectable MG levels. The patient was discharged to the home for follow-up with routine laboratory tests and imaging scans.\nDiagnoses: [diagnosis section withheld]\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"C83\", \"condition\": \"Diffuse large B-cell lymphoma\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 710,
+    "output_tokens": 32
+  },
+  "seconds": 0.0
+}

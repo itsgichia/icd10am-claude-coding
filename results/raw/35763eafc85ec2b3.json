@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "cot_then_extract",
+  "record_id": "4ffe57ea03a8",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHospital Course:\n\nThe patient, a 38-year-old female diagnosed with IgAN accompanied by iron deficiency anemia, was admitted to our center with complaints of abnormal urine tests and unexplained anemia. Physical examination revealed no positive signs such as bilateral lower limb edema or hepatosplenomegaly. The patient was treated with a combination of oral prednisolone, leflunomide, and angiotensin receptor blockers (ARBs) along with polysaccharide-iron complex. A complete remission of proteinuria was observed, and hematuria was also relieved.\n\nHowever, the patient's hemoglobin levels were constantly below the normal reference range, which could not be explained by the iron deficiency anemia. In 2016, the patient was diagnosed with \u03b1-thalassemia based on the results of our genetic tests showing the deletion of --SEA gene. Serum HbF and HbA2 were found to be elevated to 2.47 and 3.04%, respectively.\n\nDuring the 3-year follow-up, a significant improvement in anemia was observed following the treatment consisting of a small dose of ARB with folic acid and mecobalamin administration. Laboratory tests in March 2019 showed that Hb levels were elevated to 157 g/L. Urine occult blood was 2+, 24-h proteinuria was reduced to 0.08 g, and serum creatinine and albumin were normal.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nThe patient was treated with a combination of oral prednisolone, leflunomide, and angiotensin receptor blockers (ARBs) along with polysaccharide-iron complex. Later, a small dose of ARB with folic acid and mecobalamin administration was found to be effective in improving anemia.\n\nFollow-Up:\n\nThe patient should continue to take the prescribed medications as per the physician's instructions and follow-up with regular appointments for monitoring and symptom management.\n\nSigned, [REDACTED] (Physician)\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The admission was chiefly for IgA nephropathy, which was treated with prednisolone, leflunomide and ARBs until proteinuria and haematuria remitted. The alpha-thalassaemia explained the persistent anaemia but was a comorbidity found during follow-up, not the reason for the episode. IgA nephropathy is classified in chapter N (genitourinary system) under category N02, recurrent and persistent haematuria.\n\nCODE: N02",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1300,
+    "output_tokens": 545
+  },
+  "seconds": 0.0
+}

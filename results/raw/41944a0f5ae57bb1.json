@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "3a1233001d46",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nPatient Information:\n- Name: [REDACTED]\n- Age: 64 years old\n- Sex: Female\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n- The patient underwent resection of the seeding nodule of ovarian carcinoma and created a loop ileostomy due to direct invasion of the carcinoma to the terminal ileum.\n- Prolapse of the ileostomy appeared approximately 17 months after the operation, and it continued to progressively worsen.\n- The patient subsequently underwent a revision operation to reposition the prolapse.\n- After revision of the prolapse, there were no further troubles with the ileostomy.\n- The postoperative progress was good, and the chemotherapy was continued.\n- However, the patient's general state got worse gradually, and her treatment became a plan of best supportive care.\n- Nineteen months after the first time operation, the general state got even worse and she died.\n\nSummary:\nThe patient, a 64-year old female with unresectable ovarian carcinoma, underwent resection of the seeding nodule of ovarian carcinoma and created a loop ileostomy due to direct invasion of the carcinoma to the terminal ileum. Prolapse of the ileostomy appeared approximately 17 months after the operation, and it continued to progressively worsen. A revision operation was performed to reposition the prolapse, and after revision, there were no further troubles with the ileostomy. The postoperative progress was good, and the chemotherapy was continued. However, the patient's general state got worse gradually, and her treatment became a plan of best supportive care. Nineteen months after the first time operation, the general state got even worse and she died.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"C56\", \"condition\": \"Malignant neoplasm of ovary\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 676,
+    "output_tokens": 30
+  },
+  "seconds": 0.0
+}

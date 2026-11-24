@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "cot_then_extract",
+  "record_id": "ecbc47ac7bb5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient Information: \nName: [REDACTED]\nDOB: [REDACTED]\nGender: Male\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient, a 48-year-old male with a history of poorly controlled type 1 diabetes mellitus, presented with a neuroischemic ulcer of the fifth toe, which was classified as a grade 3 infection. He was diagnosed with signs of osteomyelitis and methicillin-resistant Staphylococcus aureus.\n\nTreatment: \nThe patient was treated with oral vancomycin and underwent wound care management according to the TIME algorithm for 1.5 months. The wound bed was cleaned and decontaminated, devitalized tissue was debrided, non-irritant skin protector was applied to protect the peri-lesional tissue, hydrogel was applied to the wound bed, nanocrystalline silver dressing was used, and polyurethane foam dressing was applied. After full healing, the patient's pre-prandial glucose and HbA1c levels improved.\n\nDischarge Information: \nThe patient was discharged with no acute complaints. Follow-up appointments will be scheduled with his primary care physician and podiatrist. A detailed instruction sheet for wound care management and glycemic control was provided to the patient.\n\nCondition at Discharge: \nStable with no acute complaints. Condition improved.\n\nInstructions: \n1. Follow up with Primary Care Physician and Podiatrist.\n2. Follow wound care instructions.\n3. Maintain healthy diet and exercise regime.\n4. Monitor blood sugar levels.\n5. Attend scheduled appointments.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible for the admission is a neuroischaemic diabetic foot ulcer with osteomyelitis, a complication of type 1 diabetes mellitus. In ICD-10-AM, diabetic foot complications are sequenced under the diabetes code in chapter E. That gives the type 1 diabetes category E10, with neuroischaemic foot ulcer expressed at the subcategory level.\n\nCODE: E10",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1187,
+    "output_tokens": 274
+  },
+  "seconds": 0.0
+}

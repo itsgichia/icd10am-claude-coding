@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "0597e19347c9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]\nAge: 65\nSex: Female\nDate of Admission: May 12, 2020\nDate of Discharge: May 16, 2020\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted to the surgical ward for elective right hemicolectomy due to the presence of a colon adenocarcinoma. The surgery was performed successfully on May 14, 2020, with laparoscopic right hemicolectomy and side-to-side extracorporeal ileocolonic anastomosis. The patient was stable in the initial postoperative days, despite a gradually dropping hemoglobin. She briefly experienced some bleeding from the anastomotic site, which presented as melena, but this was treated conservatively with a one-unit pack of red blood cells, and the patient's hemoglobin raised to 8.5 g/dl. After four days of hospitalization, the patient was discharged with a full diet and regular bowel motion.\nDischarge Diagnosis: [diagnosis section withheld]\nCondition on Discharge:\nThe patient's condition on discharge was stable, with no complications or obstacles to returning to her usual state of health. The patient was advised to continue with follow-up care and monitoring by her primary care provider.\n\nInstructions at Discharge:\nThe patient was instructed to contact her primary care provider to schedule her follow-up visits. She was also advised to obtain a computed tomography (CT) chest, abdomen, and pelvis, and to undergo tumor marker testing six months post-operation in the service of oncology follow-up.\n\nMedications on Discharge: None\n\nFollow-up Care: Follow-up care with the patient's primary care physician and oncologist is advised to ensure continued monitoring of her health status and to attend necessary appointments and procedures.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The patient was admitted electively for a right hemicolectomy because of colon adenocarcinoma. The malignancy was the reason for the admission and the surgery, so it is the principal diagnosis. The postoperative anastomotic bleeding was a complication that arose during the stay. It is coded as an additional diagnosis and does not replace the principal diagnosis.\n\nA right hemicolectomy covers the caecum, ascending colon and hepatic flexure. The site is not specified in the summary, so it could fall under C18 (malignant neoplasm of colon). The category is C18 whichever subsite is involved, and the subsite would only change the fourth character.\n\nCODE: C18",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 835,
+    "output_tokens": 219
+  },
+  "seconds": 2.44987741598743
+}

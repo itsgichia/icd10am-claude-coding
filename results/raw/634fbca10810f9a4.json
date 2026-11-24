@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7567bbd24908",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\n\nThe 68-year-old male patient was admitted to the hospital for the removal of an intramedullary nail and a possible total knee arthroplasty after experiencing a traumatic event. His past medical history includes hypertension, high cholesterol, high potassium levels, a non-cancerous enlargement of the prostate gland that caused difficulty urinating, atrial fibrillation, a crush injury causing closed fractures of multiple ribs and the pelvis, and a history of tobacco use. Preoperative laboratory tests indicated slightly low sodium levels and slightly elevated glucose levels, but a well-functioning renal system.\n\nProcedure:\n\nThe anesthesia team planned for spinal block and monitored anesthesia care with a propofol infusion. The patient was given 2 mg of midazolam preoperatively. The surgery lasted for 5 hours and 32 minutes and the patient's urine output for the duration of the operation totaled 1240 mL, with 975 mL excreted within a two-hour span.\n\nPostoperative Period:\n\nThe patient had an uncomplicated postoperative period with normal sodium levels and electrolytes. He was monitored closely after surgery.\nDiagnoses: [diagnosis section withheld]\nDisposition:\n\nThe patient was discharged from the hospital in a satisfactory condition after his uncomplicated postoperative period. \n\nFollow-up Care:\n\nFollow-up appointments with the appropriate specialists recommended for the patient's multiple comorbidities."
+      }
+    ]
+  },
+  "text": "The most likely ICD-10-AM principal diagnosis is **Z47.8, Other orthopaedic aftercare**. The admission is for removal of an intramedullary nail, which is aftercare for an already-treated injury, not active treatment of the fractures.\n\nThis is a provisional answer because the diagnosis section is withheld. A coder would confirm it against the operative report and the diagnosis list. If the operative report shows the rib and pelvic fractures were still being actively treated, the principal diagnosis would instead be the fracture code (S22.- for ribs, S32.- for pelvis) with a 7th character reflecting the encounter. The atrial fibrillation, hypertension, and other comorbidities would be coded as secondary diagnoses.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 535,
+    "output_tokens": 1400
+  },
+  "seconds": 0.0
+}

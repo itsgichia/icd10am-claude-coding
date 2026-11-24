@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "14771633680b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nA 60-year-old female presented to the emergency room with a sudden onset of severe headache associated with vomiting. On the administration of a CT scan of the brain, subarachnoid hemorrhage was observed, and an aneurysm was suspected. The patient underwent CT cerebral angiogram, and a bilobed anterior communicating artery aneurysm was discovered, projecting anterosuperiorly with a size of 8 x 7 x 5 mm. On the fourth day of ictus, the patient underwent right pterional craniotomy and clipping of the aneurysm. Following surgery, the patient developed right-sided ptosis that advanced to complete right-sided oculomotor nerve paralysis with a dilated and nonreacting pupil. A CT scan of the brain was performed, but no hematoma or infarct was noted. The patient was discharged on the eighth postoperative day and kept under regular follow-up in our outpatient department.\n\nDischarge Condition:\nStable with recovered oculomotor nerve paralysis.\n\nCourse of Treatment:\nThe patient was administered antiedema measures, anticonvulsant, analgesic, and Nimodipine. The medication was continued for a total of 21 days following the ictus.\n\nDischarge Instructions:\nThe patient is advised to follow up with their healthcare provider regularly.\n\nFollow-up Care:\nThe patient underwent a Magnetic Resonance Imaging scan of the brain with venogram to rule out any infarct or thrombosis of the cavernous sinus after a week of discharge. No abnormalities were noted. The patient came for follow-up on the 61st postoperative day, and her ptosis had fully recovered. A full recovery of the ocular motor nerve paralysis was noted. The patient was advised to continue regular follow-up with their healthcare provider.\n\nDischarge Medications:\nMedications are not listed as per case report instructions.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "CODE: I60\n\nThe principal diagnosis is a **nontraumatic subarachnoid haemorrhage from a ruptured anterior communicating artery aneurysm**. This is what caused the admission, and it is what the surgery treated.\n\n- **Why I60:** I60 covers nontraumatic subarachnoid haemorrhage. The fourth character for an anterior communicating artery source is I60.2.\n- **Not the aneurysm alone:** I67.1 is for a cerebral aneurysm that has not ruptured. This one had bled, so the haemorrhage takes the code.\n- **Not the oculomotor nerve palsy:** this was a complication after the operation. It may be coded as an additional diagnosis, but it is not the principal diagnosis.\n- **Not headache or vomiting:** these were presenting symptoms, explained once the cause was found.\n- **Not the clipping:** the craniotomy and clipping is a procedure and is coded separately.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 880,
+    "output_tokens": 369
+  },
+  "seconds": 0.0
+}

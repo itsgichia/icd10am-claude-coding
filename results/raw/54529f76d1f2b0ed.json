@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "88738ac02b6e",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\nThe patient, a 73-year-old male, was admitted to the Urology ward with a chief complaint of nocturia, frequency, dribbling, and urinary retention since last month. Ultrasound examination revealed left renal mass. Past medical history included diabetes mellitus, hypertension, and ischemic heart disease. The patient stopped cigarette smoking 20 years ago. The lab data reveals that the patient had mild anemia and his blood sugar was 159 mg/dl. Urine analysis showed 10-15 white blood cells in high power field with a negative urine culture. Digital rectal examination showed a nodular (2-3+) and symmetric prostate. The ultrasound examination showed mild bilateral hydroureteronephrosis with an over-distended urinary bladder. The prostatic volume was 25 cc with retained urine of 950 cc. Computer tomography scanning revealed a hypo attenuated mass in the lower pole of the left kidney with arterial and portal enhancement and delay washout in favor of infiltrative process such as RCC close to left psoas muscle. Mild bilateral hydronephrosis due to enlarged prostate was seen. He was subsequently referred to the surgery department of the hospital for nephrectomy. The specimen was referred to the pathology department. \nDiagnosis: [diagnosis section withheld]\nFollow-up:\nAfter surgery, the patient was followed-up for 5 months. No recurrence or metastasis was diagnosed."
+      }
+    ]
+  },
+  "text": "The diagnosis section is withheld, so the principal diagnosis has to be inferred. The case seems to be a renal tumour, probably renal cell carcinoma, treated by nephrectomy. The pathology result is not given, so this is provisional.\n\n**Likely principal diagnosis: C64 Malignant neoplasm of kidney, except renal pelvis**\n\nICD-10-AM (current editions) requires a fifth character for laterality only in some codes. For C64, the Australian Modification uses the plain code C64 in older editions. Later editions may need a laterality extension, so check the edition you are using.\n\n**Reasoning**\n- The admission was for a left renal mass found on ultrasound and CT. CT showed enhancement with delayed washout, which favours RCC.\n- The patient was referred for nephrectomy and the specimen went to pathology.\n- The urinary retention, hydronephrosis and enlarged prostate are secondary. They would be coded as additional diagnoses, for example N40 (benign prostatic hyperplasia with lower urinary tract symptoms) and R33 (urinary retention).\n- In ICD-10-AM, the principal diagnosis is the condition established after study to be chiefly responsible for the admission. Here the patient was admitted to Urology with urinary symptoms, but the workup and treatment centred on the renal mass.\n\n**Caveats**\n- If pathology showed a benign tumour such as oncocytoma, the code would be D30.0 (benign neoplasm of kidney).\n- If pathology was uncertain, it would be D41.0 (neoplasm of uncertain behaviour of kidney).\n- If the admission was coded only for the retention workup before the tumour was confirmed, N40 or R33 could be principal. Because the nephrectomy was the definitive treatment, C64 is the best answer.\n\n**Additional codes**\n- E11.- Type 2 diabetes mellitus\n- I10 Hypertension\n- I25.- Ischaemic heart disease\n- N13.- Hydronephrosis\n- D63.0 Anaemia in neoplastic disease, if documented as due to the tumour\n- Z87.891-equivalent personal history of nicotine dependence (in ICD-10-AM, Z86.4/Z72.0-type codes are used according to local coding standards)\n\n**Answer: C64 (malignant neoplasm of kidney, likely renal cell carcinoma), pending confirmation of the pathology report.**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 536,
+    "output_tokens": 806
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "d1a6cb7e9ee7",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: Sarah\nAge: 40\nGender: Female\nAdmission date: [Date]\nDischarge date: [Date]\nReason for Admission: COVID-19 with symptoms of rhinorrhea, hyposmia, and ageusia\n\nHospital Course:\nSarah was admitted to the hospital with positive COVID-19 test results and mild symptoms of rhinorrhea, hyposmia, and ageusia. During her stay, she was treated with hydroxychloroquine and azithromycin, and her symptoms gradually improved. After three consecutive COVID-19 RT-PCR tests came back negative, she was discharged from the hospital in stable condition.\n\nFollow-Up Care:\nSarah visited the Otolaryngology clinic one month after her discharge. She reported that her olfactory and gustatory functions had returned to normal. A nasal endoscopy revealed some watery discharge in the posterior nasal cavity without any sign of other lesions. Follow-up tests for olfactory and gustatory functions were conducted, which showed improvement in both her scores.\nDiagnosis: [diagnosis section withheld]\nSummary:\nSarah, a 40-year-old female, was admitted to the hospital with positive COVID-19 test results and mild symptoms of rhinorrhea, hyposmia, and ageusia. After receiving treatment, she was discharged from the hospital in stable condition. During her follow-up visit, her olfactory and gustatory functions had returned to normal without any further treatment. A nasal endoscopy showed no sign of lesions. Her overall prognosis is good.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"U07\", \"condition\": \"COVID-19\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 678,
+    "output_tokens": 22
+  },
+  "seconds": 0.0
+}

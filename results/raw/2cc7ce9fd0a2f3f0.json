@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "4054a6aedd1d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient Name: [REDACTED]\n\nGender: Female\n\nAge: 2 years 7 months\n\nDate of Admission: 31st March 2019\n\nDate of Discharge: 18th April 2019\n\nHospital: Regional Hospital of Buea\nPrimary Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted with a 4-day history of persistent fever, polyarthralgia and abdominal pain. Upon examination, she presented with moderate jaundice of the sclerae and a soft abdomen. Blood test results revealed abnormalities that prompted a urinalysis, which showed many bacteria and few pus cells. A request for urine and blood culture was made.\n\nThe culture results showed the presence of Shigella flexneri, which was initially treated with ceftriaxone. However, due to an increase in temperature and CRP, the patient was put on a combined therapy of ampicillin and gentamicin.\n\nAfter 3 days, the patient's temperature and CRP remained elevated, and the second urine culture showed the presence of Escherichia coli. Ofloxacin was discontinued and the patient was treated with Meropenem and Amikacin, which resulted in a progressive decrease in temperature and CRP over 7 days.\n\nA third urine culture was requested and revealed no significant growth after 48 hours of incubation. The patient was discharged on the 18th of April 2019 upon completion of treatment.\nDischarge Diagnoses: [diagnosis section withheld]\nDischarge Medications:\n\nThe patient was discharged with no medications.\n\nFollow-up Instructions:\n\nParents were advised to ensure good hygiene for the patient, including hand washing and regular bathing. They were encouraged to bring the patient for routine medical checkups following her discharge.\n\nDischarge Condition:\n\nThe patient was discharged in a stable condition and looked healthy with a normal body temperature."
+      }
+    ]
+  },
+  "text": "The most likely ICD-10-AM principal diagnosis is **A03.1, Shigellosis due to *Shigella flexneri***.\n\nThe discharge summary withholds the diagnosis section, so this is inferred from the course. The fever, abdominal pain, and jaundice were investigated, and the culture grew *Shigella flexneri*, which was the organism treated with ceftriaxone and then ampicillin plus gentamicin. Shigellosis is the condition that was treated, so it is the principal diagnosis.\n\nTwo other codes may be needed as additional diagnoses:\n- **E. coli urinary infection** from the second urine culture, which would be coded as a urinary tract infection (N39.0) with the organism (B96.2).\n- **Jaundice and polyarthralgia**, if they were not considered integral to the shigellosis. The sepsis-like picture (fever, raised CRP) should be coded only if the treating clinicians documented it.\n\nIf the physician's documented discharge diagnosis differs, such as a urinary tract infection or sepsis, the principal diagnosis would change accordingly.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 668,
+    "output_tokens": 801
+  },
+  "seconds": 0.0
+}

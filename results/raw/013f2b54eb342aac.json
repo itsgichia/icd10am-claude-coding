@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "74d57f2e9126",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nName: [Patient Name]\nMedical Record Number: [MRN]\n\nAdmission Date: [Admission Date]\nDischarge Date: [Discharge Date]\n\nHistory of Present Illness:\nThe patient, a 53-year-old male with a history of type 2 diabetes mellitus and dyslipidemia, underwent laparoscopic right hemicolectomy with D3 lymphadenectomy for moderately differentiated tubular adenocarcinoma of the ascending colon. Postoperative surveillance revealed a 23-mm sessile polyp at the superior rectum, which was successfully removed by endoscopic mucosal resection. 39 months after EMR, a mass lesion was found in the presacral area on CT as postoperative surveillance. The patient underwent LAR with D3 lymphadenectomy, and the recurrent site was completely removed without adjuvant chemotherapy.\n\nHospital Course:\n\nAdmission:\nThe patient was admitted for LAR with D3 lymphadenectomy due to presacral lymph node recurrence of rectal cancer.\n\nTreatment:\nThe patient underwent LAR with D3 lymphadenectomy, and the recurrent site was completely removed by surgery.\n\nClinical Progress:\nThe postoperative course was uneventful, and he was discharged from our hospital on postoperative day 11.\n\nDischarge Condition:\nThe patient was discharged in a stable condition.\nDischarge Diagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was discharged home in stable condition.\n\nInstructions:\nThe patient should follow up with his primary care physician and oncologist for postoperative surveillance per their recommendations.\n\nSigned,\n[Physician Name]\n[Title]"
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **C77.5 \u2013 Secondary and unspecified malignant neoplasm of intrapelvic lymph nodes**\n\n## Rationale\n\n**Reason for admission:** The patient was admitted for low anterior resection (LAR) with D3 lymphadenectomy to treat presacral lymph node recurrence of rectal cancer.\n\n**Site of the recurrence:** The presacral lymph nodes are intrapelvic lymph nodes, so the recurrence is coded as a secondary neoplasm at that site.\n\n**Applicable standard:** Under ACS 0236 (Neoplasm coding and sequencing), when a patient is admitted to treat a metastatic or secondary site, the secondary neoplasm is sequenced as the principal diagnosis.\n\n**Status of the primary:** The rectal primary was removed earlier by endoscopic mucosal resection (EMR). The documentation describes the recurrence as nodal, not local recurrence in the rectal wall. The rectum was resected as part of the cancer operation for nodal clearance.\n\n## Suggested additional codes\n\n- **Z85.0** \u2013 Personal history of malignant neoplasm of digestive organs (rectal cancer treated by EMR; ascending colon cancer treated by right hemicolectomy). Use C20 instead only if the pathology shows residual or recurrent tumour in the rectum itself.\n- **M8140/6** \u2013 Adenocarcinoma, metastatic (morphology code). Confirm the histology from the pathology report.\n- **E11.9** \u2013 Type 2 diabetes mellitus without complication. Assign a more specific E11 code if complications are documented, and code it only if it meets ACS 0002 criteria for additional diagnoses.\n- **E78.5** \u2013 Dyslipidaemia, if it meets ACS 0002 criteria.\n- **Procedure:** LAR (block 936, e.g., 32024-00 anterior resection of rectum) and pelvic lymphadenectomy codes, per ACHI.\n\n## Caveat\n\nIf the withheld discharge diagnosis or the pathology report shows tumour in the rectal wall, **C20 (Malignant neoplasm of rectum)** may become principal, with C77.5 as an additional diagnosis. Review the histopathology before finalising.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 606,
+    "output_tokens": 1105
+  },
+  "seconds": 0.0
+}

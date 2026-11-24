@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "760f2bb68a63",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nMedical Record Number: [redacted]\nDate of Admission: [redacted]\nDate of Discharge: [redacted]\nFinal Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient, a 23-year-old male, presented with a chief complaint of mechanical low back pain that had been present for 8 months. He had a history of falling in the sitting position on two different occasions during his martial arts practice. Initially, his symptoms were localised, infrequent, and aggravated by prolonged sitting. Over the course of six months, he developed sciatica radiating to the dorsum of his left foot and associated with numbness but no weakness. Systemic review was unremarkable, and he had no constitutional symptoms.\n\nAfter undergoing an MRI, a discal cyst located in the anterior epidural space with low signal intensity on T1-weighted images and high signal intensity on T2-weighted images was discovered. It appeared faintly white in colour, contained serous fluid, and partially indented the L5 nerve root. The patient underwent an endoscopic interlaminar surgery under general anaesthesia, in prone position on Jackson table. The cyst was excised at the base of the connection by performing an annulotomy. A fragment of the cyst wall composed of fibrocartilaginous tissue devoid of epithelial lining was found on histopathological examination.\n\nThe patient had immediate relief of his sciatica symptoms and was ambulating well two days after surgery. He was discharged home with no signs of post-operative complications. At ten months post-surgery, there were no signs indicating any recurrence.\n\nDischarge Medications:\nN/A\n\nFollow-up Instructions:\nThe patient is advised to follow up with his medical provider as needed to monitor any recurring symptoms. He should continue to avoid prolonged sitting and take the necessary precautions to prevent any further falls during his martial arts practice."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis code is **M51.1 (Lumbar and other intervertebral disc disorders with radiculopathy)**. A more specific ICD-10-AM code is possible, but the choice involves some judgement, as explained below.\n\n**Reasoning**\n\n- The condition is a discal cyst at L5 that indents the L5 nerve root. It caused sciatica with numbness in the L5 distribution, and the surgery treated that radiculopathy.\n- A discal cyst has no dedicated ICD-10 code. It is a disc herniation variant arising from the intervertebral disc, with a fibrocartilaginous wall and no epithelial lining, so it is a disc disorder rather than a true cyst or neoplasm.\n- In ICD-10-AM, lumbar disc disorder with radiculopathy is classified to M51.1. The Australian Coding Standards and the ICD-10-AM 11th edition and later use the code block M51.1x with additional detail. Disc disorders with radiculopathy in the lumbar region fall under M51.1 (lumbar and other intervertebral disc disorders with radiculopathy), and \"sciatica due to intervertebral disc disorder\" is also included there.\n- Excluded alternatives:\n  - M54.4 (lumbago with sciatica) is excluded when the cause is a disc disorder, which is M51.1.\n  - M54.5 (low back pain) is a symptom code, so it is not used when a definitive cause is established.\n  - M51.2 (other specified disc displacement) applies if no radiculopathy is documented, but radiculopathy is documented here.\n  - Cyst codes such as M71.3 (other bursal cyst) or M25.8 are inappropriate for this lesion.\n\n**Additional coding notes**\n\n- An external cause code could be added for the falls during martial arts, for example W18/W19 with an activity code, but these are not principal diagnoses.\n- Procedure coding would cover endoscopic lumbar discectomy/excision under ACHI, but this is separate from the diagnosis code.\n\n**Answer: M51.1**, lumbar disc disorder with radiculopathy (L5), for the discal cyst causing sciatica.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 679,
+    "output_tokens": 724
+  },
+  "seconds": 0.0
+}

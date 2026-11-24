@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "32740d68001d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient Information:\nName: Anonymous\nGender: Female\nAge: 25\nAdmission Date: [date]\nDischarge Date: [date]\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient was administered with various medications including alprazolam 500 \u03bcg, duloxetine 90 mg, olanzapine 5 mg, haloperidol 2.5 mg, clonazepam, baclofen, diazepam, phenytoin, levetiracetam, lamotrigine, levodopa, oral baclofen, lacosamide and potassium channel antagonist 3,4 diaminopyridine.\n\nHospital Course:\nThe patient was admitted with vomiting, bilateral leg pain, difficulty mobilising and flexed posture of her neck. She later developed visual and auditory hallucinations, respiratory failure with a coma scale score of 3, hypertensive, tachycardic, pyrexic and severe limb rigidity. Subsequently, contractures of the hands and feet were also developed. The patient was intubated and ventilated. The patient intermittently reported visual hallucinations throughout the hospital admission. Further complications included ileus, ischaemic bowel and sepsis.\n\nOutcome:\nThe patient showed marked clinical improvement with the administration of potassium channel antagonist 3,4 diaminopyridine. This resulted in extubation, multiple medication decreases, transfer from ICU, and ultimately discharged home sixteen months after admission. The patient is now dependent on others for all activities of daily living and has developed contractures of the upper and lower limbs. There have been no documented seizures since discharge.\n\nFollow-up:\nThe patient requires long-term follow-up care for contractures of the upper and lower limbs. The patient may also benefit from genetic counselling and additional investigations as advised by the neurology team."
+      }
+    ]
+  },
+  "text": "# Suggested principal diagnosis: G25.8 \u2013 Other specified extrapyramidal and movement disorders\n\nThis code is provisional, because the diagnosis section of the summary is withheld. Coding should never rely on inference alone, so please confirm the documented diagnosis with the treating clinician before final assignment.\n\n## Why G25.8 is the most likely fit\n\nThe clinical picture is most consistent with **stiff person spectrum disorder**, possibly the severe variant called progressive encephalomyelitis with rigidity and myoclonus (PERM). The supporting features are:\n\n- **Rigidity and posture:** severe, progressive limb and axial rigidity, with flexed neck posture, leg pain and contractures.\n- **Autonomic instability:** hypertension, tachycardia and pyrexia.\n- **Brainstem and encephalopathic features:** hallucinations, coma and respiratory failure.\n- **Treatment pattern:** escalating GABAergic and antispasmodic drugs (diazepam, clonazepam, baclofen) and multiple antiepileptics for spasms and seizures.\n\nIn ICD-10-AM, stiff-man (stiff person) syndrome is indexed to **G25.8**.\n\nThe suggestion of genetic counselling and the striking response to 3,4-diaminopyridine raise the possibility of a genetic channelopathy, such as a glycine receptor or potassium/calcium channel disorder. If confirmed, this could change the code.\n\n## Alternatives to consider, depending on the documented diagnosis\n\n| Documented diagnosis | Code |\n|---|---|\n| Neuroleptic malignant syndrome (the patient received haloperidol and olanzapine and had fever, rigidity and autonomic instability) | G21.0, plus the external cause code Y49.5 for the antipsychotic |\n| Autoimmune or other encephalitis | G04.8 or G04.9 |\n| Hereditary channelopathy or other specified genetic neurological disorder | Code to the specific condition |\n| Episodic ataxia, if documented | G11.8 |\n\n## Additional codes to consider\n\nThese depend on documentation and the ACS criteria:\n\n- Respiratory failure (J96.0-)\n- Sepsis (A41.9)\n- Ischaemic bowel (K55.0)\n- Paralytic ileus (K56.0)\n- Contractures (M24.5-)\n- Hallucinations (R44.-)\n- Seizures or epilepsy (G40.- or R56.8)\n- Procedure code for mechanical ventilation, with the hours documented",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 657,
+    "output_tokens": 1336
+  },
+  "seconds": 0.0
+}

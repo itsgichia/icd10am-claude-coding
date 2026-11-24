@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "cot_then_extract",
+  "record_id": "0c964e66f001",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nHOSPITAL COURSE:\nA 71-year-old female with a medical history of nonalcoholic steatohepatitis, multiple episodes of gastrointestinal bleeding, deep venous thrombosis, and pulmonary embolism requiring an inferior vena cava filter, and atrial fibrillation presented with recurrent episodes of altered mental status. Due to persistent encephalopathy despite resolution of infection, an extended workup was performed and hepatic encephalopathy was entertained as the presumptive diagnosis. Further diagnostic imaging revealed 2 large intrahepatic venous malformations manifesting as a portovenous shunt.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\nThe patient underwent interventional coil embolization to close the anastomosis and had no further episodes of hepatic encephalopathy post-treatment. Ammonia levels were normalized. Follow-up is recommended.\n\nCONDITION ON DISCHARGE:\nStable.\n\nDISCHARGE MEDICATIONS:\nNone.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible for the admission was recurrent encephalopathy. Workup showed it was caused by large intrahepatic venous malformations acting as a portovenous shunt, which was then closed by coil embolization. The shunt is a congenital vascular malformation (Q26.5, anomalous portal venous connection, or Q27.8, other specified peripheral vascular malformations), and the hepatic encephalopathy (K76.82 in ICD-10-CM, or K72.x in ICD-10-AM) is the manifestation of it.\n\nCoding the underlying cause is a judgement call. The treatment targeted the malformation, and the chapter Q category covers it. Alternatively, the hepatic encephalopathy could be coded to K72 (hepatic failure), but the malformation is the established cause that the workup and the procedure addressed. Intrahepatic venous malformations forming a portovenous shunt fit Q26 (congenital malformations of great veins), which includes Q26.5 for anomalous portal venous connection.\n\nChapter Q, category Q26.\n\nCODE: Q26",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 968,
+    "output_tokens": 359
+  },
+  "seconds": 0.0
+}

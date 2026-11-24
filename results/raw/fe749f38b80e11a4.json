@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "97d7cb7d2576",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nHOSPITAL COURSE SUMMARY\n\nPatient Name: [REDACTED]\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\nLength of Stay: [REDACTED]\n\nCHIEF COMPLAINT: RUQ pain\n\nHISTORY OF PRESENT ILLNESS:\nThe patient, a 26-year-old male, presented to the emergency department with a three-day history of RUQ pain, which worsened with food. Physical exam demonstrated focal RUQ peritonitis with a positive Murphy\u2019s sign, but no rebound or guarding. Ultrasound revealed a stone in the gallbladder neck and no pericholecystic fluid. Surgery was consulted and the patient was offered outpatient follow-up for biliary colic.\n\nPAST MEDICAL HISTORY:\nThe patient has a prior history of good health. No past medical conditions or significant illnesses were noted in the chart.\n\nHOSPITAL COURSE:\nThe patient was monitored in the hospital for a brief period and discharged with a plan for outpatient follow-up for biliary colic. The following day, the patient returned to the emergency department with persistent pain and underwent cholecystectomy for cholecystitis.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\nThe patient is advised to take adequate rest and avoid heavy lifting for a few days. The surgical incisions should be kept clean and dry. The patient should follow the medication regimen as prescribed. The patient is instructed to return to the hospital if there are any signs of fever, redness, swelling, or discharge at the surgical site, or if the pain persists.\n\nFOLLOW-UP:\nThe patient will have a follow-up appointment with the surgeon in approximately one week to assess postoperative recovery and discuss any further management or treatment options.\n\nDISCHARGE CONDITION:\nThe patient was discharged in stable condition with the appropriate medical care and follow-up plan in place.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "CODE: K80\n\nThe principal diagnosis is calculus of gallbladder with acute cholecystitis (K80.0), which falls under category K80. Ultrasound showed a gallbladder stone, and the patient underwent cholecystectomy for cholecystitis after returning the next day with persistent pain. The combination code K80.0 captures both conditions, so K80 is the category.\n\nNote that the discharge diagnosis section is withheld. This code relies on the hospital course narrative, so the coder should confirm that the surgical or pathology findings document acute cholecystitis before finalising.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 902,
+    "output_tokens": 568
+  },
+  "seconds": 3.0612825409916695
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "e978f0ec2dd7",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: ____\nDate of Admission: ____\nDate of Discharge: ____\nPrimary Diagnosis: [diagnosis section withheld]\nSecondary Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to our facility on ____, exhibiting symptoms of tachycardia and acute kidney injury. It was later determined that the patient had ingested multiple foreign bodies. Treatment interventions included intravenous lorazepam and emergency laparotomy to remove all the packets. Postoperatively, the patient was transferred to the ICU where he remained for a total of one night before being transferred to ward level care. Pain management was achieved with a patient controlled analgesia (PCA) infusion pump, and the patient was extubated on day 1 postoperatively. The patient had a slow postoperative recovery mainly due to pain and limited oral fluid intake. He was discharged on day 10 back to police custody and returned once a week later for a dressing change.\n\nCourse of Treatment:\nThe course of treatment for this patient focused on the removal of the ingested foreign bodies through an emergency laparotomy. The patient was transferred to the ICU postoperatively and was managed with a patient controlled analgesia (PCA) infusion pump to manage pain.\n\nMedications:\nA detailed list of medications administered during the patient's hospitalization is not included in this summary.\n\nFollow-up:\nThe patient was discharged on day 10 back to police custody and returned once a week later for a dressing change. No further follow-up was scheduled upon the patient's discharge."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis is **T18.8 Foreign body in other parts of alimentary tract**. This is my best inference, because the summary withholds the diagnosis and gives no detail on what was ingested or where the packets sat.\n\n**Reasoning**\n- The patient ingested multiple foreign bodies, most likely drug packets (body packing) given the police custody, and had an emergency laparotomy to remove all the packets.\n- In ICD-10-AM, a foreign body entering through a natural orifice is classified to T15\u2013T19. The site determines the code:\n  - T18.0 Foreign body in mouth\n  - T18.1 Foreign body in oesophagus\n  - T18.2 Foreign body in stomach\n  - T18.3 Foreign body in small intestine\n  - T18.4 Foreign body in colon\n  - T18.5 Foreign body in anus and rectum\n  - T18.8 Foreign body in other parts of alimentary tract\n  - T18.9 Foreign body in alimentary tract, part unspecified\n- If the packets were in the stomach or small bowel, use T18.2 or T18.3 instead. If the site is not documented and the packets were removed from multiple sites, T18.8 or T18.9 is appropriate.\n\n**Alternatives**\n- Tachycardia (R00.0) and acute kidney injury (N17.9) are symptoms or complications. They would be secondary diagnoses, not principal, because the foreign body was the reason for the laparotomy and the condition chiefly responsible for the admission.\n- If the documentation described drug toxicity from leaking packets, the poisoning code (for example T40.- by substance) could be sequenced as principal. Nothing in this summary states that, so I would not assign it.\n\n**Additional codes**\n- Y-codes or external cause codes for the ingestion, such as intent and place.\n- N17.9 Acute kidney failure, unspecified.\n- R00.0 Tachycardia, unspecified.\n- Procedure: laparotomy with removal of foreign body (ACHI block 0987 or the relevant enterotomy or gastrotomy code, depending on the site).\n\nIf the full record specifies the site, I'd refine the code to T18.2, T18.3 or T18.4.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 568,
+    "output_tokens": 738
+  },
+  "seconds": 0.0
+}

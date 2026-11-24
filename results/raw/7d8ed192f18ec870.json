@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "39c0d5885b21",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\n\nDOB: [REDACTED]     Age: 54     Sex: Male\n\nAdmission Date: [REDACTED]     Discharge Date: [REDACTED]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted post-SIRT after whole-body 18-fluorine-fluorodeoxyglucose positron-emission-tomography/computed tomography (18F-FDG PET/CT) revealed malignant lesions in the medial segment of the left hepatic lobe, following left lateral segmentectomy that had been performed. The patient was referred to our hospital as there were no local options of stereotactic ablative radiation therapy.\n\nDuring the course of follow-up, the patient developed progressive dyspnea and dry cough three weeks post-SIRT. Chest radiogram and computed tomography of the thorax were performed, and the patient put on intravenous prednisone at 1 mg/Kg/day with antibiotic therapy. Seven weeks post-SIRT, 18F-FDG PET/CT scan appeared to show multiple ground-glass opacities in both lungs compatible with radiation pneumonitis. The patient was rehospitalized and glucocorticoid treatment with modified antibiotherapy continued. Four weeks post-SIRT, DLCO reduction was more remarkable and the SpO2 level dropped to 97%.\n\nEleven weeks post-SIRT, a CT scan revealed bilateral diffuse, patchy ground-glass attenuation/consolidation areas seemed to have progressed, along with a significant decrease in SpO2 from 92 to 82%. The patient was transferred to the Intensive Care Unit (ICU), and one week later, the patient expired due to pulmonary complications.\n\nDischarge Medications:\n\nNone.\n\nFollow-up:\n\nThe patient expired during Hospitalization. \n\nDischarge Condition:\n\nDeceased."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is most likely **J70.0, Acute pulmonary manifestations due to radiation (radiation pneumonitis, acute)**.\n\nThe patient's respiratory decline, the PET/CT and CT findings of bilateral ground-glass opacities and consolidation, and the steroid treatment all point to radiation pneumonitis after SIRT. Radiation pneumonitis is indexed to J70.0 in ICD-10-AM. Because the condition developed within weeks of treatment, the acute code fits better than J70.1 (chronic).\n\nSuggested additional codes:\n- **C78.7**, Secondary malignant neoplasm of liver, for the hepatic metastases treated with SIRT.\n- **Y84.2**, Radiological procedure and radiotherapy as the cause of abnormal reaction or later complication, to identify the radiation as the cause.\n\nThe admitting diagnosis is withheld, so this assumes the admission was for the pneumonitis. If the record states another reason for admission, the principal diagnosis should follow the documented condition chiefly responsible for the episode. Coders should confirm against the full record and local ICD-10-AM/ACHI guidelines.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 698,
+    "output_tokens": 970
+  },
+  "seconds": 0.0
+}

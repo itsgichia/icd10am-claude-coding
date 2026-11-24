@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "f3bf6ac5d474",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course Summary:\n\nPatient Name: [Name]\n\nAdmission Date: 20 March 2020\n\nDischarge Date: [Date]\nAdmitting Diagnosis: [diagnosis section withheld]\nSignificant Past Medical History:\n- Ischaemic myocardiopathy with left ventricular assist device (LVAD) implantation in 2012\n- Chronic obstructive pulmonary disease (COPD)\n- Recurrent anaemia due to gastrointestinal bleeding\n- Arteriovenous malformations\n\nHospital Course:\nThe patient was admitted for blood transfusion due to ongoing gastrointestinal bleeding. The patient was diagnosed with COVID-19 during hospitalization. The patient\u2019s INR was found to be high on admission and was treated with parenteral heparin. Three units of red blood cells were transfused, which restored haemoglobin to normal levels. The melaena was controlled with precise control of anti-Xa under heparin infusion, and VKA was reintroduced after the resolution of melaena. The patient was managed for respiratory issues during hospitalization and was discharged with regular teleconsultations to monitor INR and respiratory parameters.\n\nHospital Course Details:\n- Admission date: 20 March 2020\n- Reason for admission: Gastrointestinal bleeding\n- COVID-19 status: Positive test, asymptomatic\n- Management:\n  - Parenteral heparin to treat high INR\n  - Blood transfusion to restore haemoglobin levels\n  - Monitoring respiratory parameters\n  - Regular teleconsultations for INR monitoring and management\n- Discharge date: [Date]\n\nSummary:\nThe patient with a history of ischaemic myocardiopathy and LVAD implantation was admitted for gastrointestinal bleeding and was diagnosed with COVID-19 during hospitalization. The patient\u2019s high INR was treated with parenteral heparin, and after a blood transfusion and resolution of melaena, VKA was reintroduced. The patient was managed for respiratory issues and was discharged with regular teleconsultations for continued monitoring of INR and respiratory parameters."
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis code: K31.82 Angiodysplasia of stomach and duodenum with haemorrhage**, or more likely **K55.22 Angiodysplasia of colon with haemorrhage**, depending on the bleeding site. The record does not state the site, so this needs clarification.\n\n**Reasoning**\n\n- The principal diagnosis is the condition established after study to be chiefly responsible for the admission. Here that is the gastrointestinal bleeding (melaena) from known arteriovenous malformations, with anaemia as a consequence. The patient was admitted for transfusion and anticoagulation management.\n- Angiodysplasia with haemorrhage is classified to K31.82 (stomach and duodenum) or K55.22 (colon). Small bowel angiodysplasia would be coded elsewhere (K55.20 without haemorrhage, with the bleeding specified). If the site is not documented, the coder should query the clinician before assigning a code.\n- If the clinician documents only \"GI bleeding (melaena)\" without linking it to the AVMs, the fallback is K92.1 Melaena. Because the AVMs are a documented history and the bleeding is recurrent, a query to confirm the link would be reasonable.\n\n**Likely secondary diagnoses**\n\n- D62 Acute posthaemorrhagic anaemia (or D50.0 if chronic blood loss anaemia is documented)\n- U07.1 COVID-19, virus identified. Under Australian coding guidance in 2020 this was coded as U07.1 when confirmed, even if asymptomatic.\n- R79.1 Abnormal coagulation profile, with the supratherapeutic INR. Add Y44.2 for the anticoagulant adverse effect, and T45.5 if the INR elevation is documented as a drug effect (e.g. D68.32 is the ICD-10-CM equivalent, but in AM use the T45.5 and Y44.2 approach).\n- Z95.811 is ICD-10-CM only. In AM, use Z95.8 Presence of other cardiac and vascular implants and grafts for the LVAD.\n- I25.5 Ischaemic cardiomyopathy\n- J44.9 COPD, unspecified\n- Z79.01 is ICD-10-CM only. In AM, use Z92.1 Personal history of long-term (current) use of anticoagulants.\n\n**Caveats**\n\n- Please check the codes above against your current ICD-10-AM edition (the 11th edition was in use in 2020) and the Australian Coding Standards. I'm confident in the logic of the principal diagnosis, but not in every fifth-character detail.\n- The key query for the clinician is the bleeding site and whether it was attributed to the AVMs.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 753,
+    "output_tokens": 907
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "de62e271a8a2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course: \n\nThe patient, a 55-year-old female with a history of gastroesophageal reflux disease, high cholesterol, acne, depression, and history of cholecystectomy, was admitted to the hospital after presenting to the emergency room with abdominal pain and low-grade fever. The patient denied alcoholism and reported no recent history of insect bite. The patient stated that she started taking isotretinoin a month ago, which was prescribed by a dermatologist for severe acne. The patient was found to have mild acute pancreatitis. The patient was treated with bowel rest, intravenous fluid, and prescribed intravenous narcotic pain medications for pain control. Isotretinoin was discontinued, and the patient was advised not to retake it. The patient improved over the next few days and was discharged home in stable condition. \nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course: \n\nThe patient was admitted to the hospital with a diagnosis of acute pancreatitis, secondary to hypertriglyceridemia, and was treated with supportive measures, including bowel rest and intravenous hydration. The patient's acute pancreatitis improved over the course of the hospitalization, and she was subsequently discharged home in stable condition. \n\nTreatment: \n\nThe patient was treated with bowel rest, intravenous hydration, and intravenous narcotic pain medications for pain control. Isotretinoin was discontinued. \n\nFollow-Up: \n\nThe patient was advised to follow-up with her primary care physician for ongoing management of her hypertriglyceridemia."
+      }
+    ]
+  },
+  "text": "The documentation is somewhat inconsistent. The first course attributes the pancreatitis to isotretinoin (a drug-induced cause). The second says it was secondary to hypertriglyceridemia. The coding depends on which cause the clinician documented as the final diagnosis, so this should ideally be clarified with the treating doctor.\n\n**Most likely principal diagnosis: K85.9 (Acute pancreatitis, unspecified)**, or more specifically **K85.3 (Drug-induced acute pancreatitis)** if the clinician confirms isotretinoin as the cause.\n\n**Option 1: Drug-induced (isotretinoin)**\n- Principal diagnosis: K85.3 Drug-induced acute pancreatitis\n- Additional codes: Y57.8 (other specified drugs and medicaments) as the external cause, plus E78.x if hypertriglyceridemia is documented as a separate condition\n- Support for this option: the pancreatitis began a month after starting isotretinoin, other causes were excluded (no alcohol use, prior cholecystectomy), and the drug was stopped with advice not to restart it.\n\n**Option 2: Hypertriglyceridemia-induced**\n- Principal diagnosis: K85.8 (Other acute pancreatitis), with E78.1 (Pure hypertriglyceridemia) as an additional diagnosis\n- Support for this option: the second hospital course explicitly states \"acute pancreatitis, secondary to hypertriglyceridemia,\" and the follow-up plan addresses the hypertriglyceridemia.\n\n**Which to choose:**\nThe withheld discharge diagnosis section probably states the final answer. The most explicit etiologic statement in the record is \"secondary to hypertriglyceridemia,\" so a coder would likely assign **K85.8** with E78.1. Isotretinoin is a well-known cause of hypertriglyceridemia, so the underlying chain may be drug \u2192 hypertriglyceridemia \u2192 pancreatitis. In that case, an adverse-effect code (Y57.8 for the isotretinoin) could be added, and a query to the clinician is advisable.\n\n**Answer: K85.8 (Other acute pancreatitis, here biliary and alcohol causes excluded), with E78.1 as an additional code.** If the clinician documents the drug as the direct cause, use K85.3 instead.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 563,
+    "output_tokens": 782
+  },
+  "seconds": 0.0
+}

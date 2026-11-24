@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "fb371c880fcd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient: [Name]\nDOB: [Date of birth]\nGender: Male\nAdmission Date: [Date]\nDischarge Date: [Date]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n[Name] was admitted to the clinic with ongoing RLQ abdominal pain of one-month duration, associated with mild fever. It was noted from histopathology reports that there was chronic lymphoplasmacytic inflammation with associated histiocytes and granulation tissue, further supporting the diagnosis of chronic appendicitis. \n\nTreatment:\nLaparoscopic appendectomy was performed on [Name]. The appendix was identified and found to be chronically scarred and chronically inflamed in appearance. The mesoappendix was taken down with Sonicision, the base transected with Endo-GIA, and delivered from the peritoneal cavity in an Endobag and sent to pathology.\n\nDischarge Condition:\n[Name] was discharged home on the same day as his procedure with no complaints.\n\nInstructions:\nPlease follow up with your primary care physician (PCP) in the coming days to ensure that there has been complete resolution of symptoms.\n\nSigned,\n[Doctor's name]\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"K36\", \"condition\": \"Other appendicitis (chronic appendicitis)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 546,
+    "output_tokens": 34
+  },
+  "seconds": 0.0
+}

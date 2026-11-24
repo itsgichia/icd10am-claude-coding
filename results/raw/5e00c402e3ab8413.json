@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "9f03e2c80891",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nMedical History:\nThe patient is a 20-year-old previously healthy male who presented to the emergency department with fever and rash six days after being diagnosed with a viral upper respiratory infection at an urgent care center.\n\nHospital Course:\nThe patient was diagnosed with severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) and admitted to the intensive care unit (ICU) for supportive care. He required escalating amounts of supplemental oxygen during his ED course and remained hospitalized for 6 days.\n\nClinical Findings:\nThe patient presented with a diffuse, morbilliform rash across the trunk and extremities, sparing the face. A chest radiograph showed bilateral infiltrates consistent with multifocal pneumonia. Labs revealed a normal leukocyte count with an elevated C-reactive protein.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient received supportive care in the ICU, including supplemental oxygen and monitoring of vital signs.\n\nFollow-up:\nThe patient is stable on hospital day 6 and will require additional monitoring and follow-up to determine the appropriate plan for discharge from the hospital.\n\nRecommendations:\nThe patient should continue to follow up with his healthcare provider and monitor his symptoms closely to determine when he can safely return to his daily activities. Additionally, he should follow all recommendations and guidelines from public health officials regarding social distancing and hand hygiene to slow the spread of the virus.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The record documents SARS-CoV-2 infection with multifocal pneumonia and a rash, and the patient needed escalating oxygen in ICU.\n\nIn ICD-10-AM, COVID-19 is coded to U07.1 (COVID-19, virus identified) in Chapter 22. The Australian Coding Standard (ACS 1202 / the COVID-19 standard) sets out the sequencing. When pneumonia is due to confirmed COVID-19, U07.1 is the principal diagnosis, and J12.82 (pneumonia due to coronavirus disease 2019) is added as an additional diagnosis. In ICD-10-AM 11th edition, J12.82 is a valid code. U07.1 is sequenced first, with the manifestation coded additionally.\n\nThe three-character category for the principal diagnosis is therefore U07.\n\nCODE: U07",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 720,
+    "output_tokens": 285
+  },
+  "seconds": 0.0
+}

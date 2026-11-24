@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "f7b64cd0b324",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\nPatient Name: [REDACTED]\nDOB: [REDACTED]\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nAdmitting Diagnosis: [diagnosis section withheld]\nFinal Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted with a moderate traumatic brain injury, stigmas of trauma in the anterior chest wall, and signs of respiratory distress after falling off a cliff while riding his bicycle. Upon admission, a thoracoabdominal computed tomography angiography reported pneumomediastinum, a small right pneumothorax, and an image of loss of continuity in the anterior superior wall of the right main bronchus highly suggestive of bronchial rupture. The bronchial lesion was confirmed by fiberoptic bronchoscopy, showing a linear 1-cm rupture at the level of the root of the right main bronchus, in its lateral aspect, with fracture of the entire bronchial wall. Conservative management was chosen, and the patient was transferred to the intensive care unit (ICU) with protective tracheal intubation. The patient\u2019s ICU stay included a respiratory rate of 12 breaths per minute, tidal volume of 6\u20138 ml/kg, I/E 1:3, PEEP 5 cm H2O, and plateau pressure of < 30 mmHg. After 48 hours, the pneumothorax and pneumomediastinum resolved spontaneously, with limited subcutaneous emphysema, and the patient was successfully extubated on day 4. Strict follow-up was performed without evidence of swallowing or respiratory disorders, which allowed for the patient\u2019s discharge 1 week later.\n\nCondition at Discharge:\nThe patient is considered stable with no evidence of respiratory or swallowing disorders.\n\nFollow-Up Plans:\nPatient will follow-up in 4-6 weeks for scheduled evaluation."
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **S27.4 \u2013 Injury of bronchus**\n\n## Rationale\n\nThe principal diagnosis is the condition chiefly responsible for the admission. Here that is the **traumatic rupture of the right main bronchus**:\n\n- It was suspected on CT angiography and confirmed by fibreoptic bronchoscopy as a 1-cm full-thickness rupture at the root of the right main bronchus.\n- It drove the main management: ICU admission, protective intubation, and lung-protective ventilation.\n- The pneumothorax and pneumomediastinum were consequences of the bronchial rupture.\n\nThere is no documented open wound into the thoracic cavity, so this is coded as a closed internal injury.\n\n**Note:** The moderate traumatic brain injury could compete for principal diagnosis. However, the documented workup, ICU care and follow-up all centre on the bronchial injury. If the clinician indicated the TBI was the main reason for admission, sequencing would change, so a query would be appropriate if this is unclear.\n\n## Suggested Additional Codes\n\n| Code | Description |\n|---|---|\n| **S27.0** | Traumatic pneumothorax |\n| **T79.7** | Traumatic subcutaneous emphysema (if coding the residual emphysema) |\n| **S06.x** | Intracranial injury, with the specific code depending on documentation (e.g., concussion, diffuse or focal injury, and loss-of-consciousness duration) |\n| **S20.x** | Superficial injury of the anterior chest wall (\"stigmas of trauma\"), if documented specifically |\n| **V18.x** | Pedal cyclist injured in noncollision transport accident (fall off cliff while riding) |\n| **Y92.x / U73.x** | Place of occurrence and activity codes, as per ACS |\n\n## Procedure Codes\n\nThese would also apply, per ACHI:\n- Fibreoptic bronchoscopy\n- Endotracheal intubation\n- Mechanical ventilation, with hours calculated for the ventilation duration (about 4 days)\n\n**Caveat:** Check the exact character requirements against your current ICD-10-AM edition. Some editions extend certain S27 subcategories, and your edition's tabular list should be verified.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 700,
+    "output_tokens": 1232
+  },
+  "seconds": 0.0
+}

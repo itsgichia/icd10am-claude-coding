@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "ae67d374024a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Identification:\nThe patient is a 67-year-old male who underwent video-assisted right lung upper lobectomy and lymph node dissection for primary lung adenocarcinoma.\n\nHospital Course:\nThe patient was admitted to the hospital in March 2012 for surgical treatment of the lung cancer. He had a history of hypertension and had been a three-packs-a-day smoker for 40 years. Blood examination on admission suggested polycythemia, which was diagnosed as smokers' polycythemia after consulting with hematologists. The appropriate phlebotomy and infusion volumes were calculated, and the patient was discharged uneventfully on postoperative day 7. The pathological diagnosis of the lung adenocarcinoma was made after the surgery.\n\nPatient Status at Discharge:\nAt the time of discharge, the patient's respiratory function examination showed obstructive impairment. The serum erythropoietin level was normal, but the Hb and HCT were high. The patient was advised to continue with prescribed blood pressure medication, adhere to a healthy lifestyle, and was advised to attend regular check-ups by their physician.\n\nFollow-up:\nThe patient was advised to follow up with their physician to monitor their polycythemia and lung cancer.\nPrimary Diagnosis: [diagnosis section withheld]Secondary Diagnosis: [diagnosis section withheld]\nProcedures:\nVideo-assisted right lung upper lobectomy and lymph node dissection.\n\nAllergies:\nNot Applicable.\n\nMedications:\nNot Applicable.\n\nCondition at Discharge:\nStable.\n\nRecommendations:\nThe patient was advised to adhere to a healthy lifestyle and attend regular check-ups with their physician to monitor their polycythemia and lung cancer.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C34",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 721,
+    "output_tokens": 100
+  },
+  "seconds": 0.0
+}

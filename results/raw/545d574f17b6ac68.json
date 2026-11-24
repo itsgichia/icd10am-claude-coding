@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "c21280ae53ae",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Name]\nMedical Record Number: [Number]\nDate of Admission: [Date]\nDate of Discharge: [Date]\n\nHospital Course:\n\nThe patient, a 46-year-old Caucasian male, was admitted to the hospital due to a new onset headache, nausea, and vomiting. The patient had a history of pancreatic cancer with metastases to the liver and omentum, and had undergone treatment with chemotherapy. The patient was also previously hospitalized for a pulmonary embolism and small bowel obstruction.\n\nUpon admission, the patient presented with dull, intractable headache, icteric eyes, decreased air entry, and decreased muscle strength. The patient reported hitting his head in the bathroom one week prior to admission and had a family history of colon cancer.\n\nDuring hospitalization, the patient developed syncope and a generalized tonic-clonic seizure. Imaging studies revealed bihemispheric subdural hematomas and left hemispheric extra-axial metastatic lesions. The patient was started on levetiracetam and received cranial irradiation with right and lateral fields. The treatment significantly improved the patient's headache and nausea, and he did not experience any new seizures.\n\nThe patient tolerated radiotherapy well and did not require a treatment break. However, he died 2.5 months later at home. No autopsy was performed as per family request.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nOndansetron, metoclopramide, and dexamethasone\nLevetiracetam\nCranial irradiation with right and lateral fields\n\nFollow-up:\n\nThe patient passed away and there is no follow-up needed.\n\nDischarge Medications:\n\nNone.\n\nAllergies:\n\nNot reported.\n\nCondition at Discharge:\n\nThe patient passed away.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The patient was admitted with headache, nausea and vomiting. Imaging showed bihemispheric subdural hematomas and left extra-axial metastatic lesions. The treatment was cranial irradiation, which was directed at the brain metastases, along with levetiracetam for seizures and antiemetics and dexamethasone.\n\nThe candidate principal diagnoses are:\n\n- **Subdural hematoma (traumatic, S06.5):** the patient hit his head one week before admission, so this is possible. The hematomas could also be related to the metastatic lesions, and the documentation does not clearly attribute them to trauma.\n- **Secondary malignant neoplasm of the brain and cerebral meninges (C79.3):** the extra-axial metastatic lesions were the condition treated with radiotherapy. The headache, nausea, vomiting and seizure are all explained by it. This fits the definition of the condition chiefly responsible for the episode of care.\n\nRadiotherapy was the main treatment and it targeted the metastases. Under ICD-10-AM, when a secondary site is the focus of treatment, the secondary neoplasm is coded as the principal diagnosis, and the primary pancreatic cancer (C25) is coded as an additional diagnosis.\n\nCODE: C79",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 817,
+    "output_tokens": 417
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "e525412d8764",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient: Caucasian woman with insulin-dependent diabetes and hypertension\nAge: 51 years\n\nHISTORY OF PRESENT ILLNESS:\nThe patient was admitted with a perimesencephalic subarachnoid hemorrhage (SAH) in the prepontine, interpeduncular, ambient, and crural cisterns. She had a previous SAH due to a 6mm aneurysm in the anterior communicating artery (Acomm), which was treated with endovascular coiling.\n\nHOSPITAL COURSE:\nThe patient's hospital course was complicated by vasospasm and cerebral salt wasting. She was treated with hypervolemia, hypertension, intra-arterial nicardipine, and sodium and volume supplementation. After discharge, she returned to work with no residual neurologic deficits.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE MEDICATIONS:\nN/A\n\nFOLLOW-UP:\nThe patient had a follow-up magnetic resonance imaging and angiography performed six months later, which demonstrated no vascular abnormalities.\n\nCONDITION AT DISCHARGE:\nThe patient was discharged home in good condition on post-bleed day 10.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "I60",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 550,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

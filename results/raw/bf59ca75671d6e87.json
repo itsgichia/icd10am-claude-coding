@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "a03e0422f170",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\n[Medical Center Name]\n[Patient Name], Discharge Summary\n\nAdmission Date: [Date]\nDischarge Date: [Date]\n\nHospital Course:\nThe patient was admitted to the Department of Urology with complaints of repeated dizziness. Preoperative echocardiography revealed a variation in the arteries, including an ARSA derived from the initial descending aorta right rear to the LSA, an aberrant left vertebral artery that directly originated from the AA instead of the LSA, and an aberrant right vertebral artery that originated from the RCCA rather than the RSA. Computed tomography angiography confirmed these variances. The patient had no other cardiac or vascular anomalies. Mild stenosis was found in the proximal portion of the left common carotid artery (LCCA), adjacent to its aortic origin. The patient underwent treatment for urolithiasis and was administered aspirin and atorvastatin to prevent potential vascular stenosis. The patient was followed up continuously.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient underwent treatment for urolithiasis and was administered aspirin and atorvastatin to prevent potential vascular stenosis.\n\nFollow-up:\nThe patient will continue to be monitored for any potential vascular stenosis.\n\nDischarge Condition:\nThe patient was discharged in a stable condition.\n\nDischarge medications:\nNone specified.\n\nInstructions:\nNone specified.\n\nFollow-up appointments:\nNone specified.\n\nInstructions Given:\nNone specified.\n\nPrimary Care Physician:\nNone specified.\n\nAttending Physician:\nNone specified."
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **N20.9 Urinary calculus, unspecified**\n\n## Rationale\n\nUnder **ACS 0001 Principal Diagnosis**, the principal diagnosis is the condition established after study to be chiefly responsible for the admission.\n\n- The patient was admitted to the **Department of Urology**, and the only definitive treatment during the episode was for **urolithiasis**.\n- The vascular findings were **incidental, found on preoperative workup** (echocardiography, then CTA). They were not the reason for admission.\n- The summary does not give the site of the calculus (kidney, ureter, or both). The unspecified code **N20.9** is therefore assigned.\n\n### If documentation specified the site\n| Site | Code |\n|---|---|\n| Kidney | N20.0 |\n| Ureter | N20.1 |\n| Kidney with ureter | N20.2 |\n| Bladder | N21.0 |\n\nA clinician query would be appropriate to confirm the site.\n\n## Possible additional diagnoses (per ACS 0002)\nThese meet additional diagnosis criteria because they led to further investigation (CTA) and treatment (aspirin and atorvastatin):\n- **Q25.4** Other congenital malformations of aorta (aberrant right subclavian artery arising from the descending aorta)\n- **Q28.8** Other specified congenital malformations of circulatory system, or the closest specific Q2x code per index lookup (aberrant vertebral artery origins)\n- **I65.2** Occlusion and stenosis of carotid artery (mild proximal LCCA stenosis)\n- **R42** Dizziness and giddiness, which may be coded if it is not attributed to a definitive diagnosis and it meets ACS 0002.\n\nThe exact codes for the congenital anomalies should be verified against the current ICD-10-AM edition's Alphabetic Index.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 572,
+    "output_tokens": 835
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "0e5540fd316d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nHospital Course:\n\nThe patient, a 15-year-old male, was evaluated in the Pediatric Pulmonology Clinic for excessive daytime sleepiness and snoring. The in-lab sleep study showed an overall Apnea-Hypopnea index (AHI) of 2.4, ruling out obstructive sleep apnea (OSA) and central sleep apnea. Further, on multiple sleep latency test (MSLT), the patient displayed pathological daytime sleepiness with a sleep latency < 8 mins on more than two occasions, along with four sleep-onset rapid eye movement (REM) periods, suggestive of the diagnosis of narcolepsy. The patient was then started on modafinil for the treatment of narcolepsy; however, his symptoms persisted.\n\nOn further evaluation, thyroid function tests (TFTs) were performed and revealed a mildly low free T4 with a TSH level inappropriately normal, indicating central hypothyroidism. Magnetic resonance imaging (MRI) of the brain revealed no significant abnormality. Other pituitary hormones were normal, except for a baseline cortisol level that was mildy low. A low-dose adrenocorticotropic hormone (ACTH) stimulation test (1 mcg IV) was done with cortisol levels checked at 30 and 60-minute intervals, which improved. A high-dose ACTH stimulation test (250 mcg IV) was also done with cortisol levels checked at 30 and 60-minute intervals, and the results were normal.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nThe patient was started on thyroid replacement therapy with an improvement in weight and sleep symptoms. The patient continued with the modafinil therapy, and no other treatment was planned.\n\nFollow-up:\n\nThe patient was advised to follow up with the referring physician to monitor the response to therapy.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"G47\", \"condition\": \"Narcolepsy (sleep disorder)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 757,
+    "output_tokens": 32
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "349fe6e9c4f9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nHospital Course: \nThe patient, a 28-year-old male with moderate intellectual disability, presented with a history of comorbid diagnoses including autism spectrum disorder, hypertension, hypothyroidism, and GERD. The patient had a history of excoriation disorder, schizoaffective disorder bipolar type, and displayed symptoms of anxiety, irritability, and physical aggression. The patient was initially treated with quetiapine but was later transitioned to valbenazine due to intermittent abnormal movements. The patient's treatment was further adjusted, and clozapine was prescribed due to continued psychosis.\n\nHospital Stay: \nFour days after starting valbenazine treatment, improvement in abnormal movements was noted. Over two months, the patient no longer displayed any abnormal jaw movements, minimal to no arm/hand/finger movements or foot tapping, and no truncal movements. Caregivers reported that these improvements resulted in less isolating, aggressive, and confrontational behavior. The patient also became more cooperative, increasing participation in activities and displaying less resistance to caregiver assistance with activities of daily living. The patient currently remains stable on valbenazine (80 mg QHS).\nDiagnosis: [diagnosis section withheld]\nTreatment: \nThe patient was initially treated with quetiapine for symptoms of intermittent abnormal movements, which was later adjusted following persistent psychosis. Valbenazine was prescribed and later escalated to 80 mg QHS. Due to continued psychosis, clozapine was also introduced and titrated over 2 weeks to 300 mg daily.\n\nFollow-up Plan: \nThe patient is currently stable on valbenazine (80 mg QHS) with no reported adverse events. No further medication changes are planned at this time, and follow-up with the patient will continue to monitor for any changes in behavior or physical movements.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "G24",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 760,
+    "output_tokens": 112
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "d7034671e367",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Unknown\nMedical Record Number: Unknown\nDate of admission: Unknown\nDate of discharge: Unknown\n\nHospital Course:\nThe 76-year-old woman with a medical history of cerebral infarction, endometrial cancer, and lumbar spine tumor was admitted to the Emergency Room with complaints of swelling, redness, and warmth on the left anterior chest wall. Physical examination and various medical tests revealed infectious arthritis in the left SCJ with multiple abscess pockets, small abscesses posterior to the left SCJ and sternum, and posterior to the clavicle. Treatment with the antibiotic cefazolin was started, but after two weeks, the antibiotic was switched to penicillin G due to the presence of Penicillin-sensitive Streptococcus agalactiae. However, the patient developed leukopenia and thrombocytopenia, which were suspected to be the side effects of penicillin. Cefazolin was then replaced by vancomycin and the treatment continued for another 2 weeks. After a total treatment duration of 6 weeks, the CRP level of the patient decreased to the normal range, and follow-up computed tomography of the chest showed improved SCJ swelling and abscess. The patient was discharged, and no signs of recurrence were observed after 3 months.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient was started on cefazolin empirically, targeting methicillin-susceptible S aureus (MSSA), which is the most common pathogen of SCJ septic arthritis. After identifying Penicillin-sensitive Streptococcus agalactiae, the treatment was switched to penicillin G for two weeks. Due to the side effects of penicillin, cefazolin was then restarted but later replaced by vancomycin.\n\nFollow-Up Care:\nThe patient was discharged and lost to follow-up after 3 months.\n\nRecommendations:\nNone\n\nSigned,\n[Physician\u2019s Signature]\n[Date of discharge]\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"M00\", \"condition\": \"Pyogenic arthritis (septic arthritis of the sternoclavicular joint due to Streptococcus agalactiae)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 807,
+    "output_tokens": 59
+  },
+  "seconds": 0.0
+}

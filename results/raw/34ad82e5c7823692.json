@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "269a414b9351",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\nAge: 59\nAdmission date: [Redacted]\nDischarge Date: [Redacted]\nFinal Diagnosis: [diagnosis section withheld]\nMedical History:\nThe patient had no significant medical history.\n\nHospital Course:\nThe patient was admitted with symptoms of cough with phlegm, runny nose, fever, and shortness of breath. A CXR was performed, and the results showed bilateral consolidation in the basal lung. The patient was diagnosed with COVID-19 and bronchial asthma and received intravenous ceftazidime 1 gr and intravenous levofloxacin 500 mg during treatment. Symptomatic treatment with medication for asthma was also administered.\n\nClinical Course:\nThe patient's symptoms significantly improved during hospitalization. The patient remained afebrile, and shortness of breath was significantly reduced. The patient's cough and runny nose also improved.\n\nFollow-up:\nThe patient was advised to self-isolate at home and to continue monitoring her symptoms. Follow-up care was coordinated with the patient's primary care physician for further management.\n\nSigned,\n[Redacted]\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "U07",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 515,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

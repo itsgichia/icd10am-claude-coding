@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "2445738deb97",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\n\nAge: 70 years\n\nSex: Male\n\nMedical History:\n\nThe patient was diagnosed with advanced renal cell carcinoma and was receiving Ipilimumab/Nivolumab therapy. He presented with new-onset fatigue and dizziness after two cycles of therapy.\n\nHospital Course:\n\nDuring the hospital course, the patient underwent a physical examination, which revealed normal visual fields. Laboratory assessment showed mild hyponatremia, with low TSH and free T4. Morning ACTH and cortisol were also low. MRI brain showed pituitary enhancement.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nIpilimumab/Nivolumab therapy was temporarily stopped, and the patient was started on hydrocortisone 10mg/5mg in the morning and afternoon, respectively, as well as a weight-based dose of levothyroxine. The patient demonstrated clinical improvement and was restarted on PD-1 monotherapy.\n\nFollow-up:\n\nThe patient was given \"sick day\" instructions for stress dosing of hydrocortisone and a medical alert bracelet. Key concepts of management involve high index of clinical suspicion, appropriate localization of endocrine dysfunction, hormone replacement, and close monitoring. Immune-related endocrine events are unique as the manifestations are often irreversible, and patients often require lifelong hormone replacement.\n\nHospital Disposition:\n\nThe patient was discharged from the hospital after clinical improvement. It is recommended that ICI is held for any-grade hypophysitis. Once patients demonstrate stability on hormonal replacement, ICI can be restarted. Higher-grade hypophysitis can be managed with an initial pulsed dose of corticosteroids. The patient was instructed to continue receiving follow-up medical care.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "E23",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 754,
+    "output_tokens": 362
+  },
+  "seconds": 0.0
+}

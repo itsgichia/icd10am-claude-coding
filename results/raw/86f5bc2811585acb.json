@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "7579af382c24",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary\n\nPatient: 66-year-old male with a past medical history of well-controlled diabetes and high cholesterol\nDiagnosis: [diagnosis section withheld]\nHospital course:\n\nThe patient presented with progressive shortness of breath, dry cough, weight loss and night sweats. Initial treatment for severe community-acquired pneumonia was unsuccessful and he rapidly progressed to respiratory failure requiring mechanical ventilation. Diagnostic tests were performed, ruling out possible infections and connective tissue diseases. A CT-guided lung biopsy and VATs were done, ultimately leading to a diagnosis of organizing pneumonia. The patient was started on a systemic steroid course which resulted in remarkable improvement in his breathing and oxygen requirement. He was finally liberated from the ventilator and switched to oral prednisone. His condition continued to improve steadily over the hospitalization and was later discharged with a decreased dose of oral prednisone.\n\nFollow-up:\n\nHis follow-up CT showed resolution of the micronodular infiltration. He is currently doing well clinically at 2 years post-hospitalization. \n\nDischarge medications:\n\nThe patient was discharged with oral prednisone. \n\nRecommendations:\n\nFollow up with primary care physician.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "J84",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 552,
+    "output_tokens": 145
+  },
+  "seconds": 0.0
+}

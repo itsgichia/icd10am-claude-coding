@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "7d68c729f7dd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient: 65-year-old male with multiple comorbidities including hypertension, heart failure, end-stage renal disease, and Parkinson's disease.\n\nHospital Course:\n\nThe patient was admitted with fever, altered mental status, and syncope while undergoing dialysis. On admission, he was tachycardic and hypotensive. The patient was empirically started on antibiotics for possible sepsis with unknown sources and was admitted to the ICU. During his stay, the patient was found to have elevated levels of troponin and was diagnosed with aortic valve vegetation with moderately severe aortic regurgitation, severe pulmonary hypertension, and endocarditis. Blood cultures grew methicillin-resistant Staphylococcus aureus. The patient subsequently underwent aortic valve replacement and was stabilized with long-term antibiotics treatment.\n\nHospital course summary:\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course: Patient was diagnosed with aortic valve vegetation with moderately severe aortic regurgitation, severe pulmonary hypertension, and endocarditis. Blood cultures grew methicillin-resistant Staphylococcus aureus.\nDischarge Diagnosis: [diagnosis section withheld]\nProblems:\n\n1. Aortic valve vegetation with moderately severe aortic regurgitation, severe pulmonary hypertension, and endocarditis\n2. Methicillin-resistant Staphylococcus aureus bacteremia\n3. Right bundle branch block and left anterior fascicular block with atrial flutter\n4. Small vessel disease with multiple infarctions in multiple vascular territories including an old right frontal infarct\n\nProcedures:\n\n1. Aortic valve replacement\n\nDischarge medications:\n\nThe patient was prescribed medications to be managed by his primary care provider. \n\nFollow-up:\n\nThe patient was instructed to follow up with his primary care provider and obtain an echocardiogram 4-6 weeks post-discharge.\n\nCondition on discharge:\n\nStable condition.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"I33\", \"condition\": \"Acute and subacute endocarditis\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 825,
+    "output_tokens": 29
+  },
+  "seconds": 0.8287533329857979
+}

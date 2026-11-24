@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "cot_then_extract",
+  "record_id": "7484ebf71696",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient: [Name]\n\nSex: Male\n\nAge: 76 years\n\nMedical Record No.: [Number]\n\nHospital Admission Date: [Date]\n\nDischarge Date: [Date]\n\nHospital Course:\n\nA 76-year-old male patient was admitted to the hospital with an incidental 4 cm left renal mass, which was treated with a left partial nephrectomy. Upon pathological examination, it was discovered that the patient was suffering from WHO/ISUP grade 1, TNM stage pT1 clear cell RCC, with the resection margin positive for the tumor.\n\nThe patient underwent a right radical orchiectomy when he was found to have a metastatic tumor in the right testis. The metastatic tumor was two centimeters in size, and it was confined to the testicular parenchyma.\n\nFourteen months after the orchiectomy, he underwent a completion left radical nephrectomy due to the recurrence of the tumor.\n\nOngoing imaging surveillance discovered several soft tissue masses in the left posterior chest wall, as well as masses in the pancreas. A two-centimeter enhancing mass was found in the upper pole of the right kidney 87 months following the orchiectomy.\n\nThe patient has been offered systemic therapy of VEGF inhibitor and discharged with continued medical supervision. He is alive with disease, 93 months post-orchiectomy.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Status:\n\nThe patient is discharged with continued medical supervision.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible for the admission is clear cell renal cell carcinoma of the kidney. The admission was for a 4 cm left renal mass treated with partial nephrectomy, and pathology showed clear cell RCC. It is a malignant neoplasm of the kidney, chapter C, category C64 (malignant neoplasm of kidney, except renal pelvis). The testicular, chest wall and pancreatic deposits are later metastases from the same primary and do not change the principal diagnosis.\n\nCODE: C64",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1099,
+    "output_tokens": 174
+  },
+  "seconds": 0.0
+}

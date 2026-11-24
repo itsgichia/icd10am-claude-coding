@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "json_output",
+  "record_id": "17b682c3c741",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\nLength of Stay: [REDACTED]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted for chest pain and dyspnea on exertion of one-day duration. Initial evaluation with electrocardiogram and left heart catheterization revealed a diagnosis of anterior wall ST segment elevation MI, with 50% stenosis of the proximal LAD, 100% occluded mid LAD with thrombus in place, and 30% in-stent restenosis in the distal LAD. The patient underwent successful drug-eluting stent placement in the mid LAD.\n\nThe patient's hospital course was complicated by cardiogenic shock approximately 48 hours following the procedure, requiring intravenous diuresis and inotrope support. The patient was evaluated for advanced heart failure therapies, underwent a thorough evaluation, and planning for LVAD placement with periprocedural anticoagulation using bivalirudin was initiated. The patient was eventually discharged to a cardiac rehabilitation center.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Condition: The patient was discharged to a cardiac rehabilitation center with stable vital signs, improved hemodynamics, and without any significant complications.\n\nDischarge Medications: [REDACTED]\n\nDischarge Instructions: The patient was advised to closely follow up with the advanced heart failure clinic at our hospital and adhere to the prescribed medication regimen. The patient was also instructed to maintain a heart-healthy diet, avoid smoking and excessive alcohol intake, and engage in regular exercise as tolerated.\n\nFollow-up: The patient will follow up periodically in the advanced heart failure clinic at our hospital.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"I21\", \"condition\": \"Acute anterior wall ST elevation myocardial infarction\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 793,
+    "output_tokens": 37
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7741ab2e4606",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Not provided\nAge: 40 years\nGender: Female\n\nHospital Course:\n\nThe patient was admitted to TCVGH due to severe acute respiratory distress syndrome (ARDS) caused by wasp stings. Upon arrival, the patient had respiratory distress and was noted to have nearly 100 painful, reddish, and itchy papules. The initial laboratory examinations showed abnormal liver function tests, high LDH, CK, and increased creatinine level. Additionally, the patient had 3+ dipstick proteinuria and 5 to 10 red blood cells per high power field in urinalysis.\n\nIntravenous corticosteroid and anti-histamine agents were administered, and the patient underwent intubation and protective ventilation with low tidal volume and high positive end-expiratory pressure. The patient also underwent sedation, neuromuscular blockade, hemodialysis, and plasmapheresis. Anuria was observed for nearly 10 days, and the patient received eight sessions of hemodialysis.\n\nThe respiratory condition improved gradually, and the patient was extubated on day 8. The levels of CK, AST, ALT, and LDH peaked on day 2 and recovered with the aforementioned management. The patient was discharged on day 24 with creatinine 7.12 mg/dl. During follow-up in the outpatient department, the creatinine returned to normal (Cr:1.16) on day 71.\nDiagnosis: [diagnosis section withheld]\nPlan:\n\nThe patient was discharged with recommendations for follow-up care and monitoring, including regular visits with a nephrologist and an annual physical exam. The patient should avoid future exposure to wasp stings to prevent recurrence of ARDS.\n\nThe patient was provided with educational information about wasp stings and the risks associated with this condition. They were advised to seek prompt medical attention in case of any adverse reactions in the future.\n\nDisposition:\n\nDischarged."
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **T63.46 \u2013 Toxic effect of contact with venomous animals: venom of wasp**\n\n**Why this is the principal diagnosis**\n\n- The condition that caused the admission was the **systemic toxic reaction to multiple wasp stings** (about 100 stings), which led to multi-organ involvement.\n- Under ICD-10-AM/ACS rules for poisoning and toxic effects, the **T code for the toxic agent is sequenced first**. The resulting conditions are then coded as additional diagnoses.\n- Allergy treatment was given (steroids and antihistamines), but the picture fits **direct venom toxicity**. It involved muscle breakdown, liver injury and kidney injury rather than simple anaphylaxis. So T78.x (anaphylaxis/allergic reaction) is not the best principal code.\n- I am recalling the 5th-character subdivisions of T63.4 from memory. The subcodes I recall for that range are T63.41 centipede, T63.42 ant, T63.43 caterpillar, T63.44 bee, T63.45 hornet and T63.46 wasp. Please check the exact code against your current edition. If your edition does not subdivide T63.4, use **T63.4**.\n\n**Likely additional diagnoses**\n\n- **J80** \u2013 Acute respiratory distress syndrome\n- **N17.x** \u2013 Acute kidney failure (anuria for about 10 days, needing dialysis)\n- **M62.82** \u2013 Rhabdomyolysis (raised CK)\n- **K72.0 or R74.0** \u2013 Acute liver injury or raised liver enzymes, depending on documentation\n- **External cause:** **X23** \u2013 Contact with hornets, wasps and bees, plus place-of-occurrence and activity codes\n- **Procedure codes** for:\n  - Ventilation hours\n  - Haemodialysis\n  - Plasmapheresis",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 689,
+    "output_tokens": 1100
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "e538e4d3e379",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient Name: [Name]\n\nMedical Record Number: [Number]\n\nDate of Admission: [Date]\n\nDate of Discharge: [Date]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted to the hospital with complaints of fatigue, malaise, spontaneous ecchymosis, bleeding gums, and subjective fevers. Initial laboratory tests revealed severe pancytopenia and circulating blasts suggestive of underlying leukemia. Subsequent bone marrow biopsy confirmed AML, with abnormal karyotype of 47,x,t(x:8)(q13:q24.1),+8(6)/46,XX[14], and positive for several molecular markers. The patient received induction chemotherapy with daunorubicin and cytarabine 7 + 3 regimen in two cycles. During the first cycle, the patient's PT increased to 18.7 with an INR of 1.61. The bone marrow aplasia was suspected secondary to chemotherapy. Factor VII level deficiency, related to trisomy chromosol abnormality involving chromosome 8, was considered as a differential diagnosis due to isolated and persistent PT prolongation. The factor VII activity level was later confirmed to be low at 49% (normal level 60% to 150%). The patient received multiple packed red blood cell transfusions and platelet transfusion due to intermittent mucocutaneous bleeding.\n\nFollow Up:#\n\nThe patient's second cycle of chemotherapy resulted in her complete remission, with no residual blasts and normalization of hematologic abnormalities, with normal white blood count, hemoglobin, platelet counts, and normal PT time. Flow cytometry confirmed no residual blasts, and repeat molecular and cytogenetic studies showed the resolution of previously detected abnormalities.\nFinal Diagnosis: [diagnosis section withheld]\nDischarge Medications:\n\nNot applicable. Patient is not yet discharged. \n\nDischarge Condition:\n\nPending Discharge."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: C92.00 \u2013 Acute myeloid leukaemia, without mention of remission**\n\n(In ICD-10-AM, the 4th character \"0\" is \"without mention of remission\" and the 5th character is the AM extension for this block.)\n\n**Rationale**\n- The patient was admitted with pancytopenia, bleeding and fevers. Work-up confirmed AML on bone marrow biopsy, and the induction chemotherapy was directed at it. AML is therefore the condition chiefly responsible for the admission.\n- The patient reached complete remission only during this episode, after the second induction cycle. The leukaemia was active at admission and during treatment, so the code for \"not having achieved remission\" is appropriate. Do not assign C92.01 (in remission) for the admission.\n- Coding note: in ICD-10-AM (current editions), the AML codes are C92.00 (not having achieved remission) and C92.01 (in remission). Check against your edition's Tabular List.\n\n**Suggested additional codes (secondary diagnoses)**\n- D61.81 \u2013 Pancytopenia (or D61.1 \u2013 Drug-induced aplastic anaemia, if the chemotherapy-related marrow aplasia is documented as such, with Y43.3 for the external cause)\n- D68.8 \u2013 Other specified coagulation defects, or D68.4 \u2013 Acquired coagulation factor deficiency, for the low factor VII. Query the clinician about the cause, since the documentation is only \"considered as a differential\".\n- Z51.1 \u2013 Encounter for antineoplastic chemotherapy, which is generally not assigned as principal when the malignancy itself is coded as principal in the same episode. Follow local coding standards.\n- ACHI procedure codes for the chemotherapy, the transfusions, and the bone marrow biopsy.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 737,
+    "output_tokens": 597
+  },
+  "seconds": 0.0
+}

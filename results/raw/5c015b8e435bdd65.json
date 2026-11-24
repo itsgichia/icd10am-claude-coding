@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "17b682c3c741",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\nLength of Stay: [REDACTED]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted for chest pain and dyspnea on exertion of one-day duration. Initial evaluation with electrocardiogram and left heart catheterization revealed a diagnosis of anterior wall ST segment elevation MI, with 50% stenosis of the proximal LAD, 100% occluded mid LAD with thrombus in place, and 30% in-stent restenosis in the distal LAD. The patient underwent successful drug-eluting stent placement in the mid LAD.\n\nThe patient's hospital course was complicated by cardiogenic shock approximately 48 hours following the procedure, requiring intravenous diuresis and inotrope support. The patient was evaluated for advanced heart failure therapies, underwent a thorough evaluation, and planning for LVAD placement with periprocedural anticoagulation using bivalirudin was initiated. The patient was eventually discharged to a cardiac rehabilitation center.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Condition: The patient was discharged to a cardiac rehabilitation center with stable vital signs, improved hemodynamics, and without any significant complications.\n\nDischarge Medications: [REDACTED]\n\nDischarge Instructions: The patient was advised to closely follow up with the advanced heart failure clinic at our hospital and adhere to the prescribed medication regimen. The patient was also instructed to maintain a heart-healthy diet, avoid smoking and excessive alcohol intake, and engage in regular exercise as tolerated.\n\nFollow-up: The patient will follow up periodically in the advanced heart failure clinic at our hospital.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: I21**\n\n**Rationale:**\n\n- **Principal diagnosis: acute anterior wall STEMI.** The patient presented with chest pain and dyspnoea. The ECG and left heart catheterisation confirmed an anterior STEMI with a thrombotic 100% occlusion of the mid LAD. This is the condition established after study to be chiefly responsible for the admission. It falls in category I21, Acute myocardial infarction, most likely I21.0 for the anterior wall, though only the category is requested.\n- **Chest pain and dyspnoea** are presenting symptoms explained by the definitive diagnosis, so they are not coded as principal.\n- **Cardiogenic shock** (R57.0) developed about 48 hours after the PCI. It is a complication arising during the episode, so it is an additional diagnosis, not the principal one. It is also a significant contributor to length of stay and complexity.\n- **The drug-eluting stent insertion** is a procedure and goes in the procedure codes, not the diagnosis.\n- **Other additional diagnoses to consider:**\n  - Coronary atherosclerosis of a native vessel (I25.1-), covering the 50% proximal LAD stenosis.\n  - In-stent restenosis in the distal LAD. Its correct code should be checked against the current edition's coding standards before assignment.\n  - Heart failure, given the advanced heart failure work-up and LVAD planning, if documented.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 882,
+    "output_tokens": 527
+  },
+  "seconds": 0.0
+}

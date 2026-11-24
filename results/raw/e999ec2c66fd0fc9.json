@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "0069a6ff9c48",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nAge: 58 years\nGender: Male\nDate of Admission: June 8, 2020\nDate of Discharge: [REDACTED]\n\nReason for Admission:\nThe patient was admitted on June 8, 2020, due to increased oxygen requirements following a COVID-19 diagnosis.\n\nHospital Course:\nThe patient received high flow nasal cannula therapy on admission. However, on hospital day 6, mechanical ventilation (MV) was initiated due to respiratory distress, hypoxemia, and hypercapnia. Despite MV, the patient's respiratory failure continued to worsen. Therefore, venovenous extracorporeal membrane oxygenation (VV-ECMO) was implemented on hospital day 11. Meropenem, levofloxacin, convalescent plasma therapy, and dexamethasone were administered during the treatment course.\n\nOutcome:\nThe patient showed gradual improvement in lung compliance and chest radiography. Ultimately, VV-ECMO was discontinued on hospital day 38.\n\nFollow-Up Care:\nThe patient will continue to receive follow-up care and monitoring as required for complete recovery.\nPrimary Diagnosis: [diagnosis section withheld]Secondary Diagnoses: [diagnosis section withheld]\nCo-Morbidities:\nNone\n\nProcedures Performed:\nMV and VV-ECMO were performed during hospitalization.\n\nMedications Upon Discharge:\nThere were no medications prescribed at the time of discharge.\n\nRecommendations:\nThe patient was advised to continue following a healthy lifestyle routine and receiving regular medical checkups.\n\nClinical Team:\n- Attending Physician: [REDACTED]\n- Nurse: [REDACTED]\n- ECMO Specialist: [REDACTED]\n- Respiratory Therapist: [REDACTED]\n- Pharmacist: [REDACTED]\n- Social Worker: [REDACTED]\n\nDischarge Instructions:\nThe patient was advised to rest and follow a healthy routine as per routine health guidelines. The patient was informed of follow-up appointments and instructed to contact the hospital in case of any concerns or queries.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "In ICD-10-AM, COVID-19 is coded U07.1 (virus identified) for the 2020 admission. U07.1 is not in the chapter letters the prompt listed, but it is a valid three-character category. The question asks for the principal diagnosis. The admission was for COVID-19 with increased oxygen requirements, and the course was COVID-19 pneumonia with acute respiratory failure.\n\nCoding rules for COVID-19 in Australia (from the Australian Coding Standards, ACS 1011) say that for COVID-19 pneumonia, U07.1 is sequenced first, followed by J12.8 as an additional code. Respiratory failure would be coded as J96.0 additionally. So the principal diagnosis is U07.1, which gives the category U07.\n\nThe prompt's list of chapters does not include U, but the structure (a letter and two digits) still fits, and U07 is the correct category.\n\nCODE: U07",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1273,
+    "output_tokens": 306
+  },
+  "seconds": 0.0
+}

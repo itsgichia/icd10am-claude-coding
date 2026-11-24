@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "b90becef024d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 49-year-old female of Asian descent\n\nChief Complaint: Burning with urination, frequency, and sensation of incomplete bladder emptying\n\nHospital Course:\nThe patient was admitted with complicated cystitis with sepsis and diagnosed with multiple urinary bladder masses. She underwent bladder mass resection, and pathology showed no evidence of malignancy. Prednisone and mirabegron were prescribed for overactive bladder. The patient developed right-sided abdominal pain, elevated lipase, and amylase levels, mild left hydronephrosis, and underwent bone marrow biopsy; results showed mild T-cell lymphocytosis and eosinophilia with normocellular marrow. The patient was given imatinib, which was stopped due to side effects.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Medications:\nNone\n\nFollow-Up Care:\nFollow-up recommended with the primary care physician for review of biopsy results and further management plan."
+      }
+    ]
+  },
+  "text": "# Suggested principal diagnosis: **N30.8 \u2013 Other cystitis (eosinophilic cystitis)**\n\nThe discharge diagnosis is withheld, so this is a probable answer, not a definite one. Confirm with the clinician or full record before final coding.\n\n## Why N30.8\n- **Bladder findings:** The patient had cystitis symptoms and multiple bladder masses. Resection showed no malignancy.\n- **Eosinophilia:** Bone marrow showed eosinophilia, along with mild T-cell lymphocytosis.\n- **Treatment pattern:** She was given steroids (prednisone), then imatinib, which is a therapy used for hypereosinophilic syndrome.\n\nTogether, these point to **eosinophilic cystitis**. In the ICD-10-AM Alphabetic Index, eosinophilic cystitis is coded to **N30.8**.\n\n## Likely additional codes\n- **D72.1 \u2013 Eosinophilia / hypereosinophilic syndrome.** Use this if documented as the underlying systemic condition.\n- **A41.9 \u2013 Sepsis, unspecified organism**, or a more specific A41.x code if an organism was identified.\n- **N13.3 \u2013 Hydronephrosis.** In ICD-10-AM this is a combination code, so check the specific subcode against the current edition.\n- **K85.9 / R74.8** for the elevated pancreatic enzymes, depending on what is documented. Use K85.9 if acute pancreatitis is confirmed, or R74.8 if only abnormal enzyme levels are recorded.\n- **Y43.1 / adverse effect code** for the imatinib side effects, if documented.\n\n## Sequencing caveat\nThe patient was admitted with \"complicated cystitis with sepsis.\" Under the ACS sepsis guidelines, if sepsis was confirmed and present on admission, **A41.x sepsis may need to be sequenced as the principal diagnosis**, with N30.8 coded additionally. That depends on the documentation and the ICD-10-AM/ACS edition in use. If sepsis was not confirmed, or was not the main reason for admission, **N30.8** is principal.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 383,
+    "output_tokens": 1241
+  },
+  "seconds": 0.0
+}

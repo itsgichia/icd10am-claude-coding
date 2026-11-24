@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "1123f003be4c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHOSPITAL COURSE SUMMARY:\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\n\nPATIENT INFORMATION:\n\nPatient: [NAME]\nSex: Male\nAge: 73 years old\nRace: African American\nADMISSION DIAGNOSIS: [diagnosis section withheld]\nHOSPITAL COURSE:\n\nThe patient presented to an outside hospital with shortness of breath on exertion, orthopnea and lower extremity swelling. He had a history of HFrEF and had stopped taking his cardiac medications. The physical examination revealed signs of heart failure and an elevated troponin level. The patient was treated for ACS and transferred to our hospital for further evaluation of a left atrial mass.\n\nCoronary angiography showed thrombotic subtotal occlusion of the ramus intermedius coronary artery branch. The patient had an echocardiogram that showed a left atrial mass and severe global hypokinesis of the left ventricle. The patient was anticoagulated with unfractionated heparin but developed biventricular thrombi. The patient underwent surgical removal of masses in the right atrium and left atrium, and a two-vessel coronary artery bypass graft was performed. An intraoperative biopsy of the left ventricle showed histopathologic evidence of amyloid deposition by Congo red staining and ATTRwt amyloidosis.\n\nThe patient's postoperative course was complicated by a cerebrovascular accident that was thought to be cardioembolic in nature. He was discharged on postoperative day 15 on chronic anticoagulation with warfarin.\nDISCHARGE DIAGNOSES: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\n\nFollow-up with your primary care physician in 1 week.\nContinue taking all prescribed medications.\nMaintain a low-salt diet as recommended by your physician.\nFollow a healthy lifestyle, including regular exercise and avoiding smoking and alcohol.\nWatch for signs and symptoms of heart failure, such as shortness of breath and swelling, and notify your physician immediately if they occur."
+      }
+    ]
+  },
+  "text": "**Most likely principal diagnosis: I21.4 \u2013 Non-ST elevation (NSTEMI) myocardial infarction**\n\nThis is my best coding judgement from the summary. The diagnosis sections were withheld, so I can't confirm it against the documented final diagnoses.\n\n**Reasoning**\n- The principal diagnosis is the condition established after study to be chiefly responsible for the admission. The patient was transferred to this hospital for evaluation of a left atrial mass, but the work-up and treatment centred on the coronary event.\n- Troponin was elevated, and angiography showed thrombotic subtotal occlusion of the ramus intermedius. This was treated as ACS and managed with a two-vessel CABG. That points to an acute myocardial infarction, probably type 1.\n- The summary says only \"ACS\" and does not state STEMI or NSTEMI. In ICD-10-AM, I21.4 is used for NSTEMI. If the record documents only \"ACS\" with troponin elevation and no infarct type, the alternative is I24.9 (acute ischaemic heart disease, unspecified), or I20.0 (unstable angina) if MI was not diagnosed. Query the clinician if the type is unclear.\n\n**Likely additional diagnoses**\n- E85.82 \u2013 Wild-type transthyretin-related (ATTRwt) amyloidosis. Older ICD-10-AM editions use E85.8 or E85.4 for this. The code depends on the edition.\n- I25.1x \u2013 Atherosclerotic heart disease (coronary artery disease)\n- I50.2x \u2013 Systolic (HFrEF) heart failure. Check whether it is acute on chronic.\n- I51.3 \u2013 Intracardiac thrombosis (biventricular thrombi)\n- I51.7 or I51.89 \u2013 Left atrial mass, if not otherwise specified\n- I97.8x \u2013 Postprocedural cerebrovascular accident, with I63.4 (cerebral infarction due to embolism) as applicable\n- Z91.1 \u2013 Noncompliance with medication\n\n**Alternative to consider:** If the documentation makes the amyloid cardiomyopathy or heart failure the main reason for the admission, the principal diagnosis could instead be E85.x with I43.1 (cardiomyopathy in metabolic diseases). Based on the narrative, though, I21.4 is the most defensible.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 757,
+    "output_tokens": 783
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "context_rich_structure",
+  "record_id": "1471065dc7fd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nAge: 34\nGender: Female\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nPatient with platin-resistant metastatic ovarian cancer was admitted to the hospital after experiencing fever and chills during infusion of nivolumab. Physical examination showed nausea and a known pelvic mass. Infusion was stopped and antihistamines and corticosteroids were administered. However, the patient remained febrile and was found to have a positive blood culture for bacillus Gram-positive bacteria. Combination therapy with antibiotics was started, but three blood cultures returned positive for rapidly growing mycobacteria. The port-a-cath was removed and antibiotics were switched to clarithromycin and ethambutol. Diagnosis of M. mucogenicum port-a-cath related bloodstream infection was retained.\n\nTreatment and Management:\nPatient received combination antibiotherapy for two months and antibiotics were pursued for six months. Despite concomitant chemotherapy, no relapse of infection was observed after antibiotic discontinuation.\n\nFollow-up:\nPatient was discharged in stable condition with instructions to continue chemotherapy and to monitor for any signs of infection.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: T80**\n\nThe principal diagnosis is a catheter-related bloodstream infection caused by *M. mucogenicum*, a nontuberculous mycobacterium. Under ICD-10-AM conventions, an infection arising from a central venous port is classified to T80.2 (infections following infusion, transfusion and therapeutic injection), which falls under category T80. The organism is then captured with an additional code from A31 (other mycobacterial infections). The A31 code is secondary here, not the principal diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 956,
+    "output_tokens": 1126
+  },
+  "seconds": 0.0
+}

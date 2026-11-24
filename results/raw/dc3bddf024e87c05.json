@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "0cfa054dc94b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Identification:\n24-year-old female with chronic myeloid leukemia (CML) presenting with multiple neck masses, fever, anemia, and profound thrombocytopenia.\n\nHospital Course:\nThe patient was initially diagnosed with CML based on bone marrow (BM) smear image, cytogenetic karyotype, and the BCR/ABL fusion transcript. She was treated with hydroxyurea and then imatinib with some success. However, she was readmitted to the hospital with multiple lymphadenopathies and progressive swelling, indicating blast crisis involving T cells. The BM showed marked hyperplasia with more than 20% blasts. The patient was treated with dasatinib and showed a significant decrease in the WBC. However, she stopped taking the medication and died two months after blast crisis treatment.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient was treated with hydroxyurea, then imatinib (400mg/day), and finally, dasatinib. The dasatinib treatment showed a significant decrease in the WBC. However, the patient stopped taking the medication and died two months after blast crisis treatment.\n\nFollow-up:\nThe patient died two months after blast crisis treatment."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: C92.10 \u2013 Chronic myeloid leukaemia, BCR/ABL-positive, not having achieved remission**\n\n**Rationale**\n- The condition treated and investigated during this admission was CML in blast crisis. In ICD-10-AM, the C92.- category covers myeloid leukaemia. CML with the BCR/ABL fusion is classified to C92.1-.\n- The fifth character describes remission status. The patient was not in remission: the marrow showed more than 20% blasts and she was progressing. That gives C92.10, \"not having achieved remission\".\n- ICD-10-AM has no separate code for blast crisis or blast transformation of CML. It is still coded to C92.1-, and the blast phase can be described in the documentation. Some versions of the classification (for example ICD-10-CM) treat the remission status differently, so check the edition in use.\n- The blasts were of T-cell lineage, with lymphadenopathy. This is lymphoid blast transformation of CML, not a new primary T-cell leukaemia or lymphoma. Coding C91.0 (acute lymphoblastic leukaemia) or a T-cell lymphoma as well would be incorrect unless the clinician documented a separate second malignancy.\n\n**Possible additional codes**\n- R59.- (lymphadenopathy), only if it is not integral to the leukaemia. It is usually not coded separately.\n- D61.8 / D69.- (pancytopenia or thrombocytopenia), only if they are clinically significant and not integral to the leukaemia. Anaemia and thrombocytopenia due to marrow infiltration are usually considered integral.\n- R50.9 (fever), usually integral as well.\n- Z91.1 (noncompliance with medical treatment) for stopping dasatinib, if it is relevant to the episode of care.\n\n**Caveat:** The diagnosis section was withheld, and the discharge summary describes both an earlier admission and a later readmission. I have coded the readmission for blast crisis. If the episode of care being coded is the initial diagnosis of CML in chronic phase, the code would still be C92.10 unless remission is documented.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 456,
+    "output_tokens": 712
+  },
+  "seconds": 0.0
+}

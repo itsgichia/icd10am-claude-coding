@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "19a788b5e2bb",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge summary:\nPatient: 78-year-old woman\nDiagnosis: [diagnosis section withheld]\nTreatment: Successfully treated conservatively\nFollow-up: Recommended\n\nHospital Course:  \nThe patient, a 78-year-old woman, presented with epigastric pain and non-bloody diarrhea six days after a second cure of adjuvant chemotherapy for gastric adenocarcinoma. Further examination revealed Massive Pneumatosis Intestinalis (PI) involving colonic submucosal, extensive subserosal, mesenteric, and free posterior retroperitoneal gas, as seen on subsequent Computed Tomography (CT) scans. The precise etiology of PI was not identified, but chemotherapy (notably 5-Fluorouracil (5-FU)) was a likely contributor. The absence of alarm CT findings allowed for successful conservative treatment of the patient.\n\nDischarge Instructions:  \nThe patient is recommended to continue follow-up care with their primary care physician and attend future appointments as scheduled. Any significant changes in medical condition should be reported immediately to a healthcare provider."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: **K63.8 \u2013 Other specified diseases of intestine**\n\n## Rationale\n\n- **Pneumatosis intestinalis** (pneumatosis cystoides intestinalis) is indexed in ICD-10-AM to **K63.8**. It has no dedicated code.\n- It was the condition that, after study, was found to be chiefly responsible for the admission. It explained the presenting epigastric pain and diarrhoea, and it was the focus of investigation (CT) and conservative management.\n- The symptoms (abdominal pain R10.1, diarrhoea) are not coded separately because they are integral to the established diagnosis.\n\n## Suggested additional codes\n\n| Code | Description |\n|------|-------------|\n| **Y43.3** | Adverse effect of other antineoplastic drugs (5-FU). Per ACS 1902, an adverse effect of a correctly administered drug is coded as the manifestation plus a Y40\u2013Y59 external cause code. This applies because the clinician documented chemotherapy as a likely contributor. |\n| **C16.x** | Malignant neoplasm of stomach, using the specific subsite if documented (C16.9 if unspecified). The patient is still receiving active adjuvant treatment, so the cancer is coded as current. |\n| **Y92.x** | Place of occurrence, if required by local policy (e.g., home if chemotherapy was given as an outpatient). |\n\n## Caveats\n\n- The diagnosis section was withheld, so this is based on the clinical narrative. If the clinician did not clearly link the pneumatosis to chemotherapy (\"likely contributor\" may need clarification), consider querying before assigning Y43.3.\n- Check your jurisdiction's edition of ICD-10-AM and the Australian Coding Standards (ACS) for any local coding advice.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 421,
+    "output_tokens": 893
+  },
+  "seconds": 0.0
+}

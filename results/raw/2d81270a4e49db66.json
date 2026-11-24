@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "few_shot_six",
+  "record_id": "0f1bccd11b80",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nExample 4\nHospital course: An 81-year-old woman was brought in after a fall at home. She could not weight-bear and the right leg was shortened and externally rotated. A pelvic radiograph showed a displaced subcapital fracture of the right femoral neck. She underwent hemiarthroplasty on day one.\nAnswer: S72\n\nExample 5\nHospital course: A 19-year-old man presented with 18 hours of periumbilical pain that migrated to the right iliac fossa, with anorexia and a low-grade fever. There was guarding at McBurney's point and the white cell count was 15.2. Laparoscopy confirmed an inflamed, non-perforated appendix.\nAnswer: K35\n\nExample 6\nHospital course: A 64-year-old woman with a history of oestrogen-receptor-positive breast carcinoma treated five years earlier presented with progressive thoracic back pain. Magnetic resonance imaging showed deposits in T7 and T9 with no cord compression. Biopsy confirmed deposits of breast origin and she received palliative radiotherapy to the spine.\nAnswer: C79\n\nHospital course:\nPatient Information: \nName: Not specified\nAge: 62\nGender: Male\n\nHospital Course: \nThe patient was admitted to the hospital with complaints of abdominal pain and distension for the past month, which worsened in the last five days. The patient was diagnosed with small intestinal obstruction and underwent emergency laparotomy. During the operation, a small amount of food fiber was expelled, and multiple \u201cstenosis rings\u201d were found in the intestinal lumen at approximately 40 cm from the distal obstruction. The diseased bowel was removed, and the patient recovered without any discomfort. Pathological findings reported intestinal stenosis, mucosal erosion, and inflammatory granulation tissue formation. It showed neutrophil infiltration and vasodilation and congestion in the serosa. The muscle layer and serosa layer did not show any structural abnormality.\n\nSummary of Hospital Stay: \nThe patient was admitted to the hospital with abdominal pain and distension for the past month and was diagnosed with small intestinal obstruction. The patient underwent emergency laparotomy, and a diseased bowel was removed. The pathological findings reported intestinal stenosis and mucosal erosion. The patient recovered well without any discomfort. \nDiagnosis: [diagnosis section withheld]\nCondition at Discharge: \nRecovered.\n\nFollow-up Plan: \nPatient was followed up for two months, and no discomfort was found. No further treatment is required at this time.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "**K56**\n\nThe documented condition is small intestinal obstruction from multiple strictures (\"stenosis rings\") with a food-fibre bolus. That falls under the category for intestinal obstruction, which includes intestinal stenosis and stricture.\n\nThe withheld diagnosis may name a specific cause of the strictures, such as cryptogenic multifocal ulcerous stenosing enteritis or NSAID-related diaphragm disease. In that case the principal category could instead be K52 (other noninfective gastroenteritis and colitis) or another category. Nothing in the hospital course confirms a specific cause.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1313,
+    "output_tokens": 475
+  },
+  "seconds": 0.0
+}

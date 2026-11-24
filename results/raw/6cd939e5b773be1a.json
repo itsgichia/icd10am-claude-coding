@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "fb371c880fcd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: [Name]\nDOB: [Date of birth]\nGender: Male\nAdmission Date: [Date]\nDischarge Date: [Date]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n[Name] was admitted to the clinic with ongoing RLQ abdominal pain of one-month duration, associated with mild fever. It was noted from histopathology reports that there was chronic lymphoplasmacytic inflammation with associated histiocytes and granulation tissue, further supporting the diagnosis of chronic appendicitis. \n\nTreatment:\nLaparoscopic appendectomy was performed on [Name]. The appendix was identified and found to be chronically scarred and chronically inflamed in appearance. The mesoappendix was taken down with Sonicision, the base transected with Endo-GIA, and delivered from the peritoneal cavity in an Endobag and sent to pathology.\n\nDischarge Condition:\n[Name] was discharged home on the same day as his procedure with no complaints.\n\nInstructions:\nPlease follow up with your primary care physician (PCP) in the coming days to ensure that there has been complete resolution of symptoms.\n\nSigned,\n[Doctor's name]"
+      }
+    ]
+  },
+  "text": "The principal diagnosis code is **K36, Other appendicitis**.\n\nIn ICD-10-AM, chronic appendicitis is indexed to K36, not to the acute appendicitis codes (K35.-). The histopathology showing chronic lymphoplasmacytic inflammation, histiocytes, and granulation tissue supports this, and the surgeon documents the diagnosis as chronic appendicitis.\n\nConfirm the code against the current ICD-10-AM Alphabetic Index and Tabular List and your local coding standards before finalising the claim.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 454,
+    "output_tokens": 645
+  },
+  "seconds": 0.0
+}

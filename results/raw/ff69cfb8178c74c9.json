@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "46879b57e8d7",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDISCHARGE SUMMARY:\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\n\nPatient Name: [NAME]\nPatient ID: [ID]\n\nHospital Course Summary:\n\nThe patient, a 38-year-old Asian male, was admitted with dyspnea and a productive cough that was diagnosed as pneumonia with subsequent atelectasis of the right middle and lower lobes. Upon transfer to our facility, a CT scan revealed an endobronchial mass obstructing the right bronchus intermedius. After initial treatment with broad-spectrum antibiotics, a rigid bronchoscopy procedure was performed to remove the endobronchial tumor and prevent recurrence through ablation with a diode laser. Pathologically, the removed tumor was identified as bronchial myelolipoma with no evidence of hematologic disorder or endocrine abnormalities. Follow-up bronchoscopies after 3 and 12 months showed no recurrence of the tumor, and the patient's accompanying symptoms such as cough, sputum, and dyspnea improved immediately following the procedure.\nFinal Diagnoses: [diagnosis section withheld]\nTreatment:\n\n1. Broad-spectrum antibiotics for obstructive pneumonia.\n2. Rigid bronchoscopy under general anesthesia to remove the endobronchial tumor.\n3. Ablation with a diode laser to prevent recurrence.\n\nCondition at Discharge:\n\nThe patient has shown a significant improvement in his condition since the bronchoscopy procedure and has no active symptoms related to the previously diagnosed conditions. No further treatment is required, and the patient can be discharged at this time.\n\nDischarge Medications:\n\nNo medications are required at the time of discharge.\n\nFollow-up Plan:\n\nFollow-up appointments with a primary care physician are recommended to ensure adequate follow-up of the patient's condition and to monitor for any potential recurrence of bronchial myelolipoma in the future.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The episode was chiefly for an endobronchial tumour, so the principal diagnosis is benign neoplasm of the bronchus.\n\n**Chapter letter: D.** Myelolipoma is a benign neoplasm. The ICD-10 index directs \"Myelolipoma\" to \"Neoplasm, benign, by site.\" Benign neoplasms sit in the D chapter, not C.\n\n**Digits: 14.** The tumour was in the right bronchus intermedius. Category D14 covers benign neoplasm of the middle ear and respiratory system. The full code would be D14.3, benign neoplasm of bronchus and lung.\n\n**Why the tumour and not the pneumonia.** The patient presented with obstructive pneumonia and atelectasis. Investigation then showed these were caused by the endobronchial mass. The main treatment, rigid bronchoscopic resection with laser ablation, was aimed at the tumour. The pneumonia is a secondary consequence and would be an additional diagnosis.\n\nCODE: D14",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1198,
+    "output_tokens": 515
+  },
+  "seconds": 6.219959209003719
+}

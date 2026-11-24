@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "e5395175b2fe",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nElectronic Health Record: Discharge Summary\n\nPatient Information:\nName: Anonymous\nGender: Male\nAge: 63 years\nAdmission Date: [Date]\nDischarge Date: [Date]\n\nReason for Admission:\nThe patient presented with a three-month history of dull epigastric pain radiating to the right hypochondrium and was diagnosed with mild gastritis. Ultrasonography revealed many gallstones with a thickened wall of the gall bladder. He was transferred to our center for an elective cholecystectomy.\n\nHospital Course:\nThe patient underwent a laparoscopic cholecystectomy, which revealed an empyema of the gallbladder with stones that made dissection difficult due to local inflammation. On the first day after the surgery, he complained of pain at the right hypochondrium and a decrease in hemoglobin. Computed tomography (CT) showed a perihepatic hematoma extending to the right paracolic gutter without evidence of any other neoplasm. The patient was monitored for seven weeks with follow-up CTs and ultrasound scans until a 19 mm hypodense nodule was discovered on the eighth liver segment. A fine needle aspiration (FNA) revealed that it was a metastatic signet-ring cell carcinoma. Several CTs and ultrasound scans were performed for surveillance until retroperitoneal and right axillary adenopathies, liver masses, peritoneal dissemination, subcutaneous nodules on the chest wall, and, at the entrance of the right laparoscopy trocar, were described as metastases 9 months later. The patient was placed on palliative care, which lasted for one month until his eventual death.\nDiagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was placed on palliative care and eventually died.\n\nFollow-up:\nN/A\n\nSigned,\n[Physician's Name and Title]\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C23",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 745,
+    "output_tokens": 280
+  },
+  "seconds": 0.0
+}

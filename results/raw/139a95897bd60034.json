@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "893f620f0af0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHospital Course:\nThe patient, a 69-year-old male with a known duodenal diverticulum and remote history of Roux-en-Y gastric bypass surgery, was admitted to the hospital with bilateral upper quadrant abdominal pain for several weeks, nausea, abdominal distension, and food intolerance. A CT scan revealed a distended gastric remnant and a possible bowel obstruction.\n\nThe patient was taken to the operating room for an exploratory laparotomy where a 4.5 cm enterolith was found and removed from the distal jejunum. A cholecystectomy was also performed during which gallstones were discovered. The patient had an uneventful recovery and was discharged on postoperative day 8.\n\nFollow-up:\nAt the patient's postoperative visit, two weeks after surgery, he was reported to be in good health. Unfortunately, the patient was lost to follow-up after one month.\nDiagnosis: [diagnosis section withheld]\nSummary:\nThis 69-year-old male presented with bilateral upper quadrant abdominal pain, nausea, abdominal distension, and food intolerance. He was found to have a distended gastric remnant and a bowel obstruction caused by a 4.5 cm enterolith containing bile salts. Treatment included an exploratory laparotomy and enterolith removal, as well as a cholecystectomy. The patient had an uneventful recovery and was discharged on postoperative day 8. It is unfortunate that the patient was lost to follow-up after one month."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **K56.4 Other impaction of intestine (enterolith)**\n\n**Why this code**\n- The condition that prompted admission and surgery was small bowel obstruction in the distal jejunum. It was caused by a 4.5 cm enterolith, which was removed at laparotomy.\n- In ICD-10-AM, obstruction from an enterolith is indexed to **K56.4**.\n- **K56.3 (gallstone ileus) is not appropriate.** The obstruction was caused by a true enterolith containing bile salts. These typically form from stasis, here likely from the duodenal diverticulum and altered post-bypass anatomy. Gallstone ileus requires a gallstone passing through a biliary-enteric fistula, and none was documented.\n\n**Likely additional diagnoses**\n- **K80.20** Calculus of gallbladder without cholecystitis, without obstruction. This supports the cholecystectomy.\n- **K57.10** Diverticular disease of small intestine (duodenal diverticulum) without perforation or abscess, without bleeding.\n- **Z98.0** Intestinal bypass and anastomosis status (previous Roux-en-Y gastric bypass).\n\n**Likely procedures**\n- Laparotomy with removal of the enterolith from the jejunum (enterotomy).\n- Cholecystectomy.\n\nThe procedures would be coded with ACHI codes according to the operative approach. Please confirm all codes against the ICD-10-AM/ACHI edition in use and any local coding standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 588,
+    "output_tokens": 914
+  },
+  "seconds": 0.0
+}

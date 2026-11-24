@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "cot_then_extract",
+  "record_id": "3962a9bc2491",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\nDate of Admission: [Redacted]\nDate of Discharge: [Redacted]\nLength of Stay: [Redacted]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient presented with a gradual increase in abdominal girth over the past two years, along with abdominal distension and intermittent nausea for the past six months. The patient also experienced repeated intractable hiccups for two months, leading to the hospital admission. Physical examination revealed a longitudinal surgical scar on the upper abdomen and a swelling of the mass on the left side of the abdomen.\n\nFurther diagnostic investigations were performed, including ultrasonography, computerized tomography (CT), and an isotope kidney scan. These tests revealed the presence of a massive hypoechoic lesion occupying almost the entire abdomen, exerting pressure on the stomach, liver, pancreas, and spleen. Adhesion between the kidney and surrounding organs was evident during the laparoscopy and open simple nephrectomy procedure.\n\nAbout 7.5 liters of hydronephrosis fluid were drained, and the left kidney and upper ureter were successfully removed, resulting in the disappearance of long-lasting hiccups and improvement of the patient's appetite and overall health. After the operation, the patient was observed for six months, during which there was no recurrence of the hiccups.\n\nDischarge Instructions:\nThe patient was discharged with instructions to follow a proper diet and continue with regular follow-up appointments with the healthcare professional.\n\nDictated by: [Redacted]\nSigned electronically by: [Redacted]\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The admission was chiefly for giant left hydronephrosis, with 7.5 L of fluid compressing the abdominal organs and causing intractable hiccups, treated by nephrectomy. No congenital cause is documented, so it falls under obstructive uropathy and hydronephrosis in chapter N. The category is N13.\n\nCODE: N13",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1145,
+    "output_tokens": 257
+  },
+  "seconds": 0.0
+}

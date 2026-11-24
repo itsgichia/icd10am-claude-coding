@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "a1033456ece1",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\nMedical Record Number: [Redacted]\n\nAdmission date: [Redacted]\nDischarge date: [Redacted]\nAdmitting diagnosis: [diagnosis section withheld]Final diagnosis: [diagnosis section withheld]\nHospital course: The patient was admitted with a 2-week history of noncardiac-type central chest pain, which was diagnosed as possible anxiety/musculoskeletal pain. Upon follow-up review, the patient was discharged after further tests showed no significant abnormalities. Later, the patient re-presented with symptoms of pleuritic central chest pain and intermittent shortness of breath, and was diagnosed with bilateral subsegmental pulmonary embolism after confirmation via imaging.\n\nTreatment: The patient was initially treated with enoxaparin and later switched to apixaban. The treatment duration was planned for 3 months and the patient was advised to stop taking TXA due to increased risk of bleeding caused by drug\u2013drug interactions with apixaban.\n\nFollow-up: The patient was referred for routine follow-up in the anticoagulation clinic within the hematology unit following discharge. During 1-month follow-up, the patient reported significant improvement in symptoms. Later, a repeat CTPA scan showed the PE had resolved, and the patient was treated with appropriate antibiotics for new consolidation in the right lung.\n\nDischarge medications: none prescribed at this time\n\nFollow-up care: The patient was advised to continue with routine follow-up care in the anticoagulation clinic within the hematology unit.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "I26",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 659,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

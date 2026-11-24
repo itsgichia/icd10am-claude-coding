@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "cot_then_extract",
+  "record_id": "7d68c729f7dd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient: 65-year-old male with multiple comorbidities including hypertension, heart failure, end-stage renal disease, and Parkinson's disease.\n\nHospital Course:\n\nThe patient was admitted with fever, altered mental status, and syncope while undergoing dialysis. On admission, he was tachycardic and hypotensive. The patient was empirically started on antibiotics for possible sepsis with unknown sources and was admitted to the ICU. During his stay, the patient was found to have elevated levels of troponin and was diagnosed with aortic valve vegetation with moderately severe aortic regurgitation, severe pulmonary hypertension, and endocarditis. Blood cultures grew methicillin-resistant Staphylococcus aureus. The patient subsequently underwent aortic valve replacement and was stabilized with long-term antibiotics treatment.\n\nHospital course summary:\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course: Patient was diagnosed with aortic valve vegetation with moderately severe aortic regurgitation, severe pulmonary hypertension, and endocarditis. Blood cultures grew methicillin-resistant Staphylococcus aureus.\nDischarge Diagnosis: [diagnosis section withheld]\nProblems:\n\n1. Aortic valve vegetation with moderately severe aortic regurgitation, severe pulmonary hypertension, and endocarditis\n2. Methicillin-resistant Staphylococcus aureus bacteremia\n3. Right bundle branch block and left anterior fascicular block with atrial flutter\n4. Small vessel disease with multiple infarctions in multiple vascular territories including an old right frontal infarct\n\nProcedures:\n\n1. Aortic valve replacement\n\nDischarge medications:\n\nThe patient was prescribed medications to be managed by his primary care provider. \n\nFollow-up:\n\nThe patient was instructed to follow up with his primary care provider and obtain an echocardiogram 4-6 weeks post-discharge.\n\nCondition on discharge:\n\nStable condition.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The admission was chiefly for infective endocarditis of the aortic valve caused by MRSA, which was confirmed by vegetation on echocardiography and positive blood cultures, and treated with valve replacement. Infective endocarditis is classified in chapter I (Diseases of the circulatory system), category I33. Sepsis was only empirically suspected and the endocarditis explains the admission.\n\nCODE: I33",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1285,
+    "output_tokens": 417
+  },
+  "seconds": 2.712233792000916
+}

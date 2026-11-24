@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "dff9141abc15",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\nPatient: 16-year-old female\nAdmission Date: [DATE]\nDischarge Date: [DATE]\nMedical Record Number: [NUMBER]\n\nHospital Course:\n\nThe patient presented to the hospital for an exploratory laparotomy and resection of a small bowel anastomotic stricture due to her longstanding history of Crohn's disease. The patient underwent an epidural analgesia procedure for postoperative pain control and a test dose was administered without any evidence of intravascular or subarachnoid injection.\n\nThe patient showed signs of mild left unilateral Horner's syndrome and weakness of both lower extremities in the Post Anesthesia Care Unit (PACU) and was transferred to the ward stable and comfortable.\n\nOn postoperative day one, the patient complained of left-sided numbness and visual blur. Physical examination revealed left hemibody analgesia, weakness, and Horner's syndrome. The epidural infusion rate was adjusted and reduced, which produced progressive improvement in the patient's numbness, weakness, and Horner's syndrome.\n\nIn light of the patient's history of unilateral epidural block with a previous surgery two years earlier, an epidurogram was performed, which showed left unilateral spread of the contrast medium, indicating a midline barrier dividing the epidural space.\n\nAfter monitoring the patient for another three days, the epidural catheter was removed and the patient's neurological signs and symptoms completely resolved.\nDischarge Diagnosis: [diagnosis section withheld]\nTreatment:\n\nExploratory laparotomy and resection of small bowel anastomotic stricture\nEpidural analgesia for postoperative pain control\n\nFollow-Up Care:\n\nThe patient is advised to follow-up with a healthcare provider for ongoing management of Crohn's disease and any concerns related to the surgical procedure."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **K50.0 \u2013 Crohn's disease of small intestine**\n\n## Rationale\n\n**Reason for admission.** The patient was admitted electively for exploratory laparotomy and resection of a small bowel anastomotic stricture. The summary states the stricture was due to her longstanding Crohn's disease.\n\n**Applying the principal diagnosis definition (ACS 0001).** The principal diagnosis is the condition found after study to be chiefly responsible for the admission. Here, that is the stricture.\n\n**Why K50.0 rather than a postprocedural code.** A stricture at a previous anastomosis in a Crohn's patient is generally coded as recurrent or active Crohn's disease at that site, not as a postprocedural complication (K91.-), when the documentation attributes it to the Crohn's disease. This summary does so explicitly. If the clinician had documented it as a purely surgical complication unrelated to Crohn's, K91.89 (other postprocedural disorders of digestive system) might apply, but that is not the case here.\n\n## Additional diagnoses to consider (not principal)\n\nThe neurological events were complications of the epidural. They arose after admission and did not cause it, so they are secondary codes only. Possible codes include:\n\n- **G90.2** for Horner's syndrome, plus codes for hemibody sensory loss and lower limb weakness (e.g., R20.0 for anaesthesia of skin, R29.8 / R53 for weakness, as appropriate). Alternatively, **T88.5** (other complications of anaesthesia) could be used.\n- **Y48.3** (local anaesthetics) or the external cause code for an epidural misadventure or abnormal reaction, together with a place of occurrence code (**Y92.22** health service area).\n- **Q-code / anatomical variant:** the midline epidural barrier is generally not coded unless clinically significant.\n\nThe procedure codes would cover the laparotomy with small bowel resection and anastomosis, and the epidural infusion and epidurogram.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 655,
+    "output_tokens": 1128
+  },
+  "seconds": 0.0
+}

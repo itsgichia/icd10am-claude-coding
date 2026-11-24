@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "f318c995256d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nPatient Name: [redacted]\nDate of Discharge: [redacted]\n\nHospital Course:\nThe patient was admitted for the evaluation and treatment of left eye melanoma. After undergoing brachytherapy, the patient showed scleral thinning and uveal tissue prolapse at the site of the preexisting lesion. The patient underwent a block excision of sclera, ciliary melanoma, and adjacent iris tissue, which was performed through the opening of the sclera and was combined with a corneal tectonic graft.\n\nClinical Findings:\nUpon admission, the patient was found to have a pigmented fusiform thickening of the iris root in the left eye. Gonioscopy revealed a well-circumscribed dome-shaped mass at the level of the ciliary body, between the 2:30 and 3 o'clock positions. UBM showed a medium internal reflectivity with an almost homogeneous acoustic structure. The lesion was classified as melanoma of the ciliary body, which involved the adjacent iris root. UBM also showed a local scleral extension of the tumor, which was under the conjunctival layer and 0.88 mm thick.\n\nTreatment:\nThe patient underwent brachytherapy (106Ru) and received a total dose of 100 Gy at the apex, with a dose rate of 79.09 cGy/hr. The total dose at the sclera was 531.1 Gy, with a dose rate of 420.1 cGy/hr. The patient then underwent a radical block excision of sclera, ciliary melanoma, and adjacent iris tissue, combined with a corneal tectonic graft and 16 single stitches.\n\nHistopathology:\nPost-operative histopathological analysis confirmed the diagnosis of spindle cell melanoma.\n\nFollow-Up:\nThe patient had a BCVA of 20/20 at the time of discharge. The patient is recommended to have regular follow-up appointments with their healthcare provider to monitor their condition.\nDiagnosis: [diagnosis section withheld]\nDischarge Medications:\n[N/A]\nDischarge Diagnosis: [diagnosis section withheld]\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The episode is for a melanoma of the ciliary body that involves the adjacent iris root, and the histopathology confirmed spindle cell melanoma. Malignant neoplasms of the eye and adnexa are classified in C69, and the ciliary body subcategory is C69.4. The iris involvement does not change the category, because the lesion is an overlapping site that is still within the eye.\n\nThe chapter letter for malignant neoplasms is C, and the category for the eye is 69.\n\nCODE: C69",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1233,
+    "output_tokens": 162
+  },
+  "seconds": 0.0
+}

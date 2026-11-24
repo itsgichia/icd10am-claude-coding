@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "a6c95a2bfb2e",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]\nAge: 69\nSex: Male\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHOSPITAL COURSE:\nThe patient was admitted with severely symptomatic atrial fibrillation (AF) requiring multiple cardioversions. He had a history of an implantable cardiac monitor, left bundle branch block with an ejection fraction of 25%, and a cardiac resynchronization therapy device (CRT-D). The patient underwent uncomplicated pulmonary vein isolation (PVI) using radiofrequency (RF) via the SANS FLUORO technique. There were no complications during or after the procedure. The patient was discharged the following day and remained free of AF at his three- and six-month follow-up visits.\n\nHISTORY AND FINDINGS:\nThe patient had previously undergone successful implantation of the Optimizer\u2122 III device as part of a clinical trial. The preprocedure chest radiograph showed increased scar burden in the left atrium (LA) based on voltage mapping, with ablation lesions showing the left atrial roof and posterior line. Post-PVI, entrance and exit blocks were demonstrated. The postprocedure CRT-D check revealed no change in lead sensing, threshold, or impedance values.\nDIAGNOSIS: [diagnosis section withheld]\nPROCEDURE/TREATMENT:\nUncomplicated pulmonary vein isolation (PVI) using radiofrequency (RF) via the SANS FLUORO technique.\n\nFOLLOW-UP:\nThe patient remained free of AF at his three- and six-month follow-up visits.\n\nDISCHARGE INSTRUCTIONS:\nThe patient is instructed to follow up with their healthcare provider as recommended.\n\nDISCHARGE MEDICATIONS:\nN/A\n\nDISCHARGE CONDITION:\nThe patient was discharged in stable condition."
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **I48.9 \u2013 Atrial fibrillation and atrial flutter, unspecified**\n\n## Why atrial fibrillation is the principal diagnosis\n- The patient was admitted for severely symptomatic atrial fibrillation.\n- The procedure performed (radiofrequency pulmonary vein isolation) was done specifically to treat the AF.\n- Under ACS 0001 (Principal Diagnosis), this is the condition chiefly responsible for the admission.\n\n## Why the unspecified code\n- ICD-10-AM divides AF into paroxysmal (I48.0), persistent (I48.1) and permanent (I48.2).\n- The record does not state which type this is.\n- \"Requiring multiple cardioversions\" suggests persistent AF, since AF that needs cardioversion is not self-terminating. However, coders should not assign a type the clinician has not documented.\n- A clinician query is recommended. If the AF is confirmed as **persistent**, assign **I48.1** instead.\n\n## Likely additional diagnosis codes\n| Code | Description |\n|---|---|\n| I44.7 | Left bundle-branch block, unspecified |\n| I50.9 / I50.1 | Heart failure / left ventricular failure (EF 25%), if clinically documented as heart failure |\n| Z95.0 | Presence of cardiac pacemaker (covers the CRT-D) |\n| Z95.8 | Presence of other cardiac and vascular implants and grafts (implantable cardiac monitor, Optimizer device) |\n\n## Procedure\nCode the radiofrequency pulmonary vein isolation with the ACHI code for percutaneous ablation of the atrium/pulmonary vein. This falls within block 601, for example **38287-02**, depending on the ACHI edition in use.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 702,
+    "output_tokens": 978
+  },
+  "seconds": 0.0
+}

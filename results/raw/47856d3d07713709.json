@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "cot_then_extract",
+  "record_id": "775828a21477",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: 16-Year-Old Male\nDiagnosis: [diagnosis section withheld]\nHospital Course: \nThe patient was admitted to the hospital with symptoms of intellectual deficiency, proximal myopathy, and alterations in liver tests. Panel A was used for diagnostic purposes, which detected the presence of the hemizygous variant c.741+1G > A, described as pathogenic in HGMD CS003703.\nDuring the hospital stay, the patient received appropriate medical attention. The patient was provided with standard care and treatment for the associated symptoms. The patient's overall health was closely monitored throughout the hospital stay, and there were no major health incidents.\nA multidisciplinary team of doctors and medical professionals closely followed the patient's progress and offered medical care accordingly.\n\nDischarge Instructions:\nThe patient is being discharged from the hospital with instructions to closely monitor his health and to follow up with his primary physician and/or cardiologist. The patient should avoid strenuous exercise, and any new or concerning symptoms should be reported to the physician immediately. The patient has been instructed to continue to follow up with his healthcare providers to receive appropriate care and treatment for his condition.\n\nSummary:\nThe patient was admitted to the hospital with symptoms of intellectual deficiency, proximal myopathy, and alterations in liver tests. The patient was diagnosed with suspicion of Danon disease due to hypertrophic cardiomyopathy with anomalous pathway. The patient received standard care during the hospital stay with a multidisciplinary team of healthcare providers closely monitoring progress. The patient is being discharged from the hospital with instructions to follow up with his primary physician and/or cardiologist.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "1. The admission is chiefly for Danon disease. This is X-linked LAMP2 deficiency, confirmed by a hemizygous pathogenic splice variant, and it explains the intellectual disability, myopathy, abnormal liver tests and hypertrophic cardiomyopathy with an accessory pathway.\n2. Danon disease is classified as a glycogen storage disease, which sits in chapter E (endocrine, nutritional and metabolic).\n3. The category is E74, under the subcode for glycogen storage disease.\n\nCODE: E74",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1177,
+    "output_tokens": 247
+  },
+  "seconds": 0.0
+}

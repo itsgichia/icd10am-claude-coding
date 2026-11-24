@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "9f03e2c80891",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nMedical History:\nThe patient is a 20-year-old previously healthy male who presented to the emergency department with fever and rash six days after being diagnosed with a viral upper respiratory infection at an urgent care center.\n\nHospital Course:\nThe patient was diagnosed with severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) and admitted to the intensive care unit (ICU) for supportive care. He required escalating amounts of supplemental oxygen during his ED course and remained hospitalized for 6 days.\n\nClinical Findings:\nThe patient presented with a diffuse, morbilliform rash across the trunk and extremities, sparing the face. A chest radiograph showed bilateral infiltrates consistent with multifocal pneumonia. Labs revealed a normal leukocyte count with an elevated C-reactive protein.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient received supportive care in the ICU, including supplemental oxygen and monitoring of vital signs.\n\nFollow-up:\nThe patient is stable on hospital day 6 and will require additional monitoring and follow-up to determine the appropriate plan for discharge from the hospital.\n\nRecommendations:\nThe patient should continue to follow up with his healthcare provider and monitor his symptoms closely to determine when he can safely return to his daily activities. Additionally, he should follow all recommendations and guidelines from public health officials regarding social distancing and hand hygiene to slow the spread of the virus."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis is **U07.1, COVID-19 (virus identified)**.\n\nThe diagnosis section is withheld, but the record states the patient was diagnosed with SARS-CoV-2 and admitted to the ICU for supportive care. The reason for admission was COVID-19 with bilateral pneumonia, so U07.1 is sequenced first. The pneumonia would be coded as an additional manifestation (for example, a viral pneumonia code such as J12.8), and the rash and elevated CRP are not separately coded unless the physician documents a specific diagnosis for them.\n\nThe rash, fever, and inflammatory markers after a viral illness raise the possibility of **multisystem inflammatory syndrome in adults (MIS-A)**. If the withheld diagnosis is MIS-A, the principal code would instead be the MIS code (M35.81 in ICD-10-CM; check the ICD-10-AM edition in use), with U07.1 added. The principal diagnosis depends on what the attending physician documented, and I can't confirm the withheld section, so verify against the discharge summary and the current ICD-10-AM and ACCD guidelines.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 539,
+    "output_tokens": 1238
+  },
+  "seconds": 0.0
+}

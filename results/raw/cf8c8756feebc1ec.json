@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "aec8b9f3685b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nAge: 53\nGender: Male\n\nHospitalization Dates: [redacted]\nAdmitting Diagnosis: [diagnosis section withheld]Discharge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient initially presented with acute myocardial infarction and underwent percutaneous coronary intervention with stent implantation. However, residual stenoses and stent malappositions were observed, and the patient was referred for CABG. Echocardiogram revealed a left ventricular dysfunction with an ejection fraction of 19%, and enhanced computed tomography showed bilateral occlusions of the internal thoracic arteries and a small fragile sternum after sternoturnover fixation. Left thoracotomy was performed without cardiopulmonary bypass, and the saphenous vein and radial artery grafts were successfully anastomosed to the target vessels. The patient had an uneventful recovery and was discharged on postoperative day 12.\n\nHospital Course Summary:\nA 53-year-old man presented with acute myocardial infarction and underwent percutaneous coronary intervention with stent implantation. Residual stenoses and stent malappositions were observed, and the decision was made to perform CABG due to the left anterior descending artery, high lateral branch, and left circumflex artery lesions. The patient had a left ventricular dysfunction with an ejection fraction of 19%, a bilateral internal thoracic artery occlusion, and a small fragile sternum after sternoturnover fixation, which made the left thoracotomy approach the preferred method. The procedure was performed successfully without cardiopulmonary bypass, and the patient had an uneventful recovery, resulting in a patent bypass graft of all target vessels. The patient was discharged on postoperative day 12 without any issues."
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis code: I25.12 (Atherosclerotic heart disease of native coronary artery, with stable angina pectoris)** is not the best fit. The better choice is below.\n\n**Most likely principal diagnosis: I25.10, Atherosclerotic heart disease of native coronary artery without angina pectoris**\n\nRationale:\n- This admission was for CABG. The reason for admission was residual multivessel coronary stenosis (LAD, high lateral branch and circumflex) after an earlier acute MI treated with PCI and stenting.\n- The MI was treated in the earlier episode. This was a separate, later admission for surgical revascularisation.\n- In ICD-10-AM, I21 codes apply only to an MI within 4 weeks (28 days) of onset. The summary gives no timing, so I21 can't be confirmed. If CABG followed within 4 weeks as part of the same admission, I21.- would be principal. The summary describes a referral after PCI, which suggests a separate episode.\n- If the MI was older than 4 weeks, I25.2 (Old myocardial infarction) would be an additional code.\n- If the stent malapposition were documented as a complication, T82.8- might be considered. Residual stenosis and malapposition were findings rather than a documented complication, so I would not assign it as principal.\n\n**Suggested additional codes:**\n- I25.2 Old myocardial infarction, if more than 4 weeks old\n- Z95.5 Presence of coronary angioplasty implant and graft\n- I25.5 Ischaemic cardiomyopathy, or I51.9 or I50.- for the LV dysfunction with an EF of 19%, depending on clinician documentation\n- I65.8 or similar for the internal thoracic artery occlusions, only if documented as a diagnosis. Otherwise omit.\n- Procedure: off-pump CABG with vein and radial artery grafts, ACHI block 1360 (coronary artery bypass). Choose the specific code by the number of grafts and the graft types.\n\nIf the MI was within 4 weeks and was still being managed during this admission, the principal diagnosis would instead be I21.4 (NSTEMI) or the appropriate I21.- subcategory for the MI type.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 656,
+    "output_tokens": 741
+  },
+  "seconds": 0.0
+}

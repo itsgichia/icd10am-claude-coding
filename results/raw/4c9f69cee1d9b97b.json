@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "00f55d302ffa",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHospital Course: \nThe patient, a 29-year-old woman with a history of earlobe piercing at a beauty salon six days prior, presented to the hospital with symptoms of headache, fever, and blurred vision. Upon admission, she exhibited multiple skin manifestations, including maculopapular rashes on her face, scattered pustules and microabscesses on her trunk and extremities, and subungual splinter hemorrhages on her fingers. Diagnostic tests revealed microscopic hematuria and low platelet count, in addition to CSF analysis indicating a raised white blood cell count. Multiple embolic infarcts and leptomeningeal enhancement were found through brain magnetic resonance imaging. A transthoracic echocardiography performed on day two revealed vegetations on the anterior chordae of her mitral valve. S aureus, resistant to penicillin and oxacillin, was isolated in her blood cultures. The initial treatment of nafcillin and ceftriaxone was replaced with vancomycin in combination with gentamicin. \n\nOn day six of hospitalization, the patient became hypotensive and dyspneic, leading to the discovery of mitral valve chordae rupture through echocardiography. She underwent an emergency cardiac surgery in which her entire mitral valve was removed and replaced with a prosthetic valve. Gentamicin treatment was discontinued on day eight. Her condition stabilized, and her facial rashes disappeared completely. Follow-up brain and abdominal CT scans indicated an improvement in her condition. After eight weeks of vancomycin therapy, the patient was discharged.\nDiagnosis: [diagnosis section withheld]\nDischarge Medications: \nThe patient was discharged on vancomycin.\n\nFollow-Up: \nThe patient is advised to follow up with the healthcare provider for further treatment and monitoring."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: acute infective endocarditis of the mitral valve due to MRSA (methicillin-resistant *Staphylococcus aureus*)**\n\n**ICD-10-AM code: I33.0 Acute and subacute infective endocarditis**\n\nCoding notes:\n- I33.0 is the principal diagnosis. It covers bacterial endocarditis, and ICD-10-AM instructs the use of an additional code to identify the infectious agent.\n- Add B95.62 (Methicillin resistant *Staphylococcus aureus* as the cause of diseases classified to other chapters) to identify the organism. Under the ICD-10-AM and ACHI conventions, check whether a combined code or Z-code for resistance applies in your edition.\n- Mitral valve involvement is captured within I33.0. Endocarditis with a specified valve is not coded separately to I34 or I39 when it is infective.\n- Chordae tendineae rupture is a complication that arose on day six, so it would be a secondary diagnosis (I51.1 Rupture of chordae tendineae, not elsewhere classified).\n- Other secondary diagnoses to consider are:\n  - A41.02 Sepsis due to MRSA (if documented as sepsis or bacteraemia)\n  - I63.x or I66.x for the embolic cerebral infarcts, as documented\n  - G01 or G00.3 for meningitis (staphylococcal meningitis, G00.3, with the organism code), if the clinician documents meningitis\n  - D69.6 Thrombocytopenia, unspecified\n  - R31 Haematuria\n- The procedure is mitral valve replacement with a prosthesis, coded in ACHI under block 38490 (valve replacement). The exact code depends on the prosthesis type (biological or mechanical) and the approach.\n\nThe final code assignment depends on the full documentation, particularly the withheld diagnosis section.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 728,
+    "output_tokens": 635
+  },
+  "seconds": 0.0
+}

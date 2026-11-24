@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "f318c995256d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nPatient Name: [redacted]\nDate of Discharge: [redacted]\n\nHospital Course:\nThe patient was admitted for the evaluation and treatment of left eye melanoma. After undergoing brachytherapy, the patient showed scleral thinning and uveal tissue prolapse at the site of the preexisting lesion. The patient underwent a block excision of sclera, ciliary melanoma, and adjacent iris tissue, which was performed through the opening of the sclera and was combined with a corneal tectonic graft.\n\nClinical Findings:\nUpon admission, the patient was found to have a pigmented fusiform thickening of the iris root in the left eye. Gonioscopy revealed a well-circumscribed dome-shaped mass at the level of the ciliary body, between the 2:30 and 3 o'clock positions. UBM showed a medium internal reflectivity with an almost homogeneous acoustic structure. The lesion was classified as melanoma of the ciliary body, which involved the adjacent iris root. UBM also showed a local scleral extension of the tumor, which was under the conjunctival layer and 0.88 mm thick.\n\nTreatment:\nThe patient underwent brachytherapy (106Ru) and received a total dose of 100 Gy at the apex, with a dose rate of 79.09 cGy/hr. The total dose at the sclera was 531.1 Gy, with a dose rate of 420.1 cGy/hr. The patient then underwent a radical block excision of sclera, ciliary melanoma, and adjacent iris tissue, combined with a corneal tectonic graft and 16 single stitches.\n\nHistopathology:\nPost-operative histopathological analysis confirmed the diagnosis of spindle cell melanoma.\n\nFollow-Up:\nThe patient had a BCVA of 20/20 at the time of discharge. The patient is recommended to have regular follow-up appointments with their healthcare provider to monitor their condition.\nDiagnosis: [diagnosis section withheld]\nDischarge Medications:\n[N/A]\nDischarge Diagnosis: [diagnosis section withheld]"
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: C69.3, Malignant neoplasm of the choroid** is not the right choice here. The correct code is **C69.4, Malignant neoplasm of the ciliary body**.\n\n**Rationale**\n- The lesion was classified as melanoma of the ciliary body. It involved the adjacent iris root and extended locally into the sclera.\n- In ICD-10-AM (as in ICD-10), malignant neoplasms of the eye and adnexa are classified to C69.-. The fourth character gives the site: C69.4 is the ciliary body, C69.3 is the choroid, and C69.4 also covers the iris in some listings.\n- When a tumor spans adjacent sites and its point of origin is clear, you code to the site of origin. Here that is the ciliary body, with secondary iris and scleral involvement. If the sites were contiguous and the origin could not be determined, C69.8 (overlapping lesion) would apply.\n- Histology (spindle cell melanoma) is captured by the morphology code M8772/3, which is spindle cell melanoma, NOS. In ICD-10-AM, the morphology code is added as an extension to the C code.\n- Laterality is left eye. ICD-10-AM does not capture laterality in C69.4, so it is recorded separately if needed.\n\n**Suggested coding**\n- Principal diagnosis: C69.4 Malignant neoplasm of ciliary body, with morphology M8772/3\n- The scleral thinning and uveal prolapse after brachytherapy could be added as secondary diagnoses if they are documented as complications. They would be coded to a radiation-related or post-procedural code, for example H15.8 or H21.8, plus a Y-code for the radiotherapy complication. This depends on the clinician's documentation.\n\n**Procedures**, which are coded with ACHI rather than ICD-10-AM, include the brachytherapy, the block excision of the ciliary body and iris lesion, and the corneal tectonic graft.\n\nI would verify the final code against your current ICD-10-AM/ACHI edition and the coding standards, because I can't confirm the exact edition-specific rules here.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 740,
+    "output_tokens": 709
+  },
+  "seconds": 0.0
+}

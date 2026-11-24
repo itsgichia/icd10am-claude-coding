@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "51a55251a132",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: N/A\nMedical Record Number: N/A\n\nAdmission Date: N/A\nDischarge Date: N/A\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nUpon admission, the patient was given IV fluids, morphine, and medications to address his hyperkalemia. CT scans revealed extensive subcutaneous emphysema, pneumorrhachis/intraspinal air, pneumomediastinum, liver biliary duct dilation, mucosal enhancement of entire bladder, and previously known hydronephrosis. The patient was then transferred to the ICU where he was treated and monitored. After four days, the patient was transferred to the floors where gross hematuria continued, electrolytes normalized, leukocytosis resolved, and mental status improved. The patient was discharged from the hospital with follow-up appointments with neurosurgery for pneumorrhachis, pulmonary for pneumothorax, urology for hematuria, and hepatology for elevated liver enzymes.\n\nHospital Course Summary:\nThe patient was admitted to the hospital after being observed stumbling on the street. Upon physical exam, the patient was noted to have severe cachexia, with associated signs of multiorgan failure such as crepitus over his left anterior neck, a flat but diffusely tender abdomen, and a collapsible inferior vena cava. CT scans revealed extensive subcutaneous emphysema, pneumorrhachis/intraspinal air, pneumomediastinum, liver biliary duct dilation, mucosal enhancement of entire bladder, and previously known hydronephrosis. The patient was then transferred to the ICU and treated with IV fluids, morphine, and medications to address his hyperkalemia. After four days, the patient was transferred to the floors where gross hematuria continued, electrolytes normalized, leukocytosis resolved, and mental status improved. The patient was discharged from the hospital with follow-up appointments with neurosurgery for pneumorrhachis, pulmonary for pneumothorax, urology for hematuria, and hepatology for elevated liver enzymes.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "CODE: **UNABLE TO ASSIGN**. The record does not support a confident three-character principal diagnosis, so a physician query is needed before coding.\n\n**Why:**\n- The admitting diagnosis section is withheld, and the record has no documented final diagnosis. It lists only findings: subcutaneous emphysema, pneumomediastinum, pneumorrhachis, pneumothorax, biliary duct dilation, bladder mucosal enhancement, hydronephrosis, hyperkalaemia, leukocytosis, gross haematuria, and \"multiorgan failure.\"\n- The pattern of gas tracking through tissue planes (neck, mediastinum, spinal canal, pleura) in a cachectic patient with multiorgan dysfunction suggests a gas-forming process, such as a perforation or a necrotising soft-tissue infection. Coders cannot assign a diagnosis from imaging findings alone.\n- \"Multiorgan failure\" is documented, but its cause is not. Sepsis cannot be coded without a documented diagnosis, and it cannot be inferred from leukocytosis or organ dysfunction.\n\n**Query the attending physician for:**\n1. The underlying cause of the gas in the tissues and the cause of the multiorgan dysfunction. Specifically, is there a perforation (oesophageal, tracheal or bronchial), a necrotising soft-tissue infection, or a gas-forming infection such as emphysematous cystitis or pyelonephritis?\n2. Whether sepsis was present, and if so, its source and organism if known.\n3. The admitting diagnosis and reason for admission, which are currently withheld.\n4. Whether an underlying malignancy or other chronic condition explains the cachexia, haematuria and hydronephrosis.\n\nOnce the physician documents the condition that, after investigation, was chiefly responsible for the admission, I can assign the principal diagnosis category. If the query returns sepsis with a documented source, sequencing would follow the ICD-10-AM sepsis guidelines.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 937,
+    "output_tokens": 2136
+  },
+  "seconds": 0.0
+}

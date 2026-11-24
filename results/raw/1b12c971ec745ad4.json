@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "3db73b0f0932",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Unidentified\n\nDate of Admission: Not specified\n\nDate of Discharge: Not specified\n\nReason for Admission: Pain in right shoulder and left thigh with prior history of moderate trauma\n\nSummary:\n\nA 14-year-old male of Afghan descent was admitted to the hospital with pain in his right shoulder and left thigh following a history of moderate trauma. Physical examination revealed fever, elevated leukocyte count, mild polymorphonuclear predominance, and reduced range of motion in the right shoulder. X-ray imaging showed mixed density, periosteal reaction, and cortical disruption with soft tissue swelling in the metaphysis of the right humerus and left fibula. Computed tomography and magnetic resonance imaging detected two lesions involving the bone marrow and cortex in the head of the humerus and body of the fibula. A biopsy of the proximal humerus revealed diffuse inflammatory infiltration, consistent with xanthogranulomatous osteomyelitis. Deep fluid samples also showed Staphylococcus aureus infection, sensitive to cloxacillin, which was administered to the patient. After hospitalization, the patient's general condition improved, and he was able to walk without pain. The patient left the hospital without completing the duration of treatment, but did not report any relapse of pain or discharge at his follow-up appointment within 4 months in an outpatient clinical setting.\nDischarge Diagnosis: [diagnosis section withheld]\nCondition at Discharge: Improved\n\nTreatment: Cloxacillin\n\nFollow-up Care: Follow-up appointment within 4 months in an outpatient clinical setting\n\nPrognosis: Good\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The episode describes multifocal osteomyelitis (right humerus and left fibula) caused by Staphylococcus aureus, shown as xanthogranulomatous osteomyelitis on biopsy. In ICD-10-AM, osteomyelitis is classified in Chapter XIII (M86), not as a bacterial infection in Chapter I. The infecting organism is added separately with B95.6 (Staphylococcus aureus as the cause of diseases classified elsewhere).\n\nWithin M86, the options are:\n- M86.0 acute haematogenous osteomyelitis\n- M86.1 other acute osteomyelitis\n- M86.2 subacute osteomyelitis\n- M86.6 other chronic osteomyelitis\n\nThe presentation is acute, with fever, raised leukocytes, a history of trauma and a response to cloxacillin. All of these fall under M86 at the three-character level.\n\nCODE: M86",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1102,
+    "output_tokens": 303
+  },
+  "seconds": 0.0
+}

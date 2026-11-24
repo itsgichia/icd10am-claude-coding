@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "74d57f2e9126",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nName: [Patient Name]\nMedical Record Number: [MRN]\n\nAdmission Date: [Admission Date]\nDischarge Date: [Discharge Date]\n\nHistory of Present Illness:\nThe patient, a 53-year-old male with a history of type 2 diabetes mellitus and dyslipidemia, underwent laparoscopic right hemicolectomy with D3 lymphadenectomy for moderately differentiated tubular adenocarcinoma of the ascending colon. Postoperative surveillance revealed a 23-mm sessile polyp at the superior rectum, which was successfully removed by endoscopic mucosal resection. 39 months after EMR, a mass lesion was found in the presacral area on CT as postoperative surveillance. The patient underwent LAR with D3 lymphadenectomy, and the recurrent site was completely removed without adjuvant chemotherapy.\n\nHospital Course:\n\nAdmission:\nThe patient was admitted for LAR with D3 lymphadenectomy due to presacral lymph node recurrence of rectal cancer.\n\nTreatment:\nThe patient underwent LAR with D3 lymphadenectomy, and the recurrent site was completely removed by surgery.\n\nClinical Progress:\nThe postoperative course was uneventful, and he was discharged from our hospital on postoperative day 11.\n\nDischarge Condition:\nThe patient was discharged in a stable condition.\nDischarge Diagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was discharged home in stable condition.\n\nInstructions:\nThe patient should follow up with his primary care physician and oncologist for postoperative surveillance per their recommendations.\n\nSigned,\n[Physician Name]\n[Title]"
+      }
+    ]
+  },
+  "text": "The principal diagnosis would most likely be **C77.5, Secondary and unspecified malignant neoplasm of intrapelvic lymph nodes**.\n\n**Rationale:**\n- The admission was for LAR with D3 lymphadenectomy for a **presacral lymph node recurrence**. Presacral nodes are intrapelvic, so C77.5 fits the site treated.\n- Under ICD-10-AM convention, when a patient is admitted specifically to treat a secondary (metastatic or recurrent) malignancy, the secondary site is coded as principal.\n- The original primary was in the ascending colon (treated by right hemicolectomy) and the rectal lesion was removed by EMR. Since the primary is no longer present, it is typically recorded as an additional code, such as **Z85.038** (personal history of other malignant neoplasm of large intestine) or **Z85.048** (personal history of malignant neoplasm of rectum, rectosigmoid junction, and anus), depending on how the coder classifies the prior disease. The rectal EMR lesion's histology would need to be checked to decide between these.\n\n**Caveats:**\n- The discharge diagnosis section is blank, so the final code should be confirmed against the operative and pathology reports.\n- If the pathology shows the recurrence is a rectal primary rather than a nodal metastasis, the coding would change. Coders should verify this before finalising.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 606,
+    "output_tokens": 1165
+  },
+  "seconds": 0.0
+}

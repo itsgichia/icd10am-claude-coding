@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "a5db00fdc2b8",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\n\nDate of Admission: [Redacted]\n\nDate of Discharge: [Redacted]\n\nReason for Admission:\nThe patient was admitted due to dizziness, fatigue, and increasing abdominal distension.\n\nHospital Course:\nDuring the hospital stay, the patient was found to have anemia, hypoalbuminemia, and renal failure. Tumor markers were within normal range. A CT scan revealed an extremely large mass occupying most of the abdomen and pelvis, which was ultimately diagnosed as type 1 papillary RCC with nuclear grade 2. The mass was resected after dissecting it free from its attachments. A perforated anterior duodenal ulcer was also noted and repaired. The patient developed intra-abdominal abscess and required drainage and antibiotics in the intensive care unit. Due to ongoing deterioration, comfort care measures were initiated and the patient deceased 1 month later.\nDischarge Diagnosis: [diagnosis section withheld]\nTreatment During Hospital Stay:\nThe patient was started on enteral feeds and underwent surgery for resection of the mass and repair of a perforated anterior duodenal ulcer. The patient also received antibiotics and pressors during the hospital stay.\n\nFollow-up:\nThe patient is deceased and requires no further follow-up.\n\nDischarge Medications:\nN/A\n\nDischarge Condition:\nDeceased.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"C64\", \"condition\": \"Malignant neoplasm of kidney, except renal pelvis (papillary renal cell carcinoma)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 613,
+    "output_tokens": 52
+  },
+  "seconds": 0.0
+}

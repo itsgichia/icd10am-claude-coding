@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "8f808a644d03",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nPatient Discharge Summary:\n\nPatient Name: [Patient Name]\nAdmission Date: [Admission Date]\nDischarge Date: [Discharge Date]\n\nHospital Course:\nThe patient was admitted to the hospital due to lower extremity swelling and pain for four days. Physical examination revealed left lower limb pitting edema and calf tenderness. Color Doppler ultrasound showed an extensive DVT affecting the common iliac, external iliac and common femoral vein as well as superficial femoral down to popliteal vein. Treatment included bed rest, elevation with bandaging of left leg, and low molecular weight heparin injections. Investigations revealed no underlying etiology. Abdominal and pelvic US and CT scan showed an impacting stone and a severe left hydroureteronephrosis with almost lost of cortical thickness. Percutaneous nephrostomy was performed to decompress the hydronephrotic kidney. JJ stent was inserted and subsequently removed. Six weeks later, Doppler US showed complete recanalization of the superficial femoral, popliteal as well as the proximal segment of deep veins of the leg but common iliac, external iliac and common femoral veins and proximal superficial femoral vein were still partially thrombosed. Through pneumatic lithotripsy, the stone was fragmented under spinal anesthesia. Three months after that, Doppler US showed complete recanalization of iliac vessels.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nTreatment included bed rest, elevation with bandaging of left leg, and low molecular weight heparin injections. Percutaneous nephrostomy was performed to decompress the hydronephrotic kidney. JJ stent was inserted and subsequently removed. Pneumatic lithotripsy was performed to fragment the stone under spinal anesthesia. The patient was discharged on oral anticoagulation in the form of rivaroxaban 20 mg daily.\n\nFollow-up:\nThe patient is advised to have regular follow-up visits with their healthcare provider.\n\nSigned by: [Healthcare Provider Name and Title]"
+      }
+    ]
+  },
+  "text": "The most likely ICD-10-AM principal diagnosis is **I82.42, Acute embolism and thrombosis of iliac vein**. The admission was for left leg swelling and pain, and the investigation established an extensive acute DVT as the condition chiefly responsible for the admission. The iliac segment is the most proximal and extensive involvement, and the most significant treatment was directed at the DVT.\n\nRelevant secondary codes would likely include:\n- **I82.41**, acute thrombosis of the femoral vein (common femoral and superficial femoral)\n- **I82.43**, acute thrombosis of the popliteal vein\n- **N13.2**, hydronephrosis with renal and ureteral calculous obstruction\n- **N20.1**, calculus of ureter\n\nThe principal diagnosis is debatable. The summary does not state that the stone caused the DVT, and \"no underlying etiology\" was found. If the coder determined that the ureteric obstruction was the underlying cause of the DVT, or that the stone was the main reason for the admission, the principal diagnosis could instead be N20.1 or N13.2. Final code assignment should be confirmed by a clinical coder against the full medical record and the current ICD-10-AM/ACHI Australian Coding Standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 748,
+    "output_tokens": 1477
+  },
+  "seconds": 0.0
+}

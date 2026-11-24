@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "39c0d5885b21",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\n\nDOB: [REDACTED]     Age: 54     Sex: Male\n\nAdmission Date: [REDACTED]     Discharge Date: [REDACTED]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted post-SIRT after whole-body 18-fluorine-fluorodeoxyglucose positron-emission-tomography/computed tomography (18F-FDG PET/CT) revealed malignant lesions in the medial segment of the left hepatic lobe, following left lateral segmentectomy that had been performed. The patient was referred to our hospital as there were no local options of stereotactic ablative radiation therapy.\n\nDuring the course of follow-up, the patient developed progressive dyspnea and dry cough three weeks post-SIRT. Chest radiogram and computed tomography of the thorax were performed, and the patient put on intravenous prednisone at 1 mg/Kg/day with antibiotic therapy. Seven weeks post-SIRT, 18F-FDG PET/CT scan appeared to show multiple ground-glass opacities in both lungs compatible with radiation pneumonitis. The patient was rehospitalized and glucocorticoid treatment with modified antibiotherapy continued. Four weeks post-SIRT, DLCO reduction was more remarkable and the SpO2 level dropped to 97%.\n\nEleven weeks post-SIRT, a CT scan revealed bilateral diffuse, patchy ground-glass attenuation/consolidation areas seemed to have progressed, along with a significant decrease in SpO2 from 92 to 82%. The patient was transferred to the Intensive Care Unit (ICU), and one week later, the patient expired due to pulmonary complications.\n\nDischarge Medications:\n\nNone.\n\nFollow-up:\n\nThe patient expired during Hospitalization. \n\nDischarge Condition:\n\nDeceased.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The episode described is the rehospitalization in which the patient was treated for radiation pneumonitis after SIRT (selective internal radiation therapy) and then died of pulmonary complications. The condition chiefly responsible for this admission is therefore radiation pneumonitis.\n\nIn ICD-10-AM, radiation pneumonitis is coded to J70.0 (acute pulmonary manifestations due to radiation). The three-character category is J70, in Chapter X (Diseases of the respiratory system). An external cause code for the adverse effect of radiation therapy (Y84.2) would be added as a secondary code.\n\nThe patient was originally admitted for SIRT of liver malignancy, but the narrative is dominated by the rehospitalization for pneumonitis. The principal diagnosis for the episode as described is therefore the pneumonitis, not the hepatic malignancy.\n\nCODE: J70",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 879,
+    "output_tokens": 292
+  },
+  "seconds": 0.0
+}

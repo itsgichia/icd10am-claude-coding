@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "38c23795f24d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nAdmission Date: [Date]\n\nDischarge Date: [Date]\n\nPatient Name: [Name]\n\nMedical Record Number: [Number]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n\nA Pediatric Emergency Medicine (PEM) fellow conducted a point-of-care ultrasound (POCUS) examination on the patient. The examination revealed a large circumferential pericardial effusion, which was causing cardiac tamponade. The patient was immediately referred to a pediatric cardiologist, who performed an ultrasound-guided pericardiocentesis to drain one liter of fluid from the pericardial sac. \n\nThe patient responded well to the pericardiocentesis and was observed without recurrence of effusion or tamponade. The patient's pneumonia was also concurrently treated with appropriate antibiotic therapy. Subsequently, the patient's condition stabilized. \n\nAt the end of the hospital course, the patient was free from chest pain, shortness of breath, and diaphoresis. The patient's respiratory rate, heart rate, blood pressure, and pulse oximetry were within normal limits.\n\nInstructions for Discharge:\n\nThe patient was advised to continue with the prescribed antibiotics and keep follow-up appointments as per the pediatrician's advice. The parent/guardian was advised to keep a watch for any re-occurrence of chest pain, shortness of breath, and sweating. \n\nConclusion:\n\nThe patient was admitted with pneumonia and subsequently developed cardiac tamponade. The patient was managed with pericardiocentesis and a course of antibiotics. The patient responded well to the treatment, and no complications were noted during the hospital course. The parent/guardian was advised to keep follow-up appointments for the patient's ongoing care.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "I31",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 725,
+    "output_tokens": 230
+  },
+  "seconds": 0.0
+}

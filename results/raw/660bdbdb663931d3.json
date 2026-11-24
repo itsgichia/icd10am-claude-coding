@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "f50682d1fc8b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient Name: [redacted]\nMedical Record Number: [redacted]\nAdmission Date: [redacted]\nDischarge Date: [redacted]\nAdmitting Diagnosis: [diagnosis section withheld]\nPrincipal Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient presented with severe right hypochondrium pain along with weight loss and alteration of general condition lasting for six months. The physical examination and laboratory examination were unremarkable. However, abdominal ultrasonography showed a 2.6 cm diameter intraluminal polypoid hyperechoic mass in the gallbladder. Computed tomography scan confirmed the presence of a gallbladder tumor that appeared as an enhancing pedunculated tumor without thickening of the gallbladder wall. A TDM scan showed a cortical fleshy nodule of the right kidney. \n\nThe patient underwent an open cholecystectomy with a partial liver resection. The cholecystectomy specimen showed a metastatic renal cell carcinoma without any involvement of the gallbladder wall. A right radical nephrectomy was carried out through a right subcostal incision, and the histological study revealed a typical conventional clear cell renal cell carcinoma.\n\nThe patient was transferred to the department of Urology for further treatment. Following the nephrectomy, the patient recovered well with appropriate management of the surgical wounds.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Medications:\n\nNone\n\nFollow-up Plan:\n\nThe patient was advised to follow up with the department of Urology as per recommended schedule for a further course of treatment.\t\n\nDisposition:\n\nThe patient was discharged in stable condition."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: C64 Malignant neoplasm of kidney, except renal pelvis\n\nThis is the right kidney, primary site, clear cell renal cell carcinoma.\n\n## Rationale\n- Investigation of the gallbladder mass found an unsuspected primary malignancy: conventional clear cell RCC of the right kidney.\n- In the same episode, treatment targeted both the metastasis (cholecystectomy with partial liver resection) and the primary (right radical nephrectomy).\n- Under ACS 0236 (Neoplasm coding and sequencing), when both the primary and the secondary are treated in the same admission, the primary malignancy is sequenced first.\n\n## Additional codes\n| Code | Description |\n|---|---|\n| **C78.8** | Secondary malignant neoplasm of other and unspecified digestive organs (gallbladder metastasis) |\n| **M8310/3** | Clear cell adenocarcinoma NOS (morphology for RCC) |\n| R63.4 / R53 | Not coded separately. Weight loss and general decline are integral to the malignancy. |\n\n## Procedures (ACHI)\n- Open cholecystectomy with partial hepatectomy (block 965 / 953 range)\n- Radical nephrectomy, right (36516-00 range)\n\n## Caveat\nThe gallbladder mass was the reason for admission. If the nephrectomy was a **separate episode** after transfer to Urology, the sequencing changes:\n- **This episode:** C78.8 as principal, because treatment was directed only at the secondary site. C64 is coded as additional.\n- **The Urology episode:** C64 as principal.\n\nCheck the episode boundaries in the full record before finalising.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 615,
+    "output_tokens": 1042
+  },
+  "seconds": 0.0
+}

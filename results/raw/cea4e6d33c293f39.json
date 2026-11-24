@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "c727c2953886",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDISCHARGE SUMMARY:\n\nAdmission Date: [date]\nDischarge Date: [date]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient, an 82-year-old Caucasian female, was admitted to the hospital due to fatigue and a hemoglobin level of 6.2 g/dL. She had a past medical history of heart failure with reduced ejection fraction, low AS, persistent hypotension, coronary artery disease, paroxysmal atrial fibrillation, chronic kidney disease, and chronic obstructive pulmonary disease. She was noted to have evidence of heart failure exacerbation with bibasilar crackles and pedal edema. During her hospital course, she developed atrial fibrillation with rapid ventricular response and was transferred to the cardiac critical care unit. There was a multi-disciplinary discussion about potential treatment options, including balloon aortic valvuloplasty and subsequent TAVR. Transthoracic echocardiogram (TTE) demonstrated low flow low gradient moderate to severe AS, and left heart catheterization showed areas between 1.22 and 1.42 cm2 with lower concern for severe AS. The patient was transferred back to the intermediate cardiac care unit with optimized rate control for atrial fibrillation, anticoagulation bridging, and diuresis for heart failure exacerbation. The patient also had elevated vWF activity on laboratory workup, but there was no evidence of active GI bleeding.\n\nDischarge Medications:\nThe patient was discharged on oral medication regimens, which included [list of medications], to be continued as directed by a primary care physician.\n\nFollow-up:\nThe patient is advised to follow up with her primary care physician, interventional cardiology services, cardiothoracic surgery, and other necessary specialists as per her routine schedule.\n\nDischarge Condition:\nThe patient was discharged in stable condition with resolution of active GI bleeding, and improved heart failure exacerbation.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "K92",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 790,
+    "output_tokens": 264
+  },
+  "seconds": 0.0
+}

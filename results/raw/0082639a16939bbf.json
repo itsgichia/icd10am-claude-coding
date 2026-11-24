@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "575542c57a56",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nHospital Course:\nAdmission Date: [DATE]\nDischarge Date: [DATE]\nLength of Stay: [NUMBER] days\n\nPatient Information:\nName: [NAME]\nAge: 76 years old\nGender: Male\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\nThe patient, a 76-year-old Caucasian male with a family history of Parkinson's disease, was admitted to our hospital after experiencing a shuffling gait. Neurological examination revealed bilateral rigidity and slow gait with reduced arm swing, as well as processing speed and memory difficulties. The patient also presented with urinary retention, orthostatic hypotension, erectile dysfunction, and stridor. Carbidopa/levodopa was unsuccessfully administered. The patient was diagnosed with multiple system atrophy (MSA), due to levodopa-unresponsive parkinsonism and autonomic dysfunction.\n\nDuring the hospital course, the patient received comprehensive care from a multidisciplinary team, including neurologists and primary care physicians. Management of orthostatic hypotension and urinary retention were coordinated with the urology department. The patient was administered supportive therapy, including physical therapy and occupational therapy, to address mobility and activities of daily living. The patient's condition remained stable throughout his hospital stay.\n\nAt the time of discharge, the patient was instructed to continue with his current medications and follow up with his primary care physician and neurologist. The patient was also instructed to contact his healthcare provider if any new or worsening symptoms arise.\nDischarge Diagnosis: [diagnosis section withheld]\nFollow-up Instructions:\n1. Continue current medication regimen as prescribed.\n2. Follow up with primary care physician and neurologist.\n3. Contact healthcare provider if any new or worsening symptoms arise.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: G90**\n\n- **Chapter (G):** The condition established after investigation is multiple system atrophy (MSA). This is a neurodegenerative disease, so it belongs to Chapter G, the nervous system.\n- **Category (90):** MSA is indexed to G90.3, multi-system degeneration (of the autonomic nervous system), within G90, disorders of the autonomic nervous system. That fits this patient, whose autonomic dysfunction (orthostatic hypotension, urinary retention, erectile dysfunction) was central to the diagnosis.\n- **What it is not:** The shuffling gait, rigidity, urinary retention, orthostatic hypotension and stridor are features of MSA, so they are not coded as the principal diagnosis. Parkinsonism that did not respond to levodopa points away from Parkinson's disease (G20).\n\nOne caveat: some newer classification versions split MSA into subtypes, such as a parkinsonian type under G23. If the ICD-10-AM edition in use has that split, this parkinsonian-predominant case would code to G23 instead. Under the standard indexing, the category is G90.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1158,
+    "output_tokens": 851
+  },
+  "seconds": 0.0
+}

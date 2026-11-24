@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "a5db00fdc2b8",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\n\nDate of Admission: [Redacted]\n\nDate of Discharge: [Redacted]\n\nReason for Admission:\nThe patient was admitted due to dizziness, fatigue, and increasing abdominal distension.\n\nHospital Course:\nDuring the hospital stay, the patient was found to have anemia, hypoalbuminemia, and renal failure. Tumor markers were within normal range. A CT scan revealed an extremely large mass occupying most of the abdomen and pelvis, which was ultimately diagnosed as type 1 papillary RCC with nuclear grade 2. The mass was resected after dissecting it free from its attachments. A perforated anterior duodenal ulcer was also noted and repaired. The patient developed intra-abdominal abscess and required drainage and antibiotics in the intensive care unit. Due to ongoing deterioration, comfort care measures were initiated and the patient deceased 1 month later.\nDischarge Diagnosis: [diagnosis section withheld]\nTreatment During Hospital Stay:\nThe patient was started on enteral feeds and underwent surgery for resection of the mass and repair of a perforated anterior duodenal ulcer. The patient also received antibiotics and pressors during the hospital stay.\n\nFollow-up:\nThe patient is deceased and requires no further follow-up.\n\nDischarge Medications:\nN/A\n\nDischarge Condition:\nDeceased."
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **C64 \u2013 Malignant neoplasm of kidney, except renal pelvis**\n\n## Rationale\n\n- **Condition chiefly responsible for the admission.** Per ACS 0001 (Principal Diagnosis), this is the condition established after study to be chiefly responsible for the episode of care. The patient presented with dizziness, fatigue and abdominal distension. Workup found a very large abdominopelvic mass, confirmed as **type 1 papillary renal cell carcinoma**. It was the focus of the main surgical intervention (resection).\n- **Symptoms are not coded as principal.** Dizziness, fatigue and distension are explained by the confirmed malignancy, so they are not sequenced first.\n- **C64 is a 3-character code in ICD-10-AM.** Unlike ICD-10-CM, ICD-10-AM has no laterality subdivisions such as C64.1 or C64.2.\n\n## Associated morphology code\n- **M8260/3** \u2013 Papillary adenocarcinoma NOS (papillary renal cell carcinoma). In ICD-10-AM, nuclear grade is not captured in the morphology code.\n\n## Likely additional diagnoses (for completeness)\n| Condition | Suggested code |\n|---|---|\n| Perforated duodenal ulcer (acute, no haemorrhage) | K26.1 (or K26.5 if chronic) |\n| Intra-abdominal abscess (postprocedural) | T81.4 + Y83.x + Y92.22 (or K65.0 if not attributed to surgery) |\n| Renal failure | N17.9 / N19 (per documentation) |\n| Anaemia | D63.0* (anaemia in neoplastic disease), if documented as related |\n| Hypoalbuminaemia | E88.0 / E46 (per documentation) |\n| Palliative care | Z51.5 |\n\n**Caveat:** Some sequencing depends on details not given, such as whether the duodenal perforation was present on admission. The final assignment should be confirmed against the full clinical record and your local coding standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 521,
+    "output_tokens": 962
+  },
+  "seconds": 0.0
+}

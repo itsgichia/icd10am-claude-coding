@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "d0d5d40b00e0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\n\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\n\nHospital Course:\nThe patient, a 67-year-old male, presented with severe shortness of breath and fast atrial fibrillation. Coronary angiogram revealed no significant coronary artery disease, CT scan revealed a large penetrating atherosclerotic ulcer at the junction of the distal ascending aorta and the undersurface of aortic arch, and echocardiogram showed grossly abnormal-looking distal ascending aorta with a large pseudoaneurysm in relation to the distal ascending aorta. The patient underwent aortic surgery and made an uncomplicated recovery.\n\nThe patient subsequently represented with worsening shortness of breath 6 months later and was found to have a large pseudoaneurysm in relation to the aortic arch. A redo sternotomy was performed, and the patient underwent total arch replacement. The false aneurysm cavity was extensively debrided and laid open. The patient had gradual respiratory weaning and required a percutaneous tracheostomy and antibiotics.\n\nHowever, the patient's condition deteriorated suddenly after 6 weeks when a rupture and contrast leak of the descending thoracic aorta were discovered, along with a large hematoma. The patient underwent TEVAR with an excellent result. The patient also developed a pathological fracture of left proximal tibia and was diagnosed with metastatic renal cancer. The patient was referred to the palliative care team.\n\nThe patient continued to deteriorate and passed away peacefully 65 days following his total arch replacement.\nDiagnosis: [diagnosis section withheld]\nProcedures:\nTotal arch replacement, TEVAR.\n\nCondition at Discharge:\nThe patient passed away.\n\nInstructions at Discharge:\nNone.\n\nFollow-Up Care:\nNone."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis is a pseudoaneurysm of the thoracic aorta (aortic arch), coded I71.2 or I71.1. The choice depends on rupture status and on how ICD-10-AM indexes false aneurysm, so please check it against your codebook.\n\n**Reasoning**\n\n- The admission in question is the second one, for worsening shortness of breath. It found a large pseudoaneurysm of the aortic arch, which was treated with total arch replacement.\n- The pseudoaneurysm arose from a penetrating atherosclerotic ulcer of the aorta. That ulcer was the original problem and was treated at the first surgery.\n- In ICD-10-AM, aneurysm of the thoracic aorta is classified to I71.1 (ruptured) or I71.2 (without rupture). False aneurysm is indexed to the aneurysm of the site involved.\n- The arch pseudoaneurysm was not ruptured at admission. The later rupture of the descending thoracic aorta was a separate event during the stay, so it would be coded as an additional diagnosis.\n\n**Suggested coding**\n\n- **Principal diagnosis: I71.2**, thoracic aortic aneurysm without mention of rupture. This covers the pseudoaneurysm of the aortic arch that was the reason for admission and the target of the total arch replacement.\n- **Additional diagnoses:**\n  - I71.1 for the rupture of the descending thoracic aorta, if it is regarded as a separate ruptured aneurysm or aortic rupture. If it is instead regarded as a non-aneurysmal rupture, I71.8 would apply.\n  - I48.- for atrial fibrillation.\n  - C64 for renal cancer, with C79.5 for the bone metastasis.\n  - M84.5- for the pathological fracture in neoplastic disease.\n  - Z51.5 for palliative care.\n\n**Principal diagnosis: I71.2**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 688,
+    "output_tokens": 642
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "657e18ef08b7",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\n\nDate of Admission: [Redacted]\nDate of Discharge: [Redacted]\nDiagnosis: [diagnosis section withheld]\nHistory of Present Illness:\nThe patient, a 10-year, 10-month-old male neutered Shih Tzu, was admitted for further examination of a peracute onset of lethargy and left-sided circling. The general physical examination was normal. Neurological examination revealed circling to the left, decreased proprioceptive positioning of the right thoracic and pelvic limbs, and a decreased menace response on the right side. Routine hematology and serum biochemistry were normal. Urine-specific gravity, urine chemistry dipstick analysis, sediment examination, and urine culture were all unremarkable. Assessment of NIBP using Doppler identified a systolic pressure of 170 mmHg. Fibrinogen, PT, aPTT, and D-dimer were all within normal limits. TEG analysis revealed a shortened R time and SP on citrated plasma. MRI scan of the brain under general anesthesia showed an extensive intra-axial, focal, well-demarcated lesion affecting the cerebral gray matter extending from the left frontal lobe to the rostral aspects of the left temporal lobe. The lesion was T2W and FLAIR hyperintense compared to normal gray matter and T1W hypointense. There was evidence of mild mass effect, and there was no contrast enhancement.\n\nHospital Course:\nThe patient was closely monitored, and no underlying cause for the ischemic stroke could be identified. The dog improved with time and was discharged from the hospital 72 h after admission. The dog made a near to full recovery within 14 days and was neurologically normal at re-assessment five months later.\n\nMedications:\nN/A\n\nFollow-up Care:\nNone necessary at this time.\n\nSigned,\n[Physician Name]\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "I63",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 756,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

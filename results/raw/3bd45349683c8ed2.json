@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "e6ec7ab43b35",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\n\nAge: 82\n\nSex: Female\n\nReason for Hospitalization:\nThe patient presented to the emergency department with epigastric pain, heartburn, and nausea due to a large hiatus hernia with a portion of the stomach within the intrathoracic cavity.\n\nHospital Course:\nThe patient was admitted to the Observation department and was treated with nasogastric decompression, zero diet, fluid therapy, a prokinetic and a proton pump inhibitor, which resulted in clinical improvement. The patient was then discharged and advised to perform an upper endoscopy, but declined due to her age and multiple comorbidities.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient received nasogastric decompression, zero diet, fluid therapy, a prokinetic and a proton pump inhibitor, which resulted in clinical improvement. The patient was advised to perform an upper endoscopy, but declined surgical intervention or any other invasive intervention.\n\nFollow-up:\nThe patient was advised to continue with dietary advice and pharmacological treatment directed at her symptoms. A solid link with the family doctor was made, leading to the optimal possible resolution of the patient's symptoms and improved physical and mental well-being.\n\nDisposition:\nThe patient was discharged with outpatient follow-up."
+      }
+    ]
+  },
+  "text": "The most likely ICD-10-AM principal diagnosis is **K44.9, Diaphragmatic hernia without obstruction or gangrene**.\n\nThe discharge summary attributes the presentation (epigastric pain, heartburn, nausea) to a large hiatus hernia with stomach in the intrathoracic cavity, and the hernia is the condition treated. The summary does not document obstruction or gangrene, so K44.9 applies.\n\nTwo points could change the code:\n- **K44.0, Diaphragmatic hernia with obstruction**, if the treating clinician documented obstruction. Nasogastric decompression and nil by mouth might suggest it, but the summary does not state it, and coders cannot infer it from treatment alone.\n- **K44.1, Diaphragmatic hernia with gangrene**, which is not supported here.\n\nThe withheld diagnosis section should be checked for an explicit statement of obstruction before final coding.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 493,
+    "output_tokens": 621
+  },
+  "seconds": 0.0
+}

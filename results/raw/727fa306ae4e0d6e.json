@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7741ab2e4606",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Not provided\nAge: 40 years\nGender: Female\n\nHospital Course:\n\nThe patient was admitted to TCVGH due to severe acute respiratory distress syndrome (ARDS) caused by wasp stings. Upon arrival, the patient had respiratory distress and was noted to have nearly 100 painful, reddish, and itchy papules. The initial laboratory examinations showed abnormal liver function tests, high LDH, CK, and increased creatinine level. Additionally, the patient had 3+ dipstick proteinuria and 5 to 10 red blood cells per high power field in urinalysis.\n\nIntravenous corticosteroid and anti-histamine agents were administered, and the patient underwent intubation and protective ventilation with low tidal volume and high positive end-expiratory pressure. The patient also underwent sedation, neuromuscular blockade, hemodialysis, and plasmapheresis. Anuria was observed for nearly 10 days, and the patient received eight sessions of hemodialysis.\n\nThe respiratory condition improved gradually, and the patient was extubated on day 8. The levels of CK, AST, ALT, and LDH peaked on day 2 and recovered with the aforementioned management. The patient was discharged on day 24 with creatinine 7.12 mg/dl. During follow-up in the outpatient department, the creatinine returned to normal (Cr:1.16) on day 71.\nDiagnosis: [diagnosis section withheld]\nPlan:\n\nThe patient was discharged with recommendations for follow-up care and monitoring, including regular visits with a nephrologist and an annual physical exam. The patient should avoid future exposure to wasp stings to prevent recurrence of ARDS.\n\nThe patient was provided with educational information about wasp stings and the risks associated with this condition. They were advised to seek prompt medical attention in case of any adverse reactions in the future.\n\nDisposition:\n\nDischarged."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: T63.4 Toxic effect of venom of other arthropods (wasp sting)**, with the external cause and manifestations coded as additional diagnoses. This is my coding judgment from the summary. The diagnosis section was withheld, so I could not check it against the documented diagnosis.\n\n**Reasoning**\n\n- The patient was admitted for ARDS and multi-organ injury (acute kidney injury with anuria, rhabdomyolysis, liver injury) after multiple wasp stings. The stings are the underlying cause, and the ARDS and other organ injuries are their manifestations.\n- ICD-10-AM classifies venom toxicity in T63.-. Wasp, hornet and bee stings are coded to T63.4 (venom of other arthropods). In the ICD-10 family, T63.2 covers scorpion venom and T63.3 covers spider venom.\n- Because the stings were the reason for admission, the venom toxicity is sequenced first.\n- An alternative is to code the ARDS (J80) as principal, since it was the dominant condition requiring ventilation. Under the Australian Coding Standards, though, the condition established after study to be chiefly responsible for the admission is usually the injury or poisoning code, with the manifestations as additional codes.\n\n**Suggested additional codes**\n\n- J80 Acute respiratory distress syndrome\n- N17.0 Acute kidney failure with tubular necrosis (or N17.9 if not specified)\n- M62.82 Rhabdomyolysis\n- K72.0 or R74.- for the liver injury or abnormal liver enzymes, depending on documentation\n- Y-code or place-of-occurrence and activity codes as applicable. In ICD-10-AM, the external cause for the wasp sting is X23 (contact with hornets, wasps and bees).\n- Procedure codes (ACHI) for mechanical ventilation, hemodialysis and plasmapheresis\n\nThe final code depends on the documented diagnosis statement. If the attending physician recorded anaphylaxis or an allergic reaction, T63.4 would change to T78.0 or T78.2, with X23 as the external cause.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 689,
+    "output_tokens": 715
+  },
+  "seconds": 0.0
+}

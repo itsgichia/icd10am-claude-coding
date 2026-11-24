@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "4e3e19cc5a80",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [Name]\nMedical Record Number: [Medical Record Number]\nAge: 70\nSex: Male\n\nHOSPITAL COURSE:\n\nThe patient presented to the emergency department with left lower back pain and left flank pain, which had radiated to the left thigh over several days. The patient also had intermittent fever and chills. Upon admission, the patient exhibited drowsiness and was found to have tenderness in the left lower abdomen and swelling in the left thigh, with limited range of motion. Laboratory data indicated leukocytosis, severe coagulopathy, elevated C-reactive protein, hyperlactatemia, and acute kidney injury. CT scans revealed fluid accumulation over the left iliopsoas muscle that extended into the retroperitoneum, left pelvic cavity, and left thigh region, which suggested an iliopsoas abscess and necrotizing fasciitis. Blood culture was performed, and empirical antibiotic therapy was initiated.\n\nDuring the hospital stay, the patient's condition was managed appropriately with antibiotic therapy. The patient's vital signs were monitored regularly, and he was given supportive care. The patient's condition gradually improved, and he no longer exhibited any drowsiness. The patient's swelling in the left thigh improved, and he demonstrated a greater range of motion.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\n\n1. Take medications as prescribed.\n2. Rest and avoid any strenuous activity until cleared by a physician.\n3. Keep the area of swelling in the left thigh clean and dry.\n4. Follow up with a primary care physician or specialist as directed.\n5. Report any new symptoms or side effects to a physician immediately.\n\nDISCHARGE MEDICATIONS:\n\nNone mentioned in the case report\n\nFOLLOW UP:\n\nThe patient will follow up with a primary care physician or specialist as directed."
+      }
+    ]
+  },
+  "text": "# Suggested principal diagnosis: **K68.1 Retroperitoneal abscess** (iliopsoas/psoas abscess)\n\nThis is a provisional code because the discharge diagnosis section is withheld.\n\n## Why K68.1\n\n- **Main condition:** The CT showed a left iliopsoas abscess extending into the retroperitoneum, pelvis and thigh. In ICD-10-AM, a nontuberculous psoas abscess is indexed to K68.1.\n- **Necrotizing fasciitis** appears to be secondary spread from the abscess, so it is best coded as an additional diagnosis:\n  - **M72.6 Necrotising fasciitis**\n  - plus the site code, if your edition requires one.\n\n## Important caveat: possible sepsis\n\nThe patient had fever, drowsiness, leukocytosis, high lactate, severe coagulopathy and acute kidney injury. This picture strongly suggests sepsis with organ dysfunction.\n\n- **If the clinician documents sepsis present on admission**, the principal diagnosis changes:\n  - Under ACS 0110 (SIRS/sepsis), sepsis is sequenced first.\n  - Use **A41.9 Sepsis, unspecified**, or a specific A40/A41 code if the blood culture identifies an organism.\n  - K68.1 and M72.6 then become additional diagnoses.\n- **Coders cannot assign sepsis from clinical indicators alone.** If sepsis is not documented, query the clinician before finalising.\n\n## Other likely additional diagnoses (if documented)\n\n- **N17.9** Acute kidney failure, unspecified\n- **D68.9** Coagulation defect, unspecified (or a more specific code, such as D65 for DIC, if documented)\n- **E87.2** Acidosis, if lactic acidosis is documented\n- **R40.0** Somnolence, only if clinically significant and not integral to sepsis\n- **B95\u2013B96 organism code**, once the culture result is known",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 712,
+    "output_tokens": 1189
+  },
+  "seconds": 0.0
+}

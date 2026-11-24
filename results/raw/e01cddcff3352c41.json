@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "7741ab2e4606",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Not provided\nAge: 40 years\nGender: Female\n\nHospital Course:\n\nThe patient was admitted to TCVGH due to severe acute respiratory distress syndrome (ARDS) caused by wasp stings. Upon arrival, the patient had respiratory distress and was noted to have nearly 100 painful, reddish, and itchy papules. The initial laboratory examinations showed abnormal liver function tests, high LDH, CK, and increased creatinine level. Additionally, the patient had 3+ dipstick proteinuria and 5 to 10 red blood cells per high power field in urinalysis.\n\nIntravenous corticosteroid and anti-histamine agents were administered, and the patient underwent intubation and protective ventilation with low tidal volume and high positive end-expiratory pressure. The patient also underwent sedation, neuromuscular blockade, hemodialysis, and plasmapheresis. Anuria was observed for nearly 10 days, and the patient received eight sessions of hemodialysis.\n\nThe respiratory condition improved gradually, and the patient was extubated on day 8. The levels of CK, AST, ALT, and LDH peaked on day 2 and recovered with the aforementioned management. The patient was discharged on day 24 with creatinine 7.12 mg/dl. During follow-up in the outpatient department, the creatinine returned to normal (Cr:1.16) on day 71.\nDiagnosis: [diagnosis section withheld]\nPlan:\n\nThe patient was discharged with recommendations for follow-up care and monitoring, including regular visits with a nephrologist and an annual physical exam. The patient should avoid future exposure to wasp stings to prevent recurrence of ARDS.\n\nThe patient was provided with educational information about wasp stings and the risks associated with this condition. They were advised to seek prompt medical attention in case of any adverse reactions in the future.\n\nDisposition:\n\nDischarged.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"T63\", \"condition\": \"Toxic effect of contact with venomous animals (wasp sting)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 781,
+    "output_tokens": 39
+  },
+  "seconds": 0.0
+}

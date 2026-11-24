@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "806845a87c2f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Info:\nName: \nDOB: \nGender: \nAdmission Date: \nDischarge Date: \n\nHospital Course:\nThe patient was admitted to our facility with incidentally detected bilateral small solid renal and adrenal masses, a cystic mass at the head of the pancreas, and a paracaval mass. The patient was diagnosed with VHL disease and staged surgical approach was recommended based on the radiologic findings.\nIn the first stage, through a subcostal anterior transperitoneal approach, right adrenalectomy, resection of the paracaval mass, and enucleation for the 9 small solid renal masses were performed. A Whipple procedure was also performed to remove two smaller pancreatic lesions.\nIn the second stage, through an intercostal extraperitoneal approach, 5 pheochromocytomas were removed and 4 cystic renal cell carcinomas were enucleated.\nAfter a followup of 1,5 years, the patient developed a left 1 cm renal mass, which was treated by percutaneous, ultrasound-guided radiofrequency ablation.\nPancreatic and adrenal functions were normal throughout the follow-up period. Blood cortisol level was 21 \u03bcg/dL upon his last control visit. There was no adrenal or extra-adrenal pheochromocytoma recurrence being detected to date.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nSurgery for right adrenalectomy, resection of the paracaval mass, enucleation of small renal masses, and Whipple procedure. Followed by surgery for removal of pheochromocytomas and enucleation of cystic renal cell carcinomas. Finally, percutaneous, ultrasound-guided radiofrequency ablation for the left renal mass. No replacement therapy was required for pancreatic and adrenal functions.\n\nFollow-up:\nThe patient will be followed up regularly for the recurrence of renal masses, pheochromocytomas, and paragangliomas. Additionally, pancreatic and adrenal functions will also be monitored."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: Q85.83 \u2013 von Hippel-Lindau syndrome**\n\n**Rationale**\n\n- The summary states the patient was diagnosed with VHL disease, and the whole staged surgical program (adrenalectomy, pancreatic and renal procedures, pheochromocytoma removal) was directed at its manifestations.\n- In ICD-10-AM, von Hippel-Lindau syndrome is classified to Q85.8 (Other phakomatoses, not elsewhere classified), with the fifth character giving Q85.80 or Q85.83 as the VHL-specific code in the current editions. I am confident about the Q85.8 stem. I am less sure of the exact fifth-character subdivision, so please verify it against your edition's Tabular List.\n- The VHL-related tumours would be coded as additional diagnoses, because the neoplasms are manifestations of the syndrome:\n  - Renal cell carcinoma, C64 (malignant neoplasm of kidney, except renal pelvis)\n  - Pheochromocytoma of the adrenal, with morphology M8700/3 or /0, coded D35.0 (benign) or C74.1 (malignant) depending on behaviour\n  - Pancreatic lesions, depending on histology (cystic lesions or neuroendocrine tumour)\n  - Paracaval mass (paraganglioma), D44.7 or C75.5 depending on behaviour, or other as documented\n\n**Caveats**\n\n- The diagnosis section is withheld, so the principal diagnosis is inferred from the narrative.\n- The final code depends on the pathology results, the edition in use, and the coding standard for the episode, since there were multiple admissions and procedures.\n- Some coders may choose the principal diagnosis for the specific admission. For example, if the first-stage admission was mainly for the renal masses, C64 could be sequenced first. However, the documented diagnosis of VHL disease supports Q85.8x as the principal diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 731,
+    "output_tokens": 656
+  },
+  "seconds": 6.162971542013111
+}

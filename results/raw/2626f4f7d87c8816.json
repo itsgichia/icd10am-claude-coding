@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "1123f003be4c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nHOSPITAL COURSE SUMMARY:\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\n\nPATIENT INFORMATION:\n\nPatient: [NAME]\nSex: Male\nAge: 73 years old\nRace: African American\nADMISSION DIAGNOSIS: [diagnosis section withheld]\nHOSPITAL COURSE:\n\nThe patient presented to an outside hospital with shortness of breath on exertion, orthopnea and lower extremity swelling. He had a history of HFrEF and had stopped taking his cardiac medications. The physical examination revealed signs of heart failure and an elevated troponin level. The patient was treated for ACS and transferred to our hospital for further evaluation of a left atrial mass.\n\nCoronary angiography showed thrombotic subtotal occlusion of the ramus intermedius coronary artery branch. The patient had an echocardiogram that showed a left atrial mass and severe global hypokinesis of the left ventricle. The patient was anticoagulated with unfractionated heparin but developed biventricular thrombi. The patient underwent surgical removal of masses in the right atrium and left atrium, and a two-vessel coronary artery bypass graft was performed. An intraoperative biopsy of the left ventricle showed histopathologic evidence of amyloid deposition by Congo red staining and ATTRwt amyloidosis.\n\nThe patient's postoperative course was complicated by a cerebrovascular accident that was thought to be cardioembolic in nature. He was discharged on postoperative day 15 on chronic anticoagulation with warfarin.\nDISCHARGE DIAGNOSES: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\n\nFollow-up with your primary care physician in 1 week.\nContinue taking all prescribed medications.\nMaintain a low-salt diet as recommended by your physician.\nFollow a healthy lifestyle, including regular exercise and avoiding smoking and alcohol.\nWatch for signs and symptoms of heart failure, such as shortness of breath and swelling, and notify your physician immediately if they occur.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: E85**\n\nThe principal diagnosis is not clear-cut here. E85 depends on two interpretive choices, and other coders could reasonably reach I21 or I51.\n\n**Why E85 (amyloidosis)**\n- The patient came in with heart failure: exertional dyspnoea, orthopnoea, oedema and severe global left ventricular hypokinesis.\n- The left ventricular biopsy confirmed wild-type transthyretin (ATTRwt) cardiac amyloidosis. Read in context, this is the underlying condition that explains the cardiomyopathy and the heart failure.\n- It also plausibly explains the intracardiac thrombi. Amyloid infiltration of the atria makes them prone to clot, which fits thrombi forming despite heparin.\n- In ICD-10-AM, cardiac amyloidosis is coded to the amyloidosis category (E85.x), with the cardiomyopathy manifestation code I43.- added after it.\n\n**Alternatives I considered**\n- **I21 (acute myocardial infarction):** The thrombotic ramus occlusion, raised troponin and CABG within the same episode make this a strong contender. Some coders would sequence it first because the bypass was performed for it. Two things weakened it for me. The patient was transferred to us mainly to evaluate the left atrial mass. And the note says \"treated for ACS\" but never explicitly documents an infarct.\n- **I51 (intracardiac thrombosis):** The reason for transfer was the mass, which turned out to be thrombus. On a strict reading of \"reason for transfer and surgery\", this could be principal.\n\n**Supporting codes I would add**\n- Cardiomyopathy in amyloidosis (I43.-)\n- Heart failure (I50.-)\n- Intracardiac thrombus (I51.3)\n- Coronary disease / acute coronary syndrome (I21 or I24)\n- Postoperative cardioembolic stroke (I63.- with a complication code)\n- Non-compliance with medication (Z91.1)\n- Procedure codes for the CABG, excision of the atrial masses and the left ventricular biopsy.\n\nE85 depends on two readings: that \"chiefly responsible\" means the underlying disease process, and that the amyloidosis drove the presentation. In practice I would query the clinicians to confirm both points, and to confirm whether an AMI was documented. A documented AMI would change the sequencing to I21.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 938,
+    "output_tokens": 1464
+  },
+  "seconds": 0.0
+}

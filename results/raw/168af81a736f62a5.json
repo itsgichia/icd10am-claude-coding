@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "7868c7a114d4",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDISCHARGE SUMMARY:\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient presented with low back pain that radiated down the right leg. She underwent L4\u2013L5 microdecompression, which alleviated her pain. However, at approximately 12 months after surgery, her pain began to increase, and she was treated with ALIF at L4\u2013L5 and L5\u2013S1. At 2 months post-operatively, she developed pain with radiation down both legs and difficulty with walking, and a fracture through the anterosuperior end plate of S1 was discovered.\n\nTreatment:\nThe patient underwent exploration of the posterior fusion and removal of instrumentation; revision and decompression of L5\u2013S1; instrumentation placement at the L4\u2013pelvis region; and posterolateral arthrodesis at L4\u2013L5 and L5\u2013S1, with application of pelvic instrumentation using the S2AI technique.\n\nCondition on Discharge:\nThe patient reported 100% improvement in low back pain with some low back soreness, the ability to walk farther, and 80% improvement in neurologic symptoms in the left lower extremity.\n\nInstructions:\nThe patient was instructed to follow-up with her primary care physician for ongoing management of her condition. She was also advised on proper nutrition and exercise to help manage her osteoporosis, as well as proper posture and lifting techniques to prevent further injury to her back.\n\nFollow-up:\nFollow-up appointments were scheduled with the patient's primary care physician and treating physician to monitor her progress and adjust her treatment plan as needed.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: M96**\n\nThis is a fracture of the anterosuperior S1 end plate that appeared 2 months after ALIF at L4\u2013L5 and L5\u2013S1. It needed revision surgery: the instrumentation was removed, L5\u2013S1 was decompressed, and the construct was extended from L4 to the pelvis. That makes it a fracture caused by the implanted interbody device, not a new injury. In ICD-10-AM this is M96.6, *Fracture of bone following insertion of orthopaedic implant, joint prosthesis or bone plate*.\n\nI ruled out the other candidates for these reasons:\n\n- **S32 (fracture of the sacrum):** There is no trauma described. The fracture is a consequence of the instrumentation.\n- **M80 (osteoporosis with pathological fracture):** Osteoporosis is documented, but the fracture is at the end plate next to the implant, so the implant is the link. Osteoporosis would be coded as an additional diagnosis (M81) rather than the principal one.\n- **T84 (mechanical complication of the device):** The summary describes a bone fracture, not breakage, displacement or loosening of the device. If the clinician documents cage subsidence or loosening, I would query them about T84.\n\nBefore finalising, I would also check the local Australian Coding Standards guidance on fractures around implants.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 766,
+    "output_tokens": 738
+  },
+  "seconds": 0.0
+}

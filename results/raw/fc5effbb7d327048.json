@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "eb4e53923c83",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nEHR Discharge Summary:\n\nPatient Name: Undisclosed\nAge: 31 \nAdmission Date: Undisclosed \nDischarge Date: Undisclosed \n\nHospital Course Summary:\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course: The patient was initially treated with oral mesalamine and prednisolone but in 2010 was changed to azathioprine. The disease continued to relapse despite azathioprine therapy. In 2014, adalimumab was initiated after screening for infectious diseases. The patient was found positive for the presence of mycobacterium tuberculosis (TB) by the QuantiFERON\u00ae-TB Gold test (QFT-G). INH preventive therapy was started and 14 weeks later the patient developed erythematous plaques on the neck and back with clear zones of demarcation resembling sunburn erythema on the dorsum of his hands, and hyperkeratotic plaques on the elbows. The patient reported frequent diarrheal stools, loss of appetite, and episodes of delirium and behavioral changes. Pellagra was suspected due to the low serum niacin level. Pharmacovigilance survey confirmed INH-induced pellagra. The management plan included INH withdrawal, nutritional review, and vitamin supplementation. The patient was treated with niacin orally (200mg/d). Three weeks later, the rash disappeared and diarrhea stopped. The patient was subsequently started on adalimumab.\nDischarge Diagnosis: [diagnosis section withheld]\nCondition on Discharge: The patient\u2019s clinical symptoms improved after treatment with niacin and adalimumab. No rash or diarrhea was reported.\n\nDischarge Medications: None\n\nFollow-Up: Follow-up with the gastroenterology team is recommended to ensure the patient's Crohn's disease is managed appropriately. No follow-up for the management of INH-induced pellagra is necessary.\n\nInstructions: The patient is advised to maintain a healthy diet and avoid foods that may cause vitamin B3 deficiency. No further precautions are required."
+      }
+    ]
+  },
+  "text": "The principal diagnosis code is most likely **E52 (Niacin deficiency [pellagra])**.\n\nThe admission appears to have been driven by the isoniazid-induced pellagra: the dermatological, gastrointestinal, and neuropsychiatric features, the low serum niacin, and the need for niacin treatment. Under ICD-10-AM conventions for adverse drug effects, the manifestation (E52) is sequenced first, followed by a T-code for the drug adverse effect.\n\nFor the secondary codes, the isoniazid adverse effect would be coded with a T-code from the Table of Drugs and Chemicals, likely in the antimycobacterial category (T37.1 in ICD-10-CM; verify the ICD-10-AM T-code and 6th character for \"adverse effect\"). Crohn's disease (K50.-) and the latent tuberculosis infection (Z22.7 or the relevant code) would also be recorded as secondary diagnoses.\n\nThe discharge summary withholds the admission and discharge diagnoses, so the final sequencing should be confirmed against the full record and the Australian Coding Standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 742,
+    "output_tokens": 1294
+  },
+  "seconds": 0.0
+}

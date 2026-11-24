@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "904e3611e433",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: Patient 5                                 Date of Admission: N/A\nAge: 9                                                       Date of Discharge: N/A\nGender: Female                                           Admitting Diagnosis: Epileptic seizures\n\nHOSPITAL COURSE:\n\nPatient 5 was admitted with a history of Epileptic seizures (ES) which has been documented for 7 years. MRI revealed pachygyria in the cortex and Scalp electroencephalogram (EEG) revealed spike and wave complexes mainly over the bilateral central\u2013parietal\u2013posterior temporal regions. During the hospitalization, the patient underwent three blocks of transcranial direct current stimulation treatment at 2 mA. The patient was discharged without achieving the expected result.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\n\nThe patient was advised to follow up with her healthcare provider and continue taking medication as prescribed.\n\nFOLLOW-UP:\n\nThe patient was referred to follow up with her healthcare provider as directed."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: **G40.9 \u2013 Epilepsy, unspecified**\n\n## Rationale\n\n**Why epilepsy is the principal diagnosis**\n- The patient was admitted specifically to treat her epileptic seizures, with three blocks of transcranial direct current stimulation (tDCS).\n- Under the Australian Coding Standards (ACS 0001), the principal diagnosis is the condition chiefly responsible for the admission. Here that is the epilepsy.\n\n**Why the code is \"unspecified\" (G40.9)**\n- The summary does not state a seizure type or epilepsy syndrome, such as focal or generalised, or a named syndrome.\n- The EEG shows spike-and-wave complexes over the bilateral central, parietal and posterior temporal regions. Inferring a seizure classification from an EEG report alone is not appropriate coding practice.\n\n**Possible extra specificity: intractability**\n- Some ICD-10-AM editions use a 5th character to indicate whether epilepsy is intractable.\n- The history suggests drug resistance: 7 years of seizures, a trial of neuromodulation, and treatment that did not achieve the expected result.\n- If the clinician confirms intractable epilepsy, the code would be **G40.91**. This should be confirmed with the clinician rather than assumed.\n\n## Additional Diagnosis to Consider\n- **Q04.3 \u2013 Other reduction deformities of brain**, which covers pachygyria, seen on MRI.\n- This is the likely underlying cause of the epilepsy and should be coded as an additional diagnosis.\n- It is not the principal diagnosis, because the admission was directed at treating the seizures, not the malformation itself.\n\n## Procedure\n- The tDCS treatment should also be coded with the appropriate ACHI neurostimulation code.\n\n**Note:** The discharge diagnosis section was withheld. Confirm against the actual documented diagnosis and the ICD-10-AM edition in use.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 417,
+    "output_tokens": 1022
+  },
+  "seconds": 0.0
+}

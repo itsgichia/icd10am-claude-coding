@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "0c964e66f001",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nHOSPITAL COURSE:\nA 71-year-old female with a medical history of nonalcoholic steatohepatitis, multiple episodes of gastrointestinal bleeding, deep venous thrombosis, and pulmonary embolism requiring an inferior vena cava filter, and atrial fibrillation presented with recurrent episodes of altered mental status. Due to persistent encephalopathy despite resolution of infection, an extended workup was performed and hepatic encephalopathy was entertained as the presumptive diagnosis. Further diagnostic imaging revealed 2 large intrahepatic venous malformations manifesting as a portovenous shunt.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\nThe patient underwent interventional coil embolization to close the anastomosis and had no further episodes of hepatic encephalopathy post-treatment. Ammonia levels were normalized. Follow-up is recommended.\n\nCONDITION ON DISCHARGE:\nStable.\n\nDISCHARGE MEDICATIONS:\nNone.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: K72**\n\nThis assignment is uncertain. The other reasonable choice is Q26, and the final code depends on how the withheld discharge diagnosis section is worded.\n\n1. **Chapter letter, K (digestive system).** The patient was admitted for recurrent altered mental status. After investigation, this was attributed to hepatic encephalopathy, with ammonia levels that normalised after treatment. The background liver disease is nonalcoholic steatohepatitis.\n\n2. **Two digits, 72.** In ICD-10-AM, hepatic encephalopathy indexes to K72 (hepatic failure, not elsewhere classified). This is my recollection of the index entry rather than a checked lookup.\n\n3. **Alternative, Q26 (congenital malformations of great veins).** The encephalopathy was caused by two intrahepatic venous malformations forming a portovenous shunt, and the procedure (coil embolization) treated that shunt. ICD-10-AM generally prefers the underlying cause as principal when it is known. If the shunt is documented as a congenital malformation, the anomalous portal venous connection code (Q26.5) would be principal. In a 71-year-old with chronic liver disease, the shunt could also be acquired, which would not fit Q26.\n\nI chose K72 because the condition that prompted admission was the encephalopathy, and the summary does not say whether the shunt is congenital.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 909,
+    "output_tokens": 970
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "cot_then_extract",
+  "record_id": "7c591e864a3b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient: 46-year-old male with a history of MSA with predominant parkinsonism\n\nHospital Course:\nThe patient was emergently admitted to our neurological department with tracheal intubation due to sudden respiratory failure at night. He had a history of high-pitched snore at age 38 and neck and trunk rigidity, bradykinesia, postural tremor, and dysuria at age 44. He was diagnosed with MSA at age 45. The possibility of MSA-related central respiratory disorder or obstructive respiratory disorder due to MSA and/or obesity was considered after pulmonary inflammatory diseases were excluded. The patient underwent tracheostomy to maintain the airway after extubation which was successful, but continuous positive airway pressure may have also been helpful. Polysomnography showed obstructive SA, but not central SA. Awake fiberoptic laryngoscopy displayed no upper-airway obstruction but slight vocal-cord abduction impairment during inspiration while sleep laryngoscopy was refused by the patient. To assess the spatial and temporal conditions of the upper respiratory tract, including the nasal passages, pharynx, larynx, and portion of the trachea, 4D-CT during sleep was performed. The effective dose was 1.84 mSv.\n\nFindings:\nReconstructed 4D-CT images of respiration during sleep revealed abnormal upper-airway findings compared with the images acquired during awake respiration: glottis closure at the terminal stage of inspiration, subsequent velopharyngeal closure, and succeeding glottis opening and expansion of pharyngeal pressure, but no other upper airway-obstruction findings.\nDiagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was discharged with tracheostoma retained which was determined to be indispensable, although central apnea after tracheostomy may cause sudden central origin-related death. The patient was followed up at 14 months postoperatively, and no further airway-related complications were reported.\n\nProcedures:\nTracheostomy.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The episode was chiefly caused by obstructive sleep apnoea, confirmed on polysomnography and sleep 4D-CT, due to inspiratory glottic closure in multiple system atrophy; this led to nocturnal respiratory failure and the tracheostomy. Sleep apnoea sits in chapter G (nervous system). I chose category G47 over the alternatives because the investigated mechanism was the sleep apnoea rather than the respiratory failure (J96) or the underlying multiple system atrophy (G23), though either could reasonably be argued.\n\nCODE: G47",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1275,
+    "output_tokens": 364
+  },
+  "seconds": 0.0
+}

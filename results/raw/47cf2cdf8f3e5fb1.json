@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "1471065dc7fd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nAge: 34\nGender: Female\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nPatient with platin-resistant metastatic ovarian cancer was admitted to the hospital after experiencing fever and chills during infusion of nivolumab. Physical examination showed nausea and a known pelvic mass. Infusion was stopped and antihistamines and corticosteroids were administered. However, the patient remained febrile and was found to have a positive blood culture for bacillus Gram-positive bacteria. Combination therapy with antibiotics was started, but three blood cultures returned positive for rapidly growing mycobacteria. The port-a-cath was removed and antibiotics were switched to clarithromycin and ethambutol. Diagnosis of M. mucogenicum port-a-cath related bloodstream infection was retained.\n\nTreatment and Management:\nPatient received combination antibiotherapy for two months and antibiotics were pursued for six months. Despite concomitant chemotherapy, no relapse of infection was observed after antibiotic discontinuation.\n\nFollow-up:\nPatient was discharged in stable condition with instructions to continue chemotherapy and to monitor for any signs of infection.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The principal diagnosis is the port-a-cath related bloodstream infection due to M. mucogenicum, established after investigation. It was the reason for the admitted care, which included line removal and prolonged antibiotics. The ovarian cancer is a comorbidity here, and the fever and chills were only the presenting symptoms.\n\nThe coding choice is between two chapters:\n- Chapter 1 (A31, other mycobacterial infections): M. mucogenicum is a non-tuberculous, rapidly growing mycobacterium, so the organism would be coded to A31.8 (other mycobacterial infections).\n- Chapter 19 (T80-T88, complications of care): ICD-10-AM codes a catheter-related bloodstream infection to T80.2 (infections following infusion, transfusion and therapeutic injection) or T82.7 (infection and inflammatory reaction due to other cardiac and vascular devices, implants and grafts).\n\nA port-a-cath is a totally implanted central venous access device. In ICD-10-AM, central venous catheter-related bloodstream infection codes to T80.2 (infections following infusion). Totally implanted vascular access devices such as ports, however, are usually coded to T82.7 (infection due to vascular device). The Australian Coding Standards and the Tabular List both place complications of vascular access devices in T82. T82.7 is therefore the best fit. The organism is then added with a secondary code, B-code or A31.8, as an additional diagnosis.\n\nCODE: T82",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 644,
+    "output_tokens": 495
+  },
+  "seconds": 0.0
+}

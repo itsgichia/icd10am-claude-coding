@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "f318c995256d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nPatient Name: [redacted]\nDate of Discharge: [redacted]\n\nHospital Course:\nThe patient was admitted for the evaluation and treatment of left eye melanoma. After undergoing brachytherapy, the patient showed scleral thinning and uveal tissue prolapse at the site of the preexisting lesion. The patient underwent a block excision of sclera, ciliary melanoma, and adjacent iris tissue, which was performed through the opening of the sclera and was combined with a corneal tectonic graft.\n\nClinical Findings:\nUpon admission, the patient was found to have a pigmented fusiform thickening of the iris root in the left eye. Gonioscopy revealed a well-circumscribed dome-shaped mass at the level of the ciliary body, between the 2:30 and 3 o'clock positions. UBM showed a medium internal reflectivity with an almost homogeneous acoustic structure. The lesion was classified as melanoma of the ciliary body, which involved the adjacent iris root. UBM also showed a local scleral extension of the tumor, which was under the conjunctival layer and 0.88 mm thick.\n\nTreatment:\nThe patient underwent brachytherapy (106Ru) and received a total dose of 100 Gy at the apex, with a dose rate of 79.09 cGy/hr. The total dose at the sclera was 531.1 Gy, with a dose rate of 420.1 cGy/hr. The patient then underwent a radical block excision of sclera, ciliary melanoma, and adjacent iris tissue, combined with a corneal tectonic graft and 16 single stitches.\n\nHistopathology:\nPost-operative histopathological analysis confirmed the diagnosis of spindle cell melanoma.\n\nFollow-Up:\nThe patient had a BCVA of 20/20 at the time of discharge. The patient is recommended to have regular follow-up appointments with their healthcare provider to monitor their condition.\nDiagnosis: [diagnosis section withheld]\nDischarge Medications:\n[N/A]\nDischarge Diagnosis: [diagnosis section withheld]"
+      }
+    ]
+  },
+  "text": "The principal diagnosis is most likely **C69.4, Malignant neoplasm of ciliary body**.\n\nThe admission was for the ciliary body melanoma, which was the condition chiefly responsible for the episode of care. The histology (spindle cell melanoma) and the iris and scleral involvement do not change the principal code, since ICD-10-AM classifies malignant eye neoplasms by primary site. The iris involvement and scleral extension are documented as local spread from the ciliary body primary, so they do not need separate primary codes. Secondary codes such as the brachytherapy procedure and the excision would be added under ICD-10-AM Australian Classification of Interventions (ACHI) procedure coding.\n\nThis is based on the hospital course as provided. Final code assignment should be confirmed against the withheld diagnosis sections and the official ICD-10-AM/ACHI coding rules for your edition.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 740,
+    "output_tokens": 1115
+  },
+  "seconds": 0.0
+}

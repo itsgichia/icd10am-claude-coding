@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "c9159cda6e35",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: Case 3\nAge: 40 years old\nSex: Male\nAdmission Date: N/A\nDischarge Date: N/A\n\nChief Complaint:\nCase 3 presented with chronic sinusitis, hyperglycemia, difficulty in breathing, fever, dry cough, general body weakness, and 72% oximetry saturation. He was subsequently diagnosed with COVID-19.\n\nHospital Course:\nThe patient was isolated and taken to a designated isolation center for treatment and monitoring. He received supportive therapy for his symptoms.\nDiagnosis: [diagnosis section withheld]\nFollow-up:\nThe patient is advised to follow-up with his healthcare provider for further evaluation and management of his symptoms. He is also advised to take appropriate precautions to prevent the spread of COVID-19.\n\nDischarge Instructions:\nThe patient will be discharged home with instructions to continue self-isolation and monitor his symptoms. He is advised to seek further medical attention if his symptoms worsen or if he develops new symptoms. The patient is also advised to follow all public health guidelines to prevent the spread of COVID-19. \n\nSummary:\nCase 3, a 40-year-old male, presented with chronic sinusitis, hyperglycemia, difficulty in breathing, and fever. He was subsequently diagnosed with COVID-19 and received supportive therapy during his hospitalization. The patient will be discharged home with instructions to continue self-isolation and monitor his symptoms. He is advised to follow-up with his healthcare provider and to take appropriate precautions to prevent the spread of COVID-19."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: U07.1 COVID-19, virus identified**\n\n**Rationale**\n\n- The condition chiefly responsible for the episode of care was COVID-19. The patient had fever, dry cough, dyspnoea, weakness and an oxygen saturation of 72%, and was isolated and treated for it.\n- ICD-10-AM (with the WHO emergency-use U07 codes and the Australian Coding Standard for COVID-19) assigns U07.1 when COVID-19 is confirmed by laboratory testing. The summary says he was \"diagnosed with COVID-19\" but does not state how.\n- If the diagnosis were clinical or epidemiological only, with no confirmatory test, the code would be U07.2 (COVID-19, virus not identified).\n\n**Points to check before finalising**\n\n1. **Pneumonia or respiratory failure.** A saturation of 72% suggests hypoxaemia and possibly acute respiratory failure or viral pneumonia. The record does not document either, so neither can be coded. If the clinician documented viral pneumonia (J12.82 in ICD-10-CM; in ICD-10-AM, U07.1 with J12.8) or respiratory failure (J96.0-), those would be added as additional diagnoses. Querying the clinician is advisable.\n2. **Secondary diagnoses.**\n   - Chronic sinusitis: J32.9, or a more specific J32.- code if the site is documented.\n   - Hyperglycaemia: R73.9. If diabetes is documented, use the appropriate E11/E10 code instead.\n3. **Missing information.** The diagnosis section was withheld and there are no admission or discharge dates. The code therefore rests on the narrative that he was diagnosed with COVID-19.\n\n**Summary:** U07.1 as the principal diagnosis, with J32.9 and R73.9 as additional diagnoses. Add codes for pneumonia or respiratory failure only if they are documented.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 594,
+    "output_tokens": 652
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "eb4e53923c83",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nEHR Discharge Summary:\n\nPatient Name: Undisclosed\nAge: 31 \nAdmission Date: Undisclosed \nDischarge Date: Undisclosed \n\nHospital Course Summary:\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course: The patient was initially treated with oral mesalamine and prednisolone but in 2010 was changed to azathioprine. The disease continued to relapse despite azathioprine therapy. In 2014, adalimumab was initiated after screening for infectious diseases. The patient was found positive for the presence of mycobacterium tuberculosis (TB) by the QuantiFERON\u00ae-TB Gold test (QFT-G). INH preventive therapy was started and 14 weeks later the patient developed erythematous plaques on the neck and back with clear zones of demarcation resembling sunburn erythema on the dorsum of his hands, and hyperkeratotic plaques on the elbows. The patient reported frequent diarrheal stools, loss of appetite, and episodes of delirium and behavioral changes. Pellagra was suspected due to the low serum niacin level. Pharmacovigilance survey confirmed INH-induced pellagra. The management plan included INH withdrawal, nutritional review, and vitamin supplementation. The patient was treated with niacin orally (200mg/d). Three weeks later, the rash disappeared and diarrhea stopped. The patient was subsequently started on adalimumab.\nDischarge Diagnosis: [diagnosis section withheld]\nCondition on Discharge: The patient\u2019s clinical symptoms improved after treatment with niacin and adalimumab. No rash or diarrhea was reported.\n\nDischarge Medications: None\n\nFollow-Up: Follow-up with the gastroenterology team is recommended to ensure the patient's Crohn's disease is managed appropriately. No follow-up for the management of INH-induced pellagra is necessary.\n\nInstructions: The patient is advised to maintain a healthy diet and avoid foods that may cause vitamin B3 deficiency. No further precautions are required."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **E52 Niacin deficiency [pellagra]**\n\n## Rationale\n- **Reason for admission:** The admission was mainly for the workup and treatment of pellagra. The patient had dermatitis (photosensitive erythema, a \"sunburn\" pattern on the dorsum of the hands, hyperkeratotic plaques), diarrhoea, and neuropsychiatric changes (delirium, behavioural changes). This is the classic \"3 Ds\" triad, and serum niacin was low.\n- **Cause:** Pharmacovigilance review confirmed the pellagra was induced by isoniazid (INH). The drug was correctly prescribed as TB preventive therapy, so this is an **adverse effect in therapeutic use**, not a poisoning.\n- **Treatment focus:** Care during the stay centred on the pellagra: stopping INH, a nutritional review, and oral niacin 200 mg/day until the symptoms resolved.\n\nUnder ACS 0001 Principal Diagnosis and the adverse effect conventions (ACS 1902), you code the **nature of the adverse effect** as the principal diagnosis and add an external cause code for the drug.\n\n## Suggested additional codes\n| Code | Description |\n|---|---|\n| **Y41.1** | Antimycobacterial drugs causing adverse effects in therapeutic use (isoniazid) |\n| **Y92.22** | Place of occurrence: health service area (or as appropriate per local standards) |\n| **K50.9** | Crohn's disease, unspecified (refine to K50.0/K50.1/K50.8 if the documentation specifies the site) |\n| **R76.8** / **Z22.8** | Positive QuantiFERON test / latent TB (per local coding guidance) |\n\nCheck the final code assignment against the full clinical record and your local coding standards, since the admission and discharge diagnosis sections were withheld.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 742,
+    "output_tokens": 868
+  },
+  "seconds": 0.0
+}

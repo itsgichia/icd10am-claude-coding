@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "1a07866d60ba",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient Name: Not Specified\nGender: Male\nAge: 50\nDate of Admission: Not Specified\nDate of Discharge: Not Specified\nDate of Dictation: Not Specified\n\nHOSPITAL COURSE:\n\nThe patient is a 50-year-old male who presented with hoarseness and shortness of breath. The patient was diagnosed with Diffuse Large B-Cell Lymphoma (DLBCL), stage IV, after Fiberoptic Bronchoscopy revealed intratracheal mass in right main bronchi with complete right mainstem bronchus occlusion. The patient underwent several treatment regimens, including Dose Adjusted R-EPOCH therapy, R2-CHOP-I therapy, PD-1 inhibitor, DNMTi and the combination of decitabine, sintilimab plus HDACi (Chidamide). The patient experienced myelosuppression and achieved partial remission.\n\nThe patient was treated using venetoclax in combination with Chidamide, Sintilimab and radiotherapy after the PD was seen in repeat PET-CT. The patient experienced a decrease in lesion size and FDG uptake. The patient later underwent syngeneic stem cell transplantation and achieved CR.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\n\n1. It is important to continue the follow-up care with your oncologist.\n2. Please continue to take medications as prescribed and follow the recommended dosing schedule.\n3. Follow the recommended diet and nutrition plan given by your oncologist.\n4. It is important to stay hydrated to the recommended level of fluid intake.\n5. Follow the recommended activity guidelines set by your oncologist.\n6. Please report any side effects or unusual symptoms to your oncologist immediately.\n7. Follow the recommendations for required tests and imaging studies.\n8. Follow recommendations for self-care and regular follow-up appointments.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C83",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 804,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

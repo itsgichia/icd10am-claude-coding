@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "2c56c73a35fe",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient Name: [CONFIDENTIAL]\n\nAge: 52\n\nSex: Female\n\nDate of Admission: [CONFIDENTIAL]\n\nDate of Discharge: [CONFIDENTIAL]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient is a 52-year-old woman who was diagnosed with SLE eight years ago. She was admitted to the hospital with elevated ANA levels and mild clinical symptoms such as oral ulcers, urticarial vasculitis lesions, and joint pain. Her pharmacologic treatment lasted three years and consisted of steroids in combination with other non-steroidal anti-inflammatory medication. The patient did not tolerate antimalarials, and she refused further immune suppressive therapy.\n\nDuring regular check-ups between the first diagnosis and admission, the patient had minor clinical disease manifestations related to SLE such as oral ulcers, urticarial vasculitis lesions, joint pain, fatigue, tiredness, and fever. These symptoms did not require steroidal or immunosuppressive drug therapy and were treated symptomatically.\n\nAt admission, the patient's ANA was elevated with the mild clinical symptoms mentioned earlier, which did not require steroid treatment. During her hospital stay, she received supportive care and counseling, and her symptoms improved. The patient was discharged from the hospital with instructions to continue symptomatic treatment and regular follow-up appointments.\nDischarge Diagnosis: [diagnosis section withheld]\nOutcome and Plan: The patient's symptoms improved during her hospital stay, and she was discharged home with instructions to continue symptomatic treatment and regular follow-up appointments. The patient should continue to monitor her ANA levels and report any new or worsening symptoms to her healthcare provider."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: M32.9 Systemic lupus erythematosus, unspecified**\n\n**Rationale**\n- The record describes a 52-year-old woman with established SLE (diagnosed 8 years ago). She was admitted with an elevated ANA and mild SLE manifestations: oral ulcers, urticarial vasculitis lesions, arthralgia, fatigue and fever.\n- The condition chiefly responsible for the admission and treated during the stay was SLE, so it is the principal diagnosis.\n- ICD-10-AM classifies SLE in Chapter 13 under M32 (Systemic lupus erythematosus). The subcategories are:\n  - M32.0 Drug-induced SLE\n  - M32.1 SLE with organ or system involvement\n  - M32.8 Other forms of SLE\n  - M32.9 SLE, unspecified\n- The documented features are mucocutaneous and joint symptoms only. The record does not describe specific organ involvement such as renal, pericardial, pulmonary or neurological disease, and it does not state the type of SLE. M32.9 is therefore the best fit.\n\n**Coding notes**\n- If the clinician documents the manifestations as organ or system involvement (for example, lupus vasculitis, or SLE arthritis explicitly attributed to lupus), M32.1 could apply. The record as written does not support this.\n- The manifestations (oral ulcers, joint pain, fatigue, fever) are integral to SLE and should not be coded separately.\n- Elevated ANA is also integral to SLE and should not be coded separately (R76.8 is not needed).\n- Optional additional codes if documented and relevant:\n  - Z53.x or Z91.1x for refusal of or non-compliance with treatment (the patient refused further immunosuppressive therapy)\n  - Z88.x or an allergy/intolerance code for the antimalarial intolerance, if clinically significant\n  - Z79.x for long-term drug therapy, if she is currently on it\n\nThe diagnosis sections were withheld, so I have inferred the code from the narrative. Please confirm it against the full record and the current ACHI/ICD-10-AM edition.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 663,
+    "output_tokens": 719
+  },
+  "seconds": 0.0
+}

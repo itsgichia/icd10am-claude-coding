@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "349fe6e9c4f9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nHospital Course: \nThe patient, a 28-year-old male with moderate intellectual disability, presented with a history of comorbid diagnoses including autism spectrum disorder, hypertension, hypothyroidism, and GERD. The patient had a history of excoriation disorder, schizoaffective disorder bipolar type, and displayed symptoms of anxiety, irritability, and physical aggression. The patient was initially treated with quetiapine but was later transitioned to valbenazine due to intermittent abnormal movements. The patient's treatment was further adjusted, and clozapine was prescribed due to continued psychosis.\n\nHospital Stay: \nFour days after starting valbenazine treatment, improvement in abnormal movements was noted. Over two months, the patient no longer displayed any abnormal jaw movements, minimal to no arm/hand/finger movements or foot tapping, and no truncal movements. Caregivers reported that these improvements resulted in less isolating, aggressive, and confrontational behavior. The patient also became more cooperative, increasing participation in activities and displaying less resistance to caregiver assistance with activities of daily living. The patient currently remains stable on valbenazine (80 mg QHS).\nDiagnosis: [diagnosis section withheld]\nTreatment: \nThe patient was initially treated with quetiapine for symptoms of intermittent abnormal movements, which was later adjusted following persistent psychosis. Valbenazine was prescribed and later escalated to 80 mg QHS. Due to continued psychosis, clozapine was also introduced and titrated over 2 weeks to 300 mg daily.\n\nFollow-up Plan: \nThe patient is currently stable on valbenazine (80 mg QHS) with no reported adverse events. No further medication changes are planned at this time, and follow-up with the patient will continue to monitor for any changes in behavior or physical movements."
+      }
+    ]
+  },
+  "text": "The diagnosis section is withheld, so the principal diagnosis has to be inferred from the clinical picture. I would code it as tardive dyskinesia, which is an inference and not a confirmed diagnosis.\n\n**Likely principal diagnosis: Tardive dyskinesia (medication-induced)**\n\n- ICD-10-AM code: **G24.0 Drug-induced dystonia** is not the right code. Tardive dyskinesia is indexed to **G24.0** only for dystonia, so the correct code is **G24.8 Other dystonia**, or more precisely **G24.0** in the ICD-10-AM index under \"Dyskinesia, tardive\".\n- In ICD-10-AM, tardive dyskinesia is indexed to **G24.0** (Drug-induced dystonia, which includes drug-induced tardive dyskinesia).\n- Add an external cause or adverse-effect code for the antipsychotic, **Y49.1x** or **Y49.2** (quetiapine is an atypical antipsychotic, so Y49.5 in ICD-10-AM, \"Other antipsychotics and neuroleptics\"), as an additional code.\n\n**Reasoning**\n- The abnormal jaw, arm, hand, finger, foot and truncal movements developed during antipsychotic therapy (quetiapine).\n- They improved within days of starting valbenazine, a VMAT2 inhibitor used specifically for tardive dyskinesia.\n- The admission was centered on managing these movements, so they are the most plausible principal diagnosis.\n\n**Suggested coding**\n- Principal diagnosis: **G24.0** Drug-induced dystonia (tardive dyskinesia)\n- Additional diagnoses:\n  - F25.2 Schizoaffective disorder, mixed type, or F25.0 for bipolar type (the \"bipolar type\" corresponds to F25.0 in ICD-10-AM)\n  - F71.x Moderate intellectual disability\n  - F84.0 Autism\n  - I10 Hypertension\n  - E03.9 Hypothyroidism\n  - K21.9 GERD\n  - L98.1 Excoriation disorder (factitial dermatitis)\n  - Y49.5 Adverse effect of antipsychotics\n\nIf the withheld diagnosis was instead schizoaffective disorder (the reason for the clozapine), then **F25.0** would be principal. The narrative centers on the movement disorder, so I favor G24.0. Please verify against the current ACHI/ICD-10-AM edition and the coding standards, since I could not confirm the exact index entry.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 676,
+    "output_tokens": 860
+  },
+  "seconds": 0.0
+}

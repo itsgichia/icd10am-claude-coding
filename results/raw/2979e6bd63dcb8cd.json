@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "fb371c880fcd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: [Name]\nDOB: [Date of birth]\nGender: Male\nAdmission Date: [Date]\nDischarge Date: [Date]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n[Name] was admitted to the clinic with ongoing RLQ abdominal pain of one-month duration, associated with mild fever. It was noted from histopathology reports that there was chronic lymphoplasmacytic inflammation with associated histiocytes and granulation tissue, further supporting the diagnosis of chronic appendicitis. \n\nTreatment:\nLaparoscopic appendectomy was performed on [Name]. The appendix was identified and found to be chronically scarred and chronically inflamed in appearance. The mesoappendix was taken down with Sonicision, the base transected with Endo-GIA, and delivered from the peritoneal cavity in an Endobag and sent to pathology.\n\nDischarge Condition:\n[Name] was discharged home on the same day as his procedure with no complaints.\n\nInstructions:\nPlease follow up with your primary care physician (PCP) in the coming days to ensure that there has been complete resolution of symptoms.\n\nSigned,\n[Doctor's name]"
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **K36 \u2013 Other appendicitis**\n\n## Rationale\n\n- **Condition chiefly responsible for the admission:** The patient was admitted for **chronic appendicitis**. Both the operative findings (a chronically scarred, chronically inflamed appendix) and the histopathology (chronic lymphoplasmacytic inflammation with histiocytes and granulation tissue) confirm it.\n\n- **Classification:** In ICD-10-AM, **chronic appendicitis** and **recurrent appendicitis** are indexed to **K36 Other appendicitis**. That code covers appendicitis that is not acute.\n\n- **Codes excluded:**\n  - **K35.x (Acute appendicitis)** does not apply. Nothing documents an acute process, perforation, peritonitis or abscess.\n  - **K37 (Unspecified appendicitis)** does not apply because the type of appendicitis is specified as chronic.\n  - **R10.3 (RLQ pain)** and **R50.9 (fever)** are not assigned. They are symptoms of the confirmed diagnosis, so per ACS 0001 they are not coded separately.\n\n## Associated Procedure Code (ACHI)\n- **30572-00 Laparoscopic appendicectomy**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 454,
+    "output_tokens": 553
+  },
+  "seconds": 0.0
+}

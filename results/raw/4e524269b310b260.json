@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "91774e9fbdcf",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary\n\nPatient: XXXXXXX\n\nDate of Admission: XXXXXXX\n\nDate of Discharge: XXXXXXX\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nUpon admission, the patient presented with acute onset epigastric pain associated with vomiting. Subsequently, she was diagnosed with acute pancreatitis and a dilated common bile duct with no gallstones or other pathology. Further, a MRCP revealed a curious cystic lesion lying posterior to the head of the pancreas causing extrinsic compression. An abdominal CT scan revealed a cystic or necrotic mass behind the head of the pancreas representing an inflammatory lesion or abscess.\n\nDuring admission, the patient was treated with oral antibiotics and observed clinically and haematologically. However, her bilirubin continued to rise. An ERCP revealed a 10 cm duodenal diverticular abscess at the level of the major papilla draining pus and bile, likely causing extrinsic compression of the bile duct.\n\nThe patient experienced clinical and hematological improvement and was discharged with a plan for follow-up with the gastroenterology team.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Instructions:\n\nThe patient is advised to follow-up with the gastroenterology team and adhere to any prescribed medications. Additionally, the patient is instructed to consume a healthy diet and maintain a low-risk lifestyle.\n\nFollow-Up Care:\n\nFollow-up with the gastroenterology team.\n\nSigned:\n\nXXXXXXXXX\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: K57**\n\n**Principal diagnosis:** a duodenal diverticular abscess. This falls under K57, Diverticular disease of intestine. At the fourth-character level it is most likely K57.0, diverticular disease of small intestine with perforation and abscess.\n\n**Why this condition:** After investigation, the 10 cm abscess in a duodenal diverticulum at the level of the major papilla was the underlying cause of the episode. It compressed the common bile duct from outside, which explains the dilated duct with no gallstones and the rising bilirubin. The pancreatitis is most plausibly secondary to that compression at the papilla. The ERCP and the antibiotic treatment were both directed at this abscess.\n\n**Additional codes to consider:**\n- **K85.-, acute pancreatitis:** code as an additional diagnosis. Choose the fourth character after a clinician query, because \"other\" versus \"idiopathic\" depends on documented causation.\n- **Bile duct obstruction or jaundice:** code only if documented as clinically significant beyond being part of the abscess.\n\n**Documentation note:** The admission and discharge diagnoses are withheld, so I would query the treating team to confirm two things:\n- that the diverticular abscess is the established cause of the episode;\n- that the pancreatitis is secondary to it.\n\nIf the clinician instead documents the pancreatitis as the primary condition, the principal diagnosis would change to K85.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 759,
+    "output_tokens": 594
+  },
+  "seconds": 0.0
+}

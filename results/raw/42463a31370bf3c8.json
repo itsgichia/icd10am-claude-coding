@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "json_output",
+  "record_id": "c21280ae53ae",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Name]\nMedical Record Number: [Number]\nDate of Admission: [Date]\nDate of Discharge: [Date]\n\nHospital Course:\n\nThe patient, a 46-year-old Caucasian male, was admitted to the hospital due to a new onset headache, nausea, and vomiting. The patient had a history of pancreatic cancer with metastases to the liver and omentum, and had undergone treatment with chemotherapy. The patient was also previously hospitalized for a pulmonary embolism and small bowel obstruction.\n\nUpon admission, the patient presented with dull, intractable headache, icteric eyes, decreased air entry, and decreased muscle strength. The patient reported hitting his head in the bathroom one week prior to admission and had a family history of colon cancer.\n\nDuring hospitalization, the patient developed syncope and a generalized tonic-clonic seizure. Imaging studies revealed bihemispheric subdural hematomas and left hemispheric extra-axial metastatic lesions. The patient was started on levetiracetam and received cranial irradiation with right and lateral fields. The treatment significantly improved the patient's headache and nausea, and he did not experience any new seizures.\n\nThe patient tolerated radiotherapy well and did not require a treatment break. However, he died 2.5 months later at home. No autopsy was performed as per family request.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nOndansetron, metoclopramide, and dexamethasone\nLevetiracetam\nCranial irradiation with right and lateral fields\n\nFollow-up:\n\nThe patient passed away and there is no follow-up needed.\n\nDischarge Medications:\n\nNone.\n\nAllergies:\n\nNot reported.\n\nCondition at Discharge:\n\nThe patient passed away.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"C79\", \"condition\": \"Secondary malignant neoplasm of brain\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 728,
+    "output_tokens": 273
+  },
+  "seconds": 0.0
+}

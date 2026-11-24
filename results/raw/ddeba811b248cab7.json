@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "00f55d302ffa",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHospital Course: \nThe patient, a 29-year-old woman with a history of earlobe piercing at a beauty salon six days prior, presented to the hospital with symptoms of headache, fever, and blurred vision. Upon admission, she exhibited multiple skin manifestations, including maculopapular rashes on her face, scattered pustules and microabscesses on her trunk and extremities, and subungual splinter hemorrhages on her fingers. Diagnostic tests revealed microscopic hematuria and low platelet count, in addition to CSF analysis indicating a raised white blood cell count. Multiple embolic infarcts and leptomeningeal enhancement were found through brain magnetic resonance imaging. A transthoracic echocardiography performed on day two revealed vegetations on the anterior chordae of her mitral valve. S aureus, resistant to penicillin and oxacillin, was isolated in her blood cultures. The initial treatment of nafcillin and ceftriaxone was replaced with vancomycin in combination with gentamicin. \n\nOn day six of hospitalization, the patient became hypotensive and dyspneic, leading to the discovery of mitral valve chordae rupture through echocardiography. She underwent an emergency cardiac surgery in which her entire mitral valve was removed and replaced with a prosthetic valve. Gentamicin treatment was discontinued on day eight. Her condition stabilized, and her facial rashes disappeared completely. Follow-up brain and abdominal CT scans indicated an improvement in her condition. After eight weeks of vancomycin therapy, the patient was discharged.\nDiagnosis: [diagnosis section withheld]\nDischarge Medications: \nThe patient was discharged on vancomycin.\n\nFollow-Up: \nThe patient is advised to follow up with the healthcare provider for further treatment and monitoring.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "I33",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 812,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

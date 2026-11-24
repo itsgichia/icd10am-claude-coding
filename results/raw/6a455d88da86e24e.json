@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "0c964e66f001",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nHOSPITAL COURSE:\nA 71-year-old female with a medical history of nonalcoholic steatohepatitis, multiple episodes of gastrointestinal bleeding, deep venous thrombosis, and pulmonary embolism requiring an inferior vena cava filter, and atrial fibrillation presented with recurrent episodes of altered mental status. Due to persistent encephalopathy despite resolution of infection, an extended workup was performed and hepatic encephalopathy was entertained as the presumptive diagnosis. Further diagnostic imaging revealed 2 large intrahepatic venous malformations manifesting as a portovenous shunt.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\nThe patient underwent interventional coil embolization to close the anastomosis and had no further episodes of hepatic encephalopathy post-treatment. Ammonia levels were normalized. Follow-up is recommended.\n\nCONDITION ON DISCHARGE:\nStable.\n\nDISCHARGE MEDICATIONS:\nNone.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "Hepatic encephalopathy in ICD-10-AM: K76.82 in ICD-10-CM, but in ICD-10-AM (11th edition onwards) hepatic encephalopathy is coded to K72.9x or K76.82? In ICD-10-AM, hepatic failure is K72, and hepatic encephalopathy is classified there (K72.9 hepatic failure, unspecified). However, the underlying cause here is a portovenous shunt, a congenital or acquired intrahepatic venous malformation. Congenital malformation of the hepatic vessels is Q26.5 (anomalous portal venous connection) or Q26.6 (portal vein-hepatic artery fistula). Intrahepatic venous malformations manifesting as a portovenous shunt would be Q26.5 or Q26.6, and the category is Q26.\n\nThe episode was treated by coil embolization to close the shunt, and the main focus was the shunt causing encephalopathy. I'll go with Q26.\n\nQ26",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 500,
+    "output_tokens": 332
+  },
+  "seconds": 0.0
+}

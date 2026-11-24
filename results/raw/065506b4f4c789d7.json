@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "0beba3f33a3c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nMedical Record Number: [redacted]\nDate of Admission: [redacted]\nDate of Discharge: [redacted]\n\nHospital Course:\nThe patient was admitted to our hospital with shortness of breath, dry coughing and fever, after testing positive for COVID-19. The patient was intubated and put on ventilator support within 36 hours of presentation, as he had severe hypoxia and increased work of breathing. Treatment was initiated with various medications to manage his COVID-19 symptoms. \nThroughout his 31-day hospital course, the patient's clinical condition was complicated by septic shock, acute respiratory distress syndrome (ARDS), volume overload, and uncontrolled diabetes. The chest X-ray revealed bilateral pneumothoraces, which were confirmed with a chest CT, along with pneumomediastinum. The patient was transferred to a hospital where thoracic surgery was available. Imaging after transfer showed that the pneumothorax had slightly increased without tension physiology. The PEEP was decreased from 8 to 6 cm H20 where it remained till his discharge. On the 31st day of admission the patient passed away from hypoxic respiratory failure.\nDiagnosis: [diagnosis section withheld]\nProcedures:\nThe patient was intubated and put on ventilator support within 36 hours of presentation. \n\nHospital Course:\nThe patient was admitted with COVID-19 and developed severe hypoxia and increased work of breathing. Treatment was initiated with various medications to manage his COVID-19 symptoms. Throughout his hospital course, the patient's clinical condition was complicated by septic shock, ARDS, volume overload, and uncontrolled diabetes. The patient passed away from hypoxic respiratory failure on hospital day 31.\n\nOutcome:\nThe patient passed away from hypoxic respiratory failure after a prolonged hospital stay. \n\nFollow-Up:\nN/A\n\nDischarge Medications:\nN/A \n\nFollow-up Instructions:\nN/A\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The principal diagnosis is COVID-19, the condition that prompted the admission and was chiefly responsible for the episode of care. Per ICD-10-AM, it is classified to U07 (emergency use codes), with U07.1 for virus identified, and the three-character category is U07.\n\nThe pneumonia/ARDS, septic shock, pneumothoraces and hypoxic respiratory failure are complications or manifestations of the COVID-19 illness. They are coded as additional diagnoses and not as the principal diagnosis. The diabetes is a comorbidity.\n\nCODE: U07",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 912,
+    "output_tokens": 192
+  },
+  "seconds": 0.0
+}

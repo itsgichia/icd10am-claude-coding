@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "cot_then_extract",
+  "record_id": "7567bbd24908",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nHospital Course:\n\nThe 68-year-old male patient was admitted to the hospital for the removal of an intramedullary nail and a possible total knee arthroplasty after experiencing a traumatic event. His past medical history includes hypertension, high cholesterol, high potassium levels, a non-cancerous enlargement of the prostate gland that caused difficulty urinating, atrial fibrillation, a crush injury causing closed fractures of multiple ribs and the pelvis, and a history of tobacco use. Preoperative laboratory tests indicated slightly low sodium levels and slightly elevated glucose levels, but a well-functioning renal system.\n\nProcedure:\n\nThe anesthesia team planned for spinal block and monitored anesthesia care with a propofol infusion. The patient was given 2 mg of midazolam preoperatively. The surgery lasted for 5 hours and 32 minutes and the patient's urine output for the duration of the operation totaled 1240 mL, with 975 mL excreted within a two-hour span.\n\nPostoperative Period:\n\nThe patient had an uncomplicated postoperative period with normal sodium levels and electrolytes. He was monitored closely after surgery.\nDiagnoses: [diagnosis section withheld]\nDisposition:\n\nThe patient was discharged from the hospital in a satisfactory condition after his uncomplicated postoperative period. \n\nFollow-up Care:\n\nFollow-up appointments with the appropriate specialists recommended for the patient's multiple comorbidities.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The admission was for intramedullary nail removal with possible total knee arthroplasty after prior trauma, which points to post-traumatic osteoarthritis of the knee as the condition chiefly responsible. This is an inference, since the diagnosis section is withheld; if only the nail was removed, Z47 (follow-up care involving removal of the fixation device) would apply instead. Knee osteoarthritis falls in chapter M, category M17.\n\nCODE: M17",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1087,
+    "output_tokens": 314
+  },
+  "seconds": 0.0
+}

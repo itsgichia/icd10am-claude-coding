@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "93a7d6106130",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 66-year-old woman\n\nHospital Course: The patient presented with bilateral cramping thigh pain for three days. She had a past medical history of coronary artery disease, heart failure, high cholesterol, high blood pressure, and diabetes. She was previously hospitalized for a non-ST elevation myocardial infarction.\nDiagnosis: [diagnosis section withheld]\nTreatment: The patient received aggressive intravenous hydration and her simvastatin and ticagrelor medications were discontinued. Her symptoms resolved and laboratory tests showed improvement. She was started on a new medication, clopidogrel, and was prescribed rosuvastatin during a follow-up clinic visit.\n\nFollow-up: The patient has remained without complications on follow-up visits and laboratory tests.\n\nConclusion: The patient was discharged in stable condition with appropriate medications and follow-up care."
+      }
+    ]
+  },
+  "text": "The diagnosis section is withheld, so the principal diagnosis has to be inferred from the clinical picture. It is probably statin-associated rhabdomyolysis or myopathy, and the code below rests on that inference.\n\n**Reasoning**\n- Bilateral cramping thigh pain in a patient taking simvastatin.\n- Ticagrelor is a weak CYP3A4 inhibitor and raises simvastatin levels, so the combination is a recognised interaction that increases myopathy risk.\n- Aggressive IV hydration is the standard treatment for rhabdomyolysis.\n- Laboratory tests \"showed improvement\", which fits a falling CK and creatinine.\n- Simvastatin was stopped and she was later switched to rosuvastatin.\n\n**Suggested coding (ICD-10-AM)**\n- **Principal diagnosis: M62.82 Rhabdomyolysis.** This is the condition that occasioned the admission and was treated with IV hydration.\n- Additional codes:\n  - **G72.0 Drug-induced myopathy**, used if the documentation says myopathy rather than rhabdomyolysis. In that case it would be the principal diagnosis instead.\n  - **Y57.9 / Y52.x**, the external cause for an adverse effect of a lipid-lowering drug. The more specific code is Y52.- or Y57.-, depending on the edition.\n  - **T46.6X5A (adverse effect of antihyperlipidemic drugs)** is the ICD-10-CM form. In ICD-10-AM, use the external cause code from Chapter 20 together with the manifestation code.\n  - Comorbidities: I25.x, I50.x, E78.x, I10, E11.x, and I25.2 for old myocardial infarction.\n\n**Answer: M62.82 (Rhabdomyolysis)**, with G72.0 as the alternative if the final diagnosis was drug-induced myopathy without rhabdomyolysis. Please confirm against the actual diagnosis statement and the CK levels, and check the code against your edition of the ICD-10-AM/ACHI/ACS.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 347,
+    "output_tokens": 702
+  },
+  "seconds": 0.0
+}

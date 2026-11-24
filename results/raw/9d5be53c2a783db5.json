@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "fbca0f1aed5c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]     MRN: [REDACTED]     DOB: [REDACTED]     Admission Date: [REDACTED]     Discharge Date: [REDACTED]\n\nHOSPITAL COURSE:\nThe patient was admitted to the emergency department with complaints of chest pain, shortness of breath, and a productive cough. Upon examination, the patient was found to have tachycardia and tachypnea. Laboratory findings revealed leukocytosis with elevated C-reactive protein and erythrocyte sedimentation rate. CT chest showed left lower lobe pneumonia and a large pericardial effusion. The patient received appropriate treatment for pneumonia and underwent transthoracic echocardiogram to further characterize the effusion as moderate circumferential pericardial effusion.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\nUpon consultation with the patient\u2019s psychiatrist, clozapine was stopped, which was thought to be the cause for the non-resolving pericardial effusion. Following the discontinuation of the drug, there was a gradual improvement in the respiratory status. The patient was discontinued from clozapine and discharged to home in stable and improved condition.\n\nFOLLOW-UP:\nThe patient is advised to follow up with their primary care provider for future management of high cholesterol and assistance with smoking cessation.\n\nDISCHARGE MEDICATIONS:\nNone prescribed at this time.\n\nFOLLOW-UP STUDIES:\nTransthoracic echocardiogram to be repeated for further evaluation in one year.\n\nDISCHARGE CONDITION:\nStable and improved."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **J18.9 Pneumonia, unspecified**\n\n## Rationale\n\nUnder ACS 0001, the principal diagnosis is the condition established after study to be chiefly responsible for the admission.\n\n- The patient presented with chest pain, shortness of breath and productive cough. Pneumonia was confirmed on CT and was the first condition treated.\n- \"Left lower lobe pneumonia\" describes where the pneumonia is. It does not document lobar pneumonia, and no organism is given. So **J18.9** applies, not J18.1, unless the clinician confirms lobar pneumonia.\n\n## Additional codes\n\n| Code | Description |\n|---|---|\n| **I31.3** | Pericardial effusion (noninflammatory) |\n| **Y49.5** | Other antipsychotics and neuroleptics causing adverse effects in therapeutic use (clozapine) |\n| **Y92.22** | Place of occurrence: health service area (if required by local rules) |\n| **F17.1** | Harmful use of tobacco, if smoking meets ACS 0002 criteria. The follow-up advice suggests it was addressed. |\n| **E78.0** | Pure hypercholesterolaemia, only if it meets ACS 0002 criteria. As documented, it is follow-up advice only. |\n\n## Note on sequencing\n\nYou could argue for **I31.3 + Y49.5** as principal. The clozapine-induced effusion appears to have driven the length of stay and the main intervention, which was stopping clozapine.\n\nACS 0001 allows either condition to be sequenced first when two conditions equally meet the principal diagnosis definition. Because the discharge diagnosis section is withheld, query the clinician. If the effusion is documented as the main reason for admission, sequence I31.3 first.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 626,
+    "output_tokens": 1351
+  },
+  "seconds": 0.0
+}

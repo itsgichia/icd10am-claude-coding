@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "ef176fbbd8cc",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nElectronic Health Record Discharge Summary: Hispanic Male with Diabetes Mellitus Type 2 and Sepsis\n\nIdentification: \nPatient: 42-year-old Hispanic male with a history of diabetes mellitus type 2 \nAdmitted: Emergency department admission on September 1, 2017 for sepsis \n\nHospital Course: \nThe patient had a six-day history of malaise, headache, fever, and generalized body pain. He had developed diarrhea, tachypnea, and confusion three days prior to admission. On the day of admission, he became drowsy, dyspneic, and looked very ill. Physical examination showed the patient was severely dehydrated with a blood pressure of 60/30 mmHg and respiratory rate of 32 bpm. \nTreatment with intravenous fluids, antibiotics, insulin, and other supportive therapies was administered. Methimazole, hydrocortisone, and Lugol's solution were added on the second day of treatment. On the third day of treatment, there was a good evolution and the patient was discontinued from norepinephrine and insulin infusion. \nECG was normal but echocardiography showed severe left ventricular systolic dysfunction. Intravenous furosemide was administered for two days for acute lung edema. \nThe patient continued to improve and was discharged on September 7, 2017 with almost complete recovery. \nDiagnosis: [diagnosis section withheld]\nFollow-Up: \nFollow-up echocardiography showed complete resolution of left ventricular systolic dysfunction. After the patient was discharged, no additional study was performed.\n\nSignatures: \nThis discharge summary was reviewed and approved by (physician's name).\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The clinical picture points to thyroid storm. Methimazole, hydrocortisone and Lugol's solution are the standard treatment for it. The patient also had fever, tachypnea, confusion, diarrhea and shock, and then reversible left ventricular systolic dysfunction with pulmonary edema, which fits thyrotoxic cardiomyopathy. Sepsis was the working admission diagnosis, but the treatment shows the condition established after investigation was thyrotoxic crisis.\n\nIn ICD-10, thyrotoxicosis with thyroid storm is coded E05.5 (thyroid crisis or storm), so the three-character category is E05. The diagnosis section was withheld, so this rests on the treatment pattern and course rather than a stated diagnosis.\n\nDiabetes (E11) is a comorbidity, and the insulin infusion suggests possible ketoacidosis, but the thyroid storm is the main driver of the episode.\n\nCODE: E05",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1094,
+    "output_tokens": 320
+  },
+  "seconds": 0.0
+}

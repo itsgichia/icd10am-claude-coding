@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "28a116dcbaf0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nMedical Record Number: [redacted]\nDate of Discharge: [redacted]\n\nAdmission Date: [redacted]\nChief Complaint: Severe substernal chest pain and diaphoresis\nFinal Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient, a 38-year-old male with a past medical history of high blood pressure, high cholesterol, and HIV infection, presented to the ED with severe chest pain and sweating. He had been having intermittent chest pain for one month that was worsened by exercise and heavy lifting and was not relieved by medication.\nThe physical examination was unremarkable except for elevated levels of troponin-I and ST-segment elevation on ECG, suggesting an inferior wall myocardial infarction (IWMI). The patient was immediately transferred to the cardiac catheterization laboratory for an emergent coronary angiogram procedure, which revealed an LAD wrapped around the apex with 95% stenosis.\nBalloon angioplasty was successfully performed, and a drug-eluting stent was placed in the 95% lesion of the LAD with minimal residual stenosis. The patient remained stable in the post-operative period and was discharged on aspirin, atorvastatin, metoprolol, enalapril, and ticagrelor, which were prescribed to manage his condition.\n\nHospital Course Summary:\nThe patient was admitted to the ED with severe substernal chest pain and sweating, which was diagnosed as an impending STEMI. After being treated with an emergent coronary angiogram procedure, balloon angioplasty, and a drug-eluting stent, the patient remained stable and was discharged with medications to control his condition."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is most likely **I21.1, ST elevation (STEMI) myocardial infarction of inferior wall**.\n\nThe record supports this. The patient had ST elevation on ECG, elevated troponin-I, and was documented as having an inferior wall MI. The emergent angiogram and stent placement were treated as an acute event. The discharge summary's later phrase \"impending STEMI\" conflicts with this, and the formal final diagnosis section is withheld. Coders would normally query the physician before finalizing, because \"impending\" would point toward unstable angina (I20.0) rather than an acute MI.\n\nSecondary codes would likely include:\n- **I25.1** Atherosclerotic heart disease of native coronary artery (the LAD stenosis)\n- **I10** Essential hypertension\n- **E78.-** Disorders of lipoprotein metabolism (hypercholesterolaemia)\n- **B20** HIV disease (if documented as such)\n\nProcedure coding (PCS-equivalent ACHI codes for angiography, PCI, and stent) is separate from the diagnosis code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 615,
+    "output_tokens": 1253
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "dff9141abc15",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\nPatient: 16-year-old female\nAdmission Date: [DATE]\nDischarge Date: [DATE]\nMedical Record Number: [NUMBER]\n\nHospital Course:\n\nThe patient presented to the hospital for an exploratory laparotomy and resection of a small bowel anastomotic stricture due to her longstanding history of Crohn's disease. The patient underwent an epidural analgesia procedure for postoperative pain control and a test dose was administered without any evidence of intravascular or subarachnoid injection.\n\nThe patient showed signs of mild left unilateral Horner's syndrome and weakness of both lower extremities in the Post Anesthesia Care Unit (PACU) and was transferred to the ward stable and comfortable.\n\nOn postoperative day one, the patient complained of left-sided numbness and visual blur. Physical examination revealed left hemibody analgesia, weakness, and Horner's syndrome. The epidural infusion rate was adjusted and reduced, which produced progressive improvement in the patient's numbness, weakness, and Horner's syndrome.\n\nIn light of the patient's history of unilateral epidural block with a previous surgery two years earlier, an epidurogram was performed, which showed left unilateral spread of the contrast medium, indicating a midline barrier dividing the epidural space.\n\nAfter monitoring the patient for another three days, the epidural catheter was removed and the patient's neurological signs and symptoms completely resolved.\nDischarge Diagnosis: [diagnosis section withheld]\nTreatment:\n\nExploratory laparotomy and resection of small bowel anastomotic stricture\nEpidural analgesia for postoperative pain control\n\nFollow-Up Care:\n\nThe patient is advised to follow-up with a healthcare provider for ongoing management of Crohn's disease and any concerns related to the surgical procedure."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: K50.0 \u2013 Crohn's disease of small intestine** (with the stricture/obstruction coded per the 5th-character/ACHI conventions, see below)\n\n**Rationale**\n- The principal diagnosis is the condition established after study to be chiefly responsible for the admission. She was admitted electively for an exploratory laparotomy and resection of a small bowel anastomotic stricture caused by longstanding Crohn's disease.\n- The stricture is a complication of Crohn's disease of the small bowel (previous resection with anastomosis). In ICD-10-AM, Crohn's of the small intestine is K50.0, and K50.0 has a complication subdivision in the current edition. Where the edition you use offers a 5th character for \"with intestinal obstruction,\" use that (K50.01 in ICD-10-CM; the AM edition may differ). Otherwise K50.0 is the base code.\n- If the stricture were instead judged a postprocedural anastomotic stricture unrelated to the Crohn's disease, K91.89 (or K56.5 for adhesion-related obstruction) would be considered. The documentation attributes it to Crohn's, so K50.0 stands.\n\n**Secondary diagnoses (additional codes)**\n- Horner's syndrome from unilateral epidural block, an anaesthesia/epidural complication: G90.2 (Horner's syndrome) with T88.5 (other complications of anaesthesia) or T88.4 as locally applicable, plus Y-codes for the external cause (Y45-Y48 adverse effect of anaesthetic/analgesic, or Y60-Y84 misadventure, as applicable).\n- Unilateral sensory loss/weakness: R20.0 (anaesthesia of skin), R29.8, M62.81 (muscle weakness), if not integral to the complication.\n- Visual blur: H53.8 (other visual disturbances), if not integral.\n- Procedure codes (ACHI): resection of small intestine, e.g., block 905 (30375-00 or similar, per the operative note), epidural analgesia (e.g., 18216-00), and epidurography (e.g., 18240-00 or similar imaging code).\n\nPlease verify the exact 5th characters and ACHI procedure codes against your current ICD-10-AM/ACHI/ACS edition, as these vary between editions.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 655,
+    "output_tokens": 780
+  },
+  "seconds": 0.0
+}

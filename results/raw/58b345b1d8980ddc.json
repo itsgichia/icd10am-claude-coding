@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "f3bf6ac5d474",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course Summary:\n\nPatient Name: [Name]\n\nAdmission Date: 20 March 2020\n\nDischarge Date: [Date]\nAdmitting Diagnosis: [diagnosis section withheld]\nSignificant Past Medical History:\n- Ischaemic myocardiopathy with left ventricular assist device (LVAD) implantation in 2012\n- Chronic obstructive pulmonary disease (COPD)\n- Recurrent anaemia due to gastrointestinal bleeding\n- Arteriovenous malformations\n\nHospital Course:\nThe patient was admitted for blood transfusion due to ongoing gastrointestinal bleeding. The patient was diagnosed with COVID-19 during hospitalization. The patient\u2019s INR was found to be high on admission and was treated with parenteral heparin. Three units of red blood cells were transfused, which restored haemoglobin to normal levels. The melaena was controlled with precise control of anti-Xa under heparin infusion, and VKA was reintroduced after the resolution of melaena. The patient was managed for respiratory issues during hospitalization and was discharged with regular teleconsultations to monitor INR and respiratory parameters.\n\nHospital Course Details:\n- Admission date: 20 March 2020\n- Reason for admission: Gastrointestinal bleeding\n- COVID-19 status: Positive test, asymptomatic\n- Management:\n  - Parenteral heparin to treat high INR\n  - Blood transfusion to restore haemoglobin levels\n  - Monitoring respiratory parameters\n  - Regular teleconsultations for INR monitoring and management\n- Discharge date: [Date]\n\nSummary:\nThe patient with a history of ischaemic myocardiopathy and LVAD implantation was admitted for gastrointestinal bleeding and was diagnosed with COVID-19 during hospitalization. The patient\u2019s high INR was treated with parenteral heparin, and after a blood transfusion and resolution of melaena, VKA was reintroduced. The patient was managed for respiratory issues and was discharged with regular teleconsultations for continued monitoring of INR and respiratory parameters."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **K92.1 \u2013 Melaena**\n\n## Why this code\n\n- **Reason for admission.** The patient was admitted for ongoing gastrointestinal bleeding presenting as melaena, which needed transfusion. This is the condition chiefly responsible for the admission.\n- **Bleeding site not documented.** The patient has a history of arteriovenous malformations (angiodysplasia), but the record doesn't say where they are or confirm them as the bleeding source this admission. That rules out a site-specific angiodysplasia code, so the symptom-level code K92.1 is the most accurate choice.\n- **Anticoagulation is secondary.** Under ACS 0303 (*Abnormal coagulation profile due to anticoagulants*), when a patient on anticoagulant therapy presents with haemorrhage, the haemorrhage is coded as principal. The anticoagulant effect is coded as an additional diagnosis.\n- **COVID-19 is secondary.** It was diagnosed during the stay, was asymptomatic, and was not the reason for admission.\n\n> **Query the clinician:** if they confirm the bleeding source, the principal diagnosis would change to:\n> - **K55.21** \u2013 Angiodysplasia of colon with haemorrhage, or\n> - **K31.82** \u2013 Angiodysplasia of stomach and duodenum with haemorrhage\n\n## Suggested additional codes\n\n| Code | Description |\n|---|---|\n| D62 | Acute posthaemorrhagic anaemia (transfused 3 units RBC) |\n| D68.33 | Haemorrhagic disorder due to coumarins (vitamin K antagonists) |\n| Y44.2 | Anticoagulants causing adverse effects in therapeutic use |\n| Y92.22 | Place of occurrence, health service area |\n| U07.1 | COVID-19, virus identified |\n| I25.5 | Ischaemic cardiomyopathy |\n| Z95.81 | Presence of heart assist device (LVAD) |\n| J44.9 | COPD, unspecified |\n| Z92.1 | Personal history of long-term (current) use of anticoagulants |\n\nCheck the code selections against the ICD-10-AM/ACS edition you are using, because subcategory numbering varies between editions.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 753,
+    "output_tokens": 1616
+  },
+  "seconds": 0.0
+}

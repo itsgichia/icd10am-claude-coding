@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "c727c2953886",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY:\n\nAdmission Date: [date]\nDischarge Date: [date]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient, an 82-year-old Caucasian female, was admitted to the hospital due to fatigue and a hemoglobin level of 6.2 g/dL. She had a past medical history of heart failure with reduced ejection fraction, low AS, persistent hypotension, coronary artery disease, paroxysmal atrial fibrillation, chronic kidney disease, and chronic obstructive pulmonary disease. She was noted to have evidence of heart failure exacerbation with bibasilar crackles and pedal edema. During her hospital course, she developed atrial fibrillation with rapid ventricular response and was transferred to the cardiac critical care unit. There was a multi-disciplinary discussion about potential treatment options, including balloon aortic valvuloplasty and subsequent TAVR. Transthoracic echocardiogram (TTE) demonstrated low flow low gradient moderate to severe AS, and left heart catheterization showed areas between 1.22 and 1.42 cm2 with lower concern for severe AS. The patient was transferred back to the intermediate cardiac care unit with optimized rate control for atrial fibrillation, anticoagulation bridging, and diuresis for heart failure exacerbation. The patient also had elevated vWF activity on laboratory workup, but there was no evidence of active GI bleeding.\n\nDischarge Medications:\nThe patient was discharged on oral medication regimens, which included [list of medications], to be continued as directed by a primary care physician.\n\nFollow-up:\nThe patient is advised to follow up with her primary care physician, interventional cardiology services, cardiothoracic surgery, and other necessary specialists as per her routine schedule.\n\nDischarge Condition:\nThe patient was discharged in stable condition with resolution of active GI bleeding, and improved heart failure exacerbation."
+      }
+    ]
+  },
+  "text": "The most likely ICD-10-AM principal diagnosis is **D62 Acute posthaemorrhagic anaemia**, but the documentation is ambiguous and a coder query is advisable.\n\n**Reasoning:**\n- The principal diagnosis is the condition chiefly responsible for the admission. She was admitted for fatigue and a hemoglobin of 6.2 g/dL, which is severe anaemia.\n- The discharge summary states she had \"active GI bleeding\" that resolved, which points to acute blood-loss anaemia as the cause.\n- Heart failure exacerbation, atrial fibrillation with rapid ventricular response, and aortic stenosis were significant conditions that arose or were managed during the stay. They are secondary diagnoses unless the anaemia is shown to be less responsible for the admission than they are.\n\n**Documentation issues to clarify:**\n- The hospital course says \"no evidence of active GI bleeding,\" but the discharge condition says \"resolution of active GI bleeding.\" The summary does not settle whether a GI haemorrhage was confirmed.\n- No bleeding source is named. If a GI haemorrhage is confirmed and is the underlying cause, the principal diagnosis may instead be a GI haemorrhage code (K92.2, Gastrointestinal haemorrhage, unspecified, or a more specific code if the site is documented), with D62 as a secondary code.\n- If the anaemia has no documented cause, D64.9 (Anaemia, unspecified) would be the fallback.\n\nConfirming the bleeding status and source with the treating team would determine the final principal diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 706,
+    "output_tokens": 1513
+  },
+  "seconds": 0.0
+}

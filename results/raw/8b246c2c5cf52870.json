@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "fbca0f1aed5c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]     MRN: [REDACTED]     DOB: [REDACTED]     Admission Date: [REDACTED]     Discharge Date: [REDACTED]\n\nHOSPITAL COURSE:\nThe patient was admitted to the emergency department with complaints of chest pain, shortness of breath, and a productive cough. Upon examination, the patient was found to have tachycardia and tachypnea. Laboratory findings revealed leukocytosis with elevated C-reactive protein and erythrocyte sedimentation rate. CT chest showed left lower lobe pneumonia and a large pericardial effusion. The patient received appropriate treatment for pneumonia and underwent transthoracic echocardiogram to further characterize the effusion as moderate circumferential pericardial effusion.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\nUpon consultation with the patient\u2019s psychiatrist, clozapine was stopped, which was thought to be the cause for the non-resolving pericardial effusion. Following the discontinuation of the drug, there was a gradual improvement in the respiratory status. The patient was discontinued from clozapine and discharged to home in stable and improved condition.\n\nFOLLOW-UP:\nThe patient is advised to follow up with their primary care provider for future management of high cholesterol and assistance with smoking cessation.\n\nDISCHARGE MEDICATIONS:\nNone prescribed at this time.\n\nFOLLOW-UP STUDIES:\nTransthoracic echocardiogram to be repeated for further evaluation in one year.\n\nDISCHARGE CONDITION:\nStable and improved."
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis: I31.3, Pericardial effusion (noninflammatory)**, with the adverse effect coded as an additional code: **T43.5, Poisoning by, adverse effect of other and unspecified antipsychotics and neuroleptics** (clozapine). Check the 5th-character requirements for T43.5 in your ICD-10-AM edition.\n\n**Rationale:**\n- The discharge diagnosis section is blank, so this is based on the hospital course. Confirm with the treating team or a coding query.\n- The effusion, not the pneumonia, appears to be the main reason for admission and the focus of the work-up and treatment. The clozapine was stopped specifically because of the non-resolving effusion, and the respiratory status improved afterward.\n- The effusion is documented as caused by clozapine, so the manifestation (I31.3) is sequenced first and the drug adverse effect code (T43.5) follows, per ICD-10-AM adverse effect conventions.\n\n**Secondary diagnoses to consider:**\n- J18.9, Pneumonia, unspecified organism (left lower lobe, treated)\n- E78.5, Hyperlipidaemia, unspecified (noted for follow-up)\n- F17.2- or Z72.0, Nicotine dependence/tobacco use (smoking cessation advised)\n\n**Query opportunity:** The pneumonia's role in admission and whether the effusion was a drug-induced adverse effect should be clarified in the discharge diagnosis. If the physician documents the pneumonia as the main reason for admission, the principal diagnosis would change to J18.9.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 626,
+    "output_tokens": 1484
+  },
+  "seconds": 0.0
+}

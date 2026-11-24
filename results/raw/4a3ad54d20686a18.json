@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "30e8ed8b7f7d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\n\nMedical Record Number: [REDACTED]\n\nGender/Age: Female, 31 years old\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient underwent surgical resection of a subcutaneous nodule, which was later diagnosed as an adenocarcinoma with positive margins. After excision of surgical margins, the pathology report revealed a Neuroendocrine Tumor (NET) with positive staining for chromogranin A and neuron-specific enolase.\n\nA chest CT scan revealed a pulmonary mass in the left lobar bronchia, which led to left pneumectomy. Pathology confirmed the diagnosis of a 4.5-cm well-differentiated neuroendocrine carcinoma with a low mitotic count of 1 mitosis per 10 high power field (HPF). There was no vascular or pleural invasion and surgical margins were free. However, it was found that one lymph node was involved.\n\nStaging abdominal ultrasound detected the presence of two hepatic nodules in segment VIII, measuring 1.8 and 1.0 cm. An abdominal MRI showed multiple hepatic nodules, with additional lesions in segments II and V. Octreoscan demonstrated increased activity on pulmonary and hepatic tumoral lesions, which confirmed the diagnosis.\n\nThe patient was treated with somatostatin analogs and everolimus was added later to the treatment regimen. Follow-up images revealed stable disease after three months.\n\nDischarge Condition:\n\nThe patient was discharged in a stable condition with the recommendation to follow up with her oncologist for regular check-ups and treatments.\n\nDischarge Medications:\n\nThe patient was prescribed the necessary medications for her condition to continue at home.\n\nFollow-up:\n\nThe patient is advised to return for scheduled follow-up visits with her oncologist."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: **C34.9 \u2013 Malignant neoplasm of bronchus or lung, unspecified**\n\n## Why\n\n- **The primary malignancy is in the lung.** It is a 4.5 cm well-differentiated neuroendocrine carcinoma (carcinoid-type tumour) arising in a left lobar bronchus. It was treated with left pneumonectomy.\n- **ICD-10-AM classifies neuroendocrine/carcinoid tumours by primary site.** The morphology is captured separately with an ICD-O M-code, so the anatomical site code applies (C34.-).\n- **The lobe is not documented.** A lobar bronchus is coded to its lobe (C34.1 upper, C34.2 middle, C34.3 lower). Because the specific left lobe isn't stated, the default is **C34.9**.\n  - If the record confirms the tumour arose in the **left main bronchus**, use **C34.0**.\n  - If it confirms a specific lobe, use the matching lobe code.\n- **The other tumour sites are secondary deposits**, so they are not the principal diagnosis.\n\n## Suggested additional diagnosis codes\n\n| Code | Description |\n|---|---|\n| **C78.7** | Secondary malignant neoplasm of liver (hepatic nodules in segments II, V and VIII) |\n| **C77.1** | Secondary malignant neoplasm of intrathoracic lymph nodes (one involved node) |\n| **C79.2** | Secondary malignant neoplasm of skin (the subcutaneous nodule). C79.8 may be preferred depending on the documented depth of the lesion. |\n| **M8240/3** or **M8249/3** | Morphology: carcinoid tumour (typical) or atypical carcinoid. Confirm from histopathology. |\n\n## Caveat\n\nIf this specific admission was **solely for systemic therapy of the liver metastases** (somatostatin analogue or everolimus), with the lung primary already excised and no longer present, sequencing could change under ACS 0236 (Neoplasm coding and sequencing). In that case **C78.7** may become the principal diagnosis.\n\nBecause the summary covers the primary diagnosis and resection, **C34.9** is the most appropriate principal diagnosis on the information given.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 674,
+    "output_tokens": 1222
+  },
+  "seconds": 0.0
+}

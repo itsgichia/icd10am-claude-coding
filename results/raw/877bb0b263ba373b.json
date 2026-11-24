@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "aec8b9f3685b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nAge: 53\nGender: Male\n\nHospitalization Dates: [redacted]\nAdmitting Diagnosis: [diagnosis section withheld]Discharge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient initially presented with acute myocardial infarction and underwent percutaneous coronary intervention with stent implantation. However, residual stenoses and stent malappositions were observed, and the patient was referred for CABG. Echocardiogram revealed a left ventricular dysfunction with an ejection fraction of 19%, and enhanced computed tomography showed bilateral occlusions of the internal thoracic arteries and a small fragile sternum after sternoturnover fixation. Left thoracotomy was performed without cardiopulmonary bypass, and the saphenous vein and radial artery grafts were successfully anastomosed to the target vessels. The patient had an uneventful recovery and was discharged on postoperative day 12.\n\nHospital Course Summary:\nA 53-year-old man presented with acute myocardial infarction and underwent percutaneous coronary intervention with stent implantation. Residual stenoses and stent malappositions were observed, and the decision was made to perform CABG due to the left anterior descending artery, high lateral branch, and left circumflex artery lesions. The patient had a left ventricular dysfunction with an ejection fraction of 19%, a bilateral internal thoracic artery occlusion, and a small fragile sternum after sternoturnover fixation, which made the left thoracotomy approach the preferred method. The procedure was performed successfully without cardiopulmonary bypass, and the patient had an uneventful recovery, resulting in a patent bypass graft of all target vessels. The patient was discharged on postoperative day 12 without any issues.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "I25",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 740,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

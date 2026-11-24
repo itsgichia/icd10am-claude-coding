@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "few_shot_three",
+  "record_id": "76783dc97795",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient Name: N/A\nMedical Record Number: N/A\nDate of Admission: N/A\nDate of Discharge: N/A\nDate of Dictation: [DATE]\n\nHOSPITAL COURSE:\nThe patient was admitted to our university hospital with a sudden severe headache in the forehead. Brain computed tomography (CT) revealed a large epidural hematoma in the right frontal lobe with midline shift. The patient had no past history of trauma or cardiovascular risk factors, including hypertension, hyperlipidemia, smoking, diabetes mellitus, collagen diseases, alcoholism, and drug abuse.\nDIAGNOSIS: [diagnosis section withheld]\nTREATMENT:\nThe patient discontinued fingolimod and a month later the lymphopenia had resolved, but the hematoma showed no improvement. Therefore, a direct evacuation was performed, and a 12 g organized hematoma was successfully removed. After the operation, the patient received a single course of methylprednisolone pulse therapy (1 g/day for 3 successive days) followed by treatment with dimethyl fumarate instead of fingolimod. The patient showed no recurrence of hematoma or bleeding for more than a year.\n\nFOLLOW-UP:\nThe patient is advised to follow up with their physician for further evaluation and management of their RRMS. No additional concerns were noted.\n\nDISCHARGE CONDITION:\nStable and improved.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "**I62**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 948,
+    "output_tokens": 478
+  },
+  "seconds": 0.0
+}

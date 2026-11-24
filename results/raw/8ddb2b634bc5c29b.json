@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7484ebf71696",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: [Name]\n\nSex: Male\n\nAge: 76 years\n\nMedical Record No.: [Number]\n\nHospital Admission Date: [Date]\n\nDischarge Date: [Date]\n\nHospital Course:\n\nA 76-year-old male patient was admitted to the hospital with an incidental 4 cm left renal mass, which was treated with a left partial nephrectomy. Upon pathological examination, it was discovered that the patient was suffering from WHO/ISUP grade 1, TNM stage pT1 clear cell RCC, with the resection margin positive for the tumor.\n\nThe patient underwent a right radical orchiectomy when he was found to have a metastatic tumor in the right testis. The metastatic tumor was two centimeters in size, and it was confined to the testicular parenchyma.\n\nFourteen months after the orchiectomy, he underwent a completion left radical nephrectomy due to the recurrence of the tumor.\n\nOngoing imaging surveillance discovered several soft tissue masses in the left posterior chest wall, as well as masses in the pancreas. A two-centimeter enhancing mass was found in the upper pole of the right kidney 87 months following the orchiectomy.\n\nThe patient has been offered systemic therapy of VEGF inhibitor and discharged with continued medical supervision. He is alive with disease, 93 months post-orchiectomy.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Status:\n\nThe patient is discharged with continued medical supervision."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis is **C64, Malignant neoplasm of kidney, except renal pelvis**, specifically the **left kidney** (C64.2 in the WHO-based 4-character breakdown). Confirm the exact subcode against the ICD-10-AM edition your facility uses.\n\nThe discharge diagnosis section is blank, so this is inferred from the course. The patient has clear cell renal cell carcinoma of the left kidney, which is the underlying malignancy. He is being discharged for ongoing management of active disease with systemic VEGF-inhibitor therapy, so the primary kidney cancer is the condition chiefly responsible for the admission.\n\nSecondary malignancy codes would be assigned for the metastatic sites, such as the testis, chest wall, pancreas, and right kidney lesion, typically under C79.- (secondary malignant neoplasm of other specified sites). Coding should be verified against the full record and the ICD-10-AM Alphabetic Index and Tabular List, and the principal diagnosis should be confirmed against the reason for this specific admission.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 547,
+    "output_tokens": 1335
+  },
+  "seconds": 0.0
+}

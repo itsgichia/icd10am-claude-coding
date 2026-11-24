@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "9896dda7183d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: [redacted]\nAge: 2 years\nSex: Female\nDate of Admission: February 5, 2020\nDate of Discharge: February 10, 2020\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to the hospital on February 5, 2020 for intermittent fever and dry cough. She had previously received oral medications for three days consisting of Tamiflu and Cefaclor. The patient's aunt was a suspected case of COVID-19 and had developed symptoms on January 26, 2020. She passed away on February 1, 2020. The physical examination on admission showed a temperature of 38.8\u00b0C, pulse of 110 beats per minute, respiration of 25 breaths per minute, and SpO2 of 100%. The results of the nasopharyngeal swab sample taken on admission were negative for SARS-CoV-2.\n\nDiagnostic Results:\nThe chest computed tomography (CT) showed patchy and flocculent slightly high-density shadows in both lungs. The blood routine results revealed a leukocyte count of 9.29 \u00d7 109/L and lymphocytes of 1.63 \u00d7 109/L. C-reactive protein was 5 mg/L. The serum IgM antibody of influenza A was weakly positive. The third nasopharyngeal swab sample was also negative. However, the serum collected on February 5, 2020 was found to be positive for both IgG and IgM antibodies against SARS-CoV-2.\nFinal Diagnosis: [diagnosis section withheld]\nTreatment:\nThe patient was treated with Tamiflu continuously.\n\nDisposition and Condition on Discharge:\nThe patient was discharged on February 10, 2020 with a return to normal body temperature. \n\nFollow-up Recommendations:\nThe patient was advised to undergo follow-up testing to ensure a complete recovery."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: U07.1 COVID-19, virus identified**\n\n**Rationale**\n\n- The final diagnosis is withheld, but the record supports confirmed COVID-19. Serum IgG and IgM against SARS-CoV-2 were positive, there was an epidemiological link to a suspected case (the aunt), and the chest CT showed bilateral patchy shadows. The patient also had fever and cough.\n- Nasopharyngeal swabs were negative on repeat testing, but the serological result confirms infection.\n- In ICD-10-AM, U07.1 is assigned when COVID-19 is confirmed by laboratory testing. Under the Australian Coding Standard (ACS 1220), this includes confirmation by serology. If a clinician documents COVID-19 as a diagnosis without a positive test, U07.2 would apply. Here the positive antibody test supports U07.1.\n- Under the WHO emergency-use guidance and Australian coding advice, COVID-19 with pneumonia is coded as U07.1 plus J12.8 (other viral pneumonia). Pneumonia is not documented here, and CT changes alone do not establish it. J12.8 should be added only if the clinician documents pneumonia.\n\n**Additional codes (only if documented)**\n\n- Influenza A: the weakly positive IgM is not enough on its own. Code J10.1 (influenza with other respiratory manifestations, other influenza virus identified) only if the clinician diagnoses influenza A co-infection. The Tamiflu treatment suggests this was considered.\n- Z20.8 (contact with and exposure to other communicable diseases) is not needed when the disease is confirmed in the patient.\n\n**Final answer: U07.1**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 676,
+    "output_tokens": 572
+  },
+  "seconds": 0.0
+}

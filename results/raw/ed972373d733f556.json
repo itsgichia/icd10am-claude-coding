@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "fb371c880fcd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: [Name]\nDOB: [Date of birth]\nGender: Male\nAdmission Date: [Date]\nDischarge Date: [Date]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n[Name] was admitted to the clinic with ongoing RLQ abdominal pain of one-month duration, associated with mild fever. It was noted from histopathology reports that there was chronic lymphoplasmacytic inflammation with associated histiocytes and granulation tissue, further supporting the diagnosis of chronic appendicitis. \n\nTreatment:\nLaparoscopic appendectomy was performed on [Name]. The appendix was identified and found to be chronically scarred and chronically inflamed in appearance. The mesoappendix was taken down with Sonicision, the base transected with Endo-GIA, and delivered from the peritoneal cavity in an Endobag and sent to pathology.\n\nDischarge Condition:\n[Name] was discharged home on the same day as his procedure with no complaints.\n\nInstructions:\nPlease follow up with your primary care physician (PCP) in the coming days to ensure that there has been complete resolution of symptoms.\n\nSigned,\n[Doctor's name]"
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: K36 \u2013 Other appendicitis (chronic appendicitis)**\n\n**Rationale**\n- The condition established after study and treated by laparoscopic appendectomy is chronic appendicitis. This is supported by the one-month history of RLQ pain with mild fever, the operative finding of a chronically scarred and inflamed appendix, and histopathology showing chronic lymphoplasmacytic inflammation with histiocytes and granulation tissue.\n- In ICD-10-AM, chronic appendicitis is indexed to K36 (Other appendicitis). This category includes chronic appendicitis and recurrent appendicitis, and it is distinct from K35.- (Acute appendicitis).\n- K36 is a complete three-character code with no further subdivision, so no extra characters are needed.\n\n**Notes**\n- The procedure would be coded separately, using ACHI block 926 (Appendicectomy), with the laparoscopic approach, e.g. 30572-00 [926] Appendicectomy. Please verify the exact ACHI code against your current edition.\n- There is no evidence of perforation, abscess or peritonitis, so K35.- codes are not applicable.\n- The fever and RLQ pain are symptoms integral to the diagnosis and should not be coded separately.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 454,
+    "output_tokens": 428
+  },
+  "seconds": 0.0
+}

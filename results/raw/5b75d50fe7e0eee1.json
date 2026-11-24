@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "c90337008ffc",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\nThe patient presented with altered mental status, visual disturbances, and seizures associated with a rash and polyarthralgia. She was found to have hypertension and polysubstance abuse. Antinuclear antibodies (ANA) and double-stranded deoxyribonuclease (dsDNA) antibodies were both positive, and C3 and C4 complement factors were low. The patient was diagnosed with SLE and started on methylprednisolone pulse therapy due to active proliferative lupus nephritis. Her kidney function and arthralgia improved, and she was transitioned to oral prednisone taper. Mycophenolate mofetil was also started, and pneumocystis pneumonia (PCP) prophylaxis was given. The patient's hospital stay was significant for treatment of SLE related manifestations and hypertension. \nDischarge Diagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was discharged home with close follow-up with her primary care physician and rheumatologist for continuation of management of her SLE and hypertension. \n\nInstructions:\nThe patient is advised to continue medications as prescribed and report any adverse effects to her physician. She should monitor her blood pressure and follow a low-sodium diet. She should avoid sun exposure and use sunscreen for protection. The patient is to have close follow-up with her physician for monitoring of her kidney function and disease activity. \n\nFollow-Up:\nUrgent follow-up is recommended with the primary care physician and rheumatologist within one week."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **M32.1\u2020 Systemic lupus erythematosus with organ or system involvement**\n\n## Why this code\n- **SLE is confirmed** by positive ANA, positive anti-dsDNA, and low C3/C4, together with rash and polyarthralgia.\n- **Organ involvement is documented** as active proliferative lupus nephritis, which needed methylprednisolone pulse therapy and then mycophenolate. Kidney involvement places the case in M32.1 rather than M32.9 (SLE, unspecified).\n- **SLE was the condition chiefly responsible for the admission.** The presenting problems (altered mental status, seizures, visual disturbance, rash, arthralgia) were all treated as manifestations of SLE, and the immunosuppressive treatment was aimed at the lupus.\n\n## Dagger\u2013asterisk pairing\nM32.1 is a dagger (\u2020) code, so in ICD-10-AM it should be paired with the asterisk code for the kidney manifestation:\n- **N08.5\\*** Glomerular disorders in systemic connective tissue disorders (lupus nephritis)\n\n## Likely additional codes (depend on the withheld discharge diagnoses)\n- **Neurological features** (seizures, altered mental status, visual disturbance): code according to what the clinician documented, for example neuropsychiatric lupus or PRES (posterior reversible encephalopathy syndrome). Hypertension plus seizures and visual change raises the possibility of PRES. Query the clinician if this is unclear.\n- **Hypertension:** I10, or a secondary hypertension code if documented as due to lupus nephritis (I15.-). Check ACS guidance on how hypertension and kidney disease are combined.\n- **Polysubstance abuse:** F19.1 (harmful use) or the appropriate F19.- code.\n- **PCP prophylaxis / long-term medication:** Z79.- as applicable under ACS rules.\n\nThese codes should be confirmed against the actual discharge diagnoses, which were withheld, and the current ICD-10-AM/ACS edition.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 543,
+    "output_tokens": 967
+  },
+  "seconds": 0.0
+}

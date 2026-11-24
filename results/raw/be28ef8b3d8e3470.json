@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "bf74c73dee78",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\n\nDate of Admission: [Redacted]\n\nDate of Discharge: [Redacted]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted to the Department of Rehabilitation Medicine for rehabilitation after suffering from a rib fracture. The patient presented with motor disturbance in all four limbs, gait disturbance, and decreased activities of daily living function for more than 10 years. The cognitive test score was 25 according to the mini-mental status examination (MMSE). The patient showed symptoms of Parkinson's disease, including bilateral tremors, bradykinesia, facial masking, infrequent blinking, short arm swing, cogwheel rigidity, stooped posture, freezing, festination, axial instability, and micrographia.\n\nThe patient was treated with Tango therapy for 1 hour per day for 5 days a week for two weeks. After 10 hours of Tango therapy, the UPDRS score improved dramatically from 105 (grade 4) to 82 (grade 3) points, and the BBS score improved from 2 to 12 points. The patient's posture was improved drastically to an upright posture, while the gait was also improved with less freezing and festination symptoms. His stride became wider, and he was able to walk with greater stability after Tango therapy.\n\nThe patient was discharged with appropriate instructions for follow-up care and recommendations to continue the exercises and therapy prescribed during the hospital stay. Close follow-up with a healthcare provider is recommended to monitor the progression of the patient's symptoms.\n\nDischarge Medications: None\n\nFollow-up Instructions: Continue with the prescribed exercises and therapy as instructed during the hospital stay. Follow-up with a healthcare provider is recommended for close monitoring of the progression of symptoms. \n\nPrimary Care Provider: [Redacted]\nDate of Follow-up: [Redacted]\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "This is a rehabilitation admission. In ICD-10-AM, rehabilitation admissions are coded with Z50.- (Care involving use of rehabilitation procedures) as the principal diagnosis, with the underlying condition as an additional diagnosis. However, the Australian Coding Standard (ACS 2104 Rehabilitation) says that when the admission is for rehabilitation after a condition, the principal diagnosis is the condition requiring the rehabilitation, which is the focus of the rehabilitation. The Z50 code is not used as principal where the underlying condition is specified. In this case, the rehabilitation is directed at the Parkinson's disease: motor disturbance, gait disturbance, and a decline in ADLs over more than 10 years, treated with Tango therapy and measured by UPDRS and BBS scores. The rib fracture is only the trigger for the admission, and the therapy and outcomes targeted the Parkinson's disease. Parkinson's disease is therefore the principal diagnosis, coded G20 (Parkinson's disease).\n\nUnder the ACS, a rehabilitation admission after an acute fracture would call for an aftercare/rehabilitation approach, but the documented rehabilitation here is clearly for Parkinson's disease.\n\nCODE: G20",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 877,
+    "output_tokens": 424
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "1e776546d069",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED] \nAge: 68 \nGender: Male \nAdmission Date: [REDACTED] \nDischarge Date: [REDACTED] \n\nMedical History:\nThe patient presented with left-sided abdominal pain, early satiety, fatigue and 7 lbs weight loss for seven weeks. Past medical history significant for hypertension, emphysema and Hepatitis C Virus (HCV) with successful treatment with sofosbuvir and ribavirin.\n\nHospital Course:\nOn admission to the emergency department, the patient's vitals were stable. His clinical examination was unremarkable, except for left-sided abdominal tenderness. Abdominal ultrasound showed splenomegaly and MRI of the abdomen confirmed multiple hypoenhanced lobulated masses in the spleen. SPECT showed heterogeneous splenic uptake with areas of photopenia related to splenic masses, and liver biopsy showed chronic hepatitis. Bone marrow biopsy ruled out lymphoma and JAK2 mutation was negative. After performing splenic biopsy, DLBCL was diagnosed, and the patient was started on R-CHOP. \n\nAfter six cycles of R-CHOP, the patient's PET scan showed complete remission on PET and decrease in spleen size. However, six months later, he presented with left lower quadrant pain and splenic biopsy showed a relapse of DLBCL. Due to his poor performance status, the patient was started on palliative lenalidomide and rituximab.\nDischarge Diagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was discharged and will follow up for further treatment in the outpatient setting. \n\nFollow-up Instructions:\nThe patient was instructed to consult with the oncology team for further management."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is most likely **C83.37, Diffuse large B-cell lymphoma, spleen**.\n\nThe summary doesn't state the discharge diagnosis, so this is inferred from the course. DLBCL was confirmed on splenic biopsy and was the condition chiefly responsible for the admission. The relapse is the same disease, so it doesn't change the code. Coders should check the final diagnostic statement and the admission reason against local ICD-10-AM and Australian Coding Standards, since the summary spans both the initial diagnosis and the relapse.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 649,
+    "output_tokens": 1119
+  },
+  "seconds": 0.0
+}

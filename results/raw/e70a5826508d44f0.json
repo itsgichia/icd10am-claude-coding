@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "c21280ae53ae",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Name]\nMedical Record Number: [Number]\nDate of Admission: [Date]\nDate of Discharge: [Date]\n\nHospital Course:\n\nThe patient, a 46-year-old Caucasian male, was admitted to the hospital due to a new onset headache, nausea, and vomiting. The patient had a history of pancreatic cancer with metastases to the liver and omentum, and had undergone treatment with chemotherapy. The patient was also previously hospitalized for a pulmonary embolism and small bowel obstruction.\n\nUpon admission, the patient presented with dull, intractable headache, icteric eyes, decreased air entry, and decreased muscle strength. The patient reported hitting his head in the bathroom one week prior to admission and had a family history of colon cancer.\n\nDuring hospitalization, the patient developed syncope and a generalized tonic-clonic seizure. Imaging studies revealed bihemispheric subdural hematomas and left hemispheric extra-axial metastatic lesions. The patient was started on levetiracetam and received cranial irradiation with right and lateral fields. The treatment significantly improved the patient's headache and nausea, and he did not experience any new seizures.\n\nThe patient tolerated radiotherapy well and did not require a treatment break. However, he died 2.5 months later at home. No autopsy was performed as per family request.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nOndansetron, metoclopramide, and dexamethasone\nLevetiracetam\nCranial irradiation with right and lateral fields\n\nFollow-up:\n\nThe patient passed away and there is no follow-up needed.\n\nDischarge Medications:\n\nNone.\n\nAllergies:\n\nNot reported.\n\nCondition at Discharge:\n\nThe patient passed away."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is most likely **S06.5, traumatic subdural haemorrhage**. This rests on an assumption about which condition was chiefly responsible for the admission, as explained below.\n\n**Reasoning**\n\nThe principal diagnosis is the condition established after study to be chiefly responsible for the admission. The patient came in with headache, nausea and vomiting. Imaging showed two things:\n- Bihemispheric subdural hematomas, after head trauma one week before admission.\n- Left extra-axial metastatic lesions, i.e. secondary malignant neoplasm of the brain or meninges.\n\nThe treatment given was cranial irradiation, levetiracetam and dexamethasone. This is directed at the brain metastases and the seizure. That points toward the metastatic disease as the focus of care.\n\n**Options**\n\n1. **C79.3, secondary malignant neoplasm of brain and cerebral meninges.** This is the likely principal diagnosis if the metastases are judged to be the reason for admission and the target of radiotherapy. The headache, nausea, vomiting and seizure are symptoms of this and would not be coded separately. Extra-axial lesions are meningeal or dural, so C79.3 fits.\n\n2. **S06.5, traumatic subdural haemorrhage,** with an external cause code. This would be chosen if the subdural hematomas were judged chiefly responsible. It would also need an injury-related external cause code (W-series, fall or striking the head).\n\nBecause the radiotherapy and the main workup were aimed at the metastatic lesions, I would choose **C79.3** as the principal diagnosis.\n\n**Final answer: C79.3**\n\n**Additional codes**\n- C25.9 pancreatic cancer (use the specific site code if documented)\n- C78.7 secondary malignant neoplasm of liver\n- C78.6 secondary malignant neoplasm of retroperitoneum and peritoneum, which covers the omentum\n- S06.5 traumatic subdural haemorrhage, with the external cause code\n- R56.8 or G40.x for the seizure, if not integral to the metastases\n- Z51.0 for the radiotherapy session, as applicable\n\nIf the clinician documented the subdural hematomas as the main reason for admission, S06.5 would replace C79.3 as the principal diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 636,
+    "output_tokens": 762
+  },
+  "seconds": 0.0
+}

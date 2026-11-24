@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "cot_then_extract",
+  "record_id": "7741ab2e4606",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Not provided\nAge: 40 years\nGender: Female\n\nHospital Course:\n\nThe patient was admitted to TCVGH due to severe acute respiratory distress syndrome (ARDS) caused by wasp stings. Upon arrival, the patient had respiratory distress and was noted to have nearly 100 painful, reddish, and itchy papules. The initial laboratory examinations showed abnormal liver function tests, high LDH, CK, and increased creatinine level. Additionally, the patient had 3+ dipstick proteinuria and 5 to 10 red blood cells per high power field in urinalysis.\n\nIntravenous corticosteroid and anti-histamine agents were administered, and the patient underwent intubation and protective ventilation with low tidal volume and high positive end-expiratory pressure. The patient also underwent sedation, neuromuscular blockade, hemodialysis, and plasmapheresis. Anuria was observed for nearly 10 days, and the patient received eight sessions of hemodialysis.\n\nThe respiratory condition improved gradually, and the patient was extubated on day 8. The levels of CK, AST, ALT, and LDH peaked on day 2 and recovered with the aforementioned management. The patient was discharged on day 24 with creatinine 7.12 mg/dl. During follow-up in the outpatient department, the creatinine returned to normal (Cr:1.16) on day 71.\nDiagnosis: [diagnosis section withheld]\nPlan:\n\nThe patient was discharged with recommendations for follow-up care and monitoring, including regular visits with a nephrologist and an annual physical exam. The patient should avoid future exposure to wasp stings to prevent recurrence of ARDS.\n\nThe patient was provided with educational information about wasp stings and the risks associated with this condition. They were advised to seek prompt medical attention in case of any adverse reactions in the future.\n\nDisposition:\n\nDischarged.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible for the admission is a systemic toxic reaction to wasp venom, causing ARDS, rhabdomyolysis, hepatic injury and acute kidney injury requiring dialysis. In ICD-10-AM, the nature of the injury or effect is normally coded as the principal diagnosis, with the external cause coded separately. Here the dominant treated condition is respiratory failure/ARDS (J80), though the venom toxic effect (T63.4, chapter T) could also be argued. Venom toxicity is classified as T63.4 \"Toxic effect of venom of other arthropods\", and it is coded when the toxic effect is the main condition. Anaphylaxis due to the sting would be T78.2 or T63. The picture of multi-organ injury from massive envenomation, with ARDS as the main manifestation treated with ventilation, points to ARDS, so I will code J80 as the principal diagnosis.\n\nCODE: J80",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1241,
+    "output_tokens": 315
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "6858df327d1a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nAdmission Date: {date}\nDischarge Date: {date}\n\nPatient Name: {name}\nMedical Record Number: {number}\n\nHospital Course:\nThe patient was admitted for surgical treatment of cecal cancer with sclerosing mesenteritis. The surgery involved a right colectomy with excision of a diffusely thick mesenterium with multiple yellowish nodules. Pathology report revealed Astler-Coller C2 cecal adenocarcinoma and diffuse sclerosing mesenteritis of the excised mesenterium. The patient followed oncologic treatment consisting in capecidabine under close surveillance of his coagulation parameters with no reported abdominal pain or discomfort. A CT scan was performed 6 months later in the context of cancer follow-up, which did not demonstrate any significant radiological changes of the sclerosing mesenteritis.\n\nHistory and Physical:\nAn 83-year-old male was admitted with a past medical history of atrial fibrillation, coronary heart disease, and previous surgeries including an appendicectomy in his childhood and a laparoscopic cholecystectomy three years ago. He presented with symptoms of weight loss, abdominal discomfort, and persistent fatigue leading to a complete laboratory examination demonstrating iron deficiency anemia.\nDiagnosis: [diagnosis section withheld]\nPlan:\nThe patient underwent a right hemicolectomy. Oncologic treatment with capecidabine was initiated post-surgery, and the patient was discharged with close follow-up appointments. \n\nDisposition:\nThe patient was discharged in a stable condition.\n\nFollow-up:\nThe patient is advised to follow up with his oncologist for continued cancer surveillance."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: C18.0 Malignant neoplasm of caecum**\n\n**Rationale:**\n- The admission was for surgical treatment (right hemicolectomy) of cecal adenocarcinoma. The condition established after study to be chiefly responsible for the admission is the caecal malignancy, which is classified to C18.0 in ICD-10-AM.\n- Histology confirmed adenocarcinoma (Astler-Coller C2) of the caecum.\n\n**Suggested additional diagnoses:**\n- **K65.8 Other peritonitis** is the usual code for sclerosing mesenteritis (ICD-10-AM indexes mesenteritis, sclerosing, under K65.8). Please verify this against your current edition's Alphabetic Index.\n- **D50.9 Iron deficiency anaemia, unspecified.** Use D50.0 (secondary to chronic blood loss) only if the documentation supports it. Here it is a presenting feature of the cancer, but it should still be coded if it was investigated or managed.\n- **I48.- Atrial fibrillation.** Use the appropriate fifth-character subtype (for example I48.9 if unspecified in older editions).\n- **I25.1 Atherosclerotic heart disease**, for the coronary heart disease.\n- **Z79.- (long-term drug therapy)** codes can be added if relevant, for example if anticoagulants are being used. The note about monitoring coagulation parameters while on capecitabine suggests warfarin may be in use.\n- **Z90.4 Acquired absence of other parts of digestive tract**, for the prior cholecystectomy, is optional and depends on local coding policy.\n\n**Procedure code (ACHI):** A right hemicolectomy would be coded from block 32094 (Right hemicolectomy). Check the exact code and any laparoscopic or open approach against the operation report.\n\nFinal code assignment should be confirmed against the full medical record, the current edition of ICD-10-AM/ACHI/ACS, and local coding policy.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 618,
+    "output_tokens": 674
+  },
+  "seconds": 0.0
+}

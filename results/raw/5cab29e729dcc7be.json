@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "f3bf6ac5d474",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course Summary:\n\nPatient Name: [Name]\n\nAdmission Date: 20 March 2020\n\nDischarge Date: [Date]\nAdmitting Diagnosis: [diagnosis section withheld]\nSignificant Past Medical History:\n- Ischaemic myocardiopathy with left ventricular assist device (LVAD) implantation in 2012\n- Chronic obstructive pulmonary disease (COPD)\n- Recurrent anaemia due to gastrointestinal bleeding\n- Arteriovenous malformations\n\nHospital Course:\nThe patient was admitted for blood transfusion due to ongoing gastrointestinal bleeding. The patient was diagnosed with COVID-19 during hospitalization. The patient\u2019s INR was found to be high on admission and was treated with parenteral heparin. Three units of red blood cells were transfused, which restored haemoglobin to normal levels. The melaena was controlled with precise control of anti-Xa under heparin infusion, and VKA was reintroduced after the resolution of melaena. The patient was managed for respiratory issues during hospitalization and was discharged with regular teleconsultations to monitor INR and respiratory parameters.\n\nHospital Course Details:\n- Admission date: 20 March 2020\n- Reason for admission: Gastrointestinal bleeding\n- COVID-19 status: Positive test, asymptomatic\n- Management:\n  - Parenteral heparin to treat high INR\n  - Blood transfusion to restore haemoglobin levels\n  - Monitoring respiratory parameters\n  - Regular teleconsultations for INR monitoring and management\n- Discharge date: [Date]\n\nSummary:\nThe patient with a history of ischaemic myocardiopathy and LVAD implantation was admitted for gastrointestinal bleeding and was diagnosed with COVID-19 during hospitalization. The patient\u2019s high INR was treated with parenteral heparin, and after a blood transfusion and resolution of melaena, VKA was reintroduced. The patient was managed for respiratory issues and was discharged with regular teleconsultations for continued monitoring of INR and respiratory parameters."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: K92.2, Gastrointestinal haemorrhage, unspecified**\n\nThe patient was admitted for transfusion and management of ongoing gastrointestinal bleeding with melaena, so the bleed is the condition chiefly responsible for the admission.\n\nCoding notes:\n- **Source of bleeding:** The record mentions arteriovenous malformations but does not link them to the bleeding site. If the source is confirmed as angiodysplasia of the colon with haemorrhage, K55.21 would be more specific and would become the principal diagnosis.\n- **Anticoagulant involvement:** The high INR was treated as a drug effect of vitamin K antagonist therapy. Consider adding D68.32 (haemorrhagic disorder due to extrinsic circulating anticoagulants) and T45.515A (adverse effect of anticoagulants, initial encounter), following your local ICD-10-AM and Coding Standards guidance.\n- **Anaemia:** Transfusion for blood loss anaemia may warrant an additional anaemia code (e.g., D62, acute posthaemorrhagic anaemia), depending on how the treating team documented it.\n- **COVID-19:** The positive but asymptomatic test is a secondary condition. Whether it is coded as U07.1 or as a status/contact code depends on the documentation and local coding rules.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 753,
+    "output_tokens": 1414
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "575542c57a56",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\nAdmission Date: [DATE]\nDischarge Date: [DATE]\nLength of Stay: [NUMBER] days\n\nPatient Information:\nName: [NAME]\nAge: 76 years old\nGender: Male\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\nThe patient, a 76-year-old Caucasian male with a family history of Parkinson's disease, was admitted to our hospital after experiencing a shuffling gait. Neurological examination revealed bilateral rigidity and slow gait with reduced arm swing, as well as processing speed and memory difficulties. The patient also presented with urinary retention, orthostatic hypotension, erectile dysfunction, and stridor. Carbidopa/levodopa was unsuccessfully administered. The patient was diagnosed with multiple system atrophy (MSA), due to levodopa-unresponsive parkinsonism and autonomic dysfunction.\n\nDuring the hospital course, the patient received comprehensive care from a multidisciplinary team, including neurologists and primary care physicians. Management of orthostatic hypotension and urinary retention were coordinated with the urology department. The patient was administered supportive therapy, including physical therapy and occupational therapy, to address mobility and activities of daily living. The patient's condition remained stable throughout his hospital stay.\n\nAt the time of discharge, the patient was instructed to continue with his current medications and follow up with his primary care physician and neurologist. The patient was also instructed to contact his healthcare provider if any new or worsening symptoms arise.\nDischarge Diagnosis: [diagnosis section withheld]\nFollow-up Instructions:\n1. Continue current medication regimen as prescribed.\n2. Follow up with primary care physician and neurologist.\n3. Contact healthcare provider if any new or worsening symptoms arise."
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **G23.2 \u2013 Multiple system atrophy, parkinsonian type [MSA-P]**\n\n## Why this code fits\n\nThe patient was admitted for, and diagnosed with, multiple system atrophy. The clinical picture is parkinsonian-predominant:\n\n- **Parkinsonian features:** shuffling gait, bilateral rigidity, bradykinesia (slow gait) and reduced arm swing.\n- **Levodopa unresponsiveness:** carbidopa/levodopa failed, which is a hallmark that separates MSA-P from idiopathic Parkinson's disease (G20).\n- **Autonomic dysfunction:** urinary retention, orthostatic hypotension, erectile dysfunction and stridor. These are core diagnostic features of MSA and fall within the MSA diagnosis.\n- **No cerebellar predominance:** ataxia is not documented, so MSA-C (G23.3) does not apply.\n\n## Codes considered and rejected\n\n| Code | Description | Why not |\n|---|---|---|\n| G20 | Parkinson's disease | Levodopa-unresponsive; MSA confirmed |\n| G23.3 | MSA, cerebellar type | No cerebellar features documented |\n| G90.3 | Multi-system degeneration of the autonomic nervous system (Shy-Drager type) | Parkinsonism is the predominant presentation, not isolated autonomic failure |\n\n## Edition note\n\nIn older ICD-10-AM editions, G23.2 was titled \"Striatonigral degeneration\" (the older term for MSA-P). Confirm the title against the edition your facility uses.\n\n## Possible additional diagnoses\n\nCode these only if they meet the ACS 0002 criteria for additional diagnoses and your local edition does not treat them as inherent to MSA:\n\n- Orthostatic hypotension: consider I95.1, or the neurogenic orthostatic hypotension code in G90.3 / I95.8 depending on edition conventions. It received specific management.\n- Urinary retention: R33, as it was managed with urology involvement.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 665,
+    "output_tokens": 1000
+  },
+  "seconds": 0.0
+}

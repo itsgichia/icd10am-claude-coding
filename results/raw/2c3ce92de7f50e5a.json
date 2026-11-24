@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "json_output",
+  "record_id": "806845a87c2f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient Info:\nName: \nDOB: \nGender: \nAdmission Date: \nDischarge Date: \n\nHospital Course:\nThe patient was admitted to our facility with incidentally detected bilateral small solid renal and adrenal masses, a cystic mass at the head of the pancreas, and a paracaval mass. The patient was diagnosed with VHL disease and staged surgical approach was recommended based on the radiologic findings.\nIn the first stage, through a subcostal anterior transperitoneal approach, right adrenalectomy, resection of the paracaval mass, and enucleation for the 9 small solid renal masses were performed. A Whipple procedure was also performed to remove two smaller pancreatic lesions.\nIn the second stage, through an intercostal extraperitoneal approach, 5 pheochromocytomas were removed and 4 cystic renal cell carcinomas were enucleated.\nAfter a followup of 1,5 years, the patient developed a left 1 cm renal mass, which was treated by percutaneous, ultrasound-guided radiofrequency ablation.\nPancreatic and adrenal functions were normal throughout the follow-up period. Blood cortisol level was 21 \u03bcg/dL upon his last control visit. There was no adrenal or extra-adrenal pheochromocytoma recurrence being detected to date.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nSurgery for right adrenalectomy, resection of the paracaval mass, enucleation of small renal masses, and Whipple procedure. Followed by surgery for removal of pheochromocytomas and enucleation of cystic renal cell carcinomas. Finally, percutaneous, ultrasound-guided radiofrequency ablation for the left renal mass. No replacement therapy was required for pancreatic and adrenal functions.\n\nFollow-up:\nThe patient will be followed up regularly for the recurrence of renal masses, pheochromocytomas, and paragangliomas. Additionally, pancreatic and adrenal functions will also be monitored.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"Q85\", \"condition\": \"von Hippel-Lindau disease\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 823,
+    "output_tokens": 143
+  },
+  "seconds": 1.4375764160067774
+}

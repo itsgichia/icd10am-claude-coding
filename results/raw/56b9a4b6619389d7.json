@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7868c7a114d4",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY:\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient presented with low back pain that radiated down the right leg. She underwent L4\u2013L5 microdecompression, which alleviated her pain. However, at approximately 12 months after surgery, her pain began to increase, and she was treated with ALIF at L4\u2013L5 and L5\u2013S1. At 2 months post-operatively, she developed pain with radiation down both legs and difficulty with walking, and a fracture through the anterosuperior end plate of S1 was discovered.\n\nTreatment:\nThe patient underwent exploration of the posterior fusion and removal of instrumentation; revision and decompression of L5\u2013S1; instrumentation placement at the L4\u2013pelvis region; and posterolateral arthrodesis at L4\u2013L5 and L5\u2013S1, with application of pelvic instrumentation using the S2AI technique.\n\nCondition on Discharge:\nThe patient reported 100% improvement in low back pain with some low back soreness, the ability to walk farther, and 80% improvement in neurologic symptoms in the left lower extremity.\n\nInstructions:\nThe patient was instructed to follow-up with her primary care physician for ongoing management of her condition. She was also advised on proper nutrition and exercise to help manage her osteoporosis, as well as proper posture and lifting techniques to prevent further injury to her back.\n\nFollow-up:\nFollow-up appointments were scheduled with the patient's primary care physician and treating physician to monitor her progress and adjust her treatment plan as needed."
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis code: M96.6 (Fracture of bone following insertion of orthopaedic implant, joint prosthesis or bone plate)**\n\nThis is my best reading of an incomplete record, so please check it against the full chart.\n\n**Reasoning**\n- The diagnosis section is withheld, so I worked from the hospital course.\n- The reason for this admission was a fracture through the anterosuperior S1 end plate. It appeared 2 months after ALIF at L4\u2013L5 and L5\u2013S1 and caused bilateral leg pain and walking difficulty.\n- The revision surgery treated this complication. It involved removal of instrumentation, decompression, and extension of the fusion to the pelvis.\n- In ICD-10-AM, a fracture occurring after insertion of an orthopaedic implant is classified to M96.6. This applies when the fracture is documented as related to the hardware or fusion.\n\n**Alternatives to consider**\n- **M80.- (osteoporosis with pathological fracture):** The instructions mention osteoporosis. If the clinician documents the S1 fracture as an osteoporotic or fragility fracture, for example M80.08 or M80.88 depending on the type, this could be the principal diagnosis. The record does not state that link.\n- **T84.- (complications of internal orthopaedic devices):** If the problem is documented as hardware failure or mechanical complication rather than a fracture, a T84 code would apply instead.\n- **M96.1 (postlaminectomy syndrome, not elsewhere classified):** This is less likely, because the fracture is the clear cause of the readmission.\n\n**Additional codes**\n- M81.- or M80.- for the osteoporosis, depending on documentation\n- M54.4 or M54.5 for the pain, only if it is not integral to the principal diagnosis\n- Y83.1 (surgical operation with implant of artificial internal device) as the external cause code, and an Australian place of occurrence code where required\n- ACHI procedure codes for the revision, decompression, instrumentation, and arthrodesis\n\nIf you can share the withheld diagnosis line, I can narrow this down.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 585,
+    "output_tokens": 703
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "b9311054ccff",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\n\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient exhibited acute massive hemoptysis upon admission, which was successfully treated through a bronchial arteriography with distal embolization of the left bronchial and phrenic arteries. The patient's bleeding did not recur thereafter, and the outcome was favorable. The patient's respiratory tract sampling was positive for SARS-CoV-2, but there was no evidence of bacterial or viral co-infection.\n\nLaboratory Results:\nThe patient's CRP was measured at 256 mg/L, lactate dehydrogenase level was low at 237 UI/L, and D-Dimere level was 1228 ng/mL. The anti Xa activity was measured at 20 ng/ml. Serum Aspergillus-specific IgE level was low.\n\nConclusion:\nThe patient was discharged from the hospital on D14 with no complications of the vascular interventional procedure. Follow-up care was recommended."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis is **R04.2 Haemoptysis**.\n\nThe admission was for acute massive haemoptysis, and the summary does not establish a definitive underlying cause. In ICD-10-AM, when a symptom is the reason for admission and no confirmed diagnosis explains it, the symptom code is used as principal. The record also doesn't link the bleeding to any specific disease. The negative Aspergillus-specific IgE argues against allergic bronchopulmonary aspergillosis, and the summary reports no bacterial or viral co-infection.\n\n**Additional code:** **U07.1 COVID-19, virus identified**, because the respiratory sample was SARS-CoV-2 positive. Coders often add B97.29 (other coronavirus as the cause of diseases classified elsewhere) only when the condition is explicitly attributed to the virus, which is not the case here.\n\n**Procedure:** The bronchial artery embolisation should be coded separately using the ACHI procedure classification, not as part of the diagnosis.\n\n**Caveats:**\n- The diagnosis section was withheld, so I've based this on the hospital course alone. The coder should check the full record.\n- If the treating physician documents that the haemoptysis was caused by COVID-19 (or another specific condition, such as a bronchiectasis or pulmonary vascular cause), the principal diagnosis would change to that condition, with R04.2 dropped or recoded as appropriate. Query the physician if the linkage is unclear.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 437,
+    "output_tokens": 1222
+  },
+  "seconds": 0.0
+}

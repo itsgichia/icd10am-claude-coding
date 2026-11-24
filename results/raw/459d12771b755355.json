@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "b7a4b7cf3ee1",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary\n\nPatient Name: [REDACTED]\n\nAge: 34 years\n\nSex: Female\n\nMedical Record Number: [REDACTED]\n\nAdmission Date: [REDACTED]\n\nDischarge Date: [REDACTED]\n\nHospital Course:\n\nThe patient was admitted to the emergency unit with complaints of moderate lower abdominal pain predominantly on the right side for the past 3 weeks. She did not present with any other symptoms such as fever, inappetence, nausea, or vomiting. A total abdomen ultrasonography (USG) was conducted, which revealed that the patient was in the second trimester of pregnancy without any evident alterations related to the pregnant uterus, the placenta, or the fetus. However, the iliac fossa was directed and revealed that the caecal appendix was thicker in the body portion, reaching a maximal transverse diameter of 9.2mm, which is above normal levels. The MRI results also corroborated the presence of lipomatosis in the appendix.\n\nThe patient was discharged after being prescribed analgesia, and she did not report any return of symptoms during follow-up.\nDiagnosis: [diagnosis section withheld]\nCondition at Discharge:\n \nAt the time of discharge, the patient was stable, and her vital signs were normal.\n\nDischarge Medications:\n\nThe patient was not prescribed any medication at the time of her discharge.\n\nFollow-Up:\n\nThe patient was advised to continue her follow-up visits to her obstetrician and/or primary care physician.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "CODE: O99\n\n**Principal diagnosis: O99, other maternal diseases classifiable elsewhere but complicating pregnancy, childbirth and the puerperium.**\n\n1. **Condition chiefly responsible for admission.** The patient was admitted for right-sided lower abdominal pain. Investigation showed a thickened appendix (9.2 mm), and MRI confirmed appendiceal lipomatosis. The pregnancy itself was normal, with no abnormality of the uterus, placenta or fetus.\n\n2. **Pregnancy rule (ACS 1500).** When a condition occurs during pregnancy, the Chapter 15 code is sequenced first. The exception is when the doctor documents that the pregnancy is incidental to the reason for care. Nothing in this summary says the pregnancy was incidental, so a Chapter 15 code is principal.\n\n3. **Why the category is O99.** The appendiceal condition fits no specific O00\u2013O98 category, so it goes to O99. The fourth character depends on how \"lipomatosis\" is classified:\n   - As appendix disease (K38.8): O99.6, diseases of the digestive system.\n   - As metabolic lipomatosis (E88.2): O99.2, endocrine, nutritional and metabolic diseases.\n   - As a lipoma (D17.-): handled under the separate pregnancy rules for neoplasms, which could point away from O99.\n\n   I would confirm the terminology with the treating clinician before finalising the fourth character. For the K38.8 and E88.2 readings, the three-character category is O99.\n\n4. **Additional codes.** Add the specific condition code (for example K38.8), a code for the second trimester, and a Z code for weeks of gestation. Gestational age was not documented, so the weeks-of-gestation Z code needs clinician clarification.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 716,
+    "output_tokens": 962
+  },
+  "seconds": 0.0
+}

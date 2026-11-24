@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "few_shot_three",
+  "record_id": "1471065dc7fd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nAge: 34\nGender: Female\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nPatient with platin-resistant metastatic ovarian cancer was admitted to the hospital after experiencing fever and chills during infusion of nivolumab. Physical examination showed nausea and a known pelvic mass. Infusion was stopped and antihistamines and corticosteroids were administered. However, the patient remained febrile and was found to have a positive blood culture for bacillus Gram-positive bacteria. Combination therapy with antibiotics was started, but three blood cultures returned positive for rapidly growing mycobacteria. The port-a-cath was removed and antibiotics were switched to clarithromycin and ethambutol. Diagnosis of M. mucogenicum port-a-cath related bloodstream infection was retained.\n\nTreatment and Management:\nPatient received combination antibiotherapy for two months and antibiotics were pursued for six months. Despite concomitant chemotherapy, no relapse of infection was observed after antibiotic discontinuation.\n\nFollow-up:\nPatient was discharged in stable condition with instructions to continue chemotherapy and to monitor for any signs of infection.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "T82",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 875,
+    "output_tokens": 136
+  },
+  "seconds": 0.0
+}

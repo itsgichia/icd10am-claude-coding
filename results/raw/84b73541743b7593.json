@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "7d68c729f7dd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient: 65-year-old male with multiple comorbidities including hypertension, heart failure, end-stage renal disease, and Parkinson's disease.\n\nHospital Course:\n\nThe patient was admitted with fever, altered mental status, and syncope while undergoing dialysis. On admission, he was tachycardic and hypotensive. The patient was empirically started on antibiotics for possible sepsis with unknown sources and was admitted to the ICU. During his stay, the patient was found to have elevated levels of troponin and was diagnosed with aortic valve vegetation with moderately severe aortic regurgitation, severe pulmonary hypertension, and endocarditis. Blood cultures grew methicillin-resistant Staphylococcus aureus. The patient subsequently underwent aortic valve replacement and was stabilized with long-term antibiotics treatment.\n\nHospital course summary:\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course: Patient was diagnosed with aortic valve vegetation with moderately severe aortic regurgitation, severe pulmonary hypertension, and endocarditis. Blood cultures grew methicillin-resistant Staphylococcus aureus.\nDischarge Diagnosis: [diagnosis section withheld]\nProblems:\n\n1. Aortic valve vegetation with moderately severe aortic regurgitation, severe pulmonary hypertension, and endocarditis\n2. Methicillin-resistant Staphylococcus aureus bacteremia\n3. Right bundle branch block and left anterior fascicular block with atrial flutter\n4. Small vessel disease with multiple infarctions in multiple vascular territories including an old right frontal infarct\n\nProcedures:\n\n1. Aortic valve replacement\n\nDischarge medications:\n\nThe patient was prescribed medications to be managed by his primary care provider. \n\nFollow-up:\n\nThe patient was instructed to follow up with his primary care provider and obtain an echocardiogram 4-6 weeks post-discharge.\n\nCondition on discharge:\n\nStable condition.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "CODE: I33\n\nThe principal diagnosis is MRSA infective endocarditis of the aortic valve (I33.0 acute and subacute infective endocarditis, with B95.6 for MRSA as an additional code). It was established by investigation, with the vegetation on echocardiography and MRSA grown from blood cultures, and it drove the ICU admission and the aortic valve replacement.\n\nSepsis was treated empirically with an unknown source. If sepsis is later confirmed as due to the endocarditis, the sepsis sequencing rules in ICD-10-AM would need review, so the coder should check the clinical documentation before finalising.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 914,
+    "output_tokens": 615
+  },
+  "seconds": 3.9269592500058934
+}

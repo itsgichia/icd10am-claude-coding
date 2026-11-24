@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "3127de73c5b5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient: 46-year-old male\n\nAdmission date: [DATE]\n\nDischarge date: [DATE]\n\nMedical history: None reported except exertional dyspnea.\n\nChief complaint: Exertional dyspnea\n\nHospital course:\n\nThe patient was admitted to the hospital with a chief complaint of exertional dyspnea. Physical examination revealed a systolic mitral murmur and a diastolic aortic murmur. TTE revealed a noncoronary SVA protruding into the mitral anterior leaflet, leading to moderate mitral regurgitation, severe aortic insufficiency, and a dilated aortic root. The ascending aorta measured 54-mm, and the left ventricular diastolic diameter was 75-mm, with a left ventricular ejection fraction of 66%. No ventricular septal defect was detected. Coronary CTA showed no abnormalities or stenoses found in the coronary tree and the sac of the noncoronary SVA (measuring 36 \u00d7 47 \u00d7 51 mm) was protruding into the anterior leaflet of the mitral valve. Surgery was performed via median sternotomy. The thickening of the wall of the tricuspid aortic valve and ascending aortic wall was consistent with inflammation. The patient underwent mitral valve and aortic valve replacement and replacement of the ascending aorta with an artificial vessel. Antibiotics were administered for 5 weeks. Follow-up TTE showed satisfactory functioning of both replaced valves. Aortic CTA demonstrated restoration of the normal anatomical relationship at the aortic root. The patient was discharged in stable condition.\nDischarge diagnosis: [diagnosis section withheld]\nDischarge instructions: The patient was advised to follow-up with a primary care physician and cardiologist and adhere to medication and lifestyle modification recommendations.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: Q24**\n\nThe principal diagnosis is the **noncoronary sinus of Valsalva aneurysm** (congenital, protruding into the anterior mitral leaflet). It was the underlying lesion that caused the presenting exertional dyspnoea, the moderate mitral regurgitation, the severe aortic insufficiency, and the root dilatation, and it drove the surgery.\n\nTwo points need checking before final coding:\n\n- **Discharge diagnosis is withheld.** I have coded from the hospital course. The aneurysm is coded to Q24 (other specified congenital malformations of heart), which I am reasonably confident of, but I would confirm the exact subcode against the ICD-10-AM index and tabular.\n- **Inflammation and 5 weeks of antibiotics.** The record describes inflammation of the aortic valve and ascending aortic wall and a prolonged antibiotic course, but it never states an infectious or other aetiology. If the treating team documents infective endocarditis (I33), syphilitic aortitis (A52), or another specific cause, the principal diagnosis could change. Query the medical team before finalising.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 842,
+    "output_tokens": 1478
+  },
+  "seconds": 0.0
+}

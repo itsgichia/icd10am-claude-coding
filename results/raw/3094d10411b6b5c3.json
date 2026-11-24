@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "38c23795f24d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nAdmission Date: [Date]\n\nDischarge Date: [Date]\n\nPatient Name: [Name]\n\nMedical Record Number: [Number]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n\nA Pediatric Emergency Medicine (PEM) fellow conducted a point-of-care ultrasound (POCUS) examination on the patient. The examination revealed a large circumferential pericardial effusion, which was causing cardiac tamponade. The patient was immediately referred to a pediatric cardiologist, who performed an ultrasound-guided pericardiocentesis to drain one liter of fluid from the pericardial sac. \n\nThe patient responded well to the pericardiocentesis and was observed without recurrence of effusion or tamponade. The patient's pneumonia was also concurrently treated with appropriate antibiotic therapy. Subsequently, the patient's condition stabilized. \n\nAt the end of the hospital course, the patient was free from chest pain, shortness of breath, and diaphoresis. The patient's respiratory rate, heart rate, blood pressure, and pulse oximetry were within normal limits.\n\nInstructions for Discharge:\n\nThe patient was advised to continue with the prescribed antibiotics and keep follow-up appointments as per the pediatrician's advice. The parent/guardian was advised to keep a watch for any re-occurrence of chest pain, shortness of breath, and sweating. \n\nConclusion:\n\nThe patient was admitted with pneumonia and subsequently developed cardiac tamponade. The patient was managed with pericardiocentesis and a course of antibiotics. The patient responded well to the treatment, and no complications were noted during the hospital course. The parent/guardian was advised to keep follow-up appointments for the patient's ongoing care.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"I31\", \"condition\": \"Other diseases of pericardium (pericardial effusion with cardiac tamponade)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 733,
+    "output_tokens": 45
+  },
+  "seconds": 0.0
+}

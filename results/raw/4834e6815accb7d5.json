@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "faaba5f90a3b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Not provided\nMedical Record Number: Not provided\nDischarge Date: Not applicable\nAdmission Date: Not provided\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient, a 77-year-old Middle-Eastern female, was admitted to our facility with suspected COVID-19 after she presented with a fever, cough, lethargy, dyspnea, and bilateral opacities on chest X-ray. She was started on ceftazidime and azithromycin and was placed on oxygen via nasal cannula. A CT scan of the chest showed bilateral ground glass appearance throughout the lung, and she was transferred to the ICU due to worsening hypoxia and fever.\n\nDuring her hospitalization, the patient's condition deteriorated, and she required intubation. She was switched to antibiotic therapy with ceftriaxone and azithromycin and started on hydroxychloroquine and vitamin C. Tocilizumab, an anti-interleukin-6 monoclonal antibody, was administered twice.\n\nDue to worsening oxygen saturation, the patient was proned for 18 hours a day and given remdesivir. However, her condition continued to decline, requiring levophed for maintenance of hemodynamic stability and CVVHD due to acute kidney injury. Despite aggressive management, the patient's family ultimately chose to pursue comfort measures, and the patient passed away.\n\nDischarge Instructions:\nN/A\n\nFollow-Up Recommendations:\nN/A\n\nSigned by:\nNot applicable"
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: U07.1 COVID-19, virus identified**\n\nThis assumes the diagnosis was laboratory confirmed. The summary only says \"suspected COVID-19\" and does not mention a test result, so the code depends on that.\n\n**Reasoning**\n- The patient was admitted with fever, cough, dyspnea and bilateral ground-glass opacities, and the condition that occasioned the admission was COVID-19 pneumonia with respiratory failure.\n- In ICD-10-AM, U07.1 is used when the virus is identified by testing. Under Australian Coding Standards, a diagnosis documented as \"suspected\" or \"probable\" at discharge is coded as if it were confirmed. For an inpatient who died after being treated as COVID-19 (remdesivir, tocilizumab, proning), U07.1 is therefore appropriate.\n- If the clinician documented that the test was negative and COVID-19 was only clinically suspected, the code would be U07.2 (COVID-19, virus not identified).\n\n**Likely additional codes (secondary diagnoses)**\n- J12.82 Pneumonia due to coronavirus disease 2019. Check your edition, as pneumonia coding with U07.1 varies by version and local guidance.\n- J96.0 Acute respiratory failure. The patient had hypoxia and needed intubation.\n- N17.9 Acute kidney failure, unspecified, treated with CVVHD.\n- R57.x or I95.x for hemodynamic instability requiring vasopressors, only if shock is documented.\n- Z51.5 Palliative care, for the comfort measures.\n\n**Procedures to code**\n- Mechanical ventilation and intubation.\n- CVVHD (continuous renal replacement therapy).\n- Prone positioning, if your local rules require it.\n\nFinal code assignment should be checked against the documented diagnoses and the ICD-10-AM/ACHI edition and Australian Coding Standards in use at your facility.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 566,
+    "output_tokens": 651
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "91774e9fbdcf",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient: XXXXXXX\n\nDate of Admission: XXXXXXX\n\nDate of Discharge: XXXXXXX\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nUpon admission, the patient presented with acute onset epigastric pain associated with vomiting. Subsequently, she was diagnosed with acute pancreatitis and a dilated common bile duct with no gallstones or other pathology. Further, a MRCP revealed a curious cystic lesion lying posterior to the head of the pancreas causing extrinsic compression. An abdominal CT scan revealed a cystic or necrotic mass behind the head of the pancreas representing an inflammatory lesion or abscess.\n\nDuring admission, the patient was treated with oral antibiotics and observed clinically and haematologically. However, her bilirubin continued to rise. An ERCP revealed a 10 cm duodenal diverticular abscess at the level of the major papilla draining pus and bile, likely causing extrinsic compression of the bile duct.\n\nThe patient experienced clinical and hematological improvement and was discharged with a plan for follow-up with the gastroenterology team.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Instructions:\n\nThe patient is advised to follow-up with the gastroenterology team and adhere to any prescribed medications. Additionally, the patient is instructed to consume a healthy diet and maintain a low-risk lifestyle.\n\nFollow-Up Care:\n\nFollow-up with the gastroenterology team.\n\nSigned:\n\nXXXXXXXXX"
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis code: K57.00** is not the best fit. The better answer is below.\n\n**Reasoning**\n\nThe case was admitted with acute pancreatitis, but the workup found the underlying cause: a duodenal diverticular abscess compressing the bile duct and the area of the papilla. Under ICD-10-AM, the principal diagnosis is the condition established after study to be chiefly responsible for the admission. Here that is the duodenal diverticulum with abscess, which led to the pancreatitis and the biliary obstruction.\n\n**Code selection**\n\n- **K57.0x** (diverticular disease of the intestine) is the wrong category. It covers the small intestine with perforation and abscess, but the Australian classification places duodenal diverticulum elsewhere.\n- **K57.0** (diverticular disease of small intestine with perforation and abscess) is not the usual code for the duodenum.\n- **K31.5-** is not correct either, as it covers obstruction of the duodenum.\n- **K57.10 / K57.00** are not the correct choice for a duodenal diverticulum.\n- **K57.0 is not intended for the duodenum**, so the correct category is **K57.0 only if the classification index directs it there**. The index for \"Diverticulum, duodenum\" leads to **K57.1-** (small intestine) in ICD-10-AM.\n\nBecause the index directs a duodenal diverticulum with abscess to the small-intestine diverticular disease block, the best code is:\n\n**K57.00 \u2013 Diverticular disease of small intestine with perforation and abscess, without mention of obstruction** (principal diagnosis)\n\n**Additional codes to consider**\n\n- K85.x (acute pancreatitis, with the appropriate cause/type, e.g. K85.9 if unspecified) as an additional diagnosis.\n- K83.1 (obstruction of bile duct) for the extrinsic compression and rising bilirubin.\n\n**Caveat:** I'm not fully certain of the index pathway, so please verify \"Diverticulum, duodenum\" in the current ICD-10-AM Alphabetic Index and Tabular List. If the coder takes the pancreatitis as the reason for admission, K85.9 would be the principal diagnosis, but the guideline on the underlying cause favours the diverticular abscess.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 578,
+    "output_tokens": 760
+  },
+  "seconds": 0.0
+}

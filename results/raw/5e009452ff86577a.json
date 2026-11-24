@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "76783dc97795",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient Name: N/A\nMedical Record Number: N/A\nDate of Admission: N/A\nDate of Discharge: N/A\nDate of Dictation: [DATE]\n\nHOSPITAL COURSE:\nThe patient was admitted to our university hospital with a sudden severe headache in the forehead. Brain computed tomography (CT) revealed a large epidural hematoma in the right frontal lobe with midline shift. The patient had no past history of trauma or cardiovascular risk factors, including hypertension, hyperlipidemia, smoking, diabetes mellitus, collagen diseases, alcoholism, and drug abuse.\nDIAGNOSIS: [diagnosis section withheld]\nTREATMENT:\nThe patient discontinued fingolimod and a month later the lymphopenia had resolved, but the hematoma showed no improvement. Therefore, a direct evacuation was performed, and a 12 g organized hematoma was successfully removed. After the operation, the patient received a single course of methylprednisolone pulse therapy (1 g/day for 3 successive days) followed by treatment with dimethyl fumarate instead of fingolimod. The patient showed no recurrence of hematoma or bleeding for more than a year.\n\nFOLLOW-UP:\nThe patient is advised to follow up with their physician for further evaluation and management of their RRMS. No additional concerns were noted.\n\nDISCHARGE CONDITION:\nStable and improved."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is a nontraumatic epidural hematoma, which is most likely coded **G93.89 is not applicable; the ICD-10-AM code is G93.8 (Other specified disorders of brain)** is not the best fit either. The code that fits is **I62.1 Nontraumatic extradural haemorrhage**.\n\n**Reasoning:**\n- The CT showed a large epidural (extradural) hematoma in the right frontal region with midline shift.\n- The patient had no history of trauma, so S06.4 (epidural haemorrhage, traumatic) does not apply.\n- The patient has no hypertension or other vascular risk factors, and the bleed is nontraumatic. ICD-10-AM classifies this under I62.1, Nontraumatic extradural haemorrhage, in the block for other nontraumatic intracranial haemorrhage (I62.-).\n- The case report appears to describe a hematoma associated with fingolimod treatment for relapsing-remitting MS, with lymphopenia, which was likely drug-related. If the clinicians documented it as an adverse drug effect, add Y43.- (or the relevant external cause code for an immunosuppressant or other drug) as an additional code. The hematoma remains the principal diagnosis.\n\n**Additional codes to consider:**\n- G35 Multiple sclerosis (RRMS)\n- D72.8 or D72.81 for the lymphopenia, if it was documented as a drug-induced condition\n- Y-code for the adverse effect of fingolimod (an immunosuppressant)\n\n**Principal diagnosis: I62.1 Nontraumatic extradural haemorrhage**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 536,
+    "output_tokens": 547
+  },
+  "seconds": 0.0
+}

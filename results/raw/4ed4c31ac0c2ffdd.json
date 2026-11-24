@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "4beb4decadab",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary\n\nPatient: 35-year-old G2P2 female\n\nAdmission date: [insert date]\nDischarge date: [insert date]\nAdmission diagnosis: [diagnosis section withheld]\nHospital course:\nThe patient was admitted to the CCU on [insert date] with complaints of retrosternal chest discomfort radiating to jaw, associated with nausea and diaphoresis. Based on physical examination, EKG and cardiac enzyme levels, as well as coronary angiography and TTE results, the patient was diagnosed with an acute inferior STEMI secondary to spontaneous dissection of the OM2.\n\nTreatment:\nThe patient was appropriately discharged on dual antiplatelet therapy including ASA and Clopidogrel including beta blockade with Metoprolol.\n\nFollow-up plan:\nThe patient was advised to continue with the prescribed medication and instructed to come for follow-up after one month.\n\nReadmission:\nOne month later, the patient returned with diplopia and numbness of her left arm and face. Computed tomographic angiography showed a focal 8mm long dissection of the right vertebral artery in its V1 segment with mild associated aneurysmal dilatation. The patient was subsequently started on anticoagulation therapy to prevent future spontaneous dissections.\n\nDischarge condition:\nThe patient's condition was stable at the time of discharge.\n\nDischarge disposition:\nThe patient was discharged home with family members.\n\nFollow-up plan:\nThe patient was advised to continue with the prescribed medication and instructed to come for follow-up after three months.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: I21**\n\nThe principal diagnosis for this episode is the acute inferior STEMI, which falls under category I21 (Acute myocardial infarction; inferior wall STEMI is usually I21.1).\n\n- **What drove the admission:** The patient was admitted to the CCU with chest pain, nausea and diaphoresis. ECG, cardiac enzymes, angiography and TTE established an acute inferior STEMI.\n- **Cause versus diagnosis:** The spontaneous dissection of the OM2 caused the infarct. The infarct is still the condition chiefly responsible for the admitted care, so the dissection is coded additionally (I25.42 Coronary artery dissection).\n- **Readmission excluded:** The return one month later with right vertebral artery dissection (I77.7-) and neurological symptoms is a separate episode of care. It does not affect the principal diagnosis for this episode.\n\nPlease check the I21 assignment against your local edition's ACS 0940 (Ischaemic heart disease) guidance on myocardial infarction caused by coronary artery dissection.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 738,
+    "output_tokens": 552
+  },
+  "seconds": 0.0
+}

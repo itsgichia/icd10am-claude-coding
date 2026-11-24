@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "b9311054ccff",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\n\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient exhibited acute massive hemoptysis upon admission, which was successfully treated through a bronchial arteriography with distal embolization of the left bronchial and phrenic arteries. The patient's bleeding did not recur thereafter, and the outcome was favorable. The patient's respiratory tract sampling was positive for SARS-CoV-2, but there was no evidence of bacterial or viral co-infection.\n\nLaboratory Results:\nThe patient's CRP was measured at 256 mg/L, lactate dehydrogenase level was low at 237 UI/L, and D-Dimere level was 1228 ng/mL. The anti Xa activity was measured at 20 ng/ml. Serum Aspergillus-specific IgE level was low.\n\nConclusion:\nThe patient was discharged from the hospital on D14 with no complications of the vascular interventional procedure. Follow-up care was recommended.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "R04",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 521,
+    "output_tokens": 249
+  },
+  "seconds": 0.0
+}

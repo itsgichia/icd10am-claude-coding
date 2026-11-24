@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "a6ac4cfbb3ec",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\n\nHospital Course:\nThe patient, a 50-year-old Asian woman, was admitted to our hospital due to sudden anterior chest pain. Hematology, biochemistry, and blood gas analyses were performed and found to be normal. A chest computed tomography (CT) scan revealed a ground-glass opacity (GGO) in her left S10 lung segment and a solitary small nodule in her left S4 segment. Further testing was carried out, which led to suspicion of lung carcinoma. However, the patient did not provide consent for surgical resection.\n\nAfter follow-up with CT scans, it was suggested that the GGO was lung carcinoma, and a pathological diagnosis was established through a left lower lobectomy and an upper lung partial resection. The cancer was identified as primary lung adenocarcinoma (localized bronchioloalveolar carcinoma).\n\nThere was also a small nodule in her left S4, which was initially suspected to be lung metastasis, however, it was later discovered to be a benign metastasizing leiomyoma (BML). The patient had a history of undergoing a total abdominal hysterectomy for uterine leiomyoma in the past, which is why the small nodule was identified as BML.\n\nManagement and Outcome:\nNo additional therapy was given, and the patient was monitored by follow-up chest CT scans over four years. No recurrence of lung cancer or BML could be detected throughout her follow-up.\nDischarge Diagnosis: [diagnosis section withheld]\nInstructions:\nThe patient is advised to continue her follow-up with her physician and have periodic screening of the chest CT scans.\n\nScheduled Follow-up Appointments:\nFollow-up screening every six months for two years and then annually."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: primary lung adenocarcinoma (localized bronchioloalveolar carcinoma), left lower lobe**\n\n**ICD-10-AM code: C34.3 \u2013 Malignant neoplasm of lower lobe, bronchus or lung**\n\nThe morphology code that goes with it is M8250/3 (bronchiolo-alveolar carcinoma, non-mucinous, or adenocarcinoma in situ/lepidic type). In ICD-10-AM/ACHI the morphology code is added as an extra code. If the pathology were reclassified as adenocarcinoma in situ, it would instead be D02.2 (carcinoma in situ of bronchus and lung). The summary describes a \"primary lung adenocarcinoma\" that was resected, so the malignant code C34.3 is the better fit.\n\n**Rationale**\n- The condition that was investigated and treated by lobectomy was the GGO in the left S10 segment. Pathology showed it to be primary lung adenocarcinoma.\n- S10 is in the lower lobe, so the site is C34.3.\n\n**Secondary diagnosis**\n- The S4 nodule was a benign metastasizing leiomyoma. It would be coded separately as D21.9 (benign neoplasm of connective and other soft tissue, unspecified), or possibly D25.9 (leiomyoma of uterus, unspecified) depending on local coding advice, with M8890/1 as the morphology code.\n- The history of hysterectomy for uterine leiomyoma would be coded as Z90.7 (acquired absence of genital organ(s)), if relevant.\n\nCoding should be checked against the full record, since the diagnosis section was withheld. The admission was also for chest pain with normal investigations, and the cancer was confirmed on later admissions. If this episode was only the initial work-up, the principal diagnosis could instead be R07.4 (chest pain, unspecified) or R91 (solitary pulmonary nodule). The pathological diagnosis of lung adenocarcinoma is the most appropriate principal diagnosis for the episode in which the lobectomy was done.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 643,
+    "output_tokens": 699
+  },
+  "seconds": 0.0
+}

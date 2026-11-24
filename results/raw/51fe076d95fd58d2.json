@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "09a29ed158af",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Information: \nThe patient is a 26-year-old female who was referred to the Medical Oncology department for surgical resection of multiple hepatic metastases. The patient had previously undergone a subtotal gastrectomy for an epithelioid GIST variant localised to the muscularis propia and was diagnosed with pT1pN0 (0/1) with a high mitotic rate - stage II. The patient was found to be positive for CD117 (KIT) and DOG1. The mutational analysis revealed that the tumor was KIT and PDGFR\u03b1 WT.\n\nHospital Course:\nThe patient underwent complete resection of the hepatic metastases and subsequent image studies confirmed no evidence of disease. Adjuvant treatment with imatinib was not delivered due to complete resection of WT GIST. \n\nFamily History:\nThe patient has a 19-year-old healthy brother. There is no significant family history of diseases; however, the patient's paternal grandparent was diagnosed with a pituitary adenoma at age 30 and died at age 52.\n\nGenetic Testing:\nBased on the patient's molecular features of diagnosed GIST, age at presentation and apparently irrelevant family history, SDHx germline analysis was performed in peripheral blood. No further details of the genetic test were provided.\n\nFollow-Up:\nThe patient is currently 26 years of age and has no evidence of active disease. Additional follow-up appointments may be required as per the physician's recommendation. \nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Instructions:\nThe patient has been advised to follow up with her physician as required and to notify medical professionals of any adverse symptoms. No further specific discharge instructions were provided.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C78",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 694,
+    "output_tokens": 57
+  },
+  "seconds": 0.0
+}

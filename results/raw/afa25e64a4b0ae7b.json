@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "cbbd1760dee3",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nAdmission Information:\n\nPatient Name: [redacted]\nAge: 54 years old\nGender: Male\nAdmission Date: [redacted]\nDischarge Date: [redacted]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted to the hospital due to the dyspnea on exertion for more than 3 months. He had a history of cervical spondylosis, left side waist and leg pain for 20 years, and recurrent sinusitis and otitis media for 6 months. On physical examination, his vital signs were stable, and respiratory examination indicated decreased breath sounds in the bilateral lower hemithorax, with dullness on percussion. Laboratory results revealed the patient had anemia and elevated ESR, CA-125, and ADA levels. Analysis of the right side pleural fluid obtained by thoracentesis indicated an exudative type, and CT imaging of the chest showed bilateral pleural effusion, bilateral diffused pleural thickening, and multiple nodular lesions in the parietal pleura.\n\nThe patient was diagnosed with non-secretory multiple myeloma, and chemotherapy was initiated. After two rounds of chemotherapy, partial regression of pleural effusion, and pain relief were achieved. The patient was discharged and recommended for follow-up with the Department of Hematology. \nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Medications: None provided in the case report.\n\nDischarge Instructions:\n-The patient was recommended to follow-up with the Department of Hematology\n-Continuation of recommended treatment\n-Additional testing and consultations, as needed\n-Recommended lifestyle modifications, as advised by the treating physician."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: multiple myeloma, not having achieved remission: C90.00**\n\n**Reasoning**\n\n- The final diagnosis is non-secretory multiple myeloma, which is a plasma cell neoplasm. This was the condition established after investigation as responsible for the admission, and it is the condition treated with chemotherapy.\n- ICD-10-AM classifies multiple myeloma to C90.0- (Multiple myeloma). Non-secretory myeloma has no separate code. The fifth character shows remission status: C90.00 is \"not having achieved remission\", and C90.01 is \"in remission\".\n- The patient was newly diagnosed and treated, with only partial response, so C90.00 is the appropriate code.\n\n**Secondary diagnoses to consider**\n\n- **J91.0 Malignant pleural effusion.** The effusion is attributed to myeloma pleural involvement. In ICD-10-AM, pleural effusion in neoplastic disease is coded J91.0 and sequenced after the neoplasm. Use it only if the clinician documents the effusion as malignant or myeloma-related.\n- **D63.0 Anemia in neoplastic disease.** Use if the anemia is documented as due to myeloma.\n- **M47.82 or M47.89 Cervical spondylosis.** Code it only if it meets reporting criteria.\n- **J32.9 Chronic sinusitis** and **H66.9 Otitis media.** Code them only if they meet reporting criteria.\n\n**Note:** The dyspnea (R06.0) is a symptom explained by the effusion and myeloma, so it is not coded. Also, the case report withheld the diagnosis sections, so this assignment rests on the narrative statement of diagnosis. The code should be confirmed against the full medical record and the current ICD-10-AM/ACHI/ACS edition.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 621,
+    "output_tokens": 613
+  },
+  "seconds": 0.0
+}

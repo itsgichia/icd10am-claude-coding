@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "15ba7a04242d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: Mrs. A\nAge: 66\nGender: Female\nPrimary Diagnosis: [diagnosis section withheld]\nHospital Course:\nMrs. A was admitted to the hospital for aphasia evaluation 27 months after onset. The patient had a mild right hemiparesis, right visual field defect, and a severe aphasia. During language testing sessions, she would frequently become frustrated and blocked out reiterating \"I don't know.\" During clinical evaluations, her verbal behavior was replete with echolalic emissions, which increased when anxious and upset. Mrs. A showed significant improvement in language performance when evaluated by her husband.\n\nSummary:\nMrs. A, a 66-year-old woman, was admitted to our hospital for an aphasia evaluation 27 months after suffering a stroke. The stroke resulted in two simultaneous hemorrhagic lesions that affected frontal and parietal areas in the left hemisphere and partially spared perisylvian language areas. Mrs. A had a severe non-fluent aphasia characterized by a markedly reduced spontaneous speech and almost nil auditory comprehension. She also had automatic echolalia, verbal perseverations, and ready-made expressions. Throughout language testing sessions, Mrs. A would become frustrated, blocking out and reiteratively saying \"I don't know.\" Verbal behavior included echolalic emissions that markedly increased when anxious and upset. However, when language evaluation was performed by Mrs. A's husband, her performance improved significantly."
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis code: I69.1 \u2013 Sequelae of intracerebral haemorrhage** (ICD-10-AM, cerebrovascular disease sequelae category I69)\n\n**Rationale**\n\n- The admission was for aphasia evaluation 27 months after a hemorrhagic stroke. The acute event is long over, and the patient is being assessed for residual deficits.\n- ICD-10-AM uses I69 (Sequelae of cerebrovascular disease) for conditions that remain after the acute stroke. It applies when the neurological deficits are the reason for care, and there is no time limit on its use.\n- The lesions were hemorrhagic, in the frontal and parietal areas of the left hemisphere, so the intracerebral haemorrhage sequela code I69.1 fits best.\n\n**Caveat on the principal diagnosis**\n\nSome coders would argue that the sequela code is not the principal diagnosis. In ICD-10-AM, the condition that was evaluated or treated (the residual deficit, here aphasia) is normally sequenced first, with the I69 code added to show the cause. In this case, the I69.1 code itself describes the sequela, with the specific deficit specified separately.\n\nIf your facility follows that convention, the principal diagnosis is the manifestation, **R47.0 Dysphasia and aphasia**. I69.1 is then listed as an additional code.\n\n**Suggested additional codes**\n\n- R47.0 \u2013 Aphasia (severe non-fluent)\n- G81.9 \u2013 Hemiplegia (mild right hemiparesis). Under ICD-10-AM this may be captured within I69.1 (as the sequela), with a code for the specific deficit.\n- H53.4 \u2013 Visual field defect (right)\n\n**Final answer:** I69.1, Sequelae of intracerebral haemorrhage. Please confirm local sequencing rules, because ACS guidance may favour R47.0 as principal, with I69.1 secondary.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 558,
+    "output_tokens": 646
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "bf7949dcece5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHOSPITAL COURSE:\n\nAdmission Date: April 29th, 2016\nDischarge Date: N/A\n\nHISTORY OF PRESENT ILLNESS:\n\nMs. C, a 73-year-old woman with a history of uveal melanoma, was admitted to the hospital for epigastric pain and symptoms of gastric reflux following her second dose of ipilimumab as second line immunotherapy for liver metastases. She also had mild diarrhea with 3\u20134 loose stools daily. Esophagogastroduodenoscopy and flexible sigmoidoscopy were performed to inform further treatment.\n\nFINDINGS:\n\nEsophageal, gastric and duodenal mucosa appeared normal on endoscopic examination without evidence of ulceration or other significant mucosal injury. Gastric biopsies exhibited lymphocytic inflammation surrounding pigmented cells scattered throughout the gastric mucosa. S100 and SOX10 immunostains confirmed multiple microscopic foci of melanoma with tumor associated inflammation resembling gastritis. Flexible sigmoidoscopy and colonic biopsies were normal.\n\nHOSPITAL COURSE AND TREATMENT:\n\nGlucocorticoid treatment was initially deferred as this was considered an appropriate antitumor response, and she received her third dose of ipilimumab. After the 3rd dose, she developed an elevation in her transaminases and bilirubin concerning for checkpoint hepatitis. She was started on glucocorticoids and further immunotherapy was held. Her hepatitis resolved on glucocorticoids. Her gastric symptoms also improved on glucocorticoid therapy consistent with an immune-mediated mechanism.\n\nDISCHARGE INSTRUCTIONS:\n\nMs. C is advised to continue taking glucocorticoids and report any new symptoms to her healthcare provider. She is recommended to follow-up with her oncologist for further treatment options.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]"
+      }
+    ]
+  },
+  "text": "# Suggested principal diagnosis: **C78.8 \u2013 Secondary malignant neoplasm of other and unspecified digestive organs** (metastatic melanoma to the stomach)\n\nThis assumes the record's withheld discharge diagnosis matches the workup below. Confirm against the actual discharge summary before finalising.\n\n## Rationale\n\n**Reason for admission:** Epigastric pain and reflux symptoms after the second dose of ipilimumab, plus mild diarrhoea.\n\n**Condition established after study:**\n- Endoscopy showed normal-looking mucosa.\n- Gastric biopsies showed multiple microscopic foci of melanoma, confirmed by S100 and SOX10 stains.\n- The lymphocytic inflammation was described as tumour-associated and \"resembling gastritis.\" The team considered it an antitumour response, not primary drug toxicity.\n- Sigmoidoscopy and colonic biopsies were normal, so immune colitis was excluded as the cause of the diarrhoea.\n\nUnder ACS 0001 (Principal Diagnosis), the principal diagnosis is the condition established after study to be chiefly responsible for the admission. Here that is the gastric metastatic melanoma. Symptom codes such as R10.1 (epigastric pain) should not be used because a definitive cause was found. ACS 0236 also supports sequencing the malignancy first when treatment or investigation is directed at it.\n\nICD-10-AM has no specific code for secondary malignant neoplasm of the stomach, so C78.8 applies.\n\n## Additional diagnoses to consider\n\n| Code | Description |\n|---|---|\n| C78.7 | Secondary malignant neoplasm of liver (known liver metastases) |\n| C69.4 | Malignant neoplasm of ciliary body / uveal melanoma (choroid C69.3 if specified). Use Z85.8 instead if the primary was treated and eradicated |\n| K75.8 / K71.x + Y43.x | Immune checkpoint inhibitor hepatitis, coded as an adverse effect of ipilimumab, an antineoplastic drug, in therapeutic use |\n| R19.7 or relevant code | Diarrhoea, only if clinically significant per ACS 0002 |\n\nThe hepatitis developed after admission, so it is a hospital-acquired complication. It should be an additional diagnosis, not the principal one.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 726,
+    "output_tokens": 985
+  },
+  "seconds": 0.0
+}

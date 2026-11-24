@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "c9159cda6e35",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: Case 3\nAge: 40 years old\nSex: Male\nAdmission Date: N/A\nDischarge Date: N/A\n\nChief Complaint:\nCase 3 presented with chronic sinusitis, hyperglycemia, difficulty in breathing, fever, dry cough, general body weakness, and 72% oximetry saturation. He was subsequently diagnosed with COVID-19.\n\nHospital Course:\nThe patient was isolated and taken to a designated isolation center for treatment and monitoring. He received supportive therapy for his symptoms.\nDiagnosis: [diagnosis section withheld]\nFollow-up:\nThe patient is advised to follow-up with his healthcare provider for further evaluation and management of his symptoms. He is also advised to take appropriate precautions to prevent the spread of COVID-19.\n\nDischarge Instructions:\nThe patient will be discharged home with instructions to continue self-isolation and monitor his symptoms. He is advised to seek further medical attention if his symptoms worsen or if he develops new symptoms. The patient is also advised to follow all public health guidelines to prevent the spread of COVID-19. \n\nSummary:\nCase 3, a 40-year-old male, presented with chronic sinusitis, hyperglycemia, difficulty in breathing, and fever. He was subsequently diagnosed with COVID-19 and received supportive therapy during his hospitalization. The patient will be discharged home with instructions to continue self-isolation and monitor his symptoms. He is advised to follow-up with his healthcare provider and to take appropriate precautions to prevent the spread of COVID-19."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: **U07.1 \u2013 COVID-19, virus identified**\n\n## Rationale\n\n- **Reason for admission:** The patient was admitted to an isolation centre and treated mainly for COVID-19, with fever, dry cough, dyspnoea, weakness and severe hypoxaemia (SpO\u2082 72%). Under ACS 0001 *Principal Diagnosis*, COVID-19 is the condition chiefly responsible for the episode of care.\n- **Code choice:** The summary says he was \"diagnosed with COVID-19\", which implies laboratory confirmation. That supports U07.1 rather than U07.2 (COVID-19, virus not identified).\n- **Symptoms are not coded separately:** Fever, cough, dyspnoea and weakness are integral to COVID-19, so they should not be assigned their own codes.\n\n## Possible additional diagnoses (if documentation supports them)\n\n| Condition | Suggested code | Comment |\n|---|---|---|\n| Hypoxaemia / respiratory failure | J96.0x | Code only if the clinician documents respiratory failure; 72% saturation alone is not enough |\n| COVID-19 pneumonia | J12.8 | Code only if pneumonia is documented, for example on imaging. Follow current IHACPA/ACS sequencing advice for COVID-19 manifestations |\n| Chronic sinusitis | J32.9 | Code if it met ACS 0002 additional diagnosis criteria |\n| Hyperglycaemia | R73.9, or E11.x if diabetes is confirmed | Hyperglycaemia needing management meets ACS 0002 |\n\n## Important caveat\n\nThis clinical picture (COVID-19 with chronic sinusitis and hyperglycaemia) matches published case series of **COVID-associated mucormycosis**. If the withheld diagnosis section confirms rhino-orbital-cerebral mucormycosis (**B46.1**), the principal diagnosis may change. That would apply if the mucormycosis, rather than COVID-19, was the main reason for admission or treatment. Check the full documentation before finalising the code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 594,
+    "output_tokens": 1242
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "4c26663ce8fe",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nHospital Course:\nThe patient was admitted for acute appendicitis with CT scan of the abdomen and pelvis confirming the diagnosis. Laparoscopic appendectomy was performed successfully. Peritoneal and nasopharyngeal fluid samples were obtained for culture. The patient was found to be COVID-19 positive via nasopharyngeal swab after surgery and was subsequently isolated with contact precautions. The peritoneal fluid tested negative for COVID-19. An elevated CRP level was noted, and he was placed on ampicillin-sulbactam for empiric antibiotic coverage. Despite progressing through his hospital stay, he continued to be intermittently febrile. The patient was discharged on postoperative day 4 when he was afebrile and asymptomatic to quarantine in his home for two weeks.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nLaparoscopic appendectomy, empiric antibiotic coverage with ampicillin-sulbactam\n\nComplications:\nCOVID-19 positive status in nasopharyngeal fluid sample only, Streptococcus anginosus positive peritoneal fluid culture\n\nFollow-up:\nPatient to quarantine at home for two weeks post-discharge. Follow-up with primary care physician as necessary.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "K35",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 559,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

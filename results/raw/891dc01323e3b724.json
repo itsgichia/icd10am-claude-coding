@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "9f3b34af170c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient: 66-year-old woman of Turkish descent\nAdmission: January 2015\nDischarge: September 2015\n\nHospital Course: \n\nAdmitted for follow-up after kidney transplantation, the patient presented with a rise in creatinine and urinary protein-creatinine ratio, and later developed microhaematuria. Biopsy showed extracapillary proliferative changes, and positive autoimmune serology for anti-neutrophil cytoplasmic antibodies, indicative of AAV granulomatosis with polyangiitis. Treatment included intravenous prednisolone, rituximab, plasma exchange and maintenance therapy. However, corticosteroid-related diabetes mellitus, pneumonia, CMV reactivation, and donor-specific HLA antibodies emerged. Despite interventions, including resection of the transplanted kidney, regular hemodialysis became necessary. The patient experienced no further clinically significant vasculitis activity during two years of follow-up. \nDiagnosis: [diagnosis section withheld]\nSignificant Hospital Course Events: \n\n- Elevated creatinine and urinary protein-creatinine ratio, microhaematuria\n- Biopsy showed extracapillary proliferative changes consistent with pauci-immune crescentic glomerulonephritis and AAV\n- Positive autoimmune serology for anti-neutrophil cytoplasmic antibodies\n- Treatment with intravenous prednisolone, rituximab, plasma exchange and maintenance therapy\n- Complications included corticosteroid-related diabetes mellitus, pneumonia, CMV reactivation, and donor-specific HLA antibodies.\n- Regular hemodialysis was commenced four months after the initial presentation.\n- Transplanted kidney was resected due to new development of donor-specific HLA antibodies and persistent haematuria.\n- PR3-ANCA remained positive, but declined steadily.\n- No further clinical vasculitis activity during follow-up for two years.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: M31**\n\n- **Principal diagnosis:** The condition found after study to be chiefly responsible for this admission is ANCA-associated vasculitis. Specifically, it is PR3-ANCA positive granulomatosis with polyangiitis (formerly Wegener's granulomatosis), causing pauci-immune crescentic glomerulonephritis in the transplanted kidney.\n- **Full code:** M31.3, Wegener's granulomatosis, under category M31 (Other necrotising vasculopathies).\n- **Why not T86.1 (kidney transplant failure and rejection):** When the original disease recurs, or a primary disease such as vasculitis develops, in a transplanted organ, the disease itself is coded as principal, not transplant failure. The rising creatinine, proteinuria and microhaematuria were the presenting signs, and the biopsy and serology established GPA as the cause.\n- **Codes I would add as additional diagnoses, not principal:**\n  - The renal involvement.\n  - Steroid-induced diabetes (E-chapter diabetes code with an adverse-effect code).\n  - Pneumonia.\n  - CMV infection.\n  - Donor-specific HLA antibodies and graft failure (T86.1).\n  - Kidney transplant status.\n  - Dependence on dialysis.\n  - Nephrectomy of the graft and haemodialysis, coded as procedures.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 893,
+    "output_tokens": 627
+  },
+  "seconds": 0.0
+}

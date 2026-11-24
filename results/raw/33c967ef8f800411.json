@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "0c964e66f001",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nHOSPITAL COURSE:\nA 71-year-old female with a medical history of nonalcoholic steatohepatitis, multiple episodes of gastrointestinal bleeding, deep venous thrombosis, and pulmonary embolism requiring an inferior vena cava filter, and atrial fibrillation presented with recurrent episodes of altered mental status. Due to persistent encephalopathy despite resolution of infection, an extended workup was performed and hepatic encephalopathy was entertained as the presumptive diagnosis. Further diagnostic imaging revealed 2 large intrahepatic venous malformations manifesting as a portovenous shunt.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\nThe patient underwent interventional coil embolization to close the anastomosis and had no further episodes of hepatic encephalopathy post-treatment. Ammonia levels were normalized. Follow-up is recommended.\n\nCONDITION ON DISCHARGE:\nStable.\n\nDISCHARGE MEDICATIONS:\nNone.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: Q26**\n\nThis is a clinical judgement. Choosing between Q26 and K72 depends on documentation that the discharge summary withholds.\n\n**Why Q26 (congenital malformations of great veins)**\n- Investigation showed two large intrahepatic venous malformations forming a portovenous (portosystemic) shunt. That shunt is the established underlying cause of the recurrent encephalopathy.\n- Treatment targeted the shunt itself (coil embolisation of the anastomosis). After closure the encephalopathy stopped and ammonia levels returned to normal. The shunt is therefore the condition chiefly responsible for this admission.\n- Hepatic encephalopathy was the clinical presentation. Here it is a manifestation of the shunt, so it is coded as an additional diagnosis rather than the principal one.\n- I would expect the full code to be Q26.5 (anomalous portal venous connection). That fourth character should be confirmed against the current edition's index.\n\n**Where this could change**\n- The notes call these \"venous malformations\" but never state whether they are congenital or acquired.\n- The patient has NASH. If the shunt were documented as acquired, for example portal hypertension collaterals, Q26 would not apply.\n- In that case the principal diagnosis would move to the liver or vascular chapter, and hepatic failure with encephalopathy (K72) would come into consideration.\n- I would query the treating team on the shunt's origin before finalising, and I would want to see the withheld discharge diagnosis section.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 597,
+    "output_tokens": 967
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "f3628e222519",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nPatient Name: [REDACTED]\nAge: 76 years\nGender: Male\n\nHospital Course:\nThe patient presented with a metachronous cancer in the sigmoid colon during surveillance colonoscopy after a previous right hemicolectomy for adenocarcinoma of the colon. He had undergone a second laparotomy with revision of the anastomosis due to an anastomotic leak during the immediate postoperative period. During the first postoperative week, the patient developed an enterocutaneous fistula with primary wound failure.\n\nAfter subsequent management for the non-surgical healing of the fistula for 10 months, the patient underwent an abdominal wall reconstruction with an inlay polypropylene/polyglactin 910 composite mesh that was fixed using polypropylene sutures. The patient remained asymptomatic for 16 months after the primary surgery, after which he was diagnosed with a sigmoid cancer during surveillance colonoscopy.\n\nAt surgery, the patient underwent subtotal colectomy with ileorectal anastomosis. Several loops of bowel were tightly adherent to the anterior abdominal wall. After separating the loops from the posterior rectus sheath, an enterotomy was made to extract the heavily deposited mesh from inside the bowel lumen. There were no signs of an abscess, fistula, or sinus formation in the surrounding area.\n\nPost-surgery, the patient had an uneventful recovery and was discharged in a stable condition.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n- Subtotal colectomy with ileorectal anastomosis\n- Abdominal wall reconstruction with polypropylene/polyglactin 910 composite mesh\n\nCondition at discharge:\nThe patient was discharged in a stable condition.\n\nFollow-up plan:\nThe patient is advised to continue with follow-up colonoscopies as part of his surveillance protocol."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: C18.7 Malignant neoplasm of sigmoid colon**\n\n**Rationale:**\n- The reason for this admission was the metachronous sigmoid colon cancer found at surveillance colonoscopy. It was treated with subtotal colectomy and ileorectal anastomosis, so it is the condition chiefly responsible for the episode of care.\n- A metachronous primary is coded as its own primary malignancy. It is not coded as a recurrence or a metastasis of the earlier right-sided cancer.\n\n**Additional codes to consider:**\n- **Z85.038** (or the ICD-10-AM equivalent, Personal history of other malignant neoplasm of large intestine) for the previous right colon adenocarcinoma. Check this against your edition, because ICD-10-AM uses Z85.03 for personal history of a malignant neoplasm of the large intestine.\n- **T83.- / T85.- or K91.-** for the intraluminal migrated mesh. The mesh was found eroded into or deposited within the bowel lumen and was removed through an enterotomy. A complication code such as **T85.88** (other specified complications of internal prosthetic devices, implants and grafts, not elsewhere classified) or **K91.89** could be added, depending on the documentation. Use it only if the clinician documents the mesh as a complication. Otherwise, code it as a finding with the appropriate procedure code.\n- **Y83.1** (surgical operation with implant of artificial internal device as the cause of abnormal reaction or later complication) as an external cause code, if a complication is coded.\n- **Z98.8 / Z98.0** for the previous intestinal surgery status, if the facility's guidelines require it.\n\nThe principal diagnosis remains **C18.7**. Morphology code M8140/3 (adenocarcinoma) is added if the histology is confirmed.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 685,
+    "output_tokens": 619
+  },
+  "seconds": 0.0
+}

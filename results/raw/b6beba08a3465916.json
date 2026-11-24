@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "17b682c3c741",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\nLength of Stay: [REDACTED]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted for chest pain and dyspnea on exertion of one-day duration. Initial evaluation with electrocardiogram and left heart catheterization revealed a diagnosis of anterior wall ST segment elevation MI, with 50% stenosis of the proximal LAD, 100% occluded mid LAD with thrombus in place, and 30% in-stent restenosis in the distal LAD. The patient underwent successful drug-eluting stent placement in the mid LAD.\n\nThe patient's hospital course was complicated by cardiogenic shock approximately 48 hours following the procedure, requiring intravenous diuresis and inotrope support. The patient was evaluated for advanced heart failure therapies, underwent a thorough evaluation, and planning for LVAD placement with periprocedural anticoagulation using bivalirudin was initiated. The patient was eventually discharged to a cardiac rehabilitation center.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Condition: The patient was discharged to a cardiac rehabilitation center with stable vital signs, improved hemodynamics, and without any significant complications.\n\nDischarge Medications: [REDACTED]\n\nDischarge Instructions: The patient was advised to closely follow up with the advanced heart failure clinic at our hospital and adhere to the prescribed medication regimen. The patient was also instructed to maintain a heart-healthy diet, avoid smoking and excessive alcohol intake, and engage in regular exercise as tolerated.\n\nFollow-up: The patient will follow up periodically in the advanced heart failure clinic at our hospital."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: I21.0, Acute transmural myocardial infarction of anterior wall**\n\nIn ICD-10-AM (Australian Modification), I21.0 is titled \"Acute transmural myocardial infarction of anterior wall\". It covers an ST-elevation MI (STEMI) of the anterior wall, including involvement of the LAD (left anterior descending artery).\n\n**Rationale**\n- The condition that occasioned the admission, established after study, was an anterior STEMI. The patient presented with chest pain and exertional dyspnea, and the ECG and catheterization confirmed it.\n- Catheterization showed a 100% occluded mid LAD with thrombus, which was treated with a drug-eluting stent.\n- The cardiogenic shock arose about 48 hours after the procedure, so it is a complication that developed during the stay. It is not the principal diagnosis.\n\n**Likely additional diagnoses**\n- R57.0, Cardiogenic shock. Under ICD-10-AM, shock complicating an acute MI may be classified with the MI, so check the Alphabetic Index and Tabular List and local coding standards for the correct approach.\n- I25.1-, Coronary atherosclerosis, for the LAD disease.\n- T82.8- or I25.8-, depending on documentation, for the in-stent restenosis. A 30% restenosis may not meet reporting criteria unless it was clinically significant.\n- Z95.5, Presence of coronary angioplasty implant and graft. This applies only if a stent was already in place from before the admission.\n- Heart failure codes (I50.-), if documented.\n\n**Procedures (ACHI, not part of the diagnosis code)**\n- Coronary angiography\n- Percutaneous insertion of a drug-eluting stent\n\nFinal code assignment depends on the full record, including the documented diagnoses, and on current ICD-10-AM/ACHI/ACS editions.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 701,
+    "output_tokens": 635
+  },
+  "seconds": 0.0
+}

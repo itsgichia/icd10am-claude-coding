@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "cot_then_extract",
+  "record_id": "39c0d5885b21",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\n\nDOB: [REDACTED]     Age: 54     Sex: Male\n\nAdmission Date: [REDACTED]     Discharge Date: [REDACTED]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted post-SIRT after whole-body 18-fluorine-fluorodeoxyglucose positron-emission-tomography/computed tomography (18F-FDG PET/CT) revealed malignant lesions in the medial segment of the left hepatic lobe, following left lateral segmentectomy that had been performed. The patient was referred to our hospital as there were no local options of stereotactic ablative radiation therapy.\n\nDuring the course of follow-up, the patient developed progressive dyspnea and dry cough three weeks post-SIRT. Chest radiogram and computed tomography of the thorax were performed, and the patient put on intravenous prednisone at 1 mg/Kg/day with antibiotic therapy. Seven weeks post-SIRT, 18F-FDG PET/CT scan appeared to show multiple ground-glass opacities in both lungs compatible with radiation pneumonitis. The patient was rehospitalized and glucocorticoid treatment with modified antibiotherapy continued. Four weeks post-SIRT, DLCO reduction was more remarkable and the SpO2 level dropped to 97%.\n\nEleven weeks post-SIRT, a CT scan revealed bilateral diffuse, patchy ground-glass attenuation/consolidation areas seemed to have progressed, along with a significant decrease in SpO2 from 92 to 82%. The patient was transferred to the Intensive Care Unit (ICU), and one week later, the patient expired due to pulmonary complications.\n\nDischarge Medications:\n\nNone.\n\nFollow-up:\n\nThe patient expired during Hospitalization. \n\nDischarge Condition:\n\nDeceased.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The chief cause of the admission and death was radiation pneumonitis, a lung injury from the SIRT radiation given for liver metastases, shown by ground-glass opacities and progressive hypoxia. Radiation pneumonitis is classified in chapter J (Diseases of the respiratory system) under J70, acute pulmonary manifestations due to radiation. Under ICD-10-AM adverse-effect conventions, a T66 radiation-effect code would be sequenced additionally, but the requested category is the respiratory one.\n\nCODE: J70",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1250,
+    "output_tokens": 791
+  },
+  "seconds": 0.0
+}

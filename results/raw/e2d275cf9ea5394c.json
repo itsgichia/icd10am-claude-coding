@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "e1a4069fabbd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary\n\nPatient Name: [Redacted]  \n\nDate of Discharge: [Redacted]  \n\nAdmission Date: [Redacted]  \nAdmitting Diagnosis: [diagnosis section withheld]\nChief Complaint: Manubrium pain  \n\nHistory of Present Illness:  \nThe patient is a 59-year-old postmenopausal woman who was admitted with complaints of a breast mass located in the left upper outer quadrant and manubrium pain. The patient was diagnosed with IDC, which was confirmed by biopsy. The patient underwent modified radical mastectomy and received postoperative adjuvant chemotherapy, radiotherapy, and hormonal therapy. The patient remained asymptomatic for two years until she developed manubrium pain, and further testing revealed sternal metastasis. The patient underwent fulvestrant therapy with concomitant irradiation, and no severe treatment-related adverse events were documented. The patient's symptoms resolved, and she achieved complete response according to RECIST 1.1.\n\nHospital Course: \nThe patient was treated for IDC with modified radical mastectomy, adjuvant chemotherapy, radiotherapy, and hormonal therapy. The patient remained asymptomatic for two years until she developed manubrium pain, which was identified as a sternal metastasis. The patient underwent successful therapy consisting of fulvestrant with concomitant irradiation, and achieved complete response.\n\nDischarge Condition: \nThe patient is stable and was discharged home in good condition.\n\nDischarge Medications: \nThe patient's current medications were continued, and no new medications were prescribed.\n\nFollow-up: \nThe patient was advised to follow up with her oncologist regularly to monitor her condition.\n\nPrimary Care Provider: \n[Redacted]  \n\nAttending Physician: \n[Redacted]  \n\nDischarge Date: [Redacted]  \n\nDictated By: [Redacted]  \n\nCompleted By: [Redacted]  \n\nSigned Electronically By: [Redacted]\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The episode was for manubrium pain, which was found to be a sternal metastasis. The patient had a prior breast invasive ductal carcinoma that was treated with mastectomy. The condition chiefly responsible for the admission is the sternal metastasis, treated with fulvestrant and radiotherapy.\n\nIn ICD-10-AM, a secondary site is coded to C79 (secondary malignant neoplasm of other sites). Bone metastasis is C79.5 (secondary malignant neoplasm of bone and bone marrow), so the category is C79.\n\nCoding rules say that when admission is for treatment of a metastatic site, the secondary site is the principal diagnosis, and the primary is coded as an additional diagnosis. The primary was removed with no evidence of recurrence, so it would be coded as a personal history of malignancy. The principal diagnosis is therefore the sternal metastasis rather than the breast cancer (C50).\n\nCODE: C79",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1205,
+    "output_tokens": 312
+  },
+  "seconds": 0.0
+}

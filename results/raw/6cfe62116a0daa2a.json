@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "json_output",
+  "record_id": "dc0449ea2395",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\nPatient Name: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHospital stay: The patient was admitted to the hospital due to the presence of a brain tumor located in the clivus region. He underwent surgical intervention via a left suboccipital craniotomy, which involved resection of the tumor. Oral intubation was done using the Macintosh laryngoscope blade, and the patient was placed in the left park bench position with neck flexion. Surgery was performed via the left lateral suboccipital approach. The lesion was decompressed, and the operation was completed successfully.\n\nMedical Condition at Discharge: The patient had minor swelling in the neck, tongue, and pharynx on the left side. He experienced pain in the tip of his tongue with a small ulcer on the left side after returning to the intensive care unit. The swelling of his tongue gradually improved after the administration of steroids. The patient was discharged 10 days after the surgery.\n\nFollow-Up Care: The patient was advised to undergo follow-up MRI after three months of surgery as well as clinical follow-up as per physician's recommendations.\n\nDischarge Medications: None.\n\nInstructions: The patient was advised to follow-up with his physician for regular check-up and take rest until complete recovery.\nFinal Diagnosis: [diagnosis section withheld]\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"D32\", \"condition\": \"Benign meningioma (petroclival/clivus region, presumed)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 575,
+    "output_tokens": 179
+  },
+  "seconds": 0.0
+}

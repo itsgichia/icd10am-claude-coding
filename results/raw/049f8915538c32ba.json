@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "few_shot_three",
+  "record_id": "91774e9fbdcf",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nHospital course:\nDischarge Summary\n\nPatient: XXXXXXX\n\nDate of Admission: XXXXXXX\n\nDate of Discharge: XXXXXXX\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nUpon admission, the patient presented with acute onset epigastric pain associated with vomiting. Subsequently, she was diagnosed with acute pancreatitis and a dilated common bile duct with no gallstones or other pathology. Further, a MRCP revealed a curious cystic lesion lying posterior to the head of the pancreas causing extrinsic compression. An abdominal CT scan revealed a cystic or necrotic mass behind the head of the pancreas representing an inflammatory lesion or abscess.\n\nDuring admission, the patient was treated with oral antibiotics and observed clinically and haematologically. However, her bilirubin continued to rise. An ERCP revealed a 10 cm duodenal diverticular abscess at the level of the major papilla draining pus and bile, likely causing extrinsic compression of the bile duct.\n\nThe patient experienced clinical and hematological improvement and was discharged with a plan for follow-up with the gastroenterology team.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Instructions:\n\nThe patient is advised to follow-up with the gastroenterology team and adhere to any prescribed medications. Additionally, the patient is instructed to consume a healthy diet and maintain a low-risk lifestyle.\n\nFollow-Up Care:\n\nFollow-up with the gastroenterology team.\n\nSigned:\n\nXXXXXXXXX\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is the condition chiefly responsible for the admission. Here that is acute pancreatitis, with a duodenal diverticular abscess as the underlying cause. The abscess was draining pus and bile and compressing the bile duct.\n\nTwo categories could apply:\n\n- **K85** (acute pancreatitis) fits the presenting condition.\n- **K57** (diverticular disease of the intestine) fits the underlying cause. Duodenal diverticulum with abscess falls under K57.0 or K57.2, but in ICD-10-AM the small intestine code is K57.0 or K57.1, and duodenal diverticulum itself is K57.1. An abscess within a duodenal diverticulum is a diverticulitis-type complication, which points to K57.\n\nThe case is a duodenal diverticular abscess causing extrinsic bile duct compression, with pancreatitis likely secondary to it. The workup was aimed at the abscess, and ERCP identified it as the cause of the rising bilirubin. The pancreatitis was the initial diagnosis, but the final explanation is the diverticular abscess. The condition established after study to be chiefly responsible is the duodenal diverticulitis with abscess. Note that K57 covers diverticular disease of the intestine, including the small intestine, so K57 is suitable. Duodenal diverticulum without inflammation would be K31.7 (polyp) or K57.1, but the abscess supports K57.\n\n**K57**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 990,
+    "output_tokens": 481
+  },
+  "seconds": 0.0
+}

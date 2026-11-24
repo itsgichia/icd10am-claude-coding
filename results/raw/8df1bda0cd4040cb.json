@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "ccde4e0663bf",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\n\nDOB: [Redacted]\n\nGender: Female\n\nMedical Record Number: [Redacted]\n\nDate of Admission: [Redacted]\n\nDate of Discharge: [Redacted]\n\nReason for Admission:\nThe patient was referred for neurological examination due to sudden onset of diplopia.\n\nHospital Course:\nThe patient underwent neurological examination which revealed convergent strabismus and no movement of the left lateral rectus muscle. Magnetic resonance imaging (MRI) of the brain showed multiple lesions affecting the periventricular, juxtacortical and infratentorial regions. A cerebrospinal fluid analysis was unremarkable. As no other structural abnormalities were identified, a diagnosis of multiple sclerosis (MS) was made. The patient was started on pulse corticosteroid therapy with methylprednisolone during three days. \n\nOutcomes:\nThe patient did not recover after 6 months of the diplopia and is currently being followed on outpatient appointments.\nDiagnosis: [diagnosis section withheld]\nRecommendation:\nThe patient is recommended to follow up on outpatient appointments.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "G35",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 519,
+    "output_tokens": 34
+  },
+  "seconds": 0.0
+}

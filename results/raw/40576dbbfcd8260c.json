@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "4e3e19cc5a80",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [Name]\nMedical Record Number: [Medical Record Number]\nAge: 70\nSex: Male\n\nHOSPITAL COURSE:\n\nThe patient presented to the emergency department with left lower back pain and left flank pain, which had radiated to the left thigh over several days. The patient also had intermittent fever and chills. Upon admission, the patient exhibited drowsiness and was found to have tenderness in the left lower abdomen and swelling in the left thigh, with limited range of motion. Laboratory data indicated leukocytosis, severe coagulopathy, elevated C-reactive protein, hyperlactatemia, and acute kidney injury. CT scans revealed fluid accumulation over the left iliopsoas muscle that extended into the retroperitoneum, left pelvic cavity, and left thigh region, which suggested an iliopsoas abscess and necrotizing fasciitis. Blood culture was performed, and empirical antibiotic therapy was initiated.\n\nDuring the hospital stay, the patient's condition was managed appropriately with antibiotic therapy. The patient's vital signs were monitored regularly, and he was given supportive care. The patient's condition gradually improved, and he no longer exhibited any drowsiness. The patient's swelling in the left thigh improved, and he demonstrated a greater range of motion.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\n\n1. Take medications as prescribed.\n2. Rest and avoid any strenuous activity until cleared by a physician.\n3. Keep the area of swelling in the left thigh clean and dry.\n4. Follow up with a primary care physician or specialist as directed.\n5. Report any new symptoms or side effects to a physician immediately.\n\nDISCHARGE MEDICATIONS:\n\nNone mentioned in the case report\n\nFOLLOW UP:\n\nThe patient will follow up with a primary care physician or specialist as directed."
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis: A41.9, Sepsis, unspecified organism**\n\nThe discharge diagnosis section is blank, so this is inferred from the hospital course. Several features point to sepsis with organ dysfunction: fever and chills, leukocytosis, hyperlactatemia, severe coagulopathy, acute kidney injury, and altered consciousness (drowsiness). Blood cultures were taken, but no organism is reported, so the unspecified code applies.\n\nUnder ICD-10-AM sequencing conventions, when sepsis is present on admission with a localized infection, the sepsis code is sequenced first. The localized infections are then coded as additional diagnoses:\n\n- **M72.6**, Necrotising fasciitis (left thigh)\n- **M60.0**, Infective myositis, used for the iliopsoas abscess. I'm less certain of this mapping, so verify it against the ICD-10-AM Index (e.g., \"Abscess, psoas\" or \"Abscess, iliopsoas\").\n\nAdditional codes would include:\n\n- **R65.2**, Severe sepsis, because the acute kidney injury and coagulopathy are sepsis-related organ dysfunctions\n- **N17.9**, Acute kidney failure, unspecified\n- **D68.9** or a more specific coagulopathy code, depending on documentation (e.g., D65 if disseminated intravascular coagulation is documented)\n\nIf the physician documents a specific organism in the blood cultures, the sepsis code would change (e.g., A41.x with a specific organism). Coding should be confirmed against the full medical record and the physician's final diagnostic statement, which is needed for an accurate principal diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 712,
+    "output_tokens": 1693
+  },
+  "seconds": 0.0
+}

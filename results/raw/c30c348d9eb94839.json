@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "7be47456ff7d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient: Maghrebian 8.2 year-old boy\nAdmission Date: [Date]\nDischarge Date: [Date]\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted for evaluation due to moderate mental retardation, mild intellectual disability, hyperactive behavior, and partial secondary generalized epilepsy with persistent atypical absences and psychogenic episodes. The physical and neurological exam revealed no abnormal findings. The EEG showed abnormal discharges of slow waves and spikes and bi-temporally localized waves. The MRI study showed cortico-subcortical atrophy and corpus callosum hypoplasia. A high definition karyotype and metabolic panel results were normal.\n\nValproic acid was administered to manage the seizures and hyperkinetic behavior. The patient's condition improved, leading to his discharge.\n\nThe genetic study showed 116 bases deletion in genomic sequence of EN2 gene: 155462376\u2013155462491 (G1 marker). The patient showed abnormalities in the transcription of the EN2 gene, that implies the deletion of 208 bases (between 1493 and 1719 bases of the complementary sequence, C4 marker).\n\nThe patient has been discharged with improved symptoms and has been advised to continue the medications prescribed by the treating physician. A follow-up visit has been scheduled to assess the patient's progress with regard to the aforementioned symptoms.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"G40\", \"condition\": \"Epilepsy\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 633,
+    "output_tokens": 23
+  },
+  "seconds": 0.0
+}

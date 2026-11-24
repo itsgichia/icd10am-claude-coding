@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "0597e19347c9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]\nAge: 65\nSex: Female\nDate of Admission: May 12, 2020\nDate of Discharge: May 16, 2020\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted to the surgical ward for elective right hemicolectomy due to the presence of a colon adenocarcinoma. The surgery was performed successfully on May 14, 2020, with laparoscopic right hemicolectomy and side-to-side extracorporeal ileocolonic anastomosis. The patient was stable in the initial postoperative days, despite a gradually dropping hemoglobin. She briefly experienced some bleeding from the anastomotic site, which presented as melena, but this was treated conservatively with a one-unit pack of red blood cells, and the patient's hemoglobin raised to 8.5 g/dl. After four days of hospitalization, the patient was discharged with a full diet and regular bowel motion.\nDischarge Diagnosis: [diagnosis section withheld]\nCondition on Discharge:\nThe patient's condition on discharge was stable, with no complications or obstacles to returning to her usual state of health. The patient was advised to continue with follow-up care and monitoring by her primary care provider.\n\nInstructions at Discharge:\nThe patient was instructed to contact her primary care provider to schedule her follow-up visits. She was also advised to obtain a computed tomography (CT) chest, abdomen, and pelvis, and to undergo tumor marker testing six months post-operation in the service of oncology follow-up.\n\nMedications on Discharge: None\n\nFollow-up Care: Follow-up care with the patient's primary care physician and oncologist is advised to ensure continued monitoring of her health status and to attend necessary appointments and procedures.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The principal diagnosis is the colon adenocarcinoma, because it is the condition that led to the elective admission for right hemicolectomy. The postoperative anastomotic bleed developed during the stay, so it is a complication and a secondary diagnosis, not the principal one.\n\n- **Chapter:** a malignant neoplasm falls in chapter C.\n- **Category:** malignant neoplasm of the colon is C18. A right hemicolectomy points to a right-sided tumour (caecum or ascending colon, C18.0\u2013C18.2), but the three-character category is C18 either way.\n\nCODE: C18",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1147,
+    "output_tokens": 199
+  },
+  "seconds": 2.660008375009056
+}

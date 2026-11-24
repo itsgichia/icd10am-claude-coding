@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "eb4e53923c83",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nEHR Discharge Summary:\n\nPatient Name: Undisclosed\nAge: 31 \nAdmission Date: Undisclosed \nDischarge Date: Undisclosed \n\nHospital Course Summary:\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course: The patient was initially treated with oral mesalamine and prednisolone but in 2010 was changed to azathioprine. The disease continued to relapse despite azathioprine therapy. In 2014, adalimumab was initiated after screening for infectious diseases. The patient was found positive for the presence of mycobacterium tuberculosis (TB) by the QuantiFERON\u00ae-TB Gold test (QFT-G). INH preventive therapy was started and 14 weeks later the patient developed erythematous plaques on the neck and back with clear zones of demarcation resembling sunburn erythema on the dorsum of his hands, and hyperkeratotic plaques on the elbows. The patient reported frequent diarrheal stools, loss of appetite, and episodes of delirium and behavioral changes. Pellagra was suspected due to the low serum niacin level. Pharmacovigilance survey confirmed INH-induced pellagra. The management plan included INH withdrawal, nutritional review, and vitamin supplementation. The patient was treated with niacin orally (200mg/d). Three weeks later, the rash disappeared and diarrhea stopped. The patient was subsequently started on adalimumab.\nDischarge Diagnosis: [diagnosis section withheld]\nCondition on Discharge: The patient\u2019s clinical symptoms improved after treatment with niacin and adalimumab. No rash or diarrhea was reported.\n\nDischarge Medications: None\n\nFollow-Up: Follow-up with the gastroenterology team is recommended to ensure the patient's Crohn's disease is managed appropriately. No follow-up for the management of INH-induced pellagra is necessary.\n\nInstructions: The patient is advised to maintain a healthy diet and avoid foods that may cause vitamin B3 deficiency. No further precautions are required.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The principal diagnosis is isoniazid-induced pellagra, which falls in category E52.\n\n**CODE: E52**\n\n**Why pellagra is the principal diagnosis**\n- This admission was for the skin plaques, diarrhoea, delirium and behavioural change that appeared after starting isoniazid (INH) preventive therapy.\n- Investigation established the cause: serum niacin was low, and pharmacovigilance review confirmed INH-induced pellagra.\n- Care centred on it: INH was withdrawn and oral niacin given, and the rash and diarrhoea resolved.\n- Crohn's disease (K50) is the underlying chronic condition that led to adalimumab and TB screening. It was not chiefly responsible for this episode, so it is an additional diagnosis.\n- Latent TB (positive QuantiFERON) is the reason INH was prescribed. It is also an additional diagnosis, not the principal one.\n\n**Additional codes**\n- **E52 Niacin deficiency [pellagra]** is the principal diagnosis. In ICD-10-AM, an adverse effect of a correctly prescribed drug is coded to the nature of the effect, which here is pellagra.\n- **Y41.1** is the external cause code for an adverse effect of antimycobacterial drugs (isoniazid). It is assigned with a place of occurrence code.\n- **K50.-** Crohn's disease. The fourth character depends on the site, which the summary does not document.\n- A latent TB / positive TB test code should be added according to local coding standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 923,
+    "output_tokens": 619
+  },
+  "seconds": 0.0
+}

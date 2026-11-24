@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "b89c6c41fd8a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nHospital Course:\nThe patient, an 83-year-old woman with a history of developmental disorders, presented to the emergency outpatient unit with a one-week history of dyspnea. She had heavily decreased breath sounds in the left lung. Chest radiograph and CT scan of the chest showed pleural effusions on the left lung. Two diagnostic thoracenteses were non-diagnostic, and a semirigid thoracoscopy was performed to visualize the pleura. Thoracoscopy revealed diffuse thickening of the parietal and visceral pleura, compatible with pleural dissemination with biopsy samples taken from only the visceral pleura node. Hematoxylin and eosin staining and immunohistochemical staining revealed a diagnosis of lung adenocarcinoma with malignant neoplasm. \nDischarge Diagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was discharged to the care of her family. \n\nCondition:\nThe patient had a stable condition upon discharge. \n\nClinical Course:\nThe patient required semirigid thoracoscopy with biopsy samples taken from only the visceral pleura node. Hematoxylin and eosin staining and immunohistochemical staining revealed a diagnosis of lung adenocarcinoma.\n\nFollow-up:\nThe patient was referred for follow-up care with an oncologist. \n\nInstructions:\nThe patient was instructed to follow-up with an oncologist. \n\nTreatment:\nThe patient underwent semirigid thoracoscopy for biopsy samples, which was successful. The treatment plan includes referral to an oncologist for further management. \n\nComplications:\nNo complications were noted during the hospitalization.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: C34**\n\n**Why C34 (Malignant neoplasm of bronchus and lung) is the principal diagnosis**\n\n- **She was admitted to find the cause of the effusion.** She presented with a week of dyspnoea and a left pleural effusion. Two diagnostic thoracenteses gave no answer, so a semirigid thoracoscopy with pleural biopsy was done.\n- **The investigation found lung adenocarcinoma.** Histology and immunohistochemistry confirmed a primary lung adenocarcinoma spread to the pleura. This is the condition \"established after study\" as chiefly responsible for the admission.\n- **The symptom and the effusion are not principal.** Dyspnoea is a symptom. The effusion is a manifestation of the cancer. Neither is principal once the underlying cause is known.\n- **The procedure is not the principal diagnosis.** The thoracoscopy was the means of diagnosis.\n- **Neoplasm sequencing supports the primary.** When an admission to investigate leads to a new diagnosis of a primary malignancy, the primary site is sequenced first. The secondary pleural deposits are coded as additional diagnoses.\n\n**Likely additional codes (for completeness; not requested)**\n\n- C78.2 Secondary malignant neoplasm of pleura, for the pleural dissemination.\n- Malignant pleural effusion, coded according to ICD-10-AM convention for the effusion.\n- Morphology code for adenocarcinoma (M8140/3).\n- History of developmental disorder, only if it meets additional diagnosis criteria under ACS 0002.\n- Procedure code for thoracoscopy with pleural biopsy.\n\nThe fourth character for C34 cannot be assigned from the documentation. The lobe or subsite is not specified, so this would default to C34.9 unless the withheld discharge diagnosis or the histopathology report specifies a lobe.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 779,
+    "output_tokens": 801
+  },
+  "seconds": 0.0
+}

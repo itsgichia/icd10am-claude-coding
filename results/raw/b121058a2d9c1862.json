@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "f3bf6ac5d474",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nHospital Course Summary:\n\nPatient Name: [Name]\n\nAdmission Date: 20 March 2020\n\nDischarge Date: [Date]\nAdmitting Diagnosis: [diagnosis section withheld]\nSignificant Past Medical History:\n- Ischaemic myocardiopathy with left ventricular assist device (LVAD) implantation in 2012\n- Chronic obstructive pulmonary disease (COPD)\n- Recurrent anaemia due to gastrointestinal bleeding\n- Arteriovenous malformations\n\nHospital Course:\nThe patient was admitted for blood transfusion due to ongoing gastrointestinal bleeding. The patient was diagnosed with COVID-19 during hospitalization. The patient\u2019s INR was found to be high on admission and was treated with parenteral heparin. Three units of red blood cells were transfused, which restored haemoglobin to normal levels. The melaena was controlled with precise control of anti-Xa under heparin infusion, and VKA was reintroduced after the resolution of melaena. The patient was managed for respiratory issues during hospitalization and was discharged with regular teleconsultations to monitor INR and respiratory parameters.\n\nHospital Course Details:\n- Admission date: 20 March 2020\n- Reason for admission: Gastrointestinal bleeding\n- COVID-19 status: Positive test, asymptomatic\n- Management:\n  - Parenteral heparin to treat high INR\n  - Blood transfusion to restore haemoglobin levels\n  - Monitoring respiratory parameters\n  - Regular teleconsultations for INR monitoring and management\n- Discharge date: [Date]\n\nSummary:\nThe patient with a history of ischaemic myocardiopathy and LVAD implantation was admitted for gastrointestinal bleeding and was diagnosed with COVID-19 during hospitalization. The patient\u2019s high INR was treated with parenteral heparin, and after a blood transfusion and resolution of melaena, VKA was reintroduced. The patient was managed for respiratory issues and was discharged with regular teleconsultations for continued monitoring of INR and respiratory parameters.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "K92",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 837,
+    "output_tokens": 285
+  },
+  "seconds": 0.0
+}

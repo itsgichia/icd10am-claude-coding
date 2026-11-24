@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "4c26663ce8fe",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\nThe patient was admitted for acute appendicitis with CT scan of the abdomen and pelvis confirming the diagnosis. Laparoscopic appendectomy was performed successfully. Peritoneal and nasopharyngeal fluid samples were obtained for culture. The patient was found to be COVID-19 positive via nasopharyngeal swab after surgery and was subsequently isolated with contact precautions. The peritoneal fluid tested negative for COVID-19. An elevated CRP level was noted, and he was placed on ampicillin-sulbactam for empiric antibiotic coverage. Despite progressing through his hospital stay, he continued to be intermittently febrile. The patient was discharged on postoperative day 4 when he was afebrile and asymptomatic to quarantine in his home for two weeks.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nLaparoscopic appendectomy, empiric antibiotic coverage with ampicillin-sulbactam\n\nComplications:\nCOVID-19 positive status in nasopharyngeal fluid sample only, Streptococcus anginosus positive peritoneal fluid culture\n\nFollow-up:\nPatient to quarantine at home for two weeks post-discharge. Follow-up with primary care physician as necessary."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: K35.80 (Other and unspecified acute appendicitis)**\n\nThis is the code I would choose from the information given, but the diagnosis section was withheld, so it depends on a few assumptions.\n\n**Reasoning**\n- The patient was admitted for acute appendicitis. CT confirmed it, and a laparoscopic appendectomy was done. That condition occasioned the admission, so it is the principal diagnosis.\n- The record does not mention generalised peritonitis, localised peritonitis, perforation or abscess. Peritoneal fluid was cultured and grew *Streptococcus anginosus*, but that alone does not establish peritonitis. If the surgeon documented peritonitis, the code would change. Examples are K35.2x for appendicitis with generalised peritonitis and K35.3x for appendicitis with localised peritonitis. In the current ICD-10-AM/ACHI editions, the fifth character depends on the edition and the documentation. Please check this against your edition's tabular list.\n\n**Likely secondary diagnoses**\n- **U07.1** COVID-19, virus identified. It was confirmed by nasopharyngeal swab, was managed with isolation, and affected care.\n- **B95.4** Other streptococcus as the cause of diseases classified elsewhere, for the *S. anginosus* culture. Code it only if the clinician documents it as clinically significant, which the antibiotic treatment suggests.\n- **R50.9** Fever, unspecified. This is probably not needed if the fever is integral to the conditions above.\n- **R79.8** Other specified abnormal findings of blood chemistry, for the elevated CRP. This is usually not coded because it is integral to the infection.\n\n**Procedure (ACHI)**\n- Laparoscopic appendicectomy is block 926, code 30572-00 [<ACHI>]. Check the exact code against your edition.\n\nIf you can share the withheld diagnosis section or the operative findings, I can refine the appendicitis code, particularly if peritonitis was documented.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 475,
+    "output_tokens": 675
+  },
+  "seconds": 0.0
+}

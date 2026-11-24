@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "a7405fc40bca",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: \nThe 53-year-old male with a history of pleural effusion and cardiac dysfunction who underwent video-assisted empyema curettage under sedation with DEX and regional anesthesia is now being discharged from the hospital.\n\nHospital Course:\nThe patient was monitored for cardiac arrest and had DOB administered prior to surgery due to cardiac dysfunction. The surgery was performed under regional anesthesia with lidocaine and fentanyl administered for pain. The operative time was 37 minutes, and the anesthetic time was 59 minutes. After surgery, the patient was fully awake and returned to the ICU without oxygen supplementation. The patient was moved out of the ICU on POD 1 and had no complications due to anesthesia. The patient was discharged from hospital on POD 19.\n\nMedications:\nNo medication details were given in the case report. \n\nFollow-up Care:\nThe patient was followed up without any problems, and no further follow-up care was mentioned in the case report. \nDiagnoses: [diagnosis section withheld]\nProcedures:\nThe patient underwent video-assisted empyema curettage under sedation with DEX and regional anesthesia. Lidocaine and fentanyl were used for pain as required.\n\nDischarge Condition:\nStable condition."
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis: J86.9 Pyothorax without fistula (empyema of the pleura)**\n\n**Rationale**\n- Under the Australian Coding Standards (ACS 0001), the principal diagnosis is the condition established after study to be chiefly responsible for the admission.\n- The patient was admitted for and underwent video-assisted empyema curettage (VATS decortication/debridement). Pleural empyema was therefore the reason for admission.\n- The record mentions no bronchopleural, pleurocutaneous or other fistula. That makes J86.9 more appropriate than J86.0 (Pyothorax with fistula).\n\n**Points to verify against the full record**, since the diagnosis section was withheld:\n- **Organism:** if a causative organism was identified, add a B95\u2013B96 code. If the empyema is tuberculous, it would instead be classified to A15\u2013A16.\n- **Fistula:** if one is documented, use J86.0 instead.\n- **Additional diagnoses:** the cardiac dysfunction was clinically significant. It changed the anaesthetic approach (sedation and regional anaesthesia rather than general anaesthesia), required preoperative dobutamine, and involved ICU monitoring. It likely meets ACS 0002 criteria for coding, for example an I50.x heart failure code, depending on documentation.\n- **Pleural effusion history:** this would generally not be coded separately, because the empyema accounts for it.\n\nThe final code assignment should be confirmed against the complete clinical documentation.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 470,
+    "output_tokens": 579
+  },
+  "seconds": 0.0
+}

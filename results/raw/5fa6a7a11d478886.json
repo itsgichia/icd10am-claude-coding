@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "few_shot_six",
+  "record_id": "9e761020b901",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nExample 4\nHospital course: An 81-year-old woman was brought in after a fall at home. She could not weight-bear and the right leg was shortened and externally rotated. A pelvic radiograph showed a displaced subcapital fracture of the right femoral neck. She underwent hemiarthroplasty on day one.\nAnswer: S72\n\nExample 5\nHospital course: A 19-year-old man presented with 18 hours of periumbilical pain that migrated to the right iliac fossa, with anorexia and a low-grade fever. There was guarding at McBurney's point and the white cell count was 15.2. Laparoscopy confirmed an inflamed, non-perforated appendix.\nAnswer: K35\n\nExample 6\nHospital course: A 64-year-old woman with a history of oestrogen-receptor-positive breast carcinoma treated five years earlier presented with progressive thoracic back pain. Magnetic resonance imaging showed deposits in T7 and T9 with no cord compression. Biopsy confirmed deposits of breast origin and she received palliative radiotherapy to the spine.\nAnswer: C79\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nGender: Male\nDate of Discharge: [REDACTED]\nAdmission Date: [REDACTED]\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient presented to the emergency department with right-sided chest pain and dyspnoea. Chest radiograph revealed a large right-sided pneumothorax. A pigtail intercostal catheter was inserted and placed on suction. The patient used nocturnal NIV and mouthpiece intermittent positive pressure ventilation (MIPPV) throughout the admission. The ICC was removed on day three, and the patient was discharged on day five with advice to cease all MI-E until clinical review in two weeks.\n\nFollow-up:\nAt review, the MI-E pressures were decreased by a physiotherapist with instructions to use sparingly for cough augmentation or saliva clearance only. Pharmacological modalities of saliva management were recommended; however, the patient had no success with these previously. Unfortunately, the patient represented on three occasions with right-sided pneumothorax in the following six months, with chemical pleurodesis conducted twice, both of which failed to prevent recurrence. The patient was discharged home with a long-term pleural catheter after the fourth admission, which was removed two months later. The patient continues to use MI-E sparingly and has had no subsequent recurrence.\n\nInstructions:\nThe patient is advised to continue using NIV and MIPPV. The patient should use MI-E sparingly for cough augmentation or saliva clearance only, as instructed by the physiotherapist. The patient should seek medical attention if he experiences any chest pain or dyspnoea. The patient should also pay attention to the signs of right-sided pneumothorax in the future and seek prompt medical attention if these occur again.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "The case describes recurrent right-sided pneumothorax in a patient on NIV, MIPPV and mechanical insufflation-exsufflation (MI-E). This pattern suggests a neuromuscular condition such as motor neurone disease or muscular dystrophy, but the underlying diagnosis is withheld.\n\nThe pneumothorax is probably related to barotrauma from MI-E. Barotrauma from a ventilator or assisted-ventilation device would normally be coded as J95.8, a postprocedural respiratory complication, or as a complication of the device.\n\nThe alternative is J93, pneumothorax and air leak. In ICD-10-AM, J93.8 (other pneumothorax) or J93.1 (other spontaneous pneumothorax) would apply if the event were not coded as a complication. The hospital course gives no explicit statement that MI-E caused the pneumothorax. The instruction to stop MI-E and the lowered pressures imply it, but the discharge diagnosis is withheld.\n\nThe admission was for the pneumothorax, so J93 is the most likely principal diagnosis category. J95 is the alternative if the pneumothorax were coded as a procedural complication. In ICD-10-AM, pneumothorax due to a medical procedure is coded to J95.8, but the case does not clearly document that link, so I am choosing J93.\n\n**J93**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1432,
+    "output_tokens": 448
+  },
+  "seconds": 0.0
+}

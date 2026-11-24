@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "8d19e88f1c90",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 86-year-old female with past medical history of hypertension and NSTEMI.\n\nHospital Course: The patient presented with chest pressure and left-hand numbness of one-day duration. Investigations revealed thrombocytopenia, NSTEMI, and hyponatremia. She was started on IV solumedrol, a high-intensity statin, and hypertonic saline. Anti-coagulation therapy was contraindicated at this time. She was presumed to have idiopathic thrombocytopenic purpura. However, her thrombocytopenia persisted, and she experienced a rapid decline in neurologic function. She became obtunded within six hours and was intubated to protect the airway. TTP was suspected due to the patient\u2019s declining neurologic function, and plasma exchange therapy was planned. But, the patient succumbed to cardiac arrest before any treatment could be initiated. An autopsy was performed which revealed an acute myocardial infarction.\nDiagnosis: [diagnosis section withheld]\nRecommendations: No recommendations available as the patient has expired."
+      }
+    ]
+  },
+  "text": "The principal diagnosis would most likely be **I21.4, Non-ST elevation (NSTEMI) myocardial infarction**.\n\n- **Reason for admission:** She presented with chest pressure, and NSTEMI was identified during the admission workup.\n- **Confirmation:** The autopsy showed an acute myocardial infarction, which supports the NSTEMI diagnosis.\n- **Other conditions:** The suspected thrombotic thrombocytopenic purpura (TTP) was never confirmed. Under ICD-10-AM inpatient rules, a suspected diagnosis documented at discharge can be coded as if established, so M31.1 (thrombotic microangiopathy, which includes TTP) would likely be a secondary code. Thrombocytopenia, hyponatremia, and the cardiac arrest that caused death would also be coded as secondary diagnoses.\n\nCoding should be verified against the final diagnosis section, which is withheld here, and the hospital's coding policies.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 400,
+    "output_tokens": 997
+  },
+  "seconds": 4.989135042007547
+}

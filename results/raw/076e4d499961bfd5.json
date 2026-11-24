@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "82081d7eb4e8",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]  \n\nMedical Record Number: [REDACTED]  \n\nDate of Admission: [REDACTED]  \n\nDate of Discharge: [REDACTED]  \nAdmission Diagnosis: [diagnosis section withheld]Principal Diagnosis: [diagnosis section withheld]\nOther Diagnoses: Hypertension, Retropharyngeal Gas, Bilateral Pulmonary Infiltrates, Pneumomediastinum, Subcutaneous Emphysema, Right Upper Lobe Pneumothorax, Right Pulmonary Artery Thrombosis, Left Renal Vein Thrombosis, Gastrointestinal Bleeding.  \n\nHospital Course:\n\nThe patient was admitted due to altered mental status and subsequently tested positive for COVID-19. During admission, the patient required high levels of oxygen therapy and imaging revealed several respiratory abnormalities. As a result, the patient's pneumothorax was managed and her oxygen requirement was gradually lowered. Management of the patient's thromboses required anti-coagulation treatment and placement of an inferior vena cava (IVC) filter. Further imaging also revealed retropharyngeal gas, bilateral pulmonary infiltrates, pneumomediastinum, and subcutaneous emphysema. The patient remained hospitalized for 21 days, during which time her condition improved significantly. Upon discharge, the patient was advised to follow up with her primary care provider for continued management of hypertension and other medical concerns.\n\nDischarge Instructions:\n\nThe patient is advised to continue taking any current medications as prescribed by her primary care provider. She is also reminded to continue practicing good hygiene, including washing hands frequently and wearing a mask in public areas. The patient is advised to monitor her health status closely and report any concerning symptoms to her primary care provider immediately. A follow-up appointment is scheduled with her primary care provider to ensure proper management of any ongoing medical concerns and to monitor her progress."
+      }
+    ]
+  },
+  "text": "The principal diagnosis section is blank, so I can't confirm the code. Based on the rest of the summary, the most likely principal diagnosis is **U07.1, COVID-19 (virus identified)**.\n\n- **Why U07.1:** The patient presented with altered mental status and tested positive for COVID-19. The summary links the respiratory failure and imaging abnormalities to the admission, so the underlying condition is most plausibly the COVID-19 infection.\n- **Related codes:** If the record documents COVID-19 pneumonia, ICD-10-AM guidance typically adds a pneumonia code such as J12.8 (other viral pneumonia). The pneumothorax, pneumomediastinum, subcutaneous emphysema, thromboses, and GI bleeding would be secondary diagnoses.\n- **Caveat:** Altered mental status is a symptom and wouldn't be principal if its cause is established. If the withheld section names a different condition as the reason for admission, or if the pneumothorax or pneumomediastinum was judged to be the main reason for admission, the principal diagnosis would change. Coding rules also require the full record and the physician's documentation, so a certified coder should confirm the final code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 726,
+    "output_tokens": 1270
+  },
+  "seconds": 0.0
+}

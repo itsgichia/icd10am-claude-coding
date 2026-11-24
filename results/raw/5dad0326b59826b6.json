@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "0482ac7e989a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Patient name]\n\nDOB: [Patient date of birth]\n\nMedical Record Number: [Patient's medical record number]\n\nAdmission Date: [Date of admission]\n\nDischarge Date: [Date of discharge]\nAdmitting Diagnosis: [diagnosis section withheld]Discharge Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient presented to the emergency department with abdominal pain and was diagnosed with an ectopic pregnancy in the right adnexa. A laparoscopic right salpingectomy was performed, and regular obstetric follow-up was done for the intrauterine pregnancy. The baby was delivered via spontaneous vaginal delivery at term with no significant complications.\n\nDischarge Instructions:\n\nThe patient is advised to continue with regular obstetric follow-up and to report any signs of complications immediately. Post-operative pain management should be done as prescribed. The patient should have a healthy diet and stay hydrated, and avoid strenuous physical activity until cleared by the obstetrician. \n\nFollow-up:\n\nThe patient is advised to schedule a follow-up appointment with their obstetrician as soon as possible."
+      }
+    ]
+  },
+  "text": "This summary describes a heterotopic pregnancy: an ectopic pregnancy in the right adnexa together with a viable intrauterine pregnancy that continued to term. The diagnosis sections are withheld, so this code is inferred from the hospital course.\n\n**Principal diagnosis: O00.8 Other ectopic pregnancy**\n\nRationale:\n- The reason for admission and the treatment (laparoscopic right salpingectomy) was the ectopic pregnancy.\n- Chapter 15 of ICD-10-AM covers ectopic pregnancy in O00\u2013O08. O00.1 is tubal pregnancy, and the summary says \"right adnexa\" rather than specifying the fallopian tube.\n- Heterotopic pregnancy has no unique code. It is generally coded to the ectopic site, with the coexisting intrauterine pregnancy coded separately.\n- If the operation note confirms a tubal pregnancy, which the salpingectomy would support, **O00.1 Tubal pregnancy** is more specific and would be the preferred principal diagnosis. In that case O00.8 would not be used.\n\nPractical recommendation:\n- Principal diagnosis: **O00.1 Tubal pregnancy**, if the pathology or operative report confirms tubal implantation. Otherwise use O00.8 for an adnexal pregnancy of unspecified site.\n- Additional diagnosis: a code for the concurrent intrauterine pregnancy, such as Z34.\u2013 (supervision of normal pregnancy) or the relevant O code if complications arose.\n- Procedure: laparoscopic right salpingectomy (ACHI block 1264).\n\nCoding note: the term-delivery details belong to a separate episode of care. The delivery admission would be coded on its own, for example O80 or O70\u2013O84, plus Z37.0 for a single live birth. The principal diagnosis for the ectopic pregnancy admission is the ectopic code above.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 440,
+    "output_tokens": 641
+  },
+  "seconds": 0.0
+}

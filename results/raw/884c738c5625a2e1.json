@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "1e840eb867e4",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: [REDACTED]\nAge: 52-year-old female\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to the hospital due to acute change in mental status, with a history of hypertension, smoking, alcohol dependence, and coronary vascular disease with recent myocardial infarction. An emergency bedside ventriculostomy was performed due to a spontaneous intraventricular hemorrhage. Multiple negative blood, cerebrospinal fluid (CSF), and urinary cultures were conducted, despite persistent fevers, and she received empiric infections treatment with intravenous levofloxacin and vancomycin.\n\nThe patient's neurologic function steadily improved, and the ventriculostomy was discontinued. However, her CSF cultures on day 11 revealed Coagulase-Negative Staphylococcal (CoNS) species, for which she was administered intravenous vancomycin and rifampin.\n\nOn day 15, computerized tomography (CT) of the head showed increased intraventricular hemorrhage requiring reinsertion of an external ventriculostomy. Repeated CSF analysis showed elevated white blood cell count with decreased glucose, and CSF cultures yielded CoNS again. Treatment with daptomycin was started, both intravenously and intraventricularly, and the cultures became sterile following 7 days of treatment.\n\nThe patient's hospital course was further complicated with respiratory failure requiring tracheostomy and ventilation support, ventilator-associated pneumonia, and sacral pressure ulcer, and Clostridium difficile colitis. \n\nThe patient was successfully discharged on day 65 to a rehabilitation center.\n\nDischarge Medications:\nNone\n\nFollow-Up Care:\nFollow-up appointments with a primary care physician and a neurologist are recommended.\n\nPlan:\nDischarge plan: Transfer to a rehabilitation center."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: I61.5 \u2013 Intracerebral haemorrhage, intraventricular**\n\n**Rationale**\n\n- Under the Australian Coding Standards (ACS 0001), the principal diagnosis is the condition chiefly responsible for the admission, established after study.\n- The patient presented with an acute change in mental status. This was due to a **spontaneous (nontraumatic) intraventricular haemorrhage**, which needed an emergency ventriculostomy.\n- The other conditions arose during the admission and are coded as additional diagnoses, not the principal diagnosis:\n  - CoNS ventriculitis/meningitis related to the ventriculostomy device\n  - Respiratory failure requiring tracheostomy\n  - Ventilator-associated pneumonia\n  - Sacral pressure injury\n  - *C. difficile* colitis\n\n**Likely additional codes (for context)**\n\n| Condition | Suggested code(s) |\n|---|---|\n| Ventricular shunt/drain-related infection | T85.78 + G04.2 / G00.3 + B95.7 |\n| Respiratory failure | J96.0- |\n| Ventilator-associated pneumonia | J95.851 (or J18.9 per local guidance) |\n| Sacral pressure injury | L89.- (by stage) |\n| *C. difficile* enterocolitis | A04.7 |\n| Hypertension | I10 |\n| Alcohol dependence | F10.2- |\n| Coronary artery disease | I25.1- |\n| Recent MI, within 4 weeks | I21.- |\n| Recent MI, more than 4 weeks earlier | I25.2 |\n| Tobacco use | Z72.0 or F17.- |\n\nAdditional codes should be confirmed against the edition of ICD-10-AM and the ACS in use, and against the full clinical documentation.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 721,
+    "output_tokens": 670
+  },
+  "seconds": 0.0
+}

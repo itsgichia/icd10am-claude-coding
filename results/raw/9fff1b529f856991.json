@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "8da19f18f644",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient: Male, 32 years old\nAdmission date: [date]\nDischarge date: [date]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted to our hospital with a diagnosis of pneumonia and amebiasis. He reported a sudden onset of symptoms including fever, fatigue, malaise, cough, and diarrhea. The patient was treated with antibiotics for pneumonia and secnidazole for amebiasis with no improvement in symptoms. He then developed dyspnea, rash, marked weight loss, and an increase in eosinophilia. After the inconclusive diagnosis and suspicion of infection with helminths, the patient was referred to the Department of Animal Biology, Sector of Parasitology, of Biology Institute in State University of Campinas.\n\nDiagnosis and Treatment:\n\nThe coproparasitological analysis showed the presence of Schistosoma mansoni eggs with typical lateral spine. The patient was treated with Oxamniquine (Mansil) which resulted in a favorable outcome. The control of cure was performed for four successive months after the treatment using the Kato-Katz method to search for eggs and larvae.\n\nFollow-up Care:\n\nThe patient was advised to follow up with his primary care physician for ongoing care and monitoring. He was informed about the importance of personal hygiene and the use of protective measures when traveling to endemic areas.\n\nDischarge Medications:\n\nNone\n\nDischarge Condition:\n\nThe patient was discharged in a stable condition.\n\nDischarge Instructions:\n\nThe patient was instructed to follow up with his primary care physician and continue to monitor symptoms. He was advised to maintain good personal hygiene and use protective measures when traveling to endemic areas."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: B65.1 \u2013 Schistosomiasis due to *Schistosoma mansoni* [intestinal schistosomiasis]**\n\n**Rationale**\n- **Condition chiefly responsible for the admission:** The illness that was finally confirmed and treated was schistosomiasis. Its features were fever, malaise, cough, diarrhoea, dyspnoea, rash, weight loss and rising eosinophilia, which together fit acute schistosomiasis (Katayama syndrome).\n- **Confirmed species:** Stool microscopy showed *S. mansoni* eggs with the typical lateral spine. Treatment with oxamniquine, a drug specific to *S. mansoni*, led to cure.\n- **Why not the admitting diagnoses:** Pneumonia and amoebiasis did not respond to treatment and were effectively replaced by the parasitological diagnosis. They should not be sequenced as principal. They should be coded additionally only if documentation confirms they truly coexisted.\n- **Why not B65.2:** The index entry \"Katayama fever\" points to B65.2, which is *S. japonicum*. Because the species here is documented as *S. mansoni*, the species-specific code B65.1 is more accurate.\n\n**Possible additional codes, if documentation supports them:**\n- D72.1 Eosinophilia. This is usually integral to the schistosomiasis, so it is generally not coded separately.\n- R63.4 Abnormal weight loss. Code only if it is clinically significant beyond the disease itself.\n\nConfirm the code against your current ICD-10-AM edition and local coding standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 626,
+    "output_tokens": 729
+  },
+  "seconds": 0.0
+}

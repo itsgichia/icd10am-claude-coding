@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "a6c95a2bfb2e",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]\nAge: 69\nSex: Male\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHOSPITAL COURSE:\nThe patient was admitted with severely symptomatic atrial fibrillation (AF) requiring multiple cardioversions. He had a history of an implantable cardiac monitor, left bundle branch block with an ejection fraction of 25%, and a cardiac resynchronization therapy device (CRT-D). The patient underwent uncomplicated pulmonary vein isolation (PVI) using radiofrequency (RF) via the SANS FLUORO technique. There were no complications during or after the procedure. The patient was discharged the following day and remained free of AF at his three- and six-month follow-up visits.\n\nHISTORY AND FINDINGS:\nThe patient had previously undergone successful implantation of the Optimizer\u2122 III device as part of a clinical trial. The preprocedure chest radiograph showed increased scar burden in the left atrium (LA) based on voltage mapping, with ablation lesions showing the left atrial roof and posterior line. Post-PVI, entrance and exit blocks were demonstrated. The postprocedure CRT-D check revealed no change in lead sensing, threshold, or impedance values.\nDIAGNOSIS: [diagnosis section withheld]\nPROCEDURE/TREATMENT:\nUncomplicated pulmonary vein isolation (PVI) using radiofrequency (RF) via the SANS FLUORO technique.\n\nFOLLOW-UP:\nThe patient remained free of AF at his three- and six-month follow-up visits.\n\nDISCHARGE INSTRUCTIONS:\nThe patient is instructed to follow up with their healthcare provider as recommended.\n\nDISCHARGE MEDICATIONS:\nN/A\n\nDISCHARGE CONDITION:\nThe patient was discharged in stable condition.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "I48",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 786,
+    "output_tokens": 100
+  },
+  "seconds": 0.0
+}

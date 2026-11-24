@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "json_output",
+  "record_id": "0c964e66f001",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nHOSPITAL COURSE:\nA 71-year-old female with a medical history of nonalcoholic steatohepatitis, multiple episodes of gastrointestinal bleeding, deep venous thrombosis, and pulmonary embolism requiring an inferior vena cava filter, and atrial fibrillation presented with recurrent episodes of altered mental status. Due to persistent encephalopathy despite resolution of infection, an extended workup was performed and hepatic encephalopathy was entertained as the presumptive diagnosis. Further diagnostic imaging revealed 2 large intrahepatic venous malformations manifesting as a portovenous shunt.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\nThe patient underwent interventional coil embolization to close the anastomosis and had no further episodes of hepatic encephalopathy post-treatment. Ammonia levels were normalized. Follow-up is recommended.\n\nCONDITION ON DISCHARGE:\nStable.\n\nDISCHARGE MEDICATIONS:\nNone.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"K72\", \"condition\": \"Hepatic encephalopathy due to intrahepatic portosystemic venous shunt\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 508,
+    "output_tokens": 485
+  },
+  "seconds": 0.0
+}

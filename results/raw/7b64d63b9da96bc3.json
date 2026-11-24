@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "1e776546d069",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED] \nAge: 68 \nGender: Male \nAdmission Date: [REDACTED] \nDischarge Date: [REDACTED] \n\nMedical History:\nThe patient presented with left-sided abdominal pain, early satiety, fatigue and 7 lbs weight loss for seven weeks. Past medical history significant for hypertension, emphysema and Hepatitis C Virus (HCV) with successful treatment with sofosbuvir and ribavirin.\n\nHospital Course:\nOn admission to the emergency department, the patient's vitals were stable. His clinical examination was unremarkable, except for left-sided abdominal tenderness. Abdominal ultrasound showed splenomegaly and MRI of the abdomen confirmed multiple hypoenhanced lobulated masses in the spleen. SPECT showed heterogeneous splenic uptake with areas of photopenia related to splenic masses, and liver biopsy showed chronic hepatitis. Bone marrow biopsy ruled out lymphoma and JAK2 mutation was negative. After performing splenic biopsy, DLBCL was diagnosed, and the patient was started on R-CHOP. \n\nAfter six cycles of R-CHOP, the patient's PET scan showed complete remission on PET and decrease in spleen size. However, six months later, he presented with left lower quadrant pain and splenic biopsy showed a relapse of DLBCL. Due to his poor performance status, the patient was started on palliative lenalidomide and rituximab.\nDischarge Diagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was discharged and will follow up for further treatment in the outpatient setting. \n\nFollow-up Instructions:\nThe patient was instructed to consult with the oncology team for further management."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: diffuse large B-cell lymphoma (DLBCL) of the spleen, relapsed**\n\n**ICD-10-AM code: C83.38**\n- C83.3 is diffuse large B-cell lymphoma.\n- The fifth character 8 is \"lymph nodes of multiple sites\" in the ICD-10-AM/WHO scheme. That is the only reason I chose it, and I explain the reasoning below.\n\n**Reasoning**\n- The splenic biopsy showed DLBCL, both at the original diagnosis and at relapse.\n- The lymphoma is confined to the spleen, with no documented nodal disease. ICD-10 and ICD-10-AM have a fifth-character site subdivision for C83.3. Under that scheme, spleen is coded as **C83.37 (DLBCL, spleen)** in the ICD-10-CM version, which has a \"spleen\" option. In ICD-10-AM, 5th-character subdivisions for lymphomas are:\n  - 0 unspecified site\n  - 1 head, face and neck nodes\n  - 2 intrathoracic nodes\n  - 3 intra-abdominal nodes\n  - 4 axillary and upper limb nodes\n  - 5 inguinal and lower limb nodes\n  - 6 intrapelvic nodes\n  - 7 spleen\n  - 8 nodes of multiple sites\n  - 9 extranodal and solid organ sites\n- Using that list, the best code for a splenic-only DLBCL is **C83.37 (DLBCL, spleen)**, not C83.38. My first answer above was wrong on this point, and C83.37 is the code I recommend.\n\n**Final answer: C83.37, diffuse large B-cell lymphoma of the spleen (relapsed).**\n\n**Notes**\n- Active relapse is coded as the current malignancy. The \"remission\" status in the record applies only to the earlier treatment phase.\n- Some ICD-10-AM editions differ in how the fifth character is assigned, so check the version your facility uses.\n- Secondary codes could include:\n  - I10 for hypertension\n  - J43.9 for emphysema\n  - Z86.19 or B18.2 for the history of hepatitis C. B18.2 applies if chronic hepatitis is still documented, and the liver biopsy showed chronic hepatitis.\n  - Z51.1 or the relevant chemotherapy/palliative care code, if applicable",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 649,
+    "output_tokens": 810
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "73a597f1b445",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Unavailable           MRN: Unavailable\nAge: 71                                 Sex: Female  \nAdmission Date: September 29, 2017    Discharge Date: Unavailable\n\nHospital Course:\nThe patient was admitted to our hospital with suspected cerebral infarction and infectious fever caused by acute gastroenteritis. Upon arrival, the patient had a body temperature of 39.6\u00b0C, and her left limb muscle strength was grade 5-, while her right limb muscle strength was grade 5. The patient's condition deteriorated, and she suffered a cerebral hemorrhage breaking into the ventricle. She underwent intracranial hematoma drainage and was admitted to another hospital in Beijing in a coma.\nDiagnosis: [diagnosis section withheld]\nComplications:\nDuring her course of hospitalization, the patient had complications that included a multidrug-resistant bacteria infection, liver and kidney dysfunction, electrolyte disturbance, intestinal flora imbalance, hypoproteinemia, and venous thrombosis of the lower extremity. \n\nSummary:\nThe patient, a 71-year-old female, was admitted to our hospital with suspected cerebral infarction and infectious fever caused by acute gastroenteritis. She was diagnosed with JE, and her condition deteriorated, resulting in a cerebral hemorrhage breaking into the ventricle. She underwent intracranial hematoma drainage and was admitted to another hospital in Beijing in a coma. She faced many complications throughout her course of hospitalization, including a multidrug-resistant bacteria infection, liver and kidney dysfunction, electrolyte disturbance, intestinal flora imbalance, hypoproteinemia, and venous thrombosis of the lower extremity."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: A83.0 Japanese encephalitis**\n\n**Rationale:**\n- The summary states the patient \"was diagnosed with JE.\" In this context JE is Japanese encephalitis, a mosquito-borne flavivirus infection. The diagnosis section is withheld, but this is the only definitive underlying diagnosis given.\n- The cerebral hemorrhage into the ventricle, the coma and the later complications arose during the course of the encephalitis. The condition established after study to be chiefly responsible for the episode of care is the encephalitis, not the initial working diagnoses of suspected cerebral infarction or gastroenteritis.\n- A83.0 is in the ICD-10 and ICD-10-AM block A83 (mosquito-borne viral encephalitis). It is a \"code first\" etiology code, so the manifestation or complication codes follow it.\n\n**Possible additional codes (secondary):**\n- I61.5 Intracerebral haemorrhage, intraventricular\n- A04.9 or A09 for the gastroenteritis, depending on documentation (the exact code is uncertain)\n- R40.2 Coma, if coded separately\n- Z16.- Resistance to antimicrobial drugs, with the relevant infection code\n- K72.- / N17.- / N19 for liver and kidney dysfunction, depending on specificity\n- E87.8 Other electrolyte disorders\n- E88.- / E77.- for hypoproteinemia, as documented (hypoproteinaemia is E88.09 in ICD-10-AM)\n- I80.- / I82.- for lower limb venous thrombosis, depending on whether it is superficial or deep\n- A procedure code for the intracranial hematoma drainage, assigned from ACHI, not ICD-10-AM\n\n**Caveats:**\n- The diagnosis section is withheld, so \"JE\" is inferred to be Japanese encephalitis from the summary.\n- The patient was transferred to another hospital, so the principal diagnosis for this facility's episode could differ depending on what was treated at this site.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 644,
+    "output_tokens": 683
+  },
+  "seconds": 0.0
+}

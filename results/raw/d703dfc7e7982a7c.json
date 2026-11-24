@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "json_output",
+  "record_id": "9896dda7183d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: [redacted]\nAge: 2 years\nSex: Female\nDate of Admission: February 5, 2020\nDate of Discharge: February 10, 2020\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to the hospital on February 5, 2020 for intermittent fever and dry cough. She had previously received oral medications for three days consisting of Tamiflu and Cefaclor. The patient's aunt was a suspected case of COVID-19 and had developed symptoms on January 26, 2020. She passed away on February 1, 2020. The physical examination on admission showed a temperature of 38.8\u00b0C, pulse of 110 beats per minute, respiration of 25 breaths per minute, and SpO2 of 100%. The results of the nasopharyngeal swab sample taken on admission were negative for SARS-CoV-2.\n\nDiagnostic Results:\nThe chest computed tomography (CT) showed patchy and flocculent slightly high-density shadows in both lungs. The blood routine results revealed a leukocyte count of 9.29 \u00d7 109/L and lymphocytes of 1.63 \u00d7 109/L. C-reactive protein was 5 mg/L. The serum IgM antibody of influenza A was weakly positive. The third nasopharyngeal swab sample was also negative. However, the serum collected on February 5, 2020 was found to be positive for both IgG and IgM antibodies against SARS-CoV-2.\nFinal Diagnosis: [diagnosis section withheld]\nTreatment:\nThe patient was treated with Tamiflu continuously.\n\nDisposition and Condition on Discharge:\nThe patient was discharged on February 10, 2020 with a return to normal body temperature. \n\nFollow-up Recommendations:\nThe patient was advised to undergo follow-up testing to ensure a complete recovery.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"J12\", \"condition\": \"Viral pneumonia due to COVID-19\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 768,
+    "output_tokens": 446
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "dcda545ce1c2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient: 19-year-old male\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted to the hospital with severe dyspnea and diagnosed with elevated cardiac biomarkers. The initial blood pressure was high. The patient denied angina pectoris, and the ECG showed no notable abnormality. The transthoracic echocardiography showed impaired left ventricular function with basal hypokinesia. Treatment with medications was initiated, and the cardiac MRI showed no evidence of acute myocarditis. Endocarditis was excluded, and the normal blood levels of catecholamines excluded pheochromocytoma.\n\nAfter the acute phase, the patient complained of vertigo and neurological examination showed other neurological deficits. The brain and spinal MRI showed various lesions, including a prominent pontomedullary lesion. The CSF analysis revealed a lymphocytic pleocytosis, and serum neurofilament levels were elevated. Screening for other autoimmune or infectious diseases was negative, and serum-Aquaporin-4- and -MOG-antibodies were negative. The patient was diagnosed with MS, and medication with intravenous methylprednisolone was initiated. During the hospital stay, the patient showed improvement and no focal signs during discharge.\n\nFollow-up:\n\nThe patient was prescribed disease-modifying medication and showed no abnormalities in the follow-up exams. The patient showed no events suspicious of a relapse in the first 6 months of follow-up.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "G35",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 639,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

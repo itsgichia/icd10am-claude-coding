@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "1e776546d069",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED] \nAge: 68 \nGender: Male \nAdmission Date: [REDACTED] \nDischarge Date: [REDACTED] \n\nMedical History:\nThe patient presented with left-sided abdominal pain, early satiety, fatigue and 7 lbs weight loss for seven weeks. Past medical history significant for hypertension, emphysema and Hepatitis C Virus (HCV) with successful treatment with sofosbuvir and ribavirin.\n\nHospital Course:\nOn admission to the emergency department, the patient's vitals were stable. His clinical examination was unremarkable, except for left-sided abdominal tenderness. Abdominal ultrasound showed splenomegaly and MRI of the abdomen confirmed multiple hypoenhanced lobulated masses in the spleen. SPECT showed heterogeneous splenic uptake with areas of photopenia related to splenic masses, and liver biopsy showed chronic hepatitis. Bone marrow biopsy ruled out lymphoma and JAK2 mutation was negative. After performing splenic biopsy, DLBCL was diagnosed, and the patient was started on R-CHOP. \n\nAfter six cycles of R-CHOP, the patient's PET scan showed complete remission on PET and decrease in spleen size. However, six months later, he presented with left lower quadrant pain and splenic biopsy showed a relapse of DLBCL. Due to his poor performance status, the patient was started on palliative lenalidomide and rituximab.\nDischarge Diagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was discharged and will follow up for further treatment in the outpatient setting. \n\nFollow-up Instructions:\nThe patient was instructed to consult with the oncology team for further management."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **C83.3 Diffuse large B-cell lymphoma**\n\n**Why this code**\n- The splenic biopsy confirmed **diffuse large B-cell lymphoma (DLBCL)**. The latest admission was for biopsy-proven relapse in the spleen, followed by starting palliative lenalidomide and rituximab.\n- This makes the lymphoma the condition chiefly responsible for the episode of care. The abdominal pain, early satiety, weight loss and splenomegaly are symptoms of it, so they are not coded separately.\n- ICD-10-AM has no separate \"relapse\" or \"in remission\" code for non-Hodgkin lymphoma. (Those status distinctions exist for categories such as leukaemia and myeloma.) A relapse of DLBCL is therefore still assigned **C83.3**.\n- ICD-10-AM does not add a site character for the spleen. That is an ICD-10-CM convention (**C83.37**), which does not apply here.\n\n**Morphology code** (if your facility collects it): **M9680/3**, Malignant lymphoma, large B-cell, diffuse, NOS.\n\n**Possible additional diagnoses** (depending on documentation and ACS criteria):\n- **I10** Essential (primary) hypertension\n- **J43.9** Emphysema, unspecified\n- **B18.2** Chronic viral hepatitis C, *only if* still documented as active or clinically relevant. HCV was successfully treated, but the liver biopsy showed chronic hepatitis, so this needs clinician clarification. A personal history code may be more appropriate if the infection is resolved.\n- **Z51.1** Pharmacotherapy session for neoplasm, if chemotherapy or immunotherapy was given during the admission. Check ACS 0044 for sequencing rules for same-day versus multi-day admissions.\n\nFinal code assignment should be checked against the full medical record and the current ICD-10-AM/ACS edition used by your facility.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 649,
+    "output_tokens": 1006
+  },
+  "seconds": 0.0
+}

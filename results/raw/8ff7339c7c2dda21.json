@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "73a597f1b445",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Unavailable           MRN: Unavailable\nAge: 71                                 Sex: Female  \nAdmission Date: September 29, 2017    Discharge Date: Unavailable\n\nHospital Course:\nThe patient was admitted to our hospital with suspected cerebral infarction and infectious fever caused by acute gastroenteritis. Upon arrival, the patient had a body temperature of 39.6\u00b0C, and her left limb muscle strength was grade 5-, while her right limb muscle strength was grade 5. The patient's condition deteriorated, and she suffered a cerebral hemorrhage breaking into the ventricle. She underwent intracranial hematoma drainage and was admitted to another hospital in Beijing in a coma.\nDiagnosis: [diagnosis section withheld]\nComplications:\nDuring her course of hospitalization, the patient had complications that included a multidrug-resistant bacteria infection, liver and kidney dysfunction, electrolyte disturbance, intestinal flora imbalance, hypoproteinemia, and venous thrombosis of the lower extremity. \n\nSummary:\nThe patient, a 71-year-old female, was admitted to our hospital with suspected cerebral infarction and infectious fever caused by acute gastroenteritis. She was diagnosed with JE, and her condition deteriorated, resulting in a cerebral hemorrhage breaking into the ventricle. She underwent intracranial hematoma drainage and was admitted to another hospital in Beijing in a coma. She faced many complications throughout her course of hospitalization, including a multidrug-resistant bacteria infection, liver and kidney dysfunction, electrolyte disturbance, intestinal flora imbalance, hypoproteinemia, and venous thrombosis of the lower extremity.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "A83",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 728,
+    "output_tokens": 114
+  },
+  "seconds": 0.0
+}

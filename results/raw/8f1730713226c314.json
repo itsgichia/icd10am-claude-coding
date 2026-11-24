@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "a9c015055748",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nSex: Male\nDate of Admission: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHospital Course:\n\nThe patient, an 18-year-old male with no significant past medical history, was admitted to the emergency department with complaints of suprapubic and periumbilical pain, accompanied by nausea for one day. Physical examination revealed mild tenderness to palpation in the periumbilical, right lower quadrant, and left upper quadrant regions. Respiratory rate, heart rate, and blood pressure were within normal limits, but complete blood count revealed leukocytosis with a left shift.\n\nA CT exam was performed to rule out any underlying causes of the aforementioned symptoms, demonstrating a dilated and hyperenhancing retrocecal appendix containing a form of calcified materials within it. Moreover, small air collections were identified anterior to the right and left common iliac arteries, and posterior to both psoas muscles in the retroperitoneal cavity of the abdomen.\n\nThe patient was taken to the operating room for an appendectomy, during which an additional inflamed appendix, and evidence of minor perforation into the retroperitoneum were found. Surgical team continued with appendectomy in view of inferior incision area revealing no pathologic process in the retroperitoneal cavity.\n\nThe patient was monitored in the post-operative care unit and demonstrated no post-operative complications. The patient was discharged the following day in stable condition.\nDiagnosis: [diagnosis section withheld]\nInstructions:\n\nThe patient is advised to take all prescribed medications and attend follow-up appointments as scheduled. Discharge instructions and the post-operative care plan have been explained to the patient in detail before being discharged.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: K35**\n\nThe principal diagnosis is acute appendicitis (ICD-10-AM category K35). The CT showed a dilated, hyperenhancing appendix with calcified material, and surgery confirmed an inflamed appendix with minor perforation. The episode was an appendectomy for this condition, and the retroperitoneal air and perforation are manifestations of it.\n\nThe final six-character code depends on the peritoneal involvement, which the record does not state clearly. The perforation was into the retroperitoneum, not the peritoneal cavity, and no generalised or localised peritonitis is documented. The diagnosis section was also withheld. A coder would confirm this with the operating surgeon or the pathology report before assigning the subcategory.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 808,
+    "output_tokens": 864
+  },
+  "seconds": 0.0
+}

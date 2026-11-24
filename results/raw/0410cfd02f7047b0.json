@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "b90becef024d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 49-year-old female of Asian descent\n\nChief Complaint: Burning with urination, frequency, and sensation of incomplete bladder emptying\n\nHospital Course:\nThe patient was admitted with complicated cystitis with sepsis and diagnosed with multiple urinary bladder masses. She underwent bladder mass resection, and pathology showed no evidence of malignancy. Prednisone and mirabegron were prescribed for overactive bladder. The patient developed right-sided abdominal pain, elevated lipase, and amylase levels, mild left hydronephrosis, and underwent bone marrow biopsy; results showed mild T-cell lymphocytosis and eosinophilia with normocellular marrow. The patient was given imatinib, which was stopped due to side effects.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Medications:\nNone\n\nFollow-Up Care:\nFollow-up recommended with the primary care physician for review of biopsy results and further management plan."
+      }
+    ]
+  },
+  "text": "**Likely principal diagnosis code: N30.00 (Acute cystitis without hematuria), with the caveats below.**\n\nThe discharge diagnosis section was withheld, so this is inferred from the narrative rather than confirmed.\n\n**Reasoning**\n- The admission was for complicated cystitis with sepsis. The presenting symptoms were dysuria, frequency and a sense of incomplete emptying.\n- ICD-10-AM sequencing for sepsis due to a localized infection generally puts the systemic infection first, with the site of infection coded as an additional diagnosis. This applies only if sepsis was documented as the condition chiefly responsible for the admission. The sepsis code would be A41.9 (Sepsis, unspecified organism), or a specific organism code if one was identified. No culture result is given here.\n- If the clinician documented the sepsis as secondary, or if sepsis criteria were not clearly met, cystitis would be the principal diagnosis. In that case N30.0- (acute cystitis) applies, using N30.00 if there was no hematuria and N30.01 if there was.\n\n**Why the other findings are not principal**\n- The bladder masses, resected with benign pathology, would be coded as additional diagnoses, for example N32.8 (other specified disorders of bladder) or a benign neoplasm or inflammatory code depending on the pathology.\n- The T-cell lymphocytosis and eosinophilia would be coded as additional diagnoses, for example D72.1 (eosinophilia).\n- The elevated lipase and amylase, the hydronephrosis and the overactive bladder would also be additional diagnoses.\n- The imatinib side effects would be coded as an adverse effect, if documented.\n\n**Recommendation**\nConfirm the final documented diagnosis with the treating clinician. If sepsis is documented as present on admission and as the reason for admission, the principal diagnosis would be A41.9, with N30.0- as an additional code. Otherwise use N30.00.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 383,
+    "output_tokens": 653
+  },
+  "seconds": 0.0
+}

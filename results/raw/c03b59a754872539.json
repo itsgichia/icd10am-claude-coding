@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7f08982167b1",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\n\nThe patient was admitted with cough, weight loss, and a cavity in the right upper pulmonary lobe. The patient tested positive for HIV and was diagnosed with tuberculosis infection. After starting antiviral and anti-tuberculosis therapy, the patient presented with urinary retention due to an enlarged prostate. The patient was transferred to a tertiary care hospital for further management.\n\nAssessment and Plan:\n\nDuring the hospital stay, the patient underwent several diagnostic tests including sputum culture, smear, and interferon-\u03b3 release assay, which were negative for Mycobacterium tuberculosis. Lumbar puncture indicated nearly normal cerebrospinal fluid profile, and CT scan revealed a cavity with effusion in the upper right lung. Bronchoscopy confirmed the presence of Cryptococcus neoformans in the bronchoalveolar lavage fluid. Enhanced MRI of the prostate showed an abnormal patchy signal in the central gland of the prostate with reduced T2W1 signal in the seminal vesicles and peripheral zone of the prostate. A prostatic biopsy revealed granulomatous inflammation with positive periodic acid\u2013Schiff staining. Culture of the prostatic tissue grew Cryptococcus neoformans.\n\nThe patient was diagnosed with AIDS with pulmonary cryptococcosis and cryptococcal prostatitis. Oral voriconazole and flucytosine combination therapy for 2 months followed by oral fluconazole maintenance treatment for 4 months was initiated and relieved the patient\u2019s urinary retention and the cryptococcal prostatitis.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Plan:\n\nThe patient was discharged in stable condition with a prescription for oral fluconazole. The patient was advised to follow up with an infectious disease specialist for further management of the underlying condition of AIDS. The patient was also advised to take necessary precautions to prevent future infections."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: B20.5 (HIV disease resulting in other mycoses)**, with B45.0 added as an additional code for the pulmonary cryptococcosis. This is my best reading of the ICD-10-AM coding conventions, and it should be checked against the current ACS/Coding Rules.\n\n**Reasoning**\n\n- The record documents AIDS with pulmonary cryptococcosis and cryptococcal prostatitis. In ICD-10-AM, HIV disease with a manifesting condition is coded to B20\u2013B24. Cryptococcosis is a mycosis, so it falls under B20.5.\n- Australian Coding Standard 0100 (HIV/AIDS) directs that when a patient is admitted with an HIV-related condition, the B20\u2013B24 code is sequenced first. The specific manifestation is then coded additionally.\n- The admission was for cough, weight loss and a lung cavity, which turned out to be pulmonary cryptococcosis. The initial TB diagnosis was not confirmed, because sputum culture, smear and IGRA were negative. TB (A15\u2013A19) should therefore not be coded.\n\n**Suggested additional codes**\n\n- B45.0 Pulmonary cryptococcosis\n- B45.8 Other forms of cryptococcosis, for the prostatic involvement. Some coders prefer B45.7 (disseminated cryptococcosis) if the documentation supports dissemination.\n- N51.0* Disorders of prostate in diseases classified elsewhere, as the manifestation code for the prostatitis, if the classification pairing applies.\n- R33 Urinary retention, if it is not integral to the prostatitis. Check this against the coding rules.\n- Z21 is not used, because AIDS is coded with B20.\n\n**Caveats**\n\n- The discharge diagnosis section was withheld, so this rests on the narrative.\n- The record describes a transfer to a tertiary hospital, so the principal diagnosis for each episode of care may differ. The urinary retention and prostatitis episode could be sequenced differently at the receiving facility.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 713,
+    "output_tokens": 687
+  },
+  "seconds": 0.0
+}

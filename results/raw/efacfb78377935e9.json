@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "e978f0ec2dd7",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: ____\nDate of Admission: ____\nDate of Discharge: ____\nPrimary Diagnosis: [diagnosis section withheld]\nSecondary Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to our facility on ____, exhibiting symptoms of tachycardia and acute kidney injury. It was later determined that the patient had ingested multiple foreign bodies. Treatment interventions included intravenous lorazepam and emergency laparotomy to remove all the packets. Postoperatively, the patient was transferred to the ICU where he remained for a total of one night before being transferred to ward level care. Pain management was achieved with a patient controlled analgesia (PCA) infusion pump, and the patient was extubated on day 1 postoperatively. The patient had a slow postoperative recovery mainly due to pain and limited oral fluid intake. He was discharged on day 10 back to police custody and returned once a week later for a dressing change.\n\nCourse of Treatment:\nThe course of treatment for this patient focused on the removal of the ingested foreign bodies through an emergency laparotomy. The patient was transferred to the ICU postoperatively and was managed with a patient controlled analgesia (PCA) infusion pump to manage pain.\n\nMedications:\nA detailed list of medications administered during the patient's hospitalization is not included in this summary.\n\nFollow-up:\nThe patient was discharged on day 10 back to police custody and returned once a week later for a dressing change. No further follow-up was scheduled upon the patient's discharge."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis code is **T18.9, Foreign body in alimentary tract, part unspecified**.\n\n**Reasoning:**\n- The condition chiefly responsible for admission and treatment was ingestion of multiple packets (a body-packing or body-stuffing presentation) requiring emergency laparotomy to remove them.\n- The summary does not state where the packets were lodged, so the unspecified-site code applies. If the operative findings specify the site, a more precise code applies: T18.2 for stomach or T18.3 for small intestine.\n\n**Caveats that could change the code:**\n- **Drug identity and leakage:** The summary doesn't name the substance. Tachycardia and acute kidney injury could reflect systemic toxicity from a leaking drug packet. If the substance and toxicity are documented, ICD-10-AM poisoning codes (T36\u2013T65, with the drug-specific code and an external cause code) may take precedence as principal diagnosis under the poisoning sequencing rules. Coders should check whether the treating clinicians documented the toxicity as a diagnosis.\n- **Complications:** Acute kidney injury should be coded as a secondary diagnosis (N17.9 unless a more specific type is documented).\n- **Coder verification:** Final code assignment should be confirmed against the full medical record, operative report, and the current ICD-10-AM/ACHI edition and Australian Coding Standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 568,
+    "output_tokens": 1217
+  },
+  "seconds": 0.0
+}

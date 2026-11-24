@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "19a788b5e2bb",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge summary:\nPatient: 78-year-old woman\nDiagnosis: [diagnosis section withheld]\nTreatment: Successfully treated conservatively\nFollow-up: Recommended\n\nHospital Course:  \nThe patient, a 78-year-old woman, presented with epigastric pain and non-bloody diarrhea six days after a second cure of adjuvant chemotherapy for gastric adenocarcinoma. Further examination revealed Massive Pneumatosis Intestinalis (PI) involving colonic submucosal, extensive subserosal, mesenteric, and free posterior retroperitoneal gas, as seen on subsequent Computed Tomography (CT) scans. The precise etiology of PI was not identified, but chemotherapy (notably 5-Fluorouracil (5-FU)) was a likely contributor. The absence of alarm CT findings allowed for successful conservative treatment of the patient.\n\nDischarge Instructions:  \nThe patient is recommended to continue follow-up care with their primary care physician and attend future appointments as scheduled. Any significant changes in medical condition should be reported immediately to a healthcare provider.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The principal diagnosis is pneumatosis intestinalis, which falls under K63 (other diseases of intestine).\n\n1. **Reason for admission.** She presented with epigastric pain and diarrhoea. Investigation (CT) established massive pneumatosis intestinalis, affecting the colonic submucosa and subserosa, with mesenteric and retroperitoneal gas. This was treated conservatively, so pneumatosis intestinalis is the condition chiefly responsible for the admission.\n\n2. **Excluded alternatives.**\n   - The epigastric pain and diarrhoea are presenting symptoms explained by the established diagnosis, so they are not coded as principal.\n   - The gastric adenocarcinoma is a comorbidity and the reason for chemotherapy. It was not the focus of this admission.\n   - 5-FU was named as a \"likely contributor.\" That supports an additional external-cause code for an adverse effect of an antineoplastic drug in correct use. It does not change the principal diagnosis.\n\n3. **Classification.** Pneumatosis (cystoides) intestinalis is indexed to K63.8, \"Other specified diseases of intestine,\" in Chapter XI (Diseases of the digestive system).\n\nCODE: K63",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 602,
+    "output_tokens": 492
+  },
+  "seconds": 0.0
+}

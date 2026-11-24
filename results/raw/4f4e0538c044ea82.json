@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "b89c6c41fd8a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\nThe patient, an 83-year-old woman with a history of developmental disorders, presented to the emergency outpatient unit with a one-week history of dyspnea. She had heavily decreased breath sounds in the left lung. Chest radiograph and CT scan of the chest showed pleural effusions on the left lung. Two diagnostic thoracenteses were non-diagnostic, and a semirigid thoracoscopy was performed to visualize the pleura. Thoracoscopy revealed diffuse thickening of the parietal and visceral pleura, compatible with pleural dissemination with biopsy samples taken from only the visceral pleura node. Hematoxylin and eosin staining and immunohistochemical staining revealed a diagnosis of lung adenocarcinoma with malignant neoplasm. \nDischarge Diagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was discharged to the care of her family. \n\nCondition:\nThe patient had a stable condition upon discharge. \n\nClinical Course:\nThe patient required semirigid thoracoscopy with biopsy samples taken from only the visceral pleura node. Hematoxylin and eosin staining and immunohistochemical staining revealed a diagnosis of lung adenocarcinoma.\n\nFollow-up:\nThe patient was referred for follow-up care with an oncologist. \n\nInstructions:\nThe patient was instructed to follow-up with an oncologist. \n\nTreatment:\nThe patient underwent semirigid thoracoscopy for biopsy samples, which was successful. The treatment plan includes referral to an oncologist for further management. \n\nComplications:\nNo complications were noted during the hospitalization."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: **C34.9 \u2013 Malignant neoplasm of bronchus or lung, unspecified**\n\n## Rationale\n- The admission was to investigate a left pleural effusion. That work-up confirmed **primary lung adenocarcinoma**, established by H&E and immunohistochemistry on the pleural biopsy.\n- When a patient is admitted for investigation and a malignancy is diagnosed, the **primary neoplasm** is generally sequenced as the principal diagnosis under the ACS neoplasm guidelines.\n- The record does not state a lobe or bronchial subsite, so the fourth character is **.9 (unspecified)**.\n- ICD-10-AM does not code laterality, so \"left lung\" does not change the code.\n\n## Suggested additional codes\n| Code | Description |\n|------|-------------|\n| **C78.2** | Secondary malignant neoplasm of pleura. Covers the pleural dissemination and malignant pleural effusion seen at thoracoscopy. |\n| **J91** | Pleural effusion in conditions classified elsewhere. Check this against local ACS/coding practice, since the effusion was the presenting problem. |\n| **M8140/3** | Adenocarcinoma, NOS (morphology code) |\n| **F88/F89** (as documented) | Developmental disorder, if it meets ACS 0002 criteria for an additional diagnosis |\n\n## Coding query recommendation\nThe discharge diagnosis is withheld, so confirm two points with the treating clinician:\n- whether the specific lobe of the tumour is known, which would allow C34.1\u2013C34.3 or C34.8\n- that the pleural disease is documented as metastatic or secondary spread",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 598,
+    "output_tokens": 959
+  },
+  "seconds": 0.0
+}

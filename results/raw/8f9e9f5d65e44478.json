@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "93a7d6106130",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 66-year-old woman\n\nHospital Course: The patient presented with bilateral cramping thigh pain for three days. She had a past medical history of coronary artery disease, heart failure, high cholesterol, high blood pressure, and diabetes. She was previously hospitalized for a non-ST elevation myocardial infarction.\nDiagnosis: [diagnosis section withheld]\nTreatment: The patient received aggressive intravenous hydration and her simvastatin and ticagrelor medications were discontinued. Her symptoms resolved and laboratory tests showed improvement. She was started on a new medication, clopidogrel, and was prescribed rosuvastatin during a follow-up clinic visit.\n\nFollow-up: The patient has remained without complications on follow-up visits and laboratory tests.\n\nConclusion: The patient was discharged in stable condition with appropriate medications and follow-up care."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: **M62.82 Rhabdomyolysis**\n\nThe diagnosis section was withheld, so this is inferred from the clinical picture. Please confirm it against the documented diagnosis before final coding.\n\n## Why rhabdomyolysis is the likely diagnosis\n- **Presentation:** bilateral cramping thigh pain (proximal myalgia) for 3 days.\n- **Treatment:** aggressive IV hydration, the standard management for rhabdomyolysis to prevent acute kidney injury.\n- **Drugs stopped:** simvastatin and ticagrelor. This is a recognised interaction. Ticagrelor weakly inhibits CYP3A4, which raises simvastatin levels and the risk of statin myotoxicity.\n- **Drugs restarted:** rosuvastatin, which is not CYP3A4-dependent, and clopidogrel replacing ticagrelor.\n- **Course:** symptoms and laboratory results (presumably CK) improved.\n\n## Why M62.82 is sequenced first\nThis is an **adverse effect of drugs correctly prescribed and properly administered**. ACS 1902 (Adverse effects) directs you to code the **nature of the adverse effect** as the principal diagnosis, followed by the external cause codes.\n\n## Suggested additional codes\n| Code | Description |\n|---|---|\n| **Y52.6** | Antihyperlipidaemic and antiarteriosclerotic drugs (simvastatin) causing adverse effects in therapeutic use |\n| **Y44.4** | Antithrombotic drugs (platelet-aggregation inhibitors) (ticagrelor) causing adverse effects in therapeutic use |\n| **Y92.22** | Place of occurrence: health service area (as appropriate) |\n| Comorbidities | Code per ACS 0002 if they meet additional diagnosis criteria, e.g. heart failure (I50.-), diabetes (E11.-), hypertension, CAD/old MI (I25.-) |\n\n## Alternative if the documentation differs\nIf the clinician documented **\"statin-induced myopathy\"** without rhabdomyolysis, the principal diagnosis would instead be **G72.0 Drug-induced myopathy**, with the same Y codes.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 347,
+    "output_tokens": 1165
+  },
+  "seconds": 0.0
+}

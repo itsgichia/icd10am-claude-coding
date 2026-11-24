@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "2445738deb97",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\n\nAge: 70 years\n\nSex: Male\n\nMedical History:\n\nThe patient was diagnosed with advanced renal cell carcinoma and was receiving Ipilimumab/Nivolumab therapy. He presented with new-onset fatigue and dizziness after two cycles of therapy.\n\nHospital Course:\n\nDuring the hospital course, the patient underwent a physical examination, which revealed normal visual fields. Laboratory assessment showed mild hyponatremia, with low TSH and free T4. Morning ACTH and cortisol were also low. MRI brain showed pituitary enhancement.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nIpilimumab/Nivolumab therapy was temporarily stopped, and the patient was started on hydrocortisone 10mg/5mg in the morning and afternoon, respectively, as well as a weight-based dose of levothyroxine. The patient demonstrated clinical improvement and was restarted on PD-1 monotherapy.\n\nFollow-up:\n\nThe patient was given \"sick day\" instructions for stress dosing of hydrocortisone and a medical alert bracelet. Key concepts of management involve high index of clinical suspicion, appropriate localization of endocrine dysfunction, hormone replacement, and close monitoring. Immune-related endocrine events are unique as the manifestations are often irreversible, and patients often require lifelong hormone replacement.\n\nHospital Disposition:\n\nThe patient was discharged from the hospital after clinical improvement. It is recommended that ICI is held for any-grade hypophysitis. Once patients demonstrate stability on hormonal replacement, ICI can be restarted. Higher-grade hypophysitis can be managed with an initial pulsed dose of corticosteroids. The patient was instructed to continue receiving follow-up medical care."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **E23.1 \u2013 Drug-induced hypopituitarism**\n\n## Clinical picture\n\nThe patient has **immune checkpoint inhibitor-induced hypophysitis** caused by ipilimumab/nivolumab. The evidence is:\n\n- **Central (secondary) adrenal insufficiency**: low morning ACTH and low cortisol.\n- **Central hypothyroidism**: low TSH and low free T4.\n- **Hyponatraemia**, consistent with cortisol deficiency.\n- **Pituitary enhancement on MRI**.\n- **Temporal link** to the drug, with onset after two cycles of ipilimumab/nivolumab.\n- **Treatment directed at the hypopituitarism**: hormone replacement with hydrocortisone and levothyroxine.\n\n## Why E23.1 is the principal diagnosis\n\n- The hypophysitis has caused deficiency of more than one pituitary axis (ACTH and TSH). That makes this a hypopituitary state.\n- A drug caused it, and E23.1 captures both the pituitary failure and the drug cause.\n- E23.1 is more specific than E23.6 (Other disorders of pituitary gland, the index default for \"hypophysitis\"). E23.6 would fit an inflamed pituitary without stated drug-induced hormone failure.\n- This was an adverse effect of a correctly prescribed and administered drug, not a poisoning. So the condition is the principal diagnosis, with an external cause code added. A T-code (poisoning) is not used.\n\n## Suggested additional codes\n\n| Code | Description |\n|---|---|\n| **Y43.x** | Adverse effect of antineoplastic/immunomodulating drugs in therapeutic use. Assign the specific code per your edition's Table of Drugs for ipilimumab/nivolumab (monoclonal antibody immunotherapy). |\n| **Y92.x** | Place of occurrence, if required by your edition and local standards. |\n| **E87.1** | Hypo-osmolality and hyponatraemia, if it meets additional diagnosis criteria. Many coders would treat it as integral to the cortisol deficiency, so check ACS 0002. |\n| **C64** | Malignant neoplasm of kidney (renal cell carcinoma). Add secondary codes (C77\u2013C79) if metastatic sites are documented. |\n| **Z92.6** | Personal history of chemotherapy for neoplastic disease, or the appropriate immunotherapy status code, per local practice. |\n\n**Note:** Codes should be confirmed against the edition of ICD-10-AM/ACS in use at your facility. The withheld diagnosis section should also be checked to confirm the clinician documented \"hypophysitis/hypopituitarism secondary to ipilimumab/nivolumab.\"",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 670,
+    "output_tokens": 1242
+  },
+  "seconds": 0.0
+}

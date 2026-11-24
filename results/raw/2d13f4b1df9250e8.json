@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "8d13e48b6d14",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\n\nDate of Admission: [redacted]\n\nDate of Discharge: [redacted]\n\nReason for Admission:\nThe patient was admitted to the emergency department due to a 12-day history of cyclical fevers with vague abdominal pain.\n\nHospital Course:\nInitial vital signs showed a blood pressure of 149/80 mmHg, a heart rate of 107 beats per minute, a temperature of 99.2\u00baF, a respiratory rate of 16, and a pulse oximetry reading of 100% on room air. Laboratory values showed a drop in hemoglobin and mild leukocytosis with no evidence of urinary tract infection. A computed tomography (CT) of the abdomen and pelvis with IV contrast showed multiple liver abscesses, septic thrombophlebitis of the portal system, and evidence of ruptured appendicitis. The patient was started on broad-spectrum IV antibiotics and underwent IR-guided abscess drainage.\n\nTreatment:\nThe patient was treated with IV antibiotics and underwent abscess drainage.\n\nCondition at Discharge:\nThe patient's condition improved significantly after treatment.\n\nFollow-Up:\nFollow-up appointments were scheduled with the patient's primary care provider for further evaluation and treatment.\n\nRestrictions:\nThe patient was advised to avoid strenuous activities until further notice.\n\nMedications:\nNo medications were prescribed at the time of discharge.\n\nProcedures:\nThe patient underwent IR-guided abscess drainage and interval appendectomy.\nDiagnosis: [diagnosis section withheld]\nSummary:\nThe patient presented to the emergency department with a 12-day history of cyclical fevers with vague abdominal pain. Imaging studies revealed the presence of liver abscesses, septic thrombophlebitis of the portal system, and ruptured appendicitis. The patient was treated with IV antibiotics and underwent abscess drainage and interval appendectomy. The patient's condition improved significantly and follow-up appointments were scheduled with the primary care provider."
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: **K35.3 \u2013 Acute appendicitis with localised peritonitis**\n\n## Why K35.3\n- **Ruptured appendicitis is the underlying cause.** The liver abscesses and portal septic thrombophlebitis are complications that spread from the perforated appendix through the portal venous system. Coding convention favours the underlying condition over its manifestations.\n- **It fits the K35.3 category.** In ICD-10-AM, K35.3 covers acute appendicitis with rupture or perforation, or with a peritoneal or appendiceal abscess, when **generalised** peritonitis is not documented.\n- **K35.2 is not supported.** That code (acute appendicitis with generalised peritonitis) would need documentation of diffuse or generalised peritonitis, which this summary does not contain.\n- **The appendicitis was treated during this admission**, with IV antibiotics and an interval appendectomy.\n\n## Suggested additional diagnosis codes\n| Code | Description |\n|---|---|\n| **K75.0** | Abscess of liver (multiple pyogenic liver abscesses) |\n| **K75.1** | Phlebitis of portal vein (pylephlebitis / septic thrombophlebitis of the portal system) |\n| B95\u2013B96 | Organism code, if a culture result from the drained abscess is documented |\n| D62 / D64.9 | Anaemia, only if documented as clinically significant (the summary notes a haemoglobin drop) |\n\n## Caveats\n- If the facility's interpretation of the Australian Coding Standards (ACS 0001 Principal diagnosis) is that the **liver abscesses** chiefly occasioned the admission, some coders might argue for **K75.0**. However, appendicitis as the documented underlying cause is the more defensible choice.\n- Exact code titles and subdivisions vary between ICD-10-AM editions (10th\u201313th). Confirm against the edition your facility uses, and check the withheld diagnosis section for clinician wording such as \"generalised peritonitis\" or \"appendiceal abscess.\"",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 735,
+    "output_tokens": 1312
+  },
+  "seconds": 0.0
+}

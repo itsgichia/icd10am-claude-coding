@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "657e18ef08b7",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\n\nDate of Admission: [Redacted]\nDate of Discharge: [Redacted]\nDiagnosis: [diagnosis section withheld]\nHistory of Present Illness:\nThe patient, a 10-year, 10-month-old male neutered Shih Tzu, was admitted for further examination of a peracute onset of lethargy and left-sided circling. The general physical examination was normal. Neurological examination revealed circling to the left, decreased proprioceptive positioning of the right thoracic and pelvic limbs, and a decreased menace response on the right side. Routine hematology and serum biochemistry were normal. Urine-specific gravity, urine chemistry dipstick analysis, sediment examination, and urine culture were all unremarkable. Assessment of NIBP using Doppler identified a systolic pressure of 170 mmHg. Fibrinogen, PT, aPTT, and D-dimer were all within normal limits. TEG analysis revealed a shortened R time and SP on citrated plasma. MRI scan of the brain under general anesthesia showed an extensive intra-axial, focal, well-demarcated lesion affecting the cerebral gray matter extending from the left frontal lobe to the rostral aspects of the left temporal lobe. The lesion was T2W and FLAIR hyperintense compared to normal gray matter and T1W hypointense. There was evidence of mild mass effect, and there was no contrast enhancement.\n\nHospital Course:\nThe patient was closely monitored, and no underlying cause for the ischemic stroke could be identified. The dog improved with time and was discharged from the hospital 72 h after admission. The dog made a near to full recovery within 14 days and was neurologically normal at re-assessment five months later.\n\nMedications:\nN/A\n\nFollow-up Care:\nNone necessary at this time.\n\nSigned,\n[Physician Name]"
+      }
+    ]
+  },
+  "text": "This is a veterinary case (a Shih Tzu), so ICD-10-AM does not strictly apply, because it is a classification for human patients. If the record were coded as though it were a human case, the closest match would be:\n\n**I63.9 \u2013 Cerebral infarction, unspecified**\n\nReasoning:\n- The diagnosis is an ischemic stroke: a peracute onset of focal neurological deficits (circling, decreased proprioception, decreased menace response).\n- MRI showed a focal, well-demarcated intra-axial gray matter lesion that was T2W/FLAIR hyperintense and T1W hypointense, with no contrast enhancement and mild mass effect. This is consistent with infarction.\n- No underlying cause was found. Hematology, biochemistry, coagulation and urine tests were normal, and blood pressure was only mildly elevated. Because there was no identified thrombus, embolus, or vessel occlusion, the infarct cannot be assigned to a more specific code (I63.0\u2013I63.5), so I63.9 is the best fit.\n\nPossible alternatives:\n- I63.4 (cerebral infarction due to embolism of cerebral arteries) or I63.3 (due to thrombosis of cerebral arteries) would only apply if the mechanism were documented. It is not.\n- The shortened R time on TEG suggests hypercoagulability, but it was not diagnosed as a clinical condition and would not change the principal diagnosis.\n\nIn practice, ICD-10-AM codes are not used for animal patients. Veterinary records use systems such as VeNom or SNOMED-CT Vet, in which this would be recorded as \"cerebral infarct / ischemic stroke\".",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 672,
+    "output_tokens": 555
+  },
+  "seconds": 0.0
+}

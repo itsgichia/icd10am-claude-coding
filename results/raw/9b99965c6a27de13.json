@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "2be96ddf1bf9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient History:\n\nA 64-year-old woman was admitted to the hospital after experiencing right back pain for 6 days. She was evaluated in the emergency outpatient unit of our hospital 5 days PTA for concern of aortic dissection, infected arterial aneurysm, and purulent arthritis. Blood cultures taken at the time revealed methicillin-resistant Staphylococcus epidermidis (MRSE). She refused hospitalization and returned home until MRSE was once again detected in two sets of repeated blood cultures and she was admitted to our hospital.\n\nHospital Course:\n\nOn admission, the patient had a systolic murmur at the left sternal border and a punctate spot hemorrhage in the palpebral conjunctiva. Prosthetic valve endocarditis (PVE) was the suspected diagnosis based on PMH of aortic valve replacement, a physical examination of systolic cardiac murmur, and conjunctival hemorrhage. Trans-esophageal echocardiography (TEE) confirmed vegetations on her aortic valve, with a diagnosis of PVE. Vancomycin was started immediately on day 1. A repeated blood culture on day 5 was positive, but turned negative on day 8. Rifampicin was added on day 13 to decrease bacterial burden. Vancomycin was switched to teicoplanin on day 19 due to leukopenia, thrombocytopenia, and fever, and rifampicin was discontinued due to a subsequent rash. Blood cultures taken on day 20 were negative, indicating successful treatment.\n\nDischarge Instructions:\n\nThe patient underwent aortic valve re-replacement on day 33, and was discharged on day 50 with good postoperative recovery. The patient is advised to follow up with her physician in 4-6 weeks for further evaluation.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nVancomycin followed by rifampicin and teicoplanin, with successful aortic valve re-replacement.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: T82**\n\n**Rationale**\n\n- **What caused the admission:** After study, this was prosthetic valve endocarditis. The patient had a prior aortic valve replacement. TEE confirmed vegetations on the prosthetic aortic valve. Blood cultures repeatedly grew MRSE.\n- **Why a T code:** In ICD-10-AM, an infection of an implanted device is classed as a complication of that device. It is not coded to the circulatory chapter (I33.0, acute and subacute infective endocarditis). The relevant code is **T82.6, Infection and inflammatory reaction due to cardiac valve prosthesis**. This is consistent with ACS guidance that device-related complications are sequenced as principal.\n- **What was not chosen as principal:**\n  - The back pain was the presenting symptom.\n  - The aortic valve re-replacement was the procedure.\n  - The leukopenia, thrombocytopenia, fever and rash were drug reactions during the stay. These would be additional diagnoses.\n\n**Supplementary codes (for completeness)**\n\n- I33.0 or I39.8 to specify endocarditis, per local practice.\n- B95.7 for the organism: other staphylococcus, which covers *S. epidermidis*.\n- U82.1 for methicillin resistance.\n- Y83.1 as the external cause.\n- Codes for the adverse drug reactions.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 892,
+    "output_tokens": 626
+  },
+  "seconds": 0.0
+}

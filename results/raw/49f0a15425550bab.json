@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "8f808a644d03",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nPatient Discharge Summary:\n\nPatient Name: [Patient Name]\nAdmission Date: [Admission Date]\nDischarge Date: [Discharge Date]\n\nHospital Course:\nThe patient was admitted to the hospital due to lower extremity swelling and pain for four days. Physical examination revealed left lower limb pitting edema and calf tenderness. Color Doppler ultrasound showed an extensive DVT affecting the common iliac, external iliac and common femoral vein as well as superficial femoral down to popliteal vein. Treatment included bed rest, elevation with bandaging of left leg, and low molecular weight heparin injections. Investigations revealed no underlying etiology. Abdominal and pelvic US and CT scan showed an impacting stone and a severe left hydroureteronephrosis with almost lost of cortical thickness. Percutaneous nephrostomy was performed to decompress the hydronephrotic kidney. JJ stent was inserted and subsequently removed. Six weeks later, Doppler US showed complete recanalization of the superficial femoral, popliteal as well as the proximal segment of deep veins of the leg but common iliac, external iliac and common femoral veins and proximal superficial femoral vein were still partially thrombosed. Through pneumatic lithotripsy, the stone was fragmented under spinal anesthesia. Three months after that, Doppler US showed complete recanalization of iliac vessels.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nTreatment included bed rest, elevation with bandaging of left leg, and low molecular weight heparin injections. Percutaneous nephrostomy was performed to decompress the hydronephrotic kidney. JJ stent was inserted and subsequently removed. Pneumatic lithotripsy was performed to fragment the stone under spinal anesthesia. The patient was discharged on oral anticoagulation in the form of rivaroxaban 20 mg daily.\n\nFollow-up:\nThe patient is advised to have regular follow-up visits with their healthcare provider.\n\nSigned by: [Healthcare Provider Name and Title]"
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: I80.1 Phlebitis and thrombophlebitis of femoral vein**\n\nThis is a best-fit choice. ICD-10-AM does not have a separate \"DVT\" code. In the Australian Classification, acute DVT of the femoral, iliac and popliteal veins is indexed under I80.- (phlebitis and thrombophlebitis) or I82.- (other venous embolism and thrombosis). The correct choice depends on the Alphabetic Index.\n\n**Reasoning**\n\n- The condition mainly treated, and the reason for admission, was the extensive acute left lower limb DVT. It involved the iliac, femoral and popliteal veins and presented with four days of swelling and pain. Treatment was bed rest, bandaging and low molecular weight heparin, followed by rivaroxaban.\n- In ICD-10-AM, \"Thrombosis, vein, deep\" is indexed to I80.2- (other deep vessels), and the femoral vein specifically to I80.1. Acute DVT affecting several segments is usually assigned to the most proximal or most specific site.\n- Iliac vein involvement is I80.2 (phlebitis and thrombophlebitis of other deep vessels of lower extremities). Femoral vein involvement is I80.1. Because the thrombus spans iliac, femoral and popliteal segments, I80.1 (femoral vein) is a reasonable choice. Some coders would instead use I80.2 for the iliac involvement. The 5th-character and Australian-specific extensions should be checked in the current edition.\n\n**Secondary diagnoses to code**\n\n- N13.2 Hydronephrosis with renal and ureteral calculous obstruction. This covers the impacted ureteric stone with severe left hydroureteronephrosis.\n- Y-codes or procedure codes for the percutaneous nephrostomy, JJ stent insertion and removal, and lithotripsy, coded in ACHI.\n- Z79.01 Long-term use of anticoagulants, if applicable.\n\n**Caveat:** The stone and hydronephrosis could arguably be the principal diagnosis if the admission was mainly to treat the obstruction. The record shows the admission was for the DVT, with the stone found during the work-up for a cause, so the DVT is the principal diagnosis. The final code should be confirmed against the current ICD-10-AM/ACHI/ACS edition and local coding policy.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 748,
+    "output_tokens": 803
+  },
+  "seconds": 0.0
+}

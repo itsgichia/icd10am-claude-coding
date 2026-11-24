@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "19a788b5e2bb",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge summary:\nPatient: 78-year-old woman\nDiagnosis: [diagnosis section withheld]\nTreatment: Successfully treated conservatively\nFollow-up: Recommended\n\nHospital Course:  \nThe patient, a 78-year-old woman, presented with epigastric pain and non-bloody diarrhea six days after a second cure of adjuvant chemotherapy for gastric adenocarcinoma. Further examination revealed Massive Pneumatosis Intestinalis (PI) involving colonic submucosal, extensive subserosal, mesenteric, and free posterior retroperitoneal gas, as seen on subsequent Computed Tomography (CT) scans. The precise etiology of PI was not identified, but chemotherapy (notably 5-Fluorouracil (5-FU)) was a likely contributor. The absence of alarm CT findings allowed for successful conservative treatment of the patient.\n\nDischarge Instructions:  \nThe patient is recommended to continue follow-up care with their primary care physician and attend future appointments as scheduled. Any significant changes in medical condition should be reported immediately to a healthcare provider."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: K63.88 \u2013 Other specified diseases of intestine** (pneumatosis intestinalis, ICD-10-AM, with the chemotherapy adverse effect coded as an additional diagnosis).\n\n**Rationale**\n- The condition treated during the admission was pneumatosis intestinalis, which is the reason for the epigastric pain and diarrhea. The gastric cancer was not the focus of this episode of care.\n- ICD-10-AM has no specific code for pneumatosis intestinalis. In the WHO ICD-10 it is K63.8 (Other specified diseases of intestine). ICD-10-AM expands this to a fifth character, and K63.88 is the usual choice. The ICD-10-AM Alphabetic Index entry for \"Pneumatosis, intestinal\" should be checked in your edition.\n- The ICD-10-AM code for the pneumatosis is K63.88, and the alternative K63.8 is the WHO-style code. Some coders use K56.x or K55.x if there is obstruction or ischemia, but the discharge summary documents neither.\n\n**Suggested additional codes**\n- **Y43.1 \u2013 Antimetabolite antineoplastic drugs** (5-FU as the likely cause), to be assigned only if the clinician documents it as the cause, not just \"likely\". Query the clinician if unclear.\n- **C16.9 \u2013 Malignant neoplasm of stomach, unspecified**, or the site-specific C16.x code, as a current or history-of malignancy code depending on documentation.\n- **Z51.1x** is not appropriate, because chemotherapy was not given this admission.\n- **R10.1 (epigastric pain)** and **R19.7 (diarrhea)** should not be coded, because they are symptoms integral to the diagnosis.\n\n**Caveat:** the diagnosis section was withheld, so this is inferred from the hospital course. Confirm it against the full record and the current ICD-10-AM/ACHI/ACS edition.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 421,
+    "output_tokens": 661
+  },
+  "seconds": 0.0
+}

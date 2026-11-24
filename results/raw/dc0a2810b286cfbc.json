@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "3db73b0f0932",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Unidentified\n\nDate of Admission: Not specified\n\nDate of Discharge: Not specified\n\nReason for Admission: Pain in right shoulder and left thigh with prior history of moderate trauma\n\nSummary:\n\nA 14-year-old male of Afghan descent was admitted to the hospital with pain in his right shoulder and left thigh following a history of moderate trauma. Physical examination revealed fever, elevated leukocyte count, mild polymorphonuclear predominance, and reduced range of motion in the right shoulder. X-ray imaging showed mixed density, periosteal reaction, and cortical disruption with soft tissue swelling in the metaphysis of the right humerus and left fibula. Computed tomography and magnetic resonance imaging detected two lesions involving the bone marrow and cortex in the head of the humerus and body of the fibula. A biopsy of the proximal humerus revealed diffuse inflammatory infiltration, consistent with xanthogranulomatous osteomyelitis. Deep fluid samples also showed Staphylococcus aureus infection, sensitive to cloxacillin, which was administered to the patient. After hospitalization, the patient's general condition improved, and he was able to walk without pain. The patient left the hospital without completing the duration of treatment, but did not report any relapse of pain or discharge at his follow-up appointment within 4 months in an outpatient clinical setting.\nDischarge Diagnosis: [diagnosis section withheld]\nCondition at Discharge: Improved\n\nTreatment: Cloxacillin\n\nFollow-up Care: Follow-up appointment within 4 months in an outpatient clinical setting\n\nPrognosis: Good"
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis code is **M86.8 (Other osteomyelitis)**.\n\nThe summary describes xanthogranulomatous osteomyelitis, which has no specific ICD-10-AM category, so it falls under \"other osteomyelitis.\" Its multifocal involvement (humerus and fibula) and the lack of a stated acute, subacute, or chronic timeline also argue against the more specific M86 subcategories.\n\nSupporting codes:\n- **B95.61** (Methicillin-susceptible *Staphylococcus aureus* as the cause of diseases classified elsewhere), added as an additional code. The organism was cloxacillin-sensitive, which indicates MSSA. Check your ICD-10-AM edition, since the S. aureus codes have been revised across versions.\n\nBecause the discharge diagnosis section is withheld, this is inferred from the narrative. A coder would confirm the final diagnostic statement before assigning codes.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 609,
+    "output_tokens": 1172
+  },
+  "seconds": 0.0
+}

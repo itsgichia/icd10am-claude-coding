@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "ac793132db98",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nPATIENT INFORMATION:\nName: [Patient Name]\nAge: 41 years\nSex: Female\nDate of Admission: [Admission Date]\nDate of Discharge: [Discharge Date]\n\nHOSPITAL COURSE:\nThe patient [Patient Name] was admitted to the hospital Emergency Room with complaints of dysarthria, edema of the inferior arts, bilateral inguinal lymphadenopathy and headache. The blood chemistry tests revealed an elevation of the tumor markers CA125, CA15.3, and HE-4. Her cerebral magnetic resonance (MRI) was suggestive of a secondary lesion in the left occipital area and of meningeal carcinomatosis. In her anamnesis, a history of repeated visits to her private gynecologist during the previous two years was reported.\nDIAGNOSIS: [diagnosis section withheld]\nTREATMENT:\nPalliative therapy was initiated after the patient was transferred to the oncology ward.\n\nDISCHARGE SUMMARY:\nThe patient's condition worsened very rapidly, and she exhibited symptoms including agitation, confusion, difficulty in swallowing, inability to walk, release of bronchial secretion with the need for repeated bronchoaspirations, epileptic tonic-clonic seizures, and stiffness of muscle tone. She expired 16 days after admission. \n\nRECOMMENDATIONS:\nNone.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"C56\", \"condition\": \"Malignant neoplasm of ovary\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 611,
+    "output_tokens": 30
+  },
+  "seconds": 0.0
+}

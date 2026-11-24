@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "few_shot_six",
+  "record_id": "a5db00fdc2b8",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nExample 4\nHospital course: An 81-year-old woman was brought in after a fall at home. She could not weight-bear and the right leg was shortened and externally rotated. A pelvic radiograph showed a displaced subcapital fracture of the right femoral neck. She underwent hemiarthroplasty on day one.\nAnswer: S72\n\nExample 5\nHospital course: A 19-year-old man presented with 18 hours of periumbilical pain that migrated to the right iliac fossa, with anorexia and a low-grade fever. There was guarding at McBurney's point and the white cell count was 15.2. Laparoscopy confirmed an inflamed, non-perforated appendix.\nAnswer: K35\n\nExample 6\nHospital course: A 64-year-old woman with a history of oestrogen-receptor-positive breast carcinoma treated five years earlier presented with progressive thoracic back pain. Magnetic resonance imaging showed deposits in T7 and T9 with no cord compression. Biopsy confirmed deposits of breast origin and she received palliative radiotherapy to the spine.\nAnswer: C79\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\n\nDate of Admission: [Redacted]\n\nDate of Discharge: [Redacted]\n\nReason for Admission:\nThe patient was admitted due to dizziness, fatigue, and increasing abdominal distension.\n\nHospital Course:\nDuring the hospital stay, the patient was found to have anemia, hypoalbuminemia, and renal failure. Tumor markers were within normal range. A CT scan revealed an extremely large mass occupying most of the abdomen and pelvis, which was ultimately diagnosed as type 1 papillary RCC with nuclear grade 2. The mass was resected after dissecting it free from its attachments. A perforated anterior duodenal ulcer was also noted and repaired. The patient developed intra-abdominal abscess and required drainage and antibiotics in the intensive care unit. Due to ongoing deterioration, comfort care measures were initiated and the patient deceased 1 month later.\nDischarge Diagnosis: [diagnosis section withheld]\nTreatment During Hospital Stay:\nThe patient was started on enteral feeds and underwent surgery for resection of the mass and repair of a perforated anterior duodenal ulcer. The patient also received antibiotics and pressors during the hospital stay.\n\nFollow-up:\nThe patient is deceased and requires no further follow-up.\n\nDischarge Medications:\nN/A\n\nDischarge Condition:\nDeceased.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is the condition chiefly responsible for the admission. Here that is the large mass, which was diagnosed as type 1 papillary renal cell carcinoma. Renal cell carcinoma codes to C64 (malignant neoplasm of kidney, except renal pelvis).\n\nThe other conditions do not fit as principal diagnosis. The perforated duodenal ulcer (K26) was an incidental finding repaired during surgery, and the intra-abdominal abscess was a later complication.\n\n**C64**",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1302,
+    "output_tokens": 171
+  },
+  "seconds": 0.0
+}

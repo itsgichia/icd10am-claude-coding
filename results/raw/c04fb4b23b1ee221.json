@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "d0d5d40b00e0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\n\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\n\nHospital Course:\nThe patient, a 67-year-old male, presented with severe shortness of breath and fast atrial fibrillation. Coronary angiogram revealed no significant coronary artery disease, CT scan revealed a large penetrating atherosclerotic ulcer at the junction of the distal ascending aorta and the undersurface of aortic arch, and echocardiogram showed grossly abnormal-looking distal ascending aorta with a large pseudoaneurysm in relation to the distal ascending aorta. The patient underwent aortic surgery and made an uncomplicated recovery.\n\nThe patient subsequently represented with worsening shortness of breath 6 months later and was found to have a large pseudoaneurysm in relation to the aortic arch. A redo sternotomy was performed, and the patient underwent total arch replacement. The false aneurysm cavity was extensively debrided and laid open. The patient had gradual respiratory weaning and required a percutaneous tracheostomy and antibiotics.\n\nHowever, the patient's condition deteriorated suddenly after 6 weeks when a rupture and contrast leak of the descending thoracic aorta were discovered, along with a large hematoma. The patient underwent TEVAR with an excellent result. The patient also developed a pathological fracture of left proximal tibia and was diagnosed with metastatic renal cancer. The patient was referred to the palliative care team.\n\nThe patient continued to deteriorate and passed away peacefully 65 days following his total arch replacement.\nDiagnosis: [diagnosis section withheld]\nProcedures:\nTotal arch replacement, TEVAR.\n\nCondition at Discharge:\nThe patient passed away.\n\nInstructions at Discharge:\nNone.\n\nFollow-Up Care:\nNone.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "I71",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 772,
+    "output_tokens": 142
+  },
+  "seconds": 0.0
+}

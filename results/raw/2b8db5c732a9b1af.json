@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "json_output",
+  "record_id": "0cfa054dc94b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient Identification:\n24-year-old female with chronic myeloid leukemia (CML) presenting with multiple neck masses, fever, anemia, and profound thrombocytopenia.\n\nHospital Course:\nThe patient was initially diagnosed with CML based on bone marrow (BM) smear image, cytogenetic karyotype, and the BCR/ABL fusion transcript. She was treated with hydroxyurea and then imatinib with some success. However, she was readmitted to the hospital with multiple lymphadenopathies and progressive swelling, indicating blast crisis involving T cells. The BM showed marked hyperplasia with more than 20% blasts. The patient was treated with dasatinib and showed a significant decrease in the WBC. However, she stopped taking the medication and died two months after blast crisis treatment.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient was treated with hydroxyurea, then imatinib (400mg/day), and finally, dasatinib. The dasatinib treatment showed a significant decrease in the WBC. However, the patient stopped taking the medication and died two months after blast crisis treatment.\n\nFollow-up:\nThe patient died two months after blast crisis treatment.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"C92\", \"condition\": \"Chronic myeloid leukaemia in T-lymphoid blast crisis\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 548,
+    "output_tokens": 43
+  },
+  "seconds": 0.0
+}

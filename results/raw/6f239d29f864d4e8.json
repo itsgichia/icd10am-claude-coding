@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "6b385b74c7a0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient Name: [REDACTED]\nGender: Female\nAge: 70 years old\n\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\n\nHospital Course:\nThe patient was admitted with worsening right upper quadrant pain, anorexia, and 10 lb weight loss. A CT scan revealed hepatomegaly and several hypodense lesions consistent with liver metastases, indicating recurrent/metastatic disease. The patient was started on pembrolizumab and axitinib as first-line therapy for her condition.\n\nDuring treatment, the patient experienced side effects and required a dose reduction of axitinib due to fatigue. Elevated thyroid stimulating hormone levels were also monitored and subsequently managed with medication.\n\nAfter 12 weeks of combination axitinib/pembrolizumab, repeat CT scans showed progression of liver metastases, prompting a liver biopsy.\n\nGenomic testing revealed loss of function mutations in von Hippel-Lindau (VHL) and BRCA1-associated protein (BAP1) genes, as well as copy-number loss of cyclin-dependent kinase inhibitor 2A (CDKN2A).\n\nThe patient was discharged home with appropriate follow-up measures.\nDiagnoses: [diagnosis section withheld]\nProcedures:\n1. CT-guided liver biopsy\n\nUpdated Medications:\nNone.\n\nFollow-up Care:\nThe patient will receive appropriate follow-up care as recommended by her healthcare provider."
+      }
+    ]
+  },
+  "text": "The most appropriate principal diagnosis is **C78.7, Secondary malignant neoplasm of liver**.\n\n**Rationale:**\n- The admission was driven by symptomatic liver metastases (RUQ pain, anorexia, weight loss) and the CT-guided liver biopsy was performed to evaluate them.\n- Under ICD-10-AM principal diagnosis rules, when a patient is admitted for management of a secondary site, the secondary malignancy is coded as principal.\n\n**Caveats:**\n- The summary does not name the primary cancer. The VHL loss and first-line pembrolizumab plus axitinib suggest clear cell renal cell carcinoma, but that must be documented by the treating clinician before coding. If the primary is confirmed as kidney cancer, C64.- (malignant neoplasm of kidney) would be added as a secondary diagnosis.\n- If the primary remains unknown, the coder would need to follow the ICD-10-AM guidance for unknown primary sites (C80.-), and the principal diagnosis could change.\n- The \"Diagnoses\" section is withheld, so this answer is based on the hospital course. Confirm against the complete record and the coding guidelines in use.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 558,
+    "output_tokens": 1492
+  },
+  "seconds": 0.0
+}

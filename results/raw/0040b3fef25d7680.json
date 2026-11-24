@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "98d7b7554966",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient: 75-year-old male with history of tobacco abuse and metastatic p16 positive squamous cell carcinoma (SCC)\n\nHospital Course:\nThe patient was admitted with initial symptoms of swelling in the left neck followed by progressive hoarseness and dysphagia over a span of one to two months. A biopsy of the left neck node confirmed squamous cell carcinoma and the patient was later found to have pulmonary metastases. He required tracheostomy and gastrostomy placement for threatened airway obstruction and dysphagia, respectively. \n\nTreatment and Progression:\nThe patient was initially enrolled in a clinical trial comparing first-line EXTREME chemotherapy versus ipilimumab and nivolumab and was randomized to combination ipilimumab and nivolumab delivered concurrently every three weeks for four cycles. However, follow-up imaging at eight weeks showed progression of disease. The patient was then treated with \u2018QUAD SHOT\u2019 for palliation and delivered 3.7 Gy BID x 2 days (total dose 14.8 Gy) to gross disease. The patient continued through the third and fourth cycles of nivolumab and ipilimumab without breaks or delays. Radiation was delivered during the three-week time frame between immunotherapy cycles and he tolerated treatment well with minimal pain and noticeable improvement in the left neck mass. Repeat imaging showed continued decrease in size of all neck and most lung disease, with one lung nodule minimally increasing in size.\n\nOutcome:\nAt the time of writing (10 months from initial diagnosis), the patient has completed a total of 14 cycles of ipilimumab and nivolumab on trial and is currently living with stable, asymptomatic disease. The patient continues to be followed up for response to treatment.\nDiagnoses: [diagnosis section withheld]\nProcedures:\n- Biopsy of the left neck node\n- Tracheostomy and gastrostomy placement \n- \u2018QUAD SHOT\u2019 for palliation \n\nFollow-up:\nThe patient continues to be followed up for response to treatment."
+      }
+    ]
+  },
+  "text": "# Suggested principal diagnosis: **C77.0, Secondary and unspecified malignant neoplasm of lymph nodes of head, face and neck**\n\nThis is a provisional answer. The diagnosis section is withheld and the primary site is never stated.\n\n## Why this code\n\n- The only confirmed tissue diagnosis is squamous cell carcinoma in a **left neck lymph node** (biopsy-proven).\n- **No primary site is documented.** The p16 positivity suggests an oropharyngeal origin, and the hoarseness suggests laryngeal involvement, but a coder cannot assign a primary site from inference.\n- The admission and its procedures (tracheostomy, gastrostomy, palliative radiotherapy) were directed at the bulky neck disease causing airway threat and dysphagia. This supports the neck nodal malignancy as the condition chiefly responsible for the episode.\n\n## Suggested additional codes\n\n| Code | Description |\n|---|---|\n| C78.0 | Secondary malignant neoplasm of lung (pulmonary metastases) |\n| C80.0 | Malignant neoplasm, primary site unknown, so stated (if documentation confirms the primary is unknown) |\n| M8070/6 | Morphology: squamous cell carcinoma, metastatic |\n| R49.0 | Dysphonia/hoarseness (optional; usually integral to the malignancy) |\n| R13.x | Dysphagia (optional; usually integral) |\n| Z72.0 / F17.x | Tobacco use (depending on documentation) |\n| Z00.6 | Examination of participant in a clinical trial (if facility policy requires it) |\n\nProcedure codes would cover the neck node biopsy, tracheostomy, gastrostomy, radiotherapy and immunotherapy administration.\n\n## Important caveat\n\nIf the withheld diagnosis section or clinician documentation names a primary site, sequencing changes. Under ACS 0236 (Neoplasm coding and sequencing), the primary malignancy would become the principal diagnosis if treatment was directed at it. Examples:\n\n- **C10.9**: Oropharynx, unspecified (the most likely site given p16+ SCC)\n- **C32.9**: Larynx, unspecified\n\nIn that case, C77.0 and C78.0 would become additional diagnoses. A clinician query to confirm the primary site is recommended.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 748,
+    "output_tokens": 1183
+  },
+  "seconds": 0.0
+}

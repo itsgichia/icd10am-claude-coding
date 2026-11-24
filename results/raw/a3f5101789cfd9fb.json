@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "2fcbd88b92a5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nGender: Female\nAge: 48\nDOB: [REDACTED]\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nHospital: [REDACTED]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient underwent a laparoscopic cholecystectomy and was discharged on the first postoperative day without any complications.\nFinal Diagnosis: [diagnosis section withheld]\nCourse in Hospital:\nThe patient was kept under observation for three months and no further complications were reported.\n\nDischarge Instructions:\nThe patient is advised to follow a low-fat diet and avoid fatty foods to prevent any recurrence of symptoms. The patient is advised to avoid smoking and alcohol as they can increase the risk of gallbladder diseases. In case of any symptoms, the patient should consult her healthcare provider immediately.\n\nFollow-up Care:\nThe patient is advised to follow up with her primary care physician for regular check-ups and monitoring.\n\nCompleted By:\n[REDACTED]\nMedical Doctor\n\nDate Completed:\n[REDACTED]"
+      }
+    ]
+  },
+  "text": "# A principal diagnosis code can't be assigned from this summary\n\nBoth the **Admission Diagnosis** and **Final Diagnosis** are withheld, and the rest of the summary only records the procedure (laparoscopic cholecystectomy). Under the ACS (Australian Coding Standards) and ACS 0010 *Clinical Documentation and General Abstraction Guidelines*, coders must not assume a diagnosis from the procedure. The principal diagnosis must be the condition documented by the clinician as chiefly responsible for the admission.\n\n## What's missing\n\nTo code accurately, you need the clinician to confirm:\n1. **The pathology.** For example, gallstones, cholecystitis, polyp, biliary dyskinesia, or another condition.\n2. **Whether calculi were present** and where (gallbladder or bile duct).\n3. **Whether there was cholecystitis**, and whether it was acute, chronic, or acute on chronic.\n4. **Whether there was obstruction.**\n5. **The histopathology result**, if available.\n\n## Common possibilities (for reference only)\n\n| Clinical scenario | ICD-10-AM code |\n|---|---|\n| Gallstones without cholecystitis, no obstruction | K80.20 |\n| Gallstones with acute cholecystitis, no obstruction | K80.00 |\n| Gallstones with chronic cholecystitis, no obstruction | K80.10 |\n| Acute cholecystitis without calculus | K81.0 |\n| Chronic cholecystitis without calculus | K81.1 |\n| Gallbladder polyp | K82.8 |\n| Biliary dyskinesia | K82.8 |\n\nIn practice, symptomatic cholelithiasis (K80.20) is the most frequent indication for elective laparoscopic cholecystectomy. However, it **cannot be coded on probability alone**.\n\n## Documentation issues to note\n\n- The summary says the patient was \"discharged on the first postoperative day\" but also \"kept under observation for three months.\" This is contradictory. The three months likely refers to post-discharge follow-up, but it should be clarified.\n- The procedure would typically be coded as **30445-00 Laparoscopic cholecystectomy** (ACHI), but this doesn't determine the diagnosis.\n\n## Recommendation\n\nRaise a **clinical documentation query** with the treating surgeon, or review the operation report and histopathology, to confirm the final diagnosis before assigning the principal diagnosis code.\n\nIf you can share the withheld diagnosis, I can give you the specific code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 440,
+    "output_tokens": 992
+  },
+  "seconds": 0.0
+}

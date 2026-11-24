@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "8737b8aee5a2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nAdmission date: N/A\nDischarge date: N/A\n\nPatient Information: \nThe patient is a 71-year-old Finnish male diagnosed with early onset Parkinson's disease at the age of 40.\n\nHospital Course:\n\nDuring the years 2016-2017, the patient was categorized at stage 2.5 of the modified Hoehn and Yahr Scale, with a United Parkinson's Disease Rating Scale (UPDRS) score of 41/199. The patient demonstrated rigidity of the lower limbs, shortness of steps, and postural instability, but no tremors. He has experienced a mild gait disturbance with occasional freezing recently. The progression of his illness has been slow, with a sustained response to medication.\n\nDiagnostic Tests:\nDopamine transporter (DaT) single-photon emission computerized tomography (SPECT) of the brain was performed and demonstrated reduced density of DA synaptic terminals in the caudate and putamen consistent with degenerative Parkinson's disease.\n\nMedical History:\nThe patient has no reported family history of Parkinson's disease.\n\nGenetic Analysis:\nTargeted next-generation sequencing revealed that the patient carried a novel homozygous c.194G > A variant in exon 3 of the PARK2 gene, causing an amino acid change p.Ser65Asn (S65N) in the PARKIN protein. The variant is very rare, but the site is highly conserved in vertebrates, and in silico analysis of the variant predicted that the mutation is deleterious.\nDischarge Diagnosis: [diagnosis section withheld]\nFollow-Up Care and Recommendations:\nThe patient should follow up with his healthcare provider regularly to monitor his condition and adjust medication as needed. The patient should be advised to continue engaging in regular physical activity and cognitive stimulation.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "G20",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 740,
+    "output_tokens": 219
+  },
+  "seconds": 0.0
+}

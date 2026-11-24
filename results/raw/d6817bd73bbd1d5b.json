@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7567bbd24908",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\n\nThe 68-year-old male patient was admitted to the hospital for the removal of an intramedullary nail and a possible total knee arthroplasty after experiencing a traumatic event. His past medical history includes hypertension, high cholesterol, high potassium levels, a non-cancerous enlargement of the prostate gland that caused difficulty urinating, atrial fibrillation, a crush injury causing closed fractures of multiple ribs and the pelvis, and a history of tobacco use. Preoperative laboratory tests indicated slightly low sodium levels and slightly elevated glucose levels, but a well-functioning renal system.\n\nProcedure:\n\nThe anesthesia team planned for spinal block and monitored anesthesia care with a propofol infusion. The patient was given 2 mg of midazolam preoperatively. The surgery lasted for 5 hours and 32 minutes and the patient's urine output for the duration of the operation totaled 1240 mL, with 975 mL excreted within a two-hour span.\n\nPostoperative Period:\n\nThe patient had an uncomplicated postoperative period with normal sodium levels and electrolytes. He was monitored closely after surgery.\nDiagnoses: [diagnosis section withheld]\nDisposition:\n\nThe patient was discharged from the hospital in a satisfactory condition after his uncomplicated postoperative period. \n\nFollow-up Care:\n\nFollow-up appointments with the appropriate specialists recommended for the patient's multiple comorbidities."
+      }
+    ]
+  },
+  "text": "The record doesn't state the diagnosis, so the code has to be inferred. It is a best estimate, not a definitive assignment.\n\n**Likely principal diagnosis:** the reason for admission was removal of an intramedullary nail (internal fixation device) with a possible total knee arthroplasty after trauma. The most probable underlying problem is either post-traumatic knee arthropathy or a complication or aftercare condition related to the previous fracture fixation.\n\n**Candidate codes, depending on what the clinician documented:**\n\n1. **Z47.0 Follow-up care involving removal of fracture plate and other internal fixation device.** This is the usual code when the admission is only to remove an internal fixation device and no complication is documented. It fits \"removal of intramedullary nail\" best. Under ICD-10-AM, the nail removal would be coded as the procedure.\n\n2. **M17.3 Other post-traumatic gonarthrosis (unilateral)**, or M17.5 if it is \"other secondary.\" This applies if post-traumatic knee osteoarthritis was documented and the total knee arthroplasty was the main aim of the admission.\n\n3. **T84.x Complication of internal orthopaedic device** (for example T84.1 mechanical complication of an internal fixation device of the limb bones). This applies only if the nail was painful, loose, or failed.\n\n**Answer:** Based on the information given, the best-supported principal diagnosis is **Z47.0**, follow-up care involving removal of an internal fixation device. The comorbidities (hypertension I10, atrial fibrillation I48, BPH N40, hyperlipidaemia E78.5, hyperkalaemia E87.5, and tobacco use) would be coded as additional diagnoses. The crush injury sequelae would be coded as well. If the full record documents post-traumatic knee arthritis as the reason for the arthroplasty, M17.3 would replace Z47.0 as the principal diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 535,
+    "output_tokens": 640
+  },
+  "seconds": 0.0
+}

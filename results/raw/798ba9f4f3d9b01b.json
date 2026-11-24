@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "9896dda7183d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: [redacted]\nAge: 2 years\nSex: Female\nDate of Admission: February 5, 2020\nDate of Discharge: February 10, 2020\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to the hospital on February 5, 2020 for intermittent fever and dry cough. She had previously received oral medications for three days consisting of Tamiflu and Cefaclor. The patient's aunt was a suspected case of COVID-19 and had developed symptoms on January 26, 2020. She passed away on February 1, 2020. The physical examination on admission showed a temperature of 38.8\u00b0C, pulse of 110 beats per minute, respiration of 25 breaths per minute, and SpO2 of 100%. The results of the nasopharyngeal swab sample taken on admission were negative for SARS-CoV-2.\n\nDiagnostic Results:\nThe chest computed tomography (CT) showed patchy and flocculent slightly high-density shadows in both lungs. The blood routine results revealed a leukocyte count of 9.29 \u00d7 109/L and lymphocytes of 1.63 \u00d7 109/L. C-reactive protein was 5 mg/L. The serum IgM antibody of influenza A was weakly positive. The third nasopharyngeal swab sample was also negative. However, the serum collected on February 5, 2020 was found to be positive for both IgG and IgM antibodies against SARS-CoV-2.\nFinal Diagnosis: [diagnosis section withheld]\nTreatment:\nThe patient was treated with Tamiflu continuously.\n\nDisposition and Condition on Discharge:\nThe patient was discharged on February 10, 2020 with a return to normal body temperature. \n\nFollow-up Recommendations:\nThe patient was advised to undergo follow-up testing to ensure a complete recovery.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: U07**\n\n**Principal diagnosis:** COVID-19 (U07.1, virus identified), presenting as viral pneumonia in a 2-year-old.\n\n**Why this is chiefly responsible for the admission**\n- **Presentation:** She was admitted with fever and dry cough. These are symptoms, so they are not coded as the principal diagnosis.\n- **Pneumonia:** The chest CT showed patchy, flocculent shadows in both lungs, consistent with viral pneumonia.\n- **Cause established after investigation:** Serum taken on admission was positive for both SARS-CoV-2 IgM and IgG. Her aunt was a suspected COVID-19 case who had recently died.\n- **Swabs:** Both swabs were negative for SARS-CoV-2. The positive antibody result still supports a confirmed diagnosis rather than a suspected one (U07.2).\n- **Influenza A:** The IgM was only weakly positive, and she was treated with Tamiflu. However, the epidemiological link and the paired SARS-CoV-2 antibodies point to COVID-19 as the established cause. Influenza could be added as a secondary code if the clinician documents it as a concurrent diagnosis.\n\n**Sequencing and additional codes**\n- Under ACCD guidance for COVID-19, U07.1 is sequenced as the principal diagnosis.\n- The pneumonia manifestation is coded additionally, as J12.8 (other viral pneumonia).\n\n**Caveat:** The final diagnosis section of the discharge summary was withheld. I would confirm the clinician's documented diagnosis, particularly the confirmed COVID-19 status and the role of influenza, before finalising.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 857,
+    "output_tokens": 1013
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "01d3ff5888ad",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\nThe patient, an 85-year-old male, was admitted to the hospital with bilateral foot swelling, decreased urine output, and a poor urinary stream. He also complained of breathlessness, anorexia, weight loss, and had a past medical history significant for anemia. Physical examination revealed multiple, nontender, firm lymph nodes in the right upper jugular, middle jugular, right and left submandibular, and multiple right-sided axillary lymph nodes. His laboratory investigations revealed findings consistent with tumor lysis syndrome, including elevated uric acid, hyperphosphatemia, and hypocalcemia. Bone marrow examination showed hypercellular smears with reduced megakaryocytes and erythropoiesis. The bone marrow differential counts revealed immature cells with monocytic differentiation and large collections of mature lymphocytes.\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nDespite being explained about the treatment options and prognosis, the patient refused to undergo any further investigations and therapy.\n\nDischarge Condition:\nThe patient was discharged home in fair condition. A follow-up plan was initiated with further medical management as an outpatient."
+      }
+    ]
+  },
+  "text": "# Suggested principal diagnosis: **C93.0 \u2013 Acute monocytic leukaemia**\n\n## Rationale\n\n- **Bone marrow:** hypercellular, with reduced megakaryocytes and erythropoiesis. Immature cells showing monocytic differentiation point to an acute leukaemia of monocytic lineage.\n- **Clinical picture:** generalised lymphadenopathy, weight loss, anorexia and anaemia fit a haematological malignancy as the underlying condition.\n- **Sequencing:** the condition chiefly responsible for the admission is the leukaemia. Tumour lysis syndrome is a manifestation or complication of it.\n\nThe final diagnosis section is withheld, so this code is inferred from the findings.\n\n## Likely additional codes\n\n| Code | Description |\n|------|-------------|\n| **C91.1** | Chronic lymphocytic leukaemia of B-cell type. Assign only if the large collections of mature lymphocytes are confirmed as concurrent CLL. |\n| **E88.3** | Tumour lysis syndrome (spontaneous) |\n| **R60.0** | Localised oedema (bilateral foot swelling), if not integral to another coded condition |\n| **D64.9 / D63.0*** | Anaemia, depending on documentation (D63.0* is anaemia in neoplastic disease) |\n| **Z53.2** | Procedure not carried out because of the patient's decision (refused investigations and therapy) |\n\n## Caveats\n\n1. **If the morphology is documented as acute myelomonocytic leukaemia,** use **C92.5** instead of C93.0. Confirm the exact morphology with the clinician or histopathology report.\n2. **If the documented reason for admission is management of tumour lysis syndrome,** the principal diagnosis could be **E88.3**. This depends on documentation and the relevant ACS guidance. Since no treatment was given and the patient refused work-up, the neoplasm remains the most appropriate principal diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 443,
+    "output_tokens": 1081
+  },
+  "seconds": 10.982296916976338
+}

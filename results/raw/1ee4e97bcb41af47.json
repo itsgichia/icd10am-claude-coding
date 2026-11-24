@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7579af382c24",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient: 66-year-old male with a past medical history of well-controlled diabetes and high cholesterol\nDiagnosis: [diagnosis section withheld]\nHospital course:\n\nThe patient presented with progressive shortness of breath, dry cough, weight loss and night sweats. Initial treatment for severe community-acquired pneumonia was unsuccessful and he rapidly progressed to respiratory failure requiring mechanical ventilation. Diagnostic tests were performed, ruling out possible infections and connective tissue diseases. A CT-guided lung biopsy and VATs were done, ultimately leading to a diagnosis of organizing pneumonia. The patient was started on a systemic steroid course which resulted in remarkable improvement in his breathing and oxygen requirement. He was finally liberated from the ventilator and switched to oral prednisone. His condition continued to improve steadily over the hospitalization and was later discharged with a decreased dose of oral prednisone.\n\nFollow-up:\n\nHis follow-up CT showed resolution of the micronodular infiltration. He is currently doing well clinically at 2 years post-hospitalization. \n\nDischarge medications:\n\nThe patient was discharged with oral prednisone. \n\nRecommendations:\n\nFollow up with primary care physician."
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: J84.1 \u2013 Other interstitial pulmonary diseases with fibrosis (cryptogenic organizing pneumonia)\n\n**Why this code**\n- The condition that, after study, chiefly caused the admission was **organizing pneumonia**, confirmed by CT-guided biopsy and VATS.\n- Infections and connective tissue diseases were ruled out, so this is **cryptogenic (idiopathic) organizing pneumonia (COP)**. This was formerly called BOOP.\n- The initial working diagnosis of severe community-acquired pneumonia was disproven. It should **not** be coded as an infective pneumonia (J18.x).\n- The steroid response and radiological resolution are consistent with COP.\n\n**Likely additional diagnoses**\n- **J96.0x**: Acute respiratory failure requiring mechanical ventilation. It is a manifestation of the principal condition, so it is a secondary code.\n- **E11.9 / E11.x**: Type 2 diabetes mellitus, provided the type is documented. Code it if it meets the Australian Coding Standards for additional diagnoses, such as affecting care or monitoring while on high-dose steroids.\n- **E78.0 / E78.5**: Hypercholesterolaemia, if it meets the additional diagnosis criteria.\n- **Procedure codes**: Mechanical ventilation (duration-based), CT-guided percutaneous lung biopsy, and VATS lung biopsy.\n\n**Caveat**\nIndex entries and subcategories differ between ICD-10-AM editions. Verify the exact code in your edition's Alphabetic Index under *Pneumonia, organising* or *Pneumonia, cryptogenic organising*. Some editions or classifications index COP to **J84.8** (Other specified interstitial pulmonary diseases) instead. The diagnosis section of this summary was withheld, so confirm the documented diagnosis with the clinician if it is unclear.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 468,
+    "output_tokens": 1285
+  },
+  "seconds": 0.0
+}

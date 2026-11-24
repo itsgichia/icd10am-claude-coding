@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "f318c995256d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nPatient Name: [redacted]\nDate of Discharge: [redacted]\n\nHospital Course:\nThe patient was admitted for the evaluation and treatment of left eye melanoma. After undergoing brachytherapy, the patient showed scleral thinning and uveal tissue prolapse at the site of the preexisting lesion. The patient underwent a block excision of sclera, ciliary melanoma, and adjacent iris tissue, which was performed through the opening of the sclera and was combined with a corneal tectonic graft.\n\nClinical Findings:\nUpon admission, the patient was found to have a pigmented fusiform thickening of the iris root in the left eye. Gonioscopy revealed a well-circumscribed dome-shaped mass at the level of the ciliary body, between the 2:30 and 3 o'clock positions. UBM showed a medium internal reflectivity with an almost homogeneous acoustic structure. The lesion was classified as melanoma of the ciliary body, which involved the adjacent iris root. UBM also showed a local scleral extension of the tumor, which was under the conjunctival layer and 0.88 mm thick.\n\nTreatment:\nThe patient underwent brachytherapy (106Ru) and received a total dose of 100 Gy at the apex, with a dose rate of 79.09 cGy/hr. The total dose at the sclera was 531.1 Gy, with a dose rate of 420.1 cGy/hr. The patient then underwent a radical block excision of sclera, ciliary melanoma, and adjacent iris tissue, combined with a corneal tectonic graft and 16 single stitches.\n\nHistopathology:\nPost-operative histopathological analysis confirmed the diagnosis of spindle cell melanoma.\n\nFollow-Up:\nThe patient had a BCVA of 20/20 at the time of discharge. The patient is recommended to have regular follow-up appointments with their healthcare provider to monitor their condition.\nDiagnosis: [diagnosis section withheld]\nDischarge Medications:\n[N/A]\nDischarge Diagnosis: [diagnosis section withheld]"
+      }
+    ]
+  },
+  "text": "# ICD-10-AM Principal Diagnosis: C69.4 \u2013 Malignant neoplasm of ciliary body\n\n**Why this code fits**\n\n- **Primary site:** Gonioscopy and UBM placed the tumour in the ciliary body, with extension into the adjacent iris root.\n- **One code covers the whole lesion:** In ICD-10/ICD-10-AM, the iris and sclera are indexed to C69.4 along with the ciliary body. The iris root involvement and local scleral extension are direct contiguous spread of the same primary, not separate primaries. So C69.4 captures the lesion without needing C69.8 (overlapping lesion).\n- **Confirmed malignancy:** Histopathology confirmed spindle cell melanoma, so this is the condition chiefly responsible for the admission. It was treated with brachytherapy and then radical block excision of sclera, ciliary body tumour and iris.\n- **Laterality:** ICD-10-AM C69 codes do not specify left or right eye.\n\n**Associated morphology code**\n\n- **M8772/3** \u2013 Spindle cell melanoma, NOS. ACS 0233 requires a morphology code with neoplasm codes.\n\n**Possible additional codes, depending on documentation**\n\n- **Scleral thinning and uveal prolapse after brachytherapy:** If the clinician explicitly links these to the radiotherapy, they could be coded as a complication of radiation therapy as an additional diagnosis. Examples are H15.8/H15.1 with a radiotherapy complication external cause code (e.g., Y84.2) and place of occurrence code.\n- **Principal diagnosis would not change:** The definitive surgery was a tumour resection, so the neoplasm remains the principal diagnosis.\n\nBecause the actual discharge diagnosis section was withheld, confirm the final code against the clinician's documented diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 740,
+    "output_tokens": 903
+  },
+  "seconds": 0.0
+}

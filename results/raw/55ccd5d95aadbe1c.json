@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7f0a1375a954",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\nThe patient, a 19-year-old male with no significant past medical history, presented to the emergency room with symptoms of four hours of abdominal pain and emesis. He reported undergoing a strict regimen of dieting and exercise which resulted in significant weight loss over the past months. The family member added that the symptoms started after a heavy meal ingestion.\n\nOn physical examination, the patient presented with a scaphoid abdomen, tender abdomen and diminished high-pitched bowel sounds. The laboratory workup was within normal limits. The patient stayed overnight in the ER and was managed conservatively with NPO, intravenous crystalloid rehydration, nasogastric tube, ondansetron and omeprazole. Next day reevaluation showed persistence of abdominal pain, nausea and bilious emesis. Computed tomography study revealed gastric dilatation extended to the third portion of the duodenum, suggestive of proximal small bowel obstruction. The patient was admitted for inpatient treatment.\nDiagnosis: [diagnosis section withheld]\nManagement:\nInitial management included gastric decompression by placing a nasojejunal feeding tube to alleviate symptoms of obstruction and later use for enteral nutritional support. The patient was provided with a normocaloric hyperproteic formula starting with 600 and progressed to 1500 kcal per day to reverse protein caloric malnutrition state. Additionally, psychiatry and psychology teams were consulted concerning major weight loss. The patient was diagnosed with depression and an eating disorder and was started on sertraline. The patient was discharged asymptomatic, with hyperproteic diet plus nutritional supplements and selective serotonin reuptake inhibitor.\n\nFollow-up:\nThe patient's follow-ups showed weight gain and no symptoms. Psychiatry and psychology teams will follow up the patient after discharge."
+      }
+    ]
+  },
+  "text": "The most likely principal diagnosis code is **K31.5, Obstruction of duodenum**.\n\nThe record doesn't state a diagnosis, so this is inferred from the clinical picture. The findings point to superior mesenteric artery (SMA) syndrome, also called Wilkie syndrome: post-prandial abdominal pain and bilious vomiting, a scaphoid abdomen, gastric dilatation extending to the third part of the duodenum on CT, significant weight loss, and symptom onset after a heavy meal. The SMA compresses the duodenum, and the resulting proximal duodenal obstruction is what required admission and nasojejunal decompression. In ICD-10-AM, SMA syndrome is indexed to K31.5.\n\nPossible secondary codes, depending on what the physician documents:\n- **E43** or **E44.x**: protein-calorie malnutrition, treated with enteral feeding and nutritional rehabilitation\n- **F50.-**: eating disorder (the specific F50 code depends on the documented type, such as anorexia nervosa or an unspecified eating disorder)\n- **F32.-**: depression, treated with sertraline\n- **R11.x / R11.1** (nausea and vomiting) and **R10.-** (abdominal pain): these are integral to the obstruction and usually not coded separately\n\nA coder should confirm the final principal diagnosis against the attending physician's documentation, particularly if the discharge summary names a different primary condition.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 668,
+    "output_tokens": 946
+  },
+  "seconds": 4.698538374999771
+}

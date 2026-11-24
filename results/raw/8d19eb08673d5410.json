@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "15ba7a04242d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\n\nPatient: Mrs. A\nAge: 66\nGender: Female\nPrimary Diagnosis: [diagnosis section withheld]\nHospital Course:\nMrs. A was admitted to the hospital for aphasia evaluation 27 months after onset. The patient had a mild right hemiparesis, right visual field defect, and a severe aphasia. During language testing sessions, she would frequently become frustrated and blocked out reiterating \"I don't know.\" During clinical evaluations, her verbal behavior was replete with echolalic emissions, which increased when anxious and upset. Mrs. A showed significant improvement in language performance when evaluated by her husband.\n\nSummary:\nMrs. A, a 66-year-old woman, was admitted to our hospital for an aphasia evaluation 27 months after suffering a stroke. The stroke resulted in two simultaneous hemorrhagic lesions that affected frontal and parietal areas in the left hemisphere and partially spared perisylvian language areas. Mrs. A had a severe non-fluent aphasia characterized by a markedly reduced spontaneous speech and almost nil auditory comprehension. She also had automatic echolalia, verbal perseverations, and ready-made expressions. Throughout language testing sessions, Mrs. A would become frustrated, blocking out and reiteratively saying \"I don't know.\" Verbal behavior included echolalic emissions that markedly increased when anxious and upset. However, when language evaluation was performed by Mrs. A's husband, her performance improved significantly.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The episode is an admission for aphasia evaluation 27 months after a hemorrhagic stroke, so the question is whether to code the aphasia (a symptom) or the sequela of the stroke.\n\nIn ICD-10, aphasia is R47.0 (dysphasia and aphasia). When aphasia is a late effect of a stroke, the principal diagnosis would be the sequela. I69 covers sequelae of cerebrovascular disease. A hemorrhagic stroke with intracerebral haemorrhage maps to I69.1 (sequelae of intracerebral haemorrhage). Per the sequela convention, the residual condition (aphasia, R47.0) is coded first and the sequela code I69 follows. In ICD-10-AM, however, I69 is a \"sequelae of\" category that is reported as an additional code after the specific residual condition.\n\nChapter instructions say I69 should be used to indicate conditions in I60-I67 as the cause of sequelae, which are themselves classified elsewhere. The sequelae are the conditions that remain a year or more after the onset of the causal condition. Here the aphasia is the focus of the admission, so by this convention the principal diagnosis would be R47.\n\nThe alternative is to treat the I69 code as principal. Because the episode was for evaluation of a deficit that remains from the stroke, the chosen code depends on whether the coder follows the residual-condition-first rule. I'll follow that rule, giving R47 (speech disturbances, not elsewhere classified, which includes aphasia).\n\nCODE: R47",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1051,
+    "output_tokens": 508
+  },
+  "seconds": 0.0
+}

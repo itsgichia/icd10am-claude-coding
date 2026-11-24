@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "8d13e48b6d14",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\n\nDate of Admission: [redacted]\n\nDate of Discharge: [redacted]\n\nReason for Admission:\nThe patient was admitted to the emergency department due to a 12-day history of cyclical fevers with vague abdominal pain.\n\nHospital Course:\nInitial vital signs showed a blood pressure of 149/80 mmHg, a heart rate of 107 beats per minute, a temperature of 99.2\u00baF, a respiratory rate of 16, and a pulse oximetry reading of 100% on room air. Laboratory values showed a drop in hemoglobin and mild leukocytosis with no evidence of urinary tract infection. A computed tomography (CT) of the abdomen and pelvis with IV contrast showed multiple liver abscesses, septic thrombophlebitis of the portal system, and evidence of ruptured appendicitis. The patient was started on broad-spectrum IV antibiotics and underwent IR-guided abscess drainage.\n\nTreatment:\nThe patient was treated with IV antibiotics and underwent abscess drainage.\n\nCondition at Discharge:\nThe patient's condition improved significantly after treatment.\n\nFollow-Up:\nFollow-up appointments were scheduled with the patient's primary care provider for further evaluation and treatment.\n\nRestrictions:\nThe patient was advised to avoid strenuous activities until further notice.\n\nMedications:\nNo medications were prescribed at the time of discharge.\n\nProcedures:\nThe patient underwent IR-guided abscess drainage and interval appendectomy.\nDiagnosis: [diagnosis section withheld]\nSummary:\nThe patient presented to the emergency department with a 12-day history of cyclical fevers with vague abdominal pain. Imaging studies revealed the presence of liver abscesses, septic thrombophlebitis of the portal system, and ruptured appendicitis. The patient was treated with IV antibiotics and underwent abscess drainage and interval appendectomy. The patient's condition improved significantly and follow-up appointments were scheduled with the primary care provider.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: K75**\n\n**Why the principal diagnosis falls in K75**\n- This admission was mainly for the liver abscesses and the septic thrombophlebitis of the portal vein (pylephlebitis).\n- These caused the 12 days of cyclical fevers.\n- The treatment in this admission was aimed at them: IV antibiotics and IR-guided abscess drainage.\n- Liver abscess (K75.0) and pylephlebitis (K75.1) are both in K75, \"Other inflammatory liver diseases\".\n\n**Secondary diagnosis**\n- Ruptured appendicitis (K35) should be coded as the underlying source of the infection.\n- If appendicitis with perforation and abscess is coded under K35, check that no other code duplicates it.\n\n**Procedure**\n- Code the percutaneous IR-guided drainage of the liver abscesses.\n- Code the appendectomy only if it happened in this admission. \"Interval\" usually means a later, planned admission, but this summary lists it among the procedures.\n\n**Points to check before finalising**\n- **This is a judgement call between K75 and K35.** Under ACS 0001, the underlying condition is usually sequenced first when it is treated in the same episode. If the appendectomy was done during this admission, or the treating doctor documents the appendicitis as chiefly responsible, K35 would be the principal diagnosis instead.\n- **Querying the clinician is reasonable** to confirm the timing of the appendectomy and which condition was chiefly responsible.\n- **The fourth character within K75 is open.** On this documentation the abscesses were the main focus of treatment, which favours K75.0 over K75.1.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 916,
+    "output_tokens": 964
+  },
+  "seconds": 0.0
+}

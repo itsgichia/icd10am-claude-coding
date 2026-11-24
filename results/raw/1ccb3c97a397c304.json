@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "361b13c4e2fe",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\n\nThe patient was admitted to the hospital after suffering syncope. On arrival, the patient was alert and showed impairments in speech fluency, comprehension, and repetition. Further examination revealed poor perfusion over the left middle cerebral artery. He was diagnosed with acute cerebral infarction with global aphasia and received a recombinant tissue plasminogen activator (rtPA) injection. After 12 days of inpatient treatment, the patient was later discharged under stable conditions with global aphasia status and no focal neurologic signs.\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted to the hospital after suffering syncope while playing tennis. The patient presented with global aphasia and impairments in audio comprehension and repetition. Brain CT with contrast revealed no apparent intracranial haemorrhage or mass, but CT perfusion indicated poor perfusion over the left middle cerebral territory. The patient diagnosed with acute cerebral infarction with global aphasia and received a recombinant tissue plasminogen activator (rtPA) injection. Brain non-contrast MRI was conducted on day 5, revealing an acute infarction in the territory of the left middle cerebral artery, just in the perisylvian gyri. The patient was switched to the intensive care unit for further management. After 12 days of inpatient treatment, the patient was later discharged under stable conditions with global aphasia status and no focal neurologic signs. The patient then received speech rehabilitation, including verbal production, auditory comprehension training, augmentative communication training, phonetic placement, and high-level cognitive function training at two hospitals. The patient's language expression gradually recovered. The CCAT was then performed 14 months after the initial stroke."
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: I63.9 \u2013 Cerebral infarction, unspecified\n\n## Why this code\n\n- **The condition that prompted admission** was an acute ischaemic stroke. CT perfusion and MRI confirmed an acute infarct in the left middle cerebral artery (MCA) territory, in the perisylvian region.\n- **Syncope (R55) is not the principal diagnosis.** It was the presenting symptom, and the infarction explains it, so it is not coded separately.\n- **The cause of the infarct is not documented.** The record does not say whether it was thrombotic or embolic. It also does not state an occlusion or stenosis of the MCA or any precerebral artery. Without that documentation, the more specific I63.0\u2013I63.8 codes cannot be assigned.\n  - **I63.5** (infarction due to unspecified occlusion/stenosis of cerebral arteries) is a reasonable alternative only if the clinician confirms an MCA occlusion. \"MCA territory\" describes where the infarct is. It does not establish an occlusion, so a query to the clinician would be needed to use I63.5.\n\n## Suggested additional codes\n- **R47.0 \u2013 Dysphasia and aphasia**, for the global aphasia. Under ACS 0604 Stroke, deficits present at discharge are coded.\n- **ACHI procedure code for intravenous thrombolysis (rtPA)**. The exact code depends on your ACHI edition, so confirm it against your current classification.\n- **ICU admission**, captured per local data requirements.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 635,
+    "output_tokens": 947
+  },
+  "seconds": 0.0
+}

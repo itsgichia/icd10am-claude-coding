@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "3f1729a7cc5a",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nAdmission Date: [Date]\nDischarge Date: [Date]\n\nPatient Name: [Patient Name]                   Age: 48                    Sex: Male\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient remained in a vegetative state with a CRS-R score of 6 upon arrival in the rehabilitation department of the university hospital. Through comprehensive rehabilitation that included the administration of neurotropic drugs, physical and occupational therapies, as well as the use of tDCS and rTMS, the patient recovered to a CRS-R score of 22 within 5 weeks.\n\nFollow-up:\nThe patient's wife provided signed, informed consent for publication, and approval for the study was obtained from the Institutional Review Board of Yeungnam University Hospital.\n\nDischarge Condition:\nThe patient was discharged to [preferred location] in a conscious state. \n\nPlan:\nReferred to [medical professional or organization] for future rehabilitation and care.\tA follow-up appointment with [medical professional or organization] was scheduled. \n\nMedications:\n[None noted in the case report.]\n\nAllergies:\n[None noted in the case report.]\n\nFollow-up Instructions:\nThe patient is advised to [list any instructions given to the patient]. \n\nPrimary Care Physician: [Physician Name]\n\nReviewed by: [Name of Responsible Medical Practitioner]"
+      }
+    ]
+  },
+  "text": "The discharge summary withholds the diagnosis and does not name the cause of the vegetative state, so a definitive principal diagnosis code cannot be assigned. The best-supported code from the available information is below.\n\n**Suggested code: R40.20 \u2013 Unspecified coma**\n\nThis is not a perfect fit. In ICD-10-AM, persistent vegetative state is indexed to **R40.3 (Persistent vegetative state)** in the WHO ICD-10 and in many ICD-10-AM editions. R40.3 is the most accurate code for the documented condition, so I recommend it as the closest match.\n\n**Recommended: R40.3 \u2013 Persistent vegetative state**\n\n**Reasoning and caveats:**\n- The patient was in a vegetative state with a CRS-R score of 6 on arrival to rehabilitation. He then recovered to a CRS-R of 22 (emerging consciousness) after rehabilitation.\n- In coding practice the principal diagnosis is the condition chiefly responsible for the admission. For a rehabilitation admission after brain injury, the underlying cause is often coded first, for example:\n  - Hypoxic-ischemic brain injury (G93.1, anoxic brain damage)\n  - Traumatic brain injury (S06.-)\n  - Intracerebral haemorrhage (I61.-)\n  - Cerebral infarction (I63.-)\n- The source of this case (Yeungnam University Hospital, tDCS/rTMS for disorders of consciousness) does not state the cause in the text provided.\n- In Australian rehabilitation episodes, ACHI/AR-DRG conventions may also call for Z50.- (care involving use of rehabilitation procedures) as the principal diagnosis, with the underlying condition as an additional diagnosis. This depends on local coding standards and the full record.\n\n**Conclusion:** With the information given, **R40.3** is the most defensible code. If the full record shows a specific etiology, such as anoxic brain injury or stroke, check the coding standards on whether that condition or a rehabilitation Z code should be sequenced as principal.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 514,
+    "output_tokens": 689
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "d1a6cb7e9ee7",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Information:\nName: Sarah\nAge: 40\nGender: Female\nAdmission date: [Date]\nDischarge date: [Date]\nReason for Admission: COVID-19 with symptoms of rhinorrhea, hyposmia, and ageusia\n\nHospital Course:\nSarah was admitted to the hospital with positive COVID-19 test results and mild symptoms of rhinorrhea, hyposmia, and ageusia. During her stay, she was treated with hydroxychloroquine and azithromycin, and her symptoms gradually improved. After three consecutive COVID-19 RT-PCR tests came back negative, she was discharged from the hospital in stable condition.\n\nFollow-Up Care:\nSarah visited the Otolaryngology clinic one month after her discharge. She reported that her olfactory and gustatory functions had returned to normal. A nasal endoscopy revealed some watery discharge in the posterior nasal cavity without any sign of other lesions. Follow-up tests for olfactory and gustatory functions were conducted, which showed improvement in both her scores.\nDiagnosis: [diagnosis section withheld]\nSummary:\nSarah, a 40-year-old female, was admitted to the hospital with positive COVID-19 test results and mild symptoms of rhinorrhea, hyposmia, and ageusia. After receiving treatment, she was discharged from the hospital in stable condition. During her follow-up visit, her olfactory and gustatory functions had returned to normal without any further treatment. A nasal endoscopy showed no sign of lesions. Her overall prognosis is good."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **U07.1 \u2013 COVID-19, virus identified**\n\n## Why this code\n- **Laboratory-confirmed infection:** Sarah was admitted with a positive COVID-19 test. That makes U07.1 (virus identified) correct, not U07.2 (virus not identified, a clinical or epidemiological diagnosis).\n- **Reason for admission:** Under ACS 0001 *Principal Diagnosis*, the principal diagnosis is the condition chiefly responsible for the admission. Here that is COVID-19.\n- **Mild illness:** She had no pneumonia, ARDS or other major respiratory complication. So no manifestation code such as J12.8 needs to be sequenced alongside it.\n- **Symptoms not coded separately:** Rhinorrhoea, hyposmia and ageusia are typical features of the confirmed infection. Under ACS 0001 and ACS 0002 *Additional Diagnoses*, symptoms that are integral to the established diagnosis are not coded separately.\n\n## Additional notes\n- **Smell and taste disturbance:** Some facilities may add **R43.8** (*Other and unspecified disturbances of smell and taste*) to capture the hyposmia and ageusia. This is only appropriate if local policy or the current ACCD COVID-19 coding guidance supports it, or if the disturbance met ACS 0002 criteria in its own right.\n- **Treatment:** Hydroxychloroquine and azithromycin are recorded as treatment and do not generate separate diagnosis codes.\n- **Follow-up visit:** The Otolaryngology visit one month later is a separate outpatient encounter. It would be coded independently, for example with a follow-up or personal history code, and does not affect this admission's coding.\n\nCheck the edition of ICD-10-AM/ACS in use and any current ACCD COVID-19 guidance, as the advice has been updated across editions.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 586,
+    "output_tokens": 1152
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "6b385b74c7a0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient Name: [REDACTED]\nGender: Female\nAge: 70 years old\n\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\n\nHospital Course:\nThe patient was admitted with worsening right upper quadrant pain, anorexia, and 10 lb weight loss. A CT scan revealed hepatomegaly and several hypodense lesions consistent with liver metastases, indicating recurrent/metastatic disease. The patient was started on pembrolizumab and axitinib as first-line therapy for her condition.\n\nDuring treatment, the patient experienced side effects and required a dose reduction of axitinib due to fatigue. Elevated thyroid stimulating hormone levels were also monitored and subsequently managed with medication.\n\nAfter 12 weeks of combination axitinib/pembrolizumab, repeat CT scans showed progression of liver metastases, prompting a liver biopsy.\n\nGenomic testing revealed loss of function mutations in von Hippel-Lindau (VHL) and BRCA1-associated protein (BAP1) genes, as well as copy-number loss of cyclin-dependent kinase inhibitor 2A (CDKN2A).\n\nThe patient was discharged home with appropriate follow-up measures.\nDiagnoses: [diagnosis section withheld]\nProcedures:\n1. CT-guided liver biopsy\n\nUpdated Medications:\nNone.\n\nFollow-up Care:\nThe patient will receive appropriate follow-up care as recommended by her healthcare provider."
+      }
+    ]
+  },
+  "text": "The most likely underlying condition is metastatic renal cell carcinoma. The VHL and BAP1 mutations, together with first-line pembrolizumab plus axitinib, are the standard profile for clear cell RCC. However, the summary never names the primary site, so this is an inference.\n\n**Principal diagnosis: C78.7 \u2013 Secondary malignant neoplasm of liver and intrahepatic bile duct**\n\nReasoning:\n- The admission was for worsening RUQ pain, anorexia, and weight loss. The work-up (CT, then liver biopsy) was directed at the liver metastases, which are the condition chiefly responsible for the episode of care.\n- Under ICD-10-AM/ACS coding rules, when the admission is for a secondary site, the secondary neoplasm is sequenced as the principal diagnosis. The primary is coded as an additional diagnosis, unless treatment is directed at the primary.\n- If the primary were documented as renal cell carcinoma, the additional code would be C64 (malignant neoplasm of kidney, except renal pelvis). If the kidney had been removed, it would be recorded as a history of malignancy. The summary does not state this.\n\n**Possible additional codes (if documented):**\n- C64 \u2013 primary renal cell carcinoma, or the appropriate code for the confirmed primary site\n- E03.2 \u2013 hypothyroidism due to medicaments, or R94.6 \u2013 abnormal thyroid function study (for the raised TSH)\n- R53 \u2013 fatigue/malaise, with Y-code for adverse effect of the antineoplastic drug (Y43.-)\n- R63.0 \u2013 anorexia\n- R16.0 \u2013 hepatomegaly, though this is typically integral to the metastatic disease\n\n**Caveat:** if the primary were unknown or a different tumour, the principal diagnosis would still be C78.7, but the additional code would change (for example C80.0 for an unknown primary). The coder should confirm the primary site with the clinician.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 558,
+    "output_tokens": 650
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "46879b57e8d7",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY:\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\n\nPatient Name: [NAME]\nPatient ID: [ID]\n\nHospital Course Summary:\n\nThe patient, a 38-year-old Asian male, was admitted with dyspnea and a productive cough that was diagnosed as pneumonia with subsequent atelectasis of the right middle and lower lobes. Upon transfer to our facility, a CT scan revealed an endobronchial mass obstructing the right bronchus intermedius. After initial treatment with broad-spectrum antibiotics, a rigid bronchoscopy procedure was performed to remove the endobronchial tumor and prevent recurrence through ablation with a diode laser. Pathologically, the removed tumor was identified as bronchial myelolipoma with no evidence of hematologic disorder or endocrine abnormalities. Follow-up bronchoscopies after 3 and 12 months showed no recurrence of the tumor, and the patient's accompanying symptoms such as cough, sputum, and dyspnea improved immediately following the procedure.\nFinal Diagnoses: [diagnosis section withheld]\nTreatment:\n\n1. Broad-spectrum antibiotics for obstructive pneumonia.\n2. Rigid bronchoscopy under general anesthesia to remove the endobronchial tumor.\n3. Ablation with a diode laser to prevent recurrence.\n\nCondition at Discharge:\n\nThe patient has shown a significant improvement in his condition since the bronchoscopy procedure and has no active symptoms related to the previously diagnosed conditions. No further treatment is required, and the patient can be discharged at this time.\n\nDischarge Medications:\n\nNo medications are required at the time of discharge.\n\nFollow-up Plan:\n\nFollow-up appointments with a primary care physician are recommended to ensure adequate follow-up of the patient's condition and to monitor for any potential recurrence of bronchial myelolipoma in the future."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: bronchial myelolipoma, an endobronchial tumor of uncertain or unspecified behaviour. The best-fitting ICD-10-AM code is D38.1 (Neoplasm of uncertain or unknown behaviour of trachea, bronchus and lung).**\n\nThis is my best judgement, and the coding choice depends on how the histology is interpreted.\n\n**Reasoning**\n- The condition chiefly responsible for the admission work-up and treatment was the endobronchial mass. It was obstructing the right bronchus intermedius and causing post-obstructive pneumonia and atelectasis. The mass was removed by rigid bronchoscopy and laser ablation.\n- Under Australian Coding Standards, the principal diagnosis is the condition established after study to be chiefly responsible for the episode of care. Here that is the tumor, not the pneumonia. The pneumonia and atelectasis were consequences of the obstruction.\n- Myelolipoma is a rare benign tumor made of adipose tissue and hematopoietic elements. It has no specific bronchial entry in the ICD-10-AM morphology classification (it is usually adrenal). Mapping it to a benign neoplasm of the bronchus (D14.3) is therefore reasonable.\n- D14.3 (Benign neoplasm of bronchus and lung) is the better choice if the pathology report explicitly states the tumor is benign. That is how myelolipoma is generally regarded, and the report excluded hematologic and endocrine disease.\n- D38.1 applies only if the behaviour is not specified as benign.\n\n**Final answer:** **D14.3** is the more defensible code when the pathology is documented as benign, which is the typical presentation of bronchial myelolipoma. Use D38.1 only if the behaviour is documented as uncertain.\n\n**Secondary diagnoses**\n- J18.9 or J18.8 for obstructive pneumonia. Bronchial obstruction is not separately coded here.\n- J98.1 for atelectasis (lung collapse).\n\n**Procedures (ACHI)**\n- Rigid bronchoscopy with tumor removal and laser ablation.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 705,
+    "output_tokens": 719
+  },
+  "seconds": 5.912594916007947
+}

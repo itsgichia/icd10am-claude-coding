@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "d7034671e367",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Unknown\nMedical Record Number: Unknown\nDate of admission: Unknown\nDate of discharge: Unknown\n\nHospital Course:\nThe 76-year-old woman with a medical history of cerebral infarction, endometrial cancer, and lumbar spine tumor was admitted to the Emergency Room with complaints of swelling, redness, and warmth on the left anterior chest wall. Physical examination and various medical tests revealed infectious arthritis in the left SCJ with multiple abscess pockets, small abscesses posterior to the left SCJ and sternum, and posterior to the clavicle. Treatment with the antibiotic cefazolin was started, but after two weeks, the antibiotic was switched to penicillin G due to the presence of Penicillin-sensitive Streptococcus agalactiae. However, the patient developed leukopenia and thrombocytopenia, which were suspected to be the side effects of penicillin. Cefazolin was then replaced by vancomycin and the treatment continued for another 2 weeks. After a total treatment duration of 6 weeks, the CRP level of the patient decreased to the normal range, and follow-up computed tomography of the chest showed improved SCJ swelling and abscess. The patient was discharged, and no signs of recurrence were observed after 3 months.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient was started on cefazolin empirically, targeting methicillin-susceptible S aureus (MSSA), which is the most common pathogen of SCJ septic arthritis. After identifying Penicillin-sensitive Streptococcus agalactiae, the treatment was switched to penicillin G for two weeks. Due to the side effects of penicillin, cefazolin was then restarted but later replaced by vancomycin.\n\nFollow-Up Care:\nThe patient was discharged and lost to follow-up after 3 months.\n\nRecommendations:\nNone\n\nSigned,\n[Physician\u2019s Signature]\n[Date of discharge]\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The principal diagnosis is septic arthritis of the left sternoclavicular joint, caused by Streptococcus agalactiae (group B streptococcus), with abscesses around the joint.\n\nIn ICD-10-AM, pyogenic arthritis is classified in Chapter XIII at M00 (Pyogenic arthritis). The organism is specified by the fourth-character subdivision:\n- M00.0 covers staphylococcal arthritis.\n- M00.1 covers pneumococcal arthritis.\n- M00.2 covers other streptococcal arthritis, which includes group B streptococcus.\n\nThe category is M00 regardless of the organism.\n\nThe abscesses are part of the joint infection and do not change the principal diagnosis. The leukopenia and thrombocytopenia from penicillin are secondary conditions.\n\nCODE: M00",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 896,
+    "output_tokens": 276
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "51a55251a132",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: N/A\nMedical Record Number: N/A\n\nAdmission Date: N/A\nDischarge Date: N/A\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nUpon admission, the patient was given IV fluids, morphine, and medications to address his hyperkalemia. CT scans revealed extensive subcutaneous emphysema, pneumorrhachis/intraspinal air, pneumomediastinum, liver biliary duct dilation, mucosal enhancement of entire bladder, and previously known hydronephrosis. The patient was then transferred to the ICU where he was treated and monitored. After four days, the patient was transferred to the floors where gross hematuria continued, electrolytes normalized, leukocytosis resolved, and mental status improved. The patient was discharged from the hospital with follow-up appointments with neurosurgery for pneumorrhachis, pulmonary for pneumothorax, urology for hematuria, and hepatology for elevated liver enzymes.\n\nHospital Course Summary:\nThe patient was admitted to the hospital after being observed stumbling on the street. Upon physical exam, the patient was noted to have severe cachexia, with associated signs of multiorgan failure such as crepitus over his left anterior neck, a flat but diffusely tender abdomen, and a collapsible inferior vena cava. CT scans revealed extensive subcutaneous emphysema, pneumorrhachis/intraspinal air, pneumomediastinum, liver biliary duct dilation, mucosal enhancement of entire bladder, and previously known hydronephrosis. The patient was then transferred to the ICU and treated with IV fluids, morphine, and medications to address his hyperkalemia. After four days, the patient was transferred to the floors where gross hematuria continued, electrolytes normalized, leukocytosis resolved, and mental status improved. The patient was discharged from the hospital with follow-up appointments with neurosurgery for pneumorrhachis, pulmonary for pneumothorax, urology for hematuria, and hepatology for elevated liver enzymes.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "J95",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 840,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

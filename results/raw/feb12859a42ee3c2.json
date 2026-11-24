@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "cot_then_extract",
+  "record_id": "4c417105ea15",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nHospital Course:\nThe patient, a 35-year-old Japanese woman, presented to our facility in gestational week 29 with low back pain, weakness of her lower extremities, and impaired liver function with low platelet count. An epidural hematoma was detected in her thoracic spinal canal, which was confirmed by MRI findings, resulting in emergency decompression. The patient was diagnosed with HELLP syndrome and underwent an emergency Cesarean section to end the pregnancy. Post-operatively, the patient experienced bilateral lower limb paralysis and complete urinary retention, leading to diagnosis of grade B injury according to the ASIA/ISCoS classification. A surgical intervention was performed successfully, and the patient\u2019s condition improved gradually.\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course and Procedures:\nThe patient underwent an emergency Cesarean section to terminate the pregnancy due to HELLP syndrome, which resulted in bilateral lower limb paralysis and complete urinary retention. The MRI detected an epidural hematoma in the thoracic spinal canal which was removed by neurosurgical decompression. The patient's condition improved gradually after the surgery.\n\nCondition at Discharge:\nThe patient's lower limb sensation improved to a score of 8 out of 10, and muscular strength limited to a slight improvement. The patient was classified as ASIA/ISCoS grade C.\n\nFollow-up Plans:\nThe patient was discharged and scheduled for follow-up visits with the neurosurgical and obstetric departments to monitor her progress.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible for this admission is HELLP syndrome in pregnancy at 29 weeks; it caused the thrombocytopenia and spinal epidural haematoma and led to the emergency caesarean. Under ICD-10-AM, conditions arising in pregnancy take precedence and are classified to chapter O. HELLP syndrome sits within the hypertensive-disorder category O14.\n\nCODE: O14",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1126,
+    "output_tokens": 256
+  },
+  "seconds": 0.0
+}

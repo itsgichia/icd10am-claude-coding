@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "4ffe57ea03a8",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHospital Course:\n\nThe patient, a 38-year-old female diagnosed with IgAN accompanied by iron deficiency anemia, was admitted to our center with complaints of abnormal urine tests and unexplained anemia. Physical examination revealed no positive signs such as bilateral lower limb edema or hepatosplenomegaly. The patient was treated with a combination of oral prednisolone, leflunomide, and angiotensin receptor blockers (ARBs) along with polysaccharide-iron complex. A complete remission of proteinuria was observed, and hematuria was also relieved.\n\nHowever, the patient's hemoglobin levels were constantly below the normal reference range, which could not be explained by the iron deficiency anemia. In 2016, the patient was diagnosed with \u03b1-thalassemia based on the results of our genetic tests showing the deletion of --SEA gene. Serum HbF and HbA2 were found to be elevated to 2.47 and 3.04%, respectively.\n\nDuring the 3-year follow-up, a significant improvement in anemia was observed following the treatment consisting of a small dose of ARB with folic acid and mecobalamin administration. Laboratory tests in March 2019 showed that Hb levels were elevated to 157 g/L. Urine occult blood was 2+, 24-h proteinuria was reduced to 0.08 g, and serum creatinine and albumin were normal.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nThe patient was treated with a combination of oral prednisolone, leflunomide, and angiotensin receptor blockers (ARBs) along with polysaccharide-iron complex. Later, a small dose of ARB with folic acid and mecobalamin administration was found to be effective in improving anemia.\n\nFollow-Up:\n\nThe patient should continue to take the prescribed medications as per the physician's instructions and follow-up with regular appointments for monitoring and symptom management.\n\nSigned, [REDACTED] (Physician)"
+      }
+    ]
+  },
+  "text": "The most likely ICD-10-AM principal diagnosis is **N02.8, Recurrent and persistent haematuria with other morphological lesions**, which is the code commonly used for IgA nephropathy (Berger disease).\n\nThe rationale:\n- The patient was admitted for abnormal urine tests (haematuria and proteinuria), and IgA nephropathy was the underlying renal condition being treated.\n- Iron deficiency anaemia (D50.-) and \u03b1-thalassaemia (D56.0, from the --SEA deletion) are secondary diagnoses. The thalassaemia explains the anaemia that did not respond to iron therapy.\n\nThis is an inference from the summary. The diagnosis section is withheld, and the record spans several years, so the principal diagnosis should be confirmed against the discharge diagnosis and the episode's reason for admission. Coding guidelines may also require sequencing based on the circumstances of this specific admission.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 748,
+    "output_tokens": 1104
+  },
+  "seconds": 0.0
+}

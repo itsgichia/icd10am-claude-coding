@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "b8ddda2dfd6f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nMedical Record Number: [redacted]\nDate of Admission: [redacted]\nDate of Discharge: [redacted]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe infant was admitted for surgical reduction of idiopathic ileocolic intussusception. She experienced postoperative ileus and later developed bilious vomiting on postoperative day seven, which prompted an abdominal x-ray and ultrasound that revealed ileoileal intussusception. The patient successfully underwent a laparotomy procedure where an ileoileal intussusception was manually reduced, with subsequent resection of a short necrotic segment. Following the procedure, the patient progressed well with no further complications. After satisfactory recovery, the patient was discharged home.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Medications:\nNot Applicable \n\nDischarge Instructions:\nThe patient should be monitored for any recurrent symptoms and advised to follow up with pediatric surgery as recommended. If any unusual symptom or behavior is observed, parents or family members should obtain medical advice immediately.\n\nFollow-Up:\nThe patient should be accompanied by a responsible adult for routine follow-up and progress monitoring with pediatric surgery as recommended. \n\nSigned By:\n[Redacted], M.D.\nDate and Time: [Redacted]\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "K56",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 607,
+    "output_tokens": 143
+  },
+  "seconds": 0.0
+}

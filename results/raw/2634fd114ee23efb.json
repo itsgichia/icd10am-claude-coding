@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "0beba3f33a3c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nMedical Record Number: [redacted]\nDate of Admission: [redacted]\nDate of Discharge: [redacted]\n\nHospital Course:\nThe patient was admitted to our hospital with shortness of breath, dry coughing and fever, after testing positive for COVID-19. The patient was intubated and put on ventilator support within 36 hours of presentation, as he had severe hypoxia and increased work of breathing. Treatment was initiated with various medications to manage his COVID-19 symptoms. \nThroughout his 31-day hospital course, the patient's clinical condition was complicated by septic shock, acute respiratory distress syndrome (ARDS), volume overload, and uncontrolled diabetes. The chest X-ray revealed bilateral pneumothoraces, which were confirmed with a chest CT, along with pneumomediastinum. The patient was transferred to a hospital where thoracic surgery was available. Imaging after transfer showed that the pneumothorax had slightly increased without tension physiology. The PEEP was decreased from 8 to 6 cm H20 where it remained till his discharge. On the 31st day of admission the patient passed away from hypoxic respiratory failure.\nDiagnosis: [diagnosis section withheld]\nProcedures:\nThe patient was intubated and put on ventilator support within 36 hours of presentation. \n\nHospital Course:\nThe patient was admitted with COVID-19 and developed severe hypoxia and increased work of breathing. Treatment was initiated with various medications to manage his COVID-19 symptoms. Throughout his hospital course, the patient's clinical condition was complicated by septic shock, ARDS, volume overload, and uncontrolled diabetes. The patient passed away from hypoxic respiratory failure on hospital day 31.\n\nOutcome:\nThe patient passed away from hypoxic respiratory failure after a prolonged hospital stay. \n\nFollow-Up:\nN/A\n\nDischarge Medications:\nN/A \n\nFollow-up Instructions:\nN/A"
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: J12.8 Other viral pneumonia (COVID-19 pneumonia)\n\n**Add as an additional code:** U07.1 COVID-19, virus identified\n\n## Rationale\n\n**Reason for admission.** The patient was admitted with confirmed COVID-19 presenting as a lower respiratory tract illness: dyspnoea, dry cough, fever and severe hypoxia requiring intubation within 36 hours. Under ACS 0001 Principal diagnosis, the condition chiefly responsible for the admission is the COVID-19 respiratory infection.\n\n**Australian (IHACPA/ACCD) COVID-19 guidance.**\n- U07.1 is an emergency-use code. It is not sequenced as the principal diagnosis.\n- When COVID-19 causes pneumonia, the manifestation code J12.8 goes first, followed by U07.1.\n\n**Conditions that arose after admission.** ARDS, septic shock, bilateral pneumothoraces with pneumomediastinum, volume overload and hypoxic respiratory failure are complications. They are coded as additional diagnoses, not the principal diagnosis.\n\n## Suggested additional codes\n| Code | Condition |\n|---|---|\n| U07.1 | COVID-19, virus identified |\n| J80 | ARDS |\n| R65.21 / A41.9 | Septic shock / sepsis, organism unspecified (confirm the organism if documented) |\n| J96.0x | Acute respiratory failure (hypoxic) |\n| J93.1 | Bilateral pneumothorax (other spontaneous). Consider J95.8x or T79.7 if documented as ventilator/barotrauma-related |\n| J98.2 | Pneumomediastinum (interstitial emphysema) |\n| E87.7 | Fluid overload |\n| E11.65 or E11.9 | Type 2 diabetes. Use E11.65 (with hyperglycaemia) per ACS 0401 if \"uncontrolled\" means hyperglycaemia |\n| 13882-xx | Ventilation (hours), plus 92209-xx intubation |\n\n**Caveat:** The summary never explicitly states \"pneumonia.\" Query the clinician to confirm COVID-19 pneumonia. If pneumonia is not confirmed, the principal diagnosis may instead be the documented manifestation present on admission, with U07.1 as an additional code.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 731,
+    "output_tokens": 1525
+  },
+  "seconds": 0.0
+}

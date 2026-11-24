@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "c90337008ffc",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nHospital Course:\nThe patient presented with altered mental status, visual disturbances, and seizures associated with a rash and polyarthralgia. She was found to have hypertension and polysubstance abuse. Antinuclear antibodies (ANA) and double-stranded deoxyribonuclease (dsDNA) antibodies were both positive, and C3 and C4 complement factors were low. The patient was diagnosed with SLE and started on methylprednisolone pulse therapy due to active proliferative lupus nephritis. Her kidney function and arthralgia improved, and she was transitioned to oral prednisone taper. Mycophenolate mofetil was also started, and pneumocystis pneumonia (PCP) prophylaxis was given. The patient's hospital stay was significant for treatment of SLE related manifestations and hypertension. \nDischarge Diagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was discharged home with close follow-up with her primary care physician and rheumatologist for continuation of management of her SLE and hypertension. \n\nInstructions:\nThe patient is advised to continue medications as prescribed and report any adverse effects to her physician. She should monitor her blood pressure and follow a low-sodium diet. She should avoid sun exposure and use sunscreen for protection. The patient is to have close follow-up with her physician for monitoring of her kidney function and disease activity. \n\nFollow-Up:\nUrgent follow-up is recommended with the primary care physician and rheumatologist within one week.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "M32",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 627,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

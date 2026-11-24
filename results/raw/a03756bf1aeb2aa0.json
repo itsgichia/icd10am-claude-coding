@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "4bbf8b80acdc",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nDOB: [REDACTED]\nMRN: [REDACTED]\n\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nLength of Stay: [REDACTED]\nAdmitting Diagnosis: [diagnosis section withheld]\nFinal Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was admitted to the hospital complaining of fever and cough over the last few days. The clinical evaluation revealed micro nodular shadowing consistent with miliary TB, which was confirmed through chest computed tomography. Broncho-alveolar lavage fluid was negative for acid-fast bacilli, but M. tuberculosis was identified through culture. Cerebrospinal fluid examination led to the diagnosis of probable TB meningitis. The patient developed a right side stroke and was subsequently transferred to a different hospital where the prescribed treatments and rehabilitation were continued. The patient continued with anti-TB, anti-HIV, and aspirin treatments leading to improvement in general and neurologic conditions. After five weeks, the patient was discharged.\n\nDischarge Instructions:\nThe patient was discharged with follow-up appointments scheduled with the infectious disease clinic and neurological department. The patient was advised to continue with anti-TB, anti-HIV, and aspirin treatments as prescribed by the physician. The patient was also advised to maintain a healthy diet and lifestyle, quit smoking, take prescribed medications as directed, and avoid alcohol and recreational drugs. The patient is advised to seek medical attention immediately if any new symptoms or complications arise."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: A19.1 Acute miliary tuberculosis of multiple sites**\n\nI chose this code from the clinical picture, so the coder should check it against the full record.\n\n**Why A19.1**\n- The admission was for fever and cough. Imaging showed micro-nodular shadowing on chest CT, consistent with miliary TB.\n- *M. tuberculosis* grew on culture of the bronchoalveolar lavage fluid, which confirms the diagnosis even though the AFB smear was negative.\n- Miliary TB is disseminated disease. ICD-10-AM classifies it to A19.- rather than A15.- (respiratory TB).\n- The disease involves the lungs and, probably, the meninges, so \"multiple sites\" (A19.1) fits better than A19.0 (single site) or A19.2 (unspecified).\n\n**Likely additional diagnoses**\n- **A17.0\u2020 with G01\\*** for tuberculous meningitis. The record says \"probable.\" Under Australian coding standards, a diagnosis documented as \"probable\" at discharge is coded as if it were confirmed. If the meningitis is instead considered part of the miliary TB, coding it separately is still reasonable because it is a specific site.\n- **I63.\u2013 (cerebral infarction)** for the right-sided stroke. The exact subcode depends on the documented vessel and mechanism. TB meningitis-related vasculitis is a possible cause.\n- **B20 (HIV disease resulting in mycobacterial infection)** is a possible code. The record mentions anti-HIV treatment but gives no explicit HIV diagnosis, so the clinician would need to document it. If it is documented, B20 may be sequenced with the TB codes.\n- **Z72.0 or F17.\u2013** for tobacco use, if documented.\n\n**Caveat:** The \"Final Diagnosis\" section is withheld. If the clinician documented a different principal diagnosis, such as TB meningitis as the main reason for admission, the sequencing could change.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 608,
+    "output_tokens": 659
+  },
+  "seconds": 0.0
+}

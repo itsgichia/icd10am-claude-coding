@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "context_rich_structure",
+  "record_id": "538e9dec7691",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDISCHARGE SUMMARY:\n\nPatient Name: [Redacted], Jane\nAge: 95\nGender: Female\nAdmission Date: [Redacted]\nDischarge Date: [Redacted]\n\nHOSPITAL COURSE:\n\nThe patient presented to the emergency department with hypoxia, tachycardia, tachypnea, use of accessory muscles for respiration and somnolence. Physical exam revealed no clinical signs of DVT such as unilateral leg swelling or calf tenderness. Point of care ultrasound (POCUS) was performed and revealed a large mobile thrombus in the right ventricle on apical four-chamber view, which in combination with the patient\u2019s clinical presentation, was diagnostic of acute pulmonary embolism with right heart strain.\n\nThe patient was assessed by her family, and her code status was established as \u201cdo not resuscitate\u201d with comfort measures only. Further imaging, fibrinolysis and thrombectomy were not attempted in accordance with the patient\u2019s wishes.\nDISCHARGE DIAGNOSIS: [diagnosis section withheld]\nDISCHARGE CONDITION:\n\nStable with Comfort Measures only\n\nDISCHARGE INSTRUCTIONS:\n\nN/A\n\nFOLLOW-UP:\n\nOutpatient options should be discussed with the patient's primary care physician\n\nATTENDING PHYSICIAN:\n\n[Redacted]\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible for this admission is **acute pulmonary embolism with right heart strain**. Point-of-care ultrasound showed a large mobile thrombus in the right ventricle, which together with the clinical picture established the diagnosis.\n\n- **Chapter letter: I.** Pulmonary embolism is classified in the circulatory system chapter, under pulmonary heart disease and diseases of pulmonary circulation (I26\u2013I28), not in the respiratory chapter.\n- **Category: I26, Pulmonary embolism.** The right heart strain (acute cor pulmonale) would take this to I26.0 at the fourth-character level.\n- **What is not principal:**\n  - The hypoxia, tachypnoea and somnolence are presenting symptoms explained by the embolism, so they are not coded as principal.\n  - The comfort-care-only and do-not-resuscitate decisions do not change the principal diagnosis.\n\nCODE: I26",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1001,
+    "output_tokens": 362
+  },
+  "seconds": 0.0
+}

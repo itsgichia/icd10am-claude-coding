@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7be47456ff7d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: Maghrebian 8.2 year-old boy\nAdmission Date: [Date]\nDischarge Date: [Date]\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted for evaluation due to moderate mental retardation, mild intellectual disability, hyperactive behavior, and partial secondary generalized epilepsy with persistent atypical absences and psychogenic episodes. The physical and neurological exam revealed no abnormal findings. The EEG showed abnormal discharges of slow waves and spikes and bi-temporally localized waves. The MRI study showed cortico-subcortical atrophy and corpus callosum hypoplasia. A high definition karyotype and metabolic panel results were normal.\n\nValproic acid was administered to manage the seizures and hyperkinetic behavior. The patient's condition improved, leading to his discharge.\n\nThe genetic study showed 116 bases deletion in genomic sequence of EN2 gene: 155462376\u2013155462491 (G1 marker). The patient showed abnormalities in the transcription of the EN2 gene, that implies the deletion of 208 bases (between 1493 and 1719 bases of the complementary sequence, C4 marker).\n\nThe patient has been discharged with improved symptoms and has been advised to continue the medications prescribed by the treating physician. A follow-up visit has been scheduled to assess the patient's progress with regard to the aforementioned symptoms."
+      }
+    ]
+  },
+  "text": "# Suggested principal diagnosis: **G40.2 \u2013 Localisation-related (focal)(partial) symptomatic epilepsy and epileptic syndromes with complex partial seizures**\n\nThe summary doesn't contain enough detail to code with certainty, so this should be confirmed against the full record or with the treating clinician.\n\n## Why epilepsy is the principal diagnosis\n- Under ACS 0001, the principal diagnosis is the condition that, after study, chiefly caused the admission.\n- The admission was for evaluation and management. The main investigations (EEG, MRI) and the main treatment (valproic acid) were directed at the seizure disorder. The patient improved and was discharged on that treatment.\n\n## Why G40.2\n- **Partial seizures with secondary generalisation** fall under the localisation-related categories (G40.1 or G40.2).\n- **Symptomatic:** the MRI shows a structural cause (cortico-subcortical atrophy and corpus callosum hypoplasia).\n- **Complex partial:** the bitemporal discharges and the atypical absences, which involve impaired awareness, fit complex partial seizures better than simple ones (G40.1).\n- **Alternatives to check:**\n  - **G40.4** (other generalised epilepsy) if the clinician documents the absences as primarily generalised.\n  - **G40.1** if the seizures are documented as simple partial.\n  - If the epilepsy is documented as intractable or drug-resistant, apply the intractable 5th-character extension where the edition provides it.\n\n## Suggested additional diagnoses\n| Code | Condition |\n|---|---|\n| F71 | Moderate intellectual disability. The summary lists both \"moderate\" and \"mild,\" which needs clarification; F70 applies if mild. |\n| F90.x | Hyperkinetic disorder, if ADHD is documented, since valproate was also given for the hyperactive behaviour. |\n| Q04.0 | Congenital malformation of the corpus callosum (hypoplasia). |\n| G31.9 or G93.8 | Cerebral atrophy, if it is considered clinically significant. |\n| F44.5 | Dissociative (psychogenic, non-epileptic) convulsions, for the psychogenic episodes. |\n| Q99.8 or Q87.8 | EN2 gene deletion. This is a small intragenic deletion, so a chromosomal deletion code (Q93.x) would not apply. Assign this only if the clinician documents the deletion as causing a syndrome. |\n\nIf the clinician documents a unifying genetic syndrome that explains all the features, the sequencing could change to put that syndrome first.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 541,
+    "output_tokens": 1405
+  },
+  "seconds": 0.0
+}

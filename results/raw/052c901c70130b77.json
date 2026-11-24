@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7579af382c24",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary\n\nPatient: 66-year-old male with a past medical history of well-controlled diabetes and high cholesterol\nDiagnosis: [diagnosis section withheld]\nHospital course:\n\nThe patient presented with progressive shortness of breath, dry cough, weight loss and night sweats. Initial treatment for severe community-acquired pneumonia was unsuccessful and he rapidly progressed to respiratory failure requiring mechanical ventilation. Diagnostic tests were performed, ruling out possible infections and connective tissue diseases. A CT-guided lung biopsy and VATs were done, ultimately leading to a diagnosis of organizing pneumonia. The patient was started on a systemic steroid course which resulted in remarkable improvement in his breathing and oxygen requirement. He was finally liberated from the ventilator and switched to oral prednisone. His condition continued to improve steadily over the hospitalization and was later discharged with a decreased dose of oral prednisone.\n\nFollow-up:\n\nHis follow-up CT showed resolution of the micronodular infiltration. He is currently doing well clinically at 2 years post-hospitalization. \n\nDischarge medications:\n\nThe patient was discharged with oral prednisone. \n\nRecommendations:\n\nFollow up with primary care physician."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is **organizing pneumonia**, which I would code as **J84.8** (Other specified interstitial pulmonary diseases) in ICD-10-AM.\n\n- **Why this diagnosis is principal:** The admission was for organizing pneumonia, confirmed by CT-guided lung biopsy and VATS. The acute respiratory failure requiring mechanical ventilation was a complication of that condition, so it would be coded as an additional diagnosis, not the principal one.\n- **Caveat:** I'm working from memory of the ICD-10-AM index. Check the edition in use (and the Australian Coding Standards) before finalising. ICD-10-CM has a more specific code for cryptogenic organizing pneumonia (J84.116), but that code does not apply in ICD-10-AM.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 468,
+    "output_tokens": 871
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7c591e864a3b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 46-year-old male with a history of MSA with predominant parkinsonism\n\nHospital Course:\nThe patient was emergently admitted to our neurological department with tracheal intubation due to sudden respiratory failure at night. He had a history of high-pitched snore at age 38 and neck and trunk rigidity, bradykinesia, postural tremor, and dysuria at age 44. He was diagnosed with MSA at age 45. The possibility of MSA-related central respiratory disorder or obstructive respiratory disorder due to MSA and/or obesity was considered after pulmonary inflammatory diseases were excluded. The patient underwent tracheostomy to maintain the airway after extubation which was successful, but continuous positive airway pressure may have also been helpful. Polysomnography showed obstructive SA, but not central SA. Awake fiberoptic laryngoscopy displayed no upper-airway obstruction but slight vocal-cord abduction impairment during inspiration while sleep laryngoscopy was refused by the patient. To assess the spatial and temporal conditions of the upper respiratory tract, including the nasal passages, pharynx, larynx, and portion of the trachea, 4D-CT during sleep was performed. The effective dose was 1.84 mSv.\n\nFindings:\nReconstructed 4D-CT images of respiration during sleep revealed abnormal upper-airway findings compared with the images acquired during awake respiration: glottis closure at the terminal stage of inspiration, subsequent velopharyngeal closure, and succeeding glottis opening and expansion of pharyngeal pressure, but no other upper airway-obstruction findings.\nDiagnosis: [diagnosis section withheld]\nDisposition:\nThe patient was discharged with tracheostoma retained which was determined to be indispensable, although central apnea after tracheostomy may cause sudden central origin-related death. The patient was followed up at 14 months postoperatively, and no further airway-related complications were reported.\n\nProcedures:\nTracheostomy."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: G90.3, Multiple system degeneration** (multiple system atrophy, including Shy-Drager syndrome). In ICD-10-AM this is the code for MSA with predominant parkinsonism.\n\nThe reasoning is as follows:\n\n- **The underlying disease drives the admission.** The patient was admitted because of sudden respiratory failure, which the team attributed to MSA-related central or obstructive respiratory disorder. Under ICD-10 sequencing conventions, the underlying condition is coded first when it causes the presenting manifestation.\n- **Respiratory failure is a secondary code.** Acute respiratory failure (J96.0) would be coded as an additional diagnosis, not as the principal.\n- **Other secondary codes** would likely include:\n  - Sleep apnea (obstructive sleep apnea, G47.33, confirmed by polysomnography)\n  - Tracheostomy status (Z93.0), or the procedure code for tracheostomy as documented\n  - Obesity, if documented as a clinical condition\n\nThe diagnosis section is withheld, so this is inferred from the hospital course. If the final coded diagnosis documents acute respiratory failure as the reason for admission with MSA as its cause, a coder would still generally sequence G90.3 first, but the local coding guidelines and the discharge diagnosis wording should be checked.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 723,
+    "output_tokens": 1175
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "cot_then_extract",
+  "record_id": "615b2cd470fd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nAge: 12\nSex: Female\nDate of Admission: [redacted]\nDate of Discharge: [redacted]\n\nHospital Course:\nThe patient presented to the emergency room with intense left flank pain, which was discovered to be caused by an obstructing calculus in the left ureter and nephrolithiasis. The patient was treated with pain control medications and hydration, and subsequently referred to a nephrologist. The patient underwent a \"stone risk study\" and renal ultrasound, which showed multiple bilateral cysts and renal calculi. Genetic testing was performed and identified dual mutations in GANAB and PKD1genes. \nDiagnosis: [diagnosis section withheld]\nDischarge Instructions:\n-The patient should follow up with the nephrologist for further evaluation and management of the polycystic kidney disease.\n-The patient should return if she experiences any further pain or symptoms.\n\nFollow-up:\nThe patient will follow up with the nephrologist for further evaluation and management of the polycystic kidney disease.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The admission was for an obstructing left ureteric calculus causing flank pain, which was treated with analgesia and hydration. Polycystic kidney disease was found on subsequent investigation and drives follow-up, but it did not cause the admission. Calculus of kidney and ureter is in chapter N (genitourinary), category N20.\n\nCODE: N20",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 950,
+    "output_tokens": 484
+  },
+  "seconds": 0.0
+}

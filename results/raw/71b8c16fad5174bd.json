@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "9f03e2c80891",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nMedical History:\nThe patient is a 20-year-old previously healthy male who presented to the emergency department with fever and rash six days after being diagnosed with a viral upper respiratory infection at an urgent care center.\n\nHospital Course:\nThe patient was diagnosed with severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) and admitted to the intensive care unit (ICU) for supportive care. He required escalating amounts of supplemental oxygen during his ED course and remained hospitalized for 6 days.\n\nClinical Findings:\nThe patient presented with a diffuse, morbilliform rash across the trunk and extremities, sparing the face. A chest radiograph showed bilateral infiltrates consistent with multifocal pneumonia. Labs revealed a normal leukocyte count with an elevated C-reactive protein.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient received supportive care in the ICU, including supplemental oxygen and monitoring of vital signs.\n\nFollow-up:\nThe patient is stable on hospital day 6 and will require additional monitoring and follow-up to determine the appropriate plan for discharge from the hospital.\n\nRecommendations:\nThe patient should continue to follow up with his healthcare provider and monitor his symptoms closely to determine when he can safely return to his daily activities. Additionally, he should follow all recommendations and guidelines from public health officials regarding social distancing and hand hygiene to slow the spread of the virus."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: U07.1 \u2013 COVID-19, virus identified**\n\n**Rationale**\n- The patient has a laboratory-confirmed SARS-CoV-2 infection. The record says he was \"diagnosed with SARS-CoV-2\", so the virus was identified.\n- He was admitted to the ICU with pneumonia and escalating oxygen requirements. The pneumonia is a manifestation of COVID-19.\n- In ICD-10-AM (Australian Coding Standards, ACS 0004 for COVID-19), U07.1 is sequenced as the principal diagnosis when COVID-19 is the condition chiefly responsible for the admission. The manifestations are coded as additional diagnoses.\n\n**Suggested additional codes**\n- **J12.82 (pneumonia due to COVID-19) is a US ICD-10-CM code.** It does not exist in ICD-10-AM. In ICD-10-AM, code the pneumonia as **J12.8 (other viral pneumonia)** alongside U07.1, if your edition's instructions support this.\n- **Hypoxia or respiratory failure:** R09.02 (hypoxaemia) can be added if documented. If acute respiratory failure is documented, use J96.00 (type not specified) or the type-specific code.\n- **Morbilliform rash:** R21 (rash and other nonspecific skin eruption). Code it only if it is not integral to the COVID-19 presentation and is documented as clinically significant.\n- **Procedures and interventions:** code any documented oxygen therapy or ICU care, such as intensive care or ventilatory support, per local requirements.\n\n**Caveats**\n- The diagnosis section was withheld, so the code rests on the documented SARS-CoV-2 diagnosis.\n- The rash, fever, normal white cell count and elevated CRP could suggest another cause, such as a drug reaction. The record states SARS-CoV-2 was diagnosed, so U07.1 applies.\n- Check against the current edition of ICD-10-AM/ACHI/ACS, as COVID-19 coding advice has been updated several times.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 539,
+    "output_tokens": 702
+  },
+  "seconds": 0.0
+}

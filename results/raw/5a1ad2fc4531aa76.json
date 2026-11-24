@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "ef176fbbd8cc",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nElectronic Health Record Discharge Summary: Hispanic Male with Diabetes Mellitus Type 2 and Sepsis\n\nIdentification: \nPatient: 42-year-old Hispanic male with a history of diabetes mellitus type 2 \nAdmitted: Emergency department admission on September 1, 2017 for sepsis \n\nHospital Course: \nThe patient had a six-day history of malaise, headache, fever, and generalized body pain. He had developed diarrhea, tachypnea, and confusion three days prior to admission. On the day of admission, he became drowsy, dyspneic, and looked very ill. Physical examination showed the patient was severely dehydrated with a blood pressure of 60/30 mmHg and respiratory rate of 32 bpm. \nTreatment with intravenous fluids, antibiotics, insulin, and other supportive therapies was administered. Methimazole, hydrocortisone, and Lugol's solution were added on the second day of treatment. On the third day of treatment, there was a good evolution and the patient was discontinued from norepinephrine and insulin infusion. \nECG was normal but echocardiography showed severe left ventricular systolic dysfunction. Intravenous furosemide was administered for two days for acute lung edema. \nThe patient continued to improve and was discharged on September 7, 2017 with almost complete recovery. \nDiagnosis: [diagnosis section withheld]\nFollow-Up: \nFollow-up echocardiography showed complete resolution of left ventricular systolic dysfunction. After the patient was discharged, no additional study was performed.\n\nSignatures: \nThis discharge summary was reviewed and approved by (physician's name).\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "A41",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 685,
+    "output_tokens": 297
+  },
+  "seconds": 0.0
+}

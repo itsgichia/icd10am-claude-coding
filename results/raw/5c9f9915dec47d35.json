@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "7f0a1375a954",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nHospital Course:\nThe patient, a 19-year-old male with no significant past medical history, presented to the emergency room with symptoms of four hours of abdominal pain and emesis. He reported undergoing a strict regimen of dieting and exercise which resulted in significant weight loss over the past months. The family member added that the symptoms started after a heavy meal ingestion.\n\nOn physical examination, the patient presented with a scaphoid abdomen, tender abdomen and diminished high-pitched bowel sounds. The laboratory workup was within normal limits. The patient stayed overnight in the ER and was managed conservatively with NPO, intravenous crystalloid rehydration, nasogastric tube, ondansetron and omeprazole. Next day reevaluation showed persistence of abdominal pain, nausea and bilious emesis. Computed tomography study revealed gastric dilatation extended to the third portion of the duodenum, suggestive of proximal small bowel obstruction. The patient was admitted for inpatient treatment.\nDiagnosis: [diagnosis section withheld]\nManagement:\nInitial management included gastric decompression by placing a nasojejunal feeding tube to alleviate symptoms of obstruction and later use for enteral nutritional support. The patient was provided with a normocaloric hyperproteic formula starting with 600 and progressed to 1500 kcal per day to reverse protein caloric malnutrition state. Additionally, psychiatry and psychology teams were consulted concerning major weight loss. The patient was diagnosed with depression and an eating disorder and was started on sertraline. The patient was discharged asymptomatic, with hyperproteic diet plus nutritional supplements and selective serotonin reuptake inhibitor.\n\nFollow-up:\nThe patient's follow-ups showed weight gain and no symptoms. Psychiatry and psychology teams will follow up the patient after discharge.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: K31**\n\nThe principal diagnosis is superior mesenteric artery (SMA) syndrome, which causes proximal duodenal obstruction. The clinical picture fits: postprandial vomiting after a heavy meal, weight loss, gastric dilatation extending to the third portion of the duodenum, and a nasojejunal tube needed for decompression. The admission was for this obstruction. The eating disorder and depression are significant comorbidities, and the protein-calorie malnutrition is a secondary condition, but neither was the chief reason for admission.\n\nIn ICD-10-AM, SMA syndrome indexes to K31.5 (Obstruction of duodenum), which falls in category K31.\n\nThis is based on the narrative alone. The diagnosis section was withheld, so the SMA syndrome inference should be confirmed against the treating team's documented diagnosis before the code is finalised.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 849,
+    "output_tokens": 654
+  },
+  "seconds": 3.0677437919948716
+}

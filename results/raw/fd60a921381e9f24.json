@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "b4c0fcccee5f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course Summary\n\nPatient: [Name]\n\nAdmission Date: [Date]\n\nDischarge Date: [Date]\nAdmission Diagnosis: [diagnosis section withheld]Discharge Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted to our clinic with chronic diarrhea and intermittent abdominal pain. Upon physical examination and review of medical history, a history of gastrointestinal hemorrhage due to peptic ulcer was noted. Abnormal laboratory findings were also identified, including elevated white blood cell count, C-reactive protein, and erythrocyte sedimentation rate. Additionally, during the colonoscopy, colitis was detected in the biopsy. Imaging, including ultrasonography and CT, revealed inflammation of intestinal loops, the presence of omental inflammatory thickening, and a fluid collection in the pericaecal area. \n\nGiven these findings, the patient was hydrated and prescribed empiric cefixime and metronidazole for treatment. Pain was reduced following drainage of purulent fluid, antibiotics and hydration, and laboratory values returned to within normal limits. The patient was discharged from the hospital and scheduled for elective appendectomy six weeks later.\n\nDischarge Instructions:\n\nThe patient is advised to continue the prescribed antibiotics and to carefully follow the instructions provided upon discharge. The patient should also seek medical attention if symptoms recur or worsen. It is important for the patient to avoid potentially harmful foods and drinks, and to follow a healthy and balanced diet while receiving ongoing treatment. Follow-up appointments are scheduled to monitor the patient's condition and progress, and to determine the ongoing course of treatment as necessary.\n\nSigned by: [Name of responsible medical professional]"
+      }
+    ]
+  },
+  "text": "The most likely ICD-10-AM principal diagnosis is **K35.1, acute appendicitis with localised peritonitis and abscess**, which corresponds to an appendiceal (pericaecal) abscess.\n\nThe record doesn't state the diagnosis explicitly, so this is inferred from the findings:\n- A pericaecal fluid collection, with drainage of purulent fluid\n- Inflammation of intestinal loops and omental inflammatory thickening\n- Raised WBC, CRP and ESR\n- Treatment with antibiotics, followed by a planned elective appendectomy\n\nThe record also documents colitis on biopsy and chronic diarrhoea, which may need coding as secondary diagnoses. Because the appendectomy has not yet been performed, the final principal diagnosis should be confirmed with the operating team's findings and histopathology. Final code selection should also be verified by a clinical coder against the current ICD-10-AM edition, since code titles and sub-codes for appendicitis with peritonitis or abscess differ between editions.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 649,
+    "output_tokens": 1554
+  },
+  "seconds": 0.0
+}

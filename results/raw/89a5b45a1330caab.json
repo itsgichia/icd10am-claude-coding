@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "b90becef024d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 49-year-old female of Asian descent\n\nChief Complaint: Burning with urination, frequency, and sensation of incomplete bladder emptying\n\nHospital Course:\nThe patient was admitted with complicated cystitis with sepsis and diagnosed with multiple urinary bladder masses. She underwent bladder mass resection, and pathology showed no evidence of malignancy. Prednisone and mirabegron were prescribed for overactive bladder. The patient developed right-sided abdominal pain, elevated lipase, and amylase levels, mild left hydronephrosis, and underwent bone marrow biopsy; results showed mild T-cell lymphocytosis and eosinophilia with normocellular marrow. The patient was given imatinib, which was stopped due to side effects.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Medications:\nNone\n\nFollow-Up Care:\nFollow-up recommended with the primary care physician for review of biopsy results and further management plan."
+      }
+    ]
+  },
+  "text": "The ICD-10-AM principal diagnosis would most likely be **A41.9, Sepsis, unspecified organism**.\n\nSepsis was present on admission, and the admission was for complicated cystitis with sepsis. Under ICD-10-AM sequencing rules, sepsis is coded first when it is present on admission with a localized infection, and the localized infection is coded as an additional diagnosis. The cystitis would therefore be a secondary code, such as **N30.9 (cystitis, unspecified)** or **N30.8 (other cystitis)**, depending on how the cystitis is characterized.\n\nSome considerations:\n- If culture results identify an organism (for example, *E. coli*, which would be A41.51), the more specific sepsis code should replace A41.9.\n- The bladder masses, hydronephrosis, lymphocytosis, and eosinophilia are secondary findings and do not change the principal diagnosis. Pathology showed no malignancy, so a neoplasm code is not supported.\n- The discharge diagnosis section is blank, so this answer is based on the hospital course. Final code assignment should be confirmed against the complete record and the facility's coding guidelines.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 383,
+    "output_tokens": 923
+  },
+  "seconds": 0.0
+}

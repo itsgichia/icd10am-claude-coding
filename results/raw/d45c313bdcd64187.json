@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "json_output",
+  "record_id": "32740d68001d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary\n\nPatient Information:\nName: Anonymous\nGender: Female\nAge: 25\nAdmission Date: [date]\nDischarge Date: [date]\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient was administered with various medications including alprazolam 500 \u03bcg, duloxetine 90 mg, olanzapine 5 mg, haloperidol 2.5 mg, clonazepam, baclofen, diazepam, phenytoin, levetiracetam, lamotrigine, levodopa, oral baclofen, lacosamide and potassium channel antagonist 3,4 diaminopyridine.\n\nHospital Course:\nThe patient was admitted with vomiting, bilateral leg pain, difficulty mobilising and flexed posture of her neck. She later developed visual and auditory hallucinations, respiratory failure with a coma scale score of 3, hypertensive, tachycardic, pyrexic and severe limb rigidity. Subsequently, contractures of the hands and feet were also developed. The patient was intubated and ventilated. The patient intermittently reported visual hallucinations throughout the hospital admission. Further complications included ileus, ischaemic bowel and sepsis.\n\nOutcome:\nThe patient showed marked clinical improvement with the administration of potassium channel antagonist 3,4 diaminopyridine. This resulted in extubation, multiple medication decreases, transfer from ICU, and ultimately discharged home sixteen months after admission. The patient is now dependent on others for all activities of daily living and has developed contractures of the upper and lower limbs. There have been no documented seizures since discharge.\n\nFollow-up:\nThe patient requires long-term follow-up care for contractures of the upper and lower limbs. The patient may also benefit from genetic counselling and additional investigations as advised by the neurology team.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"G25\", \"condition\": \"Stiff person syndrome spectrum (PERM)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 749,
+    "output_tokens": 212
+  },
+  "seconds": 0.0
+}

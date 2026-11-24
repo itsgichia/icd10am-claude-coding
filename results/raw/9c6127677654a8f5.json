@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "cot_then_extract",
+  "record_id": "aec8b9f3685b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nAge: 53\nGender: Male\n\nHospitalization Dates: [redacted]\nAdmitting Diagnosis: [diagnosis section withheld]Discharge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient initially presented with acute myocardial infarction and underwent percutaneous coronary intervention with stent implantation. However, residual stenoses and stent malappositions were observed, and the patient was referred for CABG. Echocardiogram revealed a left ventricular dysfunction with an ejection fraction of 19%, and enhanced computed tomography showed bilateral occlusions of the internal thoracic arteries and a small fragile sternum after sternoturnover fixation. Left thoracotomy was performed without cardiopulmonary bypass, and the saphenous vein and radial artery grafts were successfully anastomosed to the target vessels. The patient had an uneventful recovery and was discharged on postoperative day 12.\n\nHospital Course Summary:\nA 53-year-old man presented with acute myocardial infarction and underwent percutaneous coronary intervention with stent implantation. Residual stenoses and stent malappositions were observed, and the decision was made to perform CABG due to the left anterior descending artery, high lateral branch, and left circumflex artery lesions. The patient had a left ventricular dysfunction with an ejection fraction of 19%, a bilateral internal thoracic artery occlusion, and a small fragile sternum after sternoturnover fixation, which made the left thoracotomy approach the preferred method. The procedure was performed successfully without cardiopulmonary bypass, and the patient had an uneventful recovery, resulting in a patent bypass graft of all target vessels. The patient was discharged on postoperative day 12 without any issues.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible for this admission was the coronary artery disease with residual stenoses after a recent MI, which was treated with CABG. The initial MI and PCI were handled earlier, and this episode was for the bypass surgery. In ICD-10-AM, an MI within 4 weeks is coded I21, but the CABG admission was for residual multivessel lesions (LAD, high lateral branch, circumflex). The stem is ambiguous about timing, but the patient \"initially presented with acute myocardial infarction\" and the CABG seems to be part of the same continuing episode. Because of this, I21 is the most defensible category. The alternative is I25, chronic ischaemic heart disease, if the CABG was a separate admission.\n\nChapter I, category I21.\n\nCODE: I21",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1208,
+    "output_tokens": 258
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "4c037e919f43",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course Summary:\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe 54-year-old male was admitted with a diagnosis of left hemisphere ischemic stroke. The patient had significant muscle atrophy resulting in limited voluntary motion in the arm and hand and severe impairment as indicated by the patient's Chedoke-McMaster Stroke Assessment hand score of 2. The patient did not exhibit any cognitive impairments.\n\nTreatment:\nThe patient underwent a comprehensive treatment plan during their stay at the hospital. The treatment plan included rehabilitation sessions aimed at improving muscle strength and voluntary motion in the arm and hand. \n\nOutcome:\nThe patient's treatment plan resulted in gradual improvement in muscle strength and voluntary motion in the arm and hand. At the time of discharge, the patient's average ratio of maximum finger forces between hands was 0.076. Further follow-up sessions are recommended for continued improvement.\n\nFollow-Up:\nThe patient was discharged with a comprehensive follow-up plan. The patient's progress will be monitored by the treating physician."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is most likely **I63.9, Cerebral infarction, unspecified**.\n\nThe admitting diagnosis is a left hemisphere ischemic stroke, and the record does not specify the artery or mechanism. That lack of detail points to I63.9. A more specific I63 code would require documentation of the vessel (e.g., middle cerebral artery) or the mechanism (e.g., embolic or thrombotic).\n\nThe arm and hand weakness is not coded as the principal diagnosis. It would be reported as an additional code, such as a hemiparesis or monoplegia code from G81 or G83, depending on the documented deficit.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 456,
+    "output_tokens": 451
+  },
+  "seconds": 0.0
+}

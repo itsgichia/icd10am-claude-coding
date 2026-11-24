@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "806845a87c2f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\n\nPatient Info:\nName: \nDOB: \nGender: \nAdmission Date: \nDischarge Date: \n\nHospital Course:\nThe patient was admitted to our facility with incidentally detected bilateral small solid renal and adrenal masses, a cystic mass at the head of the pancreas, and a paracaval mass. The patient was diagnosed with VHL disease and staged surgical approach was recommended based on the radiologic findings.\nIn the first stage, through a subcostal anterior transperitoneal approach, right adrenalectomy, resection of the paracaval mass, and enucleation for the 9 small solid renal masses were performed. A Whipple procedure was also performed to remove two smaller pancreatic lesions.\nIn the second stage, through an intercostal extraperitoneal approach, 5 pheochromocytomas were removed and 4 cystic renal cell carcinomas were enucleated.\nAfter a followup of 1,5 years, the patient developed a left 1 cm renal mass, which was treated by percutaneous, ultrasound-guided radiofrequency ablation.\nPancreatic and adrenal functions were normal throughout the follow-up period. Blood cortisol level was 21 \u03bcg/dL upon his last control visit. There was no adrenal or extra-adrenal pheochromocytoma recurrence being detected to date.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nSurgery for right adrenalectomy, resection of the paracaval mass, enucleation of small renal masses, and Whipple procedure. Followed by surgery for removal of pheochromocytomas and enucleation of cystic renal cell carcinomas. Finally, percutaneous, ultrasound-guided radiofrequency ablation for the left renal mass. No replacement therapy was required for pancreatic and adrenal functions.\n\nFollow-up:\nThe patient will be followed up regularly for the recurrence of renal masses, pheochromocytomas, and paragangliomas. Additionally, pancreatic and adrenal functions will also be monitored.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "This is a case of von Hippel-Lindau disease with multiple tumours: renal cell carcinomas, pheochromocytomas, and pancreatic lesions. In ICD-10, VHL disease is coded to Q85.8 (other phakomatoses, not elsewhere classified), so Q85 is the code for the underlying disease.\n\nThe principal diagnosis is the condition chiefly responsible for the admission, though. The treatment focused on the tumours: the renal cell carcinomas (C64), the pheochromocytomas (malignant C74.1 or benign D35.0), and the paracaval mass and pancreatic lesions. The patient was diagnosed with VHL, and the staged surgery was aimed at its manifestations. Coding rules say that when a congenital or systemic syndrome is the underlying cause, the manifestations are coded separately, and the principal diagnosis is usually the condition treated. Here the most prominent treated condition is renal cell carcinoma, with 4 cystic RCCs enucleated, so C64 is the likely principal diagnosis.\n\nPheochromocytomas in VHL are usually benign and would be coded D35.0, while the renal cell carcinomas are definitively malignant. The renal masses were also the first finding and the most numerous lesions treated, and the later ablation was for a renal mass too.\n\nThe alternative is Q85, since the diagnosis was VHL disease. In ICD-10-AM, however, Q85.8 has no dagger/asterisk convention, and the guidance is to code the specific manifestations as well. The question asks for the condition chiefly responsible for the episode, and the renal cell carcinoma is the best fit for that.\n\nCODE: C64",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1224,
+    "output_tokens": 557
+  },
+  "seconds": 5.610759917006362
+}

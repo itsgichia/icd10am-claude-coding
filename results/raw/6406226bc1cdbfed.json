@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "b9ac59992a34",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\n \nPatient Name: [Redacted] \nDate of Admission: [Redacted] \nDate of Discharge: [Redacted] \nAdmitting Diagnosis: [diagnosis section withheld]\nSummary:\nA 59-year-old male patient was admitted to our hospital with a high PSA level of 218.5 ng/mL and was diagnosed with adenocarcinoma of the prostate with a Gleason score of 4\uff0b5. Further testing revealed bone metastases of the right rib and L2 vertebra, with a clinical stage of T2aN0M1. The patient was treated with radiation therapy and androgen deprivation therapy (ADT), and his PSA level dropped to 0.053 ng/mL. At the age of 56 years, his PSA level was again elevated, and he was restarted on different hormonal treatments with flutamide, estramustine phosphate, enzalutamide, and abiraterone. At the age of 58 years, the patient developed a resistance to hormonal therapies.  \n \nUsing 11C-choline PET/CT imaging, multiple bone metastases without lymph node metastases or visceral metastases were confirmed. The patient then completed six cycles of Ra-223 therapy without any interruption and adverse effects. The third 11C-choline PET/CT after six cycles showed that existing lesions increased and new uptake spots were found in the thoracic spine, sacrum, right rib, and right ileum. During Ra-223 therapy, the patient\u2019s serum ALP did not dramatically change, but PSA levels gradually increased. After the completion of Ra-223 therapy, a new chemotherapy with cabazitaxel was started.  \n\nAt the time of discharge, the patient\u2019s symptoms and biochemical progression remained. Close monitoring, continuation of therapies, and further treatment are recommended. The patient should continue follow-ups with his primary care physician.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The episode concerns a 59-year-old man with metastatic castration-resistant prostate cancer. He has bone metastases and was treated with Ra-223 and then cabazitaxel.\n\nUnder ICD-10-AM coding rules, when a patient is admitted for treatment of a primary malignancy, the primary site is the principal diagnosis. Here that is prostate cancer, C61. If the admission were specifically for treatment of the metastatic site, the secondary site (C79.5) could be principal. Ra-223 targets bone metastases, so a Ra-223 admission could be coded to C79 as principal. However, the summary describes the overall course, with the primary diagnosis being prostate adenocarcinoma, and the final step is chemotherapy with cabazitaxel for the cancer generally. The most defensible choice is C61.\n\nCODE: C61",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1163,
+    "output_tokens": 278
+  },
+  "seconds": 0.0
+}

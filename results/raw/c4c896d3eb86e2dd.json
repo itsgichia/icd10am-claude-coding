@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "edf12638d0cd",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient name: [REDACTED]\n\nAge: 45\n\nSex: Male\n\nAdmission Date: [REDACTED]\n\nDischarge Date: [REDACTED]\nAdmission Diagnosis: [diagnosis section withheld]\nAdmission Procedure: Renal allograft transplant\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient, a 45-year-old South Indian man with end-stage renal disease, underwent a renal allograft transplant and received tacrolimus, mycophenolate, and prednisolone as immunosuppressive therapy. Six months post-surgery, he reported a small, painless nodule on his right calf. There was no associated fever, redness, or pruritus, and no other opportunistic infections were observed. Clinical examination revealed a 2 \u00d7 2-cm firm violaceous nodule, which was subcutaneous and had normal surrounding skin. A fine-needle aspiration was done, which revealed the presence of inflammatory cells and a few fungal hyphae. The nodule was subsequently excised and sent for microbiological evaluation, which confirmed the presence of Fusarium solani.\n\nTreatment:\n\nThe patient underwent surgical excision of the lesion, followed by four weeks of oral voriconazole treatment.\n\nResults:\n\nThe histopathological examination of the excised lesion confirmed Fusarium solani infection, and the fungus was identified using immunohistochemistry.\n\nFollow-up:\n\nThe patient was discharged with improved symptoms and was advised to follow-up for further monitoring.\n\nMedications:\n\nThe patient's medications were adjusted as needed during the hospital stay.\n\nDischarge Condition:\n\nThe patient's condition improved, and he was discharged with follow-up instructions.\n\nDischarge Instructions:\n\nThe patient was advised to follow-up as per the instructions provided by his physician.\n\nConditions for Follow-Up:\n\nThe patient was advised to follow-up for monitoring."
+      }
+    ]
+  },
+  "text": "**Likely principal diagnosis code: B48.8 (Other specified mycoses)**, with the fungus identified as Fusarium. This is a coding judgement, and the reasoning is below.\n\n**Reasoning**\n\n- The condition treated is a subcutaneous fusariosis, a fungal infection caused by *Fusarium solani*, in an immunosuppressed kidney transplant recipient.\n- In ICD-10-AM, fusariosis has no unique code. It is classified to **B48.8 Other specified mycoses**. The Alphabetic Index entry is \"Infection, fusarium\" or \"Fusarium\", which leads to B48.8. Check this against your edition.\n- Some might consider B35\u2013B36 (dermatophytoses and superficial mycoses) or B46 (zygomycosis). Neither fits, because this is a deep subcutaneous infection, not a dermatophyte or zygomycete.\n- The admission procedure, renal allograft transplant, would not be the principal diagnosis here. The infection was the reason for the episode of care in which the nodule was excised and voriconazole given.\n\n**Additional codes to consider**\n\n- **Z94.0** Kidney transplant status.\n- **Y83.0** Surgical operation with transplant of whole organ as the cause of abnormal reaction, if the facility's coding policy requires it.\n- **D84.821** Immunodeficiency due to drugs, for the tacrolimus, mycophenolate and prednisolone. This code is in ICD-10-AM 11th edition onwards. Earlier editions used D84.8.\n- **N18.5** Chronic kidney disease stage 5, only if it is still relevant. After transplant it is generally not coded, because the transplant status code applies.\n- **Y43.- / Y57.-** External cause codes for the adverse effect of immunosuppressants, if applicable.\n- ACHI procedure codes for the excision of the subcutaneous lesion.\n\nIf the admission was specifically for the original transplant, the principal diagnosis would instead be **N18.5**, with the transplant as the procedure. The description of the nodule at six months post-transplant makes the fungal infection the more likely principal diagnosis.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 692,
+    "output_tokens": 719
+  },
+  "seconds": 0.0
+}

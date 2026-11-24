@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "928d3ff50e4f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]\nGender: Male\nAge: 61 years old\nAdmission Date: [REDACTED]\nDischarge Date: [REDACTED]\nDiagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted to the hospital on [REDACTED] with progressively worsening shortness of breath, weakness and fatigue. The patient was diagnosed with aortic valve stenosis, hypertensive heart disease, coronary artery disease, and COPD.\n\nDuring the course of the hospital stay, various tests were performed including cardiac catheterization and transthoracic echocardiography. These tests showed significant stenosis of the proximal and mid-left anterior descending artery, severe aortic valve stenosis with moderate insufficiency, an ejection fraction of 32%, and significant atherosclerotic burden in the ascending and descending aortas and aortic arch.\n\nBased on the results of the tests, the patient underwent minimally invasive aortic valve replacement with a 27 mm\u00b7St. Jude Trifecta stented pericardial bioprosthesis under general endotracheal anesthesia. Standard monitors were used including cerebral oximetry. The procedure was completed without any complications. The postoperative TEE showed that the previously described aortic arch atheroma remained intact.\n\nFollowing the procedure, the patient was monitored closely and his condition gradually improved. The patient did not experience any perioperative stroke events or other complications. The patient was discharged home in a stable condition five days postoperatively.\n\nUpon discharge, the patient was advised to continue taking his medications for hypertension and high cholesterol as prescribed by his doctor. The patient was also advised to avoid smoking and other forms of substance abuse, and to follow a healthy diet and exercise regime. The patient was advised to follow up with his physician as recommended.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"I35\", \"condition\": \"Nonrheumatic aortic valve disorders (aortic stenosis with insufficiency)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 757,
+    "output_tokens": 48
+  },
+  "seconds": 0.0
+}

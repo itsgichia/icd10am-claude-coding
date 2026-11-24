@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "583f72398ed9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nAdmission Date: [Date]\nDischarge Date: [Date]\n\nPatient Name: [Name]\nSex: [Gender]\nAge: 70 years old\nPrimary Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient presented to the hospital with complaints of chest pain. Further evaluation revealed anterolateral STEMI for which the patient underwent percutaneous coronary intervention of the left circumflex. A chronic total occlusion of the left anterior descending was also noted. A transthoracic echocardiogram showed an ejection fraction of 10%-15% with dyskinetic apex, akinetic septum, mid to apical anterior, and lateral walls. An echodensity measuring 38 \u00d7 18 mm at its greatest dimension suggestive of a thrombus was also observed. The patient was discharged with Aspirin, Clopidogrel, and Rivaroxaban (15 mg daily for 3 weeks then 20 mg daily). A TTE performed three months later revealed improvement in the previously seen LVT with EF increasing to 35%.\n\nDisposition:\n\nThe patient was discharged from the hospital in a stable condition with instructions on appropriate cardiac rehabilitation and follow-up. The patient was advised to continue with the prescribed medication regimen and to return to the clinic for further evaluation and monitoring as directed by his physicians.\n\nImpression:\n\nThe patient presented with anterolateral STEMI requiring PCI of the left circumflex. Follow-up TTE revealed resolution of previously observed LVT with improvement in EF to 35%."
+      }
+    ]
+  },
+  "text": "The principal diagnosis would be **I21.09**, acute transmural myocardial infarction of the anterior wall involving another coronary artery (or other site of the anterior wall).\n\nThe anterolateral STEMI is the condition chiefly responsible for the admission, and the PCI was performed on the left circumflex. The index entry for anterolateral infarction and the exact subcode should be verified against the current ICD-10-AM edition and Australian Coding Standards, since the LCx-territory involvement can affect which sub-subcode applies.\n\nSecondary diagnoses to consider include:\n- **I51.3**, intracardiac thrombosis (left ventricular thrombus, now resolved on follow-up)\n- **I25.5**, ischaemic cardiomyopathy, given the EF of 10\u201315%\n- **I25.8** or a related code for the chronic total occlusion of the LAD\n- Heart failure codes, if documented by the treating clinician",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 576,
+    "output_tokens": 1247
+  },
+  "seconds": 0.0
+}

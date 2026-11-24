@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "a99a7ea7cfc1",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Name Removed]\n\nGender: Male\n\nAge: 71\n\nAdmission Date: [Date Removed]\n\nDischarge Date: [Date Removed]\n\nReason for Admission:\n\nThe patient was admitted with general malaise and abnormal findings of computed tomography (CT).\n\nMedical History:\n\nThe patient had undergone cystostomy and exchange of the catheter at regular intervals. In addition, he had a history of operation for gastric cancer with lung metastasis.\n\nMedical Findings:\n\nPhysical examination was unremarkable. Abnormal findings of complete blood count and laboratory examination included an elevated WBC count and C-reactive protein. On the other hand, fasting blood sugar and hemoglobin A1c were within normal limits. Urinalysis showed combined hematuria and pyuria, and Escherichia coli was detected in urine culture.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nDue to poor condition, the patient underwent construction of the left nephrostomy. After that, remission of the inflammation was achieved, and nephrostomy catheter was also exchanged with cystostomy. Several months after the construction, the patient received left nephrectomy by open surgery. Surgical dissection was very difficult due to fixed mass. The patient received massive transfusions due to uncontrolled bleeding from frequent, extensive adhesions.\n\nOutcome:\n\nUnfortunately, the patient died due to sepsis and cardiovascular failure not long after the surgery.\n\nFollow-up Care:\n\nN/A\n\nSigned by: [Name Removed], M.D.\n\nDate: [Date Removed]"
+      }
+    ]
+  },
+  "text": "The diagnosis section is withheld, so the code below is inferred from the clinical picture rather than read from the record.\n\n**Likely diagnosis: xanthogranulomatous pyelonephritis (XGP)**\n\nSeveral features point to this:\n- A long-term cystostomy catheter, which predisposes to chronic urinary infection.\n- E. coli in the urine, with pyuria and raised inflammatory markers.\n- An abnormal CT finding, described as a \"fixed mass\".\n- Dense, extensive perinephric adhesions that made dissection difficult and caused heavy bleeding.\n- Treatment by nephrostomy followed by nephrectomy.\n\n**Suggested principal diagnosis code: N11.8 Other chronic tubulo-interstitial nephritis**\n\nIn ICD-10-AM, xanthogranulomatous pyelonephritis is indexed to N11.8 (Other chronic pyelonephritis). Its Alphabetic Index entry is \"Pyelonephritis, xanthogranulomatous,\" which leads to N11.8.\n\n**Additional codes that would be assigned:**\n- B96.2 Escherichia coli as the cause of disease classified elsewhere, to identify the organism.\n- Z93.5 Cystostomy status, for the long-term cystostomy.\n- Z85.0 Personal history of malignant neoplasm of the digestive system, together with C78.0 Secondary malignant neoplasm of the lung, for the gastric cancer with lung metastasis. Which of these applies depends on whether the metastasis was active.\n- A41.51 Sepsis due to Escherichia coli, if documented. This would be relevant to the terminal event, though it arose after surgery.\n\n**Caveat:** The final code depends on the withheld diagnosis. If the documented diagnosis were instead simple obstructive pyelonephritis or a catheter-related urinary tract infection, the code would differ. For example, N13.6 Pyonephrosis or N39.0 Urinary tract infection could apply.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 584,
+    "output_tokens": 665
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "0d6bd47ba68f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 42-year-old female with a past medical history of rheumatoid arthritis\n\nHospital Course:\n\nThe patient was admitted due to psychomotor agitation and neutrophilia. The lumbar puncture showed a low glucose level in the cerebrospinal fluid and common germs in FilmArray despite negative Gram and Chinese ink. The patient was initiated on antibiotic therapy, antituberculosis drugs, and antifungal agents. The patient showed some improvements three days after initiating treatment but then presented a new episode of altered mental status, which was associated with transaminase elevation. Brain CT scan revealed ischemic areas in the corpus callosum and bilateral parietal lobes. The patient presented severe hemodynamic decompensation with metabolic acidosis, acute respiratory failure, and pancytopenia one day later, which required the transfer to the MICU. The autoimmune markers were requested due to the suspicion of immune alveolar hemorrhage, and the patient met the CAPS criteria. The patient was initiated on intravenous pulses of methylprednisolone 1 g daily IV and enoxaparin 60 mg daily SubQ. Despite the initial clinical improvement, the patient passed away due to new respiratory, renal, and encephalopathic deterioration in later days.\nDiagnosis: [diagnosis section withheld]\nDischarge Condition:\n\nThe patient passed away due to new respiratory, renal, and encephalopathic deterioration.\n\nDischarge Instructions:\n\nNone. This patient did not survive. \n\nFollow-Up Care:\n\nNone. This patient did not survive. \n\nSigned,\n\n[Physician's Name]"
+      }
+    ]
+  },
+  "text": "The most likely ICD-10-AM principal diagnosis is **D68.61, Antiphospholipid syndrome**.\n\nThe diagnosis section is withheld, but the hospital course indicates that the final diagnosis was catastrophic antiphospholipid syndrome (CAPS), since the patient \"met the CAPS criteria\" and was treated with pulse methylprednisolone and enoxaparin. ICD-10-AM has no separate code for catastrophic APS, so it is classified to D68.61.\n\nOther codes that would likely appear as secondary diagnoses:\n- **Rheumatoid arthritis** (M05.- or M06.-, depending on seropositivity and specificity), from the past medical history.\n- **Acute respiratory failure, metabolic acidosis, pancytopenia, and encephalopathy**, as complications or manifestations, coded according to the coding guidelines for their documented relationship to the principal condition.\n\nCoding should be confirmed against the full record and the local ICD-10-AM edition and coding rules.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 597,
+    "output_tokens": 727
+  },
+  "seconds": 0.0
+}

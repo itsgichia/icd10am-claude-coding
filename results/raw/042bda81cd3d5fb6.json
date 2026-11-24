@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "a03e0422f170",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\n[Medical Center Name]\n[Patient Name], Discharge Summary\n\nAdmission Date: [Date]\nDischarge Date: [Date]\n\nHospital Course:\nThe patient was admitted to the Department of Urology with complaints of repeated dizziness. Preoperative echocardiography revealed a variation in the arteries, including an ARSA derived from the initial descending aorta right rear to the LSA, an aberrant left vertebral artery that directly originated from the AA instead of the LSA, and an aberrant right vertebral artery that originated from the RCCA rather than the RSA. Computed tomography angiography confirmed these variances. The patient had no other cardiac or vascular anomalies. Mild stenosis was found in the proximal portion of the left common carotid artery (LCCA), adjacent to its aortic origin. The patient underwent treatment for urolithiasis and was administered aspirin and atorvastatin to prevent potential vascular stenosis. The patient was followed up continuously.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nThe patient underwent treatment for urolithiasis and was administered aspirin and atorvastatin to prevent potential vascular stenosis.\n\nFollow-up:\nThe patient will continue to be monitored for any potential vascular stenosis.\n\nDischarge Condition:\nThe patient was discharged in a stable condition.\n\nDischarge medications:\nNone specified.\n\nInstructions:\nNone specified.\n\nFollow-up appointments:\nNone specified.\n\nInstructions Given:\nNone specified.\n\nPrimary Care Physician:\nNone specified.\n\nAttending Physician:\nNone specified.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: N20**\n\n**Why urolithiasis is the principal diagnosis**\n- The patient was admitted under Urology.\n- The only definitive treatment documented in the episode was for urolithiasis.\n- The vascular findings were picked up on preoperative work-up. They did not cause the admission and needed only medication, so they are additional diagnoses.\n- Dizziness is a presenting symptom and is not coded as principal once a cause of admission is established.\n\n**Code selection**\n- The site of the calculus is not documented, so the default is N20.9 *Urinary calculus, unspecified*. The category is **N20**.\n- If the operation report specified the site, the fourth character would change (for example, N20.0 kidney, N20.1 ureter). The category would stay N20.\n- If the stone were in the bladder or lower tract, the category would instead be N21. That should be checked against the operation note.\n\n**Additional diagnoses to consider**\n- **Aberrant right subclavian artery and vertebral artery origin anomalies:** these fall under congenital malformations of the great arteries and peripheral vascular system (Q25/Q27 range). I would check the exact code in the Tabular List rather than assign it from memory.\n- **Mild proximal left common carotid artery stenosis:** I63-I65 range (likely I65.2, depending on the documented aetiology). It meets criteria as an additional diagnosis because it changed management (aspirin and atorvastatin were started).",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 753,
+    "output_tokens": 639
+  },
+  "seconds": 0.0
+}

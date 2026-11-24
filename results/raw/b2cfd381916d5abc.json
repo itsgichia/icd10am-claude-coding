@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "4c037e919f43",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course Summary:\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe 54-year-old male was admitted with a diagnosis of left hemisphere ischemic stroke. The patient had significant muscle atrophy resulting in limited voluntary motion in the arm and hand and severe impairment as indicated by the patient's Chedoke-McMaster Stroke Assessment hand score of 2. The patient did not exhibit any cognitive impairments.\n\nTreatment:\nThe patient underwent a comprehensive treatment plan during their stay at the hospital. The treatment plan included rehabilitation sessions aimed at improving muscle strength and voluntary motion in the arm and hand. \n\nOutcome:\nThe patient's treatment plan resulted in gradual improvement in muscle strength and voluntary motion in the arm and hand. At the time of discharge, the patient's average ratio of maximum finger forces between hands was 0.076. Further follow-up sessions are recommended for continued improvement.\n\nFollow-Up:\nThe patient was discharged with a comprehensive follow-up plan. The patient's progress will be monitored by the treating physician."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **I63.9 \u2013 Cerebral infarction, unspecified**\n\n## Why this code\n\n- **The condition that occasioned the admission** was a left hemisphere ischaemic stroke. The whole episode (rehabilitation of arm and hand weakness) was directed at that stroke.\n- **The stroke counts as current, not a sequela.** Under ACS 0604 *Cerebrovascular accident*, a stroke code from I60\u2013I64 stays assignable while the patient is still receiving care for the stroke, including inpatient rehabilitation.\n- **Rehabilitation episodes use the treated condition.** Since ICD-10-AM 9th Edition, ACS 2104 *Rehabilitation* no longer uses Z50.x as principal. The condition requiring rehabilitation is coded as principal instead.\n- **The fourth character is .9** because the summary gives no mechanism (thrombosis, embolism, occlusion or stenosis) and no named vessel. If the full record names one, use the more specific code, e.g. I63.3 for thrombosis of cerebral arteries or I63.4 for embolism.\n\n## Suggested additional codes (if documented)\n\n- **G81.9 Hemiplegia, unspecified, or G83.2 Monoplegia of upper limb.** A left hemisphere stroke would cause right-sided arm and hand weakness (Chedoke hand score 2). Choose G83.2 if only the arm is affected.\n- **M62.5- Muscle wasting and atrophy, NEC**, if documented as clinically significant.\n- **Rehabilitation intervention codes (ACHI)** as applicable.\n\n## Caveat\n\nIf the stroke happened long ago and this admission is only for chronic residual deficits, with stroke care otherwise complete, the coding would change. The principal diagnosis would be the residual deficit, e.g. G81.9 or G83.2, with **I69.3 Sequelae of cerebral infarction** as an additional code. The muscle atrophy and research-style finger-force measures hint at a chronic stroke, so check the timing of the stroke in the full record before finalising.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 456,
+    "output_tokens": 1187
+  },
+  "seconds": 0.0
+}

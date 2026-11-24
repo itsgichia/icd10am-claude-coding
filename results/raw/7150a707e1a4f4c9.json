@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "587b40f261f0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Identification:\nThis is a 43-year-old Jewish woman referred to our medical center for multinodular goiter evaluation. She had a history of a 2-stage total thyroidectomy and a right modified neck dissection for medullary thyroid carcinoma (MTC) with concomitant follicular adenoma and micropapillary carcinoma. The patient underwent surgical treatments followed by I-131 100 mCi.\n\nHospital Course and Treatment:\nThe patient underwent a 2-stage total thyroidectomy before being referred to our medical center for evaluation. The biopsy results revealed a proliferative lesion suspicious for neoplasia, with a second lesion measuring 1.2cm. The right lobe and isthmus biopsy specimen showed a well-demarcated two cm maximal diameter MTC and a partially circumscribed follicular adenoma measuring 1.2cm. The non-neoplastic thyroid tissue revealed lymphocytic infiltration and occasional colloid nodules. The left thyroid lobe histology disclosed a tiny focus, two mm in size, consistent with micropapillary carcinoma. No lymph node metastasis was found.\n\nThe patient\u2019s presurgical calcitonin level was 2170ng/L, and carcinoembryonic antigen (CEA) level was 51mg/L, while thyroid-stimulating hormone was within the normal range. One year postsurgery, the patient\u2019s calcitonin levels were less than five ng/L, and thyroglobulin levels were no longer measurable. Point mutation for RET proto-oncogene was tested and found to be negative.\n\nMedications and Follow-up:\nThe patient was discharged after her I-131 treatment. No further medication was prescribed. Follow-up at regular intervals is recommended to monitor the patient\u2019s progress.\nFinal Diagnosis: [diagnosis section withheld]\nPrognosis and Recommendations:\nThe patient\u2019s prognosis is positive. Follow-up at regular intervals is recommended to assess her progress. No further medications or treatments are needed. Close monitoring is advised to help ensure the best possible outcome.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C73",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 836,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "107667d8ef80",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHOSPITAL COURSE SUMMARY:\n\nAdmission Date: [insert date]\nDischarge Date: [insert date]\nPatient Name: [insert name]\nMedical Record Number: [insert number]\nSex: Female \nAge: 21\nDischarge Diagnosis: [diagnosis section withheld]\nHOSPITAL COURSE:\nThe patient presented to the Emergency Department (ED) complaining of right lower quadrant pain with associated nausea. The physical examination demonstrated tenderness in the lower right quadrant and guarding and rebound. The laboratory evaluation demonstrated leukocytosis, with a high white blood cell count and neutrophilia.\nImaging studies revealed the presence of an intrauterine gestational sac containing a fetal pole, with no adnexal lesions visible. A noncompressible fluid-filled, slightly hypervascular tubular structure was located in the right lower quadrant, measuring 16mm in diameter, confirming the diagnosis of acute appendicitis.\nThe patient was treated with intravenous antibiotics and underwent a laparoscopic appendectomy without any postoperative complications. The obstetric service examined the patient the next day, and the pregnancy remained intact. Repeat ultrasonography demonstrated a properly progressing pregnancy two weeks following the surgery.\nThe patient was discharged in stable condition and instructed to follow up with her obstetrician and the surgeon as necessary. Educational material regarding postoperative care and follow-up was provided.\n\nDISCHARGE INSTRUCTIONS:\n1. Take medications as prescribed by your physician.\n2. Continue follow-up appointments with your obstetrician and the surgeon as directed.\n3. Avoid heavy lifting and strenuous activity for four weeks.\n4. Notify your healthcare provider immediately if you experience fever, increasing pain, or wound drainage.\n5. Use a stool softener as needed to prevent constipation.\n6. Maintain a healthy diet and increase fluid intake.\n7. Contact your healthcare provider if you have any questions or concerns."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: O99.6 Diseases of the digestive system complicating pregnancy, childbirth and the puerperium**, with K35.8 as the additional code for the appendicitis.\n\n**Rationale**\n\n- In ICD-10-AM, a condition that complicates pregnancy is classified to Chapter 15 (O codes). Acute appendicitis in a pregnant patient is coded to O99.6, and the specific digestive condition is added as an additional diagnosis. Chapter 15 codes take sequencing precedence over other chapters when the patient is pregnant, unless the pregnancy is clearly incidental to the episode of care.\n- The pregnancy is not incidental here. It changed the work-up (pelvic ultrasound to exclude ectopic pregnancy and adnexal pathology), the management (obstetric review the next day), and the follow-up (repeat ultrasound for fetal viability).\n- The appendicitis is coded as K35.8 Other and unspecified acute appendicitis. If the documentation had specified generalised peritonitis or localised peritonitis, K35.2 or K35.3 would apply instead. The guarding and rebound described here are signs only, and no peritonitis is documented, so K35.8 is appropriate.\n\n**Additional codes to consider**\n\n- **Gestational age:** Z3A.-. Weeks of gestation are not documented in this summary. Note that Z3A codes are an ICD-10-CM convention, so check local ICD-10-AM coding standards before using them. In Australia, the gestation is often captured in the obstetric data collection instead.\n- **Procedure:** laparoscopic appendicectomy, ACHI block 926, code 30572-00 [(Laparoscopic appendicectomy)]. Verify the exact code in your current ACHI edition.\n\nIf the pregnancy had been documented as incidental, the principal diagnosis would be K35.8, with Z33 Pregnant state, incidental as an additional code. That is not the case with this record.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 741,
+    "output_tokens": 659
+  },
+  "seconds": 0.0
+}

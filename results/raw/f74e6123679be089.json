@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "json_output",
+  "record_id": "4c26663ce8fe",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nHospital Course:\nThe patient was admitted for acute appendicitis with CT scan of the abdomen and pelvis confirming the diagnosis. Laparoscopic appendectomy was performed successfully. Peritoneal and nasopharyngeal fluid samples were obtained for culture. The patient was found to be COVID-19 positive via nasopharyngeal swab after surgery and was subsequently isolated with contact precautions. The peritoneal fluid tested negative for COVID-19. An elevated CRP level was noted, and he was placed on ampicillin-sulbactam for empiric antibiotic coverage. Despite progressing through his hospital stay, he continued to be intermittently febrile. The patient was discharged on postoperative day 4 when he was afebrile and asymptomatic to quarantine in his home for two weeks.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nLaparoscopic appendectomy, empiric antibiotic coverage with ampicillin-sulbactam\n\nComplications:\nCOVID-19 positive status in nasopharyngeal fluid sample only, Streptococcus anginosus positive peritoneal fluid culture\n\nFollow-up:\nPatient to quarantine at home for two weeks post-discharge. Follow-up with primary care physician as necessary.\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"K35\", \"condition\": \"Acute appendicitis\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 567,
+    "output_tokens": 25
+  },
+  "seconds": 0.0
+}

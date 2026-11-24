@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "cot_then_extract",
+  "record_id": "7d2b935ee4b4",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nHOSPITAL COURSE SUMMARY\n\nIDENTIFICATION:\nThe patient is a 60-year-old female with no medical or family history of lower limb symptoms admitted to the hospital for swelling and pain in the left lower extremity for 5 days. She was diagnosed with deep vein thrombosis (DVT) and May-Thurner syndrome (MTS).\n\nHISTORY:\nThe patient reported swelling of her left thigh, which gradually spread to her lower leg, and increased local skin tension and temperature. She had no fever, shortness of breath, chest pain, cough, expectoration, hemoptysis, amaurosis, or syncope. Deep vein ultrasound of the lower extremity at local hospital reported thrombosis of left common femoral vein, superficial femoral vein, deep femoral vein, popliteal vein, anterior tibial vein, posterior tibial vein, and intermuscular vein for the first time. She had no history of surgery or catheterization.\n\nPHYSICAL EXAMINATION:\nPhysical examination revealed swelling and edema with moderate tenderness and pain in the left lower limb while the right lower limb was normal. Blood tests were normal.\nDIAGNOSIS: [diagnosis section withheld]\nTREATMENT:\nThe patient underwent IVC angiography, filter placement, left iliac vein plasty, and stent implantation under local anesthesia. Rivaroxaban and aspirin were prescribed. After 28 days of surgery, she came back to the hospital for the removal of IVC filter, and the procedure was successful. The DVTs were ablated after four months of anticoagulation therapy.\n\nDISPOSITION:\nThe patient was discharged and tolerated well.\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible for this admission is acute left lower-limb deep vein thrombosis, from the femoral through the tibial veins. The underlying May-Thurner iliac vein compression was treated, but it is the predisposing cause rather than the reason for admission. Lower-limb DVT is in chapter I (circulatory system), category I80 (phlebitis and thrombophlebitis).\n\nCODE: I80",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1162,
+    "output_tokens": 256
+  },
+  "seconds": 0.0
+}

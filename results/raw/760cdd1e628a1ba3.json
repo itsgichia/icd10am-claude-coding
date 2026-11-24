@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "cd90f4235013",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: N/A\nAge: 51\nGender: Male\n\nAdmission Date: N/A\nDischarge Date: N/A\n\nHospital Course:\n\nThe patient was admitted to our radiation oncology unit complaining of headache, vomiting, and right hemiplegia as part of an intracranial hypertension syndrome. Physical examination revealed a mammary mass in the right breast along with cerebral and lung tumors, bilateral adrenal nodes, and right cerebellar location. The patient underwent total brain irradiation with a dosage of 30 Gray in 10 fractions of 3 Gray per fraction over two weeks, with remarkable improvement in clinical outcomes. The patient was later treated with palliative chemotherapy, which resulted in an incomplete radiological remission of more than 70%. The patient received gemcitabine monotherapy, 1,000 mg/m\u00b2 on Days 1 and 8 every 21 days after experiencing local breast and cerebral progression. During the follow-up period, the patient's general condition deteriorated rapidly, and they were referred for palliative care and passed away six weeks later.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nThe patient received total brain irradiation at a dose of 30 Gray in 10 fractions of 3 Gray per fraction over two weeks with remarkable improvement in clinical outcomes. The patient was later treated with palliative chemotherapy that resulted in an incomplete radiological remission estimated to be more than 70%. Second-line chemotherapy with gemcitabine monotherapy, 1,000 mg/m\u00b2 on Days 1 and 8 every 21 days was administered after the patient's condition deteriorated.\n\nOutcome:\n\nDespite initial improvement following the patient's first treatment, the patient's condition rapidly deteriorated, leading to palliative care and eventual passing. \n\nFollow-Up:\n\nN/A\n\nRecommendations:\n\nN/A\n\nSigned:\nN/A\nDate:\nN/A\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "This is a 51-year-old male with a right breast mass, brain metastases (right cerebellar), lung tumors and bilateral adrenal nodes. This presentation is consistent with male breast cancer that has metastasised. The diagnosis section is withheld, so the primary site has to be inferred from the clinical picture.\n\nThe admission was to radiation oncology for whole brain irradiation, treating the cerebral metastases that were causing the intracranial hypertension syndrome. ICD-10-AM coding standards for malignancy say the principal diagnosis should be the condition chiefly responsible for the episode of care. When the admission is for treatment of a secondary site, the secondary site is coded as principal, with the primary coded as an additional diagnosis. Radiotherapy to brain metastases therefore points to C79 (Secondary malignant neoplasm of other and unspecified sites), with C79.3 being secondary malignant neoplasm of brain and cerebral meninges.\n\nThe three-character category is C79.\n\nCODE: C79",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 888,
+    "output_tokens": 334
+  },
+  "seconds": 0.0
+}

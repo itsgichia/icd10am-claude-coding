@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "1123f003be4c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHOSPITAL COURSE SUMMARY:\n\nAdmission Date: [DATE]\nDischarge Date: [DATE]\n\nPATIENT INFORMATION:\n\nPatient: [NAME]\nSex: Male\nAge: 73 years old\nRace: African American\nADMISSION DIAGNOSIS: [diagnosis section withheld]\nHOSPITAL COURSE:\n\nThe patient presented to an outside hospital with shortness of breath on exertion, orthopnea and lower extremity swelling. He had a history of HFrEF and had stopped taking his cardiac medications. The physical examination revealed signs of heart failure and an elevated troponin level. The patient was treated for ACS and transferred to our hospital for further evaluation of a left atrial mass.\n\nCoronary angiography showed thrombotic subtotal occlusion of the ramus intermedius coronary artery branch. The patient had an echocardiogram that showed a left atrial mass and severe global hypokinesis of the left ventricle. The patient was anticoagulated with unfractionated heparin but developed biventricular thrombi. The patient underwent surgical removal of masses in the right atrium and left atrium, and a two-vessel coronary artery bypass graft was performed. An intraoperative biopsy of the left ventricle showed histopathologic evidence of amyloid deposition by Congo red staining and ATTRwt amyloidosis.\n\nThe patient's postoperative course was complicated by a cerebrovascular accident that was thought to be cardioembolic in nature. He was discharged on postoperative day 15 on chronic anticoagulation with warfarin.\nDISCHARGE DIAGNOSES: [diagnosis section withheld]\nDISCHARGE INSTRUCTIONS:\n\nFollow-up with your primary care physician in 1 week.\nContinue taking all prescribed medications.\nMaintain a low-salt diet as recommended by your physician.\nFollow a healthy lifestyle, including regular exercise and avoiding smoking and alcohol.\nWatch for signs and symptoms of heart failure, such as shortness of breath and swelling, and notify your physician immediately if they occur."
+      }
+    ]
+  },
+  "text": "The most likely ICD-10-AM principal diagnosis is **I21.4, Non-ST elevation (NSTEMI) myocardial infarction**.\n\nThe patient presented with heart failure symptoms and an elevated troponin, was treated for ACS, and angiography showed a thrombotic subtotal occlusion of the ramus intermedius. That acute coronary event was the condition that occasioned the admission and was treated with CABG.\n\nOther candidates and why they are less likely as principal:\n- **Intracardiac thrombus (I51.3)** and the **left atrial mass** were complications of the admission and were treated surgically, but they were secondary to the coronary event and the cardiomyopathy.\n- **ATTR wild-type amyloidosis (E85.82)** is the underlying cause of the cardiomyopathy and heart failure, but it was diagnosed during the stay rather than being the reason for admission.\n- **Heart failure (HFrEF)** was a presenting feature, not the main reason for admission.\n- The **cerebrovascular accident** arose postoperatively and is a secondary diagnosis.\n\nThe answer depends on the withheld admission and discharge diagnosis sections and on how the treating team documented the type of ACS. If the documentation specifies STEMI, the code would change to I21.3 (STEMI of unspecified site) or a more specific code. A coder should confirm against the full record and the Australian Coding Standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 757,
+    "output_tokens": 1420
+  },
+  "seconds": 0.0
+}

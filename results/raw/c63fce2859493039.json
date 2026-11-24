@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "7f08982167b1",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nHospital Course:\n\nThe patient was admitted with cough, weight loss, and a cavity in the right upper pulmonary lobe. The patient tested positive for HIV and was diagnosed with tuberculosis infection. After starting antiviral and anti-tuberculosis therapy, the patient presented with urinary retention due to an enlarged prostate. The patient was transferred to a tertiary care hospital for further management.\n\nAssessment and Plan:\n\nDuring the hospital stay, the patient underwent several diagnostic tests including sputum culture, smear, and interferon-\u03b3 release assay, which were negative for Mycobacterium tuberculosis. Lumbar puncture indicated nearly normal cerebrospinal fluid profile, and CT scan revealed a cavity with effusion in the upper right lung. Bronchoscopy confirmed the presence of Cryptococcus neoformans in the bronchoalveolar lavage fluid. Enhanced MRI of the prostate showed an abnormal patchy signal in the central gland of the prostate with reduced T2W1 signal in the seminal vesicles and peripheral zone of the prostate. A prostatic biopsy revealed granulomatous inflammation with positive periodic acid\u2013Schiff staining. Culture of the prostatic tissue grew Cryptococcus neoformans.\n\nThe patient was diagnosed with AIDS with pulmonary cryptococcosis and cryptococcal prostatitis. Oral voriconazole and flucytosine combination therapy for 2 months followed by oral fluconazole maintenance treatment for 4 months was initiated and relieved the patient\u2019s urinary retention and the cryptococcal prostatitis.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Plan:\n\nThe patient was discharged in stable condition with a prescription for oral fluconazole. The patient was advised to follow up with an infectious disease specialist for further management of the underlying condition of AIDS. The patient was also advised to take necessary precautions to prevent future infections.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "B20",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 797,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

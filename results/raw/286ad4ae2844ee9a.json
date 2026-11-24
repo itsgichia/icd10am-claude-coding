@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "a1033456ece1",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\nMedical Record Number: [Redacted]\n\nAdmission date: [Redacted]\nDischarge date: [Redacted]\nAdmitting diagnosis: [diagnosis section withheld]Final diagnosis: [diagnosis section withheld]\nHospital course: The patient was admitted with a 2-week history of noncardiac-type central chest pain, which was diagnosed as possible anxiety/musculoskeletal pain. Upon follow-up review, the patient was discharged after further tests showed no significant abnormalities. Later, the patient re-presented with symptoms of pleuritic central chest pain and intermittent shortness of breath, and was diagnosed with bilateral subsegmental pulmonary embolism after confirmation via imaging.\n\nTreatment: The patient was initially treated with enoxaparin and later switched to apixaban. The treatment duration was planned for 3 months and the patient was advised to stop taking TXA due to increased risk of bleeding caused by drug\u2013drug interactions with apixaban.\n\nFollow-up: The patient was referred for routine follow-up in the anticoagulation clinic within the hematology unit following discharge. During 1-month follow-up, the patient reported significant improvement in symptoms. Later, a repeat CTPA scan showed the PE had resolved, and the patient was treated with appropriate antibiotics for new consolidation in the right lung.\n\nDischarge medications: none prescribed at this time\n\nFollow-up care: The patient was advised to continue with routine follow-up care in the anticoagulation clinic within the hematology unit."
+      }
+    ]
+  },
+  "text": "**Principal diagnosis: I26.9 Pulmonary embolism without mention of acute cor pulmonale**\n\nIn ICD-10-AM, pulmonary embolism is classified to I26. I26.9 is the code for PE without acute cor pulmonale, and the summary documents no right heart strain or cor pulmonale.\n\n**Why this code**\n- The condition established after study as chiefly responsible for the admission in which the PE was diagnosed is bilateral subsegmental pulmonary embolism. The patient presented with pleuritic chest pain and shortness of breath, and imaging confirmed the PE.\n- Symptoms such as chest pain (R07.x) and dyspnoea (R06.0) are not coded separately, because they are integral to the confirmed diagnosis.\n- Subsegmental PE has no separate ICD-10-AM code. I26.9 applies to the acute PE, and some ICD-10-AM editions have extended or Australian-specific subcodes. Check your edition's Tabular List for the exact fifth-character code.\n\n**Caveats**\n- The first presentation, with noncardiac chest pain and a possible anxiety or musculoskeletal cause, would be a separate episode of care. For that episode, R07.4 (chest pain, unspecified) or R07.3 (other chest pain) would be the principal diagnosis, depending on the documentation.\n- The right lung consolidation treated later with antibiotics, and the PE seen resolved on repeat CTPA, are follow-up events and not the principal diagnosis for the PE admission.\n\n**Possible additional codes**\n- Z79.01 (long-term use of anticoagulants), if coded in your setting, or the ICD-10-AM equivalent.\n- An adverse-effect or interaction code for the tranexamic acid (TXA) and apixaban issue, only if an actual adverse event occurred. Here the TXA was stopped as a precaution, so this likely does not apply.\n- J18.x for the consolidation or pneumonia, if it was documented during a relevant episode.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 575,
+    "output_tokens": 672
+  },
+  "seconds": 0.0
+}

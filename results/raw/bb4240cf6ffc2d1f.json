@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "e538e4d3e379",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary\n\nPatient Name: [Name]\n\nMedical Record Number: [Number]\n\nDate of Admission: [Date]\n\nDate of Discharge: [Date]\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted to the hospital with complaints of fatigue, malaise, spontaneous ecchymosis, bleeding gums, and subjective fevers. Initial laboratory tests revealed severe pancytopenia and circulating blasts suggestive of underlying leukemia. Subsequent bone marrow biopsy confirmed AML, with abnormal karyotype of 47,x,t(x:8)(q13:q24.1),+8(6)/46,XX[14], and positive for several molecular markers. The patient received induction chemotherapy with daunorubicin and cytarabine 7 + 3 regimen in two cycles. During the first cycle, the patient's PT increased to 18.7 with an INR of 1.61. The bone marrow aplasia was suspected secondary to chemotherapy. Factor VII level deficiency, related to trisomy chromosol abnormality involving chromosome 8, was considered as a differential diagnosis due to isolated and persistent PT prolongation. The factor VII activity level was later confirmed to be low at 49% (normal level 60% to 150%). The patient received multiple packed red blood cell transfusions and platelet transfusion due to intermittent mucocutaneous bleeding.\n\nFollow Up:#\n\nThe patient's second cycle of chemotherapy resulted in her complete remission, with no residual blasts and normalization of hematologic abnormalities, with normal white blood count, hemoglobin, platelet counts, and normal PT time. Flow cytometry confirmed no residual blasts, and repeat molecular and cytogenetic studies showed the resolution of previously detected abnormalities.\nFinal Diagnosis: [diagnosis section withheld]\nDischarge Medications:\n\nNot applicable. Patient is not yet discharged. \n\nDischarge Condition:\n\nPending Discharge.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The condition chiefly responsible for this admission is **acute myeloid leukaemia (AML)**.\n\n- **Presentation:** The patient presented with fatigue, malaise, spontaneous ecchymosis, bleeding gums and fevers. These are symptoms of the underlying leukaemia, so they are not coded as the principal diagnosis.\n- **Confirmation:** Bone marrow biopsy confirmed AML.\n- **Treatment:** The admission was for 7 + 3 induction chemotherapy over two cycles.\n- **Other conditions:** The chemotherapy-related marrow aplasia, the acquired factor VII deficiency and the transfusions are complications or secondary conditions. They are not the principal diagnosis.\n- **Remission:** Although remission was achieved during the episode, the condition treated throughout the admission was AML. Remission status affects only the fourth/fifth character, not the category.\n\nIn ICD-10-AM, AML falls under myeloid leukaemia (C92), with the full code C92.0 for acute myeloblastic leukaemia.\n\nCODE: C92",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 918,
+    "output_tokens": 395
+  },
+  "seconds": 0.0
+}

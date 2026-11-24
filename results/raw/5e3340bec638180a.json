@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "0beba3f33a3c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nMedical Record Number: [redacted]\nDate of Admission: [redacted]\nDate of Discharge: [redacted]\n\nHospital Course:\nThe patient was admitted to our hospital with shortness of breath, dry coughing and fever, after testing positive for COVID-19. The patient was intubated and put on ventilator support within 36 hours of presentation, as he had severe hypoxia and increased work of breathing. Treatment was initiated with various medications to manage his COVID-19 symptoms. \nThroughout his 31-day hospital course, the patient's clinical condition was complicated by septic shock, acute respiratory distress syndrome (ARDS), volume overload, and uncontrolled diabetes. The chest X-ray revealed bilateral pneumothoraces, which were confirmed with a chest CT, along with pneumomediastinum. The patient was transferred to a hospital where thoracic surgery was available. Imaging after transfer showed that the pneumothorax had slightly increased without tension physiology. The PEEP was decreased from 8 to 6 cm H20 where it remained till his discharge. On the 31st day of admission the patient passed away from hypoxic respiratory failure.\nDiagnosis: [diagnosis section withheld]\nProcedures:\nThe patient was intubated and put on ventilator support within 36 hours of presentation. \n\nHospital Course:\nThe patient was admitted with COVID-19 and developed severe hypoxia and increased work of breathing. Treatment was initiated with various medications to manage his COVID-19 symptoms. Throughout his hospital course, the patient's clinical condition was complicated by septic shock, ARDS, volume overload, and uncontrolled diabetes. The patient passed away from hypoxic respiratory failure on hospital day 31.\n\nOutcome:\nThe patient passed away from hypoxic respiratory failure after a prolonged hospital stay. \n\nFollow-Up:\nN/A\n\nDischarge Medications:\nN/A \n\nFollow-up Instructions:\nN/A"
+      }
+    ]
+  },
+  "text": "**Principal diagnosis code: U07.1 \u2013 COVID-19, virus identified**\n\n**Rationale:**\n- The patient was admitted with shortness of breath, dry cough and fever, and tested positive for COVID-19. COVID-19 was the condition established after study to be chiefly responsible for the admission, so it is the principal diagnosis.\n- Under ICD-10-AM, U07.1 is used when the virus is laboratory-confirmed. Here it was confirmed by a positive test.\n- The pneumonia/respiratory manifestations of COVID-19 would be coded with additional codes, not as the principal diagnosis. A code such as J12.82 is not used in ICD-10-AM. The classification generally relies on U07.1 plus manifestation codes.\n\n**Likely additional diagnoses (secondary codes):**\n- J80 \u2013 ARDS\n- J96.0 \u2013 Acute respiratory failure (hypoxic)\n- R65.21 / A41.9 \u2013 Septic shock/sepsis, if documented as sepsis. In ICD-10-AM, check the sepsis coding rules and documentation first.\n- J93.8 / J93.9 or J95.8 \u2013 Pneumothorax, depending on whether it is spontaneous or a complication of ventilation (barotrauma)\n- J98.2 \u2013 Interstitial emphysema (pneumomediastinum)\n- E87.7 \u2013 Fluid overload\n- E11.65 (or the appropriate E10/E11 code) \u2013 Diabetes with hyperglycaemia, depending on the type documented\n- Z99.1 / procedure codes for mechanical ventilation (ACHI block 1382, with the duration, e.g. more than 96 hours) and intubation (ACHI 13415-00)\n\n**Caveats:**\n- The diagnosis section was withheld, so this is based on the narrative.\n- Final code assignment should follow current ACS (Australian Coding Standards) and local coder review. Some of the specific secondary codes above would need to be checked against the current edition.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 731,
+    "output_tokens": 661
+  },
+  "seconds": 0.0
+}

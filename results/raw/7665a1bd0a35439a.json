@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "28a2cce4de09",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHOSPITAL COURSE:\n\nAdmitted from the emergency room due to severe dyspnea, a 69-year-old Japanese man was diagnosed with aspiration pneumonia and placed on mechanical ventilation. He underwent tracheostomy due to prolonged mechanical ventilation and had restrictive pulmonary dysfunction. He was weaned successfully from mechanical ventilation with support by HFT (flow at 40 L/minute with FIO2 of 0.25) and a ventilator (10 cmH2O pressure support with 5 cmH2O PEEP) at night. The patient was discharged from the ICU to the general ward on ICU day 51. His physiotherapy rehabilitation continued for 1 month.\nDISCHARGE DIAGNOSES: [diagnosis section withheld]\nTREATMENT:\n\nMechanical ventilation, tracheostomy, and respiratory support by HFT and a ventilator.\n\nFOLLOW-UP AND RECOMMENDATIONS:\n\nThe patient was discharged to home on day 86 of hospitalization and returned for a follow-up visit. No further recommendations were provided."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is most likely **J69.0, Pneumonitis due to inhalation of food and vomit** (aspiration pneumonia).\n\nThe patient was admitted from the emergency department with severe dyspnea and diagnosed with aspiration pneumonia, which is the condition chiefly responsible for the admission. The discharge diagnosis section is withheld, so this is based on the hospital course. Respiratory failure requiring mechanical ventilation and the tracheostomy would be coded as additional diagnoses and procedures, and the final sequencing should be confirmed against the full record and the ICD-10-AM Australian Coding Standards.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 420,
+    "output_tokens": 672
+  },
+  "seconds": 0.0
+}

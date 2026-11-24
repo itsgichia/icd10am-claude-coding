@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "cot_then_extract",
+  "record_id": "b8ddda2dfd6f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Work out the ICD-10-AM principal diagnosis category for the episode below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nThink in three steps: first name the condition chiefly responsible for the admission, second name the ICD-10-AM chapter letter it belongs to, third give the three-character category.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: Irreversible airflow limitation in a heavy smoker with an infective exacerbation is chronic obstructive pulmonary disease, chapter J, category J44.\nCODE: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: ST elevation with a rising troponin and culprit-vessel stenting is an acute myocardial infarction, chapter I, category I21.\nCODE: I21\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nMedical Record Number: [redacted]\nDate of Admission: [redacted]\nDate of Discharge: [redacted]\nAdmission Diagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe infant was admitted for surgical reduction of idiopathic ileocolic intussusception. She experienced postoperative ileus and later developed bilious vomiting on postoperative day seven, which prompted an abdominal x-ray and ultrasound that revealed ileoileal intussusception. The patient successfully underwent a laparotomy procedure where an ileoileal intussusception was manually reduced, with subsequent resection of a short necrotic segment. Following the procedure, the patient progressed well with no further complications. After satisfactory recovery, the patient was discharged home.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Medications:\nNot Applicable \n\nDischarge Instructions:\nThe patient should be monitored for any recurrent symptoms and advised to follow up with pediatric surgery as recommended. If any unusual symptom or behavior is observed, parents or family members should obtain medical advice immediately.\n\nFollow-Up:\nThe patient should be accompanied by a responsible adult for routine follow-up and progress monitoring with pediatric surgery as recommended. \n\nSigned By:\n[Redacted], M.D.\nDate and Time: [Redacted]\n\nWrite your reasoning in at most three short sentences, then a final line of exactly 'CODE: <letter><digit><digit>'."
+      }
+    ]
+  },
+  "text": "1. The condition chiefly responsible for the admission is idiopathic ileocolic intussusception, which was the reason for the surgical reduction.\n2. The later ileoileal intussusception arose in hospital as a postoperative complication, so it is a secondary diagnosis; intussusception is a digestive-system condition, chapter K.\n3. Intussusception falls under paralytic ileus and intestinal obstruction without hernia, category K56.\n\nCODE: K56",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1075,
+    "output_tokens": 239
+  },
+  "seconds": 0.0
+}

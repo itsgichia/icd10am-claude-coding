@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "json_output",
+  "record_id": "a99a7ea7cfc1",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an API endpoint. Every response is a single JSON object and nothing else.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode below. Respond with exactly {\"code\": \"<letter><digit><digit>\", \"condition\": \"<short name>\"} and no other text.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Name Removed]\n\nGender: Male\n\nAge: 71\n\nAdmission Date: [Date Removed]\n\nDischarge Date: [Date Removed]\n\nReason for Admission:\n\nThe patient was admitted with general malaise and abnormal findings of computed tomography (CT).\n\nMedical History:\n\nThe patient had undergone cystostomy and exchange of the catheter at regular intervals. In addition, he had a history of operation for gastric cancer with lung metastasis.\n\nMedical Findings:\n\nPhysical examination was unremarkable. Abnormal findings of complete blood count and laboratory examination included an elevated WBC count and C-reactive protein. On the other hand, fasting blood sugar and hemoglobin A1c were within normal limits. Urinalysis showed combined hematuria and pyuria, and Escherichia coli was detected in urine culture.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nDue to poor condition, the patient underwent construction of the left nephrostomy. After that, remission of the inflammation was achieved, and nephrostomy catheter was also exchanged with cystostomy. Several months after the construction, the patient received left nephrectomy by open surgery. Surgical dissection was very difficult due to fixed mass. The patient received massive transfusions due to uncontrolled bleeding from frequent, extensive adhesions.\n\nOutcome:\n\nUnfortunately, the patient died due to sepsis and cardiovascular failure not long after the surgery.\n\nFollow-up Care:\n\nN/A\n\nSigned by: [Name Removed], M.D.\n\nDate: [Date Removed]\n\nRespond with the JSON object only, starting with { and ending with }."
+      }
+    ]
+  },
+  "text": "{\"code\": \"N41\", \"condition\": \"Xanthogranulomatous pyelonephritis\"}\n\nWait, that code is wrong: N41 is prostatitis. Corrected:\n\n{\"code\": \"N11\", \"condition\": \"Chronic obstructive pyelonephritis (xanthogranulomatous pyelonephritis)\"}",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 676,
+    "output_tokens": 110
+  },
+  "seconds": 0.0
+}

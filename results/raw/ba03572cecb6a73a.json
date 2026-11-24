@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "c59cbdc54125",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nHospital Course:\n\nThe patient was admitted for screening mammography x-ray which showed a nodule of about 2 cm against the external quadrant of the right breast. The patient underwent a quadrantectomy of the right breast with removal of 2 cm neoplastic nodule and three ipsilateral sentinel lymph nodes. Follow-up tests showed a moderately differentiated invasive ductal carcinoma containing osteoclast-like giant cells. The patient was treated with adjuvant chemotherapy and hormone therapy with luteinizing hormone-releasing hormone (LHRH) analogue and exemestane. The patient will also undergo radiotherapy treatment on the residual breast after chemotherapy.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nAdjuvant chemotherapy with Docetaxel-Cyclophosphamide q21 scheme for 4 cycles followed by hormone therapy with luteinizing hormone-releasing hormone (LHRH) analogue and exemestane.\n\nDischarge Instructions:\n\nThe patient should continue with hormone therapy and attend follow-up appointments to monitor their condition. Patients should be aware of the benefits and risks related to the therapeutic proposals and follow the instructions as prescribed.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C50",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 549,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "dc843e96c2a0",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Unspecified\nMedical Record Number: Unspecified\nDate of Admission: Unspecified\nDate of Discharge: Unspecified \n\nHospital Course:\nThe patient, a 68-year-old female presented to the emergency department with complaints of sudden onset of shortness of breath, chest pain, orthopnea, and paroxysmal nocturnal dyspnea. The notably past medical history includes hypertension, high cholesterol, chronic kidney disease stage 3, and hereditary hemorrhagic telangiectasia (HHT). Initial vital signs and laboratory investigations confirms acute systolic heart failure with markedly elevated BNP levels. Following prompt medical management, the patient demonstrated symptomatic improvement and was started on guideline-directed medical therapy including beta-blocker, ACE inhibitor, aldosterone antagonist and an oral diuretic. Subsequent left and right heart catheterization reveals widely patent coronary vessels, elevated pulmonary capillary wedge pressure, and elevated left ventricular end-diastolic pressure. The patient continued to attend regular bevacizumab infusions with her haematologist as this was not thought to be the cause of her cardiomyopathy at the time. Unfortunately, the patient developed recurrent episodes of flash pulmonary edema deemed to be due to medication non-compliance and subsequently experienced sudden onset of chest pain and shortness of breath at home followed by ventricular fibrillation related cardiac arrest which required prolonged resuscitation attempts leading to therapeutic hypothermia, but eventually passed away 3 days later. \nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Instructions:\n1. The patient was discharged to their family to pursue necessary funeral arrangements.\n2. No outpatient follow-up is needed.\n\nDischarge Medications:\nNone. \n\nFollow-up:\nThe patient did not survive."
+      }
+    ]
+  },
+  "text": "# Suggested principal diagnosis: **I50.1 Left ventricular failure**\n\nThis is the most defensible code from the information given, but the summary is ambiguous, so it should be confirmed against the full record and the withheld discharge diagnoses.\n\n## Why I50.1\n\n**Principal diagnosis definition (ACS 0001).** The principal diagnosis is the condition established after study to be chiefly responsible for the admission. This patient presented with sudden shortness of breath, orthopnoea and paroxysmal nocturnal dyspnoea, confirmed as **acute systolic heart failure** with markedly raised BNP.\n\n**Code choice.**\n- ICD-10-AM does not have separate systolic and diastolic heart failure codes like ICD-10-CM's I50.2x.\n- Left-sided (systolic) failure with acute and flash pulmonary oedema indexes to **I50.1 Left ventricular failure**. This code includes acute pulmonary oedema with heart failure and cardiac asthma.\n- If your coding practice treats the documented \"heart failure\" as congestive, **I50.0** is the alternative.\n\n## Alternatives considered and why they were not chosen\n\n| Code | Condition | Why not principal |\n|---|---|---|\n| I11.0 / I13.x | Hypertensive heart (and kidney) disease | ACS 0920 does not let you assume hypertension caused the heart failure. The link must be documented, and it is not. |\n| I42.7 | Cardiomyopathy due to drugs (bevacizumab) | The summary says bevacizumab was *not* thought to be the cause at the time. Assign only if the clinician later documents drug-induced cardiomyopathy. Y43.x would then be added for the drug. |\n| I25.x / I21.x | Ischaemic heart disease | Coronary arteries were widely patent. |\n| I49.0 / I46.x | Ventricular fibrillation / cardiac arrest | This arose later and led to death. It is **not** principal if it occurred during this admission. If it was a **separate readmission** from home, it would likely be principal for that episode, with heart failure as an additional diagnosis. |\n\n## Likely additional diagnoses\n- I49.0 Ventricular fibrillation and flutter (and I46.x cardiac arrest as appropriate)\n- N18.3 Chronic kidney disease, stage 3\n- I10 Essential (primary) hypertension\n- E78.0 / E78.5 Hypercholesterolaemia / hyperlipidaemia\n- I78.0 Hereditary haemorrhagic telangiectasia\n- Z91.1 Patient's noncompliance with medical treatment and regimen\n- Procedure codes for left and right heart catheterisation, CPR, and therapeutic hypothermia\n\nIf the record shows the arrest happened during a separate admission, or that cardiomyopathy was attributed to bevacizumab, the principal diagnosis would change as described above.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 703,
+    "output_tokens": 1601
+  },
+  "seconds": 0.0
+}

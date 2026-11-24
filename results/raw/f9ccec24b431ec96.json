@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "17f79c34e34c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary\n\nPatient Name: [REDACTED] \nDOB: [REDACTED]\nRoom No: [REDACTED] \nAdmission Date: [REDACTED] \nDischarge Date: [REDACTED]\nPRINCIPAL DIAGNOSIS: [diagnosis section withheld]\nHOSPITAL COURSE:\nThe patient was admitted with a history of chronic constipation and presented complaining of severe lower abdominal pain with progressive abdominal distension and vomiting. The physical examination revealed diffuse abdominal distension, tenderness, and guarding. The plain film of the abdomen showed dilatation of the small intestine with a gas and air fluid level, with an associated moderately distended and obstructed sigmoid loop. A laparotomy was carried out for suspected intestinal obstruction presenting as severe abdominal pain and vomiting. Hemorrhagic fluid was encountered and the ileum and sigmoid colon was found to be gangrenous with a 360\u00b0 clockwise twist of the ileum around the sigmoid colon. In addition, a Meckel diverticulum with a small band was found at the base of the twist. The patient underwent 100-cm resection of the gangrenous ileum and sigmoid colon and had a primary anastomosis of the small gut and colon. Postoperative recovery was uneventful except for a minor wound infection.\n\nMEDICATIONS ON DISCHARGE:\nPlease refer to the medication list given at the time of discharge.\n\nFOLLOW-UP RECOMMENDATIONS:\nOutpatient follow-up in two weeks for wound check and suture removal.\n\nFURTHER INSTRUCTIONS:\nNo driving if taking pain medications. Resume a normal diet as tolerated. Avoid heavy lifting or strenuous activities for at least two weeks.\n\nDISCHARGE CONDITION:\nStable. \nDISCHARGE DIAGNOSES: [diagnosis section withheld]\nDISCHARGE MEDICATIONS:\nPlease refer to the medication list given at the time of discharge.\n\nDISCHARGE FOLLOW-UP:\nFollow-up arranged for two weeks. \n\nAUTHORIZED SIGNATURE:\n[REDACTED] \nMD\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "K56",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 883,
+    "output_tokens": 84
+  },
+  "seconds": 0.0
+}

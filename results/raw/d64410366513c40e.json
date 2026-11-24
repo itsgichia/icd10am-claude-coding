@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "few_shot_three",
+  "record_id": "5ca75f1b82c5",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category. Here are worked examples, then the case to code.\n\nExample 1\nHospital course: A 72-year-old man with a 50 pack-year smoking history was admitted with three days of worsening breathlessness and purulent sputum. Spirometry showed an FEV1/FVC ratio of 0.52. He was treated with nebulised bronchodilators, oral prednisolone and antibiotics for an infective exacerbation of his long-standing airflow limitation.\nAnswer: J44\n\nExample 2\nHospital course: A 58-year-old man presented with crushing central chest pain radiating to the jaw. The electrocardiogram showed ST elevation in the anterior leads and high-sensitivity troponin rose from 40 to 2100 ng/L. He underwent primary percutaneous coronary intervention with a stent to the proximal left anterior descending artery.\nAnswer: I21\n\nExample 3\nHospital course: A 34-year-old woman presented with fever, rigors, dysuria and right flank tenderness. Urine microscopy showed pyuria and culture grew Escherichia coli. Computed tomography showed a swollen right kidney with no abscess. She improved on intravenous ceftriaxone.\nAnswer: N10\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: Unknown\n\nAge: 75 years\n\nDate of Admission: Unknown\n\nDate of Discharge: Unknown\nAdmitting Diagnosis: [diagnosis section withheld]Principal Diagnosis: [diagnosis section withheld]\nClinical Presentation:\n\nThe patient, who had a medical history of hypertension, was admitted to the hospital with a complaint of fecal occult blood. A colonoscopy revealed a type II tumor in the sigmoid colon, which was located 23 cm from the anal verge. Histopathology of a biopsy specimen revealed moderately differentiated tubular adenocarcinoma. CT imaging showed sigmoid colon wall thickening, and regional lymph node metastasis was suspected. Blood examination showed an elevated carcinoembryonic antigen (CEA) concentration (32.7 ng/ml).\n\nHospital Course:\n\nThe patient underwent a laparoscopic sigmoid colectomy, which was performed without complications. Postoperative histopathological examination revealed moderately differentiated to mucinous adenocarcinoma, and three of the 16 retrieved lymph nodes contained malignant cells. The cancer was classified as stage IIIb [pT4a, pN1b, M0]. The patient was discharged after 10 days of recovery.\n\nTreatment:\n\nFollowing the diagnosis of stage III colorectal cancer, the patient was recommended to receive adjuvant chemotherapy with CAPOX starting 4 weeks after surgery. The selected regimen consisted of capecitabine and L-OHP. The anticancer drug dosage was reduced to 80% because of the patient's age. The patient also received 7.5 g of NYT daily throughout the course of adjuvant chemotherapy.\n\nOutcome:\n\nThe patient did not report any significant adverse effects. Follow-up examination did not show any recurrence during a 1-year postoperative follow-up.\n\nDischarge Condition:\n\nThe patient was discharged in stable condition with prescribed medications and follow-up appointment schedules.\n\nDischarge Medications:\n\nDetailed medication list not provided in the case report.\n\nAnswer with the three-character category only."
+      }
+    ]
+  },
+  "text": "C18",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1171,
+    "output_tokens": 144
+  },
+  "seconds": 0.0
+}

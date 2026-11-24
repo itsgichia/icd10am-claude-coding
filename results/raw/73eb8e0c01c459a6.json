@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "4c26663ce8fe",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\nThe patient was admitted for acute appendicitis with CT scan of the abdomen and pelvis confirming the diagnosis. Laparoscopic appendectomy was performed successfully. Peritoneal and nasopharyngeal fluid samples were obtained for culture. The patient was found to be COVID-19 positive via nasopharyngeal swab after surgery and was subsequently isolated with contact precautions. The peritoneal fluid tested negative for COVID-19. An elevated CRP level was noted, and he was placed on ampicillin-sulbactam for empiric antibiotic coverage. Despite progressing through his hospital stay, he continued to be intermittently febrile. The patient was discharged on postoperative day 4 when he was afebrile and asymptomatic to quarantine in his home for two weeks.\nDiagnosis: [diagnosis section withheld]\nTreatment:\nLaparoscopic appendectomy, empiric antibiotic coverage with ampicillin-sulbactam\n\nComplications:\nCOVID-19 positive status in nasopharyngeal fluid sample only, Streptococcus anginosus positive peritoneal fluid culture\n\nFollow-up:\nPatient to quarantine at home for two weeks post-discharge. Follow-up with primary care physician as necessary."
+      }
+    ]
+  },
+  "text": "The principal diagnosis would be **K35.80, Acute appendicitis, unspecified** (ICD-10-AM). The record describes acute appendicitis confirmed by CT, with no documented perforation, abscess, or peritonitis.\n\nTwo caveats:\n\n- **Peritonitis or perforation:** If the full record documents generalized peritonitis (K35.2) or localized peritonitis (K35.3), or specifies appendicitis without these, the code changes. The withheld diagnosis section may contain this detail, so check it.\n- **Secondary codes:** The COVID-19 result (U07.1, COVID-19 virus identified) and the *Streptococcus anginosus* culture finding would be recorded as secondary diagnoses, not principal. Neither was the reason for admission. Also check whether the intermittent fever or elevated CRP was clinically significant enough to code.\n\nVerify the final code against the ICD-10-AM edition in use and the local coding standards, since code titles and subdivisions vary between editions.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 475,
+    "output_tokens": 1035
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "73a597f1b445",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Unavailable           MRN: Unavailable\nAge: 71                                 Sex: Female  \nAdmission Date: September 29, 2017    Discharge Date: Unavailable\n\nHospital Course:\nThe patient was admitted to our hospital with suspected cerebral infarction and infectious fever caused by acute gastroenteritis. Upon arrival, the patient had a body temperature of 39.6\u00b0C, and her left limb muscle strength was grade 5-, while her right limb muscle strength was grade 5. The patient's condition deteriorated, and she suffered a cerebral hemorrhage breaking into the ventricle. She underwent intracranial hematoma drainage and was admitted to another hospital in Beijing in a coma.\nDiagnosis: [diagnosis section withheld]\nComplications:\nDuring her course of hospitalization, the patient had complications that included a multidrug-resistant bacteria infection, liver and kidney dysfunction, electrolyte disturbance, intestinal flora imbalance, hypoproteinemia, and venous thrombosis of the lower extremity. \n\nSummary:\nThe patient, a 71-year-old female, was admitted to our hospital with suspected cerebral infarction and infectious fever caused by acute gastroenteritis. She was diagnosed with JE, and her condition deteriorated, resulting in a cerebral hemorrhage breaking into the ventricle. She underwent intracranial hematoma drainage and was admitted to another hospital in Beijing in a coma. She faced many complications throughout her course of hospitalization, including a multidrug-resistant bacteria infection, liver and kidney dysfunction, electrolyte disturbance, intestinal flora imbalance, hypoproteinemia, and venous thrombosis of the lower extremity."
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **A83.0 \u2013 Japanese encephalitis**\n\n## Rationale\n\n**1. Principal diagnosis definition (ACS 0001)**\nThe principal diagnosis is the condition established *after study* to be chiefly responsible for the admission.\n\n**2. Working diagnoses were superseded**\n- \"Suspected cerebral infarction\" and \"infectious fever caused by acute gastroenteritis\" were provisional diagnoses at presentation.\n- After study, the patient was diagnosed with **Japanese encephalitis (JE)**.\n- JE explains the presenting picture: high fever (39.6\u00b0C) with focal neurological signs (left limb weakness, grade 5-).\n- Suspected conditions that are later ruled out or replaced by a confirmed diagnosis are not coded.\n\n**3. The cerebral haemorrhage is not the principal diagnosis**\nThe summary says the patient's condition *deteriorated, resulting in* intraventricular extension of the haemorrhage. This makes it a condition arising after admission, not the reason for admission. It should be coded as an additional diagnosis, for example **I61.5** (intracerebral haemorrhage, intraventricular), or I61.x depending on documented site. Note that the ventricular extension may support a more specific code depending on the documentation.\n\n## Suggested Additional Codes (subject to full documentation)\n\n| Condition | Possible Code |\n|---|---|\n| Intracerebral haemorrhage with ventricular extension | I61.5 / I61.x |\n| Coma | R40.2 (if not integral to the haemorrhage) |\n| Multidrug-resistant organism infection | Infection site code + U82\u2013U83 (resistance codes) |\n| Liver dysfunction | K72.x / K76.x (per documentation) |\n| Kidney dysfunction | N17.x / N19 |\n| Electrolyte disturbance | E87.x |\n| Hypoproteinaemia | E77.8 / E88.0 |\n| Lower limb DVT | I80.2x |\n| Intestinal flora imbalance | K63.8 / K92.8 (per documentation) |\n| Intracranial hematoma drainage | Relevant ACHI procedure code |\n\n\u26a0\ufe0f **Caveat:** The diagnosis section was withheld. Confirm in the full medical record that JE was clinically confirmed (e.g., serology or CSF) before final assignment. If that confirmation is missing, query the clinician.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 644,
+    "output_tokens": 928
+  },
+  "seconds": 0.0
+}

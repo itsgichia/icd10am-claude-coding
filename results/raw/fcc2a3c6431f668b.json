@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "dcda545ce1c2",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: 19-year-old male\nDiagnosis: [diagnosis section withheld]\nHospital Course:\n\nThe patient was admitted to the hospital with severe dyspnea and diagnosed with elevated cardiac biomarkers. The initial blood pressure was high. The patient denied angina pectoris, and the ECG showed no notable abnormality. The transthoracic echocardiography showed impaired left ventricular function with basal hypokinesia. Treatment with medications was initiated, and the cardiac MRI showed no evidence of acute myocarditis. Endocarditis was excluded, and the normal blood levels of catecholamines excluded pheochromocytoma.\n\nAfter the acute phase, the patient complained of vertigo and neurological examination showed other neurological deficits. The brain and spinal MRI showed various lesions, including a prominent pontomedullary lesion. The CSF analysis revealed a lymphocytic pleocytosis, and serum neurofilament levels were elevated. Screening for other autoimmune or infectious diseases was negative, and serum-Aquaporin-4- and -MOG-antibodies were negative. The patient was diagnosed with MS, and medication with intravenous methylprednisolone was initiated. During the hospital stay, the patient showed improvement and no focal signs during discharge.\n\nFollow-up:\n\nThe patient was prescribed disease-modifying medication and showed no abnormalities in the follow-up exams. The patient showed no events suspicious of a relapse in the first 6 months of follow-up."
+      }
+    ]
+  },
+  "text": "# Principal Diagnosis: **G35 \u2013 Multiple sclerosis**\n\n## Rationale\n\n**Clinical picture**\n- The patient presented with acute heart failure: severe dyspnoea, raised cardiac biomarkers and impaired LV function with **basal hypokinesia**.\n- The usual alternative causes were excluded:\n  - ischaemia (no angina, normal ECG)\n  - myocarditis (cardiac MRI negative)\n  - endocarditis\n  - phaeochromocytoma (normal catecholamines)\n- This pattern fits **inverted (reverse) Takotsubo, or neurogenic stress cardiomyopathy**.\n- Further work-up found MS with a **prominent pontomedullary lesion**. Lesions in this area of the brainstem are a recognised trigger for catecholamine-mediated stress cardiomyopathy.\n\n**Coding logic (ACS 0001 Principal diagnosis)**\n- The principal diagnosis is the condition \"established after study\" to be chiefly responsible for the admission.\n- After study, the cardiac presentation was attributed to an underlying cause: the newly diagnosed MS.\n- The MS was also definitively worked up (MRI, CSF, antibody exclusion) and treated during the stay with IV methylprednisolone, with disease-modifying therapy started.\n- The underlying cause that has been identified and treated is therefore sequenced as principal.\n\n## Suggested Additional Codes\n- **I51.81 Takotsubo syndrome**. In older ICD-10-AM editions this is I42.8 Other cardiomyopathies.\n- **R42 Dizziness and giddiness**, only if not considered integral to the MS.\n- Any other documented neurological deficits, if they are not inherent to MS.\n\n## Caveat\nThe diagnosis section was withheld. If the clinician did **not** document a causal link between the MS and the cardiomyopathy, the stress cardiomyopathy (I51.81) would instead be principal, because it occasioned the admission. G35 would then be an additional diagnosis. Clinician clarification is recommended.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 555,
+    "output_tokens": 1154
+  },
+  "seconds": 0.0
+}

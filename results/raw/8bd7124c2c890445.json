@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "0e5540fd316d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\n\nThe patient, a 15-year-old male, was evaluated in the Pediatric Pulmonology Clinic for excessive daytime sleepiness and snoring. The in-lab sleep study showed an overall Apnea-Hypopnea index (AHI) of 2.4, ruling out obstructive sleep apnea (OSA) and central sleep apnea. Further, on multiple sleep latency test (MSLT), the patient displayed pathological daytime sleepiness with a sleep latency < 8 mins on more than two occasions, along with four sleep-onset rapid eye movement (REM) periods, suggestive of the diagnosis of narcolepsy. The patient was then started on modafinil for the treatment of narcolepsy; however, his symptoms persisted.\n\nOn further evaluation, thyroid function tests (TFTs) were performed and revealed a mildly low free T4 with a TSH level inappropriately normal, indicating central hypothyroidism. Magnetic resonance imaging (MRI) of the brain revealed no significant abnormality. Other pituitary hormones were normal, except for a baseline cortisol level that was mildy low. A low-dose adrenocorticotropic hormone (ACTH) stimulation test (1 mcg IV) was done with cortisol levels checked at 30 and 60-minute intervals, which improved. A high-dose ACTH stimulation test (250 mcg IV) was also done with cortisol levels checked at 30 and 60-minute intervals, and the results were normal.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nThe patient was started on thyroid replacement therapy with an improvement in weight and sleep symptoms. The patient continued with the modafinil therapy, and no other treatment was planned.\n\nFollow-up:\n\nThe patient was advised to follow up with the referring physician to monitor the response to therapy."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **E23.0 Hypopituitarism**\n\n## Rationale\n\n**1. Choosing the principal condition**\n- Narcolepsy was suspected on the MSLT, but symptoms persisted on modafinil.\n- Further workup found **central (secondary) hypothyroidism**: low free T4 with an inappropriately normal TSH.\n- Starting thyroid replacement improved his weight and sleep symptoms.\n- The central hypothyroidism therefore best fits the condition chiefly responsible for the episode of care (ACS 0001).\n\n**2. Choosing the code**\n- Central hypothyroidism here is an isolated TSH deficiency of pituitary or hypothalamic origin. The MRI was normal, other pituitary hormones were normal, and the adrenal axis was ultimately normal.\n- In ICD-10-AM, an isolated deficiency of a pituitary hormone is classified to **E23.0**.\n- **E03.x** (other hypothyroidism) is not appropriate because it covers primary thyroid-origin disease.\n\n**Caveat:** This choice relies on my recollection of the ICD-10-AM index rather than a direct check. Some indexes list \"Hypothyroidism, secondary NEC\" under **E03.8**, so confirm against your current edition.\n\n## Suggested additional diagnoses\n- **G47.4 Narcolepsy and cataplexy**, if the clinician confirms narcolepsy. Code it only if documented as a confirmed diagnosis rather than \"suggestive of.\"\n\nCoding should be verified against the withheld physician diagnosis statement and your edition's index. If the clinician states narcolepsy as the main reason for care, sequencing may change.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 665,
+    "output_tokens": 1095
+  },
+  "seconds": 0.0
+}

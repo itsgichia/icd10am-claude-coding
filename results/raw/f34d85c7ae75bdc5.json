@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "aec8b9f3685b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [redacted]\nAge: 53\nGender: Male\n\nHospitalization Dates: [redacted]\nAdmitting Diagnosis: [diagnosis section withheld]Discharge Diagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient initially presented with acute myocardial infarction and underwent percutaneous coronary intervention with stent implantation. However, residual stenoses and stent malappositions were observed, and the patient was referred for CABG. Echocardiogram revealed a left ventricular dysfunction with an ejection fraction of 19%, and enhanced computed tomography showed bilateral occlusions of the internal thoracic arteries and a small fragile sternum after sternoturnover fixation. Left thoracotomy was performed without cardiopulmonary bypass, and the saphenous vein and radial artery grafts were successfully anastomosed to the target vessels. The patient had an uneventful recovery and was discharged on postoperative day 12.\n\nHospital Course Summary:\nA 53-year-old man presented with acute myocardial infarction and underwent percutaneous coronary intervention with stent implantation. Residual stenoses and stent malappositions were observed, and the decision was made to perform CABG due to the left anterior descending artery, high lateral branch, and left circumflex artery lesions. The patient had a left ventricular dysfunction with an ejection fraction of 19%, a bilateral internal thoracic artery occlusion, and a small fragile sternum after sternoturnover fixation, which made the left thoracotomy approach the preferred method. The procedure was performed successfully without cardiopulmonary bypass, and the patient had an uneventful recovery, resulting in a patent bypass graft of all target vessels. The patient was discharged on postoperative day 12 without any issues.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The episode is an admission for CABG. The patient had an acute MI earlier, treated with PCI and stenting, and was then referred for CABG because of residual stenoses and stent malappositions in the LAD, high lateral branch and circumflex.\n\nThe candidate categories are:\n- I21 (acute myocardial infarction) applies for 4 weeks (28 days) from onset. The timing of this admission relative to the MI is unclear, so I21 is possible but not certain.\n- I25 (chronic ischaemic heart disease) covers coronary atherosclerosis and multivessel disease, and is also used for an old MI.\n- I24 is for other acute ischaemic heart disease.\n\nThe condition being treated is the coronary artery disease with residual stenoses, which is a CABG for multivessel coronary disease. The summary says the patient \"initially presented with acute MI\" and then underwent PCI, and the CABG was a referral after that. This suggests a separate or transferred episode where the MI had already been treated. If the MI was within 4 weeks, ICD-10-AM would still use I21 for the continuing care of an MI. Even so, this episode is directed at the coronary lesions, and the likely scenario is a staged CABG, so I25 is the better fit.\n\nCODE: I25",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 1149,
+    "output_tokens": 414
+  },
+  "seconds": 0.0
+}

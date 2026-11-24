@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "77bfb711243b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: Unknown\n\nDate of Admission: April 2011\n\nDate of Discharge: September 2011\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient was treated with Zyloric and hydroxyurea for four days, which was followed by Imatinib mesylate for five months. Her laboratory values improved during the treatment period and the symptoms subsided.\n\nOutcome:\nThe patient was discharged in September 2011, after showing improvement in her clinical condition. However, she passed away for unknown reasons while under treatment in October 2011.\n\nFollow-up:\nThe patient's outcome was not favorable, and she passed away before completing her treatment. The cause of death remains unknown.\n\nSummary:\nThis 22-year-old female presented with a high white blood cell count, splenomegaly, and weight loss, which led to the diagnosis of CML-CP. She was treated with Zyloric, hydroxyurea, and Imatinib mesylate in the hospital, and her clinical condition improved. Unfortunately, the patient passed away in October 2011 for unknown reasons while undergoing treatment."
+      }
+    ]
+  },
+  "text": "The principal diagnosis code is **C92.1, Chronic myeloid leukaemia, BCR/ABL-positive**.\n\nThe diagnosis section is withheld, but the summary states the diagnosis was CML in chronic phase (CML-CP), with a high white cell count, splenomegaly, and weight loss. C92.1 is the ICD-10-AM code for chronic-phase CML. The BCR/ABL-positive designation is standard for CML, but confirm it against the pathology or cytogenetics report, since the summary does not state it explicitly.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 417,
+    "output_tokens": 393
+  },
+  "seconds": 0.0
+}

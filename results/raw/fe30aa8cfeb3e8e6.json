@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "3962a9bc2491",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [Redacted]\nDate of Admission: [Redacted]\nDate of Discharge: [Redacted]\nLength of Stay: [Redacted]\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nThe patient presented with a gradual increase in abdominal girth over the past two years, along with abdominal distension and intermittent nausea for the past six months. The patient also experienced repeated intractable hiccups for two months, leading to the hospital admission. Physical examination revealed a longitudinal surgical scar on the upper abdomen and a swelling of the mass on the left side of the abdomen.\n\nFurther diagnostic investigations were performed, including ultrasonography, computerized tomography (CT), and an isotope kidney scan. These tests revealed the presence of a massive hypoechoic lesion occupying almost the entire abdomen, exerting pressure on the stomach, liver, pancreas, and spleen. Adhesion between the kidney and surrounding organs was evident during the laparoscopy and open simple nephrectomy procedure.\n\nAbout 7.5 liters of hydronephrosis fluid were drained, and the left kidney and upper ureter were successfully removed, resulting in the disappearance of long-lasting hiccups and improvement of the patient's appetite and overall health. After the operation, the patient was observed for six months, during which there was no recurrence of the hiccups.\n\nDischarge Instructions:\nThe patient was discharged with instructions to follow a proper diet and continue with regular follow-up appointments with the healthcare professional.\n\nDictated by: [Redacted]\nSigned electronically by: [Redacted]"
+      }
+    ]
+  },
+  "text": "**Most likely principal diagnosis: N13.0, hydronephrosis with ureteropelvic junction obstruction.**\n\nThe diagnosis section is withheld, so this is inferred from the hospital course.\n\n**Reasoning**\n- The patient had a giant hydronephrosis. About 7.5 L of fluid was drained from the left kidney, which was then removed by nephrectomy along with the upper ureter.\n- The hiccups, abdominal distension, and nausea were symptoms caused by the mass effect of the hydronephrotic kidney. They are not separate principal diagnoses.\n- The summary does not state the cause of the obstruction. Giant hydronephrosis is classically due to ureteropelvic junction obstruction, so N13.0 is the most specific reasonable choice.\n\n**Alternatives, depending on documentation**\n- **N13.30 (unspecified hydronephrosis)**: use this if the obstruction site or cause is not documented. This is the safer code if the coder cannot confirm UPJ obstruction.\n- **N13.1 (hydronephrosis with ureteral stricture, NEC)**: use this if a ureteric stricture is documented.\n- **N13.2 (hydronephrosis with renal and ureteral calculous obstruction)**: use this if a stone is documented.\n\n**Possible additional codes**\n- **R06.6 (hiccough)**: only if the coder judges it worth adding as a secondary code. It is a symptom integral to the condition, so it is usually not coded separately.\n- **Z98.8 (other specified postsurgical states)**: for the previous upper abdominal surgery, if relevant.\n\nA coder should confirm the final code against the full record, particularly the pathology report and the documented cause of the obstruction.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 593,
+    "output_tokens": 576
+  },
+  "seconds": 0.0
+}

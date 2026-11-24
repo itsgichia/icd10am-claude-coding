@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "111025efe52f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]          Admission Date: [REDACTED]      Discharge Date: [REDACTED]\n\nHistory of Present Illness:\nA 79-year-old male with a history of prostate cancer presented with progressively worsening double vision and eventual right eye ptosis. Neurological examination revealed complete third and sixth nerve palsies on the right side. MR imaging showed an enhancing soft tissue mass involving the clivus, pituitary fossa, cavernous sinus, and posterior nasal cavity. An endonasal transsphenoidal approach to the sphenoid sinus was carried out to obtain a biopsy of the lesion. A histopathological diagnosis of metastatic melanoma was made, and evaluation was undertaken by the oncology team.\n\nHospital Course Summary:\nDuring the patient's hospital stay, he underwent a number of diagnostic tests and a biopsy following which he was diagnosed with metastatic melanoma. The medical team consulted with the oncology team, who evaluated the patient and recommended further treatment options. The patient's clinical condition stabilised, and he was discharged with the oncology team's recommended course of treatment.\n\nCondition at Discharge:\nThe patient's medical condition at discharge was stable, with no further significant neurological or ophthalmological deficits.\n\nDischarge Medications:\nNo medications were prescribed at the time of discharge.\n\nFollow-up Care:\nThe oncology team recommended further outpatient treatment and follow-up evaluations for the patient, which the patient accepted.\n\nDischarge Instructions:\nThe patient was advised to follow up with the oncology team on a regular basis, and to report any new or concerning symptoms.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Condition:\nStable.\n\nDischarge Plan:\nThe patient was discharged with the recommended course of treatment and follow-up evaluations by the oncology team.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C79",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 767,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

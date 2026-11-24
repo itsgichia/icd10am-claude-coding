@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_strict_format",
+  "record_id": "ebf0ae3afa74",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a precise classification engine. You reply with a code and nothing else: no explanation, no punctuation, no preamble.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Assign the three-character ICD-10-AM principal diagnosis category for the episode of care described below. A three-character category is one capital letter followed by exactly two digits, for example J44.\n\nHospital course:\nHospital Course:\n\nThe patient is a 67-year-old male who presented with an enlarging heterogeneous mass in the right upper lobe and shortness of breath with activity. On examination, he had a grade 3-4 of 6 holosystolic murmur. Imaging studies including Echography, Computed tomography (CT), bone scintigraphy, and Positron Emission Tomography (PET) identified the pulmonary malignancy, classified as T2N0M0. An electrocardiogram (ECG) showed severe prolapse of the posterior mitral leaflet with flail of the middle scallop (P2, P3 segment), with severe mitral regurgitation and New York Heart Association (NYHA) class II. The patient elected to have a one-stage ipsilateral Video-Assisted Thoracic Surgery (VATS) and minimally invasive cardiac surgery.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nThe patient underwent right upper lobectomy and minimally invasive surgery (MIS) of mitral valve for definitive diagnostic and therapeutic procedures. The procedures were performed smoothly without complications. Gore-Tex loops were used for ring sizing and valve competency testing. The patient recovered well after the operation and was discharged from the hospital 10 days after the surgery.\n\nFollow-up:\n\nThe patient did not experience any complications during follow-up.\n\nReply with the three characters only."
+      }
+    ]
+  },
+  "text": "C34",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 585,
+    "output_tokens": 4
+  },
+  "seconds": 0.0
+}

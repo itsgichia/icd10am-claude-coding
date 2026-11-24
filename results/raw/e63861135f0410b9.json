@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "context_rich_structure",
+  "record_id": "11922b4f666b",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are an expert in clinical classification systems.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ICD-10-AM is the Australian modification of the International Statistical Classification of Diseases and Related Health Problems, 10th revision. Its disease codes are arranged in chapters, and a three-character category is written as one capital letter followed by two digits. The letter indicates the chapter or block: A and B are infectious diseases, C is malignant neoplasms, D is other neoplasms and blood disorders, E is endocrine, nutritional and metabolic disease, F is mental and behavioural disorders, G is the nervous system, H is the eye and ear, I is the circulatory system, J is the respiratory system, K is the digestive system, L is the skin, M is the musculoskeletal system, N is the genitourinary system, O is pregnancy and childbirth, P is the perinatal period, Q is congenital malformations, R is symptoms and abnormal findings, S and T are injury and poisoning, and Z is factors influencing health status. The two digits narrow the chapter to a specific category, for example J44 is chronic obstructive pulmonary disease and N17 is acute kidney failure.\n\nThe principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed.\n\nUsing that structure, assign the three-character ICD-10-AM principal diagnosis category for the episode below. Choose the chapter letter first, then the two digits.\n\nHospital course:\nDISCHARGE SUMMARY:\n\nAdmission Date: N/A\nDischarge Date: N/A\n\nPatient: 63-year-old woman\nDiagnosis: [diagnosis section withheld]\nHospital Course Summary: \n\nThe patient underwent an excision of a vulvar lesion and it was diagnosed as a BG-ACC. Although the patient did not undergo adjuvant therapy, the diagnosis was followed up. However, 4 years later, the patient was found to have metastasis to the lung. A video-assisted thoracoscopic surgery was performed which was followed by recurrence in the vulva 5 years later. The patient subsequently underwent an excision of the recurrent vulvar lesion which was used for molecular analysis.\n\nThe patient's case exempts her from being discharged or having any medication prescriptions. Further re-examinations may be conducted in the following weeks. \n\nFollow-up Care: The patient is advised to return for follow-up re-examinations as required by the treating physician.\n\nSigned,\n[Name and Title of Physician]\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "BG-ACC most likely stands for Bartholin gland adenoid cystic carcinoma. This is a malignant tumour of the vulva. The episode described is excision of a recurrent vulvar lesion, which was sent for molecular analysis.\n\nVulvar malignancy codes to C51 (malignant neoplasm of vulva). Bartholin's gland sits at C51.0 (labium majus), or C51.8 (overlapping lesion) in some schemes. The lung metastasis was treated earlier, so it is not the focus of this episode. The recurrence in the vulva is the condition treated here, so the principal diagnosis is the primary vulvar cancer.\n\nCODE: C51",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 877,
+    "output_tokens": 227
+  },
+  "seconds": 0.0
+}

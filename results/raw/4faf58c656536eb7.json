@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "dc0449ea2395",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nDischarge Summary:\nPatient Name: [REDACTED]\nDate of Discharge: [REDACTED]\n\nHospital stay: The patient was admitted to the hospital due to the presence of a brain tumor located in the clivus region. He underwent surgical intervention via a left suboccipital craniotomy, which involved resection of the tumor. Oral intubation was done using the Macintosh laryngoscope blade, and the patient was placed in the left park bench position with neck flexion. Surgery was performed via the left lateral suboccipital approach. The lesion was decompressed, and the operation was completed successfully.\n\nMedical Condition at Discharge: The patient had minor swelling in the neck, tongue, and pharynx on the left side. He experienced pain in the tip of his tongue with a small ulcer on the left side after returning to the intensive care unit. The swelling of his tongue gradually improved after the administration of steroids. The patient was discharged 10 days after the surgery.\n\nFollow-Up Care: The patient was advised to undergo follow-up MRI after three months of surgery as well as clinical follow-up as per physician's recommendations.\n\nDischarge Medications: None.\n\nInstructions: The patient was advised to follow-up with his physician for regular check-up and take rest until complete recovery.\nFinal Diagnosis: [diagnosis section withheld]\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: D43**\n\n**Principal diagnosis:** The patient was admitted for a tumour in the clivus region, which was resected via left suboccipital craniotomy. That tumour is the condition chiefly responsible for the admission.\n\n**Why D43:** The summary never gives histology or behaviour. It says only \"brain tumor\" and \"lesion\", and the final diagnosis section is withheld. In the ICD-10-AM Alphabetic Index, \"Tumour\" with no further detail goes to neoplasm of uncertain or unknown behaviour (morphology M8000/1). For the brain and central nervous system, that is category **D43**, *Neoplasm of uncertain or unknown behaviour of brain and central nervous system*.\n\n**Why not a more specific category:** Clival and petroclival tumours approached this way are often meningiomas (D32) or chordomas (C41). Assigning either without histopathology would mean inventing a diagnosis. The clivus is bone, so a chordoma would sit in a different chapter altogether.\n\n**Recommendation:** Query the treating team or check the histopathology report before finalising. If it confirms a specific type, recode. For example, a meningioma would be D32.0 and a chordoma C41.0.\n\n**Not principal diagnosis:** The post-operative swelling of the tongue, neck and pharynx, and the tongue ulcer, arose after surgery. They should be coded as additional diagnoses, as complications of the procedure if the documentation supports that, with appropriate external cause codes.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 664,
+    "output_tokens": 928
+  },
+  "seconds": 0.0
+}

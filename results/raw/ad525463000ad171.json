@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "df7ed05e020c",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nHospital Course Summary:\n\nAdmission Date: March 10, 2020\nDischarge Date: April 7, 2020\nAdmitting Diagnosis: [diagnosis section withheld]\nHospital Course: A 50-year-old male patient presented with symptoms of cough and fever lasting for 47 days. The patient was diagnosed with COVID-19 infection based on positive nucleic acid results on February 15th. Prior treatment included arbidol and lianhua qingwen granules. The patient was admitted to Wuhan Huoshenshan Hospital on March 10th with peripheral oxygen saturation of 96% and respiratory rate of 18 breaths/minute. CT findings showed a bilateral, scattered, high-density shadow and fiber- and spine-like opacities. \n\nDuring his hospitalization, convalescent plasma from COVID-19 patients, recombinant human interferon, lianhua qingwen granules, arbidol, and chloroquine phosphate were administered. On March 24th, the patient's CT scan showed substantial improvement with no obvious pulmonary lesions. On April 3-5, nucleic acid test results for SARS-CoV-2 were all negative. SARS-CoV-2 IgM and IgG levels were markedly reduced. The patient was discharged from the hospital on April 7th after three consecutively negative SARS-CoV-2 RNA tests. \nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Condition: The patient was discharged from the hospital in good condition and stable. The patient was advised to follow COVID-19 prevention protocols and report any symptoms of illness to their primary care provider.\n\nFollow-up Care: Follow-up care was recommended for the patient to monitor their health and recovery progress.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "The principal diagnosis is COVID-19 with pneumonia-type CT findings (bilateral scattered high-density shadows and opacities), confirmed by positive nucleic acid testing.\n\nIn ICD-10-AM, COVID-19 is coded to U07.1 (COVID-19, virus identified) in the Chapter 22 special purposes codes. This is the standard under the Australian Coding Standard for COVID-19 (ACS 1011). In the current edition, U07.1 is the code for confirmed COVID-19. This episode was in 2020, when the 11th edition applied. U07.1 was in use from 1 January 2020 in the Australian modification.\n\nThe three-character category is U07. Pneumonia would be coded additionally (J12.8 with U07.1) only if documented. The documentation here describes CT findings but gives no stated diagnosis of pneumonia, so I have not assumed one. The condition chiefly responsible for the admission is the COVID-19 infection.\n\nCODE: U07",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 809,
+    "output_tokens": 328
+  },
+  "seconds": 0.0
+}

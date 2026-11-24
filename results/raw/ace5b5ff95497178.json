@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "111025efe52f",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient Name: [REDACTED]          Admission Date: [REDACTED]      Discharge Date: [REDACTED]\n\nHistory of Present Illness:\nA 79-year-old male with a history of prostate cancer presented with progressively worsening double vision and eventual right eye ptosis. Neurological examination revealed complete third and sixth nerve palsies on the right side. MR imaging showed an enhancing soft tissue mass involving the clivus, pituitary fossa, cavernous sinus, and posterior nasal cavity. An endonasal transsphenoidal approach to the sphenoid sinus was carried out to obtain a biopsy of the lesion. A histopathological diagnosis of metastatic melanoma was made, and evaluation was undertaken by the oncology team.\n\nHospital Course Summary:\nDuring the patient's hospital stay, he underwent a number of diagnostic tests and a biopsy following which he was diagnosed with metastatic melanoma. The medical team consulted with the oncology team, who evaluated the patient and recommended further treatment options. The patient's clinical condition stabilised, and he was discharged with the oncology team's recommended course of treatment.\n\nCondition at Discharge:\nThe patient's medical condition at discharge was stable, with no further significant neurological or ophthalmological deficits.\n\nDischarge Medications:\nNo medications were prescribed at the time of discharge.\n\nFollow-up Care:\nThe oncology team recommended further outpatient treatment and follow-up evaluations for the patient, which the patient accepted.\n\nDischarge Instructions:\nThe patient was advised to follow up with the oncology team on a regular basis, and to report any new or concerning symptoms.\nDischarge Diagnosis: [diagnosis section withheld]\nDischarge Condition:\nStable.\n\nDischarge Plan:\nThe patient was discharged with the recommended course of treatment and follow-up evaluations by the oncology team."
+      }
+    ]
+  },
+  "text": "**Suggested principal diagnosis: C79.4, Secondary malignant neoplasm of other parts of nervous system**\n\nThis is a judgment based on the summary, and the final code should be confirmed by a coder with access to the full record.\n\n- **Reason for admission:** The admission was for the skull base lesion causing the right third and sixth cranial nerve palsies. The biopsy was taken from that lesion, which is a secondary deposit.\n- **Histology:** Metastatic melanoma was confirmed, so the lesion is a secondary malignancy.\n- **Primary site:** The summary does not state where the melanoma originated. The history of prostate cancer does not explain a melanoma, so it should not be coded as the source. Without a documented primary, coders often use C79.9 (secondary malignancy, unspecified site) in place of a specific site code.\n\n**Points to check:**\n- Other involved sites, such as the posterior nasal cavity, may need additional secondary codes. Involvement of the nasal cavity and sphenoid sinus would typically fall under C78 (secondary malignancy of respiratory organs).\n- The discharge diagnosis section is withheld, so I could not verify how the physicians worded the principal diagnosis. A coder query may be needed to confirm the primary site of the melanoma and whether the admission is best described by the cranial nerve metastasis or by the melanoma itself.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 683,
+    "output_tokens": 1848
+  },
+  "seconds": 0.0
+}

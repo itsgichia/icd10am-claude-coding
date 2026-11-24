@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "a6ac4cfbb3ec",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDISCHARGE SUMMARY\n\nPatient Name: [REDACTED]\nMedical Record Number: [REDACTED]\n\nHospital Course:\nThe patient, a 50-year-old Asian woman, was admitted to our hospital due to sudden anterior chest pain. Hematology, biochemistry, and blood gas analyses were performed and found to be normal. A chest computed tomography (CT) scan revealed a ground-glass opacity (GGO) in her left S10 lung segment and a solitary small nodule in her left S4 segment. Further testing was carried out, which led to suspicion of lung carcinoma. However, the patient did not provide consent for surgical resection.\n\nAfter follow-up with CT scans, it was suggested that the GGO was lung carcinoma, and a pathological diagnosis was established through a left lower lobectomy and an upper lung partial resection. The cancer was identified as primary lung adenocarcinoma (localized bronchioloalveolar carcinoma).\n\nThere was also a small nodule in her left S4, which was initially suspected to be lung metastasis, however, it was later discovered to be a benign metastasizing leiomyoma (BML). The patient had a history of undergoing a total abdominal hysterectomy for uterine leiomyoma in the past, which is why the small nodule was identified as BML.\n\nManagement and Outcome:\nNo additional therapy was given, and the patient was monitored by follow-up chest CT scans over four years. No recurrence of lung cancer or BML could be detected throughout her follow-up.\nDischarge Diagnosis: [diagnosis section withheld]\nInstructions:\nThe patient is advised to continue her follow-up with her physician and have periodic screening of the chest CT scans.\n\nScheduled Follow-up Appointments:\nFollow-up screening every six months for two years and then annually."
+      }
+    ]
+  },
+  "text": "# Principal diagnosis: **C34.3 Malignant neoplasm of lower lobe, bronchus or lung**\n\n**Why this code**\n- The condition that led to the surgical admission (left lower lobectomy) was a **primary lung adenocarcinoma** (localized bronchioloalveolar carcinoma) arising in a ground-glass opacity.\n- The tumour was in **segment S10**, the posterior basal segment of the left lower lobe. That gives the 4th character **.3 (lower lobe)**.\n- The presenting chest pain is a symptom that was explained by the definitive diagnosis, so it is not coded as principal.\n\n**Associated codes to consider**\n| Code | Description |\n|---|---|\n| **M8250/3** | Bronchioloalveolar adenocarcinoma, NOS (morphology code for the lung primary) |\n| **D38.1** | Neoplasm of uncertain or unknown behaviour of trachea, bronchus and lung, for the benign metastasizing leiomyoma in left S4 (lingula, upper lobe) |\n| **M8898/1** | Metastasizing leiomyoma (morphology code for the BML) |\n| **Z90.71** | Acquired absence of uterus (history of total abdominal hysterectomy for leiomyoma) |\n\n**Notes**\n- **Do not code the S4 nodule as secondary lung malignancy (C78.0).** Metastasis was initially suspected but excluded on histology.\n- If the episode being coded were only the original chest-pain admission, before any tissue diagnosis, the principal diagnosis would differ. For example, it might be R91 (abnormal findings on diagnostic imaging of lung) or a chest pain code. For the surgical episode, C34.3 is correct.\n- Confirm the code selection against your local coding standards and the ICD-10-AM edition in use, particularly the ACS for neoplasms and the morphology terminology for \"bronchioloalveolar carcinoma\" in that edition.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 643,
+    "output_tokens": 944
+  },
+  "seconds": 0.0
+}

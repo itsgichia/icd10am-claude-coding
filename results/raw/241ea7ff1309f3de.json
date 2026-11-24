@@ -1,0 +1,30 @@
+{
+  "model": "claude-sonnet-5-5",
+  "response_model": "claude-sonnet-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "7be47456ff7d",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nPatient: Maghrebian 8.2 year-old boy\nAdmission Date: [Date]\nDischarge Date: [Date]\nDischarge Diagnosis: [diagnosis section withheld]\nHospital Course Summary:\n\nThe patient was admitted for evaluation due to moderate mental retardation, mild intellectual disability, hyperactive behavior, and partial secondary generalized epilepsy with persistent atypical absences and psychogenic episodes. The physical and neurological exam revealed no abnormal findings. The EEG showed abnormal discharges of slow waves and spikes and bi-temporally localized waves. The MRI study showed cortico-subcortical atrophy and corpus callosum hypoplasia. A high definition karyotype and metabolic panel results were normal.\n\nValproic acid was administered to manage the seizures and hyperkinetic behavior. The patient's condition improved, leading to his discharge.\n\nThe genetic study showed 116 bases deletion in genomic sequence of EN2 gene: 155462376\u2013155462491 (G1 marker). The patient showed abnormalities in the transcription of the EN2 gene, that implies the deletion of 208 bases (between 1493 and 1719 bases of the complementary sequence, C4 marker).\n\nThe patient has been discharged with improved symptoms and has been advised to continue the medications prescribed by the treating physician. A follow-up visit has been scheduled to assess the patient's progress with regard to the aforementioned symptoms."
+      }
+    ]
+  },
+  "text": "The principal diagnosis is most likely **G40.4 Other generalised epilepsy and epilepsy syndromes**, but this rests on my reading of an incomplete summary, since the diagnosis section was withheld.\n\n**Reasoning**\n- The admission was for evaluation of partial secondary generalized epilepsy with persistent atypical absences. The EEG supports this, and valproic acid was given for the seizures, so epilepsy is the condition chiefly treated and investigated.\n- Secondary generalized epilepsy with atypical absences is classified under G40.4. Atypical absences are not typical petit mal (G40.3 is generalised idiopathic epilepsy, which does not fit). In ICD-10-AM, G40.4 can be extended to a fifth character to specify intractability, and the exact code depends on the coder's assessment.\n- \"Persistent\" atypical absences might suggest intractable epilepsy, but the summary does not say so, and the patient improved on valproate.\n\n**Likely secondary diagnoses**\n- Intellectual disability: F71 (moderate mental retardation). The summary also says \"mild intellectual disability\", which is contradictory. Moderate is F71 and mild is F70, so this needs clarification from the clinician.\n- Hyperkinetic behavior: F90.x (ADHD or hyperkinetic disorders), if documented as a diagnosis.\n- Brain atrophy and corpus callosum hypoplasia: G31.9 (degenerative disease of the nervous system, unspecified) or Q04.0 (congenital malformations of the corpus callosum). Q04.0 fits hypoplasia best.\n- Psychogenic episodes: possibly F44.5 (dissociative convulsions) if documented as such.\n- The EN2 gene deletion has no specific code. It could be captured with Q99.8 (other specified chromosomal abnormalities) or Q89.8 (other specified congenital malformations), depending on local coding advice.\n\n**Answer: G40.4**, with the caveat that the documented final diagnosis and the intractability status could change the fifth character.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 541,
+    "output_tokens": 690
+  },
+  "seconds": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-5-5",
+  "response_model": "claude-haiku-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "349fe6e9c4f9",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nDischarge Summary:\n\nHospital Course: \nThe patient, a 28-year-old male with moderate intellectual disability, presented with a history of comorbid diagnoses including autism spectrum disorder, hypertension, hypothyroidism, and GERD. The patient had a history of excoriation disorder, schizoaffective disorder bipolar type, and displayed symptoms of anxiety, irritability, and physical aggression. The patient was initially treated with quetiapine but was later transitioned to valbenazine due to intermittent abnormal movements. The patient's treatment was further adjusted, and clozapine was prescribed due to continued psychosis.\n\nHospital Stay: \nFour days after starting valbenazine treatment, improvement in abnormal movements was noted. Over two months, the patient no longer displayed any abnormal jaw movements, minimal to no arm/hand/finger movements or foot tapping, and no truncal movements. Caregivers reported that these improvements resulted in less isolating, aggressive, and confrontational behavior. The patient also became more cooperative, increasing participation in activities and displaying less resistance to caregiver assistance with activities of daily living. The patient currently remains stable on valbenazine (80 mg QHS).\nDiagnosis: [diagnosis section withheld]\nTreatment: \nThe patient was initially treated with quetiapine for symptoms of intermittent abnormal movements, which was later adjusted following persistent psychosis. Valbenazine was prescribed and later escalated to 80 mg QHS. Due to continued psychosis, clozapine was also introduced and titrated over 2 weeks to 300 mg daily.\n\nFollow-up Plan: \nThe patient is currently stable on valbenazine (80 mg QHS) with no reported adverse events. No further medication changes are planned at this time, and follow-up with the patient will continue to monitor for any changes in behavior or physical movements."
+      }
+    ]
+  },
+  "text": "The discharge summary doesn't state the diagnosis, so this is an inference from the treatment. The most likely principal diagnosis is **G24.0, Drug-induced dystonia** (the ICD-10-AM code used for drug-induced dyskinesia, including tardive dyskinesia), with an additional code for the adverse effect of the antipsychotic, **T43.5** (Poisoning by/adverse effect of other and unspecified antipsychotics and neuroleptics), which is assigned because quetiapine was the causative agent.\n\nThe reasoning:\n- The patient was treated for intermittent abnormal involuntary movements, which were managed with valbenazine, a drug indicated for tardive dyskinesia.\n- These movements followed antipsychotic (quetiapine) treatment, which makes them drug-induced.\n- In ICD-10-AM, the manifestation (the movement disorder) is coded first, and the adverse effect T-code is added.\n\nOther considerations:\n- Schizoaffective disorder, bipolar type (F25.x) and the psychosis that led to clozapine initiation are significant comorbidities. If the admission was primarily for psychosis rather than the movement disorder, the principal diagnosis would change. The summary's focus on valbenazine suggests the movement disorder was the main reason for care, but the withheld diagnosis section should be checked to confirm.\n- Coders should verify the final diagnosis with the treating clinician or the full record before assigning codes.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 676,
+    "output_tokens": 1512
+  },
+  "seconds": 0.0
+}

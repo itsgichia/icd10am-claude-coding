@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "zero_shot_minimal",
+  "record_id": "c59cbdc54125",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": true,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the ICD-10-AM principal diagnosis code for this patient?\n\nHospital course:\nHospital Course:\n\nThe patient was admitted for screening mammography x-ray which showed a nodule of about 2 cm against the external quadrant of the right breast. The patient underwent a quadrantectomy of the right breast with removal of 2 cm neoplastic nodule and three ipsilateral sentinel lymph nodes. Follow-up tests showed a moderately differentiated invasive ductal carcinoma containing osteoclast-like giant cells. The patient was treated with adjuvant chemotherapy and hormone therapy with luteinizing hormone-releasing hormone (LHRH) analogue and exemestane. The patient will also undergo radiotherapy treatment on the residual breast after chemotherapy.\nDiagnosis: [diagnosis section withheld]\nTreatment:\n\nAdjuvant chemotherapy with Docetaxel-Cyclophosphamide q21 scheme for 4 cycles followed by hormone therapy with luteinizing hormone-releasing hormone (LHRH) analogue and exemestane.\n\nDischarge Instructions:\n\nThe patient should continue with hormone therapy and attend follow-up appointments to monitor their condition. Patients should be aware of the benefits and risks related to the therapeutic proposals and follow the instructions as prescribed."
+      }
+    ]
+  },
+  "text": "## Principal diagnosis: **C50.9 \u2013 Malignant neoplasm of breast, unspecified** (right breast)\n\nThis assumes the record doesn't specify the quadrant any further.\n\n### Rationale\n- **Condition:** The patient was admitted with a 2 cm right breast nodule. Histology after quadrantectomy confirmed a **moderately differentiated invasive ductal carcinoma with osteoclast-like giant cells**. This is a primary malignant neoplasm of the breast, so it belongs in category **C50**.\n- **Subsite:** The summary says only the \"external quadrant,\" which means outer or lateral. It doesn't say upper or lower, so neither of these codes can be assigned:\n  - C50.4 Upper-outer quadrant\n  - C50.5 Lower-outer quadrant\n  \n  Without further documentation, the default is **C50.9**.\n- **Morphology code:** M8500/3 (infiltrating duct carcinoma, NOS), grade 2 (moderately differentiated). The osteoclast-like giant cell feature is a rare variant but doesn't change the ductal carcinoma morphology code.\n\n### Coding notes\n- **Query the clinician or check the radiology and pathology reports for laterality detail.** If the lesion is documented as upper-outer, code **C50.4**. If lower-outer, code **C50.5**. Upper-outer is the most common site, but it shouldn't be assumed.\n- **Lymph nodes:** Three sentinel nodes were removed, but their status isn't reported. Don't assign C77.3 (secondary malignancy of axillary lymph nodes) unless metastasis is documented.\n- **If the episode were an admission specifically for chemotherapy,** the principal diagnosis would be **Z51.1** (Pharmacotherapy session for neoplasm), with C50.x as an additional diagnosis. This summary describes the surgical episode, so **C50.x is principal**.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 465,
+    "output_tokens": 908
+  },
+  "seconds": 0.0
+}

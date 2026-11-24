@@ -1,0 +1,30 @@
+{
+  "model": "claude-opus-5-5",
+  "response_model": "claude-opus-5-5",
+  "template": "persona_clinical_coder",
+  "record_id": "01d3ff5888ad",
+  "config": {
+    "effort": "low",
+    "max_tokens": 4096,
+    "use_batch": false,
+    "poll_seconds": 30.0,
+    "batch_timeout_seconds": 21600.0
+  },
+  "request": {
+    "system": "You are a senior clinical coder in an Australian public hospital with fifteen years of experience coding inpatient episodes in ICD-10-AM. You are careful, conservative, and you never invent a code you are not sure of the chapter for.",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Code the episode of care below. The principal diagnosis is the single condition established after investigation to be chiefly responsible for the patient's episode of admitted care. It is not the patient's most serious comorbidity, not the presenting symptom, and not the procedure performed. Give the three-character ICD-10-AM category for the principal diagnosis.\n\nHospital course:\nHospital Course:\nThe patient, an 85-year-old male, was admitted to the hospital with bilateral foot swelling, decreased urine output, and a poor urinary stream. He also complained of breathlessness, anorexia, weight loss, and had a past medical history significant for anemia. Physical examination revealed multiple, nontender, firm lymph nodes in the right upper jugular, middle jugular, right and left submandibular, and multiple right-sided axillary lymph nodes. His laboratory investigations revealed findings consistent with tumor lysis syndrome, including elevated uric acid, hyperphosphatemia, and hypocalcemia. Bone marrow examination showed hypercellular smears with reduced megakaryocytes and erythropoiesis. The bone marrow differential counts revealed immature cells with monocytic differentiation and large collections of mature lymphocytes.\nDiagnosis: [diagnosis section withheld]\nHospital Course:\nDespite being explained about the treatment options and prognosis, the patient refused to undergo any further investigations and therapy.\n\nDischarge Condition:\nThe patient was discharged home in fair condition. A follow-up plan was initiated with further medical management as an outpatient.\n\nAnswer in the form CODE: <letter><digit><digit>"
+      }
+    ]
+  },
+  "text": "**CODE: C93**\n\nThe diagnosis section is withheld, so this category is inferred from the findings rather than taken from a documented diagnosis. Confirm it against the clinician's final diagnosis before finalising.\n\n- **Why monocytic leukaemia (C93):** The bone marrow shows immature cells with monocytic differentiation. That points to a monocytic leukaemia. C93 covers both acute monocytic leukaemia (C93.0) and chronic myelomonocytic leukaemia (C93.1), so the three-character category holds whichever subtype is confirmed.\n- **Why not tumour lysis syndrome:** The tumour lysis syndrome caused the presentation (oedema, low urine output, high uric acid and phosphate, low calcium). But it is a complication of the underlying malignancy. The leukaemia is the condition chiefly responsible for the admission. Code the tumour lysis syndrome as an additional diagnosis (E88.3).\n- **Alternative to check:** The large collections of mature lymphocytes and the widespread lymphadenopathy suggest a coexisting chronic lymphocytic leukaemia (C91.1). If the clinician documents that as the main diagnosis, C91 would be principal instead.",
+  "stop_reason": "end_turn",
+  "refusal_category": null,
+  "usage": {
+    "input_tokens": 624,
+    "output_tokens": 784
+  },
+  "seconds": 7.366897790983785
+}
